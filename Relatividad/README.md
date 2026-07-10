@@ -2,40 +2,35 @@
 
 La Relatividad es la teoría física desarrollada principalmente por Albert Einstein que transformó de raíz nuestra comprensión de los conceptos más fundamentales: el espacio, el tiempo, la masa, la energía y la gravedad.
 
-## Desarrollo de Temas
+## Temas de Estudio
 
-### Relatividad Especial (1905)
-Trata el comportamiento de los objetos moviéndose a velocidades cercanas a la de la luz ($c$) en sistemas de referencia inerciales (sin aceleración).
-- **Postulados de Einstein**: 
-  1. Las leyes de la física son las mismas para todos los observadores inerciales.
-  2. La velocidad de la luz en el vacío ($c$) es constante para todos los observadores, independientemente del movimiento de la fuente.
-- **Cinemática Relativista**:
-  - **Dilatación del Tiempo**: El tiempo transcurre más lentamente para los objetos en movimiento relativo. ("Los relojes en movimiento marcan más lento").
-  - **Contracción de la Longitud**: Los objetos en movimiento se acortan en la dirección del movimiento.
-  - **Pérdida de la Simultaneidad**: Eventos que son simultáneos para un observador pueden no serlo para otro.
-- **Transformaciones de Lorentz**: Las ecuaciones matemáticas que relacionan las coordenadas de espacio y tiempo de dos sistemas de referencia que se mueven a velocidad constante uno respecto al otro (sustituyen a las transformaciones de Galileo).
-- **Dinámica Relativista**: 
-  - **Equivalencia Masa-Energía ($E=mc^2$)**: La masa es una forma concentrada de energía.
-  - El momento relativista requiere que un objeto masivo necesite infinita energía para alcanzar la velocidad de la luz.
+Explora cada una de las siguientes subcarpetas para un desarrollo profundo:
 
-### Relatividad General (1915)
-Generaliza la Relatividad Especial para incluir la gravedad y los sistemas de referencia acelerados.
-- **Principio de Equivalencia**: No hay experimento local que pueda distinguir entre un campo gravitatorio uniforme y un sistema de referencia uniformemente acelerado. Caer libremente es equivalente a no sentir gravedad (ingravidez).
-- **Curvatura del Espacio-Tiempo**: La gravedad ya no es una fuerza de atracción misteriosa a distancia (Newton), sino una consecuencia de la curvatura del "tejido" del espacio-tiempo producida por la masa y la energía. "La materia le dice al espacio-tiempo cómo curvarse, y el espacio-tiempo le dice a la materia cómo moverse" (John Archibald Wheeler).
-- **Ecuaciones de Campo de Einstein**: El complejo conjunto de ecuaciones tensoriales que relacionan la geometría del espacio-tiempo con la distribución de materia y energía en su interior.
-- **Predicciones y Consecuencias**:
-  - **Desviación de la luz**: La gravedad curva las trayectorias de los fotones (lentes gravitacionales).
-  - **Precesión anómala del perihelio de Mercurio**.
-  - **Dilatación gravitacional del tiempo**: El tiempo pasa más lento en campos gravitatorios fuertes.
-  - **Agujeros Negros**: Regiones del espacio-tiempo con curvatura tan extrema que ni la luz puede escapar.
-  - **Ondas Gravitacionales**: Ondulaciones en el tejido del espacio-tiempo producidas por aceleraciones de masas enormes (como fusiones de agujeros negros).
+- 🚀 **[Relatividad Especial](./Relatividad_Especial)**: Espacio-tiempo plano, dilatación del tiempo, contracción de longitudes y $E=mc^2$.
+- 🌌 **[Relatividad General](./Relatividad_General)**: Curvatura del espacio-tiempo, gravedad, agujeros negros y ondas gravitacionales.
 
-## Recursos y Cursos
+---
 
-### Cursos Online
-- [Stanford - Special Relativity](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring): Por Leonard Susskind.
-- [Stanford - General Relativity](https://theoreticalminimum.com/courses/general-relativity/2012/fall): Por Leonard Susskind.
+## 📚 Recursos y Cursos Recomendados
 
-### Libros y Artículos
-- **Libro Recomendado (Especial)**: "Spacetime Physics" de Edwin F. Taylor y John Archibald Wheeler (Muy accesible y visual).
-- **Libro Recomendado (General)**: "Gravity: An Introduction to Einstein's General Relativity" de James B. Hartle.
+### Cursos Online (5+)
+1. [Stanford - Special Relativity](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring): Leonard Susskind desarrolla la métrica de Minkowski.
+2. [Stanford - General Relativity](https://theoreticalminimum.com/courses/general-relativity/2012/fall): Curso teórico introduciendo cálculo tensorial por Susskind.
+3. [MIT 8.20 - Introduction to Special Relativity](https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2005/): Curso clásico del IAP en MIT.
+4. [Coursera - Understanding Einstein: The Special Theory of Relativity](https://www.coursera.org/learn/einstein-relativity): De la Universidad de Stanford.
+5. [World Science U - Special Relativity](https://www.worldscienceu.com/): Clases con Brian Greene (muy accesibles y con buenas animaciones).
+6. [Khan Academy - Special Relativity](https://es.khanacademy.org/science/physics/special-relativity): Introducción sin cálculo avanzado.
+
+### Artículos y Textos de Referencia (10+)
+1. **Wikipedia**: [Teoría de la Relatividad](https://es.wikipedia.org/wiki/Teor%C3%ADa_de_la_relatividad) - Panorama histórico y unificación.
+2. **Wikipedia**: [Relatividad Especial](https://es.wikipedia.org/wiki/Teor%C3%ADa_de_la_relatividad_especial) - Postulados y cinemática.
+3. **Wikipedia**: [Relatividad General](https://es.wikipedia.org/wiki/Relatividad_general) - Principio de equivalencia y métricas.
+4. **Scholarpedia**: [Special Relativity](http://www.scholarpedia.org/article/Special_relativity).
+5. **Scholarpedia**: [General Relativity](http://www.scholarpedia.org/article/General_relativity).
+6. **Stanford Encyclopedia of Philosophy**: [Einstein's Philosophy of Science](https://plato.stanford.edu/entries/einstein-philscience/).
+7. **FísicaLab**: [Postulados de la Relatividad Especial](https://www.fisicalab.com/tema/relatividad-especial).
+8. **HyperPhysics**: [Relatividad](http://hyperphysics.phy-astr.gsu.edu/hbase/relativ/relcon.html).
+9. **Libro/PDF**: "Spacetime Physics" - Edwin F. Taylor y John Archibald Wheeler (Mejor introducción a Relatividad Especial).
+10. **Libro/PDF**: "Gravity: An Introduction to Einstein's General Relativity" - James B. Hartle (Physics First approach).
+11. **Libro/PDF**: "A First Course in General Relativity" - Bernard F. Schutz.
+12. **Documento Original**: [Sobre la electrodinámica de los cuerpos en movimiento (1905)](https://www.marxists.org/reference/archive/einstein/works/190x/electrodynamics.pdf) - El famoso artículo de Einstein (traducciones disponibles).

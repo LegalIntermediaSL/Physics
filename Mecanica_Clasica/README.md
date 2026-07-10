@@ -2,56 +2,38 @@
 
 La Mecánica Clásica es la rama de la física que estudia el movimiento de los cuerpos a velocidades pequeñas comparadas con la velocidad de la luz, y las fuerzas que causan o alteran ese movimiento. Es la base sobre la que se construye gran parte de la física y la ingeniería modernas.
 
-## Desarrollo de Temas
+## Temas de Estudio
 
-### 1. Cinemática
-La cinemática se encarga de describir el movimiento de los objetos sin preocuparse por las causas que lo producen. Estudia conceptos fundamentales como el **desplazamiento**, la **velocidad** y la **aceleración**. 
-- **Movimiento Rectilíneo Uniforme (MRU) y Uniformemente Acelerado (MRUA)**: Bases del movimiento en una dimensión.
-- **Movimiento de Proyectiles**: Estudio del movimiento parabólico en dos dimensiones bajo la influencia constante de la gravedad.
-- **Movimiento Circular Uniforme**: Análisis de trayectorias circulares, velocidad angular e introduciendo el concepto de aceleración centrípeta.
+Explora cada una de las siguientes subcarpetas para un desarrollo profundo, ecuaciones y conceptos clave:
 
-### 2. Dinámica y Leyes de Newton
-A diferencia de la cinemática, la dinámica explica *por qué* se mueven los objetos, basándose en el concepto de fuerza.
-- **Primera Ley (Inercia)**: Un objeto en reposo permanece en reposo, y un objeto en movimiento permanece en movimiento con velocidad constante, a menos que actúe sobre él una fuerza neta.
-- **Segunda Ley (Fuerza y Aceleración)**: La fuerza neta aplicada sobre un cuerpo es proporcional a su aceleración ($ \vec{F} = m\vec{a} $).
-- **Tercera Ley (Acción y Reacción)**: Por cada fuerza de acción hay una fuerza de reacción de igual magnitud pero en dirección opuesta.
+- 🏃 **[Cinemática](./Cinematica)**: Descripción geométrica del movimiento (posición, velocidad, aceleración).
+- ⚖️ **[Dinámica y Leyes de Newton](./Dinamica)**: Causas del movimiento y fuerzas.
+- ⚡ **[Trabajo y Energía](./Trabajo_y_Energia)**: Conservación de la energía mecánica y teoremas de trabajo.
+- 💥 **[Momento y Colisiones](./Momento_y_Colisiones)**: Conservación del momento lineal y sistemas de partículas.
+- 🔄 **[Dinámica Rotacional](./Dinamica_Rotacional)**: Torque, momento de inercia y momento angular.
+- 🌍 **[Gravitación](./Gravitacion)**: Ley de Newton y leyes orbitales de Kepler.
 
-### 3. Trabajo y Energía
-Una forma alternativa y a menudo más sencilla de resolver problemas mecánicos sin usar fuerzas directamente.
-- **Trabajo ($W$)**: Es el producto de la fuerza aplicada por el desplazamiento ($ W = \vec{F} \cdot \vec{d} $).
-- **Energía Cinética ($K$)**: La energía asociada al movimiento ($ K = \frac{1}{2}mv^2 $).
-- **Energía Potencial ($U$)**: Energía almacenada debido a la posición o configuración (ej. gravitacional $ U = mgh $ o elástica).
-- **Conservación de la Energía**: En un sistema aislado sin fuerzas no conservativas (como la fricción), la energía mecánica total se mantiene constante.
+---
 
-### 4. Momento Lineal y Colisiones
-- **Momento Lineal ($\vec{p}$)**: Cantidad de movimiento de un objeto, definido como $ \vec{p} = m\vec{v} $.
-- **Conservación del Momento**: El momento total de un sistema aislado se conserva. Es una herramienta fundamental para analizar colisiones (elásticas e inelásticas) y explosiones.
-- **Centro de Masa**: El punto geométrico que se mueve como si toda la masa del sistema estuviera concentrada en él.
+## 📚 Recursos y Cursos Recomendados
 
-### 5. Dinámica Rotacional
-El equivalente de la mecánica traslacional pero aplicado a objetos que giran.
-- **Momento de Inercia ($I$)**: La resistencia de un objeto a cambiar su estado de rotación.
-- **Torque o Momento de Fuerza ($\tau$)**: La tendencia de una fuerza a hacer rotar un objeto ($ \vec{\tau} = \vec{r} \times \vec{F} $).
-- **Momento Angular ($\vec{L}$)**: Cantidad de movimiento rotacional, que se conserva si no hay un torque neto externo ($ \vec{L} = I\vec{\omega} $).
+### Cursos Online (5+)
+1. [MIT 8.01 - Classical Mechanics (Walter Lewin)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/): El legendario curso introductorio del MIT.
+2. [Khan Academy - Física (Español)](https://es.khanacademy.org/science/physics): Introducción visual y paso a paso, ideal para secundaria y primeros años de universidad.
+3. [Susskind's Theoretical Minimum - Classical Mechanics](https://theoreticalminimum.com/courses/classical-mechanics/2011/fall): Introducción a la mecánica Lagrangiana y Hamiltoniana para físicos teóricos.
+4. [Coursera - Mecánica Clásica (Varios)](https://www.coursera.org/courses?query=classical%20mechanics): Amplia colección de cursos de universidades globales.
+5. [edX - Introductory Mechanics (MITx)](https://www.edx.org/course/mechanics-kinematics-and-dynamics): Curso riguroso con ejercicios interactivos.
+6. [Yale PHYS 200 - Fundamentals of Physics I](https://oyc.yale.edu/physics/phys-200): Curso introductorio clásico por Ramamurti Shankar.
 
-### 6. Gravitación Universal
-- **Ley de Gravitación de Newton**: Cada masa en el universo atrae a cualquier otra masa con una fuerza proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia entre ellas ($ F = G \frac{m_1 m_2}{r^2} $).
-- **Leyes de Kepler**: Las leyes empíricas que rigen el movimiento orbital de los planetas y satélites.
-
-### 7. Oscilaciones y Ondas Mecánicas
-- **Movimiento Armónico Simple (MAS)**: Movimiento periódico de ida y vuelta bajo una fuerza restauradora proporcional al desplazamiento (como en resortes o péndulos simples).
-- **Ondas Mecánicas**: Transmisión de energía a través de un medio material sin transporte neto de materia.
-
-### 8. Mecánica Lagrangiana y Hamiltoniana (Avanzado)
-Formulaciones matemáticas alternativas a las leyes de Newton basadas en el cálculo de variaciones y el **Principio de Mínima Acción**. Son fundamentales para la física teórica y preparan el terreno para la mecánica cuántica.
-
-## Recursos y Cursos
-
-### Cursos Online
-- [Khan Academy - Física (Español)](https://es.khanacademy.org/science/physics): Excelente para fundamentos, cinemática y leyes de Newton.
-- [MIT 8.01 - Classical Mechanics (Inglés)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/): Curso universitario introductorio legendario por el prof. Walter Lewin / otros instructores.
-- [Susskind's Theoretical Minimum - Classical Mechanics (Inglés)](https://theoreticalminimum.com/courses/classical-mechanics/2011/fall): Para una perspectiva más teórica y avanzada.
-
-### Artículos y Lecturas
-- [HyperPhysics - Mecánica (Inglés/Español)](http://hyperphysics.phy-astr.gsu.edu/hbase/hframe.html): Mapas conceptuales muy útiles para repasar fórmulas y conceptos rápidos.
-- [Libro Recomendado: "Física Universitaria" de Sears y Zemansky](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000003295/9780135159552): Un texto clásico de referencia para toda la física introductoria.
+### Artículos y Textos de Referencia (10+)
+1. **Wikipedia**: [Mecánica Clásica](https://es.wikipedia.org/wiki/Mec%C3%A1nica_cl%C3%A1sica) - Perspectiva general e historia.
+2. **Wikipedia**: [Leyes de Newton](https://es.wikipedia.org/wiki/Leyes_de_Newton) - Desarrollo formal de los axiomas de la dinámica.
+3. **HyperPhysics**: [Mapas Conceptuales de Mecánica](http://hyperphysics.phy-astr.gsu.edu/hbase/hframe.html) - Fórmulas interactivas.
+4. **Scholarpedia**: [Classical Mechanics](http://www.scholarpedia.org/article/Classical_mechanics) - Artículo revisado por pares sobre los fundamentos matemáticos.
+5. **Física Práctica**: [Apuntes de Cinemática](https://www.fisicapractica.com/cinematica.php) - Resúmenes en español.
+6. **FísicaLab**: [Conceptos de Dinámica](https://www.fisicalab.com/tema/dinamica-conceptos) - Problemas resueltos y teoría paso a paso.
+7. **Stanford Encyclopedia of Philosophy**: [Newton's Philosophiae Naturalis Principia Mathematica](https://plato.stanford.edu/entries/newton-principia/) - Historia y filosofía de la obra magna.
+8. **Libro/PDF**: [Física Universitaria - Sears y Zemansky](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000003295/9780135159552) (Libro de texto, referencia principal).
+9. **Feynman Lectures**: [Vol I, Ch. 9: Newton's Laws of Dynamics](https://www.feynmanlectures.caltech.edu/I_09.html) - La magistral explicación de Richard Feynman.
+10. **Feynman Lectures**: [Vol I, Ch. 4: Conservation of Energy](https://www.feynmanlectures.caltech.edu/I_04.html) - Entendiendo la energía desde la física profunda.
+11. **Libro/Artículos**: "Classical Mechanics" de Herbert Goldstein - La biblia de la mecánica clásica avanzada (Lagrangiana).
