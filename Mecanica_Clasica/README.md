@@ -13,29 +13,29 @@ La cinemática se encarga de describir el movimiento de los objetos sin preocupa
 ### 2. Dinámica y Leyes de Newton
 A diferencia de la cinemática, la dinámica explica *por qué* se mueven los objetos, basándose en el concepto de fuerza.
 - **Primera Ley (Inercia)**: Un objeto en reposo permanece en reposo, y un objeto en movimiento permanece en movimiento con velocidad constante, a menos que actúe sobre él una fuerza neta.
-- **Segunda Ley (Fuerza y Aceleración)**: La fuerza neta aplicada sobre un cuerpo es proporcional a su aceleración (\( \vec{F} = m\vec{a} \)).
+- **Segunda Ley (Fuerza y Aceleración)**: La fuerza neta aplicada sobre un cuerpo es proporcional a su aceleración ($ \vec{F} = m\vec{a} $).
 - **Tercera Ley (Acción y Reacción)**: Por cada fuerza de acción hay una fuerza de reacción de igual magnitud pero en dirección opuesta.
 
 ### 3. Trabajo y Energía
 Una forma alternativa y a menudo más sencilla de resolver problemas mecánicos sin usar fuerzas directamente.
-- **Trabajo (\(W\))**: Es el producto de la fuerza aplicada por el desplazamiento (\( W = \vec{F} \cdot \vec{d} \)).
-- **Energía Cinética (\(K\))**: La energía asociada al movimiento (\( K = \frac{1}{2}mv^2 \)).
-- **Energía Potencial (\(U\))**: Energía almacenada debido a la posición o configuración (ej. gravitacional \( U = mgh \) o elástica).
+- **Trabajo ($W$)**: Es el producto de la fuerza aplicada por el desplazamiento ($ W = \vec{F} \cdot \vec{d} $).
+- **Energía Cinética ($K$)**: La energía asociada al movimiento ($ K = \frac{1}{2}mv^2 $).
+- **Energía Potencial ($U$)**: Energía almacenada debido a la posición o configuración (ej. gravitacional $ U = mgh $ o elástica).
 - **Conservación de la Energía**: En un sistema aislado sin fuerzas no conservativas (como la fricción), la energía mecánica total se mantiene constante.
 
 ### 4. Momento Lineal y Colisiones
-- **Momento Lineal (\(\vec{p}\))**: Cantidad de movimiento de un objeto, definido como \( \vec{p} = m\vec{v} \).
+- **Momento Lineal ($\vec{p}$)**: Cantidad de movimiento de un objeto, definido como $ \vec{p} = m\vec{v} $.
 - **Conservación del Momento**: El momento total de un sistema aislado se conserva. Es una herramienta fundamental para analizar colisiones (elásticas e inelásticas) y explosiones.
 - **Centro de Masa**: El punto geométrico que se mueve como si toda la masa del sistema estuviera concentrada en él.
 
 ### 5. Dinámica Rotacional
 El equivalente de la mecánica traslacional pero aplicado a objetos que giran.
-- **Momento de Inercia (\(I\))**: La resistencia de un objeto a cambiar su estado de rotación.
-- **Torque o Momento de Fuerza (\(\tau\))**: La tendencia de una fuerza a hacer rotar un objeto (\( \vec{\tau} = \vec{r} \times \vec{F} \)).
-- **Momento Angular (\(\vec{L}\))**: Cantidad de movimiento rotacional, que se conserva si no hay un torque neto externo (\( \vec{L} = I\vec{\omega} \)).
+- **Momento de Inercia ($I$)**: La resistencia de un objeto a cambiar su estado de rotación.
+- **Torque o Momento de Fuerza ($\tau$)**: La tendencia de una fuerza a hacer rotar un objeto ($ \vec{\tau} = \vec{r} \times \vec{F} $).
+- **Momento Angular ($\vec{L}$)**: Cantidad de movimiento rotacional, que se conserva si no hay un torque neto externo ($ \vec{L} = I\vec{\omega} $).
 
 ### 6. Gravitación Universal
-- **Ley de Gravitación de Newton**: Cada masa en el universo atrae a cualquier otra masa con una fuerza proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia entre ellas (\( F = G \frac{m_1 m_2}{r^2} \)).
+- **Ley de Gravitación de Newton**: Cada masa en el universo atrae a cualquier otra masa con una fuerza proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia entre ellas ($ F = G \frac{m_1 m_2}{r^2} $).
 - **Leyes de Kepler**: Las leyes empíricas que rigen el movimiento orbital de los planetas y satélites.
 
 ### 7. Oscilaciones y Ondas Mecánicas
