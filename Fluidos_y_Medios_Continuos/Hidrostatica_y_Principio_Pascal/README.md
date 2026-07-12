@@ -5,20 +5,56 @@ La hidrostática estudia los fluidos en estado de reposo. Se basa en principios 
 El principio de flotabilidad fue descubierto por Arquímedes de Siracusa en el siglo III a.C. Siglos después, en 1647, Blaise Pascal formuló la ley que lleva su nombre, afirmando que un cambio de presión aplicado a un fluido encerrado se transmite sin disminución a todas las partes del fluido, lo cual es la base de la hidráulica moderna.
 
 ## 🧮 Desarrollo Teórico Profundo
-**Ecuación Fundamental de la Hidrostática:**
-Para un fluido incompresible en reposo sometido a gravedad constante, la variación de la presión $ p $ respecto a la altura $ z $ es:
-$$ \frac{dp}{dz} = -\rho g $$
-Al integrar entre dos puntos, obtenemos la presión absoluta a una profundidad $ h $:
-$$ P = P_0 + \rho g h $$
-donde $ P_0 $ es la presión en la superficie (usualmente presión atmosférica), $ \rho $ es la densidad del fluido y $ g $ es la aceleración gravitacional.
 
-**Principio de Pascal:**
-$$ \Delta P_1 = \Delta P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2} $$
-Este principio permite multiplicar la fuerza en las prensas hidráulicas.
+La hidrostática y el Principio de Pascal no son empíricos aislados, sino resoluciones analíticas derivadas de las ecuaciones del continuo, del concepto termodinámico de presión y del balance de fuerzas externas en cuerpos rígidos limitados.
 
-**Fuerza de Flotación (Principio de Arquímedes):**
-La fuerza de empuje $ E $ o $ F_b $ hacia arriba es igual al peso del fluido desplazado:
-$$ E = \rho_{\text{fluido}} V_{\text{sumergido}} g $$
+### 1. El Operador Gradiente en Hidrostática
+
+Sea un volumen de fluido material $V$, la sumatoria de fuerzas macroscópicas es:
+$$ \sum \vec{F} = \vec{F}_{volumen} + \vec{F}_{superficie} = \int_V \rho \vec{g} dV - \oint_S p \hat{n} dS = 0 $$
+Por el Teorema de Gauss, la integral de superficie cerrada se transforma en volumen: $\oint_S p \hat{n} dS = \int_V \nabla p dV$.
+Así, tenemos $\int_V (\rho \vec{g} - \nabla p) dV = 0$. Como esto debe ser verdadero para cualquier volumen analizado arbitrariamente pequeño, el integrando debe ser rigurosamente nulo:
+$$ \nabla p = \rho \vec{g} $$
+Dado que el rotacional de un gradiente es siempre cero ($\nabla \times \nabla p = 0$), el campo $\rho \vec{g}$ debe ser irrotacional. Para líquidos incompresibles (donde $\rho$ es constante), en un eje de coordenadas cartesiano donde la gravedad es $\vec{g} = (0, 0, -g)$:
+$$ \frac{\partial p}{\partial x} = 0, \quad \frac{\partial p}{\partial y} = 0, \quad \frac{\partial p}{\partial z} = -\rho g $$
+
+### 2. Conservación del Trabajo en la Prensa Hidráulica de Pascal
+
+La formalización del Principio de Pascal, que indica que "una presión $P_{ext}$ ejercida en un punto de un líquido se transmite con igual magnitud en todas direcciones e isotrópicamente", deviene de integrar $\nabla p = \rho \vec{g}$ con una presión de contorno $P_0$ impuesta artificialmente.
+$$ P(z) = P_{\text{ambiente}} + P_{\text{externa}} + \rho g h_{profundidad} $$
+En un sistema interconectado cerrado con dos émbolos de áreas $A_1 \ll A_2$, una fuerza $F_1$ genera una presión incremental $\Delta p = F_1/A_1$. Esta presión es uniforme a través de todo el volumen estático confinado (ignorando los gradientes de la propia gravedad). 
+La fuerza reactiva experimentada en el segundo émbolo es:
+$$ F_2 = \Delta p \cdot A_2 = F_1 \left(\frac{A_2}{A_1}\right) $$
+Esta es una inmensa **ventaja mecánica**. Para no violar el principio de conservación de la energía y la termodinámica fundamental, el trabajo debe conservarse: $\text{Trabajo}_{\text{in}} = \text{Trabajo}_{\text{out}}$. 
+Asumiendo líquido incompresible, el volumen desplazado en un émbolo empujando distancia $d_1$ es compensado por la expansión en el otro $d_2$:
+$$ V_{despl} = A_1 d_1 = A_2 d_2 \implies d_2 = d_1 \frac{A_1}{A_2} $$
+El trabajo saliente es:
+$$ W_2 = F_2 d_2 = \left( F_1 \frac{A_2}{A_1} \right) \left( d_1 \frac{A_1}{A_2} \right) = F_1 d_1 = W_1 $$
+Demostrando que, aunque se multiplica dramáticamente la fuerza, se requiere un enorme recorrido $d_1$ para elevar marginalmente el pistón masivo en la distancia $d_2$.
+
+### 3. El Centro de Presiones y la Fuerza Resultante sobre Superficies
+
+Cuando un líquido presiona contra un muro de retención (una presa) o las paredes de un contenedor, la fuerza no es puntual, está linealmente distribuida: $p(h) = \rho g h$.
+La fuerza resultante neta es la integral sobre el área proyectada de la superficie sumergida plana con inclinación $\theta$:
+$$ F_{neta} = \int_A p \, dA = \int_A \rho g y \sin\theta \, dA = \rho g \sin\theta \int_A y dA = \rho g \sin\theta (y_{cg} A) $$
+donde $y_{cg}$ es la distancia al centro de gravedad topológico del área. En conclusión: la magnitud de la fuerza resultante depende exclusivamente del área superficial y de la presión específica que se experimenta en su Centroide, no de la forma total.
+El punto preciso donde esta fuerza consolidada teóricamente incide se conoce como **Centro de Presión ($y_{cp}$)** y siempre está situado geométrica y analíticamente más bajo que el propio Centroide, debido al momento polar y al gradiente hidrostático lineal:
+$$ y_{cp} = y_{cg} + \frac{I_{cg}}{y_{cg} A} $$
+donde $I_{cg}$ es el segundo momento de área (momento de inercia inercial geométrico).
+
+```mermaid
+graph TD
+    BalanceV[Balance Vectorial Fuerza Cero] --> Grad[∇p = ρg]
+    Grad --> Iso[Planos de Presión Isobárica Unidireccional]
+    Iso --> Constante[Presión a Profundidad h: P = P₀ + ρgh]
+    Constante --> FuerzasPared[Fuerzas Distribuidas en Paredes de Presas y Muros]
+    FuerzasPared --> Resultante[Magnitud en Centroide]
+    FuerzasPared --> Aplicacion[Punto de Acción Centro de Presión y_cp]
+    Grad --> SistemaCerrado[Fluido Encerrado con Émbolos Múltiples]
+    SistemaCerrado --> Isotropia[Transmisión Isotrópica de Incrementos]
+    Isotropia --> Pascal[Ley de Pascal: Multiplicador Mecánico de Fuerza]
+    Pascal --> Trabajo[Conservación Constante de Trabajo W_1 = W_2]
+```
 
 ## 🛠 Ejemplo Práctico
 **Problema:** Una corona supuestamente de oro ($ \rho_{\text{oro}} = 19.3 \text{ g/cm}^3 $) tiene una masa de $ 1.5 \text{ kg} $ en el aire. Al sumergirla completamente en agua ($ \rho_{\text{agua}} = 1000 \text{ kg/m}^3 $), su peso aparente es de $ 13.5 \text{ N} $. ¿Es la corona de oro puro? ($ g = 9.8 \text{ m/s}^2 $).

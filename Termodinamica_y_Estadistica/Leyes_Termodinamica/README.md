@@ -9,29 +9,94 @@ El desarrollo de la termodinámica fue fuertemente motivado por la Revolución I
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### Ley Cero de la Termodinámica
-Establece el concepto de temperatura: *Si dos sistemas A y B están en equilibrio térmico con un tercer sistema C, entonces A y B están en equilibrio térmico entre sí.*
-Esto permite la construcción de termómetros.
+La termodinámica clásica, desde una perspectiva axiomática, se construye rigurosamente sobre cuatro leyes empíricas. Estas leyes gobiernan las relaciones entre la energía, el calor, el trabajo, la temperatura y la entropía de los sistemas macroscópicos. A continuación, desarrollamos detalladamente el formalismo matemático de estas leyes y sus consecuencias directas.
 
-### Primera Ley de la Termodinámica (Conservación de la Energía)
-La energía total de un sistema aislado se conserva. La variación de la energía interna $dU$ de un sistema es igual al calor $dQ$ añadido al sistema menos el trabajo $dW$ realizado por el sistema sobre su entorno:
-$$ dU = \delta Q - \delta W $$
-En procesos reversibles de un gas, el trabajo mecánico es $\delta W = P \, dV$, por lo que:
-$$ dU = \delta Q - P \, dV $$
-Como la energía interna $U$ es una función de estado, su integral a través de un ciclo cerrado es nula: $\oint dU = 0$.
+```mermaid
+graph TD
+    A[Leyes de la Termodinámica] --> B[Ley Cero]
+    A --> C[Primera Ley]
+    A --> D[Segunda Ley]
+    A --> E[Tercera Ley]
+    B --> F(Equilibrio Térmico y Temperatura)
+    C --> G(Conservación de la Energía y Energía Interna)
+    D --> H(Direccionalidad y Entropía)
+    E --> I(Cero Absoluto y Escala Absoluta de Entropía)
+```
 
-### Segunda Ley de la Termodinámica (Entropía)
-Existen varias formulaciones equivalentes:
-* **Enunciado de Clausius:** Es imposible construir un dispositivo que opere en un ciclo y cuyo único efecto sea la transferencia de calor de un cuerpo más frío a un cuerpo más caliente.
-* **Enunciado de Kelvin-Planck:** Es imposible construir una máquina térmica que, operando en un ciclo, extraiga calor de una sola fuente y realice una cantidad equivalente de trabajo.
-Matemáticamente, para un proceso infinitesimal reversible, el cambio de entropía se define como:
+### 1. Ley Cero de la Termodinámica: Equilibrio Térmico y Temperatura
+
+La Ley Cero postula la existencia de una relación de equivalencia entre sistemas termodinámicos. 
+
+**Definición (Equilibrio Térmico):** Dos sistemas se encuentran en equilibrio térmico si, al estar conectados por una pared diatérmana, no hay flujo neto de calor entre ellos y sus variables de estado permanecen constantes en el tiempo.
+
+**Enunciado formal:** *Si un sistema $A$ está en equilibrio térmico con un sistema $C$, y un sistema $B$ está también en equilibrio térmico con $C$, entonces $A$ y $B$ están en equilibrio térmico entre sí.*
+
+Esta transitividad permite definir una clase de equivalencia. Todos los sistemas en equilibrio térmico mutuo comparten una propiedad intrínseca, que llamamos **temperatura** empírica $\theta$. Matemáticamente, el estado de un sistema viene descrito por ciertas variables (por ejemplo, presión $P$ y volumen $V$). La condición de equilibrio entre los sistemas $A$ y $C$ implica una restricción funcional:
+$$ F_1(P_A, V_A, P_C, V_C) = 0 $$
+Que puede reescribirse como $\theta_A(P_A, V_A) = \theta_C(P_C, V_C)$. Así, la Ley Cero fundamenta la termometría, garantizando que un termómetro (el sistema $C$) puede utilizarse para comparar empíricamente la temperatura de otros sistemas.
+
+### 2. Primera Ley de la Termodinámica: Conservación de Energía y Variables Conjugadas
+
+La Primera Ley es una generalización del principio de conservación de la energía, incorporando el concepto de calor como una forma de transferencia de energía.
+
+**Enunciado formal:** *Para cualquier sistema termodinámico aislado, la energía total se mantiene constante. En sistemas cerrados, la variación de la energía interna $U$ durante un proceso es igual a la suma de las transferencias de energía térmica (calor $Q$) y mecánica o no mecánica (trabajo $W$).*
+
+En términos diferenciales, para una transformación infinitesimal, se tiene:
+$$ dU = \delta Q + \delta W $$
+Aquí, usamos la notación clásica donde $dU$ es una diferencial exacta (dado que $U$ es una función de estado), mientras que $\delta Q$ y $\delta W$ son diferenciales inexactas (dependen de la trayectoria del proceso en el espacio de fases). 
+
+**Nota de convención de signos:** Adoptamos la convención moderna de la IUPAC donde $\delta Q$ es el calor absorbido *por* el sistema y $\delta W$ es el trabajo realizado *sobre* el sistema. (En muchos textos tradicionales se usa $dU = \delta Q - \delta W$ para trabajo realizado *por* el sistema).
+
+#### Trabajo Reversible y Fuerzas Generalizadas
+Para un proceso reversible, el trabajo $\delta W$ puede expresarse como el producto de una variable intensiva (fuerza generalizada $Y_i$) y el cambio en su variable extensiva conjugada $dX_i$:
+$$ \delta W_{\text{rev}} = \sum_i Y_i \, dX_i $$
+Para un sistema P-V simple (gas fluido), la fuerza es $-P$ (presión) y el desplazamiento es $dV$ (volumen), por lo que:
+$$ \delta W_{\text{rev}} = -P \, dV $$
+Si consideramos trabajo químico (potencial químico $\mu$, número de partículas $N$) y trabajo magnético (campo $B$, magnetización $M$), la Primera Ley para un proceso reversible se expande a:
+$$ dU = \delta Q_{\text{rev}} - P \, dV + \sum_j \mu_j \, dN_j + B \, dM + \dots $$
+
+**Propiedad cíclica:** Puesto que $U$ es una función de estado, su integral a través de cualquier trayectoria cerrada en el espacio de fases es estrictamente nula:
+$$ \oint dU = \oint (\delta Q + \delta W) = 0 \implies W_{\text{ciclo}} = -Q_{\text{ciclo}} $$
+
+### 3. Segunda Ley de la Termodinámica: Entropía y la Flecha del Tiempo
+
+La Primera Ley asegura el balance energético, pero no establece ninguna direccionalidad para los procesos naturales. La Segunda Ley postula la irreversibilidad inherente en la naturaleza, cuantificada mediante una nueva función de estado: la **entropía** ($S$).
+
+#### Enunciados Clásicos
+1. **Enunciado de Clausius:** *Es imposible que un proceso termodinámico cuyo único resultado final sea la transferencia de calor de un cuerpo de menor temperatura a uno de mayor temperatura.*
+2. **Enunciado de Kelvin-Planck:** *Es imposible construir un motor cíclico que extraiga calor de un único reservorio térmico y lo convierta íntegramente en trabajo macroscópico.*
+
+Estos enunciados son matemáticamente equivalentes y se relacionan directamente con el Teorema de Carnot, que estipula que el rendimiento térmico máximo $\eta$ de un motor operando entre dos focos a temperaturas $T_H$ y $T_C$ es:
+$$ \eta \le \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H} $$
+
+#### La Desigualdad de Clausius y la Formulación Matemática
+La fundamentación matemática de la Segunda Ley proviene de la desigualdad de Clausius, que rige cualquier proceso cíclico cerrado:
+$$ \oint \frac{\delta Q}{T} \le 0 $$
+La igualdad se cumple de forma exclusiva para ciclos completamente reversibles. Para una trayectoria reversible abierta del estado $A$ al estado $B$, la integral $\int_A^B \frac{\delta Q_{\text{rev}}}{T}$ es independiente de la trayectoria. Esto nos permite definir el diferencial exacto de la entropía $S$:
 $$ dS = \frac{\delta Q_{\text{rev}}}{T} $$
-Para cualquier proceso en un sistema aislado:
-$$ \Delta S \ge 0 $$
+Si aplicamos la Primera Ley a un sistema P-V simple reversible, obtenemos la **Ecuación Fundamental de la Termodinámica**:
+$$ dU = T \, dS - P \, dV $$
+Para un proceso **irreversible** entre dos estados infinitesimalmente próximos, la Segunda Ley impone que la producción de entropía en el universo es siempre positiva. Matemáticamente:
+$$ dS > \frac{\delta Q_{\text{irrev}}}{T} $$
+Para un sistema absolutamente aislado ($\delta Q = 0$), el cambio de entropía debe ser monotónicamente creciente:
+$$ \Delta S_{\text{aislado}} \ge 0 $$
 
-### Tercera Ley de la Termodinámica
-A medida que la temperatura de un sistema se aproxima al cero absoluto ($T \to 0$), su entropía se aproxima a un valor mínimo constante. Para un cristal perfecto, este valor es cero.
-$$ \lim_{T \to 0} S = 0 $$
+### 4. Tercera Ley de la Termodinámica: El Cero Absoluto
+
+Propuesta inicialmente por Walther Nernst como el "Teorema del Calor de Nernst" y luego reformulada por Max Planck.
+
+**Enunciado de Nernst-Planck:** *La entropía de todo sistema en equilibrio interno perfecto tiende a un valor constante, independiente de la presión, volumen, u otras variables termodinámicas externas, a medida que la temperatura se aproxima al cero absoluto ($T \to 0\text{ K}$). Para un cristal perfectamente estructurado, este límite es exactamente cero.*
+
+Matemáticamente, la tercera ley establece que:
+$$ \lim_{T \to 0} S(T, X_i) = S_0 $$
+Y para un estado macroscópico que posee un único microestado cuántico fundamental no degenerado ($\Omega = 1$ en la interpretación de Boltzmann $S = k_B \ln \Omega$), $S_0 = 0$.
+
+#### Consecuencias Rigurosas de la Tercera Ley
+1. **Capacidades Caloríficas en el límite $T \to 0$:**
+   Puesto que $S(T) = \int_0^T \frac{C_V(T')}{T'} dT'$, para que la integral converja en el límite inferior, es matemáticamente necesario que las capacidades caloríficas tiendan a cero conforme la temperatura tiende a cero:
+   $$ \lim_{T \to 0} C_V = 0 \quad \text{y} \quad \lim_{T \to 0} C_P = 0 $$
+2. **Inaccesibilidad del Cero Absoluto:**
+   Otra formulación equivalente de la Tercera Ley es el **Principio de Inaccesibilidad**: *Es imposible reducir la temperatura de cualquier sistema al cero absoluto mediante un número finito de operaciones físicas.* Cada paso de enfriamiento adiabático en un proceso en cascada será progresivamente menos eficiente, convergiendo asintóticamente pero sin llegar jamás a alcanzar $0\text{ K}$.
 
 ---
 

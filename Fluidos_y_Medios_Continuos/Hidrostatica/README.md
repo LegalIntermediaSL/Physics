@@ -2,32 +2,62 @@
 
 La hidrostatica estudia fluidos en equilibrio. Aunque no haya movimiento, la distribución de presión en un fluido determina fenómenos fundamentales como la flotación, la estabilidad de recipientes, la hidráulica y el comportamiento de la atmósfera y de los océanos a primera aproximación.
 
-## Conceptos Fundamentales
+## 🧮 Desarrollo Teórico Profundo
 
-- **Presión**: Fuerza normal por unidad de área, $p = F/A$.
-- **Equilibrio hidrostático**: En un fluido en reposo, la presión cambia con la altura para equilibrar el peso del propio fluido.
-- **Principio de Pascal**: Un cambio de presión en un fluido confinado se transmite a todo el volumen.
-- **Principio de Arquímedes**: Un cuerpo sumergido experimenta un empuje igual al peso del fluido desplazado.
+El estudio riguroso de la hidrostática se deduce de las ecuaciones de Navier-Stokes y Euler al aplicar la condición de velocidad nula en todas partes ($\vec{v} = 0$) y en todo tiempo. En ausencia de movimiento fluido, los términos convectivos, inerciales y viscosos desaparecen sistemáticamente.
 
-## Ecuaciones Clave
+### 1. La Ecuación Fundamental de la Hidrostática
 
-- **Gradiente hidrostático**:
-  $$ \frac{dp}{dz} = -\rho g $$
-- **Presión a profundidad constante**:
-  $$ p = p_0 + \rho g h $$
-- **Empuje**:
-  $$ E = \rho_{\text{fluido}} g V_{\text{desplazado}} $$
+Bajo la condición estática, la ecuación diferencial de conservación de la cantidad de movimiento se colapsa a un balance exclusivo entre las fuerzas de presión y las fuerzas de volumen (campo externo):
+$$ \nabla p = \rho \vec{g} $$
+Esta es la **Ecuación Fundamental de la Hidrostática**, que revela que el gradiente de presión escalar $\nabla p$ debe ser exactamente co-lineal con el campo vectorial de fuerzas por unidad de masa $\vec{g}$. 
 
-## Ideas Clave
+**Consecuencias de la ecuación:**
+1. Si el fluido está sujeto a un campo gravitatorio constante $\vec{g} = -g \hat{k}$ (donde $\hat{k}$ es el vector unitario vertical hacia arriba), la ecuación se descompone en:
+   $$ \frac{\partial p}{\partial x} = 0, \quad \frac{\partial p}{\partial y} = 0, \quad \frac{\partial p}{\partial z} = -\rho g $$
+   Esto demuestra rigurosamente que la presión es constante en planos isobáricos (planos horizontales $z = \text{cte}$).
 
-### 1. Presión isotrópica
-En equilibrio, la presión en un punto actúa igual en todas direcciones.
+2. Al integrar $\frac{dp}{dz} = -\rho g$ entre una referencia $z_0$ (superficie del líquido a presión $P_0$) y una profundidad arbitraria $h$ (donde $z = z_0 - h$), asumimos densidad incompresible constante $\rho$ para líquidos:
+   $$ p(h) = P_0 + \rho g h $$
+   Esta variación lineal de la presión (Presión Manométrica = $\rho gh$) es la razón por la que presas de agua son más gruesas en su base.
 
-### 2. Flotación
-Que un objeto se hunda o flote depende de la relación entre su densidad promedio y la del fluido.
+### 2. Isotropía del Tensor de Esfuerzos (Ley de Pascal)
 
-### 3. Aplicaciones
-Prensas hidráulicas, barómetros, presas, submarinos y atmósferas planetarias se entienden a partir de estas ideas.
+En un estado de reposo absoluto sin gradientes de velocidad, la Ley de Fricción de Newton establece que todos los esfuerzos cortantes del tensor hidrodinámico de esfuerzos son idénticamente cero ($\tau_{ij} = 0$ para $i \neq j$). El tensor de esfuerzos hidrostáticos resulta en:
+$$ \boldsymbol{\sigma} = -p \mathbf{I} $$
+donde $\mathbf{I}$ es la matriz identidad. La presión estática $p$ es una magnitud escalar isotrópica; la fuerza ejercida sobre una superficie infinitesimal sumergida $d\vec{A}$ es idéntica en magnitud e inversamente normal a la superficie independientemente de su orientación ($d\vec{F} = -p \hat{n} dA$). Esto explica formalmente la premisa del Principio de Pascal de transmisión isótropa en fluidos confinados.
+
+### 3. Fluido Compresible en Equilibrio Estático
+
+Si consideramos un fluido altamente compresible como la atmósfera terrestre regido por la ecuación de los gases ideales ($p = \rho R T / M$), la densidad depende fuertemente de la presión y la temperatura. 
+Sustituyendo $\rho(p)$ en la ecuación hidrostática obtenemos:
+$$ \frac{dp}{dz} = -\left(\frac{p M}{R T}\right) g $$
+Integrando esta ecuación diferencial lineal, asumiendo un modelo de atmósfera isotérmica ($T = \text{cte}$), derivamos la **Fórmula Barométrica**:
+$$ p(z) = P_0 \exp\left(-\frac{Mg z}{RT}\right) $$
+La presión atmosférica decae exponencialmente con la altitud $z$. 
+
+### 4. Derivación del Principio de Arquímedes
+
+Consideremos un cuerpo sumergido arbitrario de volumen $V$ y superficie $\partial V$. La fuerza neta ejercida por la presión del fluido circundante sobre su superficie es la integral de las fuerzas superficiales normales:
+$$ \vec{F}_b = -\oint_{\partial V} p \hat{n} dA $$
+Usando el teorema del gradiente (una variante del teorema de la divergencia):
+$$ \vec{F}_b = -\iiint_V \nabla p \, dV $$
+Sustituyendo el gradiente hidrostático $\nabla p = \rho_{\text{fluido}} \vec{g}$ (para líquido incompresible), obtenemos:
+$$ \vec{F}_b = -\iiint_V \rho_{\text{fluido}} \vec{g} \, dV = -(\rho_{\text{fluido}} V) \vec{g} $$
+La magnitud de esta fuerza ascensional o **Empuje** es exactamente el peso del volumen de fluido desplazado por el cuerpo ($m_{\text{desplazado}} g$), demostrando matemáticamente el Principio postulado por Arquímedes. Si el objeto pesa más que este empuje se hunde; si pesa menos, asciende hasta estabilizarse parcialmente sumergido, y si iguala, adquiere flotabilidad neutra.
+
+```mermaid
+graph TD
+    Equilibrio[Fluido en Reposo] --> Estatica(Ecuación Hidrostática: grad P = ρg)
+    Estatica --> Liquidos[Líquidos incompresibles]
+    Estatica --> Gases[Gases Compresibles]
+    Liquidos --> Lineal(Presión Lineal: P = P₀ + ρgh)
+    Lineal --> Pascal[Principio de Pascal y Prensas]
+    Gases --> Isotermico(Ecuación Diferencial: dP/P = -Mg/RT dz)
+    Isotermico --> Barometrica[Caída Exponencial Barométrica]
+    Estatica --> TeoremaDivergencia(Integración de Superficie a Volumen)
+    TeoremaDivergencia --> Arquimedes[Principio de Flotación de Arquímedes]
+```
 
 ## 📚 Recursos
 ### Cursos Específicos

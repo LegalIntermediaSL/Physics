@@ -8,49 +8,155 @@ En el siglo XIX, Fraunhofer descubrió líneas oscuras en el espectro solar (Lí
 
 ## 🧮 Desarrollo Teórico Profundo
 
-La interacción de un átomo con un campo electromagnético se trata comúnmente en la **Aproximación Dipolar Eléctrica**. La perturbación armónica dependiente del tiempo es:
+### 1. El Hamiltoniano de Interacción Radiación-Materia
 
-$$ \hat{H}'(t) = - \mathbf{d} \cdot \mathbf{E}(t) = -e \mathbf{r} \cdot \mathbf{E_0} \cos(\omega t) $$
+Para estudiar la interacción entre un átomo y un campo electromagnético, comenzamos desde la formulación clásica del electromagnetismo utilizando los potenciales vector $\mathbf{A}(\mathbf{r}, t)$ y escalar $\phi(\mathbf{r}, t)$. El campo eléctrico $\mathbf{E}$ y el campo magnético $\mathbf{B}$ se expresan como:
 
-Donde $\mathbf{d} = e\mathbf{r}$ es el operador de momento dipolar eléctrico. La probabilidad de transición de un estado $|i\rangle$ a un estado $|f\rangle$ está dada por la **Regla de Oro de Fermi**:
+$$ \mathbf{E} = -\nabla \phi - \frac{\partial \mathbf{A}}{\partial t} $$
+$$ \mathbf{B} = \nabla \times \mathbf{A} $$
 
-$$ W_{i \rightarrow f} = \frac{2\pi}{\hbar} | \langle f | \hat{H}' | i \rangle |^2 \rho(E_f) $$
+En el **calibre de Coulomb** (o *gauge* de radiación), elegimos $\nabla \cdot \mathbf{A} = 0$ y $\phi = 0$ (en ausencia de fuentes de carga externas libres). Para un electrón de masa $m_e$ y carga $-e$ ligado a un núcleo por un potencial $V(\mathbf{r})$, el Hamiltoniano clásico se obtiene mediante la sustitución del momento canónico $\mathbf{p} \rightarrow \mathbf{p} + e\mathbf{A}$:
 
-Las transiciones sólo están permitidas si el elemento de matriz del dipolo no es cero:
-$$ \langle f | \mathbf{r} | i \rangle \neq 0 $$
+$$ H = \frac{1}{2m_e}(\mathbf{p} + e\mathbf{A})^2 + V(\mathbf{r}) $$
 
-Esto da lugar a las **Reglas de Selección** para transiciones dipolares eléctricas (por ejemplo, para el átomo de H):
-- $\Delta l = \pm 1$ (cambio de paridad necesario).
-- $\Delta m_l = 0, \pm 1$.
+Al cuantizar el sistema, reemplazamos $\mathbf{p}$ por su operador mecano-cuántico $\hat{\mathbf{p}} = -i\hbar\nabla$. Expandiendo el término cinético:
 
-**Efecto Zeeman:**
-En presencia de un campo magnético externo $\mathbf{B}$, los niveles de energía atómicos se desdoblan debido a la interacción del momento magnético total del átomo $\boldsymbol{\mu}$ con el campo. El hamiltoniano de perturbación es $\hat{H}_B = -\boldsymbol{\mu} \cdot \mathbf{B}$. El desplazamiento energético en el límite de campo débil es:
+$$ (\hat{\mathbf{p}} + e\mathbf{A})^2 = \hat{\mathbf{p}}^2 + e(\hat{\mathbf{p}} \cdot \mathbf{A} + \mathbf{A} \cdot \hat{\mathbf{p}}) + e^2\mathbf{A}^2 $$
 
-$$ \Delta E = \mu_B g_J m_J B $$
+Dado que estamos en el calibre de Coulomb, $\nabla \cdot \mathbf{A} = 0$, lo que implica que los operadores $\hat{\mathbf{p}}$ y $\mathbf{A}$ conmutan: $[\hat{\mathbf{p}}, \mathbf{A}] = -i\hbar (\nabla \cdot \mathbf{A}) = 0$. Por lo tanto, $\hat{\mathbf{p}} \cdot \mathbf{A} = \mathbf{A} \cdot \hat{\mathbf{p}}$. El Hamiltoniano total se puede dividir en un término no perturbado $\hat{H}_0$ y una perturbación dependiente del tiempo $\hat{H}'(t)$:
 
-Donde $\mu_B$ es el magnetón de Bohr, $m_J$ es el número cuántico magnético total y $g_J$ es el factor g de Landé.
+$$ \hat{H} = \underbrace{\frac{\hat{\mathbf{p}}^2}{2m_e} + V(\mathbf{r})}_{\hat{H}_0} + \underbrace{\frac{e}{m_e}\mathbf{A} \cdot \hat{\mathbf{p}} + \frac{e^2}{2m_e}\mathbf{A}^2}_{\hat{H}'(t)} $$
 
-## 🛠 Ejemplo Práctico
+Para campos electromagnéticos de intensidad moderada, el término cuadrático $\mathbf{A}^2$ es despreciable en comparación con el término lineal, por lo que la perturbación se reduce a:
 
-**Problema:** Calcular el desdoblamiento de energía (efecto Zeeman normal, espín cero o estado singlete con $S=0$, por lo que $J=L$, $g_J=1$) del nivel $2p$ ($l=1$) de un átomo colocado en un campo magnético externo de $B = 1 \, \text{T}$.
+$$ \hat{H}'(t) \approx \frac{e}{m_e}\mathbf{A} \cdot \hat{\mathbf{p}} $$
 
-**Solución paso a paso:**
+### 2. La Aproximación Dipolar Eléctrica
 
-1. Para $l=1$, los valores de $m_l$ (o $m_J$) son $-1, 0, +1$.
-2. **Fórmula del desplazamiento de energía:**
-   $$ \Delta E = \mu_B m_l B $$
-3. **Datos:**
-   - $\mu_B = 9.274 \times 10^{-24} \, \text{J/T}$
-   - $B = 1 \, \text{T}$
-4. **Cálculo de los desplazamientos:**
-   - Para $m_l = +1$:
-     $$ \Delta E = (9.274 \times 10^{-24}) (1) (1) = 9.274 \times 10^{-24} \, \text{J} \approx 5.79 \times 10^{-5} \, \text{eV} $$
-   - Para $m_l = 0$:
-     $$ \Delta E = 0 $$
-   - Para $m_l = -1$:
-     $$ \Delta E = -9.274 \times 10^{-24} \, \text{J} \approx -5.79 \times 10^{-5} \, \text{eV} $$
+Consideremos una onda plana electromagnética monocromática incidente, donde el potencial vector es de la forma:
 
-El nivel original se desdobla en 3 niveles, separados por $5.79 \times 10^{-5} \, \text{eV}$.
+$$ \mathbf{A}(\mathbf{r}, t) = \mathbf{A}_0 \cos(\mathbf{k} \cdot \mathbf{r} - \omega t) = \frac{\mathbf{A}_0}{2} \left[ e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} + e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \right] $$
+
+La longitud de onda $\lambda = 2\pi / |\mathbf{k}|$ de la luz visible o ultravioleta ($\sim 10^{-7}$ m) es mucho mayor que las dimensiones típicas de un átomo ($a_0 \sim 10^{-10}$ m). Esto nos permite realizar la **aproximación dipolar eléctrica**, en la cual expandimos la exponencial en serie de Taylor alrededor del núcleo (situado en $\mathbf{r}=0$):
+
+$$ e^{i\mathbf{k} \cdot \mathbf{r}} = 1 + i\mathbf{k} \cdot \mathbf{r} - \frac{1}{2}(\mathbf{k} \cdot \mathbf{r})^2 + \dots \approx 1 $$
+
+Bajo esta aproximación, el campo se vuelve espacialmente uniforme sobre el átomo, es decir, $\mathbf{A}(\mathbf{r}, t) \approx \mathbf{A}(0, t)$. Es posible demostrar, a través de una transformación de *gauge* de Göppert-Mayer, que esta interacción equivale a la forma más familiar e intuitiva que acopla el **momento dipolar eléctrico** $\hat{\mathbf{d}} = -e\hat{\mathbf{r}}$ con el campo eléctrico $\mathbf{E}(t) = -\frac{\partial \mathbf{A}}{\partial t}$:
+
+$$ \hat{H}'(t) = -\hat{\mathbf{d}} \cdot \mathbf{E}(t) = e \hat{\mathbf{r}} \cdot \mathbf{E}_0 \cos(\omega t) $$
+
+### 3. Teoría de Perturbaciones Dependiente del Tiempo
+
+Para determinar cómo este Hamiltoniano dependiente del tiempo induce transiciones entre un estado inicial $|i\rangle$ y un estado final $|f\rangle$ (soluciones estacionarias de $\hat{H}_0$), empleamos la ecuación de Schrödinger dependiente del tiempo:
+
+$$ i\hbar \frac{\partial |\Psi(t)\rangle}{\partial t} = (\hat{H}_0 + \hat{H}'(t)) |\Psi(t)\rangle $$
+
+Expandimos la función de onda en la base de autoestados imperturbados $|n\rangle$ con autovalores $E_n$:
+
+$$ |\Psi(t)\rangle = \sum_n c_n(t) e^{-iE_n t / \hbar} |n\rangle $$
+
+Sustituyendo esta expansión en la ecuación de Schrödinger, multiplicando por $\langle f|$ e integrando sobre todo el espacio, obtenemos un sistema acoplado de ecuaciones diferenciales para los coeficientes de probabilidad $c_f(t)$:
+
+$$ i\hbar \frac{dc_f(t)}{dt} = \sum_n c_n(t) \langle f | \hat{H}'(t) | n \rangle e^{i\omega_{fn} t} $$
+
+Donde $\omega_{fn} = (E_f - E_n)/\hbar$ es la frecuencia de Bohr para la transición. A tiempo $t=0$, asumimos que el sistema se encuentra en el estado inicial exacto, es decir, $c_n(0) = \delta_{ni}$. En primer orden de perturbación, consideramos $c_n(t) \approx \delta_{ni}$ en el lado derecho de la ecuación. Así, la tasa de cambio de $c_f$ (para $f \neq i$) es:
+
+$$ i\hbar \frac{dc_f^{(1)}(t)}{dt} \approx \langle f | \hat{H}'(t) | i \rangle e^{i\omega_{fi} t} $$
+
+Para nuestra perturbación armónica $\hat{H}'(t) = \hat{V} e^{-i\omega t} + \hat{V}^\dagger e^{i\omega t}$ (donde $\hat{V} = e \hat{\mathbf{r}} \cdot \mathbf{E}_0 / 2$), la integración directa resulta en:
+
+$$ c_f^{(1)}(t) = -\frac{i}{\hbar} \int_0^t \langle f | \hat{H}'(t') | i \rangle e^{i\omega_{fi} t'} dt' $$
+$$ c_f^{(1)}(t) = -\frac{1}{\hbar} \left[ \langle f | \hat{V} | i \rangle \frac{e^{i(\omega_{fi}-\omega)t}-1}{\omega_{fi}-\omega} + \langle f | \hat{V}^\dagger | i \rangle \frac{e^{i(\omega_{fi}+\omega)t}-1}{\omega_{fi}+\omega} \right] $$
+
+En el régimen de resonancia ($\omega \approx \omega_{fi}$ para absorción), el primer término domina drásticamente. Ignorando el segundo término (aproximación de onda rotatoria), la probabilidad de transición $P_{i \rightarrow f}(t) = |c_f^{(1)}(t)|^2$ resulta:
+
+$$ P_{i \rightarrow f}(t) = \frac{|\langle f | \hat{V} | i \rangle|^2}{\hbar^2} \left[ \frac{\sin((\omega_{fi}-\omega)t/2)}{(\omega_{fi}-\omega)/2} \right]^2 $$
+
+### 4. La Regla de Oro de Fermi
+
+En la práctica, los estados finales en un continuo (o expuestos a radiación electromagnética que cubre un continuo de frecuencias) están descritos por una densidad de estados $\rho(E)$. La tasa de transición total $W_{i \rightarrow f}$ requiere integrar la probabilidad sobre este continuo:
+
+$$ W_{i \rightarrow f} = \frac{d}{dt} \int P_{i \rightarrow f}(t) \rho(E_f) dE_f $$
+
+En el límite de tiempos largos ($t \rightarrow \infty$), la función $[\sin(xt/2)/(x/2)]^2$ se vuelve extremadamente afilada alrededor de $x=0$, comportándose como la función delta de Dirac $2\pi t \delta(x)$. Reemplazando esto en la integral, derivamos la célebre **Regla de Oro de Fermi**:
+
+$$ W_{i \rightarrow f} = \frac{2\pi}{\hbar} |\langle f | \hat{H}' | i \rangle|^2 \rho(E_f) \delta(E_f - E_i \pm \hbar\omega) $$
+
+Esta expresión captura la esencia de la espectroscopia: las transiciones están gobernadas estrictamente por la superposición mecano-cuántica del estado inicial, el estado final y el operador del campo.
+
+### 5. Reglas de Selección (Transiciones Dipolares)
+
+La probabilidad de transición depende del **elemento de matriz del dipolo** $\mathbf{M}_{fi} = \langle f | -e\hat{\mathbf{r}} | i \rangle$. Si esta integral de volumen es nula, la transición está "prohibida" (en primer orden).
+Para un átomo hidrogenoide, las funciones de onda se separan en partes radiales y angulares: $\psi_{n,l,m}(\mathbf{r}) = R_{nl}(r) Y_l^m(\theta, \phi)$. El vector de posición $\mathbf{r}$ puede expresarse en términos de los armónicos esféricos de orden 1, $Y_1^\mu$.
+Para que la integral angular $\int (Y_{l'}^{m'})^* Y_1^\mu Y_l^m d\Omega$ no se anule, deben cumplirse condiciones estrictas relacionadas con el teorema de Wigner-Eckart y la conservación del momento angular:
+
+1. **Regla del cambio de paridad ($\Delta l$):** El momento dipolar es impar bajo inversión espacial ($\mathbf{r} \rightarrow -\mathbf{r}$). Para que la integral de todo el espacio sea simétrica, el estado final debe tener diferente paridad que el inicial:
+   $$ \Delta l = l_f - l_i = \pm 1 $$
+2. **Regla del número cuántico magnético ($\Delta m_l$):** Correspondiente a la conservación de la componente z del momento angular cuando se absorbe un fotón (que tiene espín 1):
+   $$ \Delta m_l = m_f - m_i = 0, \pm 1 $$
+
+### 6. Desdoblamiento de Niveles y Perturbaciones Estáticas
+
+Más allá de la interacción dinámica con campos oscilantes, la espectroscopia también abarca el estudio de perturbaciones estáticas.
+
+**El Efecto Zeeman:**
+La aplicación de un campo magnético estático $\mathbf{B} = B\hat{\mathbf{z}}$ rompe la degeneración de los niveles atómicos. Un electrón con momento angular orbital $\mathbf{L}$ y momento angular de espín $\mathbf{S}$ posee un momento magnético $\boldsymbol{\mu} = -\frac{\mu_B}{\hbar}(\mathbf{L} + g_s\mathbf{S})$, donde $\mu_B = \frac{e\hbar}{2m_e}$ es el magnetón de Bohr y $g_s \approx 2$. El Hamiltoniano de perturbación es:
+
+$$ \hat{H}_B = -\boldsymbol{\mu} \cdot \mathbf{B} = \frac{\mu_B B}{\hbar}(L_z + g_s S_z) $$
+
+En el límite de campo débil (Efecto Zeeman Anómalo), donde el acoplamiento espín-órbita es mayor que la perturbación magnética, $\mathbf{J} = \mathbf{L} + \mathbf{S}$ es un buen número cuántico. La corrección de energía de primer orden usa el teorema de Wigner-Eckart (factor de Landé $g_J$):
+
+$$ \Delta E_{m_J} = \langle J, m_J | \hat{H}_B | J, m_J \rangle = \mu_B g_J m_J B $$
+
+donde el factor g de Landé se define matemáticamente como:
+
+$$ g_J = 1 + \frac{J(J+1) - L(L+1) + S(S+1)}{2J(J+1)} $$
+
+### 7. Diagrama de Procesos Espectroscópicos
+
+```mermaid
+graph TD
+    classDef state fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    classDef photon fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+    classDef process fill:#f1f8e9,stroke:#33691e,stroke-width:2px;
+
+    S1(Estado Base |i⟩):::state
+    S2(Estado Excitado |f⟩):::state
+    Ph1([Fotón Incidente ℏω]):::photon
+    Ph2([Fotón Emitido ℏω]):::photon
+    Ph3([Fotón Estimulado ℏω]):::photon
+    
+    Ph1 --> Abs(Absorción):::process
+    S1 --> Abs
+    Abs --> S2
+    
+    S2 --> SpE(Emisión Espontánea):::process
+    SpE --> S1
+    SpE --> Ph2
+    
+    S2 --> StE(Emisión Estimulada):::process
+    Ph1 -.-> StE
+    StE --> S1
+    StE --> Ph3
+    StE --> Ph1
+```
+
+### 8. Ejemplo Analítico Riguroso
+
+**Problema:** Determinar el desdoblamiento de las líneas espectrales en un experimento del Efecto Zeeman Normal para la transición de un estado $nd$ ($L=2$, $S=0$) a un estado $np$ ($L=1$, $S=0$) sometido a un campo magnético $\mathbf{B} = B \hat{\mathbf{z}}$.
+
+**Solución Demostrativa:**
+1. Dado que $S=0$, estamos en un estado singlete. Consecuentemente, $\mathbf{J} = \mathbf{L}$ y el factor g de Landé se simplifica a $g_J = 1$.
+2. Los desplazamientos de energía de los niveles individuales son $\Delta E = \mu_B m_L B$.
+3. Para el nivel superior $nd$ ($L=2$), las proyecciones magnéticas son $m_{L_i} \in \{-2, -1, 0, 1, 2\}$.
+4. Para el nivel inferior $np$ ($L=1$), las proyecciones son $m_{L_f} \in \{-1, 0, 1\}$.
+5. La frecuencia original de la transición en ausencia de campo es $\nu_0 = \frac{E_{nd} - E_{np}}{h}$. Con el campo activado, las energías de transición modificadas se expresan como:
+   $$ h\nu = (E_{nd} + \mu_B m_{L_i} B) - (E_{np} + \mu_B m_{L_f} B) = h\nu_0 + \mu_B B (m_{L_i} - m_{L_f}) $$
+6. Aplicando la regla de selección dipolar $\Delta m_L = m_{L_f} - m_{L_i} \in \{0, \pm 1\}$:
+   - Para $\Delta m_L = 0$ (transiciones $\pi$), el cambio de energía es cero: $h\nu = h\nu_0$.
+   - Para $\Delta m_L = +1$ (transiciones $\sigma^+$), $h\nu = h\nu_0 - \mu_B B$.
+   - Para $\Delta m_L = -1$ (transiciones $\sigma^-$), $h\nu = h\nu_0 + \mu_B B$.
+7. **Conclusión:** Aunque haya $5 \times 3 = 15$ posibles pares de estados inicial-final, las estrictas reglas de selección limitan los decaimientos permitidos, observándose exactamente un triplete de Lorentz en el espectro: tres componentes polarizadas separadas energéticamente por una cantidad discreta y exacta de $\mu_B B$.
 
 ## 📚 Recursos Específicos
 

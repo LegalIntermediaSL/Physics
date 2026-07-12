@@ -2,31 +2,60 @@
 
 Las oscilaciones describen sistemas que evolucionan alrededor de un equilibrio estable. Cuando ese comportamiento se transmite en el espacio, aparecen las ondas: perturbaciones que transportan energía e información sin transportar materia de manera neta.
 
-## Conceptos Fundamentales
+## 🧮 Desarrollo Teórico Profundo
 
-- **Movimiento armónico simple (MAS)**: Modelo canónico de una fuerza restauradora proporcional al desplazamiento: $F = -kx$.
-- **Frecuencia angular**: Para un oscilador armónico, $\omega_0 = \sqrt{k/m}$.
-- **Fase y amplitud**: La solución típica es $x(t) = A \cos(\omega t + \phi)$.
-- **Amortiguamiento**: Introduce pérdida de energía y disminución de amplitud con el tiempo.
-- **Resonancia**: Ocurre cuando una fuerza externa periódica excita al sistema cerca de su frecuencia natural.
-- **Ondas viajeras**: Soluciones del tipo $y(x,t) = A \cos(kx - \omega t + \phi)$.
-- **Ondas estacionarias**: Surgen por superposición de ondas opuestas y generan nodos y vientres.
+El estudio de las oscilaciones y ondas constituye uno de los pilares de la física teórica y aplicada. Comienza con el análisis dinámico de sistemas perturbados alrededor de un equilibrio estable y se extiende a la propagación de esta energía en medios continuos.
 
-## Ideas Clave
+### 1. El Oscilador Armónico Simple, Amortiguado y Forzado
 
-### 1. Superposición
-Si el sistema es lineal, varias oscilaciones u ondas pueden sumarse sin destruirse mutuamente.
+Un sistema de masa $m$ sujeto a una fuerza restauradora lineal (Ley de Hooke) $F = -kx$ obedece la ecuación diferencial:
+$$ m \frac{d^2 x}{dt^2} + kx = 0 $$
+Definiendo la frecuencia angular natural $\omega_0 = \sqrt{k/m}$, la solución general es $x(t) = A \cos(\omega_0 t + \phi)$. 
 
-### 2. Dispersión
-En algunos medios, la velocidad de fase depende de la frecuencia. Esto modifica la forma de pulsos y paquetes de onda.
+**Oscilador Amortiguado:** Si consideramos una fuerza disipativa proporcional a la velocidad, $F_d = -b v$, la ecuación se convierte en:
+$$ m \frac{d^2 x}{dt^2} + b \frac{dx}{dt} + kx = 0 \implies \frac{d^2 x}{dt^2} + 2\gamma \frac{dx}{dt} + \omega_0^2 x = 0 $$
+donde $\gamma = b/2m$. En el caso subamortiguado ($\gamma < \omega_0$), la solución es:
+$$ x(t) = A e^{-\gamma t} \cos(\omega_d t + \phi) \quad \text{con} \quad \omega_d = \sqrt{\omega_0^2 - \gamma^2} $$
+La amplitud decrece exponencialmente, perdiendo energía cinética y potencial en forma de calor.
 
-### 3. Energía
-En un oscilador armónico, la energía se intercambia entre cinética y potencial:
-$$ E = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 $$
+**Oscilador Forzado y Resonancia:** Al aplicar una fuerza armónica externa $F_{ext}(t) = F_0 \cos(\omega t)$, el estado estacionario adopta la frecuencia de la fuerza externa:
+$$ x(t) = A(\omega) \cos(\omega t - \delta) $$
+donde la amplitud $A(\omega)$ tiene un máximo absoluto (resonancia) cuando $\omega \approx \omega_0$:
+$$ A(\omega) = \frac{F_0 / m}{\sqrt{(\omega_0^2 - \omega^2)^2 + (2\gamma\omega)^2}} $$
 
-### 4. Ecuación de onda
-Muchas ondas obedecen una ecuación del tipo:
-$$ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2 y}{\partial t^2} $$
+### 2. La Ecuación de Onda Clásica
+
+Cuando conectamos una infinidad de osciladores acoplados, pasamos del dominio discreto al continuo. Consideremos una cuerda bajo tensión $T$ y con densidad lineal de masa $\mu$. Aplicando la Segunda Ley de Newton a un segmento infinitesimal $dx$, y asumiendo ángulos pequeños $\theta \approx \partial y/\partial x$, la componente vertical de la fuerza neta es:
+$$ dF_y = T \left( \frac{\partial y}{\partial x}\Big|_{x+dx} - \frac{\partial y}{\partial x}\Big|_{x} \right) \approx T \frac{\partial^2 y}{\partial x^2} dx $$
+Igualando esto a la masa $(\mu dx)$ por la aceleración $(\partial^2 y/\partial t^2)$, obtenemos la **Ecuación de Onda de d'Alembert**:
+$$ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} $$
+donde la velocidad de propagación es $v = \sqrt{T/\mu}$. 
+
+### 3. Soluciones de la Ecuación de Onda
+
+La solución de d'Alembert demuestra que cualquier función dos veces diferenciable de la forma $y(x,t) = f(x - vt) + g(x + vt)$ satisface la ecuación de onda.
+Para ondas armónicas, usamos el método de separación de variables $y(x,t) = X(x)T(t)$, que nos lleva a:
+$$ y(x,t) = A \cos(kx \pm \omega t + \phi) $$
+donde el número de onda $k = 2\pi/\lambda$ y $\omega = 2\pi/T = 2\pi f$. La velocidad de fase está dada por la relación de dispersión $v_p = \omega / k$.
+
+### 4. Interferencia y Ondas Estacionarias
+
+Si una onda viajera incidente $y_1 = A \sin(kx - \omega t)$ se refleja en un extremo fijo, produce una onda reflejada $y_2 = A \sin(kx + \omega t)$. La superposición $y = y_1 + y_2$ resulta en una **onda estacionaria**:
+$$ y(x,t) = [2A \sin(kx)] \cos(\omega t) $$
+El término espacial $\sin(kx)$ obliga a la cuerda a tener nodos inmóviles en los puntos $x = n\pi/k = n\lambda/2$. Si la cuerda está fija en sus dos extremos (longitud $L$), se imponen las condiciones de frontera de Dirichlet $y(0,t)=y(L,t)=0$. Esto restringe las longitudes de onda permitidas (cuantización):
+$$ \lambda_n = \frac{2L}{n} \implies f_n = \frac{nv}{2L} = n f_1 $$
+Estos $f_n$ representan los modos normales de vibración o armónicos del sistema.
+
+```mermaid
+graph TD
+    Oscilador[Oscilador Armónico Simple] --> Acoplamiento[Osciladores Acoplados]
+    Acoplamiento --> Continuo[Medio Continuo Múltiples Grados Libertad]
+    Continuo --> Ecuacion[Ecuación Diferencial de Onda]
+    Ecuacion --> Viajeras[Ondas Viajeras: Energía se propaga]
+    Ecuacion --> Estacionarias[Ondas Estacionarias: Interferencia Espacial]
+    Viajeras --> Dispersion[Dispersión y Velocidad de Grupo]
+    Estacionarias --> ModosNormales[Modos Normales y Cuantización]
+```
 
 ## Aplicaciones
 

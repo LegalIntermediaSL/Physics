@@ -9,30 +9,72 @@ El concepto fue introducido formalmente por **René Descartes** como *quantitas 
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### 1. Momento Lineal e Impulso
-El momento lineal $\vec{p}$ de una partícula se define como:
-$$ \vec{p} = m \vec{v} $$
+El marco teórico asociado al momento (o cantidad de movimiento) ofrece herramientas potentísimas al trascender el estudio de fuerzas instantáneas. Abrazado firmemente en las simetrías inherentes del espacio por el teorema de Noether, este formalismo dicta pautas irrompibles sobre el destino final de sistemas interactuantes multicuerpo a lo largo del tiempo.
 
-La Segunda Ley de Newton, en su forma original más pura, es la derivada del momento:
-$$ \sum \vec{F} = \frac{d\vec{p}}{dt} $$
+### 1. Dinámica Fundamental e Integral en Eventos Discretos
 
-Si multiplicamos por $dt$ e integramos durante un intervalo de tiempo $\Delta t$, obtenemos el **Teorema del Impulso y el Momento Lineal**. El impulso $\vec{J}$ es la fuerza acumulada en el tiempo:
-$$ \vec{J} = \int_{t_i}^{t_f} \vec{F} dt = \Delta\vec{p} = \vec{p}_f - \vec{p}_i $$
+El vector momento lineal (o ímpetu) para un objeto o una partícula individual de masa invariante $m$ está dado por la relación directa en la métrica euclidiana $\vec{p} = m \vec{v}$.
 
-### 2. Conservación del Momento Lineal
-Para un sistema de partículas interactuando entre sí (y sin fuerzas externas netas):
-$$ \sum \vec{F}_{ext} = 0 \implies \frac{d\vec{P}_{sis}}{dt} = 0 \implies \vec{P}_{sis} = \text{constante} $$
-$$ m_1\vec{v}_{1i} + m_2\vec{v}_{2i} = m_1\vec{v}_{1f} + m_2\vec{v}_{2f} $$
+**La Segunda Ley Generalizada**:
+Si replanteamos axiomáticamente el Principio de Newton usando este invariante, permitiendo el estudio riguroso de cuerpos con transferencia de masa:
+$$ \sum \vec{F} = \frac{d\vec{p}}{dt} = m \frac{d\vec{v}}{dt} + \vec{v} \frac{dm}{dt} $$
+Esta reformulación es la base ineludible de la **Dinámica Estocástica Continua** (fricción de cohetes en lanzamiento asintótico donde se eyectan o adquieren propulsantes).
 
-### 3. Tipos de Colisiones
-- **Elásticas**: Se conserva tanto el momento lineal $\vec{P}$ como la energía cinética total $K$. Las partículas rebotan perfectamente.
-- **Inelásticas**: Se conserva el momento lineal, pero $K$ disminuye (se disipa en calor, sonido, o deformación plástica).
-- **Completamente inelásticas**: Se conserva el momento lineal, $K$ disminuye drásticamente y, de hecho, los cuerpos quedan unidos tras el choque, moviéndose con una velocidad común $\vec{v}_f$.
+**Teorema de Impulso - Transferencia Discreta**:
+En eventos cataclísmicos mecánicos de extremada brevedad temporal (como impactos, explosiones estelares o pelotazos), la función de la fuerza $\vec{F}(t)$ experimenta picos tipo función delta de Dirac en $t_0$. Si integramos en todo el dominio temporal infinitesimal del contacto $\Delta t \to \epsilon$:
+$$ \vec{J} = \int_{t_0}^{t_0+\Delta t} \vec{F}(t) \, dt = \int_{\vec{p}_i}^{\vec{p}_f} d\vec{p} = \Delta\vec{p} $$
+El Impulso Vectorial $\vec{J}$ se transfiere de inmediato, permitiendo puentear y esquivar analíticamente los procesos micro-deformativos del choque.
 
-### 4. Centro de Masa ($\vec{r}_{CM}$)
-El punto geométrico que se mueve como si toda la masa del sistema y todas las fuerzas externas estuvieran aplicadas a él.
-$$ \vec{r}_{CM} = \frac{1}{M_{tot}} \sum_{i} m_i \vec{r}_i = \frac{1}{M_{tot}} \int \vec{r} \, dm $$
-La velocidad del centro de masa $\vec{v}_{CM}$ es directamente proporcional al momento total del sistema: $\vec{P}_{sis} = M_{tot} \vec{v}_{CM}$.
+### 2. Teorema de Noether y Sistemas Continuos Aislados
+
+Considerando un ensamble $N$-partículas de sub-masas $m_1, m_2...$, si la métrica espacial presenta **Homogeneidad Traslacional** (las leyes de la física son intrínsecamente independientes de "dónde" se sitúe el sistema en el vacío de universo cerrado), el teorema de Emmy Noether asegura formalmente una constante local de conservación del lagrangiano, que resulta ser justamente el vector del Momento Lineal Total $\vec{P}_{tot} = \sum_{j=1}^N \vec{p}_j$.
+Esto se valida también derivando las sumatorias de las terceras leyes accionales ($\vec{F}_{ij} = - \vec{F}_{ji}$ cancela los vínculos inter-atomicos):
+$$ \frac{d\vec{P}_{tot}}{dt} = \sum \vec{F}_{ext} $$
+Si el ensamble no experimenta gradientes de campo de fondo perturbantes ($\sum \vec{F}_{ext} = 0$):
+$$ \mathbf{\vec{P}_{tot} = Constante Vectorial} \implies m_1\vec{v}_{1,i} + m_2\vec{v}_{2,i} + ... = m_1\vec{v}_{1,f} + m_2\vec{v}_{2,f} + ... $$
+
+```mermaid
+graph TD
+    A[Homogeneidad Espacial] -->|Teorema de Noether| B[Conservación de Momento P]
+    A2[Isotropía Espacial] -->|Teorema de Noether| B2[Conservación Momento Angular L]
+    A3[Homogeneidad Temporal] -->|Teorema de Noether| B3[Conservación Energía E]
+    B --> C{Colisión Discreta}
+    C -->|Q disipativo > 0| D(Inelástica)
+    C -->|Q disipativo = 0| E(Totalmente Elástica)
+```
+
+### 3. Álgebra en Problemas de Dispersión Cuasi-Elástica
+
+Dentro de los eventos resolutivos con restricción termodinámica ideal ($\Delta E_{cin} = 0$), las colisiones elásticas requieren manipular simultáneamente tensores cuadráticos y lineales de constancia.
+Para un choque 1D entre $m_1$ y $m_2$ donde $v_{2i} = 0$:
+1. $m_1 v_{1i} = m_1 v_{1f} + m_2 v_{2f}$
+2. $\frac{1}{2}m_1 v_{1i}^2 = \frac{1}{2}m_1 v_{1f}^2 + \frac{1}{2}m_2 v_{2f}^2$
+
+La manipulación matricial acoplada de ambas depara a las célebres soluciones modales cerradas:
+$$ v_{1f} = \left(\frac{m_1 - m_2}{m_1 + m_2}\right) v_{1i} $$
+$$ v_{2f} = \left(\frac{2m_1}{m_1 + m_2}\right) v_{1i} $$
+Las asintóticas demuestran escenarios maravillosos:
+- Si $m_1 = m_2$, los constituyentes ceden momento perfecto como partículas especulares (bolas de billar, péndulo de Newton).
+- Si $m_1 \ll m_2$, rebote elástico a pared inamovible $v_{1f} \approx -v_{1i}$.
+- Si $m_1 \gg m_2$, cañón empujando pluma a hipervelocidad $v_{2f} \approx 2v_{1i}$.
+
+### 4. Tensor del Coeficiente de Restitución y Pérdidas Plásticas
+
+Las restricciones microscópicas termodinámicas impiden el ideal elástico en la práctica; siempre hay desorden estructural asimétrico vibracional, fonones que disipan como sonido o roturas de malla ($K_{final} < K_{inicial}$). 
+Esta inelásticidad macroscópica está encapsulada estocásticamente de modo pragmático dentro del **Coeficiente Empírico Restitutivo** $e$, el cual impone una métrica lineal sobre las magnitudes recesivas de la cinemática de aproximación y expansión a lo largo de la normal instantánea de contacto $\hat{n}$:
+$$ e = \frac{\vec{v}_{separacion} \cdot \hat{n}}{\vec{v}_{aproximacion} \cdot \hat{n}} = \frac{v_{2f} - v_{1f}}{v_{1i} - v_{2i}} $$
+Rango métrico:
+- $e = 1$: Ideal elástico inafectado por gradientes de choque disipativos en su sección seccional de red.
+- $0 < e < 1$: Regímenes cuasi y semi-inelásticos estables macroscópicos. Disipación parcial de $K$.
+- $e = 0$: Choque Perfectamente Inelástico (soldadura total o impacto adherente plástico). Transferencia escalar de calor máxima, $\Delta K = - \frac{1}{2} \mu |\vec{v}_{1i} - \vec{v}_{2i}|^2$ donde $\mu$ es la masa reducida del dueto.
+
+### 5. Mecánica del Centro de Masa (C.M.) y Transformaciones de Referencia
+
+El paradigma matemático se simplifica operando en transformadas referenciales galileanas que anulan el momento agregado. El **Centro de Masa** constituye un pseudo-baricentro gravitacional topológico:
+$$ \vec{R}_{CM} = \frac{1}{M_{tot}} \int \vec{r} \, dm $$
+La velocidad del C.M., al ser ponderada por las masas, no es otra cosa que $\vec{v}_{CM} = \frac{\vec{P}_{tot}}{M_{tot}}$. Si no intervienen macro-fuerzas externas, $\vec{v}_{CM}$ es estrictamente inmodificable, ni colisiones estruendosas nucleares interrumpiéndolo le afectan en lo más mínimo.
+
+El uso de un sistema coordinado móvil anclado a este punto ($S_{cm}$) hace que la sumatoria total del Momento del ensamble allí valga cero ($\vec{P}_{cm}^{tot} = \vec{0}$). Este "Zero-Momentum Frame" permite que todo colisionador cuántico actual (CERN, Fermilab) reduzca las geometrías de scattering angular 3D complejas de interacciones nucleónicas a distribuciones polares simples dependientes sólo de secciones transversales y ángulos esféricos, desacoplando la cinética del centroide virtual de las dinámicas relativas inelásticas.
 
 ---
 

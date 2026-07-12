@@ -9,38 +9,90 @@ El estudio formal de la cinemática moderna comenzó con **Galileo Galilei** a p
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### 1. Vectores Fundamentales del Movimiento
-Todo el movimiento clásico tridimensional se describe usando vectores que dependen del tiempo $t$.
+El marco analítico de la cinemática se asienta en el cálculo diferencial e integral, donde la geometría del espacio-tiempo euclidiano sirve como lienzo continuo para las trayectorias de partículas puntuales o el centro de masa de cuerpos extensos.
 
-- **Posición ($\vec{r}(t)$)**: Vector que indica la ubicación de un objeto respecto al origen de un sistema de coordenadas. 
-  $$ \vec{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} $$
-- **Desplazamiento ($\Delta\vec{r}$)**: El cambio neto en la posición. Es independiente de la trayectoria.
-  $$ \Delta\vec{r} = \vec{r}(t_2) - \vec{r}(t_1) $$
-- **Velocidad ($\vec{v}(t)$)**: La derivada de la posición respecto al tiempo. Representa la tasa de cambio de la posición.
-  $$ \vec{v}(t) = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j} + \frac{dz}{dt}\hat{k} $$
-- **Aceleración ($\vec{a}(t)$)**: La derivada de la velocidad respecto al tiempo. Representa cómo cambia la velocidad (su magnitud o su dirección).
-  $$ \vec{a}(t) = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2} $$
+### 1. Formulación Vectorial y Tensorial en 3D
 
-### 2. Derivación de las Ecuaciones del MRUA
-Cuando la aceleración es constante ($\vec{a}(t) = \vec{a}_0$), podemos integrar las ecuaciones diferenciales fundamentales para obtener la cinemática estándar de 1 dimensión:
+Consideremos una variedad euclidiana $\mathbb{R}^3$ dotada de una base ortonormal $\{\hat{e}_1, \hat{e}_2, \hat{e}_3\}$ independiente del tiempo (sistema de referencia inercial). La descripción cinemática requiere un mapeo continuo $\vec{r}: \mathbb{R} \to \mathbb{R}^3$ donde $t \mapsto \vec{r}(t)$.
 
-1. **Velocidad en función del tiempo**:
-   Sabemos que $a = \frac{dv}{dt}$. Integrando ambos lados con respecto al tiempo:
-   $$ \int_{v_0}^{v(t)} dv = \int_{0}^{t} a \, dt \implies v(t) - v_0 = at \implies \mathbf{v(t) = v_0 + at} $$
+- **Vector Posición ($\vec{r}(t)$)**: Define la localización instantánea del móvil.
+  $$ \vec{r}(t) = \sum_{i=1}^3 x_i(t) \hat{e}_i = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} $$
+  
+- **Cinemática Diferencial**: Definiendo el desplazamiento diferencial $d\vec{r}$, se obtiene la velocidad instantánea como el límite del cociente de diferencias:
+  $$ \vec{v}(t) = \lim_{\Delta t \to 0} \frac{\vec{r}(t+\Delta t) - \vec{r}(t)}{\Delta t} = \frac{d\vec{r}}{dt} = \dot{\vec{r}}(t) $$
+  La aceleración instantánea es la derivada de la velocidad:
+  $$ \vec{a}(t) = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2} = \ddot{\vec{r}}(t) $$
 
-2. **Posición en función del tiempo**:
-   Sabemos que $v = \frac{dx}{dt}$. Usando la ecuación anterior:
-   $$ \int_{x_0}^{x(t)} dx = \int_{0}^{t} (v_0 + at) \, dt \implies \mathbf{x(t) = x_0 + v_0 t + \frac{1}{2} a t^2} $$
+### 2. Geometría Diferencial de Curvas y Triedro de Frenet-Serret
 
-3. **Ecuación de Torricelli (Sin tiempo explícito)**:
-   Si usamos la regla de la cadena $a = \frac{dv}{dt} = \frac{dv}{dx} \frac{dx}{dt} = v \frac{dv}{dx}$ y separamos variables:
-   $$ a \int_{x_0}^{x} dx = \int_{v_0}^{v} v \, dv \implies a(x - x_0) = \frac{1}{2}v^2 - \frac{1}{2}v_0^2 \implies \mathbf{v^2 = v_0^2 + 2a\Delta x} $$
+Para una trayectoria suave parametrizada por la longitud de arco $s(t) = \int_{t_0}^t |\vec{v}(\tau)| d\tau$, definimos el triedro móvil ortonormal en cada punto de la curva:
 
-### 3. Movimiento de Proyectiles (Tiro Parabólico)
-El movimiento en 2D bajo la influencia de una gravedad constante $g$ hacia abajo ($\hat{j}$). Los ejes son independientes (Principio de Superposición de Galileo).
+1. **Vector Tangente Unitario ($\hat{T}$)**:
+   $$ \hat{T} = \frac{d\vec{r}}{ds} = \frac{d\vec{r}/dt}{ds/dt} = \frac{\vec{v}}{|\vec{v}|} $$
+2. **Vector Normal Principal ($\hat{N}$)**: Mide la tasa de cambio direccional de $\hat{T}$.
+   $$ \frac{d\hat{T}}{ds} = \kappa \hat{N} $$
+   donde $\kappa = 1/\rho$ es la curvatura y $\rho$ es el radio de curvatura local.
+3. **Vector Binormal ($\hat{B}$)**:
+   $$ \hat{B} = \hat{T} \times \hat{N} $$
 
-- Eje $x$ (MRU): $x(t) = (v_0 \cos\theta) t$
-- Eje $y$ (MRUA): $y(t) = (v_0 \sin\theta) t - \frac{1}{2} g t^2$
+**Descomposición Intrínseca de la Aceleración**:
+Usando la regla de la cadena para la velocidad $\vec{v}(t) = v(t) \hat{T}(t)$ (donde $v = ds/dt$), derivamos para hallar la aceleración:
+$$ \vec{a}(t) = \frac{d}{dt}(v \hat{T}) = \dot{v} \hat{T} + v \frac{d\hat{T}}{dt} $$
+Aplicando $\frac{d\hat{T}}{dt} = \frac{d\hat{T}}{ds} \frac{ds}{dt} = (\kappa \hat{N}) v = \frac{v}{\rho} \hat{N}$:
+$$ \vec{a}(t) = a_t \hat{T} + a_n \hat{N} = \ddot{s} \hat{T} + \frac{v^2}{\rho} \hat{N} $$
+Esto demuestra rigurosamente que la aceleración tiene una componente tangencial que altera la celeridad y una componente normal (centrípeta) responsable de cambiar la dirección del movimiento, sin que exista componente en la dirección binormal.
+
+```mermaid
+graph TD
+    A[Velocidad v] --> B{Componentes de Aceleración}
+    B -->|Derivada del módulo| C(Tangencial a_t)
+    B -->|Cambio de dirección| D(Normal a_n)
+    C -->|dv/dt| E(Aceleración Tangencial)
+    D -->|v^2/R| F(Aceleración Centrípeta)
+```
+
+### 3. Integración de Ecuaciones de Movimiento: MRUA y Generalizaciones
+
+Dado un campo de aceleraciones $\vec{a}(t)$, las soluciones analíticas para $\vec{v}(t)$ y $\vec{r}(t)$ requieren dos condiciones de frontera o iniciales, $\vec{r}(t_0) = \vec{r}_0$ y $\vec{v}(t_0) = \vec{v}_0$:
+
+$$ \vec{v}(t) = \vec{v}_0 + \int_{t_0}^t \vec{a}(\tau) d\tau $$
+$$ \vec{r}(t) = \vec{r}_0 + \int_{t_0}^t \vec{v}(\tau) d\tau $$
+
+**Caso de Aceleración Constante ($\vec{a}(t) = \vec{a}_0$)**:
+Sustituyendo e integrando formalmente:
+$$ \vec{v}(t) = \vec{v}_0 + \vec{a}_0(t - t_0) $$
+$$ \vec{r}(t) = \vec{r}_0 + \vec{v}_0(t - t_0) + \frac{1}{2}\vec{a}_0(t - t_0)^2 $$
+
+**Ecuación de Torricelli (Relación Integral Generalizada)**:
+Para movimiento unidimensional dependiente de la posición, sea $a = a(x)$. Usando la regla de la cadena $a(x) = \frac{dv}{dt} = v \frac{dv}{dx}$:
+$$ \int_{v_0}^{v} v' dv' = \int_{x_0}^{x} a(x') dx' \implies \frac{1}{2}v^2 - \frac{1}{2}v_0^2 = \int_{x_0}^{x} a(x') dx' $$
+Si $a$ es constante, recuperamos $v^2 = v_0^2 + 2a(x - x_0)$.
+
+### 4. Sistemas de Coordenadas Curvilíneas (Polares, Cilíndricas y Esféricas)
+
+A menudo, las simetrías físicas dictan el uso de bases locales ortonormales en lugar de cartesianas globales.
+
+**Coordenadas Polares 2D $(r, \theta)$**:
+La base de vectores unitarios rota con el tiempo:
+$$ \hat{e}_r = \cos\theta \hat{i} + \sin\theta \hat{j} $$
+$$ \hat{e}_\theta = -\sin\theta \hat{i} + \cos\theta \hat{j} $$
+Las derivadas de los vectores unitarios con respecto al tiempo revelan dependencias de $\dot{\theta}$:
+$$ \dot{\hat{e}}_r = \dot{\theta}\hat{e}_\theta, \quad \dot{\hat{e}}_\theta = -\dot{\theta}\hat{e}_r $$
+El vector posición es $\vec{r} = r \hat{e}_r$. La velocidad se deriva usando la regla del producto:
+$$ \vec{v} = \dot{r} \hat{e}_r + r \dot{\hat{e}}_r = \dot{r} \hat{e}_r + r \dot{\theta} \hat{e}_\theta $$
+Derivando de nuevo para la aceleración:
+$$ \vec{a} = \frac{d}{dt}(\dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_\theta) = (\ddot{r} - r\dot{\theta}^2)\hat{e}_r + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\hat{e}_\theta $$
+- El término $-r\dot{\theta}^2$ representa la aceleración centrípeta.
+- El término $2\dot{r}\dot{\theta}$ es la **aceleración de Coriolis**, vital en marcos de referencia rotatorios y sistemas que cambian su radio de curvatura.
+
+### 5. Independencia de Movimientos: El Teorema de Superposición
+
+La linealidad del operador derivada permite desacoplar la cinemática en direcciones ortogonales. Para el movimiento de proyectiles en un campo gravitacional uniforme $\vec{g} = -g \hat{k}$:
+La ecuación diferencial rectora $\ddot{\vec{r}} = -g \hat{k}$ implica:
+$$ \ddot{x} = 0, \quad \ddot{y} = 0, \quad \ddot{z} = -g $$
+Lo que produce el conjunto clásico desacoplado:
+$$ \begin{cases} x(t) = x_0 + v_{x0}t \\ y(t) = y_0 + v_{y0}t \\ z(t) = z_0 + v_{z0}t - \frac{1}{2}gt^2 \end{cases} $$
+Eliminando el parámetro temporal $t$, se obtiene la ecuación de la trayectoria parabólica en el plano de movimiento.
 
 ---
 

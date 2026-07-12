@@ -9,28 +9,79 @@ A finales del siglo XIX, Ludwig Boltzmann y Josiah Willard Gibbs sentaron las ba
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### Colectivo Microcanónico (Sistema Aislado)
-Describe un sistema aislado con número de partículas $N$, volumen $V$, y energía total $E$ fijos. El postulado fundamental afirma que todos los microestados accesibles $\Omega(N,V,E)$ son igualmente probables.
-La entropía $S$ se define como:
-$$ S = k_B \ln \Omega $$
+El objetivo central de la mecánica estadística es derivar las leyes de la termodinámica macroscópica y predecir los comportamientos colectivos de la materia a partir de la dinámica microscópica (clásica o cuántica) de un número masivo de grados de libertad (del orden del número de Avogadro, $N_A \approx 6.022 \times 10^{23}$). Este enlace analítico se logra formalmente mediante el concepto de *ensamble* o *colectivo* estadístico, introducido por J. Willard Gibbs.
 
-### Colectivo Canónico (Sistema en Contacto Térmico)
-Describe un sistema con $N$ y $V$ fijos, pero que puede intercambiar energía con un baño térmico inmenso a temperatura constante $T$. La probabilidad de encontrar al sistema en un microestado $r$ con energía $E_r$ está dada por la distribución de Boltzmann:
+```mermaid
+flowchart LR
+    A[Mecánica de Partículas] -->|Postulado Fundamental| B(Microestados y Ensamble Microcanónico)
+    B -->|Contacto Térmico| C(Ensamble Canónico)
+    C -->|Intercambio de Partículas| D(Ensamble Gran Canónico)
+    B --> E[Entropía S]
+    C --> F[Energía Libre de Helmholtz F]
+    D --> G[Gran Potencial \Phi]
+    E -.-> H{Termodinámica Macroscópica}
+    F -.-> H
+    G -.-> H
+```
+
+### 1. El Postulado Fundamental de la Mecánica Estadística a priori
+
+En un sistema físico aislado con energía constante $E$, volumen $V$, y número de partículas $N$, el sistema transitará, a lo largo del tiempo, por diversos microestados debido a sus interacciones internas.
+El **Postulado Fundamental** establece que: *En equilibrio térmico, un sistema macroscópico aislado tiene igual probabilidad de encontrarse en cualquiera de sus microestados accesibles que satisfacen las restricciones macroscópicas.*
+Si el número total de tales microestados permitidos es $\Omega(N,V,E)$, la probabilidad de encontrar el sistema en el microestado $i$ es:
+$$ P_i = \begin{cases} \frac{1}{\Omega} & \text{si } E_i = E \\ 0 & \text{si } E_i \neq E \end{cases} $$
+
+### 2. Ensamble Microcanónico: Conexión con la Entropía
+
+El ensamble microcanónico modeliza sistemas estrictamente aislados. El punto de anclaje con la termodinámica viene proporcionado por la famosa ecuación de Boltzmann para la entropía $S$:
+$$ S(N,V,E) = k_B \ln \Omega(N,V,E) $$
+donde $k_B \approx 1.3806 \times 10^{-23} \text{ J/K}$ es la constante de Boltzmann. La entropía, como medida macroscópica, cuantifica en esencia nuestro "desconocimiento" del microestado específico del sistema.
+Desde la definición diferencial de la termodinámica, recordamos que $dU = TdS - PdV + \mu dN$. Puesto que aquí la energía interna $U \equiv E$, derivamos las identidades fundamentales inversas:
+$$ \frac{1}{T} = \left( \frac{\partial S}{\partial E} \right)_{N,V} \quad , \quad \frac{P}{T} = \left( \frac{\partial S}{\partial V} \right)_{N,E} \quad , \quad \frac{\mu}{T} = -\left( \frac{\partial S}{\partial N} \right)_{V,E} $$
+Esto demuestra cómo los gradientes de $\Omega$ dictan las temperaturas, presiones y potenciales químicos del sistema.
+
+### 3. Ensamble Canónico: Fluctuaciones Térmicas
+
+El ensamble microcanónico es matemáticamente engorroso debido a la restricción absoluta de conservación de energía. Es preferible modelar un sistema en contacto con un gran baño térmico a temperatura $T$, donde el sistema intercambia energía libremente. Ahora, la energía del sistema, $E_i$, no es constante, sino que fluctúa.
+
+Para derivar la probabilidad de un microestado $r$ con energía $E_r$, consideramos el sistema total (Sistema + Baño) como aislado y microcanónico. Por una expansión de Taylor de la entropía del baño térmico alrededor de su energía principal, se demuestra que la probabilidad del microestado decae exponencialmente con su energía:
 $$ P_r = \frac{e^{-\beta E_r}}{Z} $$
-donde $\beta = \frac{1}{k_B T}$ y $Z$ es la **función de partición canónica**:
-$$ Z(N,V,T) = \sum_r e^{-\beta E_r} $$
-A partir de $Z$ se deducen todas las variables termodinámicas. Por ejemplo, la Energía Libre de Helmholtz $F$ es:
-$$ F = -k_B T \ln Z $$
-Y la energía interna media $U$:
-$$ U = \langle E \rangle = -\frac{\partial \ln Z}{\partial \beta} $$
+donde $\beta = \frac{1}{k_B T}$. El denominador es la constante de normalización, o **función de partición canónica** $Z(N,V,T)$:
+$$ Z = \sum_{r} e^{-\beta E_r} \quad (\text{sistemas discretos}) \quad \text{o} \quad Z = \frac{1}{N!h^{3N}} \int \int e^{-\beta \mathcal{H}(\mathbf{q},\mathbf{p})} \, d^{3N}q \, d^{3N}p \quad (\text{sistemas continuos clásicos}) $$
 
-### Estadísticas Cuánticas
-A bajas temperaturas o altas densidades, la naturaleza indistinguible de las partículas cuánticas es crucial.
-* **Estadística de Bose-Einstein (Bosones):** Partículas de espín entero, sin restricción de ocupación. El número de ocupación medio por estado de energía $\epsilon_i$ es:
-  $$ \langle n_i \rangle = \frac{1}{e^{\beta(\epsilon_i - \mu)} - 1} $$
-* **Estadística de Fermi-Dirac (Fermiones):** Partículas de espín semientero (e.g., electrones), sujetas al principio de exclusión de Pauli (a lo sumo 1 partícula por estado):
-  $$ \langle n_i \rangle = \frac{1}{e^{\beta(\epsilon_i - \mu)} + 1} $$
-donde $\mu$ es el potencial químico.
+La función $Z$ es el puente hacia la termodinámica. Genera directamente la **Energía Libre de Helmholtz** $F$:
+$$ F(N,V,T) = -k_B T \ln Z $$
+Del diferencial exacto $dF = -SdT - PdV + \mu dN$, podemos calcular variables medias:
+* Energía Interna Media: $\langle E \rangle = -\left( \frac{\partial \ln Z}{\partial \beta} \right)_{V,N}$
+* Capacidad Calorífica (a su vez dependiente de las fluctuaciones de energía): $C_V = \left( \frac{\partial \langle E \rangle}{\partial T} \right)_V = \frac{\langle E^2 \rangle - \langle E \rangle^2}{k_B T^2}$
+
+### 4. Ensamble Gran Canónico: Número de Partículas Variable
+
+Si el sistema puede intercambiar no solo energía, sino también partículas, con un reservorio que mantiene $T$ y $\mu$ constantes, usamos el **Ensamble Gran Canónico**. 
+La probabilidad de un microestado con energía $E_r$ y número de partículas $N_r$ es:
+$$ P_{r} = \frac{e^{-\beta (E_r - \mu N_r)}}{\mathcal{Z}} $$
+La función de **Gran Partición** $\mathcal{Z}$ es:
+$$ \mathcal{Z}(T, V, \mu) = \sum_{N=0}^{\infty} \sum_{r} e^{-\beta (E_{r,N} - \mu N)} = \sum_{N=0}^{\infty} e^{\beta \mu N} Z(N, V, T) $$
+El potencial termodinámico asociado es el Gran Potencial $\Phi$:
+$$ \Phi(T, V, \mu) = -k_B T \ln \mathcal{Z} $$
+Donde $\Phi = -PV$. Las fluctuaciones del número de partículas se relacionan de igual modo con la compresibilidad isoterma del material.
+
+### 5. Formulaciones de Estadísticas Cuánticas y Fermiones/Bosones
+
+En el régimen donde las longitudes de onda térmicas de De Broglie $\lambda = \frac{h}{\sqrt{2 \pi m k_B T}}$ de las partículas se superponen ($\lambda \sim (V/N)^{1/3}$), los efectos puramente cuánticos de la indistinguibilidad de partículas y sus restricciones topológicas (espín) dominan. No existe "trayectoria" clásica.
+Los sistemas cuánticos con muchas partículas se analizan mediante números de ocupación $n_k$ de los estados de una sola partícula con energía $\epsilon_k$.
+
+* **Estadística de Fermi-Dirac (Fermiones):** Partículas con espín semi-entero (e.g. electrones, quarks, protones). Sometidas al principio de exclusión de Pauli. El número de partículas en el estado $k$ solo puede ser $n_k = 0$ o $1$.
+  La gran función de partición factoriza por estado: $\mathcal{Z}_k = \sum_{n_k=0}^{1} e^{-\beta(\epsilon_k - \mu)n_k} = 1 + e^{-\beta(\epsilon_k - \mu)}$.
+  El número de ocupación media resulta:
+  $$ \langle n_k \rangle_{FD} = \frac{1}{e^{\beta(\epsilon_k - \mu)} + 1} $$
+  Esto explica la presión de degeneración que sostiene a enanas blancas y estrellas de neutrones contra el colapso gravitatorio.
+
+* **Estadística de Bose-Einstein (Bosones):** Partículas con espín entero (e.g. fotones, fonones, átomos de Helio-4). Sin límite de ocupación cuántica ($n_k = 0, 1, 2, \dots$).
+  Aquí, $\mathcal{Z}_k = \sum_{n_k=0}^{\infty} e^{-\beta(\epsilon_k - \mu)n_k} = \frac{1}{1 - e^{-\beta(\epsilon_k - \mu)}}$ (requiriendo rigurosamente que $\mu < \epsilon_0$).
+  El número de ocupación media resulta:
+  $$ \langle n_k \rangle_{BE} = \frac{1}{e^{\beta(\epsilon_k - \mu)} - 1} $$
+  En el límite $T \to 0$ y con partículas conservadas (donde $\mu \to \epsilon_0$), surge un comportamiento patológico macroscópico donde una fracción dominante de partículas se condensa en el estado fundamental cuántico uniparticular. A este fenómeno lo denominamos **Condensación de Bose-Einstein**.
 
 ---
 

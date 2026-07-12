@@ -9,34 +9,78 @@ A mediados del siglo XIX, las leyes de Gauss, Ampère y Faraday existían como p
 
 ## 🧮 Desarrollo Teórico Profundo
 
-Las ecuaciones de Maxwell en el vacío, en su forma diferencial e integral, son:
+El tratamiento riguroso de las Ecuaciones de Maxwell requiere el uso del cálculo tensorial y análisis vectorial avanzado. En esta sección derivaremos no solo las ecuaciones fundamentales, sino también las leyes de conservación de energía y momento asociadas.
 
-### 1. Ley de Gauss para el Campo Eléctrico
-Las cargas eléctricas son las fuentes del campo eléctrico.
-* **Diferencial:** $\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}$
-* **Integral:** $\oint_S \vec{E} \cdot d\vec{A} = \frac{Q}{\varepsilon_0}$
+### 1. Las Ecuaciones Diferenciales y sus Potenciales
+Las cuatro ecuaciones de Maxwell acopladas en un medio con densidad de carga $\rho$ y densidad de corriente $\vec{J}$ son:
 
-### 2. Ley de Gauss para el Campo Magnético
-No existen los monopolos magnéticos; las líneas de campo son cerradas.
-* **Diferencial:** $\nabla \cdot \vec{B} = 0$
-* **Integral:** $\oint_S \vec{B} \cdot d\vec{A} = 0$
+1. **Ley de Gauss:** $\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}$
+2. **Ley de Gauss Magnética:** $\nabla \cdot \vec{B} = 0$
+3. **Ley de Faraday:** $\nabla \times \vec{E} + \frac{\partial \vec{B}}{\partial t} = 0$
+4. **Ley de Ampère-Maxwell:** $\nabla \times \vec{B} - \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} = \mu_0 \vec{J}$
 
-### 3. Ley de Faraday-Lenz
-Un campo magnético variable en el tiempo induce un campo eléctrico rotacional.
-* **Diferencial:** $\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$
-* **Integral:** $\oint_C \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}$
+La ley (2) garantiza que $\vec{B}$ puede expresarse como el rotacional de un potencial vector magnético $\vec{A}$:
+$$ \vec{B} = \nabla \times \vec{A} $$
+Sustituyendo esto en (3):
+$$ \nabla \times \left( \vec{E} + \frac{\partial \vec{A}}{\partial t} \right) = 0 $$
+Dado que el rotacional es nulo, el término entre paréntesis debe ser el gradiente de un potencial escalar $-V$:
+$$ \vec{E} = -\nabla V - \frac{\partial \vec{A}}{\partial t} $$
 
-### 4. Ley de Ampère-Maxwell
-Un campo magnético es generado tanto por corrientes eléctricas de conducción como por campos eléctricos variables en el tiempo (corriente de desplazamiento).
-* **Diferencial:** $\nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}$
-* **Integral:** $\oint_C \vec{B} \cdot d\vec{l} = \mu_0 I + \mu_0 \varepsilon_0 \frac{d\Phi_E}{dt}$
+Sustituyendo estos potenciales en (1) y (4), obtenemos un par de ecuaciones acopladas de segundo orden. Podemos desacoplarlas imponiendo un *Gauge* o calibre. En el **Gauge de Lorenz** ($\nabla \cdot \vec{A} + \mu_0 \varepsilon_0 \frac{\partial V}{\partial t} = 0$), las ecuaciones se simplifican a ecuaciones de onda no homogéneas (ecuaciones de d'Alembert):
+$$ \Box^2 V = \nabla^2 V - \frac{1}{c^2} \frac{\partial^2 V}{\partial t^2} = -\frac{\rho}{\varepsilon_0} $$
+$$ \Box^2 \vec{A} = \nabla^2 \vec{A} - \frac{1}{c^2} \frac{\partial^2 \vec{A}}{\partial t^2} = -\mu_0 \vec{J} $$
+donde $c = 1/\sqrt{\mu_0 \varepsilon_0}$. Sus soluciones son los potenciales retardados, demostrando que los cambios en las fuentes se propagan a la velocidad $c$.
 
-### Derivación de la Ecuación de Onda
-En el vacío (sin cargas ni corrientes, $\rho=0, \vec{J}=0$), tomamos el rotacional de la ley de Faraday:
-$$ \nabla \times (\nabla \times \vec{E}) = -\frac{\partial}{\partial t}(\nabla \times \vec{B}) $$
-Usando la identidad vectorial $\nabla \times (\nabla \times \vec{E}) = \nabla(\nabla \cdot \vec{E}) - \nabla^2 \vec{E}$, y sabiendo que $\nabla \cdot \vec{E} = 0$:
-$$ -\nabla^2 \vec{E} = -\frac{\partial}{\partial t} \left( \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right) \implies \nabla^2 \vec{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} $$
-Esta es una ecuación de onda cuya velocidad de propagación es $c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$, que coincide exactamente con la velocidad de la luz.
+### 2. Teorema de Poynting y Conservación de Energía
+Para derivar el balance energético, partimos de la fuerza de Lorentz ejercida sobre portadores en un volumen $V$:
+$$ \frac{dW_{mec}}{dt} = \int_V \vec{J} \cdot \vec{E} \, dV $$
+Utilizando la Ley de Ampère-Maxwell para despejar $\vec{J}$:
+$$ \vec{J} = \frac{1}{\mu_0} \nabla \times \vec{B} - \varepsilon_0 \frac{\partial \vec{E}}{\partial t} $$
+Por lo tanto:
+$$ \vec{J} \cdot \vec{E} = \frac{1}{\mu_0} \vec{E} \cdot (\nabla \times \vec{B}) - \varepsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} $$
+Aplicando la identidad vectorial $\nabla \cdot (\vec{E} \times \vec{B}) = \vec{B} \cdot (\nabla \times \vec{E}) - \vec{E} \cdot (\nabla \times \vec{B})$ y la Ley de Faraday ($\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$), tenemos:
+$$ \vec{J} \cdot \vec{E} = -\nabla \cdot \left( \frac{\vec{E} \times \vec{B}}{\mu_0} \right) - \left[ \varepsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} + \frac{1}{\mu_0} \vec{B} \cdot \frac{\partial \vec{B}}{\partial t} \right] $$
+Esto se puede reescribir como la **Ecuación del Teorema de Poynting**:
+$$ \frac{\partial u}{\partial t} + \nabla \cdot \vec{S} = -\vec{J} \cdot \vec{E} $$
+donde $\vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B})$ es el vector de Poynting (flujo de energía electromagnética por unidad de área), y $u = \frac{1}{2} \left( \varepsilon_0 |\vec{E}|^2 + \frac{1}{\mu_0} |\vec{B}|^2 \right)$ es la densidad de energía electromagnética.
+
+### 3. Propagación en Medios Materiales y Condiciones de Frontera
+Cuando la luz o cualquier campo electromagnético atraviesa materia macroscópica polarizable y magnetizable, introducimos los vectores Desplazamiento Eléctrico $\vec{D}$ y Campo Magnético Auxiliar $\vec{H}$:
+$$ \vec{D} = \varepsilon_0 \vec{E} + \vec{P} \quad , \quad \vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M} $$
+Las ecuaciones de Maxwell en medios materiales se convierten en:
+1. $\nabla \cdot \vec{D} = \rho_f$
+2. $\nabla \cdot \vec{B} = 0$
+3. $\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$
+4. $\nabla \times \vec{H} = \vec{J}_f + \frac{\partial \vec{D}}{\partial t}$
+donde el subíndice $f$ denota "cargas/corrientes libres". En una interfaz bidimensional libre de cargas o corrientes superficiales, esto resulta en las siguientes condiciones de contorno que rigen la reflexión y refracción ópticas (Ecuaciones de Fresnel):
+- $D_{1n} - D_{2n} = \sigma_f$
+- $B_{1n} - B_{2n} = 0$
+- $\vec{E}_{1t} - \vec{E}_{2t} = 0$
+- $\vec{H}_{1t} - \vec{H}_{2t} = \vec{K}_f \times \hat{n}$
+
+```mermaid
+graph LR
+    A(Cargas y Corrientes variables) -->|Generan| B(Potenciales Retardados A, V)
+    B -->|Derivación Espacio-temporal| C{Campos E y B}
+    C -->|Inducción Mutua Faraday| D(Variación temporal de B genera E rotacional)
+    C -->|Inducción Mutua Ampère| E(Variación temporal de E genera B rotacional)
+    D --> F[Onda Electromagnética Auto-Sostenida]
+    E --> F
+    F -->|Energía y Momento| G[Vector de Poynting S]
+```
+
+### 4. Tensor Electromagnético y Covariancia Relativista
+La unificación definitiva del electromagnetismo se logra a través de la Relatividad Especial. Los campos eléctricos y magnéticos no son entes separados, sino componentes de un único tensor asimétrico de rango 2, el tensor de Faraday $F^{\mu\nu}$:
+$$ F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu = \begin{pmatrix} 0 & -E_x/c & -E_y/c & -E_z/c \\ E_x/c & 0 & -B_z & B_y \\ E_y/c & B_z & 0 & -B_x \\ E_z/c & -B_y & B_x & 0 \end{pmatrix} $$
+donde $A^\mu = (V/c, \vec{A})$ es el cuadripotencial.
+Las cuatro ecuaciones de Maxwell se reducen gloriosamente a tan solo dos ecuaciones covariantes tensoriales:
+1. Ecuaciones inhomogéneas (Gauss y Ampère-Maxwell):
+   $$ \partial_\mu F^{\mu\nu} = \mu_0 J^\nu $$
+   donde $J^\nu = (c\rho, \vec{J})$ es la cuadricorriente.
+2. Ecuaciones homogéneas (Gauss Magnética y Faraday), representadas por la identidad de Bianchi:
+   $$ \partial_\lambda F_{\mu\nu} + \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} = 0 $$
+   o alternativamente, usando el tensor dual $\tilde{F}^{\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\alpha\beta} F_{\alpha\beta}$:
+   $$ \partial_\mu \tilde{F}^{\mu\nu} = 0 $$
 
 ---
 

@@ -8,50 +8,128 @@ El campo de la MHD fue iniciado por Hannes Alfvén, quien en 1942 descubrió las
 
 ## 🧮 Desarrollo Teórico Profundo
 
-El conjunto de ecuaciones de la MHD ideal combina las ecuaciones de Navier-Stokes para fluidos con las ecuaciones de Maxwell para el electromagnetismo, asumiendo un fluido perfectamente conductor (resistividad nula, $\eta = 0$).
+La Magnetohidrodinámica (MHD) aborda el plasma como un fluido único y eléctricamente conductor, suprimiendo los detalles cinéticos de electrones e iones individuales para enfocarse en la macroescala. Es la herramienta principal para modelar la corona solar, dínamos planetarios y la estabilidad macroscópica de los tokamaks.
 
-**1. Ecuación de Continuidad (Masa):**
-$$ \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0 $$
+### 1. Las Ecuaciones de la MHD Ideal
 
-**2. Ecuación de Momento (Navier-Stokes con fuerza de Lorentz):**
-$$ \rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} \right) = -\nabla p + \mathbf{J} \times \mathbf{B} $$
-Donde $\mathbf{J} \times \mathbf{B}$ es la fuerza magnética, que se puede descomponer usando $\mathbf{J} = \frac{1}{\mu_0} \nabla \times \mathbf{B}$:
+El modelo ideal asume que el plasma no tiene resistividad ($\eta = 0$), viscosidad ni conductividad térmica. Las ecuaciones resultan de una combinación de las ecuaciones de Navier-Stokes y las ecuaciones de Maxwell.
+
+1. **Ecuación de Continuidad de Masa:**
+   $$ \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0 $$
+   donde $\rho$ es la densidad de masa fluida y $\mathbf{v}$ la velocidad fluida centro de masa.
+
+2. **Ecuación de Momento (Navier-Stokes con fuerza de Lorentz):**
+   $$ \rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} \right) = -\nabla p + \mathbf{J} \times \mathbf{B} $$
+   donde $p$ es la presión térmica, $\mathbf{J}$ es la densidad de corriente y $\mathbf{B}$ el campo magnético.
+
+3. **Ecuación de Estado (Termodinámica adiabática):**
+   $$ \frac{d}{dt} \left( \frac{p}{\rho^\gamma} \right) = 0 $$
+   con $\gamma = 5/3$ para un gas monoatómico 3D.
+
+4. **Ley de Ohm Ideal:**
+   En el referencial que se mueve con la velocidad del fluido $\mathbf{v}$, el campo eléctrico efectivo $\mathbf{E}'$ es nulo debido a la conductividad infinita ($\mathbf{J} = \sigma \mathbf{E}' \to \infty \implies \mathbf{E}' = 0$). Transformando al referencial de laboratorio:
+   $$ \mathbf{E} + \mathbf{v} \times \mathbf{B} = 0 $$
+
+5. **Ecuaciones de Maxwell de baja frecuencia:**
+   - Ley de Faraday: $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$
+   - Ley de Ampère estática (se desprecia la corriente de desplazamiento para $v \ll c$): $\nabla \times \mathbf{B} = \mu_0 \mathbf{J}$
+   - Ausencia de monopolos: $\nabla \cdot \mathbf{B} = 0$
+
+### 2. El Tensor de Esfuerzos Magnéticos
+
+Sustituyendo la Ley de Ampère en la fuerza de Lorentz, expresamos la fuerza magnética íntegramente en términos del campo magnético:
+
+$$ \mathbf{F}_{mag} = \mathbf{J} \times \mathbf{B} = \frac{1}{\mu_0} (\nabla \times \mathbf{B}) \times \mathbf{B} $$
+
+Utilizando la identidad vectorial $(\nabla \times \mathbf{B}) \times \mathbf{B} = (\mathbf{B} \cdot \nabla)\mathbf{B} - \frac{1}{2} \nabla B^2$:
+
 $$ \mathbf{J} \times \mathbf{B} = -\nabla\left(\frac{B^2}{2\mu_0}\right) + \frac{1}{\mu_0}(\mathbf{B} \cdot \nabla)\mathbf{B} $$
-El primer término es la *presión magnética* y el segundo es la *tensión magnética*.
 
-**3. Ley de Ohm Ideal:**
-Para un fluido perfectamente conductor:
-$$ \mathbf{E} + \mathbf{v} \times \mathbf{B} = 0 $$
+El primer término representa el gradiente de la **Presión Magnética** ($p_{mag} = \frac{B^2}{2\mu_0}$). El campo magnético ejerce una presión isotrópica sobre el plasma.
+El segundo término representa la **Tensión Magnética**. Las líneas de campo actúan como cuerdas elásticas con tensión $\frac{B^2}{\mu_0}$, que intentan acortarse a lo largo de su propia dirección, enderezándose.
 
-**4. Ecuación de Inducción Magnética:**
-Combinando la Ley de Ohm ideal con la Ley de Faraday ($\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$):
+La ecuación de momento fluido puede reescribirse usando el tensor de esfuerzos de Maxwell modificado $\mathbb{T}$:
+$$ \rho \frac{d\mathbf{v}}{dt} = -\nabla \left( p + \frac{B^2}{2\mu_0} \right) + \nabla \cdot \left( \frac{\mathbf{B}\mathbf{B}}{\mu_0} \right) $$
+
+### 3. Teorema de Alfvén: Congelamiento de Flujo
+
+Tomando el rotacional a la Ley de Ohm Ideal e insertando la Ley de Faraday, obtenemos la **Ecuación de Inducción Magnética**:
+
 $$ \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{v} \times \mathbf{B}) $$
-Esto da lugar al **Teorema de Alfvén (Congelamiento del flujo)**: las líneas de campo magnético están "congeladas" en el fluido que se mueve.
+
+Esta ecuación tiene una interpretación geométrica profunda: el flujo magnético $\Phi_B = \int \mathbf{B} \cdot d\mathbf{S}$ a través de cualquier contorno fluido cerrado (una "goma" atada a las partículas del fluido) es constante en el tiempo. 
+
+$$ \frac{d\Phi_B}{dt} = \int \left( \frac{\partial \mathbf{B}}{\partial t} - \nabla \times (\mathbf{v} \times \mathbf{B}) \right) \cdot d\mathbf{S} = 0 $$
+
+Este es el **Teorema de Alfvén**. Significa que la topología del campo magnético es inmutable en MHD ideal. Las líneas de campo están "congeladas" en el plasma y se arrastran con el flujo. Si dos líneas de campo no se cruzan en $t=0$, nunca se cruzarán.
+
+### Diagrama: Teorema de Congelamiento y Reconexión
+
+```mermaid
+graph LR
+    subgraph MHD Ideal
+    A(Líneas de B<br>Congeladas) --> B(El Plasma Mueve a B)
+    B --> C(La Topología se Conserva)
+    end
+    
+    subgraph MHD Resistiva
+    D(Efecto Joule<br>&eta; > 0) --> E(Ruptura del<br>Teorema de Alfvén)
+    E --> F(Reconexión Magnética<br>Liberación Explosiva de E)
+    end
+    
+    C -.->|Formación de Capas de Corriente<br>Altos Gradientes| D
+    
+    style A fill:#457b9d,stroke:#fff,color:#fff
+    style C fill:#1d3557,stroke:#fff,color:#fff
+    style F fill:#e63946,stroke:#fff,color:#fff
+```
+
+### 4. Ondas MHD
+
+La linealización de las ecuaciones MHD revela tres modos normales de propagación de ondas de baja frecuencia.
+Definiendo la velocidad del sonido $v_s = \sqrt{\gamma p / \rho}$ y la velocidad de Alfvén $v_A = B / \sqrt{\mu_0 \rho}$:
+
+1. **Onda de Alfvén (Corte Puro):** Se propaga paralela a $\mathbf{B}_0$ con velocidad $v_A$. Es una onda incompresible ($\nabla \cdot \mathbf{v}_1 = 0$) donde la fuerza de restitución es exclusivamente la tensión magnética.
+2. **Onda Magnetosónica Rápida:** Es compresional. La perturbación aumenta la presión térmica y la magnética en fase. Su velocidad de fase es máxima cuando se propaga perpendicular a $\mathbf{B}_0$, valiendo $v_f = \sqrt{v_s^2 + v_A^2}$.
+3. **Onda Magnetosónica Lenta:** Compresional. Las presiones térmica y magnética oscilan en contrafase. Es predominantemente una perturbación térmica que viaja a lo largo de los valles del campo magnético.
 
 ## 🛠 Ejemplo Práctico
 
-**Problema:** Calcular la velocidad de Alfvén ($v_A$) en el viento solar cerca de la Tierra, asumiendo un campo magnético de $B = 5 \times 10^{-9} \, \text{T}$ y una densidad de protones $n_p = 5 \times 10^6 \, \text{m}^{-3}$.
+**Problema:** Una onda acústica pura en un gas neutral es convertida en una onda magnetosónica rápida en un plasma espacial interestelar. La densidad del medio es de $100$ átomos de hidrógeno por cm$^3$ ($n_H = 10^8 \, \text{m}^{-3}$), su temperatura es $T = 10^4 \, \text{K}$, y existe un campo magnético galáctico débil $B_0 = 3 \, \mu\text{G}$ ($3 \times 10^{-10} \, \text{T}$). 
+Calcule la velocidad del sonido, la velocidad de Alfvén y determine la velocidad de propagación de la onda magnetosónica rápida si viaja perpendicular a $\mathbf{B}_0$. Asuma $\gamma = 5/3$.
 
 **Solución paso a paso:**
 
 1. **Datos:**
-   - $B = 5 \times 10^{-9} \, \text{T}$
-   - $n_p = 5 \times 10^6 \, \text{m}^{-3}$
-   - Masa del protón $m_p \approx 1.67 \times 10^{-27} \, \text{kg}$
+   - $n = 10^8 \, \text{m}^{-3}$
+   - $T = 10^4 \, \text{K}$
+   - $B_0 = 3 \times 10^{-10} \, \text{T}$
+   - $m_p = 1.67 \times 10^{-27} \, \text{kg}$ (masa del protón)
+   - $k_B = 1.38 \times 10^{-23} \, \text{J/K}$
    - $\mu_0 = 4\pi \times 10^{-7} \, \text{T}\cdot\text{m/A}$
 
-2. **Calcular la densidad de masa ($\rho$):**
-   $$ \rho = n_p m_p = 5 \times 10^6 \times 1.67 \times 10^{-27} = 8.35 \times 10^{-21} \, \text{kg/m}^3 $$
+2. **Cálculo de la densidad de masa ($\rho$) y la presión térmica ($p$):**
+   $$ \rho \approx n m_p = (10^8)(1.67 \times 10^{-27}) = 1.67 \times 10^{-19} \, \text{kg/m}^3 $$
+   $$ p = 2 n k_B T $$ 
+   (El factor 2 asume contribución de electrones e iones en un plasma totalmente ionizado)
+   $$ p = 2 (10^8) (1.38 \times 10^{-23}) (10^4) = 2.76 \times 10^{-11} \, \text{Pa} $$
 
-3. **Fórmula de la Velocidad de Alfvén ($v_A$):**
-   $$ v_A = \frac{B}{\sqrt{\mu_0 \rho}} $$
+3. **Cálculo de la Velocidad del Sonido ($v_s$):**
+   $$ v_s = \sqrt{\frac{\gamma p}{\rho}} = \sqrt{\frac{(5/3)(2.76 \times 10^{-11})}{1.67 \times 10^{-19}}} $$
+   $$ v_s = \sqrt{\frac{4.6 \times 10^{-11}}{1.67 \times 10^{-19}}} = \sqrt{2.75 \times 10^8} \approx 16580 \, \text{m/s} = 16.58 \, \text{km/s} $$
 
-4. **Cálculo:**
-   $$ \mu_0 \rho = (4\pi \times 10^{-7}) \times (8.35 \times 10^{-21}) \approx 1.05 \times 10^{-26} $$
-   $$ \sqrt{\mu_0 \rho} \approx 1.02 \times 10^{-13} $$
-   $$ v_A = \frac{5 \times 10^{-9}}{1.02 \times 10^{-13}} \approx 49,000 \, \text{m/s} = 49 \, \text{km/s} $$
+4. **Cálculo de la Velocidad de Alfvén ($v_A$):**
+   $$ v_A = \frac{B_0}{\sqrt{\mu_0 \rho}} $$
+   $$ \mu_0 \rho = (4\pi \times 10^{-7}) (1.67 \times 10^{-19}) = 2.098 \times 10^{-25} \, \text{kg/m}^4 $$
+   $$ v_A = \frac{3 \times 10^{-10}}{\sqrt{2.098 \times 10^{-25}}} = \frac{3 \times 10^{-10}}{4.58 \times 10^{-13}} \approx 655000 \, \text{m/s} = 655 \, \text{km/s} $$
 
-La velocidad característica de las perturbaciones magnéticas en el viento solar es de 49 km/s.
+5. **Velocidad de la Onda Magnetosónica Rápida Perpendicular ($v_f$):**
+   Para propagación perpendicular ($\mathbf{k} \perp \mathbf{B}_0$), la velocidad de fase al cuadrado es la suma de los cuadrados:
+   $$ v_f = \sqrt{v_s^2 + v_A^2} $$
+   Como $v_A \gg v_s$ (el plasma está dominado por la presión magnética, $\beta \ll 1$), podemos predecir que será cercana a $v_A$:
+   $$ v_f = \sqrt{(1.658 \times 10^4)^2 + (6.55 \times 10^5)^2} = \sqrt{2.75 \times 10^8 + 4.29 \times 10^{11}} \approx \sqrt{4.29 \times 10^{11}} \approx 655 \, \text{km/s} $$
+
+**Conclusión:** En el medio interestelar tenue con un campo magnético de $3\,\mu\text{G}$, las ondas compresionales magnéticas viajan a inmensas velocidades supersónicas, con la dinámica dictada puramente por la tensión magnética del campo galáctico ($v_f \approx v_A = 655 \, \text{km/s}$).
 
 ## 📚 Recursos Específicos
 

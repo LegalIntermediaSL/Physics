@@ -5,18 +5,57 @@ La dinámica de fluidos estudia los fluidos en movimiento. Analiza magnitudes co
 Leonhard Euler formuló las ecuaciones básicas del movimiento de los fluidos no viscosos en el siglo XVIII. Daniel Bernoulli, en su obra "Hydrodynamica" de 1738, estableció el famoso principio que lleva su nombre. Posteriormente, Navier y Stokes agregaron términos de fricción viscosa para formar las Ecuaciones de Navier-Stokes en el siglo XIX.
 
 ## 🧮 Desarrollo Teórico Profundo
-**Ecuación de Continuidad (Conservación de la masa):**
-Para un fluido incompresible fluyendo por un tubo, el caudal volumétrico $ Q $ es constante:
-$$ A_1 v_1 = A_2 v_2 = Q $$
 
-**Ecuación de Bernoulli (Conservación de energía):**
-Válida para flujo estacionario, incompresible, no viscoso (ideal) y a lo largo de una línea de corriente:
-$$ P + \frac{1}{2} \rho v^2 + \rho g z = \text{constante} $$
-$$ P_1 + \frac{1}{2} \rho v_1^2 + \rho g z_1 = P_2 + \frac{1}{2} \rho v_2^2 + \rho g z_2 $$
-Donde $ P $ es la presión estática, $ \frac{1}{2} \rho v^2 $ es la presión dinámica y $ \rho g z $ la presión hidrostática.
+La ecuación de Bernoulli no es una postulación axiomática, sino un teorema de conservación de energía derivado de la ecuación de conservación de cantidad de movimiento del fluido ideal (la ecuación de Euler).
 
-**Efecto Venturi y Tubo de Pitot:**
-Aplicaciones directas de la ecuación de Bernoulli para medir velocidades y caídas de presión en conductos.
+### 1. Integración de la Ecuación de Euler a lo largo de una línea de corriente
+
+Comenzamos con la ecuación diferencial de Euler para el movimiento de un fluido ideal invíscido y de densidad constante $\rho$, bajo un campo de fuerza externo conservativo, que en nuestro caso será el campo gravitatorio (cuyo potencial es $\phi = gz$):
+$$ \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla) \vec{v} = -\frac{1}{\rho} \nabla p - \nabla (gz) $$
+Utilizamos la identidad del cálculo vectorial: $(\vec{v} \cdot \nabla) \vec{v} = \frac{1}{2} \nabla (\vec{v} \cdot \vec{v}) - \vec{v} \times (\nabla \times \vec{v})$. 
+Definimos la vorticidad del flujo como $\vec{\omega} = \nabla \times \vec{v}$. Sustituyendo esto en la ecuación:
+$$ \frac{\partial \vec{v}}{\partial t} + \frac{1}{2} \nabla (v^2) - \vec{v} \times \vec{\omega} = -\frac{1}{\rho} \nabla p - \nabla (gz) $$
+Reagrupando los términos que son gradientes exactos a un lado:
+$$ \frac{\partial \vec{v}}{\partial t} - \vec{v} \times \vec{\omega} = - \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) $$
+
+**Suposición de Flujo Estacionario:**
+Para un flujo permanente donde las condiciones no cambian en un punto temporalmente, $\frac{\partial \vec{v}}{\partial t} = 0$:
+$$ \vec{v} \times \vec{\omega} = \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) $$
+
+**Evaluación a lo largo de una línea de corriente:**
+Una línea de corriente es, por definición, paralela a la velocidad $\vec{v}$ en todo momento. Por lo tanto, el diferencial de desplazamiento $d\vec{r}$ a lo largo de una línea de corriente es paralelo a $\vec{v}$. Tomando el producto escalar de la ecuación con $d\vec{r}$:
+$$ d\vec{r} \cdot (\vec{v} \times \vec{\omega}) = d\vec{r} \cdot \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) $$
+Ya que $\vec{v}$ y $d\vec{r}$ son paralelos, el producto mixto de la izquierda es matemáticamente cero: $\vec{v} \times \vec{\omega}$ es ortogonal a $\vec{v}$, y por tanto es ortogonal a $d\vec{r}$.
+El término de la derecha es, por definición del diferencial exacto, $d \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right)$.
+Por tanto, llegamos a:
+$$ d \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) = 0 $$
+Al integrar, obtenemos la **Ecuación de Bernoulli**:
+$$ p + \frac{1}{2} \rho v^2 + \rho g z = H = \text{constante} $$
+Esta constante $H$ (la presión total o cabeza de Bernoulli) permanece invariante **a lo largo de una línea de corriente particular**. Si además el flujo inicial fuera irrotacional ($\vec{\omega} = \nabla \times \vec{v} = 0$ en todos lados), la constante sería idéntica para todas las líneas de corriente de todo el campo de flujo de manera universal.
+
+### 2. Significado Físico de los Términos (Componentes de Presión)
+
+La ecuación afirma una verdad conservativa que la densidad de energía en el interior del fluido circulante es constante. Sus tres términos son interpretables como componentes de "presión":
+1. **Presión Estática ($p$):** La presión termodinámica isotrópica real del fluido sobre un elemento en co-movimiento.
+2. **Presión Dinámica ($q = \frac{1}{2} \rho v^2$):** Es representativa de la energía cinética del fluido en movimiento. Si el fluido detuviera completamente su avance de manera isentrópica (punto de estancamiento), toda esta presión pasaría a convertirse mecánicamente en estática.
+3. **Presión Hidrostática ($\rho g z$):** La energía de potencial gravitatorio atribuible a la altura o carga de elevación.
+
+### 3. Consecuencias Clave
+
+1. **Efecto Venturi:** Si una tubería se estrecha, la ecuación de continuidad ($A_1 v_1 = A_2 v_2$) obliga al fluido incompresible a aumentar su velocidad en el estrechamiento ($v_2 > v_1$). Por la Ecuación de Bernoulli (en $z_1 = z_2$), la constancia impone inexorablemente que $p_2 < p_1$. Es decir, **donde la velocidad es mayor, la presión se deprime severamente**.
+2. **Medición con Tubo de Pitot:** Enfrentando un tubo hacia el flujo (donde $v_2 = 0$, punto de estancamiento) respecto de la presión estática ambiente $p_1$, se puede aislar la velocidad del flujo no perturbado: $v_1 = \sqrt{2(p_2 - p_1) / \rho}$.
+
+```mermaid
+graph TD
+    Euler[Ec. de Movimiento de Euler para Fluido Ideal] --> Estacionario{Estacionario: ∂v/∂t = 0}
+    Estacionario --> Integracion[Integración a lo largo de ds // v]
+    Integracion --> TrabajoNulo[Fuerza de Coriolis/Rotacional Perpendicular ds=0]
+    TrabajoNulo --> DiferencialExacto[d P/ρ + v²/2 + gz = 0]
+    DiferencialExacto --> Bernoulli[Ecuación de Bernoulli: Conservación Energía]
+    Bernoulli --> EfectoVenturi[Efecto Venturi: ΔP < 0 cuando Δv > 0]
+    Bernoulli --> Torricelli[Ley de Torricelli para Vaciado: v = √2gh]
+    Bernoulli --> Estancamiento[Punto de Estancamiento Pitot: P_max = P + ½ρv²]
+```
 
 ## 🛠 Ejemplo Práctico
 **Problema:** Por una tubería horizontal fluye agua. En la sección ancha, el diámetro es de $ 10 \text{ cm} $, la presión es de $ 1.5 \times 10^5 \text{ Pa} $ y la velocidad es de $ 2 \text{ m/s} $. La tubería se estrecha a un diámetro de $ 5 \text{ cm} $. Calcula la velocidad y la presión en la sección estrecha. ($ \rho_{\text{agua}} = 1000 \text{ kg/m}^3 $).

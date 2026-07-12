@@ -8,32 +8,104 @@ La superconductividad fue descubierta en 1911 por Heike Kamerlingh Onnes en Leid
 
 ## 🧮 Desarrollo Teórico Profundo
 
-La **Teoría Ginzburg-Landau** (1950) es un enfoque fenomenológico usando un parámetro de orden complejo $\psi(\mathbf{r})$ donde $|\psi|^2$ representa la densidad de pares superconductores. La energía libre cerca de la temperatura crítica $T_c$ se expande como:
-$$ F = F_n + \alpha |\psi|^2 + \frac{\beta}{2} |\psi|^4 + \frac{1}{2m^*} \left| \left( -i\hbar\nabla - \frac{e^*}{c}\mathbf{A} \right) \psi \right|^2 + \frac{|\mathbf{B}|^2}{2\mu_0} $$
-Minimizar esta energía libre respecto a $\psi$ y $\mathbf{A}$ lleva a las dos ecuaciones de Ginzburg-Landau, que explican la longitud de coherencia $\xi$ y la longitud de penetración $\lambda$, dando origen a superconductores Tipo I y Tipo II.
+La superconductividad marca un quiebre paradigmático respecto a la conducción de Drude-Sommerfeld. Dejar que la resistividad tienda puramente a cero es un enfoque clásico incompleto: un conductor perfecto "congela" su flujo magnético interior. Un superconductor genuino, sin embargo, posee diamagnetismo perfecto y expulsa activamente el campo estático mediante el **Efecto Meissner-Ochsenfeld**.
 
-A nivel microscópico, la **Teoría BCS** propone que existe una atracción débil entre electrones en la superficie de Fermi, mediada por el intercambio de fonones. El estado de pares de Cooper $(+\mathbf{k}\uparrow, -\mathbf{k}\downarrow)$ tiene una energía menor que el gas de Fermi. La brecha de energía de excitación $\Delta$ depende de la temperatura y cerca de $T=0$ resulta en:
-$$ \Delta(0) \approx 1.76 k_B T_c $$
-El Hamiltoniano reducido de BCS se puede resolver mediante las transformaciones de Bogoliubov para obtener los cuasipárticulas de excitación.
+### 1. Ecuaciones de London (1935)
+
+Para capturar la fenomenología macroscópica uniendo el flujo sin disipación con el efecto Meissner, los hermanos Heinz y Fritz London postularon dos ecuaciones gobernando a los "electrones superfluidos" de densidad $n_s$.
+
+En ausencia de dispersión, la segunda ley de Newton rige la velocidad $\mathbf{v}$ de los superfluidos en un campo eléctrico $\mathbf{E}$:
+$$ m_e \frac{\partial \mathbf{v}}{\partial t} = -e \mathbf{E} $$
+Multiplicando por $(-n_s e)$ definimos la densidad de corriente $\mathbf{J}_s = -n_s e \mathbf{v}$, derivando la **Primera Ecuación de London**:
+$$ \frac{\partial \mathbf{J}_s}{\partial t} = \frac{n_s e^2}{m_e} \mathbf{E} $$
+Esta describe un conductor donde la corriente acelera continuamente mientras haya un $\mathbf{E}$ (resistividad nula).
+
+El paso audaz fue aplicar el rotacional a la ley de Faraday y acoplar el momento canónico $\mathbf{p} = m_e\mathbf{v} - e\mathbf{A}$, exigiendo que el rotacional del momento cinético sea nulo para el estado base coherente macroscópico. Esto arroja la **Segunda Ecuación de London**:
+$$ \nabla \times \mathbf{J}_s = -\frac{n_s e^2}{m_e} \mathbf{B} $$
+
+Insertando esta ecuación en el rotacional de la ley estática de Ampère ($\nabla \times \mathbf{B} = \mu_0 \mathbf{J}_s$), y usando la identidad vectorial del rotacional:
+$$ \nabla \times (\nabla \times \mathbf{B}) = \mu_0 (\nabla \times \mathbf{J}_s) \implies -\nabla^2 \mathbf{B} = -\frac{\mu_0 n_s e^2}{m_e} \mathbf{B} $$
+Reescribimos esto como una ecuación diferencial de Helmholtz atenuada:
+$$ \nabla^2 \mathbf{B} = \frac{1}{\lambda_L^2} \mathbf{B} \quad \text{donde} \quad \lambda_L = \sqrt{\frac{m_e}{\mu_0 n_s e^2}} $$
+La solución física $\mathbf{B}(x) = \mathbf{B}(0) e^{-x/\lambda_L}$ demuestra que un campo aplicado desde la superficie decae exponencialmente al adentrarse en el volumen. La corriente de apantallamiento en la superficie neutraliza rigurosamente el flujo, forzando un $B_{int}=0$.
+
+### 2. Teoría Microscópica BCS (1957)
+
+La fenomenología de London, siendo macroscópica, no explicaba el origen de $n_s$. La teoría BCS (Bardeen, Cooper, Schrieffer) expuso que el mar de Fermi puro es inestable frente a interacciones atractivas minúsculas. 
+
+Si un electrón deforma localmente la red iónica elástica a su paso, otro electrón que siga su estela "siente" esa acumulación de carga positiva retardada, experimentando una atracción mediada por vibraciones cristalinas (**fonones**). Esta interacción electrón-fonón-electrón supera la repulsión coulómbica repulsiva, emparejando fermiones opuestos en estado de espín singlete ($S=0, L=0$), formando **Pares de Cooper**: $(\mathbf{k}\uparrow, -\mathbf{k}\downarrow)$.
+
+Al aparearse, estos pares adquieren estadística bosónica (aproximadamente) y se condensan en un único estado fundamental coherente macroscópico, descripto por la función de onda de BCS:
+$$ |\Psi_{BCS}\rangle = \prod_{\mathbf{k}} \left( u_\mathbf{k} + v_\mathbf{k} c^\dagger_{\mathbf{k}\uparrow} c^\dagger_{-\mathbf{k}\downarrow} \right) |0\rangle $$
+donde $|v_\mathbf{k}|^2$ es la probabilidad de que el par $\mathbf{k}$ esté ocupado, y $|u_\mathbf{k}|^2 + |v_\mathbf{k}|^2 = 1$.
+
+Este condensado altamente entrelazado crea un hiato energético o **Gap ($\Delta$)** en el espectro de excitaciones de cuasipartículas de Bogoliubov $E_\mathbf{k} = \sqrt{\epsilon_\mathbf{k}^2 + \Delta^2}$. A diferencia de los aislantes o semiconductores, el gap no ocurre en coordenadas espaciales, sino que el espectro energético entero se abre centrípetamente sobre la superficie de Fermi térmica, imposibilitando la dispersión por impurezas que exijan transferencias de energía menores a $2\Delta$ (romper el par).
+
+A $T=0\,K$, la magnitud del gap predicha por BCS relaciona elegantemente el parámetro microscópico del fonón (la frecuencia de Debye $\omega_D$) con la Temperatura Crítica macroscópica observable $T_c$:
+$$ 2\Delta(0) \approx 3.52 k_B T_c $$
+
+### Diagrama: Efecto Meissner vs Conductor Perfecto
+
+```mermaid
+graph LR
+    subgraph Metal Normal (T > Tc)
+    A(Líneas de Campo Magnético) -. Atraviesan Volumen .-> B(B != 0)
+    end
+    
+    subgraph Conductor Perfecto Teórico
+    C(Líneas B congeladas in situ) -. La resistencia baja a cero .-> D(B = constante interior)
+    end
+    
+    subgraph Superconductor Real (T < Tc)
+    E(Líneas B) -. Expulsión Activa<br>Meissner-Ochsenfeld .-> F[Diamagnetismo Perfecto<br>B = 0 en el Bulk]
+    F -. Fluyen Corrientes de Superficie .-> G(Atenuación Exponencial &lambda;_L)
+    end
+    
+    style A fill:#457b9d,stroke:#fff,color:#fff
+    style C fill:#d62828,stroke:#fff,color:#fff
+    style E fill:#023047,stroke:#fff,color:#fff
+    style F fill:#219ebc,stroke:#fff,color:#000
+```
 
 ## 🛠 Ejemplo Práctico
 
-**Problema:** Deducir el Efecto Meissner usando la ecuación de London.
+**Problema:** Un anillo toroidal superconductor es enfriado debajo de su $T_c$ en presencia de un campo magnético coaxial y luego el campo externo se apaga (enfriamiento de campo, o *field-cooling*). 
+Debido a la topología multiconexa (un agujero en el centro), el Efecto Meissner expulsa el campo del "bulk" del anillo pero atrapa un flujo magnético en el espacio vacío del hueco. 
+Usando el concepto del momento canónico macroscópico de los pares de Cooper y la condición de frontera cuántica de Bloch, deduzca y demuestre matemáticamente que **el flujo magnético $\Phi_B$ atrapado en el agujero está estrictamente cuantizado** en múltiplos del "Cuanto de Flujo" ($\Phi_0 = h/2e$).
 
 **Solución paso a paso:**
-1. Fritz y Heinz London propusieron (en 1935) una ecuación fenomenológica para la densidad de supercorriente $\mathbf{J}_s$:
-   $$ \nabla \times \mathbf{J}_s = - \frac{n_s e^2}{m} \mathbf{B} $$
-   donde $n_s$ es la densidad de electrones superconductores.
-2. Usamos la ley de Ampère de Maxwell en el caso estático ($\nabla \times \mathbf{B} = \mu_0 \mathbf{J}_s$).
-3. Aplicamos el rotor a ambos lados de la ley de Ampère:
-   $$ \nabla \times (\nabla \times \mathbf{B}) = \mu_0 (\nabla \times \mathbf{J}_s) $$
-4. Usamos la identidad vectorial $\nabla \times (\nabla \times \mathbf{B}) = \nabla(\nabla \cdot \mathbf{B}) - \nabla^2 \mathbf{B}$. Dado que por la ley de Gauss para el magnetismo $\nabla \cdot \mathbf{B} = 0$:
-   $$ - \nabla^2 \mathbf{B} = \mu_0 \left( - \frac{n_s e^2}{m} \mathbf{B} \right) $$
-5. Reagrupando términos obtenemos:
-   $$ \nabla^2 \mathbf{B} = \frac{1}{\lambda_L^2} \mathbf{B} \quad \text{donde} \quad \lambda_L = \sqrt{\frac{m}{\mu_0 n_s e^2}} $$
-6. En una geometría 1D donde la superficie del superconductor está en $x=0$ y ocupa $x>0$, la solución a esta ecuación diferencial (con la condición $\mathbf{B} \to 0$ en el infinito) es:
-   $$ \mathbf{B}(x) = \mathbf{B}(0) e^{-x/\lambda_L} $$
-**Conclusión:** El campo magnético decae exponencialmente en el interior del superconductor en una escala de longitud $\lambda_L$ (longitud de penetración de London). Esto demuestra que el campo magnético no puede penetrar en volumen al material, explicando el **Efecto Meissner**.
+
+1. **Estado Macroscópico Coherente:**
+   En un superconductor, todos los pares de Cooper forman un único condensado coherente descrito por una función de onda macroscópica $\Psi = |\Psi_0| e^{i\theta(\mathbf{r})}$, donde $\theta(\mathbf{r})$ es la fase compleja global y $|\Psi_0|^2 \approx n_s/2$ (la densidad de pares, de masa $2m_e$ y carga $q^* = -2e$).
+
+2. **Momento y Velocidad Superfluida:**
+   El operador de momento de un paquete bosónico en campo magnético es $\mathbf{p} = \hbar \nabla \theta$. Físicamente, el momento canónico es $\mathbf{p} = M\mathbf{v}_s + q^*\mathbf{A}$. 
+   Igualando y operando sobre los pares de masa $2m_e$ y carga $-2e$:
+   $$ \hbar \nabla \theta = (2m_e)\mathbf{v}_s - 2e\mathbf{A} $$
+
+3. **Curva de Integración Topológica:**
+   Seleccionemos una curva cerrada $C$ arbitraria alrededor del agujero interior del toroide, localizada **profundamente dentro del espesor (bulk)** del superconductor.
+   Debido al efecto Meissner exponencial, la corriente de apantallamiento sólo fluye en una cáscara delgada superficial. Profundo en el bulk, **la velocidad del superfluido desaparece** ($\mathbf{v}_s \approx 0$).
+   Por ende, a lo largo de $C$:
+   $$ \hbar \nabla \theta \approx -2e \mathbf{A} $$
+
+4. **Integración de Línea y Teorema de Stokes:**
+   Integramos ambos lados del gradiente de la fase a lo largo de la trayectoria cerrada $C$:
+   $$ \oint_C \hbar \nabla \theta \cdot d\mathbf{l} = -2e \oint_C \mathbf{A} \cdot d\mathbf{l} $$
+   Por el Teorema de Stokes aplicado al potencial vectorial electrodinámico, la integral de contorno de $\mathbf{A}$ equivale al flujo magnético netamente abrazado por $C$:
+   $$ \oint_C \mathbf{A} \cdot d\mathbf{l} = \iint_S (\nabla \times \mathbf{A}) \cdot d\mathbf{S} = \iint_S \mathbf{B} \cdot d\mathbf{S} = \Phi_B $$
+   
+5. **Condición de Periodicidad Cuántica:**
+   La función de onda macroscópica $\Psi$ debe ser estrictamente monoevaluada al rotar $360^\circ$ alrededor del toroide ($\mathbf{r} \to \mathbf{r}$). Esto demanda rigurosamente que la fase $\theta(\mathbf{r})$ cambie exactamente en un múltiplo entero de $2\pi$:
+   $$ \Delta\theta = \oint_C \nabla \theta \cdot d\mathbf{l} = 2\pi n \quad \text{donde } n \in \mathbb{Z} $$
+
+6. **Relación de Cuantización de Flujo:**
+   Insertando $\Delta\theta = 2\pi n$ y la definición de Stokes $\Phi_B$ en nuestro paso de integración previo:
+   $$ \hbar (2\pi n) = -2e \Phi_B $$
+   Tomando el valor absoluto para la magnitud física del flujo atrapado:
+   $$ \Phi_B = n \left( \frac{h}{2e} \right) = n \Phi_0 $$
+
+**Conclusión Física:** El flujo magnético incrustado topológicamente dentro del anillo no es continuo, sino que viene en bultos atómicos macroscópicos irreducibles llamados "Fluxones" ($\Phi_0 = h/2e \approx 2.067 \times 10^{-15} \, \text{Wb}$). La presencia del divisor fundamental $2e$ (carga dual) es la prueba experimental más contundente e indiscutible de que la superconductividad está orquestada por el apareamiento de electrones, siendo el pilar verificatorio final del modelo BCS.
 
 ## 📚 Recursos Específicos
 

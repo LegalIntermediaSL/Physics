@@ -11,21 +11,67 @@ La ecuación de Schrödinger es la piedra angular de la mecánica cuántica no r
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### La Ecuación Dependiente del Tiempo
-La evolución temporal de una función de onda $\Psi(\vec{r}, t)$ se rige por:
-$$ i\hbar \frac{\partial}{\partial t} \Psi(\vec{r}, t) = \hat{H} \Psi(\vec{r}, t) $$
-Donde $\hbar = h/2\pi$ y $\hat{H}$ es el operador Hamiltoniano, que corresponde a la energía total del sistema (cinética + potencial):
-$$ \hat{H} = -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}, t) $$
+La formulación de la mecánica cuántica no relativista encuentra en la Ecuación de Schrödinger su pilar fundamental. Esta ecuación diferencial lineal en derivadas parciales describe la evolución en el tiempo del estado cuántico de un sistema físico. 
 
-### La Ecuación Independiente del Tiempo
-Si el potencial $V$ no depende explícitamente del tiempo, $V = V(\vec{r})$, podemos aplicar el método de separación de variables: $\Psi(\vec{r}, t) = \psi(\vec{r})e^{-iEt/\hbar}$.
-Sustituyendo esto en la ecuación dependiente del tiempo, obtenemos la ecuación de Schrödinger independiente del tiempo (un problema de autovalores):
-$$ \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) = E \psi(\vec{r}) $$
-Donde $E$ son los valores posibles de energía (autovalores) y $\psi(\vec{r})$ son los estados estacionarios.
+### Derivación Heurística y Motivación Física
 
-### Interpretación de Born y Normalización
-La función de onda debe ser de cuadrado integrable para tener sentido probabilístico. La probabilidad de encontrar la partícula en todo el espacio debe ser 1:
-$$ \int_{-\infty}^{\infty} |\Psi(\vec{r}, t)|^2 d^3r = 1 $$
+A partir de la relación de de Broglie para el momento $p = \hbar k$ y de Planck-Einstein para la energía $E = \hbar \omega$, consideramos una onda plana libre en una dimensión:
+$$ \Psi(x,t) = A e^{i(kx - \omega t)} $$
+
+Derivando con respecto a la posición $x$:
+$$ \frac{\partial \Psi}{\partial x} = ik \Psi \implies \frac{\partial^2 \Psi}{\partial x^2} = -k^2 \Psi $$
+Multiplicando por $-\frac{\hbar^2}{2m}$ y recordando que la energía cinética clásica es $T = \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m}$, obtenemos:
+$$ -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} = \frac{\hbar^2 k^2}{2m}\Psi = T\Psi $$
+
+Derivando respecto al tiempo $t$:
+$$ \frac{\partial \Psi}{\partial t} = -i\omega \Psi \implies i\hbar \frac{\partial \Psi}{\partial t} = \hbar \omega \Psi = E\Psi $$
+
+Para una partícula en presencia de un potencial $V(\vec{r},t)$, la energía total es $E = T + V$. Postulando que la relación de operadores energéticos se mantiene, llegamos a la Ecuación de Schrödinger dependiente del tiempo:
+$$ i\hbar \frac{\partial}{\partial t} \Psi(\vec{r}, t) = \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}, t) \right) \Psi(\vec{r}, t) = \hat{H} \Psi(\vec{r}, t) $$
+
+### Ecuación Independiente del Tiempo y Separación de Variables
+
+Si el potencial no depende explícitamente del tiempo, es decir $V = V(\vec{r})$, podemos proponer una solución separable de la forma $\Psi(\vec{r}, t) = \psi(\vec{r})T(t)$. Sustituyendo en la ecuación original:
+$$ i\hbar \psi(\vec{r}) \frac{dT(t)}{dt} = T(t) \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) $$
+
+Dividiendo entre $\Psi(\vec{r}, t) = \psi(\vec{r})T(t)$:
+$$ i\hbar \frac{1}{T(t)} \frac{dT(t)}{dt} = \frac{1}{\psi(\vec{r})} \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) = E $$
+
+Dado que el lado izquierdo solo depende del tiempo y el derecho solo de la posición, ambos deben ser iguales a una constante de separación, la cual identificamos físicamente con la energía total del sistema $E$. Esto da lugar a dos ecuaciones:
+
+1. **Evolución Temporal:**
+$$ \frac{dT(t)}{dt} = -\frac{iE}{\hbar}T(t) \implies T(t) = e^{-iEt/\hbar} $$
+
+2. **Ecuación de Schrödinger Independiente del Tiempo (Problema de Autovalores):**
+$$ \hat{H}\psi(\vec{r}) = E\psi(\vec{r}) \implies \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) = E \psi(\vec{r}) $$
+
+```mermaid
+graph TD
+    A[Ecuación Dependiente del Tiempo] -->|Potencial Estático V| B(Separación de Variables)
+    B --> C[Evolución Temporal T]
+    B --> D[Ecuación Independiente del Tiempo]
+    C -->|Solución| E[Exponencial Compleja]
+    D -->|Problema de Autovalores| F[Estados Estacionarios psi]
+    E --> G[Función de Onda Total Psi]
+    F --> G
+```
+
+### Propiedades de las Soluciones y Condiciones de Contorno
+
+Las soluciones físicas $\psi(\vec{r})$ de la ecuación independiente del tiempo deben satisfacer condiciones estrictas para representar un estado válido:
+- **Continuidad:** $\psi(\vec{r})$ y sus derivadas parciales de primer orden $\nabla\psi(\vec{r})$ deben ser continuas en todo el espacio. Solo si el potencial presenta discontinuidades infinitas (e.g., barrera infinita) se relaja la continuidad de la derivada.
+- **Integrabilidad de Cuadrado:** La función de onda debe tender a cero cuando $|\vec{r}| \to \infty$ para asegurar que la probabilidad total sea finita y normalizable:
+$$ \int_{\text{todo el espacio}} |\Psi(\vec{r}, t)|^2 d^3r = 1 $$
+- **Ortogonalidad:** Dos estados propios (autofunciones) $\psi_m$ y $\psi_n$ correspondientes a distintos autovalores de energía $E_m \neq E_n$ son ortogonales:
+$$ \int \psi_m^*(\vec{r}) \psi_n(\vec{r}) d^3r = 0 $$
+Esta propiedad surge del carácter hermitiano del operador Hamiltoniano $\hat{H}$.
+
+### Teorema de Ehrenfest
+
+El puente entre la mecánica cuántica y la clásica se ilustra a través del Teorema de Ehrenfest, que dictamina la evolución temporal de los valores esperados. Para la posición $x$ y el momento $p$:
+$$ \frac{d\langle x \rangle}{dt} = \frac{\langle p \rangle}{m} $$
+$$ \frac{d\langle p \rangle}{dt} = -\left\langle \frac{\partial V}{\partial x} \right\rangle $$
+Esto demuestra que los centros de los paquetes de ondas cuánticos siguen, en promedio, trayectorias clásicas regidas por las ecuaciones de Newton, siempre y cuando la dispersión del paquete sea pequeña comparada con la escala de variación del potencial.
 
 ---
 

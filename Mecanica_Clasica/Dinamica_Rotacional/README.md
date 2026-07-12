@@ -9,30 +9,64 @@ El estudio de los sólidos rígidos, y en particular la introducción de los mom
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### 1. Variables Cinemáticas Angulares
-Si un objeto gira alrededor de un eje a una distancia $r$, un arco de longitud $s = r \theta$. Derivando:
-- Posición Angular: $\theta$ (rad)
-- Velocidad Angular: $\omega = \frac{d\theta}{dt} = \frac{v_t}{r}$ (rad/s)
-- Aceleración Angular: $\alpha = \frac{d\omega}{dt} = \frac{a_t}{r}$ (rad/s$^2$)
+La dinámica rotacional de sólidos rígidos constituye uno de los dominios más matemáticamente ricos de la mecánica clásica, superando las meras analogías con el movimiento traslacional para introducir matrices tensoriales de orden 2 y dinámicas no lineales que pueden ser sorprendentemente contraintuitivas (como la precesión y nutación).
 
-### 2. Momento de Inercia ($I$)
-Es el equivalente rotacional de la masa; mide la resistencia de un objeto a cambiar su estado de rotación. No solo depende de la masa total, sino de *cómo está distribuida* esa masa respecto al eje.
-$$ I = \sum m_i r_i^2 \quad \text{o en continuo} \quad I = \int r^2 \, dm $$
-- Ejemplos: Un anillo ($I = MR^2$), un disco sólido ($I = \frac{1}{2}MR^2$), una esfera sólida ($I = \frac{2}{5}MR^2$).
+### 1. Formalismo Vectorial del Movimiento Angular
 
-### 3. Torque ($\vec{\tau}$)
-El equivalente de la fuerza. Es la capacidad de una fuerza para producir rotación. 
-$$ \vec{\tau} = \vec{r} \times \vec{F} \quad \implies \quad |\tau| = r F \sin\theta $$
-Donde $\vec{r}$ es el vector posición desde el eje de rotación hasta el punto de aplicación de la fuerza.
+Un cuerpo rígido queda definido geométricamente como un sistema discreto o continuo de partículas para el cual la distancia relativa $|\vec{r}_i - \vec{r}_j|$ entre cualquier par de puntos $i, j$ es estrictamente constante bajo el transcurso del tiempo.
+El Teorema de Chasles establece que el movimiento general de un cuerpo rígido puede descomponerse unívocamente en una traslación de un punto de referencia (comúnmente el centro de masa $\vec{r}_{cm}$) sumada a una rotación pura sobre un eje que pasa por ese punto.
 
-### 4. Segunda Ley de Newton Rotacional
-Para un eje fijo:
-$$ \sum \tau = I \alpha $$
+Dado el vector de velocidad angular instantánea $\vec{\omega}(t)$, el campo de velocidades para cualquier punto $\vec{r}_i$ del sólido con respecto al centro de rotación es:
+$$ \vec{v}_i = \vec{\omega} \times \vec{r}_i $$
 
-### 5. Momento Angular ($\vec{L}$) y Energía
-- **Momento Angular**: El ímpetu de rotación. $\vec{L} = \vec{r} \times \vec{p}$. Para un sólido rígido girando en un eje de simetría: $L = I \omega$.
-- **Conservación**: Si el torque externo neto es cero ($\sum \tau_{ext} = 0$), el momento angular $\vec{L}$ se conserva. (Un patinador que acerca sus brazos disminuye $I$, y por tanto debe aumentar $\omega$ para que $L$ se mantenga).
-- **Energía Cinética Rotacional**: $K_{rot} = \frac{1}{2} I \omega^2$.
+La derivada temporal de este vector provee la aceleración, donde el uso del operador $\left(\frac{d}{dt}\right)_{inercial} = \left(\frac{d}{dt}\right)_{rot} + \vec{\omega} \times$ produce de inmediato:
+$$ \vec{a}_i = \dot{\vec{\omega}} \times \vec{r}_i + \vec{\omega} \times (\vec{\omega} \times \vec{r}_i) = \vec{\alpha} \times \vec{r}_i + \vec{\omega} \times \vec{v}_i $$
+Aquí, $\vec{\alpha}$ es la aceleración angular, el primer término es la componente tangencial y el segundo término representa la aceleración normal (centrípeta) hacia el eje instantáneo de rotación.
+
+### 2. El Tensor de Momento de Inercia y Matrices Ortogonales
+
+Mientras que la masa inercial es un escalar isotrópico para sistemas traslacionales, el "equivalente" rotacional presenta asimetrías extremas dependientes de la dirección.
+Para el momento angular total $\vec{L} = \sum (\vec{r}_i \times m_i \vec{v}_i)$, sustituyendo $\vec{v}_i = \vec{\omega} \times \vec{r}_i$ y aplicando la identidad del doble producto cruz $\vec{A} \times (\vec{B} \times \vec{C}) = \vec{B}(\vec{A}\cdot\vec{C}) - \vec{C}(\vec{A}\cdot\vec{B})$:
+$$ \vec{L} = \sum m_i \left[ r_i^2 \vec{\omega} - \vec{r}_i (\vec{r}_i \cdot \vec{\omega}) \right] $$
+Esta transformación lineal desde $\vec{\omega}$ hasta $\vec{L}$ define el Tensor de Inercia $\mathbf{I}$, tal que $\vec{L} = \mathbf{I} \vec{\omega}$. En notación matricial sobre una base Cartesiana:
+$$
+\mathbf{I} = \begin{pmatrix} 
+I_{xx} & I_{xy} & I_{xz} \\
+I_{yx} & I_{yy} & I_{yz} \\
+I_{zx} & I_{zy} & I_{zz}
+\end{pmatrix}
+= \int \rho(\vec{r}) \begin{pmatrix} y^2+z^2 & -xy & -xz \\ -yx & x^2+z^2 & -yz \\ -zx & -zy & x^2+y^2 \end{pmatrix} dV
+$$
+Los términos de la diagonal son los **momentos de inercia**, mientras que los elementos extra-diagonales son los **productos de inercia**. 
+Debido a que $\mathbf{I}$ es una matriz real, simétrica, el teorema espectral del álgebra lineal garantiza la existencia de un conjunto de ejes ortonormales que diagonalizan el tensor. Estos son los **Ejes Principales de Inercia**.
+
+```mermaid
+graph LR
+    A[Velocidad Angular ω] -->|Tensor de Inercia I| B[Momento Angular L = Iω]
+    B --> C{L // ω ?}
+    C -->|Sí| D[Rotación en Eje Principal]
+    C -->|No| E[Ejes Asimétricos, surge Torque de Desequilibrio]
+```
+
+### 3. Las Ecuaciones Dinámicas de Euler
+
+Al analizar el momento angular en el marco fijo al cuerpo (un marco rotatorio no inercial), la conservación de Newton para torque neto $\vec{\tau}_{neto} = \left(\frac{d\vec{L}}{dt}\right)_{inercial}$ se transforma a:
+$$ \vec{\tau}_{neto} = \left(\frac{d\vec{L}}{dt}\right)_{cuerpo} + \vec{\omega} \times \vec{L} $$
+Alineando el sistema de coordenadas con los ejes principales del cuerpo, $\mathbf{I}$ se vuelve diagonal ($I_1, I_2, I_3$), y $\vec{L} = (I_1\omega_1, I_2\omega_2, I_3\omega_3)^T$. La sustitución directa arroja el sistema desacoplado de las **Ecuaciones de Euler para el Sólido Rígido**:
+$$ \tau_1 = I_1 \dot{\omega}_1 + (I_3 - I_2)\omega_2 \omega_3 $$
+$$ \tau_2 = I_2 \dot{\omega}_2 + (I_1 - I_3)\omega_3 \omega_1 $$
+$$ \tau_3 = I_3 \dot{\omega}_3 + (I_2 - I_1)\omega_1 \omega_2 $$
+Estas EDOs altamente no lineales son fundamentales en la girodinámica y explican por qué objetos girando en su eje de inercia intermedio son inestables (Teorema de la Raqueta de Tenis o Efecto Dzhanibekov).
+
+### 4. Teorema de Steiner (Ejes Paralelos) y Energía
+
+Si se conoce el momento de inercia respecto a un eje que pasa por el Centro de Masa ($I_{cm}$), el momento de inercia respecto a cualquier eje paralelo situado a una distancia perpendicular $d$ se determina escalarmente como:
+$$ I_{nuevo} = I_{cm} + M d^2 $$
+Esto aplica igualmente al tensor métrico entero usando matrices de desplazamiento.
+
+La **Energía Cinética Total** del sólido rígido se desacopla elegantemente mediante los teoremas de König en una fracción puramente traslacional y otra rotacional referida al centro de masa:
+$$ K = \frac{1}{2} M \vec{v}_{cm}^2 + \frac{1}{2} \vec{\omega}^T \mathbf{I}_{cm} \vec{\omega} $$
+Para rotación simple alrededor de un eje principal: $K = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$.
 
 ---
 

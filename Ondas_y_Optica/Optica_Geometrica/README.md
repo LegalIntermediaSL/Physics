@@ -5,38 +5,84 @@ La óptica geométrica es la rama de la física que estudia la propagación de l
 El estudio de la óptica geométrica data de la antigüedad, con Euclides escribiendo "Óptica" alrededor del año 300 a.C. En el siglo XI, Ibn al-Haytham (Alhazen) hizo contribuciones fundamentales en su "Libro de Óptica". La ley de refracción fue descubierta empíricamente por Willebrord Snellius en 1621 y deducida a partir del principio del tiempo mínimo por Pierre de Fermat.
 
 ## 🧮 Desarrollo Teórico Profundo
-La óptica geométrica se basa en dos principios fundamentales al interactuar con fronteras entre medios:
 
-**Ley de Reflexión:**
-El ángulo de incidencia es igual al ángulo de reflexión respecto a la normal.
-$$ \theta_i = \theta_r $$
+El núcleo de la óptica geométrica puede derivarse rigurosamente a partir de las Ecuaciones de Maxwell en el límite de altas frecuencias (donde la longitud de onda $\lambda \to 0$). Esta derivación, conocida como la aproximación eikonal, nos conduce al Principio de Fermat, sobre el cual se asienta el trazado de rayos.
 
-**Ley de Snell (Refracción):**
-Relaciona los índices de refracción de dos medios ($ n_1, n_2 $) con los ángulos de los rayos.
-$$ n_1 \sin(\theta_1) = n_2 \sin(\theta_2) $$
+### 1. El Eikonal y el Principio de Fermat
 
-**Ecuación de los Fabricantes de Lentes (Lentes Delgadas):**
-Para una lente delgada en el aire, con radios de curvatura $ R_1 $ y $ R_2 $, la distancia focal $ f $ es:
-$$ \frac{1}{f} = (n - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right) $$
+Asumamos una onda electromagnética monocromática de la forma $\vec{E}(\vec{r}, t) = \vec{E}_0(\vec{r}) e^{i(k_0 \mathcal{S}(\vec{r}) - \omega t)}$, donde $k_0 = 2\pi/\lambda_0$ es el número de onda en el vacío, y $\mathcal{S}(\vec{r})$ es una función escalar llamada el **eikonal** (frente de onda óptico). Insertando esto en la ecuación de onda y tomando el límite $\lambda_0 \to 0$, se obtiene la Ecuación del Eikonal:
+$$ |\nabla \mathcal{S}|^2 = n(\vec{r})^2 $$
+donde $n(\vec{r}) = c/v(\vec{r})$ es el índice de refracción espacial. Las curvas ortogonales a las superficies de fase constante $\mathcal{S}(\vec{r}) = C$ definen las trayectorias de los **rayos de luz**. 
 
-**Ecuación de las Lentes y Espejos:**
-$$ \frac{1}{s} + \frac{1}{s'} = \frac{1}{f} $$
-Donde $ s $ es la distancia al objeto y $ s' $ la distancia a la imagen. El aumento lateral es $ m = -\frac{s'}{s} $.
+La solución geométrica a esta ecuación diferencial parcial es equivalente al problema variacional de encontrar la trayectoria $\Gamma$ que minimiza el camino óptico $L_O$ (Principio de Fermat):
+$$ \delta \int_{\Gamma} n(\vec{r}) \, ds = 0 $$
+donde el tiempo de vuelo es $t = \frac{1}{c} \int_\Gamma n(s) ds$. Así, la luz sigue la trayectoria de tiempo estacionario (usualmente mínimo).
 
-## 🛠 Ejemplo Práctico
-**Problema:** Un objeto de $ 5 \text{ cm} $ de altura se coloca a $ 30 \text{ cm} $ de una lente convergente que tiene una distancia focal de $ 10 \text{ cm} $. Determina la posición de la imagen, su aumento y su tamaño.
+### 2. Derivación de las Leyes de Reflexión y Refracción
+
+Usando el Principio de Fermat para dos puntos $A$ y $B$ separados por una interfaz plana entre medios de índices $n_1$ y $n_2$:
+Sea el punto de incidencia sobre la interfaz $x$. El camino óptico total es:
+$$ L_O(x) = n_1 \sqrt{h_1^2 + x^2} + n_2 \sqrt{h_2^2 + (D - x)^2} $$
+Para minimizar el camino óptico, fijamos la derivada respecto a $x$ en cero:
+$$ \frac{dL_O}{dx} = n_1 \frac{x}{\sqrt{h_1^2 + x^2}} - n_2 \frac{D - x}{\sqrt{h_2^2 + (D - x)^2}} = 0 $$
+A partir de la geometría, reconocemos que $\frac{x}{\sqrt{h_1^2 + x^2}} = \sin \theta_1$ y $\frac{D - x}{\sqrt{h_2^2 + (D - x)^2}} = \sin \theta_2$.
+Por tanto, recuperamos la **Ley de Snell**:
+$$ n_1 \sin \theta_1 = n_2 \sin \theta_2 $$
+Por un argumento análogo con un solo medio ($n_1 = n_2$), se obtiene $\sin \theta_i = \sin \theta_r$, o la **Ley de Reflexión**.
+
+### 3. Matriz de Transferencia de Rayos (Óptica Paraxial)
+
+En sistemas ópticos complejos (lentes gruesas, múltiples elementos), el método matricial ABCD proporciona un análisis potente en el régimen paraxial (ángulos pequeños donde $\sin \theta \approx \theta$).
+Un rayo se caracteriza por su altura respecto al eje óptico, $y$, y su ángulo paraxial, $\theta$. El vector de estado del rayo es $\begin{pmatrix} y \\ \theta \end{pmatrix}$.
+
+**Matriz de Traslación en un medio homogéneo (distancia $d$):**
+El ángulo no cambia, la altura cambia en $d \cdot \theta$:
+$$ \begin{pmatrix} y_2 \\ \theta_2 \end{pmatrix} = \begin{bmatrix} 1 & d \\ 0 & 1 \end{bmatrix} \begin{pmatrix} y_1 \\ \theta_1 \end{pmatrix} $$
+
+**Matriz de Refracción en una superficie esférica de radio $R$:**
+$$ \begin{pmatrix} y_2 \\ \theta_2 \end{pmatrix} = \begin{bmatrix} 1 & 0 \\ \frac{n_1 - n_2}{n_2 R} & \frac{n_1}{n_2} \end{bmatrix} \begin{pmatrix} y_1 \\ \theta_1 \end{pmatrix} $$
+
+**Lente Delgada con focal $f$ en aire:**
+Aproximando el espesor de la lente a 0 y combinando las refracciones, la matriz característica es:
+$$ M_{lente} = \begin{bmatrix} 1 & 0 \\ -1/f & 1 \end{bmatrix} $$
+donde el poder focal es $P = 1/f = (n - 1)(1/R_1 - 1/R_2)$, también conocida como la **Ecuación del Fabricante de Lentes**.
+
+La ecuación de formación de imágenes $\frac{1}{s} + \frac{1}{s'} = \frac{1}{f}$ se deriva exigiendo que la posición final $y'$ sea independiente del ángulo inicial $\theta$ del rayo proveniente del punto objeto para una traslación $s$, paso por lente, y traslación $s'$.
+
+```mermaid
+graph LR
+    A[Onda Electromagnética] -- Limite lambda -> 0 --> B(Aproximación Eikonal)
+    B --> C[Principio de Fermat]
+    C --> D(Minimización del Camino Óptico)
+    D --> E[Ley de Reflexión]
+    D --> F[Ley de Snell - Refracción]
+    F --> G[Refracción en Superficies Esféricas]
+    G -- Límite Paraxial --> H[Óptica Matricial ABCD]
+    H --> I[Lentes Delgadas y Gruesas]
+    I --> J[Formación de Imágenes y Aberraciones]
+```
+
+### 🛠 Ejemplo Práctico Universitario
+**Problema (Diseño por Matriz Paraxial):**
+Determine la matriz de transferencia de sistema (ABCD) para una lente gruesa de grosor $d=5\text{ cm}$, índice de refracción $n=1.5$, y radios de curvatura $R_1=10\text{ cm}$ (superficie convexa frontal) y $R_2=-20\text{ cm}$ (superficie convexa trasera), inmersa en aire ($n_0=1$). Posteriormente, calcule la longitud focal efectiva (EFL) de esta lente gruesa.
 
 **Solución paso a paso:**
-1. Usamos la ecuación de lentes delgadas: $ \frac{1}{s} + \frac{1}{s'} = \frac{1}{f} $.
-2. Sustituimos valores ($ s = 30 \text{ cm}, f = 10 \text{ cm} $):
-   $$ \frac{1}{30} + \frac{1}{s'} = \frac{1}{10} $$
-3. Despejamos $ s' $:
-   $$ \frac{1}{s'} = \frac{1}{10} - \frac{1}{30} = \frac{3 - 1}{30} = \frac{2}{30} = \frac{1}{15} $$
-   $ s' = 15 \text{ cm} $ (Imagen real y detrás de la lente).
-4. Calculamos el aumento lateral $ m $:
-   $ m = -\frac{s'}{s} = -\frac{15}{30} = -0.5 $ (Imagen invertida y reducida a la mitad).
-5. Tamaño de la imagen $ y' $:
-   $ y' = m \cdot y = -0.5 \cdot 5 \text{ cm} = -2.5 \text{ cm} $.
+1. El sistema consiste en tres operaciones sucesivas: Refracción en $R_1$, Traslación por $d$, y Refracción en $R_2$. El orden de multiplicación matricial es inverso al orden físico.
+   $$ M = M_{R_2} \times M_d \times M_{R_1} $$
+2. Matriz de refracción inicial ($1 \to n$ en $R_1$):
+   $$ M_{R_1} = \begin{bmatrix} 1 & 0 \\ \frac{1 - 1.5}{1.5 (10)} & \frac{1}{1.5} \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ -\frac{1}{30} & \frac{2}{3} \end{bmatrix} $$
+3. Matriz de traslación en vidrio por $d=5$:
+   $$ M_d = \begin{bmatrix} 1 & 5 \\ 0 & 1 \end{bmatrix} $$
+4. Matriz de refracción final ($n \to 1$ en $R_2$):
+   $$ M_{R_2} = \begin{bmatrix} 1 & 0 \\ \frac{1.5 - 1}{1 (-20)} & \frac{1.5}{1} \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ -\frac{1}{40} & \frac{3}{2} \end{bmatrix} $$
+5. Calculamos $M_d \times M_{R_1}$:
+   $$ M' = \begin{bmatrix} 1 & 5 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ -1/30 & 2/3 \end{bmatrix} = \begin{bmatrix} 1 - 5/30 & 10/3 \\ -1/30 & 2/3 \end{bmatrix} = \begin{bmatrix} 5/6 & 10/3 \\ -1/30 & 2/3 \end{bmatrix} $$
+6. Multiplicamos por $M_{R_2}$ por la izquierda:
+   $$ M = \begin{bmatrix} 1 & 0 \\ -1/40 & 3/2 \end{bmatrix} \begin{bmatrix} 5/6 & 10/3 \\ -1/30 & 2/3 \end{bmatrix} = \begin{bmatrix} 5/6 & 10/3 \\ -\frac{1}{48} - \frac{1}{20} & -\frac{1}{12} + 1 \end{bmatrix} = \begin{bmatrix} 5/6 & 10/3 \\ -17/240 & 11/12 \end{bmatrix} $$
+7. La matriz final es $M = \begin{bmatrix} A & B \\ C & D \end{bmatrix}$. El poder focal del sistema se define como $P = -C$. Por tanto, $1/f = 17/240 \text{ cm}^{-1}$.
+8. La longitud focal efectiva (EFL) es:
+   $$ f = \frac{240}{17} \approx 14.12 \text{ cm} $$
+   Si usáramos la aproximación de lente delgada $(d=0)$, habríamos tenido $1/f = (0.5)(1/10 + 1/20) = 0.5(3/20) = 3/40$, entonces $f_{delgada} = 13.33\text{ cm}$. El espesor añade una corrección importante.
 
 ## 📚 Recursos Específicos
 ### Cursos

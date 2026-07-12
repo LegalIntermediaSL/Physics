@@ -9,25 +9,62 @@ Durante milenios, el magnetismo se consideró un fenómeno misterioso asociado a
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### Fuerza Magnética y Fuerza de Lorentz
-Una carga $q$ que se mueve con velocidad $\vec{v}$ en presencia de un campo magnético $\vec{B}$ experimenta una fuerza dada por:
-$$ \vec{F}_m = q (\vec{v} \times \vec{B}) $$
-Si además existe un campo eléctrico $\vec{E}$, la fuerza total es la Fuerza de Lorentz:
+El magnetismo, a diferencia de la electrostática donde rigen las fuerzas conservativas y potenciales escalares puros, requiere una comprensión profunda del análisis vectorial turbillonario y la relatividad especial, puesto que emerge como la consecuencia directa de las cargas en movimiento bajo transformaciones de Lorentz.
+
+### 1. El Potencial Vector Magnético $\vec{A}$
+Debido a la inexistencia de los monopolos magnéticos, impuesta por la ley de divergencia nula $\nabla \cdot \vec{B} = 0$, el Teorema de Helmholtz dictamina que el campo magnético $\vec{B}$ debe ser puramente rotacional. Esto nos permite definir un Potencial Vector $\vec{A}$ tal que:
+$$ \vec{B} = \nabla \times \vec{A} $$
+Esta definición no es única; $\vec{A}$ exhibe invarianza de *gauge* local. Si transformamos $\vec{A}' = \vec{A} + \nabla \Lambda$, para cualquier campo escalar $\Lambda$, el campo magnético $\vec{B}$ resultante no cambia ($\nabla \times \nabla \Lambda = \vec{0}$). Para la magnetostática, elegimos el *Gauge de Coulomb* ($\nabla \cdot \vec{A} = 0$).
+
+Bajo este *gauge*, aplicando la forma diferencial de la Ley de Ampère ($\nabla \times \vec{B} = \mu_0 \vec{J}$):
+$$ \nabla \times (\nabla \times \vec{A}) = \nabla (\nabla \cdot \vec{A}) - \nabla^2 \vec{A} = \mu_0 \vec{J} \implies \nabla^2 \vec{A} = -\mu_0 \vec{J} $$
+Obtenemos así tres ecuaciones de Poisson escalares, una para cada coordenada del potencial vector. Su solución formal, análoga al potencial eléctrico, en todo el espacio es:
+$$ \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi} \int \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|} d\tau' $$
+Aplicando el operador rotacional $\nabla \times$ a esta expresión obtenemos la famosa **Ley de Biot-Savart**.
+
+### 2. Fuerza de Lorentz y Trabajo Magnético
+La interacción electrodinámica está gobernada por la fuerza de Lorentz, la cual para una partícula puntual de carga $q$ viajando a velocidad $\vec{v}$ es:
 $$ \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) $$
+Un corolario profundamente importante surge de examinar el trabajo mecánico realizado *puramente* por el campo magnético sobre la carga:
+$$ dW_m = \vec{F}_m \cdot d\vec{l} = (q(\vec{v} \times \vec{B})) \cdot (\vec{v} \, dt) = q((\vec{v} \times \vec{B}) \cdot \vec{v}) \, dt = 0 $$
+Dado que el producto vectorial $\vec{v} \times \vec{B}$ es ortogonal a $\vec{v}$, el trabajo es siempre nulo. **Las fuerzas magnéticas macroscópicas no pueden realizar trabajo sobre cargas libres**; solo pueden alterar la dirección de su momento, forzándolas a ejecutar órbitas ciclotrónicas sin cambiar su energía cinética.
 
-### Ley de Biot-Savart
-El campo magnético $d\vec{B}$ creado en un punto en el espacio por un elemento diferencial de corriente $Id\vec{l}$ viene dado por:
-$$ d\vec{B} = \frac{\mu_0}{4\pi} \frac{I \, d\vec{l} \times \hat{r}}{r^2} $$
-donde $\mu_0 = 4\pi \times 10^{-7} \, \text{T}\cdot\text{m}/\text{A}$ es la permeabilidad magnética del vacío, y $\vec{r}$ es el vector que va desde el elemento al punto.
+### 3. Expansión Multipolar Magnética y el Dipolo
+Al igual que en electrostática, podemos calcular el campo magnético lejano ($|\vec{r}| \gg |\vec{r}'|$) producido por una distribución localizada de corrientes. Expandiendo en serie el término de distancia $1/|\vec{r}-\vec{r}'|$ en la integral de $\vec{A}(\vec{r})$ obtenemos el **desarrollo multipolar magnético**.
+A diferencia del potencial eléctrico, el término "monopolar" (inverso de $r$) en magnetismo se anula completamente, porque la corriente neta estática debe ser cero. El término dominante a grandes distancias es siempre el **Término Dipolar**:
+$$ \vec{A}_{\text{dip}}(\vec{r}) = \frac{\mu_0}{4\pi} \frac{\vec{m} \times \hat{r}}{r^2} $$
+donde $\vec{m}$ es el **momento dipolar magnético**, que para una espira de área vectorial plana $\vec{a}$ y corriente constante $I$ resulta en:
+$$ \vec{m} = I \int d\vec{a} = I\vec{a} $$
+El campo magnético resultante adopta la topología clásica del "imán de barra":
+$$ \vec{B}_{\text{dip}}(\vec{r}) = \frac{\mu_0}{4\pi r^3} \left[ 3(\vec{m} \cdot \hat{r})\hat{r} - \vec{m} \right] $$
 
-### Ley de Ampère
-La Ley de Ampère es el equivalente magnético de la Ley de Gauss para situaciones de alta simetría. Relaciona la circulación del campo magnético a lo largo de una curva cerrada $C$ con la corriente total $I_{\text{enc}}$ que la atraviesa:
-$$ \oint_C \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}} $$
-En forma diferencial: $\nabla \times \vec{B} = \mu_0 \vec{J}$.
+### 4. Origen Relativista del Campo Magnético
+A nivel profundo, el campo magnético no existe de manera independiente. Si consideramos un hilo recto e infinito con densidad de carga $\lambda_0$ neta igual a cero (los portadores positivos están fijos y los negativos se mueven a velocidad $\vec{u}$), un observador en reposo experimenta una fuerza sobre una carga de prueba $q$ en movimiento (fuerza magnética). 
 
-### Flujo Magnético y Ausencia de Monopolos
-A diferencia de las cargas eléctricas, no existen fuentes aisladas (monopolos) de campo magnético. Por tanto, las líneas de campo magnético siempre son cerradas. Matemáticamente, el flujo a través de cualquier superficie cerrada es nulo (Ley de Gauss para el magnetismo):
-$$ \oint_S \vec{B} \cdot d\vec{A} = 0 \quad \implies \quad \nabla \cdot \vec{B} = 0 $$
+Para un observador inercial solidario a la carga de prueba, debido a las **contracciones de longitud de Lorentz** de la relatividad especial, la densidad aparente de las cargas positivas estáticas y de los electrones dinámicos se vuelve asimétrica. Esta asimetría de densidades crea un campo eléctrico radial no compensado para el observador en movimiento. Así, lo que el marco de laboratorio mide como "fuerza magnética pura de la Ley de Ampère", el marco propio de la partícula mide como "fuerza electrostática pura de la Ley de Coulomb".
+Esto se encapsula impecablemente mediante la transformación del tensor electromagnético, indicando que $B_y \propto \gamma \frac{v}{c^2} E_z$.
+
+```mermaid
+graph TD
+    A[Corriente Macroscópica J] -->|Ley Biot-Savart| B(Campo Vectorial Magnético B)
+    A -->|Ecuación de Poisson| C(Potencial Vector Magnético A)
+    C -->|Rotacional B = \nabla \times A| B
+    B -->|B \cdot dS = 0| D{Inexistencia de Monopolos}
+    C -->|Gauge de Coulomb| E[Expansión Multipolar]
+    E --> F[Dipolo Magnético m]
+    B -->|v \times B| G[Fuerza de Lorentz]
+    G -->|W = 0| H[Desviación de Órbitas / Ciclotrón]
+```
+
+### 5. Magnetización y Campos Macroscópicos en Materia
+Cuando un campo externo $\vec{B}_{\text{ext}}$ afecta a la materia, induce alineación de los espines cuánticos de electrones no apareados (paramagnetismo) o dominios de intercambio (ferromagnetismo), o altera precesiones orbitales (diamagnetismo). El volumen material desarrolla un momento magnético neto, o **Magnetización** $\vec{M}$ (momento dipolar magnético por unidad de volumen).
+
+Esta magnetización induce densidades de corriente de magnetización volumétrica $\vec{J}_b = \nabla \times \vec{M}$ y superficial $\vec{K}_b = \vec{M} \times \hat{n}$. 
+La forma macroscópica de las ecuaciones incorpora estas corrientes, dando origen al "Campo Auxiliar Magnético" $\vec{H}$:
+$$ \vec{H} \equiv \frac{\vec{B}}{\mu_0} - \vec{M} $$
+Lo que nos brinda la Ley de Ampère Macroscópica para tratar solo con las corrientes libres $\vec{J}_f$ inyectadas en circuitos:
+$$ \nabla \times \vec{H} = \vec{J}_f \implies \oint \vec{H} \cdot d\vec{l} = I_{f_{\text{encerrada}}} $$
+Para medios isotrópicos y lineales, la relación se cierra con la permeabilidad magnética $\mu$: $\vec{B} = \mu \vec{H} = \mu_0(1 + \chi_m)\vec{H}$, donde $\chi_m$ es la susceptibilidad magnética del medio.
 
 ---
 

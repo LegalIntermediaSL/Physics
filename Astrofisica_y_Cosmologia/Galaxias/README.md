@@ -14,43 +14,92 @@ Posteriormente, en la década de 1970, Vera Rubin observó las curvas de rotaci�
 
 ## 🧮 Desarrollo Teórico Profundo
 
-**Dinámica Galáctica y Curvas de Rotación:**
-En una galaxia espiral, si asumimos órbitas circulares para las estrellas en el disco, la velocidad de rotación orbital $v(r)$ a una distancia $r$ del centro se deriva igualando la fuerza centrípeta y la gravitacional:
+La dinámica galáctica no puede entenderse únicamente en base a la materia luminosa visible (estrellas y gas). El modelado riguroso del movimiento estelar requiere la formulación teórica de los potenciales gravitatorios y la inclusión de la materia oscura.
 
-$$\frac{mv^2}{r} = \frac{GM(r)m}{r^2}$$
-$$v(r) = \sqrt{\frac{GM(r)}{r}}$$
+### 1. Ecuación de Boltzmann sin Colisiones
 
-Donde $M(r)$ es la masa encerrada en un radio $r$. Si toda la masa de la galaxia estuviera concentrada en el bulto central visible (como en el Sistema Solar), esperaríamos que, en las regiones externas, $M(r) \approx M_{total}$ sea constante, y por tanto la velocidad disminuya como un perfil kepleriano: $v(r) \propto 1/\sqrt{r}$.
+A diferencia de las moléculas en un gas, el tiempo entre colisiones físicas directas de estrellas en una galaxia es mucho mayor que la edad del universo (son sistemas no colisionales). Por tanto, modelamos la galaxia como un fluido en el espacio de fases (posición $\mathbf{x}$ y velocidad $\mathbf{v}$), descrito por una función de distribución de densidad $f(\mathbf{x}, \mathbf{v}, t)$.
 
-Sin embargo, las observaciones muestran que $v(r)$ permanece constante (curva plana) para valores muy grandes de $r$. Para que $v(r)$ sea constante ($v(r) = V_c$), debe ocurrir que:
-$$M(r) = \frac{V_c^2 r}{G} \implies M(r) \propto r$$
-Si la masa encerrada crece linealmente con el radio, la densidad del halo de materia oscura debe ser de la forma:
-$$\rho(r) = \frac{1}{4\pi r^2} \frac{dM}{dr} = \frac{V_c^2}{4\pi G r^2}$$
-Esto implica un halo esférico de materia oscura con un perfil de densidad de la "esfera isoterma singular" que se extiende mucho más allá del disco visible.
+La evolución de este fluido está regida por la **Ecuación de Boltzmann sin Colisiones** (o ecuación de Vlasov):
 
-**Teorema de Relajación Violenta (Donald Lynden-Bell, 1967):**
-Explica por qué las galaxias elípticas tienen una distribución regular a pesar de formarse a partir de colapsos asimétricos y fusiones, mediante una termalización del gas sin necesidad de colisiones cuerpo a cuerpo de estrellas.
+$$ \frac{\partial f}{\partial t} + \mathbf{v} \cdot \nabla_{\mathbf{x}} f - \nabla_{\mathbf{x}} \Phi \cdot \nabla_{\mathbf{v}} f = 0 $$
+
+Donde $\Phi(\mathbf{x}, t)$ es el potencial gravitatorio medio suave generado por todas las estrellas y la materia oscura juntas. Este potencial, a su vez, debe satisfacer la Ecuación de Poisson:
+
+$$ \nabla^2 \Phi = 4\pi G \int f(\mathbf{x}, \mathbf{v}, t) d^3\mathbf{v} = 4\pi G \rho(\mathbf{x}, t) $$
+
+El acoplamiento de estas dos ecuaciones gobierna la estructura y evolución de los sistemas estelares masivos.
+
+### 2. Teorema del Virial y Masas Galácticas
+
+Para un sistema galáctico autogravitante en estado estacionario, el Teorema del Virial relaciona la energía cinética total $K$ con la energía potencial gravitatoria total $U$:
+
+$$ 2K + U = 0 $$
+
+Dado que $K = \frac{1}{2} M \langle v^2 \rangle$ (donde $\langle v^2 \rangle$ es la dispersión de velocidades cuadrática media) y $U \approx -\frac{GM^2}{R}$ (donde $R$ es un radio característico), podemos estimar la "masa dinámica" total $M$ de la galaxia midiendo la dispersión de velocidades estelar:
+
+$$ M \approx \frac{R \langle v^2 \rangle}{G} $$
+
+Al aplicar esto a cúmulos de galaxias (como hizo Fritz Zwicky en 1933) o a galaxias individuales (Vera Rubin en los 70s), se descubrió que la masa dinámica superaba masivamente (de 5 a 50 veces) a la masa luminosa observada.
+
+### 3. Curvas de Rotación y Halos de Materia Oscura
+
+En una galaxia espiral, asumimos órbitas circulares para el gas y las estrellas en el disco galáctico. La velocidad de rotación $v_c(r)$ se iguala centrípetamente al campo gravitacional:
+
+$$ \frac{v_c^2(r)}{r} = \frac{d\Phi}{dr} = \frac{G M(r)}{r^2} \implies v_c(r) = \sqrt{\frac{G M(r)}{r}} $$
+
+Donde $M(r)$ es la masa encerrada en la esfera de radio $r$. Si asumimos que la masa está solo en el disco luminoso y el bulto central, $M(r)$ se volvería constante fuera del centro visible ($M(r) \approx M_{\text{tot}}$), por lo que esperaríamos un declive kepleriano en la velocidad:
+$$ v_c(r) \propto \frac{1}{\sqrt{r}} $$
+
+Sin embargo, las curvas de rotación observadas son característicamente planas ($v_c(r) \approx \text{constante} = V_0$) para radios grandes. Esto requiere que matemáticamente:
+$$ M(r) = \frac{V_0^2 r}{G} \implies M(r) \propto r $$
+
+Para que la masa aumente linealmente con el radio, debe existir un vasto componente esférico no luminoso, el **halo de materia oscura**, con un perfil de densidad que se asintotiza como la *esfera isoterma singular*:
+$$ \rho_{\text{DM}}(r) = \frac{1}{4\pi r^2} \frac{dM(r)}{dr} = \frac{V_0^2}{4\pi G r^2} \propto r^{-2} $$
+
+Este halo domina el potencial gravitacional en las regiones exteriores, asegurando la estabilidad del disco galáctico visible (evitando inestabilidades de barra que de otro modo lo destruirían rápidamente, según el criterio de Ostriker-Peebles).
+
+```mermaid
+graph LR
+    A[Masa Luminosa] -->|Estrellas / Gas| B[Potencial Visible]
+    C[Materia Oscura] -->|Halo Esférico r^-2| D[Potencial Oscuro]
+    B --> E(Potencial Total Gravitatorio)
+    D --> E
+    E -->|Dinámica Newtoniana / Boltzmann| F[Curva de Rotación Plana Observada]
+```
+
+### 4. Relaciones de Escala (Tully-Fisher y Faber-Jackson)
+
+Existen relaciones empíricas profundas que vinculan las propiedades dinámicas de las galaxias con su luminosidad intrínseca $L$:
+
+- **Relación de Tully-Fisher (para Espirales):** Relaciona la luminosidad total con la amplitud máxima de la velocidad de rotación plana $V_{\text{max}}$.
+  $$ L \propto V_{\text{max}}^\alpha \quad (\text{con } \alpha \approx 3 \text{ a } 4) $$
+- **Relación de Faber-Jackson (para Elípticas):** Relaciona la luminosidad intrínseca con la dispersión de velocidades central $\sigma$.
+  $$ L \propto \sigma^4 $$
+
+Estas leyes son fundamentales como "candelas estándar" secundarias para medir distancias cosmológicas a galaxias lejanas independientes de su desplazamiento al rojo.
 
 ---
 
 ## 🛠 Ejemplo Práctico
 
-**Problema:** Una galaxia espiral exhibe una velocidad de rotación plana de $v = 220$ km/s. Calcula la masa de la galaxia encerrada en un radio de $r = 20$ kpc (kiloparsecs). (Considera $1 \text{ kpc} \approx 3.086 \times 10^{19} \text{ m}$).
+**Problema:** Una galaxia elíptica gigante tiene una dispersión de velocidades estelar $\sigma = 300 \text{ km/s}$ y un radio efectivo (radio que contiene la mitad de la luz) $R_e = 10 \text{ kpc}$. Utilizando una aproximación del Teorema del Virial estelar, calcule su masa dinámica en masas solares ($M_\odot$).
 
 **Solución paso a paso:**
 1. Datos conocidos:
-   - $v = 220 \text{ km/s} = 2.2 \times 10^5 \text{ m/s}$
-   - $r = 20 \text{ kpc} = 20 \times 3.086 \times 10^{19} \text{ m} = 6.172 \times 10^{20} \text{ m}$
+   - $\sigma = 300 \text{ km/s} = 3 \times 10^5 \text{ m/s}$
+   - $R_e = 10 \text{ kpc} = 10 \times (3.086 \times 10^{19}) \text{ m} = 3.086 \times 10^{20} \text{ m}$
    - $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$
-2. Utilizamos la fórmula de velocidad orbital derivada del equilibrio gravitacional:
-   $$v = \sqrt{\frac{GM}{r}} \implies M = \frac{v^2 r}{G}$$
+2. La masa viríal estimada se relaciona con la dispersión de la línea de visión unidimensional ($\sigma$) usando un factor geométrico que para sistemas esféricos isótropos suele tomarse como $k \approx 5$ de forma aproximada en el radio medio de la masa:
+   $$ M_{dyn} \approx \frac{5 R_e \sigma^2}{G} $$
+   *(Nota: Dependiendo del perfil de densidad exacto, la constante varía entre 3 y 5. Utilizaremos 5 para esta aproximación)*.
 3. Sustituimos valores:
-   $$M = \frac{(2.2 \times 10^5)^2 \times (6.172 \times 10^{20})}{6.674 \times 10^{-11}}$$
-   $$M = \frac{(4.84 \times 10^{10}) \times (6.172 \times 10^{20})}{6.674 \times 10^{-11}}$$
-   $$M = \frac{29.87 \times 10^{30}}{6.674 \times 10^{-11}} \approx 4.47 \times 10^{41} \text{ kg}$$
+   $$ M_{dyn} = \frac{5 \times (3.086 \times 10^{20}) \times (3 \times 10^5)^2}{6.674 \times 10^{-11}} $$
+   $$ M_{dyn} = \frac{15.43 \times 10^{20} \times 9 \times 10^{10}}{6.674 \times 10^{-11}} $$
+   $$ M_{dyn} = \frac{138.87 \times 10^{30}}{6.674 \times 10^{-11}} \approx 20.81 \times 10^{41} \text{ kg} $$
 4. Convertimos a masas solares ($1 M_\odot \approx 1.989 \times 10^{30} \text{ kg}$):
-   $$M \approx \frac{4.47 \times 10^{41}}{1.989 \times 10^{30}} \approx 2.25 \times 10^{11} M_\odot$$
-5. La masa encerrada en esos 20 kpc es aproximadamente 225 mil millones de masas solares (lo cual incluye mucha materia oscura).
+   $$ M_{dyn} \approx \frac{20.81 \times 10^{41}}{1.989 \times 10^{30}} \approx 10.46 \times 10^{11} M_\odot $$
+5. **Conclusión:** La masa dinámica de la galaxia es superior a 1 billón de masas solares ($> 10^{12} M_\odot$), lo cual supera ampliamente la masa que se estimaría sólo contabilizando el brillo de sus estrellas, confirmando la presencia sustancial de materia oscura en el sistema.
 
 ---
 

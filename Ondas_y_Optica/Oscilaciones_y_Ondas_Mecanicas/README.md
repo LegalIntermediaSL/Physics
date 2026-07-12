@@ -5,19 +5,52 @@ Este apartado profundiza en los sistemas que presentan movimiento periódico y e
 El estudio del movimiento oscilatorio tiene raíces en las observaciones de Galileo Galilei sobre los péndulos en el siglo XVI. Christiaan Huygens posteriormente desarrolló el reloj de péndulo en 1656. La descripción matemática rigurosa de las ondas en cuerdas fue formulada por Jean le Rond d'Alembert en 1747, sentando las bases para la ecuación de onda clásica.
 
 ## 🧮 Desarrollo Teórico Profundo
-El modelo más básico de oscilación es el Movimiento Armónico Simple (MAS), descrito por la ecuación diferencial:
-$$ \frac{d^2x}{dt^2} + \omega^2 x = 0 $$
-donde $ \omega = \sqrt{\frac{k}{m}} $ es la frecuencia angular natural.
-La solución general es:
-$$ x(t) = A \cos(\omega t + \phi) $$
 
-Para ondas unidimensionales propagándose en un medio, la ecuación de onda de d'Alembert es:
-$$ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} $$
-donde $ v = \sqrt{\frac{T}{\mu}} $ es la velocidad de la onda en una cuerda (con tensión $ T $ y densidad lineal de masa $ \mu $).
+El formalismo de las oscilaciones y ondas mecánicas es esencial para entender cómo la materia y la energía interactúan a través de fuerzas elásticas en sistemas físicos.
 
-La solución para una onda armónica viajera es:
-$$ y(x,t) = A \sin(kx \pm \omega t) $$
-donde el número de onda es $ k = \frac{2\pi}{\lambda} $ y la frecuencia angular $ \omega = \frac{2\pi}{T} = 2\pi f $.
+### 1. Oscilador Armónico: Formalismo Energético y Dinámico
+
+El Movimiento Armónico Simple (MAS) puede derivarse de un potencial escalar alrededor de un punto de equilibrio estable $x_0$. Expandiendo en serie de Taylor la energía potencial $U(x)$:
+$$ U(x) \approx U(x_0) + \frac{dU}{dx}\Big|_{x_0} (x - x_0) + \frac{1}{2} \frac{d^2U}{dx^2}\Big|_{x_0} (x - x_0)^2 + \dots $$
+Si $x_0$ es un mínimo estable, $\frac{dU}{dx} = 0$, y absorbiendo $U(x_0)$ en el nivel cero, tenemos $U(x) \approx \frac{1}{2}k x^2$ donde la constante efectiva del resorte es $k = \frac{d^2U}{dx^2}$.
+La fuerza conservativa es $F = -\nabla U = -kx$. Por la segunda ley de Newton:
+$$ \frac{d^2x}{dt^2} + \omega_0^2 x = 0 \quad \text{con} \quad \omega_0 = \sqrt{\frac{k}{m}} $$
+La energía mecánica total del oscilador es constante y es una métrica invariante del sistema:
+$$ E = K + U = \frac{1}{2} m \dot{x}^2 + \frac{1}{2} k x^2 = \frac{1}{2} k A^2 $$
+
+### 2. Ecuación de Onda en Cuerdas y Barras Sólidas
+
+**Ondas Transversales (Cuerda):**
+Como se derivó históricamente, una cuerda sometida a tensión $T$ y con masa por unidad de longitud $\mu$ presenta una fuerza restauradora perpendicular al equilibrio, resultando en:
+$$ \frac{\partial^2 y}{\partial x^2} - \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} = 0 \quad \text{donde} \quad v = \sqrt{\frac{T}{\mu}} $$
+
+**Ondas Longitudinales (Barra sólida):**
+Si consideramos una barra elástica de densidad $\rho$, sección transversal $A$ y módulo de Young $Y$, un desplazamiento longitudinal $u(x,t)$ induce una deformación unitaria $\epsilon = \partial u/\partial x$. Por la Ley de Hooke, el esfuerzo es $\sigma = Y \epsilon$. La fuerza neta sobre un elemento $dx$ es $A \frac{\partial \sigma}{\partial x} dx = A Y \frac{\partial^2 u}{\partial x^2} dx$.
+Igualando a la masa $(\rho A dx)$ por la aceleración $\frac{\partial^2 u}{\partial t^2}$, llegamos a la misma estructura matemática:
+$$ \frac{\partial^2 u}{\partial x^2} - \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} = 0 \quad \text{donde la velocidad del sonido es} \quad c = \sqrt{\frac{Y}{\rho}} $$
+
+### 3. Potencia y Flujo de Energía en la Onda
+
+Una onda mecánica viajera transporta energía a través de la interfaz del medio material. La potencia $P$ transmitida por una onda transversal a lo largo de una cuerda es el producto de la componente transversal de la tensión y la velocidad transversal del elemento de cuerda:
+$$ P(x,t) = F_y v_y \approx \left(-T \frac{\partial y}{\partial x}\right) \left(\frac{\partial y}{\partial t}\right) $$
+Para una onda armónica $y(x,t) = A \sin(kx - \omega t)$, las derivadas son $\partial y/\partial x = kA \cos(kx-\omega t)$ y $\partial y/\partial t = -A\omega \cos(kx-\omega t)$. Sustituyendo, la potencia instantánea es:
+$$ P(x,t) = T k \omega A^2 \cos^2(kx - \omega t) = \mu v \omega^2 A^2 \cos^2(kx - \omega t) $$
+La **potencia promedio temporal** (promedio del coseno cuadrado es $1/2$) transmitida es:
+$$ \langle P \rangle = \frac{1}{2} \mu v \omega^2 A^2 $$
+Esto demuestra el teorema de conservación para el transporte de energía: la tasa de energía transmitida es estrictamente proporcional a la densidad del medio, la velocidad de onda, y fundamentalmente, al cuadrado de la amplitud y la frecuencia angular del movimiento.
+
+```mermaid
+graph LR
+    A(Equilibrio Estable) --> B(Fuerza Restauradora)
+    B --> C(Expansión de Taylor Potencial U)
+    C --> D[Ley de Hooke F = -kx]
+    D --> E[Ecuación del MAS]
+    E --> F{Medio Extendido}
+    F --> |Acoplamiento| G[Ecuación de Onda]
+    G --> H[Propagación Longitudinal v = √Y/ρ]
+    G --> I[Propagación Transversal v = √T/μ]
+    I --> J(Transporte de Potencia ~ A²ω²)
+```
 
 ## 🛠 Ejemplo Práctico
 **Problema:** Una cuerda de $ 2 \text{ m} $ de longitud y masa de $ 0.01 \text{ kg} $ está sometida a una tensión de $ 200 \text{ N} $. Se genera una onda armónica con una frecuencia de $ 50 \text{ Hz} $ y amplitud $ 0.05 \text{ m} $. Calcula la velocidad de la onda, la longitud de onda y la ecuación de la onda asumiendo que viaja en la dirección positiva de x y $ \phi = 0 $.

@@ -8,30 +8,97 @@ El modelo del electrón libre fue propuesto inicialmente por Paul Drude (1900) y
 
 ## 🧮 Desarrollo Teórico Profundo
 
-El movimiento de un electrón en un cristal está gobernado por la ecuación de Schrödinger con un potencial periódico $U(\mathbf{r}) = U(\mathbf{r} + \mathbf{R})$, donde $\mathbf{R}$ es un vector de la red de Bravais.
-$$ \left[ -\frac{\hbar^2}{2m} \nabla^2 + U(\mathbf{r}) \right] \psi(\mathbf{r}) = E \psi(\mathbf{r}) $$
+El movimiento de un electrón en un cristal está gobernado por la ecuación de Schrödinger para una partícula en un potencial iónico periódico $U(\mathbf{r}) = U(\mathbf{r} + \mathbf{R})$, donde $\mathbf{R}$ es cualquier vector de la red de Bravais.
 
-El **Teorema de Bloch** establece que los autoestados de este Hamiltoniano tienen la forma de una onda plana modulada por una función que comparte la periodicidad de la red:
+$$ \left[ -\frac{\hbar^2}{2m_e} \nabla^2 + U(\mathbf{r}) \right] \psi(\mathbf{r}) = E \psi(\mathbf{r}) $$
+
+### 1. El Teorema de Bloch
+
+La periodicidad del Hamiltoniano requiere que las funciones de onda electrónicas, conocidas como **Funciones de Bloch**, tengan la forma de una onda plana envolvente modulada por una función que comparte exactamente la misma periodicidad de la red cristalina:
+
 $$ \psi_{n\mathbf{k}}(\mathbf{r}) = e^{i\mathbf{k}\cdot\mathbf{r}} u_{n\mathbf{k}}(\mathbf{r}) $$
-donde $u_{n\mathbf{k}}(\mathbf{r} + \mathbf{R}) = u_{n\mathbf{k}}(\mathbf{r})$, $n$ es el índice de banda y $\mathbf{k}$ es el vector de onda en la primera zona de Brillouin.
 
-El **Modelo de Kronig-Penney** ofrece una solución analítica para un potencial periódico unidimensional compuesto por barreras delta de Dirac. La condición para los valores permitidos de $k$ resulta en:
-$$ P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(ka) $$
-donde $P$ es proporcional a la "fuerza" de la barrera de potencial y $\alpha = \sqrt{2mE}/\hbar$. Como la función del lado izquierdo debe estar en el intervalo $[-1, 1]$ para que haya soluciones reales de $k$, se producen rangos de energía $E$ permitidos (bandas) y prohibidos (bandgaps).
+donde $u_{n\mathbf{k}}(\mathbf{r} + \mathbf{R}) = u_{n\mathbf{k}}(\mathbf{r})$.
+El índice $n$ es el **índice de banda** (que etiqueta bandas discretas para un mismo $\mathbf{k}$) y $\mathbf{k}$ es el **vector de onda cristalino** o cuasi-momento, que está restringido a la **Primera Zona de Brillouin** en el espacio recíproco. 
+
+La consecuencia más notable de este teorema es que un electrón en un estado de Bloch *no colisiona* con los núcleos de la red periódica. La dispersión eléctrica (resistencia) solo se debe a impurezas o vibraciones térmicas (fonones) que rompen la periodicidad perfecta $U(\mathbf{r})$.
+
+### 2. Ecuación Central y Zonas de Brillouin
+
+Si expandimos el potencial periódico y la función de onda en series de Fourier sobre los vectores de la red recíproca $\mathbf{G}$:
+$$ U(\mathbf{r}) = \sum_{\mathbf{G}} U_{\mathbf{G}} e^{i\mathbf{G}\cdot\mathbf{r}} \quad \text{y} \quad \psi_{\mathbf{k}}(\mathbf{r}) = \sum_{\mathbf{G}'} C_{\mathbf{k}-\mathbf{G}'} e^{i(\mathbf{k}-\mathbf{G}')\cdot\mathbf{r}} $$
+Sustituyendo esto en la ecuación de Schrödinger, obtenemos la **Ecuación Central** (un sistema de ecuaciones algebraicas acopladas):
+
+$$ \left( \frac{\hbar^2}{2m} |\mathbf{k} - \mathbf{G}|^2 - E \right) C_{\mathbf{k}-\mathbf{G}} + \sum_{\mathbf{G}'} U_{\mathbf{G}'-\mathbf{G}} C_{\mathbf{k}-\mathbf{G}'} = 0 $$
+
+En un metal alcalino simple, $U_{\mathbf{G}}$ es pequeño. Lejos de las fronteras de Brillouin, $E(\mathbf{k}) \approx \hbar^2 k^2/2m$. Sin embargo, cuando $|\mathbf{k}| \approx |\mathbf{k} - \mathbf{G}|$ (la condición de Bragg), el electrón se acopla fuertemente a las ondas reflejadas. Esto genera la formación de ondas estacionarias tipo seno y coseno. Como estas ondas acumulan carga electrónica en diferentes posiciones relativas a los iones (en los iones atractivos o en los intersticios), sus energías difieren, abriendo una **Brecha de Energía (Bandgap $E_g$)** de magnitud $2|U_\mathbf{G}|$.
+
+### 3. Modelo Tight-Binding (Enlace Fuerte)
+
+Mientras que el teorema de Bloch asume electrones casi libres, el modelo de *Tight-Binding* asume electrones fuertemente ligados a los átomos individuales (como los electrones $d$ en metales de transición). 
+Se propone como solución una combinación lineal de orbitales atómicos (LCAO) localizados $\phi(\mathbf{r})$:
+
+$$ \psi_{\mathbf{k}}(\mathbf{r}) = \frac{1}{\sqrt{N}} \sum_{\mathbf{R}} e^{i\mathbf{k}\cdot\mathbf{R}} \phi(\mathbf{r} - \mathbf{R}) $$
+
+Asumiendo que sólo hay saltos (hopping) permitidos entre átomos vecinos más cercanos con una integral de transferencia $t = - \langle \phi_i | H | \phi_{i+1} \rangle$, la energía de la banda de una red cúbica simple de constante $a$ resulta en:
+
+$$ E(\mathbf{k}) = E_0 - 2t (\cos(k_x a) + \cos(k_y a) + \cos(k_z a)) $$
+
+El ancho total de esta banda es proporcional al solapamiento orbital ($W = 12t$). Cuanto más cerca estén los átomos, mayor será la transferencia $t$ y más ancha será la banda.
+
+### Diagrama: Estructura de Bandas y Clasificación de Materiales
+
+```mermaid
+graph TD
+    A[Potencial Periódico] --> B{Llenado de Bandas a T=0K}
+    B --> C[Banda Parcialmente Llena]
+    B --> D[Bandas Llenas y Vacías]
+    
+    C --> E[METAL<br>Nivel Fermi dentro de la banda]
+    
+    D --> F{Ancho del Bandgap Eg}
+    F -->|Eg > 3-4 eV| G[AISLANTE<br>Electrones no pueden saltar termalmente]
+    F -->|Eg < 3 eV| H[SEMICONDUCTOR<br>Saltos térmicos/ópticos posibles a Banda Conducción]
+    
+    style E fill:#457b9d,stroke:#fff,color:#fff
+    style G fill:#e63946,stroke:#fff,color:#fff
+    style H fill:#2a9d8f,stroke:#fff,color:#fff
+```
 
 ## 🛠 Ejemplo Práctico
 
-**Problema:** Derivar la masa efectiva $m^*$ de un electrón cerca del mínimo de una banda de conducción, asumiendo una relación de dispersión parabólica.
+**Problema:** Derivar rigurosamente el tensor de **masa efectiva** $m^*$ de un electrón cerca del mínimo de una banda de conducción isótropa e indicar cómo afecta la dinámica de la partícula. Luego, aplíquelo al caso unidimensional de una banda generada por Tight-Binding.
 
 **Solución paso a paso:**
-1. Cerca del mínimo de una banda (digamos en $\mathbf{k} = 0$), la energía $E(\mathbf{k})$ se puede expandir en serie de Taylor:
-   $$ E(\mathbf{k}) \approx E(0) + \nabla_{\mathbf{k}} E \cdot \mathbf{k} + \frac{1}{2} \sum_{i,j} k_i \frac{\partial^2 E}{\partial k_i \partial k_j} k_j $$
-2. En el mínimo de la banda, el término de la primera derivada es cero ($\nabla_{\mathbf{k}} E = 0$). Asumiendo isotropía, la matriz de segundas derivadas (el tensor de masa efectiva) se simplifica y podemos escribir:
-   $$ E(\mathbf{k}) \approx E_c + \frac{1}{2} \frac{\partial^2 E}{\partial k^2} k^2 $$
-3. Para una partícula libre, la energía clásica y cuántica es $E = \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m}$.
-4. Comparando ambas expresiones, definimos la **masa efectiva** $m^*$ del electrón en el cristal de modo que la relación de dispersión recupere la forma de la partícula libre:
-   $$ \frac{\hbar^2}{2m^*} = \frac{1}{2} \frac{\partial^2 E}{\partial k^2} \implies m^* = \hbar^2 \left( \frac{\partial^2 E}{\partial k^2} \right)^{-1} $$
-**Conclusión:** La inercia del electrón frente a fuerzas externas dentro del cristal está determinada por la curvatura de la banda de energía. Una banda muy plana resulta en una masa efectiva muy grande (electrón "pesado").
+
+1. **Dinámica del Paquete de Ondas:**
+   La velocidad de grupo (velocidad clásica) de un paquete de electrones centrado en $\mathbf{k}$ es:
+   $$ \mathbf{v}_g = \frac{1}{\hbar} \nabla_{\mathbf{k}} E(\mathbf{k}) $$
+   
+2. **Aceleración y Teorema de Bloch Semi-clásico:**
+   Si aplicamos un campo eléctrico externo $\mathbf{F} = -e\mathbf{E}$, el trabajo realizado sobre el electrón es $dW = \mathbf{F} \cdot \mathbf{v}_g dt$. 
+   Puesto que $dW = dE = \nabla_{\mathbf{k}} E \cdot d\mathbf{k}$, obtenemos:
+   $$ \nabla_{\mathbf{k}} E \cdot d\mathbf{k} = \mathbf{F} \cdot \left( \frac{1}{\hbar} \nabla_{\mathbf{k}} E \right) dt $$
+   Resultando en la ecuación de movimiento semi-clásica: $\hbar \frac{d\mathbf{k}}{dt} = \mathbf{F}$.
+
+3. **Obtención de la Masa Efectiva:**
+   Derivamos la velocidad de grupo respecto al tiempo para encontrar la aceleración clásica $\mathbf{a}$:
+   $$ \mathbf{a} = \frac{d\mathbf{v}_g}{dt} = \frac{1}{\hbar} \frac{d}{dt} (\nabla_{\mathbf{k}} E) = \frac{1}{\hbar} \sum_j \frac{\partial^2 E}{\partial k_i \partial k_j} \frac{dk_j}{dt} $$
+   Sustituyendo $\frac{dk_j}{dt} = \frac{F_j}{\hbar}$:
+   $$ a_i = \sum_j \left( \frac{1}{\hbar^2} \frac{\partial^2 E}{\partial k_i \partial k_j} \right) F_j $$
+   Comparando esto con la segunda ley de Newton $a_i = \sum_j (m^{-1})_{ij} F_j$, identificamos el **tensor de masa efectiva**:
+   $$ \left( \frac{1}{m^*} \right)_{ij} = \frac{1}{\hbar^2} \frac{\partial^2 E}{\partial k_i \partial k_j} $$
+
+4. **Aplicación a una Banda de Tight-Binding 1D:**
+   Dada la dispersión $E(k) = E_0 - 2t \cos(ka)$.
+   - En el fondo de la banda ($k=0$): $\cos(ka) \approx 1 - (ka)^2/2 \implies E(k) \approx (E_0 - 2t) + t a^2 k^2$.
+     La derivada segunda es $\frac{d^2E}{dk^2} = 2ta^2$.
+     Por tanto, $m^* = \frac{\hbar^2}{2ta^2}$. La masa es positiva y constante para electrones en el fondo de banda. Un alto salto $t$ (banda ancha) genera electrones muy ligeros.
+   - En el tope de la banda ($k=\pi/a$): $\cos(ka \approx \pi) \approx -1 + (k - \pi/a)^2 a^2/2$.
+     La derivada segunda resulta negativa: $\frac{d^2E}{dk^2} = -2ta^2$.
+     Por tanto, $m^* = -\frac{\hbar^2}{2ta^2}$.
+
+**Conclusión:** Un electrón cerca del tope de una banda en el cristal desarrolla una *masa inercial negativa*. Empujarlo en una dirección provoca que acelere en dirección opuesta (debido a intensas reflexiones de Bragg con la red). Esta anomalía física se trata convencionalmente definiendo la dinámica de las ausencias de electrones: los llamados **huecos** (holes), que exhiben masa positiva y carga eléctrica positiva.
 
 ## 📚 Recursos Específicos
 

@@ -11,24 +11,74 @@ El estudio de los sistemas unidimensionales permite resolver de forma exacta la 
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### La Partícula en una Caja (Pozo Infinito)
-Consideremos un potencial:
-$$ V(x) = \begin{cases} 0 & \text{si } 0 < x < L \\ \infty & \text{en cualquier otro lugar} \end{cases} $$
-Dentro de la caja, la ecuación es $-\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E\psi$. La solución general es $\psi(x) = A\sin(kx) + B\cos(kx)$, con $k = \sqrt{2mE}/\hbar$.
-Condiciones de contorno: $\psi(0) = \psi(L) = 0$.
-Esto fuerza $B=0$ y $kL = n\pi$ para $n=1,2,3,\dots$.
-Energías cuantizadas:
-$$ E_n = \frac{n^2\pi^2\hbar^2}{2mL^2} $$
-Funciones de onda normalizadas:
+Resolver la ecuación de Schrödinger en una dimensión permite aislar y examinar el corazón matemático de la mecánica cuántica sin la complejidad del momento angular de las soluciones en 3D. Esto revela directamente la naturaleza de las restricciones impuestas por las condiciones de contorno y la aparición de energías cuantizadas.
+
+### El Pozo Cuadrado Infinito (Partícula en una Caja)
+
+Supongamos una partícula de masa $m$ en un potencial $V(x)$:
+$$ V(x) = \begin{cases} 0 & \text{si } 0 < x < L \\ \infty & \text{en el exterior} \end{cases} $$
+Fuera de la caja, la probabilidad de encontrar la partícula es nula debido al potencial infinito; por ende, $\psi(x) = 0$ para $x \le 0$ y $x \ge L$. 
+
+En el interior de la caja, el Hamiltoniano es el de una partícula libre, y la ecuación de Schrödinger independiente del tiempo se reduce a:
+$$ -\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} = E \psi(x) \implies \frac{d^2\psi}{dx^2} + k^2\psi = 0 \quad \text{donde } k = \frac{\sqrt{2mE}}{\hbar} $$
+Esta es una ecuación diferencial ordinaria de segundo orden con coeficientes constantes. La solución general es una combinación lineal de ondas planas:
+$$ \psi(x) = A\sin(kx) + B\cos(kx) $$
+
+**Imposición de Condiciones de Contorno:**
+1. $\psi(0) = 0 \implies A\sin(0) + B\cos(0) = B = 0$. La solución se reduce a $\psi(x) = A\sin(kx)$.
+2. $\psi(L) = 0 \implies A\sin(kL) = 0$. Dado que $A \neq 0$ (la solución trivial no es normalizable), la función seno debe anularse, lo que implica que su argumento es un múltiplo entero de $\pi$:
+$$ kL = n\pi \implies k_n = \frac{n\pi}{L}, \quad \text{con } n = 1, 2, 3, \dots $$
+
+Al sustituir el valor cuantizado de $k_n$ en la definición de energía, descubrimos la **cuantización de la energía**:
+$$ E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2\pi^2\hbar^2}{2mL^2} $$
+Es crucial destacar que la energía más baja posible no es cero ($E_1 > 0$). Este es el llamado nivel de punto cero, una manifestación del Principio de Incertidumbre: confinar la partícula reduce drásticamente su incertidumbre espacial $\Delta x$, lo que fuerza un aumento en la incertidumbre del momento $\Delta p$ y, en consecuencia, en la energía cinética promedio.
+
+Aplicando la condición de normalización $\int_0^L |A\sin(n\pi x / L)|^2 dx = 1$, encontramos la amplitud $A = \sqrt{2/L}$. Las autofunciones resultan:
 $$ \psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi x}{L}\right) $$
 
-### Oscilador Armónico Cuántico
-El potencial es $V(x) = \frac{1}{2}m\omega^2 x^2$. La solución a la ecuación de Schrödinger lleva a polinomios de Hermite. Sin embargo, usando operadores de creación ($\hat{a}^\dagger$) y aniquilación ($\hat{a}$), encontramos que las energías están discretizadas e igualmente espaciadas:
-$$ E_n = \hbar\omega \left( n + \frac{1}{2} \right), \quad n=0,1,2,\dots $$
-La energía del punto cero es $E_0 = \hbar\omega/2$, una consecuencia directa del principio de incertidumbre.
+```mermaid
+graph LR
+    A[Potencial Confinante: V=inf en los bordes] --> B(Ecuación de Onda Libre Interna)
+    B --> C{Condiciones de Contorno psi=0}
+    C -->|B=0| D[Soluciones Senoidales]
+    C -->|kL = n*pi| E[k cuantizado]
+    E --> F[Energía Cuantizada En]
+    D --> G[Autofunciones con Nodos n-1]
+    F --> H[Nivel Mínimo E1 > 0]
+```
 
-### Barreras de Potencial y Efecto Túnel
-Cuando una partícula de energía $E$ encuentra una barrera de altura $V_0 > E$ y anchura $a$, clásicamente debería rebotar. Cuánticamente, la función de onda en la región de la barrera es una exponencial decreciente $\sim e^{-\kappa x}$ con $\kappa = \sqrt{2m(V_0-E)}/\hbar$. Si la barrera es lo suficientemente delgada, hay una probabilidad no nula de que la partícula atraviese (coeficiente de transmisión $T > 0$).
+### El Oscilador Armónico Cuántico: Enfoque Algebraico
+
+El potencial armónico clásico $V(x) = \frac{1}{2}m\omega^2 x^2$ es fundamental, ya que aproxima el comportamiento de cualquier potencial cerca de un punto de equilibrio estable (expansión de Taylor).
+El Hamiltoniano cuántico es:
+$$ \hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2 \hat{x}^2 $$
+En lugar de resolver la complicada ecuación diferencial que involucra polinomios de Hermite, Paul Dirac introdujo el método algebraico de operadores de creación y aniquilación (u operadores escalera). Definimos operadores adimensionales, no hermitianos:
+$$ \hat{a} = \sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x} + \frac{i}{m\omega}\hat{p} \right), \quad \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x} - \frac{i}{m\omega}\hat{p} \right) $$
+Se puede demostrar, a partir del conmutador fundamental $[\hat{x}, \hat{p}] = i\hbar$, que:
+$$ [\hat{a}, \hat{a}^\dagger] = 1 $$
+Reescribiendo el Hamiltoniano en términos de estos operadores:
+$$ \hat{H} = \hbar\omega \left( \hat{a}^\dagger\hat{a} + \frac{1}{2} \right) $$
+Si actuamos con $\hat{H}$ sobre el estado modificado $\hat{a}|n\rangle$, se comprueba que disminuye la energía en $\hbar\omega$; por eso $\hat{a}$ es el **operador de aniquilación** o descenso. De manera análoga, $\hat{a}^\dagger$ la aumenta, siendo el **operador de creación**. 
+
+Para evitar un colapso hacia energías negativas infinitas (lo cual violaría la positividad del espectro), debe existir un estado fundamental mínimo $|0\rangle$ tal que la aplicación de $\hat{a}$ lo anule: $\hat{a}|0\rangle = 0$.
+A partir de aquí, la energía del estado fundamental es:
+$$ \hat{H}|0\rangle = \hbar\omega \left( 0 + \frac{1}{2} \right)|0\rangle = \frac{1}{2}\hbar\omega |0\rangle \implies E_0 = \frac{1}{2}\hbar\omega $$
+Los autoestados excitados superiores se obtienen aplicando iterativamente el operador escalera de subida:
+$$ E_n = \hbar\omega \left( n + \frac{1}{2} \right), \quad n=0, 1, 2, \dots $$
+Este espectro está igualmente espaciado.
+
+### Efecto Túnel Cuántico
+
+Una característica contraria a la intuición surge cuando resolvemos la ecuación de Schrödinger para una barrera de potencial de altura $V_0$ y ancho $a$, sobre la cual incide una partícula con energía $E < V_0$. Clásicamente, la partícula rebotaría con un 100% de certeza en el punto de retorno.
+
+Cuantitativamente, la ecuación en la zona prohibida (dentro de la barrera $0 \le x \le a$) es:
+$$ \frac{d^2\psi}{dx^2} = \frac{2m(V_0 - E)}{\hbar^2} \psi = \kappa^2 \psi $$
+Donde $\kappa$ es una constante real. La solución no oscila, sino que decrece exponencialmente:
+$$ \psi(x) = C e^{-\kappa x} + D e^{+\kappa x} $$
+Empalmando las funciones de onda y sus primeras derivadas (condiciones de continuidad) en las fronteras de la barrera $x=0$ y $x=a$, se descubre que la amplitud de la onda en la región más allá de la barrera ($x > a$) no es cero. La partícula tiene una probabilidad de "hacer un túnel".
+El coeficiente de transmisión $T$ para una barrera ancha y alta decae exponencialmente de la forma:
+$$ T \approx e^{-2\kappa a} = \exp\left( -2a \frac{\sqrt{2m(V_0 - E)}}{\hbar} \right) $$
+Este fenómeno explica procesos tan diversos como la desintegración radiactiva alfa, el funcionamiento de microscopios de efecto túnel (STM) y las fusiones nucleares en los centros estelares, que ocurren a temperaturas "demasiado frías" para superar clásicamente las barreras de repulsión de Coulomb.
 
 ---
 

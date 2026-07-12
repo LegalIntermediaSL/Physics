@@ -9,28 +9,62 @@ El estudio de la electrostática se remonta a la antigüedad clásica, cuando Ta
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### Ley de Coulomb
-La fuerza $\vec{F}$ entre dos cargas puntuales $q_1$ y $q_2$ separadas por una distancia $r$ en el vacío está dada por:
-$$ \vec{F} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{r^2} \hat{r} $$
-donde $\varepsilon_0 \approx 8.854 \times 10^{-12} \, \text{C}^2/(\text{N}\cdot\text{m}^2)$ es la permitividad del vacío.
+El tratamiento riguroso de la electrostática se basa en el análisis de campos vectoriales en reposo macroscópico. A nivel universitario superior, superamos la simple evaluación de cargas puntuales para integrar formulaciones continuas, ecuaciones diferenciales en derivadas parciales y series armónicas complejas.
 
-### Campo Eléctrico
-El campo eléctrico $\vec{E}$ se define como la fuerza por unidad de carga que experimentaría una carga de prueba $q_0$:
-$$ \vec{E} = \frac{\vec{F}}{q_0} $$
-Para una carga puntual $q$, el campo generado a una distancia $r$ es:
-$$ \vec{E} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{r} $$
-El principio de superposición establece que el campo total creado por una distribución de cargas es la suma vectorial de los campos individuales: $\vec{E} = \sum \vec{E}_i$.
+### 1. El Campo Vectorial y El Teorema de Helmholtz
+El teorema de Helmholtz establece que cualquier campo vectorial suave y de decaimiento rápido se determina completamente si conocemos su divergencia y su rotacional. En electrostática, las cargas están en reposo ($\partial \rho/\partial t = 0$, $\vec{J} = \vec{0}$). Postulamos fundamentalmente:
+1. **Irrotacionalidad:** $\nabla \times \vec{E} = \vec{0}$.
+2. **Fuentes (Ley de Gauss diferencial):** $\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}$.
 
-### Ley de Gauss
-La Ley de Gauss relaciona el flujo eléctrico $\Phi_E$ a través de una superficie cerrada $S$ con la carga neta $Q_{\text{enc}}$ encerrada por dicha superficie:
-$$ \oint_S \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0} $$
-Esta ley es extremadamente poderosa para calcular campos eléctricos en sistemas con alta simetría (esférica, cilíndrica o plana).
-
-### Potencial Eléctrico
-Dado que la fuerza electrostática es conservativa ($\nabla \times \vec{E} = 0$), el campo eléctrico puede expresarse como el gradiente negativo de un potencial escalar $V$:
+Como el rotacional de todo gradiente es idénticamente nulo, la primera condición asegura la existencia de un potencial escalar unívoco (hasta una constante) $V$:
 $$ \vec{E} = -\nabla V $$
-La diferencia de potencial entre dos puntos $A$ y $B$ es el trabajo por unidad de carga necesario para mover la carga:
-$$ V_B - V_A = -\int_A^B \vec{E} \cdot d\vec{l} $$
+El trabajo realizado para mover una carga $q$ entre dos puntos $\vec{a}$ y $\vec{b}$ es independiente de la trayectoria:
+$$ W = -q \int_{\vec{a}}^{\vec{b}} \vec{E} \cdot d\vec{l} = q[V(\vec{b}) - V(\vec{a})] $$
+
+### 2. Ecuaciones de Poisson y Laplace
+Sustituyendo $\vec{E} = -\nabla V$ en la ecuación diferencial de Gauss, obtenemos la **Ecuación de Poisson**:
+$$ \nabla \cdot (-\nabla V) = \frac{\rho}{\varepsilon_0} \implies \nabla^2 V = -\frac{\rho}{\varepsilon_0} $$
+donde $\nabla^2$ es el operador Laplaciano. Esta es la ecuación fundamental de la electrostática para resolver el potencial en presencia de una distribución de carga conocida. 
+
+En las regiones libres de carga ($\rho = 0$), esto se reduce a la **Ecuación de Laplace**:
+$$ \nabla^2 V = 0 $$
+Las soluciones a la ecuación de Laplace (funciones armónicas) no admiten máximos ni mínimos locales en el interior del dominio, sólo en sus fronteras (Teorema del Máximo). La unicidad de la solución para un conjunto de condiciones de contorno (Dirichlet o Neumann) está garantizada por el **Teorema de Unicidad**.
+
+### 3. Desarrollo Multipolar
+A menudo necesitamos evaluar el potencial o el campo eléctrico generado por una distribución de carga localizada compleja en un punto lejano $|\vec{r}| \gg |\vec{r}'|$. Utilizamos una expansión en serie de Taylor del término $1/|\vec{r} - \vec{r}'|$ (empleando polinomios de Legendre), obteniendo el **Desarrollo Multipolar**:
+$$ V(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \sum_{n=0}^{\infty} \frac{1}{r^{n+1}} \int (r')^n P_n(\cos\theta') \rho(\vec{r}') \, d\tau' $$
+Los primeros términos son:
+1. **Monopolar ($n=0$):** $V_{\text{mono}}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r}$, donde $Q = \int \rho \, d\tau$ es la carga neta.
+2. **Dipolar ($n=1$):** $V_{\text{dip}}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}$, donde $\vec{p} = \int \vec{r}' \rho(\vec{r}') \, d\tau'$ es el momento dipolar eléctrico.
+3. **Cuadrupolar ($n=2$):** $V_{\text{cuad}}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{1}{2 r^3} \sum_{i,j} \hat{r}_i \hat{r}_j Q_{ij}$, donde $Q_{ij}$ es el tensor momento cuadrupolar nulo en traza.
+
+### 4. Energía Electroestática y Tensión de Maxwell
+La energía requerida para ensamblar una distribución discreta de cargas desde el infinito es:
+$$ U = \frac{1}{2} \sum_{i \neq j} \frac{1}{4\pi\varepsilon_0} \frac{q_i q_j}{|\vec{r}_i - \vec{r}_j|} = \frac{1}{2} \sum_i q_i V(\vec{r}_i) $$
+Pasando al límite continuo, la energía electrostática total almacenada en todo el espacio es:
+$$ U = \frac{1}{2} \int \rho V \, d\tau $$
+Podemos reescribir esto enteramente en función del campo eléctrico. Sustituyendo $\rho = \varepsilon_0 \nabla \cdot \vec{E}$ e integrando por partes, asumiendo que el campo decae suficientemente rápido en el infinito:
+$$ U = \frac{\varepsilon_0}{2} \int |\vec{E}|^2 \, d\tau $$
+Esto nos dice que la energía electrostática está almacenada *en el propio campo*, con una densidad de energía $u = \frac{\varepsilon_0}{2} |\vec{E}|^2$. 
+Las fuerzas sobre los conductores pueden calcularse de forma elegante utilizando el **Tensor de Esfuerzos de Maxwell** $T_{ij}$:
+$$ T_{ij} = \varepsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} |\vec{E}|^2 \right) $$
+Donde la fuerza neta sobre un volumen $V$ contenido en una superficie $S$ es simplemente la integral del flujo de la tensión a través de la superficie:
+$$ \vec{F} = \oint_S \mathbf{T} \cdot d\vec{A} $$
+
+```mermaid
+flowchart TD
+    A[Carga en reposo \rho] -->|Ley de Coulomb| B(Campo Vectorial E)
+    A -->|Ecuación de Poisson| C(Potencial Escalar V)
+    B -->|Gradiente E = -\nabla V| C
+    C -->|Integral de Camino V = -\int E \cdot dl| B
+    B -->|Integral de Superficie \epsilon_0/2 |E|^2| D{Energía Electrostática U}
+    C -->|Integral de Volumen 1/2 \int \rho V| D
+    B -->|Expansión en el infinito| E[Desarrollo Multipolar]
+```
+
+### 5. Problemas de Frontera: Método de Imágenes
+Un problema clásico es calcular el potencial en la vecindad de conductores perfectos sometidos a cargas externas. Dado que la superficie de un conductor ideal es equipotencial, la Ecuación de Poisson y el Teorema de Unicidad nos permiten sustituir las superficies conductoras por "cargas imagen" virtuales ubicadas fuera de nuestra región de interés. 
+Por ejemplo, para una carga puntual $q$ a distancia $d$ de un plano conductor infinito a tierra ($V=0$), la solución se obtiene idénticamente colocando una carga imagen $-q$ a una distancia $d$ detrás del plano (como en un espejo). El potencial total válido para $z > 0$ es la superposición del potencial de ambas cargas puntuales, sin resolver explícitamente ecuaciones diferenciales de frontera.
 
 ---
 

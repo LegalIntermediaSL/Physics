@@ -9,32 +9,82 @@ La idea atómica de la materia se originó en la Antigua Grecia, pero Daniel Ber
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### Hipótesis del Gas Ideal
-El modelo asume:
-1. El gas consta de moléculas idénticas de tamaño insignificante en comparación con la distancia promedio entre ellas.
-2. Las moléculas no interactúan excepto durante las colisiones.
-3. Las colisiones con las paredes son perfectamente elásticas.
+La teoría cinética de los gases constituye uno de los mayores triunfos de la física clásica pre-cuántica. Es una aplicación pura de la mecánica analítica newtoniana a sistemas masivos de partículas tratadas estadísticamente, derivando leyes macroscópicas termodinámicas estáticas y de transporte.
 
-### Derivación de la Presión
-Si una partícula de masa $m$ se mueve con velocidad $v_x$ hacia una pared de área $A$, en un choque elástico el cambio de momento es $\Delta p_x = 2mv_x$.
-El tiempo entre choques contra la misma pared en una caja de longitud $L$ es $\Delta t = \frac{2L}{v_x}$.
-La fuerza promediada por una partícula es $F_1 = \frac{\Delta p_x}{\Delta t} = \frac{m v_x^2}{L}$.
-Para $N$ partículas, la presión $P = F_{\text{total}}/A$ resulta:
-$$ P = \frac{N m \langle v_x^2 \rangle}{A L} = \frac{N m \langle v_x^2 \rangle}{V} $$
-Por isotropía espacial, $\langle v_x^2 \rangle = \frac{1}{3} \langle v^2 \rangle$, entonces:
+```mermaid
+graph TD
+    A[Postulados Cinemáticos Micro] --> B(Modelo de Colisiones Elásticas)
+    B --> C(Cálculo del Momento Transferido)
+    C --> D(Derivación de Presión Cinemática)
+    D --> E[Relación T y Energía Cinética]
+    A --> F(Distribución de Maxwell-Boltzmann)
+    F --> G(Velocidad Media y RMS)
+    E --> H(Teorema de Equipartición de Energía)
+    H --> I[Capacidad Calorífica C_V]
+```
+
+### 1. Marco Axiomático de la Teoría de Gases Ideales
+
+Para deducir las propiedades emergentes del gas, es imprescindible un conjunto sólido de hipótesis que configuran el límite ideal de los gases (baja densidad, alta temperatura relativa). El gas ideal obedece cinco supuestos críticos:
+1. **Puntualidad Geométrica:** Las partículas poseen un tamaño espacial que es rigurosamente despreciable frente a su camino libre medio $\lambda$. Su volumen intrínseco se aproxima a cero.
+2. **Dinámica Molecular Aleatoria (Caos Molecular):** Las moléculas de gas obedecen un movimiento en línea recta incesante, caótico e isotrópico. No existe una dirección macroscópica preferencial del flujo de masa.
+3. **Ausencia de Campos de Interacción:** El potencial intermolecular es nulo a distancias mayores que el diámetro molecular $V(r) = 0$; no existen fuerzas de atracción tipo Van der Waals ni enlaces dipolares de largo alcance. Las partículas solo "sienten" mutuamente la fuerza electromagnética de repulsión estricta a un radio $\sigma$ en el breve instante temporal del choque físico.
+4. **Colisiones Perfectamente Elásticas:** Toda colisión entre partículas, o contra los límites del recipiente, preserva por completo la magnitud neta del momento lineal y la energía cinética de traslación del sistema. 
+5. **Estadística Continua y Numerosa:** El número de partículas $N$ es inmensamente grande ($N \gg 1$), lo que permite que las fluctuaciones estadísticas relativas que escalan como $1/\sqrt{N}$ tiendan a cero en mediciones macroscópicas.
+
+### 2. Derivación Mecánica del Tensor de Presiones
+
+Consideremos geométricamente un gas encerrado en una caja rectangular rígida de lados $L_x, L_y, L_z$, cuyo volumen total es $V = L_x L_y L_z$. Nos fijamos en una molécula arbitraria de masa constante $m$ colisionando elásticamente con una de las paredes planares perpendiculares al eje $X$, cuya área es $A = L_y L_z$.
+La velocidad inicial de la molécula posee un vector tridimensional $\vec{v} = v_x \hat{i} + v_y \hat{j} + v_z \hat{k}$. Al impactar frontalmente de manera elástica con el plano $YZ$, solo su componente de velocidad normal se invierte, convirtiéndose en $-v_x$.
+La transferencia o cambio de momento lineal de la molécula es:
+$$ \Delta p_x = m(-v_x) - m(v_x) = -2mv_x $$
+Por la Tercera Ley de Newton, el momento exacto transferido a la pared durante cada colisión microscópica es $+2mv_x$.
+Para que esta misma molécula colisione nuevamente con la misma pared de $X$, debe viajar hasta la pared opuesta y regresar, una distancia cinemática de $2L_x$. El tiempo que toma en completar este periplo $x$ de ida y vuelta es:
+$$ \Delta t = \frac{2L_x}{v_x} $$
+Aplicando el Teorema del Impulso, la fuerza impulsiva promediada ejercida por una sola partícula, $F_{1x}$, resulta de dividir la transferencia de momento por el tiempo del ciclo entre colisiones:
+$$ \langle F_{1x} \rangle = \frac{\Delta p_{\text{pared}}}{\Delta t} = \frac{2mv_x}{2L_x / v_x} = \frac{mv_x^2}{L_x} $$
+Ahora, superponemos linealmente la fuerza ejercida de forma independiente por el total de las $N$ moléculas en el gas:
+$$ \langle F_x^{\text{tot}} \rangle = \frac{m}{L_x} \sum_{i=1}^{N} v_{ix}^2 = \frac{m N}{L_x} \langle v_x^2 \rangle $$
+Donde $\langle v_x^2 \rangle$ corresponde al promedio del cuadrado de las velocidades a lo largo del eje $X$ en el sistema.
+Macroscópicamente, definimos la variable conjugada presión, $P$, como la magnitud intensiva de la fuerza por unidad de área perpendicular ejercida sobre los márgenes del contorno $A$:
+$$ P = \frac{\langle F_x^{\text{tot}} \rangle}{A} = \frac{m N \langle v_x^2 \rangle}{L_x \cdot A} = \frac{N m \langle v_x^2 \rangle}{V} $$
+Dada la isotropía espacial del "caos molecular", las velocidades en promedio satisfacen que $\langle v_x^2 \rangle = \langle v_y^2 \rangle = \langle v_z^2 \rangle$. Y puesto que el módulo al cuadrado del vector velocidad es $v^2 = v_x^2 + v_y^2 + v_z^2$, la media requiere que $\langle v^2 \rangle = 3\langle v_x^2 \rangle$.  Sustituyendo esta asimetría esférica de regreso en nuestra derivación de la presión, obtenemos la **Ecuación Maestra de la Teoría Cinética**:
 $$ P = \frac{1}{3} \frac{N m \langle v^2 \rangle}{V} $$
+Aquí resalta vívidamente la interconexión dimensional de la presión con la densidad molecular del sistema y el término microscópico inercial-cinético.
 
-### Temperatura y Energía Cinética Promedio
-Igualando la expresión anterior con la ecuación macroscópica de los gases ideales ($PV = N k_B T$):
+### 3. Temperatura y la Interpretación Mecánica de la Energía
+
+La ecuación fundamental del gas ideal, derivada macroscópicamente mediante síntesis empírica por Boyle, Charles y Gay-Lussac, dicta que $PV = N k_B T$, donde $T$ es la temperatura termodinámica absoluta y $k_B$ la constante de Boltzmann.
+Asimilando esta igualdad a nuestra Ecuación Maestra reordenada:
+$$ P V = \frac{1}{3} N m \langle v^2 \rangle $$
+Encontramos de inmediato la simetría térmica de los gases:
 $$ N k_B T = \frac{1}{3} N m \langle v^2 \rangle $$
+Dividiendo por $N$ e introduciendo el factor de 2 para revelar la forma de la energía cinética traslacional $\langle E_K \rangle = \frac{1}{2}m\langle v^2 \rangle$:
 $$ \frac{1}{2} m \langle v^2 \rangle = \frac{3}{2} k_B T $$
-Esto demuestra que la energía cinética traslacional media de una molécula es directamente proporcional a la temperatura absoluta.
+Este resultado revolucionario provee de sentido ontológico a la magnitud de la "temperatura": **La temperatura no es más que el indicador macroscópico observable del nivel promedio de energía cinética de traslación aleatoria de las moléculas que constituyen el sistema**.
 
-### Teorema de Equipartición de la Energía
-Establece que, en equilibrio térmico, cada grado de libertad cuadrático (como posiciones o momentos) contribuye en promedio con $\frac{1}{2} k_B T$ a la energía del sistema.
-Para un gas ideal con $f$ grados de libertad (traslacionales, rotacionales, vibracionales):
-$$ U = N \frac{f}{2} k_B T $$
-Lo cual determina la capacidad calorífica $C_V = \frac{f}{2} N k_B$.
+Desde aquí, definimos además la importante métrica de velocidad cuadrática media $v_{\text{rms}}$:
+$$ v_{\text{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{3 k_B T}{m}} = \sqrt{\frac{3 R T}{M}} $$
+donde $M$ es la masa molar del gas y $R = N_A k_B$ es la constante de los gases universales.
+
+### 4. Teorema Fundamental de la Equipartición de la Energía
+
+El resultado anterior $\langle E_K \rangle = \frac{3}{2} k_B T$ puede descomponerse direccionalmente considerando que hay $3$ grados de libertad espaciales ($x, y, z$). Por ende, el promedio de energía que aloja cada uno de los grados de libertad espaciales independientes resulta en exactamente $\frac{1}{2} k_B T$.
+
+James Clerk Maxwell y Ludwig Boltzmann generalizaron este corolario analítico a cualquier tipo de energía cuadrática de forma fenomenológica para la física estadística clásica.
+**Teorema:** *Para un sistema dinámico clásico que se encuentre en perfecto equilibrio térmico absoluto a temperatura constante $T$, la media de su energía cinética total está distribuida uniforme y equitativamente entre todos y cada uno de los grados de libertad independientes que intervengan de forma cuadrática en su formulación del Hamiltoniano (energías cinéticas de traslación o rotación angular, o energías potenciales armónicas espaciales).*
+
+Así, si una molécula gaseosa polinuclear consta de un total de $f$ grados de libertad efectivamente accesibles (no congelados termodinámicamente a nivel cuántico) en un instante dado, la energía interna macroscópica de una muestra con un número $N$ de tales moléculas valdrá:
+$$ U = N \cdot \frac{f}{2} k_B T $$
+Esta ecuación permite calcular de forma inmediata una predicción empírica crucial sobre el comportamiento macroscópico del gas: la capacidad calorífica isocórica molar $C_V$, definida como la derivada termodinámica parcial $\left(\frac{\partial U}{\partial T}\right)_V$. Para 1 mol ($N = N_A$):
+$$ C_V = \frac{f}{2} R $$
+Lo que asienta valores predecibles: para un gas atómico monoatómico ($f=3$, $C_V = \frac{3}{2} R$), y para un gas diatómico con excitación rotacional simple ($f=5$, $C_V = \frac{5}{2} R$).
+
+### 5. Distribución de Velocidades de Maxwell-Boltzmann
+
+Aunque las moléculas poseen un $v_{\text{rms}}$ característico, el gas contiene un mar agitado de partículas volando con velocidades dispares a causa de las incesantes colisiones recíprocas termalizadoras. La caracterización estadística es abordada por la función de densidad de probabilidad $f(v)$ que especifica el porcentaje estocástico de las moléculas cuya velocidad reside infinitesimalmente entre $v$ y $v+dv$. Derivada considerando condiciones isométricas y de probabilidad separada en las componentes espaciales de la velocidad, Maxwell generó su icónica ley:
+$$ f(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2k_B T}\right) $$
+La distribución es asimétrica y refleja una curva de "campana" modificada (sesgada positivamente por el factor $v^2$ originado del elemento diferencial esférico de fases). Esta ecuación domina de forma ubicua y magistral los fundamentos del equilibrio termodinámico de fluidos desde presiones bajas hasta su aproximación relativista.
 
 ---
 

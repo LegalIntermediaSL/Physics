@@ -13,22 +13,54 @@ A finales del siglo XIX y principios del XX, una serie de experimentos inexplica
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### Radiación del Cuerpo Negro
-La ley de Rayleigh-Jeans predecía que la radiancia espectral divergía a altas frecuencias ($\nu$):
-$$ \rho(\nu, T) = \frac{8\pi \nu^2 k_B T}{c^3} $$
-Planck modificó esto asumiendo que la energía de los osciladores en las paredes de la cavidad está cuantizada, $E = nh\nu$. La distribución de Planck resultante es:
-$$ \rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \frac{1}{e^{h\nu/k_B T} - 1} $$
-Esto evita la catástrofe ultravioleta para $\nu \to \infty$.
+### Teoría Cuántica de la Radiación del Cuerpo Negro
 
-### El Efecto Fotoeléctrico
-La energía máxima de los electrones emitidos por un metal iluminado por luz depende de la frecuencia $\nu$ y no de la intensidad. Einstein propuso que la luz está formada por cuantos (fotones) de energía $E = h\nu$.
+El inicio del formalismo cuántico surgió al analizar la densidad de energía de la radiación electromagnética en una cavidad en equilibrio térmico. Clásicamente, la física estadística y el electromagnetismo (ley de Rayleigh-Jeans) asumen que la energía térmica se reparte equitativamente en todos los modos vibracionales. Como el número de modos por unidad de frecuencia escala con $\nu^2$, la densidad de energía sería:
+$$ \rho_{RJ}(\nu, T) = \frac{8\pi \nu^2 k_B T}{c^3} $$
+Esto predice que un objeto a temperatura constante radiará una cantidad infinita de energía en altas frecuencias ($\nu \to \infty$), un absurdo físico bautizado como la "Catástrofe Ultravioleta".
+
+Para resolver esto, Max Planck propuso una hipótesis ad hoc (1900): los osciladores materiales en las paredes de la cavidad no pueden emitir o absorber energía de manera continua, sino en paquetes discretos o "cuantos". La energía de un oscilador de frecuencia $\nu$ se cuantiza en múltiplos enteros:
+$$ E_n = nh\nu, \quad n = 0, 1, 2, \dots $$
+donde $h$ es la constante de Planck ($6.62607015 \times 10^{-34} \text{ J}\cdot\text{s}$). Calculando el valor esperado estadístico de la energía de los osciladores usando la distribución de Boltzmann:
+$$ \langle E \rangle = \frac{\sum_{n=0}^{\infty} (nh\nu) e^{-nh\nu / k_B T}}{\sum_{n=0}^{\infty} e^{-nh\nu / k_B T}} = \frac{h\nu}{e^{h\nu / k_B T} - 1} $$
+Multiplicando por la densidad de modos $\frac{8\pi \nu^2}{c^3}$, surge la **Ley de Radiación de Planck**:
+$$ \rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \frac{1}{e^{h\nu / k_B T} - 1} $$
+Esta fórmula coincide perfectamente con los espectros observados y decae exponencialmente a altas frecuencias, resolviendo la divergencia clásica.
+
+```mermaid
+graph TD
+    A[Problema Clásico] --> B(Ley de Rayleigh-Jeans)
+    B -->|Predice| C[Divergencia Infinita de Energía a altas frecuencias]
+    A --> D(Hipótesis de Cuantización de Planck: E = nhv)
+    D -->|Estadística de Boltzmann| E[Energía Media Cuantizada]
+    E --> F[Ley de Planck]
+    F -->|Resuelve| G[Ajuste Experimental Perfecto]
+```
+
+### Efecto Fotoeléctrico y la Naturaleza Corpuscular de la Luz
+
+En 1905, Einstein fue más allá: la cuantización no era un artefacto de los osciladores de las paredes, sino una propiedad fundamental del campo electromagnético en sí. La luz está compuesta por partículas inseparables (luego llamadas fotones) de energía $E = h\nu$.
+
+En el efecto fotoeléctrico, cuando una placa de metal es iluminada, emite electrones. Clásicamente se esperaba que una luz más intensa aumentara la energía de estos electrones y que existiera un retardo temporal. Sin embargo, la energía de los electrones resultaba ser independiente de la intensidad, pero linealmente dependiente de la frecuencia. 
+Einstein modeló el proceso como colisiones uno-a-uno entre fotones y electrones. La conservación de la energía en la extracción de un electrón dicta:
+$$ h\nu = K_{\max} + \Phi $$
 $$ K_{\max} = h\nu - \Phi $$
-Donde $\Phi$ es la función de trabajo del metal y $h$ es la constante de Planck ($6.626 \times 10^{-34} \text{ J}\cdot\text{s}$).
+donde $\Phi$ (función de trabajo) es la energía mínima necesaria para arrancar un electrón, dependiente del material. Si $h\nu < \Phi$, ningún electrón es emitido, explicando el efecto del umbral de frecuencia.
 
-### Hipótesis de de Broglie
-De Broglie propuso que cualquier partícula con momento $p$ tiene asociada una longitud de onda $\lambda$:
-$$ \lambda = \frac{h}{p} = \frac{h}{mv} $$
-Esto introdujo formalmente la dualidad onda-partícula para electrones, protones y átomos enteros, confirmada más tarde por el experimento de difracción de electrones de Davisson y Germer (1927).
+### Dualidad Onda-Partícula y Momento del Fotón
+
+El fotón viaja a la velocidad de la luz $c$, por lo que su masa invariante es nula. Por relatividad especial, la relación energía-momento es $E^2 = (pc)^2 + (m_0 c^2)^2$. Para $m_0 = 0$:
+$$ E = pc \implies p = \frac{E}{c} = \frac{h\nu}{c} = \frac{h}{\lambda} $$
+Arthur Compton (1923) confirmó que los fotones portan este momento $p = h/\lambda$ colisionándolos con electrones y verificando la conservación del momento (Dispersión Compton):
+$$ \Delta \lambda = \lambda' - \lambda = \frac{h}{m_e c} (1 - \cos\theta) $$
+
+### Hipótesis de de Broglie: Ondas de Materia
+
+Si las ondas de luz presentan comportamiento de partícula (fotón), Louis de Broglie propuso (1924) la simetría opuesta: las partículas materiales (como los electrones) deberían exhibir comportamiento de onda. A toda partícula con momento $p$ se le asocia una onda de materia de longitud:
+$$ \lambda_{dB} = \frac{h}{p} = \frac{h}{mv} $$
+Esta relación revolucionaria fue confirmada cuando se observó difracción cristalina en haces de electrones (Davisson-Germer, 1927). A partir de la hipótesis de de Broglie, la condición de cuantización del átomo de Bohr ($mvr = n\hbar$) emerge naturalmente al exigir que la onda electrónica forme una onda estacionaria estable en la órbita atómica:
+$$ 2\pi r = n\lambda_{dB} = n\frac{h}{p} \implies pr = n\frac{h}{2\pi} = n\hbar $$
+Este salto conceptual prepararía el terreno para la formulación completa de la función de onda de Schrödinger.
 
 ---
 

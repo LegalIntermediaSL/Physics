@@ -9,35 +9,79 @@ Culminando con la publicación de su obra maestra *Philosophiæ Naturalis Princi
 
 ## 🧮 Desarrollo Teórico Profundo
 
-### 1. Las Tres Leyes de Newton
+La dinámica establece el nexo causal entre las interacciones físicas (modeladas como fuerzas) y el cambio en la cinemática de un cuerpo. Este formalismo se construye sobre ecuaciones diferenciales vectoriales de segundo orden.
 
-1. **Primera Ley (Ley de la Inercia)**:
-   *Todo cuerpo persevera en su estado de reposo o movimiento uniforme y rectilíneo a no ser que sea obligado a cambiar su estado por fuerzas impresas sobre él.*
-   Esto define empíricamente lo que es un **Sistema de Referencia Inercial**: un sistema donde la Primera Ley se cumple.
-   $$ \sum \vec{F} = 0 \implies \frac{d\vec{v}}{dt} = 0 $$
+### 1. Marcos de Referencia Inerciales y Postulados Newtonianos
 
-2. **Segunda Ley (Ley Fundamental de la Dinámica)**:
-   *El cambio de movimiento es directamente proporcional a la fuerza motriz impresa y ocurre según la línea recta a lo largo de la cual aquella fuerza se imprime.*
-   Originalmente Newton la formuló en términos del momento lineal ($\vec{p} = m\vec{v}$):
-   $$ \sum \vec{F} = \frac{d\vec{p}}{dt} $$
-   Para masa $m$ constante, esto se convierte en la célebre ecuación:
-   $$ \sum \vec{F} = m\vec{a} $$
-   Esta es una ecuación diferencial vectorial de segundo orden: $\vec{F}(\vec{r}, \vec{v}, t) = m\frac{d^2\vec{r}}{dt^2}$.
+La mecánica clásica requiere una formulación rigurosa de los marcos de referencia.
 
-3. **Tercera Ley (Acción y Reacción)**:
-   *Con toda acción ocurre siempre una reacción igual y contraria.*
-   Si el objeto $A$ ejerce una fuerza sobre el objeto $B$, el objeto $B$ ejerce una fuerza de igual magnitud pero dirección opuesta sobre $A$. Estas fuerzas nunca se cancelan entre sí porque actúan sobre **cuerpos diferentes**.
-   $$ \vec{F}_{A \to B} = -\vec{F}_{B \to A} $$
+**Primera Ley (Postulado del Sistema Inercial)**:
+Define la existencia de un conjunto privilegiado de observadores para los cuales una partícula libre (aislada de interacciones) exhibe movimiento rectilíneo uniforme.
+$$ \exists S \mid \text{si } \sum \vec{F} = \vec{0} \implies \ddot{\vec{r}} = \vec{0} $$
+Cualquier marco que se mueva con velocidad constante relativa a $S$ también es inercial (Transformaciones de Galileo).
 
-### 2. Fuerzas Comunes en Dinámica
+**Segunda Ley (Ecuación de Movimiento de Newton-Euler)**:
+Establece que la fuerza neta externa sobre un cuerpo puntual equivale a la tasa temporal de cambio de su momento lineal $\vec{p} = m\vec{v}$:
+$$ \sum_{i} \vec{F}_{i}(\vec{r}, \dot{\vec{r}}, t) = \frac{d\vec{p}}{dt} $$
+Para un sistema termodinámicamente cerrado donde la masa invariante de reposo $m$ es constante:
+$$ \sum_{i} \vec{F}_{i} = m\frac{d\vec{v}}{dt} = m\ddot{\vec{r}} $$
+Esta es una Ecuación Diferencial Ordinaria (EDO) vectorial de segundo orden. Resolver un problema de dinámica equivale matemáticamente al **problema de valor inicial** de Cauchy.
 
-- **Peso ($\vec{W}$)**: La fuerza de gravedad cerca de la superficie terrestre. $\vec{W} = m\vec{g}$.
-- **Fuerza Normal ($\vec{N}$)**: Fuerza de reacción perpendicular que ejerce una superficie. 
-- **Fuerza de Fricción ($\vec{f}$)**: Oposición al movimiento.
-  - Estática (impide el inicio del movimiento): $f_s \le \mu_s N$
-  - Cinética (durante el movimiento): $f_k = \mu_k N$
-- **Tensión ($\vec{T}$)**: Fuerza transmitida a lo largo de una cuerda inextensible.
-- **Fuerza Elástica (Ley de Hooke)**: Fuerza restauradora de un resorte. $\vec{F}_s = -k\vec{x}$.
+**Tercera Ley (Simetría de Interacciones y Conservación)**:
+Derivada de la homogeneidad del espacio, postula que las fuerzas son manifestaciones de interacciones binarias mutuas. Para partículas $j$ y $k$:
+$$ \vec{F}_{jk} = -\vec{F}_{kj} $$
+Además, el principio fuerte requiere que la fuerza esté alineada en la dirección que conecta ambas partículas $\vec{r}_{jk} \times \vec{F}_{jk} = \vec{0}$, lo que garantiza la conservación estricta del momento angular interno.
+
+```mermaid
+classDiagram
+    class DinamicaNewtoniana {
+        +Primera Ley: Inercia
+        +Segunda Ley: F = dp/dt
+        +Tercera Ley: Accion-Reaccion
+    }
+    class Fuerzas {
+        +Conservativas
+        +Disipativas
+        +Restricciones
+    }
+    DinamicaNewtoniana --> Fuerzas : Gobernada por
+```
+
+### 2. Taxonomía Tensorial y Vectorial de Fuerzas
+
+El término $\vec{F}$ en la Segunda Ley a menudo resulta de contribuciones fenomenológicas:
+
+**Fuerzas de Restricción (Holonómicas y no Holonómicas)**:
+Fuerzas como la tensión $\vec{T}$ o la Normal $\vec{N}$ no vienen dadas a priori, sino que se deducen a posteriori a partir de la cinemática restringida.
+Por ejemplo, la condición de deslizamiento sobre una superficie implícita $\Phi(x, y, z) = 0$ exige que la Normal sea paralela al gradiente escalar:
+$$ \vec{N} = \lambda \nabla \Phi $$
+donde el multiplicador de Lagrange $\lambda$ determina la magnitud de la fuerza normal requerida para mantener $\Phi=0$.
+
+**Fuerzas Viscosas y de Arrastre Aerodinámico**:
+La fricción fluida se modela generalmente con una expansión polinómica de la velocidad:
+$$ \vec{f}_{drag} = - \left( c_1 |\vec{v}| + c_2 |\vec{v}|^2 \right) \frac{\vec{v}}{|\vec{v}|} $$
+En régimen de Stokes (flujo laminar para números de Reynolds bajos), $c_1 \propto \eta R$ y domina el término lineal. En régimen turbulento, $c_2 \propto \rho A C_D$ y domina el término cuadrático, derivando la **velocidad terminal** asintótica de la EDO no lineal $\frac{dv}{dt} = g - \frac{c_2}{m}v^2$, cuya solución hiperbólica es:
+$$ v(t) = v_{\infty} \tanh\left( \frac{g t}{v_{\infty}} \right), \quad v_{\infty} = \sqrt{\frac{mg}{c_2}} $$
+
+**Ley de Fricción Seca de Coulomb-Amontons**:
+Modelada empíricamente como un par desigualdad-igualdad:
+- **Régimen Estático**: $|\vec{f}_s| \le \mu_s |\vec{N}|$. La fuerza se iguala a la solicitación activa paralela a la superficie para mantener $a=0$.
+- **Régimen Cinético**: $\vec{f}_k = - \mu_k |\vec{N}| \hat{v}_{tangencial}$. 
+
+### 3. Dinámica en Sistemas de Referencia No Inerciales
+
+Al resolver las ecuaciones desde un sistema girando con vector de velocidad angular instantánea $\vec{\Omega}$ y acelerando su origen, debemos agregar un marco de **fuerzas ficticias** derivadas de transformaciones del espacio de configuraciones:
+
+Derivando el vector posición en el marco giratorio, el operador derivada se transforma como $\left( \frac{d}{dt} \right)_{inercial} = \left( \frac{d}{dt} \right)_{rot} + \vec{\Omega} \times$.
+Al aplicarlo a $\vec{v}$ obtenemos la ecuación de Newton generalizada para el marco acelerado:
+$$ m\vec{a}_{rot} = \sum \vec{F}_{real} - m\vec{A}_0 - m\dot{\vec{\Omega}} \times \vec{r}' - 2m(\vec{\Omega} \times \vec{v}') - m\vec{\Omega} \times (\vec{\Omega} \times \vec{r}') $$
+Donde surgen intrínsecamente:
+1. Fuerzas de traslación $-m\vec{A}_0$
+2. Fuerza de Euler $-m\dot{\vec{\Omega}} \times \vec{r}'$
+3. Fuerza de Coriolis $-2m(\vec{\Omega} \times \vec{v}')$
+4. Fuerza Centrífuga $-m\vec{\Omega} \times (\vec{\Omega} \times \vec{r}')$
+
+Esto provee el marco analítico profundo de por qué un péndulo de Foucault precesa o cómo se forman los huracanes debido a la curvatura isobárica afectada por Coriolis.
 
 ---
 

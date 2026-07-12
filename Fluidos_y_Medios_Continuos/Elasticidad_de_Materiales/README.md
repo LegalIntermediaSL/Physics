@@ -5,23 +5,61 @@ La teoría de la elasticidad es la parte de la mecánica de medios continuos que
 En 1660, Robert Hooke descubrió empíricamente la ley que lleva su nombre ("Ut tensio, sic vis" - Como la extensión, así es la fuerza). Augustin-Louis Cauchy, en la década de 1820, formalizó el concepto de tensión (esfuerzo) y deformación mediante un formalismo tensorial que sentó las bases matemáticas de la mecánica de sólidos moderna.
 
 ## 🧮 Desarrollo Teórico Profundo
-**Ley de Hooke (1D):**
-El esfuerzo normal $ \sigma $ es proporcional a la deformación unitaria $ \epsilon $:
-$$ \sigma = E \epsilon $$
-donde $ \sigma = \frac{F}{A} $ (fuerza por unidad de área), $ \epsilon = \frac{\Delta L}{L_0} $ (cambio fraccional de longitud) y $ E $ es el Módulo de Young.
 
-**Coeficiente de Poisson ($ \nu $):**
-Mide el efecto de estrechamiento lateral cuando un material es estirado longitudinalmente:
-$$ \nu = -\frac{\epsilon_{\text{transversal}}}{\epsilon_{\text{longitudinal}}} $$
+La elasticidad es la propiedad de los materiales de sufrir deformaciones reversibles bajo la acción de fuerzas exteriores y de recuperar su geometría original cuando estas fuerzas cesan. Su formulación matemática requiere el uso del cálculo tensorial, dado que las fuerzas y las deformaciones tienen direccionalidad múltiple en un medio tridimensional.
 
-**Módulo de Cizalladura ($ G $) y Módulo Volumétrico ($ K $):**
-Para esfuerzos cortantes: $ \tau = G \gamma $, donde $ \gamma $ es la deformación angular.
-Para compresión uniforme: $ P = -K \frac{\Delta V}{V_0} $.
-Relación isotrópica: $ G = \frac{E}{2(1+\nu)} $ y $ K = \frac{E}{3(1-2\nu)} $.
+### 1. El Tensor de Esfuerzos de Cauchy ($\sigma_{ij}$)
 
-**Tensor de Esfuerzos de Cauchy ($ \sigma_{ij} $):**
-En 3D, el estado de esfuerzos se describe por una matriz simétrica $ 3 \times 3 $. La Ley de Hooke generalizada es:
-$ \sigma_{ij} = C_{ijkl} \epsilon_{kl} $ (donde $ C $ es el tensor de rigidez de cuarto orden).
+Consideremos un volumen elemental de material. La fuerza superficial $d\vec{F}$ que actúa sobre un elemento de área $d\vec{A} = \hat{n} dA$ (donde $\hat{n}$ es el vector normal) no es necesariamente paralela a $\hat{n}$. Se postula la existencia de un tensor de esfuerzos de segundo orden $\boldsymbol{\sigma}$ tal que:
+$$ d\vec{F} = \boldsymbol{\sigma} \cdot d\vec{A} \implies T_i^{(n)} = \sigma_{ij} n_j $$
+donde $T_i^{(n)}$ es el vector de tracción. El tensor $\sigma_{ij}$ tiene 9 componentes: 3 esfuerzos normales ($\sigma_{11}, \sigma_{22}, \sigma_{33}$) que tienden a cambiar el volumen, y 6 esfuerzos cortantes ($\sigma_{12}, \sigma_{13}, \dots$) que tienden a cambiar la forma. Por conservación del momento angular, en ausencia de pares internos, el tensor es simétrico: $\sigma_{ij} = \sigma_{ji}$.
+
+### 2. El Tensor de Deformaciones ($\epsilon_{ij}$)
+
+El campo de desplazamiento de un punto en el material es $\vec{u}(\vec{r})$. Si el desplazamiento no es uniforme, el material se deforma. En el régimen de pequeñas deformaciones (gradientes de desplazamiento pequeños, $|\nabla \vec{u}| \ll 1$), definimos el tensor de deformación infinitesimal $\boldsymbol{\epsilon}$ como la parte simétrica del gradiente de desplazamiento:
+$$ \epsilon_{ij} = \frac{1}{2} \left( \frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} \right) $$
+Al igual que el esfuerzo, $\epsilon_{ij}$ tiene componentes normales (cambios fraccionales de longitud) y cortantes (cambios en los ángulos entre elementos de línea ortogonales).
+
+### 3. Ley de Hooke Generalizada
+
+La relación constitutiva entre el estado de esfuerzos y el estado de deformaciones, asumiendo un comportamiento elástico lineal, está dada por la Ley de Hooke Generalizada:
+$$ \sigma_{ij} = C_{ijkl} \epsilon_{kl} $$
+donde $C_{ijkl}$ es el tensor de rigidez elástica de cuarto orden. Debido a las simetrías de los tensores $\boldsymbol{\sigma}$ y $\boldsymbol{\epsilon}$ y a la existencia de una función de energía de deformación escalar (hiperelasticidad), los 81 componentes independientes de $C_{ijkl}$ se reducen a 21 componentes independientes para el material anisotrópico más general (simetría triclínica).
+
+### 4. Materiales Isotrópicos
+
+Si las propiedades elásticas del material son las mismas en todas las direcciones (isotropía), los 21 parámetros se reducen a solo dos constantes independientes, habitualmente los parámetros de Lamé $\lambda$ y $\mu$. El tensor de rigidez toma la forma:
+$$ C_{ijkl} = \lambda \delta_{ij} \delta_{kl} + \mu (\delta_{ik} \delta_{jl} + \delta_{il} \delta_{jk}) $$
+Sustituyendo en la Ley de Hooke generalizada:
+$$ \sigma_{ij} = \lambda \epsilon_{kk} \delta_{ij} + 2\mu \epsilon_{ij} $$
+donde $\epsilon_{kk} = \nabla \cdot \vec{u}$ es la deformación volumétrica relativa (dilatación) y $\delta_{ij}$ es la delta de Kronecker.
+El parámetro $\mu$ es idéntico al **Módulo de Cizalladura** $G$. 
+
+En la ingeniería, es más común usar el **Módulo de Young** ($E$) y el **Coeficiente de Poisson** ($\nu$), que se relacionan con los parámetros de Lamé mediante:
+$$ E = \frac{\mu(3\lambda + 2\mu)}{\lambda + \mu} \quad \text{y} \quad \nu = \frac{\lambda}{2(\lambda + \mu)} $$
+Invirtiendo la relación isótropa obtenemos la ley de Hooke orientada a deformaciones:
+$$ \epsilon_{ij} = \frac{1}{E} \left[ (1+\nu)\sigma_{ij} - \nu \sigma_{kk} \delta_{ij} \right] $$
+
+### 5. Energía de Deformación y Ecuaciones de Navier-Cauchy
+
+La densidad de energía de deformación $W$ elástica acumulada es:
+$$ W = \frac{1}{2} \sigma_{ij} \epsilon_{ij} = \frac{1}{2} C_{ijkl} \epsilon_{ij} \epsilon_{kl} $$
+Al combinar las ecuaciones de equilibrio ($\sigma_{ij,j} + b_i = \rho \ddot{u}_i$) con la cinemática de la deformación y la Ley de Hooke isótropa, obtenemos las Ecuaciones de Elastodinámica (o Ecuaciones de Navier-Cauchy):
+$$ (\lambda + \mu) \nabla (\nabla \cdot \vec{u}) + \mu \nabla^2 \vec{u} + \vec{b} = \rho \frac{\partial^2 \vec{u}}{\partial t^2} $$
+Esta es la ecuación gobernante fundamental para simular campos de esfuerzos en el diseño estructural (Análisis de Elementos Finitos) y modelar ondas sísmicas ($P$ y $S$) en geofísica.
+
+```mermaid
+graph TD
+    A[Fuerzas Externas / Cargas] --> B(Tensor de Esfuerzos Cauchy σ)
+    C[Desplazamientos u] --> D(Tensor de Deformaciones ε)
+    B -.-> |Relación Constitutiva| E{Ley de Hooke Generalizada}
+    D -.-> |Relación Constitutiva| E
+    E --> F[Material Anisotrópico: 21 Constantes]
+    E --> G[Material Isotrópico: 2 Constantes E, ν]
+    G --> H[Ecuaciones de Navier-Cauchy]
+    H --> I[Resolución de Campos Estructurales FEA]
+    H --> J[Ondas Elásticas en Sólidos]
+```
 
 ## 🛠 Ejemplo Práctico
 **Problema:** Un cable de acero cilíndrico ($ E = 200 \text{ GPa} $) de $ 2 \text{ m} $ de longitud y $ 5 \text{ mm} $ de radio se usa para colgar una carga de $ 1000 \text{ kg} $. Calcula el esfuerzo longitudinal y cuánto se alarga el cable. ($ g = 9.8 \text{ m/s}^2 $).
