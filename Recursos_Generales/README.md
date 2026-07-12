@@ -4,6 +4,16 @@ Esta sección es una recopilación de herramientas esenciales, librerías comput
 
 El físico moderno no solo resuelve ecuaciones analíticamente en un papel, sino que se apoya en métodos numéricos, simulaciones y un vasto ecosistema de software y bases de datos abiertas.
 
+## Temas de Estudio
+
+Explora cada una de las siguientes subcarpetas:
+
+- ➗ **[Matemáticas para Física](./Matematicas_para_Fisica)**: Cálculo multivariable, álgebra lineal, ecuaciones diferenciales, variable compleja y transformadas.
+- 💻 **[Física Computacional](./Fisica_Computacional)**: Python científico, métodos numéricos, simulación, visualización y análisis reproducible.
+- 🧪 **[Laboratorio y Medición](./Laboratorio_y_Medicion)**: Incertidumbre experimental, calibración, adquisición de datos y comunicación de resultados.
+
+---
+
 ## 🛠 Herramientas Computacionales y de Software
 
 1. **Python (SciPy, NumPy, Matplotlib)**: El ecosistema estándar para análisis de datos y cálculo numérico en física.
@@ -22,6 +32,25 @@ El físico moderno no solo resuelve ecuaciones analíticamente en un papel, sino
 - [NASA ADS (Astrophysics Data System)](https://ui.adsabs.harvard.edu/): La base de datos definitiva de literatura sobre astronomía y física.
 - [PDG (Particle Data Group)](https://pdg.lbl.gov/): El compendio maestro sobre propiedades de partículas (masas, vidas medias, desintegraciones).
 - [PhET Interactive Simulations](https://phet.colorado.edu/es/simulations/filter?subjects=physics): Simulaciones interactivas gratuitas de la Universidad de Colorado Boulder. Excelentes para visualizar conceptos desde mecánica básica hasta cuántica.
+
+---
+
+## 🧭 Rutas Sugeridas
+
+### Si estás empezando física universitaria
+1. Refuerza **cálculo** y **álgebra lineal** en [Matemáticas para Física](./Matematicas_para_Fisica).
+2. Usa después los simuladores y cursos introductorios del resto del repositorio.
+3. Empieza a resolver problemas con apoyo computacional simple en [Física Computacional](./Fisica_Computacional).
+
+### Si quieres hacer simulaciones y análisis de datos
+1. Domina arrays, gráficos y notebooks en [Física Computacional](./Fisica_Computacional).
+2. Repasa ecuaciones diferenciales y Fourier en [Matemáticas para Física](./Matematicas_para_Fisica).
+3. Aplica esas herramientas a mecánica, electromagnetismo, cuántica o cosmología.
+
+### Si te interesa la física experimental
+1. Trabaja conceptos de error e incertidumbre en [Laboratorio y Medición](./Laboratorio_y_Medicion).
+2. Complementa con teoría en la rama temática correspondiente.
+3. Usa herramientas computacionales para análisis, ajuste y visualización de datos.
 
 ---
 
