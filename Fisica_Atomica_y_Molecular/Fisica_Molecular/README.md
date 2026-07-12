@@ -58,12 +58,24 @@ $$ E = E_{\text{elec}} + E_{\text{vib}} + E_{\text{rot}} $$
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos
-1. [Molecular Physics - University of Manchester (Coursera)](https://www.coursera.org/)
-2. [Introduction to Molecular Spectroscopy - NPTEL](https://nptel.ac.in)
-3. [Physical Chemistry: Molecular Structure - MIT OCW](https://ocw.mit.edu)
+1. [Molecular Physics - University of Manchester (Coursera)](https://www.coursera.org/learn/spectroscopy)
+2. [Introduction to Molecular Spectroscopy - NPTEL](https://nptel.ac.in/courses/104104084)
+3. [Physical Chemistry: Molecular Structure - MIT OCW](https://ocw.mit.edu/courses/5-61-physical-chemistry-fall-2017/)
+4. [Quantum Chemistry - Stanford (edX)](https://www.edx.org/course/quantum-mechanics-of-molecular-structures)
+5. [Atoms and Molecules - Coursera](https://www.coursera.org/specializations/quantum-mechanics-atoms-molecules)
 
 ### Artículos y Simulaciones
-1. Born, M., & Oppenheimer, R. (1927). *Zur Quantentheorie der Molekeln*. Annalen der Physik.
-2. Heitler, W., & London, F. (1927). *Wechselwirkung neutraler Atome und homöopolare Bindung nach der Quantenmechanik*.
+1. [Born, M., & Oppenheimer, R. (1927). *Zur Quantentheorie der Molekeln*. Annalen der Physik.](https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.19273892002)
+2. [Heitler, W., & London, F. (1927). *Wechselwirkung neutraler Atome und homöopolare Bindung nach der Quantenmechanik*.](https://link.springer.com/article/10.1007/BF01397394)
 3. [PhET Simulation: Molecule Shapes](https://phet.colorado.edu/en/simulations/molecule-shapes)
-4. [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/) - Datos espectroscópicos moleculares.
+4. [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/)
+5. [Mulliken, R. S. (1932). *Electronic Structures of Polyatomic Molecules and Valence*. Phys. Rev.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.40.55)
+6. [Pauling, L. (1931). *The Nature of the Chemical Bond*. J. Am. Chem. Soc.](https://pubs.acs.org/doi/abs/10.1021/ja01355a027)
+7. [PhET Simulation: Molecule Polarity](https://phet.colorado.edu/en/simulations/molecule-polarity)
+8. [PhET Simulation: Atomic Interactions](https://phet.colorado.edu/en/simulations/atomic-interactions)
+
+### 📖 Referencias Útiles y Bibliografía
+- [Herzberg, G. (1950). *Molecular Spectra and Molecular Structure*. D. Van Nostrand Company.](https://www.springer.com/gp/book/9780894642685)
+- [Atkins, P., & Friedman, R. (2011). *Molecular Quantum Mechanics*. Oxford University Press.](https://global.oup.com/academic/product/molecular-quantum-mechanics-9780199541423)
+- [Bransden, B. H., & Joachain, C. J. (2003). *Physics of Atoms and Molecules*. Pearson Education.](https://www.pearson.com/en-us/subject-catalog/p/physics-of-atoms-and-molecules/P200000005739)
+- [McHale, J. L. (2017). *Molecular Spectroscopy*. CRC Press.](https://www.routledge.com/Molecular-Spectroscopy/McHale/p/book/9781466586581)

@@ -48,11 +48,25 @@ Dado que $|\psi(x)|^2$ solo depende de la coordenada espacial $x$, la densidad d
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-* **MIT 8.04 Quantum Physics I:** Clases sobre la construcción heurística de la ecuación de Schrödinger.
-* **Stanford - Quantum Mechanics:** Conferencias de Susskind enfocadas en la evolución temporal y el operador Hamiltoniano.
-* **Yale PHYS 201:** Principios Básicos de la Mecánica Cuántica (Prof. Ramamurti Shankar).
+1. [MIT 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Clases detalladas sobre la construcción heurística y motivación de la ecuación de Schrödinger a partir de las ondas de materia de de Broglie.
+2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Conferencias enfocadas en la evolución temporal, el operador Hamiltoniano y cómo se relaciona la ecuación de onda con las matrices.
+3. [Yale PHYS 201 (Ramamurti Shankar)](https://oyc.yale.edu/physics/phys-201): Principios Básicos de la Mecánica Cuántica; una introducción amena y rigurosa al formalismo ondulatorio.
+4. [NPTEL Quantum Mechanics I (Prof. S. Lakshmi Bala)](https://nptel.ac.in/courses/115106066): Lecciones que detallan la derivación matemática y las propiedades de la ecuación diferencial.
+5. [Coursera - Exploring Quantum Physics (University of Maryland)](https://www.coursera.org/learn/quantum-physics): Incluye lecciones sobre las implicaciones del uso de la ecuación de Schrödinger y sus soluciones en sistemas físicos.
+6. [Oxford University - Quantum Mechanics Lectures (James Binney)](https://podcasts.ox.ac.uk/series/quantum-mechanics): Excelente exposición de la teoría detrás de la ecuación independiente y dependiente del tiempo.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **PhET Interactive Simulations:** *Quantum Wave Interference* (Para visualizar ondas probabilísticas).
-* **Visual Quantum Mechanics (VQM):** Simuladores de evolución temporal de paquetes de ondas.
-* **Wikipedia:** [Ecuación de Schrödinger](https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Schr%C3%B6dinger) (Lectura matemática profunda de su derivación y simetrías).
+1. **PhET Interactive Simulations:** [Quantum Wave Interference](https://phet.colorado.edu/en/simulations/quantum-wave-interference) - Para visualizar ondas probabilísticas, su propagación e interferencia.
+2. **Visual Quantum Mechanics (VQM):** [VQM Project](https://phys.ksu.edu/vqm/) - Simuladores interactivos de la evolución temporal de paquetes de ondas.
+3. **Wikipedia:** [Ecuación de Schrödinger](https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Schr%C3%B6dinger) - Lectura matemática profunda sobre su derivación, justificación y simetrías.
+4. **HyperPhysics:** [The Schrödinger Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/schr.html) - Resúmenes visuales, fórmulas directas y aplicaciones simples en distintos potenciales.
+5. **Wolfram Demonstrations Project:** [Time Evolution of a Wavepacket](https://demonstrations.wolfram.com/TimeEvolutionOfAWavepacket/) - Herramientas analíticas para observar cómo se dispersa una función de onda en el tiempo.
+6. **Scholarpedia:** [Schrödinger Equation](http://www.scholarpedia.org/article/Schrodinger_equation) - Artículo de revisión por pares que examina la historia y formulación moderna de la ecuación.
+7. **Falstad Quantum 1D Applet:** [Quantum Mechanics 1D](http://www.falstad.com/qm1d/) - Simulación en el navegador (muy recomendable) que permite modificar potenciales al vuelo y ver la evolución temporal real.
+8. **Article:** [On the Physical Interpretation of the Kinematics and Dynamics of Quantum Theory (Max Born)](https://link.springer.com/article/10.1007/BF01327159) - Lectura clásica sobre la interpretación probabilística de la función de onda $\Psi$.
+
+### 📖 Referencias Útiles y Bibliografía
+1. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulos 1 y 2). Una exposición muy clara sobre la función de onda y la ecuación independiente del tiempo.
+2. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulo 4). Profundiza en los postulados y conecta elegantemente con el formalismo matemático de postulados.
+3. **Libro**: [Quantum Mechanics - Claude Cohen-Tannoudji](https://www.wiley.com/en-us/Quantum+Mechanics%2C+Volume+1%3A+Basic+Concepts%2C+Tools%2C+and+Applications%2C+2nd+Edition-p-9783527345533) (Vol. 1, Capítulo III). Presenta una derivación detallada y extensiva de las propiedades matemáticas y físicas.
+4. **Libro**: [Modern Quantum Mechanics - J.J. Sakurai](https://www.cambridge.org/highereducation/books/modern-quantum-mechanics/144AE26BDEFB9A7CB06C0CD0696D12CA) (Capítulo 2). Enfoque superior que deriva la ecuación de Schrödinger a partir del operador de evolución temporal.

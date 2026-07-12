@@ -60,12 +60,31 @@ Para las personas en la Tierra, han transcurrido aproximadamente 8 años y 4 mes
 ---
 
 ## 📚 Recursos Específicos
-### 🎓 Cursos y Clases Recomendadas
-- **Stanford University: Special Relativity (Leonard Susskind)** - Clases magistrales profundas y accesibles.
-- **MIT OpenCourseWare: 8.20 Introduction to Special Relativity** - Curso completo con tareas y exámenes.
-- **Yale Courses: Fundamentals of Physics (Ramamurti Shankar)** - Módulo final dedicado a una excelente introducción a la relatividad.
 
-### 📝 Artículos e Interactivos Interesantes
-- [Artículo original de Einstein (1905) traducido](http://www.fourmilab.ch/etexts/einstein/specrel/www/) - "On the Electrodynamics of Moving Bodies".
-- [PhET: Viaje espacial relativista](https://phet.colorado.edu/) - Simuladores conceptuales del efecto Doppler relativista y simultaneidad.
-- [Wikipedia: Minkowski Space](https://en.wikipedia.org/wiki/Minkowski_space) - Excelente diagrama de los conos de luz y causalidad.
+### 🎓 Cursos y Clases Recomendadas (5-7 Recomendados)
+1. **[Stanford University: Special Relativity (Leonard Susskind)](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring)** - Clases magistrales profundas enfocadas en la derivación rigurosa de la métrica de Minkowski y el espacio-tiempo.
+2. **[MIT OpenCourseWare: 8.20 Introduction to Special Relativity](https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2005/)** - Curso universitario completo del Independent Activities Period (IAP) con tareas, notas y exámenes.
+3. **[Yale Courses: Fundamentals of Physics (Ramamurti Shankar)](https://oyc.yale.edu/physics/phys-200)** - Las últimas conferencias del curso brindan una de las introducciones más intuitivas a la cinemática relativista.
+4. **[Coursera: Understanding Einstein: The Special Theory of Relativity](https://www.coursera.org/learn/einstein-relativity)** - Curso de Stanford enfocado en desmitificar los conceptos físicos y filosóficos subyacentes.
+5. **[World Science U: Special Relativity (Brian Greene)](https://www.worldscienceu.com/courses/special-relativity-primer/)** - Módulos altamente interactivos llenos de animaciones visuales para comprender dilatación temporal y simultaneidad.
+6. **[Khan Academy: Special Relativity](https://es.khanacademy.org/science/physics/special-relativity)** - Explicaciones sencillas paso a paso, ideales para quienes no tienen conocimientos profundos de cálculo.
+7. **[Perimeter Institute: Special Relativity](https://perimeterinstitute.ca/training/perimeter-scholars-international/psi-lectures)** - Charlas para estudiantes de física teórica que buscan transitar hacia mecánica cuántica relativista.
+
+### 📝 Artículos y Simulaciones Interesantes (8-10 Recomendados)
+1. **Documento Original**: [On the Electrodynamics of Moving Bodies (1905)](http://www.fourmilab.ch/etexts/einstein/specrel/www/) - La traducción clásica al inglés del artículo de Einstein.
+2. **Simulador**: [PhET Viaje Espacial Relativista](https://phet.colorado.edu/en/simulations/relativity) - Explora la dilatación del tiempo y la contracción de Lorentz interactivamente.
+3. **Simulador**: [A Slower Speed of Light (MIT Game Lab)](http://gamelab.mit.edu/games/a-slower-speed-of-light/) - Juego que simula los efectos visuales de moverse cerca de la velocidad de la luz (efecto Doppler, aberración).
+4. **Simulador**: [Test of Relativity (Visualizing Relativistic Effects)](https://a-way-to-go.com/) - Visualización de la deformación óptica a altas velocidades.
+5. **Wikipedia**: [Minkowski Space](https://en.wikipedia.org/wiki/Minkowski_space) - Fundamental para entender los diagramas de espacio-tiempo y la causalidad mediante conos de luz.
+6. **Scholarpedia**: [Special Relativity](http://www.scholarpedia.org/article/Special_relativity) - Revisión profunda revisada por pares sobre la estructura matemática de la teoría.
+7. **Stanford Encyclopedia**: [Conventionality of Simultaneity](https://plato.stanford.edu/entries/spacetime-convensimul/) - Discusión filosófica sobre la sincronización de relojes de Poincaré-Einstein.
+8. **MinutePhysics**: [Special Relativity Series (YouTube)](https://www.youtube.com/playlist?list=PL3z817C-p6788-bZ8s8C3lJ78vA1tK7_S) - Explicaciones animadas cortas que aclaran las famosas paradojas de la relatividad.
+9. **FísicaLab**: [Postulados y Cinemática Relativista](https://www.fisicalab.com/tema/relatividad-especial) - Ejercicios resueltos y teoría para nivel bachillerato.
+10. **HyperPhysics**: [Relativistic Energy and Momentum](http://hyperphysics.phy-astr.gsu.edu/hbase/relativ/releng.html) - Esquemas conceptuales sobre $E=mc^2$ y colisiones.
+
+### 📖 Referencias Útiles y Bibliografía
+1. **[Edwin F. Taylor & John Archibald Wheeler - Spacetime Physics](https://www.eftaylor.com/spacetimephysics/)** - Probablemente el mejor libro de introducción a la relatividad especial, famoso por su claridad pedagógica y uso de "fábulas" físicas.
+2. **[A.P. French - Special Relativity (M.I.T. Introductory Physics Series)](https://archive.org/details/specialrelativit0000fren)** - Un clásico riguroso utilizado durante décadas para enseñar cinemática y dinámica relativista.
+3. **[Wolfgang Rindler - Introduction to Special Relativity](https://global.oup.com/academic/product/introduction-to-special-relativity-9780198539520)** - Texto estándar y más formal, ideal para profundizar en cuadrivectores y tensores.
+4. **[David J. Griffiths - Introduction to Electrodynamics](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/40B7E0D3528A32A17EFB738C2ACAEFDE)** - El capítulo 12 es famoso por presentar cómo la relatividad especial unifica la electricidad y el magnetismo en el tensor electromagnético.
+5. **[Robert Resnick - Introduction to Special Relativity](https://archive.org/details/introductiontosp0000resn)** - Una presentación clara que conecta con la física general y ofrece excelentes problemas de final de capítulo.

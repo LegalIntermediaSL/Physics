@@ -62,9 +62,23 @@ $$ \Lambda = \frac{4\pi}{3} n_e \lambda_D^3 \gg 1 $$
 1. [Plasma Physics - Part 1 (MIT OCW)](https://ocw.mit.edu)
 2. [Introduction to Plasmas (Coursera/Princeton)](https://www.coursera.org)
 3. [Fundamentals of Plasmas - NPTEL](https://nptel.ac.in)
+4. [Plasma Physics Fundamentals - EPFL](https://www.epfl.ch)
+5. [Basic Plasma Phenomena - Summer School PPPL](https://www.pppl.gov)
+6. [Introduction to High-Temperature Plasmas - UTokyo](https://www.u-tokyo.ac.jp)
 
 ### Artículos y Simulaciones
-1. Chen, F. F., *Introduction to Plasma Physics*. (Libro texto fundamental).
-2. [NRL Plasma Formulary](https://www.nrl.navy.mil/) - Referencia de ecuaciones.
-3. Langmuir, I. (1928). *Oscillations in Ionized Gases*. Proc. Natl. Acad. Sci.
-4. [PhET Interactive Simulations - Charges and Fields](https://phet.colorado.edu/en/simulations/charges-and-fields)
+1. [Langmuir, I. (1928). *Oscillations in Ionized Gases*. Proc. Natl. Acad. Sci.](https://doi.org/10.1073/pnas.14.8.627)
+2. [Tonks, L., & Langmuir, I. (1929). *A General Theory of the Plasma of an Arc*. Physical Review.](https://doi.org/10.1103/PhysRev.33.195)
+3. [Vlasov, A. A. (1938). *On Vibration Properties of Electron Gas*. Soviet Physics.](https://doi.org/10.1070/PU1968v010n06ABEH003709)
+4. [Landau, L. D. (1946). *On the Vibrations of the Electronic Plasma*. Journal of Physics.](https://doi.org/10.1007/978-1-4615-7792-7_11)
+5. [Debye, P., & Hückel, E. (1923). *The theory of electrolytes*. Physikalische Zeitschrift.](https://gallica.bnf.fr/ark:/12148/bpt6k15367j)
+6. [NRL Plasma Formulary](https://www.nrl.navy.mil/) - Fórmulas de Plasma Fundamentales.
+7. [PhET Interactive Simulations - Charges and Fields](https://phet.colorado.edu/en/simulations/charges-and-fields) - Simulación.
+8. [PlasmaPy](https://www.plasmapy.org/) - Paquete de Python para simulaciones básicas de plasmas.
+9. [BOUT++ Framework](https://boutproject.github.io/) - Simulaciones fluidas 3D.
+
+### 📖 Referencias Útiles y Bibliografía
+1. [Chen, F. F. (1984). *Introduction to Plasma Physics and Controlled Fusion*. Springer.](https://link.springer.com/book/10.1007/978-3-319-22309-4)
+2. [Bittencourt, J. A. (2004). *Fundamentals of Plasma Physics*. Springer.](https://link.springer.com/book/10.1007/978-1-4757-4030-1)
+3. [Goldston, R. J., & Rutherford, P. H. (1995). *Introduction to Plasma Physics*. CRC Press.](https://www.routledge.com/Introduction-to-Plasma-Physics/Goldston-Rutherford/p/book/9780750301831)
+4. [Inan, U. S., & Gołkowski, M. (2011). *Principles of Plasma Physics for Engineers and Scientists*. Cambridge University Press.](https://www.cambridge.org/core/books/principles-of-plasma-physics-for-engineers-and-scientists/8636E21B66D673DAA792E5B9423C3502)

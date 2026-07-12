@@ -59,12 +59,27 @@ Para un modelo de densidad constante, $\rho(r) = \rho_0 = \frac{M}{(4/3)\pi R^3}
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-- **Yale Courses: ASTR 160 Frontiers and Controversies in Astrophysics** - Cubre exoplanetas, agujeros negros y evolución estelar.
-- **Ohio State University: Astronomy 1144** - Notas de clase excepcionales (Richard Pogge) sobre estrellas.
-- **Coursera/University of Tokyo: From the Big Bang to Dark Energy** - Excelente módulo de física estelar.
+1. **[Yale Courses: ASTR 160 Frontiers and Controversies in Astrophysics](https://oyc.yale.edu/astronomy/astr-160)** - Profundización impartida por Charles Bailyn, cubriendo evolución estelar, agujeros negros y exoplanetas.
+2. **[Ohio State University: Astronomy 1144 / 871 (Richard Pogge)](http://www.astronomy.ohio-state.edu/~pogge/Ast871/)** - Notas de clase excepcionales que detallan de manera accesible pero rigurosa la estructura y vida estelar.
+3. **[Coursera: Astronomy: Exploring Time and Space](https://www.coursera.org/learn/astro)** - (Universidad de Arizona) El módulo dedicado a estrellas y su clasificación es altamente ilustrativo.
+4. **[MIT 8.284 Modern Astrophysics](https://ocw.mit.edu/courses/8-284-modern-astrophysics-spring-2006/)** - Clases y materiales disponibles vía OCW que cubren las ecuaciones de equilibrio hidrostático y transporte radiativo.
+5. **[ANU - Astrophysics: Cosmology & Astrophysics (edX)](https://www.edx.org/micromasters/anu-astrophysics)** - Impartido por Paul Francis y Brian Schmidt, con énfasis en supernovas, remanentes estelares y métodos observacionales.
 
 ### 📝 Artículos e Interactivos Interesantes
-- [Naap Labs: Hertzsprung-Russell Diagram Explorer](https://astro.unl.edu/naap/hr/hr_background1.html) - Simulador interactivo para la evolución estelar.
-- [Wikipedia: Stellar evolution](https://en.wikipedia.org/wiki/Stellar_evolution)
-- [Artículo original de Hans Bethe (1939)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.55.434) - Energy Production in Stars.
+1. [Naap Labs: Hertzsprung-Russell Diagram Explorer](https://astro.unl.edu/naap/hr/hr_background1.html) - Magnífico simulador interactivo de la Universidad de Nebraska para entender cómo varían luminosidad, temperatura y radio a lo largo de la evolución.
+2. [Naap Labs: Eclipsing Binary Simulator](https://astro.unl.edu/naap/ebs/ebs.html) - Herramienta interactiva para entender cómo se miden empíricamente las masas estelares.
+3. [Artículo original de Hans Bethe (1939)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.55.434) - "Energy Production in Stars", la publicación histórica que desentrañó la fusión nuclear (ciclo CNO y p-p).
+4. [Scholarpedia: Stellar Evolution](http://www.scholarpedia.org/article/Stellar_evolution) - Resumen detallado sobre las diferentes etapas vitales (secuencia principal, gigantes rojas, nebulosas planetarias).
+5. [The MESA Project (Modules for Experiments in Stellar Astrophysics)](https://docs.mesastar.org/) - Código open-source de uso profesional para simular la evolución estelar; incluye excelentes tutoriales.
+6. [Chandra X-ray Observatory: Supernovas & Supernova Remnants](https://chandra.harvard.edu/xray_sources/supernovas.html) - Galería, datos y artículos sobre las espectaculares muertes de estrellas masivas.
+7. [Hubble Site: Stars](https://hubblesite.org/science/stars-and-nebulas) - Artículos y observaciones directas de discos protoplanetarios y enanas blancas.
+8. [Wikipedia: Stellar nucleosynthesis](https://en.wikipedia.org/wiki/Stellar_nucleosynthesis) - Cómo los elementos de la tabla periódica se forjan dentro de los núcleos estelares.
+
+### 📖 Referencias Útiles y Bibliografía
+- **["An Introduction to Modern Astrophysics" - Bradley W. Carroll y Dale A. Ostlie (El "BOB")](https://www.cambridge.org/highereducation/books/an-introduction-to-modern-astrophysics/8C2B3C2B3A6C5B3E6B4A6C8D8E9F6B5C)**: El texto estándar definitivo de astrofísica a nivel universitario. Tiene un extenso volumen dedicado a física estelar.
+- **["Stellar Structure and Evolution" - Rudolf Kippenhahn, Alfred Weigert, y Achim Weiss](https://link.springer.com/book/10.1007/978-3-642-30304-3)**: El clásico absoluto para la teoría avanzada de interiores estelares y el modelado computacional.
+- **["Black Holes, White Dwarfs, and Neutron Stars" - Stuart L. Shapiro y Saul A. Teukolsky](https://onlinelibrary.wiley.com/doi/book/10.1002/9783527617661)**: La biblia de la física de objetos compactos y los remanentes finales del colapso estelar.
+- **["Evolution of Stars and Stellar Populations" - Maurizio Salaris y Santi Cassisi](https://onlinelibrary.wiley.com/doi/book/10.1002/047009219X)**: Excelente recurso para entender tanto estrellas individuales como cúmulos estelares.
+- **["Astrophysics in a Nutshell" - Dan Maoz](https://press.princeton.edu/books/hardcover/9780691164793/astrophysics-in-a-nutshell)**: Excelente para repasar rápidamente de manera concisa pero profunda los principios físicos clave detrás del funcionamiento del sol y otras estrellas.

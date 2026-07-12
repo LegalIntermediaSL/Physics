@@ -56,23 +56,31 @@ Explora cada una de las siguientes subcarpetas:
 
 ## 📚 Recursos y Cursos Recomendados (Multidisciplinares)
 
-### Cursos Online (5+)
-1. [Feynman Lectures on Physics (Sitio Oficial)](https://www.feynmanlectures.caltech.edu/): No es un curso en video, pero es la serie de lecturas más famosa de la historia de la física, disponible gratis en HTML.
+### Cursos Online
+1. [Feynman Lectures on Physics (Sitio Oficial)](https://www.feynmanlectures.caltech.edu/): La serie de lecturas más famosa de la historia de la física, disponible gratis en HTML.
 2. [MIT OpenCourseWare - Physics](https://ocw.mit.edu/search/?d=Physics): Todo el currículo de pregrado del MIT de forma gratuita.
-3. [Susskind's The Theoretical Minimum](https://theoreticalminimum.com/courses): Una serie de cursos diseñados para enseñar todo lo necesario ("el mínimo teórico") para empezar a hacer física de verdad.
+3. [Susskind's The Theoretical Minimum](https://theoreticalminimum.com/courses): Serie de cursos para enseñar "el mínimo teórico" para hacer física.
 4. [Perimeter Institute Recorded Seminars (PIRSA)](https://pirsa.org/): Colección masiva de seminarios y minicursos avanzados sobre física teórica.
-5. [edX - Physics Courses](https://www.edx.org/learn/physics): Plataforma con cursos de Harvard, MIT, y Caltech que abarcan desde introducción hasta cuántica avanzada.
-6. [Khan Academy - Physics](https://es.khanacademy.org/science/physics): La mejor plataforma para aprender los fundamentos desde cero (nivel escuela secundaria/primer año de universidad).
+5. [edX - Physics Courses](https://www.edx.org/learn/physics): Cursos de Harvard, MIT, y Caltech (introducción hasta cuántica).
+6. [Khan Academy - Physics](https://es.khanacademy.org/science/physics): Plataforma ideal para aprender los fundamentos desde cero.
+7. [Coursera - Physics Courses](https://www.coursera.org/browse/physical-science-and-engineering/physics-and-astronomy): Colección de cursos de múltiples universidades cubriendo todas las áreas de la física.
+8. [Stanford - Leonard Susskind's Courses](https://www.youtube.com/playlist?list=PLQrxduI9Pe85B_gsA9JjG-uP7bM43tV6J): Grabaciones en YouTube de los cursos magistrales de Susskind en Stanford.
+9. [Yale - Fundamentals of Physics](https://oyc.yale.edu/physics/phys-200): Curso introductorio impartido por el profesor Ramamurti Shankar.
+10. [ICTP - Diploma Programme Courses](https://www.ictp.it/): Cursos de posgrado en física de altas energías, materia condensada y matemáticas aplicadas.
 
-### Artículos y Textos de Referencia (10+)
-1. **Colección Completa**: "Feynman Lectures on Physics" (Vol 1, 2 y 3) - Richard Feynman, Robert Leighton, Matthew Sands.
-2. **Libro General**: "Física Universitaria" - Sears y Zemansky (Excelente referencia general).
-3. **Libro General**: "Fundamentos de Física" - Halliday, Resnick y Walker.
-4. **Matemáticas para Físicos**: "Mathematical Methods for Physicists" - Arfken y Weber.
-5. **Matemáticas para Físicos**: "Mathematical Methods in the Physical Sciences" - Mary L. Boas.
-6. **Programación**: "Computational Physics" - Mark Newman.
-7. **Historia/Divulgación**: "El carácter de la ley física" - Richard Feynman.
-8. **Historia/Divulgación**: "El universo elegante" - Brian Greene (Buena introducción histórica a la unificación y cuerdas).
-9. **Referencia/Datos**: "The CRC Handbook of Chemistry and Physics" (El estándar histórico de propiedades físicas).
-10. **Artículo Clásico**: "The Unreasonable Effectiveness of Mathematics in the Natural Sciences" - Eugene Wigner. (Lectura obligatoria para cualquier estudiante de física empírica).
-11. **Revista de Revisión**: [Reviews of Modern Physics (RMP)](https://journals.aps.org/rmp/): Publica artículos profundos de revisión sobre el estado del arte en todos los subcampos de la física.
+### Artículos y Textos de Referencia
+1. **Colección Completa**: ["Feynman Lectures on Physics" (Vol 1, 2 y 3)](https://www.feynmanlectures.caltech.edu/) - Richard Feynman, Robert Leighton, Matthew Sands.
+2. **Libro General**: ["Física Universitaria" - Sears y Zemansky](https://www.pearson.com/store/p/fisica-universitaria-volumen-1/P100002875159) (Excelente referencia general).
+3. **Libro General**: ["Fundamentos de Física" - Halliday, Resnick y Walker](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+12th+Edition-p-9781119773511).
+4. **Física Moderna**: ["Physics for Scientists and Engineers with Modern Physics"](https://www.cengage.com/c/physics-for-scientists-and-engineers-with-modern-physics-10e-serway/9781337553292/) - Serway y Jewett.
+5. **Matemáticas para Físicos**: ["Mathematical Methods for Physicists"](https://www.elsevier.com/books/mathematical-methods-for-physicists/arfken/978-0-12-384654-9) - Arfken y Weber.
+6. **Matemáticas para Físicos**: ["Mathematical Methods in the Physical Sciences"](https://www.wiley.com/en-us/Mathematical+Methods+in+the+Physical+Sciences%2C+3rd+Edition-p-9780471198260) - Mary L. Boas.
+7. **Programación**: ["Computational Physics"](http://www-personal.umich.edu/~mejn/cp/) - Mark Newman.
+8. **Historia/Divulgación**: ["El carácter de la ley física"](https://mitpress.mit.edu/9780262533416/the-character-of-physical-law/) - Richard Feynman.
+9. **Historia/Divulgación**: ["El universo elegante"](https://www.penguinrandomhouse.com/books/62740/the-elegant-universe-by-brian-greene/) - Brian Greene.
+10. **Historia/Divulgación**: ["Breve historia del tiempo"](https://www.penguinrandomhouse.com/books/77381/a-brief-history-of-time-by-stephen-hawking/) - Stephen Hawking.
+11. **Referencia/Datos**: ["The CRC Handbook of Chemistry and Physics"](https://hbcp.chemnetbase.com/).
+12. **Artículo Clásico**: ["The Unreasonable Effectiveness of Mathematics in the Natural Sciences"](https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf) - Eugene Wigner.
+13. **Artículo Clásico**: ["More is Different" - P.W. Anderson](https://science.sciencemag.org/content/177/4047/393).
+14. **Artículo Clásico**: ["Asymptotically Free Gauge Theories"](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.8.3633) - David Gross & Frank Wilczek.
+15. **Revista de Revisión**: [Reviews of Modern Physics (RMP)](https://journals.aps.org/rmp/): Publica artículos profundos de revisión sobre el estado del arte en todos los subcampos de la física.

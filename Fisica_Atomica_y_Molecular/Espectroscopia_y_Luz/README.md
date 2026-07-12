@@ -55,12 +55,26 @@ El nivel original se desdobla en 3 niveles, separados por $5.79 \times 10^{-5} \
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos
-1. [Light and Matter - MIT OCW](https://ocw.mit.edu)
-2. [Spectroscopy - Coursera](https://www.coursera.org)
-3. [Atomic and Optical Physics - MIT (YouTube)](https://www.youtube.com)
+1. [Light and Matter - MIT OCW](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/)
+2. [Spectroscopy - Coursera](https://www.coursera.org/learn/spectroscopy)
+3. [Atomic and Optical Physics - MIT (YouTube)](https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhZZpaQTOuFI7)
+4. [Quantum Optics - edX](https://www.edx.org/course/quantum-optics)
+5. [Molecular Spectroscopy - University of Manchester](https://www.coursera.org/learn/spectroscopy)
 
 ### Artículos y Simulaciones
-1. Einstein, A. (1916). *Strahlungs-emission und -absorption nach der Quantentheorie*.
+1. [Einstein, A. (1916). *Strahlungs-emission und -absorption nach der Quantentheorie*.](https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.19163561702)
 2. [PhET Simulation: Molecules and Light](https://phet.colorado.edu/en/simulations/molecules-and-light)
 3. [PhET Simulation: Lasers](https://phet.colorado.edu/en/simulations/lasers)
-4. Townes, C. H., & Schawlow, A. L. (1955). *Microwave Spectroscopy*. McGraw-Hill.
+4. [Townes, C. H., & Schawlow, A. L. (1955). *Microwave Spectroscopy*. McGraw-Hill.](https://store.doverpublications.com/048661798x.html)
+5. [Bloembergen, N. (1982). *Nonlinear optics and spectroscopy*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.54.685)
+6. [Schawlow, A. L. (1982). *Spectroscopy in a new light*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.54.697)
+7. [PhET Simulation: Color Vision](https://phet.colorado.edu/en/simulations/color-vision)
+8. [PhET Simulation: Blackbody Spectrum](https://phet.colorado.edu/en/simulations/blackbody-spectrum)
+9. [Lamb, W. E., & Retherford, R. C. (1947). *Fine Structure of the Hydrogen Atom by a Microwave Method*.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.72.241)
+10. [Purcell, E. M. (1946). *Spontaneous Emission Probabilities at Radio Frequencies*.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.69.37)
+
+### 📖 Referencias Útiles y Bibliografía
+- [Hollas, J. M. (2004). *Modern Spectroscopy*. John Wiley & Sons.](https://www.wiley.com/en-us/Modern+Spectroscopy%2C+4th+Edition-p-9780470844168)
+- [Demtröder, W. (2014). *Laser Spectroscopy: Basic Concepts and Instrumentation*. Springer.](https://link.springer.com/book/10.1007/978-3-662-44641-6)
+- [Bernath, P. F. (2015). *Spectra of Atoms and Molecules*. Oxford University Press.](https://global.oup.com/academic/product/spectra-of-atoms-and-molecules-9780190252215)
+- [Loudon, R. (2000). *The Quantum Theory of Light*. Oxford University Press.](https://global.oup.com/academic/product/the-quantum-theory-of-light-9780198501763)

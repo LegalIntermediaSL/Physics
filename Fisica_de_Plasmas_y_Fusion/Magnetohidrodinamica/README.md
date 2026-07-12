@@ -59,9 +59,22 @@ La velocidad característica de las perturbaciones magnéticas en el viento sola
 1. [MHD Theory - Princeton Plasma Physics Lab (PPPL)](https://www.pppl.gov/)
 2. [Introduction to Magnetohydrodynamics (Coursera)](https://www.coursera.org)
 3. [Astrophysical Fluid Dynamics - Cambridge](https://www.maths.cam.ac.uk/)
+4. [Advanced MHD and Reconnection - JHU](https://www.jhu.edu)
+5. [Computational Magnetohydrodynamics - UChicago](https://www.uchicago.edu)
 
 ### Artículos y Simulaciones
-1. Alfvén, H. (1942). *Existence of Electromagnetic-Hydrodynamic Waves*. Nature.
-2. Biskamp, D. (1993). *Nonlinear Magnetohydrodynamics*. Cambridge University Press.
-3. [Athena++ Astrophysical MHD Code](https://github.com/PrincetonUniversity/athena)
-4. [PLUTO Code for Computational Astrophysics](http://plutocode.ph.unito.it/)
+1. [Alfvén, H. (1942). *Existence of Electromagnetic-Hydrodynamic Waves*. Nature.](https://www.nature.com/articles/150405d0)
+2. [Cowling, T. G. (1933). *The magnetic field of sunspots*. Monthly Notices of the Royal Astronomical Society.](https://doi.org/10.1093/mnras/94.1.39)
+3. [Parker, E. N. (1955). *Hydromagnetic Dynamo Models*. The Astrophysical Journal.](https://doi.org/10.1086/146087)
+4. [Taylor, J. B. (1974). *Relaxation of Toroidal Plasma and Generation of Reverse Magnetic Fields*. Physical Review Letters.](https://doi.org/10.1103/PhysRevLett.33.1139)
+5. [Sweet, P. A. (1958). *The Neutral Point Theory of Solar Flares*.](https://ui.adsabs.harvard.edu/abs/1958IAUS....6..123S/abstract)
+6. [Parker, E. N. (1957). *Sweet's Mechanism for Merging Magnetic Fields in Conducting Fluids*. Journal of Geophysical Research.](https://doi.org/10.1029/JZ062i004p00509)
+7. [Athena++ Astrophysical MHD Code](https://github.com/PrincetonUniversity/athena) - Código C++ para MHD astrofísica.
+8. [PLUTO Code for Computational Astrophysics](http://plutocode.ph.unito.it/) - MHD y relatividad.
+9. [Pencil Code](http://pencil-code.nordita.org/) - Simulación de flujos magnéticos compresibles.
+
+### 📖 Referencias Útiles y Bibliografía
+1. [Biskamp, D. (1993). *Nonlinear Magnetohydrodynamics*. Cambridge University Press.](https://www.cambridge.org/core/books/nonlinear-magnetohydrodynamics/3A4F8A6B0A84B4810756784419E75CB7)
+2. [Davidson, P. A. (2001). *An Introduction to Magnetohydrodynamics*. Cambridge University Press.](https://www.cambridge.org/core/books/an-introduction-to-magnetohydrodynamics/1A334B719E8DF41CDE4B157A42C10214)
+3. [Goedbloed, J. P., & Poedts, S. (2004). *Principles of Magnetohydrodynamics*. Cambridge University Press.](https://www.cambridge.org/core/books/principles-of-magnetohydrodynamics/2A46DB0FBE86D740E7D2D682E55BE795)
+4. [Roberts, P. H. (1967). *An Introduction to Magnetohydrodynamics*. Longmans.](https://www.worldcat.org/title/introduction-to-magnetohydrodynamics/oclc/389025)

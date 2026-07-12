@@ -55,11 +55,25 @@ $$ \sigma_x \sigma_p \ge \frac{\hbar}{2} $$
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-* **MIT 8.05 Quantum Physics II:** La primera mitad del curso enseña rigurosamente la notación de Dirac, espacios vectoriales y formalismo de operadores.
-* **Stanford (Leonard Susskind):** Primeros videos de Quantum Mechanics, que arrancan directamente desde el enfoque de espacios vectoriales y espín.
-* **Perimeter Institute Lectures:** Cursos introductorios a los fundamentos matemáticos de la Cuántica.
+1. [MIT 8.05 Quantum Physics II (Barton Zwiebach)](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/): La primera mitad del curso enseña rigurosamente la notación de Dirac, espacios vectoriales complejos y formalismo de operadores hermitianos.
+2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Primeros videos de la serie que arrancan directamente desde el enfoque de espacios vectoriales usando el espín como motivación principal.
+3. [Perimeter Institute (PSI) Lectures](https://perimeterinstitute.ca/training/perimeter-scholars-international/lectures): Cursos de maestría sobre fundamentos matemáticos de la Cuántica, con énfasis en el álgebra de Hilbert y los operadores.
+4. [NPTEL - Quantum Mechanics I (Prof. P. Ramadevi)](https://nptel.ac.in/courses/115106066): Una aproximación sistemática y matemática al formalismo, explicando operadores, conmutadores y representaciones matriciales.
+5. [Oxford University Quantum Physics (James Binney)](https://podcasts.ox.ac.uk/series/quantum-mechanics): Lecciones que clarifican la conexión profunda entre los operadores y los observables físicos.
+6. [Coursera - Mathematics for Machine Learning/Quantum Mechanics](https://www.coursera.org/specializations/mathematics-machine-learning): Cursos de revisión de Álgebra Lineal que cubren productos internos y diagonalización de matrices.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **Libro de Referencia:** *Principles of Quantum Mechanics* de R. Shankar (El capítulo 1 es el mejor resumen de álgebra lineal para físicos).
-* **Wikipedia:** [Notación Bra-Ket](https://es.wikipedia.org/wiki/Notaci%C3%B3n_bra-ket) (Para familiarizarse visualmente con las reglas de cálculo).
-* **Documental:** Cualquiera sobre el trabajo conjunto e independiente de Heisenberg, Schrödinger y Dirac en 1925-1927.
+1. **Wikipedia:** [Notación Bra-Ket](https://es.wikipedia.org/wiki/Notaci%C3%B3n_bra-ket) - Guía completa para familiarizarse visualmente con las reglas de cálculo de Dirac.
+2. **Wikipedia:** [Espacio de Hilbert](https://es.wikipedia.org/wiki/Espacio_de_Hilbert) - Definición formal de convergencia, producto interno y topología.
+3. **Stanford Encyclopedia of Philosophy:** [The Mathematical Formalism of Quantum Mechanics](https://plato.stanford.edu/entries/qt-issues/#MatFor) - Análisis riguroso del porqué se escogió este andamiaje matemático.
+4. **HyperPhysics:** [Operators in Quantum Mechanics](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/qmoper.html) - Tablas resumiendo los operadores fundamentales (momento, posición, energía, etc.).
+5. **Visualizando Espacios Complejos (3Blue1Brown):** [Essence of Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra) - Vital para entender transformaciones lineales, eigenvectors y eigenvalues.
+6. **Scholarpedia:** [Dirac Notation](http://www.scholarpedia.org/article/Dirac_notation) - Artículo de expertos sobre la flexibilidad y poder de esta notación universal.
+7. **Documental Histórico:** [Quantum Mechanics History](https://www.youtube.com/watch?v=CBrsWPCp_rs) - Cualquiera sobre el trabajo conjunto e independiente de Heisenberg, Schrödinger y Dirac.
+8. **Quanta Magazine:** [Quantum Mechanics Articles](https://www.quantamagazine.org/physics/) - Artículos divulgativos sobre Entrelazamiento y Geometría del Espacio de Hilbert.
+
+### 📖 Referencias Útiles y Bibliografía
+1. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulo 1). El mejor resumen de álgebra lineal en un espacio vectorial complejo para físicos de todo el mercado.
+2. **Libro**: [Modern Quantum Mechanics - J.J. Sakurai](https://www.cambridge.org/highereducation/books/modern-quantum-mechanics/144AE26BDEFB9A7CB06C0CD0696D12CA) (Capítulo 1). Se centra de inmediato en el formalismo abstracto usando el experimento de Stern-Gerlach.
+3. **Libro**: [The Principles of Quantum Mechanics - Paul Dirac](https://global.oup.com/academic/product/the-principles-of-quantum-mechanics-9780198520115). La obra maestra original donde se introdujo por primera vez la notación bra-ket.
+4. **Libro**: [Mathematical Foundations of Quantum Mechanics - John von Neumann](https://press.princeton.edu/books/paperback/9780691178578/mathematical-foundations-of-quantum-mechanics). Para aquellos interesados en el rigor matemático absoluto de la teoría de operadores.

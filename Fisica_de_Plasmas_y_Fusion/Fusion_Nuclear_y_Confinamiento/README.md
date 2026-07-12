@@ -58,9 +58,22 @@ Para que este reactor alcance la ignición (autosostenibilidad sin calentamiento
 2. [Introduction to Fusion Energy - TU/e (Coursera)](https://www.coursera.org)
 3. [Fusion Materials - NPTEL](https://nptel.ac.in)
 4. [ITER E-Learning Courses](https://www.iter.org/)
+5. [Inertial Confinement Fusion - LLNL Short Courses](https://lasers.llnl.gov)
+6. [Thermonuclear Reactor Design - Tokyo Institute of Technology](https://www.titech.ac.jp)
 
 ### Artículos y Simulaciones
-1. Lawson, J. D. (1957). *Some Criteria for a Power Producing Thermonuclear Reactor*. Proc. Phys. Soc.
-2. [ITER - The Way to New Energy (Sitio oficial)](https://www.iter.org/)
-3. [National Ignition Facility (NIF) - Confinamiento Inercial](https://lasers.llnl.gov/)
-4. Wesson, J. (2011). *Tokamaks*. Oxford University Press.
+1. [Lawson, J. D. (1957). *Some Criteria for a Power Producing Thermonuclear Reactor*. Proc. Phys. Soc.](https://doi.org/10.1088/0370-1301/70/1/303)
+2. [Nuckolls, J., Wood, L., Thiessen, A., & Zimmerman, G. (1972). *Laser Compression of Matter to Super-High Densities*. Nature.](https://www.nature.com/articles/239139a0)
+3. [Hurricane, O. A., et al. (2014). *Fuel gain exceeding unity in an inertially confined fusion implosion*. Nature.](https://www.nature.com/articles/nature13008)
+4. [Rebut, P. H. (1995). *ITER: The first experimental fusion reactor*. Fusion Engineering and Design.](https://doi.org/10.1016/0920-3796(95)90103-5)
+5. [Abu-Shumays, I. K., et al. (1999). *Simulations for ICF Experiments*.](https://doi.org/10.1109/99.757313)
+6. [ITER - The Way to New Energy (Sitio oficial)](https://www.iter.org/)
+7. [National Ignition Facility (NIF) - Confinamiento Inercial](https://lasers.llnl.gov/)
+8. [HELIOS](https://www.prism-cs.com/Software/Helios/Helios.html) - 1D Radiation Magnetohydrodynamics Code for ICF.
+9. [FLASH](https://flash.rochester.edu/) - Multiphysics code for laser fusion.
+
+### 📖 Referencias Útiles y Bibliografía
+1. [Atzeni, S., & Meyer-ter-Vehn, J. (2004). *The Physics of Inertial Fusion*. Oxford University Press.](https://global.oup.com/academic/product/the-physics-of-inertial-fusion-9780198562641)
+2. [Wesson, J. (2011). *Tokamaks* (Vol. 149). Oxford University Press.](https://global.oup.com/academic/product/tokamaks-9780199592234)
+3. [McCracken, G., & Stott, P. (2012). *Fusion: The Energy of the Universe*. Academic Press.](https://www.sciencedirect.com/book/9780123846563/fusion)
+4. [Stacey, W. M. (2010). *Fusion Plasma Physics*. Wiley-VCH.](https://www.wiley.com/en-us/Fusion+Plasma+Physics%2C+2nd+Edition-p-9783527409679)

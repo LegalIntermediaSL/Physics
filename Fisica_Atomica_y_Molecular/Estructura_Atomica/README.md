@@ -54,12 +54,26 @@ Debido al término de repulsión, esta ecuación no tiene solución analítica e
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos
-1. [Atomic Structure - MIT OCW](https://ocw.mit.edu)
-2. [Quantum Mechanics - Stanford (YouTube)](https://www.youtube.com/)
-3. [Physical Chemistry - NPTEL](https://nptel.ac.in)
+1. [Atomic Structure - MIT OCW](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/)
+2. [Quantum Mechanics - Stanford (YouTube)](https://www.youtube.com/playlist?list=PL84C10A9CB1D13841)
+3. [Physical Chemistry - NPTEL](https://nptel.ac.in/courses/104104085)
+4. [Quantum Mechanics and Atomic Physics - MIT (OCW)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/)
+5. [Exploring Quantum Physics - Coursera](https://www.coursera.org/learn/quantum-physics)
 
 ### Artículos y Simulaciones
-1. Bohr, N. (1913). *On the Constitution of Atoms and Molecules*. Phil. Mag.
+1. [Bohr, N. (1913). *On the Constitution of Atoms and Molecules*. Phil. Mag.](https://www.tandfonline.com/doi/abs/10.1080/14786441308634955)
 2. [PhET Simulation: Build an Atom](https://phet.colorado.edu/en/simulations/build-an-atom)
 3. [PhET Simulation: Hydrogen Atom Models](https://phet.colorado.edu/en/simulations/hydrogen-atom)
-4. Hartree, D. R. (1928). *The Wave Mechanics of an Atom with a Non-Coulomb Central Field*.
+4. [Hartree, D. R. (1928). *The Wave Mechanics of an Atom with a Non-Coulomb Central Field*.](https://www.cambridge.org/core/journals/mathematical-proceedings-of-the-cambridge-philosophical-society/article/wave-mechanics-of-an-atom-with-a-noncoulomb-central-field/564BEEA1EB919DE476DA06BE7B2E7852)
+5. [Schrödinger, E. (1926). *An Undulatory Theory of the Mechanics of Atoms and Molecules*. Phys. Rev.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.28.1049)
+6. [Pauli, W. (1925). *On the Connexion between the Completion of Electron Groups in an Atom with the Complex Structure of Spectra*.](https://link.springer.com/article/10.1007/BF02980631)
+7. [PhET Simulation: Rutherford Scattering](https://phet.colorado.edu/en/simulations/rutherford-scattering)
+8. [PhET Simulation: Neon Lights & Other Discharge Lamps](https://phet.colorado.edu/en/simulations/neon-lights-and-other-discharge-lamps)
+9. [Dirac, P. A. M. (1928). *The Quantum Theory of the Electron*. Proc. R. Soc. Lond.](https://royalsocietypublishing.org/doi/10.1098/rspa.1928.0023)
+10. [Slater, J. C. (1929). *The Theory of Complex Spectra*. Phys. Rev.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.34.1293)
+
+### 📖 Referencias Útiles y Bibliografía
+- [Foot, C. J. (2005). *Atomic Physics*. Oxford University Press.](https://global.oup.com/academic/product/atomic-physics-9780198506966)
+- [Bransden, B. H., & Joachain, C. J. (2003). *Physics of Atoms and Molecules*. Pearson Education.](https://www.pearson.com/en-us/subject-catalog/p/physics-of-atoms-and-molecules/P200000005739)
+- [Woodgate, G. K. (1980). *Elementary Atomic Structure*. Oxford University Press.](https://global.oup.com/academic/product/elementary-atomic-structure-9780198511564)
+- [Cowan, R. D. (1981). *The Theory of Atomic Structure and Spectra*. University of California Press.](https://www.ucpress.edu/book/9780520038219/the-theory-of-atomic-structure-and-spectra)

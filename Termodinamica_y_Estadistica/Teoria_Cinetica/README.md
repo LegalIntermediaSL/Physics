@@ -57,12 +57,27 @@ Lo cual determina la capacidad calorífica $C_V = \frac{f}{2} N k_B$.
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-* **Feynman Lectures on Physics:** Vol I, Capítulos 39 (Teoría cinética de los gases) y 40 (Mecánica estadística).
-* **MIT 8.044 (Statistical Physics I):** Primeras sesiones centradas en la derivación de Maxwell.
-* **Stanford - Mecánica Estadística (Susskind):** Conferencias sobre el significado físico de la equipartición.
+1. **Feynman Lectures on Physics:** [Vol I, Ch. 39 & 40](https://www.feynmanlectures.caltech.edu/I_39.html) - Capítulos 39 (Teoría cinética de los gases) y 40 (Mecánica estadística).
+2. **MIT 8.044 (Statistical Physics I):** [Página del Curso](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Primeras sesiones centradas en la derivación de Maxwell y las distribuciones de velocidad.
+3. **Stanford - Mecánica Estadística (Susskind):** [Enlace al Curso](https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) - Conferencias sobre el significado físico de la equipartición de la energía.
+4. **Yale PHYS 200 - Thermodynamics:** [Yale Open Courses](https://oyc.yale.edu/physics/phys-200) - Clases específicas sobre la derivación de la ley de los gases ideales desde el modelo microscópico.
+5. **Coursera / edX - Physics Intro:** [edX Introductory Physics](https://www.edx.org/course/introduction-to-mechanics) - Módulos que exploran visualmente cómo surgen propiedades macroscópicas desde partículas chocando.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **PhET - Gases Intro:** Una simulación increíble para medir presiones, temperaturas y ver colisiones de partículas.
-* **Artículo de Einstein de 1905 sobre el Movimiento Browniano:** Un pilar histórico para probar la teoría cinética de la materia.
-* **Maxwell-Boltzmann Distribution Calculator (Hyperphysics):** Para explorar la distribución de velocidades de diferentes gases a distintas temperaturas.
+1. **PhET - Gases Intro:** [Simulador de Gases](https://phet.colorado.edu/es/simulation/gases-intro) - Una simulación increíble para medir presiones, temperaturas y ver colisiones de partículas en tiempo real.
+2. **Artículo de Einstein de 1905 sobre el Movimiento Browniano:** [Brownian Motion](https://en.wikipedia.org/wiki/Brownian_motion) - Un pilar histórico para probar la teoría cinética de la materia y la existencia de los átomos.
+3. **Maxwell-Boltzmann Distribution Calculator:** [HyperPhysics Tool](http://hyperphysics.phy-astr.gsu.edu/hbase/Kinetic/maxspe.html) - Para explorar la distribución de velocidades de diferentes gases a distintas temperaturas y masas molares.
+4. **FísicaLab - Teoría Cinética:** [Lección Interactiva](https://www.fisicalab.com/tema/teoria-cinetica-gases) - Explicación detallada paso a paso para estudiantes de los postulados fundamentales.
+5. **Wikipedia - Teoría cinética de los gases:** [Artículo Principal](https://es.wikipedia.org/wiki/Teor%C3%ADa_cin%C3%A9tica) - Exhaustivo artículo con todas las derivaciones matemáticas paso a paso.
+6. **Wolfram Demonstrations - Gas en una caja:** [Simulación 3D](https://demonstrations.wolfram.com/IdealGasInABox/) - Simulador interactivo que muestra las trayectorias de partículas y colisiones elásticas.
+7. **HyperPhysics - Equipartición de la energía:** [Teorema de Equipartición](http://hyperphysics.phy-astr.gsu.edu/hbase/Kinetic/eqpar.html) - Gráficos y explicaciones claras de los grados de libertad vibracionales, rotacionales y traslacionales.
+8. **Falstad - Gas 2D Simulation:** [Falstad Gas 2D](http://www.falstad.com/gas/) - Applet muy útil para ver la estadística de colisiones.
+
+### 📖 Referencias Útiles y Bibliografía
+* [Fundamentals of Statistical and Thermal Physics - Reif, F.](https://books.google.com/books?id=0sM4DgAAQBAJ) - Proporciona excelentes secciones tempranas detallando los postulados de la teoría cinética.
+* [An Introduction to Thermal Physics - Schroeder, D. V.](https://physics.weber.edu/thermal/) - Aborda la teoría cinética y sus aplicaciones astrofísicas o atmosféricas con ejemplos muy interesantes.
+* [Thermal Physics - Kittel, C. & Kroemer, H.](https://www.macmillanlearning.com/college/us/product/Thermal-Physics/p/0716710889) - Tiene análisis claros sobre el teorema de equipartición y la distribución de velocidades.
+* [The Feynman Lectures on Physics, Vol. 1 - Feynman, R.](https://www.feynmanlectures.caltech.edu/) - Los capítulos correspondientes son magistrales para comprender la intuición detrás de la presión.
+* [Concepts in Thermal Physics - Blundell, S. J. & Blundell, K. M.](https://global.oup.com/academic/product/concepts-in-thermal-physics-9780199562107) - Libro altamente recomendado para estudiantes universitarios, claro y moderno en la exposición de la teoría de gases.

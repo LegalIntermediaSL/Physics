@@ -57,12 +57,27 @@ donde $\mu$ es el potencial químico.
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-* **Stanford - Statistical Mechanics (Leonard Susskind):** Esencial, se adentra directamente en la lógica matemática subyacente y la física de la información.
-* **MIT 8.044 (Statistical Physics I):** Excelente enfoque formal desde sistemas discretos a gases cuánticos.
-* **Perimeter Institute - Statistical Physics:** Clases de maestría con nivel avanzado, ideal para física de materia condensada.
+1. **Stanford - Statistical Mechanics (Leonard Susskind):** [Enlace al Curso](https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) - Esencial, se adentra directamente en la lógica matemática subyacente y la física de la información.
+2. **MIT 8.044 (Statistical Physics I):** [Página en MIT OCW](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Excelente enfoque formal desde sistemas discretos a gases cuánticos.
+3. **Perimeter Institute - Statistical Physics:** [PIPSI Lectures](https://pirsa.org/) - Clases de maestría con nivel avanzado, ideal para física de materia condensada.
+4. **Oxford - Statistical Mechanics Lectures:** [Enlace a YouTube](https://www.youtube.com/playlist?list=PL4d5Ztf9HeEkOqE6Rndn5d3xU-X2CqJj4) - Serie de clases muy claras enfocadas en los diferentes ensambles de Gibbs.
+5. **NPTEL - Statistical Mechanics:** [Curso NPTEL](https://nptel.ac.in/courses/115/103/115103113/) - Curso intensivo y muy matemático para entender derivaciones canónicas y gran canónicas.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **Simulación Ising Model (Varios en la web):** Visualizar el ferromagnetismo y las transiciones de fase críticas desde un ensamble de espines en interacción.
-* **Catástrofe Ultravioleta e Historia de Planck:** Leer sobre cómo el conteo estadístico de fotones inició la revolución cuántica.
-* **Bose-Einstein Condensation (PhET / Videos):** Animaciones y artículos detallando el fenómeno macroscópico que ocurre cuando la ocupación cuántica diverge hacia el estado fundamental.
+1. **Simulación Ising Model:** [Ising Model Simulation](https://mattbierbaum.github.io/ising.js/) - Visualizar el ferromagnetismo y las transiciones de fase críticas desde un ensamble de espines en interacción.
+2. **Catástrofe Ultravioleta e Historia de Planck:** [Ultraviolet Catastrophe](https://en.wikipedia.org/wiki/Ultraviolet_catastrophe) - Leer sobre cómo el conteo estadístico de fotones inició la revolución cuántica.
+3. **Bose-Einstein Condensation (PhET / Videos):** [PhET BEC](https://phet.colorado.edu/es/simulation/legacy/states-of-matter) - Animaciones y artículos detallando el fenómeno macroscópico que ocurre cuando la ocupación cuántica diverge hacia el estado fundamental.
+4. **Scholarpedia - Gibbs Ensembles:** [Statistical Ensembles](http://www.scholarpedia.org/article/Ensemble_(physics)) - Artículo avanzado sobre los fundamentos de los colectivos microcanónico, canónico y gran canónico.
+5. **Wikipedia - Función de partición:** [Partition Function](https://es.wikipedia.org/wiki/Funci%C3%B3n_de_partici%C3%B3n_(mec%C3%A1nica_estad%C3%ADstica)) - Explicación detallada de cómo calcular variables termodinámicas a partir de $Z$.
+6. **HyperPhysics - Quantum Statistics:** [Estadísticas Cuánticas](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/quastat.html) - Resumen de las diferencias entre las estadísticas de Maxwell-Boltzmann, Fermi-Dirac y Bose-Einstein.
+7. **Stanford Encyclopedia of Philosophy:** [Philosophy of StatMech](https://plato.stanford.edu/entries/statphys-statmech/) - Filosofía de la mecánica estadística, abordando la irreversibilidad y las probabilidades.
+8. **Wolfram Demonstrations - Maxwell-Boltzmann Distribution:** [Simulación](https://demonstrations.wolfram.com/MaxwellBoltzmannDistribution/) - Visualización interactiva de la distribución energética.
+
+### 📖 Referencias Útiles y Bibliografía
+* [Statistical Mechanics - Pathria, R. K.](https://www.elsevier.com/books/statistical-mechanics/pathria/978-0-12-382188-1) - Texto clásico y riguroso de nivel posgrado, excelente para el desarrollo teórico profundo de los ensambles.
+* [Fundamentals of Statistical and Thermal Physics - Reif, F.](https://books.google.com/books?id=0sM4DgAAQBAJ) - Fundamental para el entendimiento detallado de la conexión micro-macro.
+* [Thermal Physics - Kittel, C. & Kroemer, H.](https://www.macmillanlearning.com/college/us/product/Thermal-Physics/p/0716710889) - Un libro moderno con un enfoque estadístico desde la primera página, muy claro en conceptos cuánticos.
+* [Statistical Physics, Part 1 - Landau, L. D. & Lifshitz, E. M.](https://www.elsevier.com/books/statistical-physics/landau/978-0-08-023039-9) - Parte de la legendaria serie, brillante e indispensable para los teóricos rigurosos.
+* [The Principles of Statistical Mechanics - Tolman, R. C.](https://store.doverpublications.com/products/9780486638966) - Una referencia histórica inigualable sobre los fundamentos conceptuales de la teoría clásica y cuántica.

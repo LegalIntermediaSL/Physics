@@ -54,12 +54,27 @@ $$ \lim_{T \to 0} S = 0 $$
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-* **MIT 8.044 (Statistical Physics I):** Las primeras clases de este curso brindan una recapitulación muy rigurosa de las leyes macroscópicas.
-* **Yale Fundamentals of Physics (PHYS 200):** Prof. Ramamurti Shankar, excelentes analogías para comprender la Segunda Ley.
-* **The Theoretical Minimum (Thermodynamics):** Curso por Leonard Susskind, muy enfocado a físicos teóricos.
+1. **MIT 8.044 (Statistical Physics I):** [Página del Curso OCW](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Las primeras clases de este curso brindan una recapitulación muy rigurosa de las leyes macroscópicas.
+2. **Yale Fundamentals of Physics (PHYS 200):** [Sesiones de Termodinámica](https://oyc.yale.edu/physics/phys-200) - Prof. Ramamurti Shankar, excelentes analogías para comprender la Segunda Ley y el ciclo de Carnot.
+3. **The Theoretical Minimum (Thermodynamics):** [Curso Completo](https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) - Curso por Leonard Susskind, muy enfocado a físicos teóricos.
+4. **Coursera - Introduction to Thermodynamics:** [Enlace a Coursera](https://www.coursera.org/learn/thermodynamics-intro) - Universidad de Míchigan, curso profundo sobre la conservación de energía.
+5. **NPTEL - Classical Thermodynamics:** [Curso de NPTEL](https://nptel.ac.in/courses/112/105/112105123/) - Curso avanzado sobre equilibrio y estabilidad termodinámica.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **PhET - Propiedades de los Gases:** Para ver en tiempo real cómo cambia la presión y el trabajo al modificar volúmenes y temperaturas.
-* **"Reflections on the Motive Power of Fire" (1824):** El clásico de Sadi Carnot donde plantea el concepto de la máquina térmica ideal.
-* **Artículo sobre el Demonio de Maxwell:** Un experimento mental fundamental sobre la entropía y la información.
+1. **PhET - Propiedades de los Gases:** [Simulación Interactiva](https://phet.colorado.edu/es/simulation/gas-properties) - Para ver en tiempo real cómo cambia la presión y el trabajo al modificar volúmenes y temperaturas.
+2. **"Reflections on the Motive Power of Fire" (1824):** [Sadi Carnot's Book](https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire) - El clásico de Sadi Carnot donde plantea el concepto de la máquina térmica ideal y la eficiencia máxima.
+3. **Artículo sobre el Demonio de Maxwell:** [Maxwell's Demon](https://en.wikipedia.org/wiki/Maxwell%27s_demon) - Un experimento mental fundamental sobre la entropía y la información de la naturaleza.
+4. **Wikipedia - Leyes de la Termodinámica:** [Leyes de la Termodinámica](https://es.wikipedia.org/wiki/Leyes_de_la_termodin%C3%A1mica) - Excelente resumen de los cuatro postulados fundamentales.
+5. **HyperPhysics - Primera Ley:** [Primera Ley](http://hyperphysics.phy-astr.gsu.edu/hbase/thermo/firlaw.html) - Detalles sobre procesos isobáricos, isocóricos e isotérmicos.
+6. **HyperPhysics - Segunda Ley:** [Segunda Ley](http://hyperphysics.phy-astr.gsu.edu/hbase/thermo/seclaw.html) - Entropía y los enunciados de Kelvin y Clausius.
+7. **Feynman Lectures - Ch. 44:** [The Laws of Thermodynamics](https://www.feynmanlectures.caltech.edu/I_44.html) - Una explicación brillante del concepto de máquinas reversibles.
+8. **Wolfram Demonstrations - Carnot Cycle:** [Simulación del Ciclo Carnot](https://demonstrations.wolfram.com/CarnotCycleOnIdealGas/) - Simulaciones interactivas del ciclo de Carnot.
+
+### 📖 Referencias Útiles y Bibliografía
+* [Fundamentals of Statistical and Thermal Physics - Reif, F.](https://books.google.com/books?id=0sM4DgAAQBAJ) - Un estándar indispensable que detalla cómo la termodinámica emerge de las leyes estadísticas, ideal para entender las leyes clásicas en profundidad.
+* [An Introduction to Thermal Physics - Schroeder, D. V.](https://physics.weber.edu/thermal/) - Texto excelente e intuitivo, muy claro en sus explicaciones de calor y trabajo.
+* [Statistical Mechanics - Pathria, R. K.](https://www.elsevier.com/books/statistical-mechanics/pathria/978-0-12-382188-1) - Aunque más estadístico, sus primeros capítulos sobre las leyes termodinámicas son profundos.
+* [Heat and Thermodynamics - Zemansky, M. W. & Dittman, R. H.](https://www.mheducation.com/highered/product/heat-thermodynamics-zemansky-dittman/M9780070170599.html) - Un texto puramente termodinámico y muy completo para las leyes clásicas.
+* [Thermodynamics and an Introduction to Thermostatistics - Callen, H. B.](https://books.google.com/books/about/Thermodynamics_and_an_Introduction_to_Th.html?id=R2s_AQAAIAAJ) - Uno de los mejores textos formales sobre el enfoque axiomático de la termodinámica.

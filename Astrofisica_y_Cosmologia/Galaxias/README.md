@@ -55,12 +55,27 @@ Explica por qué las galaxias elípticas tienen una distribución regular a pesa
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-- **UC Irvine: Physics 20B Cosmology (James Bullock)** - Aborda profundamente halos de materia oscura y formación de galaxias.
-- **MIT 8.286 The Early Universe** - Alan Guth cubre aspectos de estructura a gran escala.
-- **Canal de YouTube Dr. Becky** - Excelente investigadora (Becky Smethurst) que explica evolución galáctica y agujeros negros supermasivos.
+1. **[UC Irvine: Physics 20B Cosmology (James Bullock)](https://www.youtube.com/playlist?list=PLqOZ6FD_RQ7nwb-mX-Z6G5fFv9yO-F18i)** - Aborda profundamente halos de materia oscura, rotación galáctica y modelos de formación jerárquica.
+2. **[MIT 8.286 The Early Universe](https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/)** - Incluye aspectos de la estructura a gran escala del universo y cómo las fluctuaciones primordiales dieron lugar a las galaxias.
+3. **[Canal de YouTube Dr. Becky](https://www.youtube.com/c/DrBecky)** - Becky Smethurst es una destacada investigadora de galaxias y agujeros negros supermasivos que explica fenomenalmente la evolución galáctica en video.
+4. **[Caltech - Ay 127: Cosmology and Galaxy Formation](http://www.astro.caltech.edu/~george/ay127/)** - Material avanzado (a menudo disponible de forma gratuita por profesores) sobre los detalles finos del medio intergaláctico y simulaciones N-body.
+5. **[Coursera: Galaxies and Cosmology (Caltech / varios)](https://www.coursera.org/learn/astro)** - Módulos introductorios que explican las formas galácticas, el grupo local, colisiones y la historia temprana del universo galáctico.
 
 ### 📝 Artículos e Interactivos Interesantes
-- [Galaxy Zoo (Zooniverse)](https://www.zooniverse.org/projects/zookeeper/galaxy-zoo/) - Proyecto de ciencia ciudadana para clasificar galaxias.
-- [Sloan Digital Sky Survey (SDSS)](https://www.sdss.org/) - Mapas 3D del universo para explorar estructuras galácticas.
-- Artículo de Vera Rubin (1970) sobre las curvas de rotación de Andrómeda.
+1. [Galaxy Zoo (Zooniverse)](https://www.zooniverse.org/projects/zookeeper/galaxy-zoo/) - Un proyecto de ciencia ciudadana famosísimo donde puedes ayudar a astrónomos a clasificar millones de galaxias según su morfología.
+2. [Sloan Digital Sky Survey (SDSS)](https://www.sdss.org/) - Una de las cartografías digitales más grandes del cielo nocturno. Permite explorar la estructura a gran escala, agrupaciones y el espectro de millones de galaxias.
+3. [Vera Rubin's 1970 Paper en The Astrophysical Journal](https://ui.adsabs.harvard.edu/abs/1970ApJ...159..379R/abstract) - Artículo original donde establece de forma robusta las curvas de rotación de galaxias espirales (Andrómeda).
+4. [Illustris Project / IllustrisTNG](https://www.illustris-project.org/) - Simulaciones computacionales masivas de formación galáctica desde el Big Bang hasta hoy. Tienen espectaculares visualizaciones y videos.
+5. [Hubble Ultra Deep Field (NASA)](https://esahubble.org/images/heic0611b/) - La histórica imagen que capturó miles de galaxias muy lejanas en un parche aparentemente vacío del cielo.
+6. [Scholarpedia: Galaxy Formation](http://www.scholarpedia.org/article/Galaxy_formation) - Explicaciones detalladas de la disipación de gas, halos de materia oscura y retroalimentación de supernovas/agujeros negros.
+7. [NASA/IPAC Extragalactic Database (NED)](https://ned.ipac.caltech.edu/) - La base de datos definitiva de objetos extragalácticos para investigadores y aficionados serios.
+8. [Space Telescope Science Institute: Galaxies](https://www.stsci.edu/) - Investigaciones recientes impulsadas por el James Webb Space Telescope (JWST) sobre las primeras galaxias del universo.
+
+### 📖 Referencias Útiles y Bibliografía
+- **["Galactic Dynamics" - James Binney y Scott Tremaine](https://press.princeton.edu/books/paperback/9780691130279/galactic-dynamics)**: El tratado definitivo y avanzado (nivel de posgrado) sobre cómo se mueven las estrellas y el gas dentro del campo gravitacional galáctico.
+- **["Galaxies in the Universe: An Introduction" - Linda S. Sparke y John S. Gallagher III](https://www.cambridge.org/highereducation/books/galaxies-in-the-universe/6F045A9524584288C00F7A598F6B928E)**: Un texto excepcional para niveles de pregrado y posgrado temprano, que conecta observaciones con las teorías físicas.
+- **["Extragalactic Astronomy and Cosmology: An Introduction" - Peter Schneider](https://link.springer.com/book/10.1007/978-3-642-54083-7)**: Cubre todo lo que está más allá de la Vía Láctea, incluyendo núcleos galácticos activos y cuásares.
+- **["Galaxy Formation and Evolution" - Houjun Mo, Frank van den Bosch, y Simon White](https://www.cambridge.org/highereducation/books/galaxy-formation-and-evolution/8C4A731F75B26E9528D8E9F6A24D3D52)**: Una referencia moderna monumental para entender la física completa (gas, enfriamiento, fusión) que forma el zoológico galáctico.
+- **["An Introduction to Modern Astrophysics" - B. Carroll y D. Ostlie](https://www.cambridge.org/highereducation/books/an-introduction-to-modern-astrophysics/8C2B3C2B3A6C5B3E6B4A6C8D8E9F6B5C)**: También provee capítulos robustos en su sección extragaláctica, ideales como primer encuentro formal con las ecuaciones de galaxias espirales y elípticas.

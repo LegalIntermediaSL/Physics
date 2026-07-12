@@ -63,12 +63,28 @@ Esta es una ecuación de onda cuya velocidad de propagación es $c = \frac{1}{\s
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-* **MIT 8.02 (Electricity and Magnetism):** Últimas clases del curso, donde se revela la corriente de desplazamiento y las ondas electromagnéticas.
-* **Stanford - Special Relativity (Leonard Susskind):** Explica la invariancia Lorentziana de las Ecuaciones de Maxwell, vital para la relatividad.
-* **Feynman Lectures on Physics:** Volumen II, Capítulo 18 (Las Ecuaciones de Maxwell).
+1. [MIT 8.02 - Electricity and Magnetism](https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/): Las últimas sesiones en video demuestran la unificación de Faraday y Ampère, revelando ondas electromagnéticas en pleno vuelo.
+2. [Stanford - Special Relativity (Leonard Susskind)](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring): Conecta las ecuaciones de Maxwell de forma que la invariancia Lorentziana brilla, fundamental para comprender el entrelazado de campos.
+3. [Coursera - Electrodynamics: Analysis of Electric Fields](https://www.coursera.org/learn/electrodynamics): Un estudio riguroso de cálculo vectorial sobre divergencia y rotacional aplicados a los teoremas integrales de las ecuaciones.
+4. [edX - E&M: Maxwell's Equations](https://www.edx.org/course/electricity-and-magnetism-maxwells-equations): Disertación moderna y activa enfocada directamente en la derivación empírica y teórica de las cuatro leyes unificadas.
+5. [Feynman Lectures on Physics - Vol II, Ch 18: The Maxwell Equations](https://www.feynmanlectures.caltech.edu/II_18.html): Quizá la explicación más lúcida, hermosa e intuitiva jamás escrita sobre cómo surge matemáticamente el concepto de onda luminosa.
+6. [NPTEL - Electromagnetic Waves in Guided and Wireless Media](https://nptel.ac.in/courses/108104087): Trata en profundidad sobre las soluciones ondulatorias de las ecuaciones y la propagación de radiación en guías de onda.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **PhET - Radiating Charge:** Simulador que muestra cómo una carga acelerada genera ondas electromagnéticas.
-* **"A Dynamical Theory of the Electromagnetic Field" (1865):** El artículo histórico de Maxwell (recomendado revisar en un contexto histórico).
-* **Demostración de Ondas de Hertz (Video en YouTube):** Documentales históricos de cómo Hertz produjo ondas de radio mediante chispas eléctricas.
+1. [PhET - Radiating Charge (Ondas de Radio)](https://phet.colorado.edu/en/simulations/radio-waves): Simulador brillante que ayuda a visualizar con precisión y vectores cómo una carga acelerada irradia y propaga frentes de ondas.
+2. [Wikipedia: Ecuaciones de Maxwell](https://es.wikipedia.org/wiki/Ecuaciones_de_Maxwell): La enciclopedia de referencia que expone el formalismo diferencial, el formalismo integral, y las versiones relativas a la materia macroscópica.
+3. [Royal Society - A Dynamical Theory of the Electromagnetic Field (1865)](https://royalsocietypublishing.org/doi/10.1098/rstl.1865.0008): El documento fundacional histórico del propio Maxwell, un hito del desarrollo del pensamiento deductivo en física (PDF abierto).
+4. [HyperPhysics - Maxwell's Equations](http://hyperphysics.phy-astr.gsu.edu/hbase/electric/maxeq.html): Un mapa interactivo detallando conceptualmente cada una de las cuatro leyes de la naturaleza que cimentan el modelo.
+5. [YouTube - Demostración de las Ondas de Hertz](https://www.youtube.com/watch?v=cXXE-WwM964): Un vistazo fenomenológico e histórico espectacular de cómo Hertz comprobó usando resonadores y chispas que Maxwell tenía razón.
+6. [Wikipedia: Corriente de Desplazamiento](https://es.wikipedia.org/wiki/Corriente_de_desplazamiento): Analiza de forma profunda la pieza faltante que salvó la consistencia y acopló para siempre ambos campos.
+7. [Física Práctica: Onda Electromagnética](https://www.fisicapractica.com/ondas-electromagneticas.php): Una excelente recopilación sobre cómo de las ecuaciones acopladas en el vacío se extrae la ecuación de d'Alembert.
+8. [LibreTexts - Maxwell's Equations and Electromagnetic Waves](https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/Map%3A_University_Physics_II_-_Thermodynamics_Electricity_and_Magnetism_(OpenStax)/16%3A_Electromagnetic_Waves): Módulo extenso, de uso libre y libre de costo, sobre las propiedades transversales de estas ondas.
+
+### 📖 Referencias Útiles y Bibliografía
+1. [Introduction to Electrodynamics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/971275E590D0DE07E9CD0DB4F2C2FA04): El texto de referencia por excelencia (estándar de oro) para estudiantes de pregrado en física, claro y didáctico.
+2. [Classical Electrodynamics - John David Jackson](https://www.wiley.com/en-us/Classical+Electrodynamics%2C+3rd+Edition-p-9780471309321): Obra matemática y avanzada requerida en todos los posgrados y doctorados del mundo físico.
+3. [Electricity and Magnetism - Edward M. Purcell & David J. Morin](https://www.cambridge.org/highereducation/books/electricity-and-magnetism/C16C976ADCD2F4A96DD8DD3DDAB303CE): Magnífico abordaje donde el magnetismo emerge naturalmente como consecuencia de la relatividad especial.
+4. [Física Universitaria (Vol. 2) - Sears y Zemansky](https://www.pearson.com/store/p/fisica-universitaria-vol-2/P200000000305/9786073244404): Un libro que cubre integralmente este contenido, explicando las ecuaciones para perfiles de primeros años.
+5. [Classical Electricity and Magnetism - Panofsky & Phillips](https://store.doverpublications.com/products/9780486439242): El puente clásico ideal, extremadamente valorado para estudios sistemáticos previos a Jackson sobre formulación de campos.

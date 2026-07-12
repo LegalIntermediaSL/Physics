@@ -60,12 +60,28 @@ Las leyes de Kirchhoff permiten resolver redes eléctricas complejas:
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-* **MIT 6.002 (Circuits and Electronics):** Excelente para llevar el análisis de circuitos a nivel de ingeniería.
-* **Feynman Lectures on Physics:** Volumen II, Capítulos 22 y 23 (Circuitos de CA y cavidades).
-* **Khan Academy - Ingeniería Eléctrica:** Análisis de circuitos (resistencias, divisores de tensión, Thevenin).
+1. [MIT 6.002 - Circuits and Electronics](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/): Clásico y excelente curso para dominar el análisis de circuitos a nivel universitario y en diseño de ingeniería.
+2. [Khan Academy - Ingeniería Eléctrica (Circuitos)](https://es.khanacademy.org/science/electrical-engineering): Explicaciones en video con resolución detallada de análisis nodales, leyes de Kirchhoff, Norton y Thevenin.
+3. [Coursera - Linear Circuits 1: DC Analysis](https://www.coursera.org/learn/linear-circuits-d-c-analysis): Enfoque especializado sobre corrientes continuas, fuentes dependientes y simulaciones por parte del Georgia Tech.
+4. [edX - Circuits and Electronics 1: Basic Circuit Analysis](https://www.edx.org/course/circuits-and-electronics-1-basic-circuit-analysis): Curso fundamental respaldado por MITx para modelar fenómenos físicos con elementos pasivos y activos.
+5. [Feynman Lectures on Physics - Vol II, Ch 22: AC Circuits](https://www.feynmanlectures.caltech.edu/II_22.html): Introducción a la respuesta en frecuencia, impedancias complejas y resonancia de un modo excepcionalmente intuitivo.
+6. [NPTEL - Basic Electrical Circuits](https://nptel.ac.in/courses/117106108): Explicaciones formales que cubren teoremas de redes, grafos de circuitos, y respuestas transitorias paso a paso.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **PhET Interactive Simulations - Circuit Construction Kit (DC/AC):** Una herramienta magnífica para construir circuitos virtuales y ver el flujo de electrones en tiempo real.
-* **Falstad Circuit Simulator:** Un emulador de circuitos en el navegador altamente avanzado y visual.
-* **Biografía de Volta y Galvani (Wikipedia):** El fascinante debate histórico sobre la "electricidad animal" versus la electricidad química.
+1. [PhET - Circuit Construction Kit: DC](https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc): Una herramienta magnífica y muy pedagógica para construir circuitos virtuales y medir con multímetros.
+2. [PhET - Circuit Construction Kit: AC](https://phet.colorado.edu/en/simulations/circuit-construction-kit-ac): Ideal para ver cómo se comportan capacitores e inductores frente a estímulos alternos.
+3. [Falstad Circuit Simulator](http://www.falstad.com/circuit/): Un emulador de topologías de circuitos en el navegador web altamente avanzado, visual, interactivo y en tiempo real.
+4. [Wikipedia: Ley de Ohm](https://es.wikipedia.org/wiki/Ley_de_Ohm): Recorrido detallado de la base conceptual que rige a la conducción eléctrica en materiales.
+5. [Wikipedia: Leyes de Kirchhoff](https://es.wikipedia.org/wiki/Leyes_de_Kirchhoff): Detalles formales y métodos sistemáticos de nodos y mallas, fundamentales en el diseño eléctrico.
+6. [All About Circuits - Textbook](https://www.allaboutcircuits.com/textbook/): Interfaz moderna con lecciones gratuitas sobre componentes, hojas de datos y aplicaciones analógicas.
+7. [Electronics Tutorials - DC Circuits](https://www.electronics-tutorials.ws/dccircuits/dcp_1.html): Artículos, guías y tutoriales bien escritos para aprender a reducir redes y utilizar puentes Wheatstone.
+8. [LibreTexts - Electric Current and Circuits](https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/Map%3A_University_Physics_II_-_Thermodynamics_Electricity_and_Magnetism_(OpenStax)/10%3A_Direct-Current_Circuits): Colección enorme y libre de conceptos sobre conducción, resistencia equivalente e instrumentos de medición.
+
+### 📖 Referencias Útiles y Bibliografía
+1. [Introduction to Electrodynamics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/971275E590D0DE07E9CD0DB4F2C2FA04): El texto de referencia por excelencia (estándar de oro) para estudiantes de pregrado en física, claro y didáctico.
+2. [Classical Electrodynamics - John David Jackson](https://www.wiley.com/en-us/Classical+Electrodynamics%2C+3rd+Edition-p-9780471309321): Obra matemática y avanzada requerida en todos los posgrados y doctorados del mundo físico.
+3. [Electricity and Magnetism - Edward M. Purcell & David J. Morin](https://www.cambridge.org/highereducation/books/electricity-and-magnetism/C16C976ADCD2F4A96DD8DD3DDAB303CE): Magnífico abordaje donde el magnetismo emerge naturalmente como consecuencia de la relatividad especial.
+4. [Física Universitaria (Vol. 2) - Sears y Zemansky](https://www.pearson.com/store/p/fisica-universitaria-vol-2/P200000000305/9786073244404): Libro fundamental de primer año que incluye un tratamiento fenomenológico completo de los circuitos.
+5. [Fundamentos de Circuitos Eléctricos - Sadiku](https://www.mheducation.com/highered/product/fundamentals-electric-circuits-alexander-sadiku/M9781260226409.html): Un referente internacional fundamental que cubre cada teorema importante desde cero con problemas prácticos.

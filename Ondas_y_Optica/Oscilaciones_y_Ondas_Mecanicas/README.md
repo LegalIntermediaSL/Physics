@@ -6,17 +6,17 @@ El estudio del movimiento oscilatorio tiene raíces en las observaciones de Gali
 
 ## 🧮 Desarrollo Teórico Profundo
 El modelo más básico de oscilación es el Movimiento Armónico Simple (MAS), descrito por la ecuación diferencial:
-$ \frac{d^2x}{dt^2} + \omega^2 x = 0 $
+$$ \frac{d^2x}{dt^2} + \omega^2 x = 0 $$
 donde $ \omega = \sqrt{\frac{k}{m}} $ es la frecuencia angular natural.
 La solución general es:
-$ x(t) = A \cos(\omega t + \phi) $
+$$ x(t) = A \cos(\omega t + \phi) $$
 
 Para ondas unidimensionales propagándose en un medio, la ecuación de onda de d'Alembert es:
-$ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} $
+$$ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} $$
 donde $ v = \sqrt{\frac{T}{\mu}} $ es la velocidad de la onda en una cuerda (con tensión $ T $ y densidad lineal de masa $ \mu $).
 
 La solución para una onda armónica viajera es:
-$ y(x,t) = A \sin(kx \pm \omega t) $
+$$ y(x,t) = A \sin(kx \pm \omega t) $$
 donde el número de onda es $ k = \frac{2\pi}{\lambda} $ y la frecuencia angular $ \omega = \frac{2\pi}{T} = 2\pi f $.
 
 ## 🛠 Ejemplo Práctico
@@ -32,6 +32,26 @@ donde el número de onda es $ k = \frac{2\pi}{\lambda} $ y la frecuencia angular
 5. Ecuación de la onda: $ y(x,t) = 0.05 \sin\left(\frac{\pi}{2} x - 100\pi t\right) \text{ m} $.
 
 ## 📚 Recursos Específicos
-- **Cursos:** "Vibrations and Waves" (MIT OCW, Lewin), "Physics of Waves" (edX).
-- **Artículos/Textos:** *Vibrations and Waves* (A.P. French), *Physics of Waves* (Elmore & Heald).
-- **Simulaciones:** "Wave on a String" (PhET Interactive Simulations).
+### Cursos
+1. ["Vibrations and Waves" - MIT OpenCourseWare (Walter Lewin)](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)
+2. ["Physics of Waves" - edX](https://www.edx.org/course/waves-and-optics)
+3. ["Mechanical Waves" - Khan Academy](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
+4. ["Introduction to Oscillations and Waves" - Coursera](https://www.coursera.org/learn/physics-101)
+5. ["Vibrations and Waves" - NPTEL (IIT Bombay)](https://nptel.ac.in/courses/115101011)
+
+### Artículos y Simulaciones
+1. ["Wave on a String" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-on-a-string)
+2. ["Masses and Springs" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/masses-and-springs)
+3. ["Normal Modes" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/normal-modes)
+4. ["Longitudinal vs Transverse Waves" - oPhysics](https://ophysics.com/w7.html)
+5. ["Standing Waves Simulation" - oPhysics](https://ophysics.com/w8.html)
+6. ["Beat Frequency" - oPhysics](https://ophysics.com/w10.html)
+7. ["Resonance in a Tube" - oPhysics](https://ophysics.com/w9.html)
+8. ["Wave Interference" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-interference)
+9. ["Simple Harmonic Motion" - oPhysics](https://ophysics.com/w1.html)
+
+### 📖 Referencias Útiles y Bibliografía
+1. [*Vibrations and Waves* por A.P. French](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362)
+2. [*Physics of Waves* por William C. Elmore y Mark A. Heald](https://store.doverpublications.com/products/9780486649269)
+3. ["The Feynman Lectures on Physics, Vol. I"](https://www.feynmanlectures.caltech.edu/I_toc.html)
+4. [*Fundamentals of Physics* por Halliday & Resnick](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+12th+Edition-p-9781119773511)

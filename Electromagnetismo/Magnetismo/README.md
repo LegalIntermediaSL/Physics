@@ -50,12 +50,28 @@ $$ \oint_S \vec{B} \cdot d\vec{A} = 0 \quad \implies \quad \nabla \cdot \vec{B} 
 ---
 
 ## 📚 Recursos Específicos
+
 ### 🎓 Cursos y Clases Recomendadas
-* **MIT 8.02 (Electricity and Magnetism):** Lecciones sobre campos magnéticos y la Ley de Ampère.
-* **The Feynman Lectures on Physics:** Vol. 2, Capítulos 13 y 14 (Magnetostatics & Magnetic Field in Various Situations).
-* **Yale Fundamentals of Physics II (PHYS 201):** Clases del Profesor Ramamurti Shankar sobre magnetismo y fuerzas sobre cargas.
+1. [MIT 8.02 - Electricity and Magnetism](https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/): Clases icónicas con demostraciones sobre el campo magnético generado por corrientes, fuerzas de espiras magnéticas e inducción.
+2. [Yale PHYS 201 - Fundamentals of Physics II](https://oyc.yale.edu/physics/phys-201): Las magistrales lecciones del Prof. Ramamurti Shankar explorando a detalle la Fuerza de Lorentz, ciclotrones y el tensor electromagnético.
+3. [Feynman Lectures on Physics - Vol II, Ch 13: Magnetostatics](https://www.feynmanlectures.caltech.edu/II_13.html): Analiza el comportamiento estacionario de las corrientes y delinea conceptualmente el rotacional del vector magnético.
+4. [Khan Academy - Campos Magnéticos](https://es.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields): Una extensa serie de resoluciones en formato de "pizarra virtual", explicando la regla de la mano derecha con pericia.
+5. [Coursera - Magnetic Fields and Forces](https://www.coursera.org/learn/physics-102): Ideal para el manejo y cálculo detallado del vector de Ampère y la ley integral de flujo de Biot-Savart en 3D.
+6. [edX - E&M: Magnetism and Induction](https://www.edx.org/course/electricity-and-magnetism-part-2): Curso sólido que detalla cómo un flujo magnético variable en una espira origina un campo eléctrico turbillonario no conservativo.
 
 ### 📝 Artículos e Interactivos Interesantes
-* **PhET - Laboratorio Electromagnético de Faraday:** Permite interactuar con imanes, bobinas y visualizar los campos magnéticos creados por corrientes.
-* **HyperPhysics - Magnetism:** Un árbol de conceptos muy útil sobre la teoría magnética.
-* **Oersted's Experiment (Artículo Histórico):** Leer acerca de los experimentos originales de Ørsted que relacionaron la aguja de una brújula con la corriente eléctrica.
+1. [PhET - Laboratorio Electromagnético de Faraday](https://phet.colorado.edu/en/simulations/faradays-law): Genial emulador web interactivo donde se experimenta en tiempo real con un imán de barra, un osciloscopio virtual, un voltímetro, y bobinas de distinto espirado.
+2. [HyperPhysics - Magnetism](http://hyperphysics.phy-astr.gsu.edu/hbase/magnetic/magcon.html): Recorrido extenso e íntegro sobre la fuerza magnética en cables, momentos magnéticos de espiras, magnetización, ferromagnetismo e histéresis.
+3. [Wikipedia: Fuerza de Lorentz](https://es.wikipedia.org/wiki/Fuerza_de_Lorentz): Exposición a fondo de la ecuación del movimiento para partículas cargadas en aceleradores de partículas de altas energías, plasmas y tubos de rayos catódicos.
+4. [Wikipedia: Experimento de Ørsted](https://es.wikipedia.org/wiki/Experimento_de_Oersted): Revisión del crucial descubrimiento experimental de 1820 de la interdependencia simbiótica entre espiras de conducción eléctrica y brújulas con aguja imantada.
+5. [Física Práctica - Fuerza Magnética](https://www.fisicapractica.com/fuerza-magnetica.php): Breves extractos orientados a resolver las fuerzas transversales ejercidas entre alambres conductores paralelos en direcciones idénticas o contrapuestas.
+6. [FísicaLab - El Campo Magnético y el Movimiento](https://www.fisicalab.com/tema/campo-magnetico): Decenas de problemas, explicaciones geométricas e ideas centrales para comprender la trayectoria en espiral que genera un ciclotrón o un espectrómetro de masa.
+7. [National MagLab - Magnet Academy](https://nationalmaglab.org/education/magnet-academy): Gran portal educativo (financiado y mantenido por el National High Magnetic Field Laboratory de EEUU) que compila demostraciones maravillosas de diamagnetismo y superconducción a baja temperatura.
+8. [LibreTexts - Magnetic Forces and Fields](https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/Map%3A_University_Physics_II_-_Thermodynamics_Electricity_and_Magnetism_(OpenStax)/11%3A_Magnetic_Forces_and_Fields): La bibliografía libre para los cursos básicos de magnetostática de todos los capítulos que conciernen el flujo continuo no esférico magnético.
+
+### 📖 Referencias Útiles y Bibliografía
+1. [Introduction to Electrodynamics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/971275E590D0DE07E9CD0DB4F2C2FA04): El texto de referencia por excelencia (estándar de oro) para estudiantes de pregrado en física, claro y didáctico.
+2. [Classical Electrodynamics - John David Jackson](https://www.wiley.com/en-us/Classical+Electrodynamics%2C+3rd+Edition-p-9780471309321): Obra matemática y avanzada requerida en todos los posgrados y doctorados del mundo físico.
+3. [Electricity and Magnetism - Edward M. Purcell & David J. Morin](https://www.cambridge.org/highereducation/books/electricity-and-magnetism/C16C976ADCD2F4A96DD8DD3DDAB303CE): Magnífico abordaje donde el magnetismo emerge naturalmente como consecuencia de la relatividad especial.
+4. [Física Universitaria (Vol. 2) - Sears y Zemansky](https://www.pearson.com/store/p/fisica-universitaria-vol-2/P200000000305/9786073244404): Gran manual estándar ampliamente adoptado por miles de universidades para enseñar fuerza motriz magnética.
+5. [Foundations of Electromagnetic Theory - Reitz, Milford & Christy](https://www.pearson.com/store/p/foundations-of-electromagnetic-theory/P200000003666): Libro con abordajes únicos, extremadamente riguroso, especialmente profundo al examinar las propiedades magnéticas de medios magnetizados macroscópicos.
