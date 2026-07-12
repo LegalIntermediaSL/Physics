@@ -1,39 +1,28 @@
 # Fluidos y Medios Continuos
-
-La física de fluidos y medios continuos estudia materiales que pueden describirse, a gran escala, como distribuciones continuas de densidad, velocidad, presión o deformación. Esta aproximación permite tratar desde líquidos y gases en movimiento hasta sólidos elásticos, atmósferas, océanos y flujos tecnológicos.
+La mecánica de fluidos y medios continuos es la rama de la física que estudia el comportamiento de los materiales que se pueden modelar como continuos en lugar de discretos. Esto abarca desde líquidos y gases (fluidos) hasta sólidos deformables. Es una disciplina esencial para la ingeniería, meteorología, aeronáutica y el diseño estructural.
 
 ## Temas de Estudio
+- 💧 **Hidrostática y Principio de Pascal**
+- 🌪️ **Dinámica de Fluidos y Ecuación de Bernoulli**
+- 🍯 **Viscosidad y Turbulencia**
+- 🧱 **Elasticidad de Materiales**
 
-Explora cada una de las siguientes subcarpetas:
+## 📚 Recursos Recomendados
+### Cursos Online
+1. "Introduction to Fluid Mechanics" - NPTEL
+2. "Fluid Mechanics" - Coursera (University of Colorado Boulder)
+3. "Mechanics of Materials I: Fundamentals of Stress & Strain and Axial Loading" - Coursera (Georgia Tech)
+4. "Advanced Fluid Mechanics" - MIT OpenCourseWare
+5. "Continuum Mechanics" - Coursera / edX
 
-- 🌊 **[Hidrostatica](./Hidrostatica)**: Presión, empuje, equilibrio de fluidos y principio de Pascal.
-- 🌪️ **[Dinámica de Fluidos](./Dinamica_de_Fluidos)**: Conservación de masa, cantidad de movimiento, Bernoulli y ecuaciones de movimiento.
-- 🧴 **[Viscosidad y Capas Límite](./Viscosidad_y_Capas_Limite)**: Flujo viscoso, no deslizamiento, Reynolds, transición y arrastre.
-- 🧱 **[Elasticidad y Medios Continuos](./Elasticidad_y_Medios_Continuos)**: Tensores de esfuerzo y deformación, leyes constitutivas y propagación en medios deformables.
-
----
-
-## 📚 Recursos y Cursos Recomendados
-
-### Cursos Online (5+)
-1. [MIT 2.06 - Fluid Dynamics](https://ocw.mit.edu/courses/2-06-fluid-dynamics-spring-2013/): Introducción muy sólida a la mecánica de fluidos.
-2. [MIT 2.25 - Advanced Fluid Mechanics](https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/): Continúa con Navier-Stokes, vorticidad, similitud, turbulencia y capas límite.
-3. [MIT 18.354J - Nonlinear Dynamics II: Continuum Systems](https://ocw.mit.edu/courses/18-354j-nonlinear-dynamics-ii-continuum-systems-spring-2015/): Muy útil para ver difusión, estabilidad y formación de patrones.
-4. [MIT 12.005 - Applications of Continuum Mechanics to Earth, Atmospheric, and Planetary Sciences](https://ocw.mit.edu/courses/12-005-applications-of-continuum-mechanics-to-earth-atmospheric-and-planetary-sciences-spring-2006/): Excelente para unir sólidos, fluidos y geofísica.
-5. [MIT 1.050 - Solid Mechanics](https://ocw.mit.edu/courses/1-050-solid-mechanics-fall-2004/): Base útil para la parte sólida de los medios continuos.
-6. [MIT 1.033 - Mechanics of Material Systems: An Energy Approach](https://ocw.mit.edu/courses/1-033-mechanics-of-material-systems-an-energy-approach-fall-2003/): Enfoque muy valioso sobre deformación, esfuerzo y elasticidad.
-
-### Artículos y Textos de Referencia (10+)
-1. **NASA Glenn**: [Bernoulli's Equation](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bernoullis-equation/) - Explicación física útil para empezar.
-2. **NASA Glenn**: [Boundary Layer](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/boundary-layer/) - Introducción accesible a un concepto clave.
-3. **NASA Glenn**: [Pascal's Principle and Hydraulics](https://www.grc.nasa.gov/www/k-12/WindTunnel/Activities/Pascals_principle.html) - Buen recurso para hidrostatica.
-4. **PhET**: [Fluid Pressure and Flow](https://phet.colorado.edu/en/simulations/fluid-pressure-and-flow) - Para explorar presión y velocidad en tuberías.
-5. **PhET**: [Buoyancy](https://phet.colorado.edu/en/simulation/buoyancy) - Visualización directa de empuje y flotación.
-6. **Wikipedia**: [Mecánica de fluidos](https://es.wikipedia.org/wiki/Mec%C3%A1nica_de_flu%C3%ADdos).
-7. **Wikipedia**: [Ecuaciones de Navier-Stokes](https://es.wikipedia.org/wiki/Ecuaciones_de_Navier-Stokes).
-8. **Wikipedia**: [Elasticidad lineal](https://es.wikipedia.org/wiki/Elasticidad_lineal).
-9. **Libro**: "Fluid Mechanics" - Kundu, Cohen y Dowling.
-10. **Libro**: "An Introduction to Fluid Dynamics" - G. K. Batchelor.
-11. **Libro**: "Elementary Fluid Dynamics" - D. J. Acheson.
-12. **Libro**: "Theory of Elasticity" - Landau y Lifshitz.
-13. **Libro**: "Continuum Mechanics" - A. J. M. Spencer.
+### Artículos y Textos de Referencia
+1. *Fluid Mechanics* por Frank M. White - Excelente libro de texto para introducción y niveles intermedios.
+2. *Mechanics of Fluids* por Irving H. Shames - Referencia sólida con aplicaciones.
+3. *Introduction to Fluid Mechanics* por Robert W. Fox y Alan T. McDonald.
+4. *Theory of Elasticity* por S.P. Timoshenko y J.N. Goodier - Un clásico de mecánica de sólidos.
+5. *Continuum Mechanics* por A.J.M. Spencer - Introducción rigurosa y matemática.
+6. *Hydrodynamics* por Sir Horace Lamb - Tratado histórico y matemático profundo.
+7. *Fluid Mechanics* por L.D. Landau y E.M. Lifshitz - Teoría avanzada, volumen 6 del curso de Física Teórica.
+8. *Transport Phenomena* por R. Byron Bird et al. - Fundamental para entender fluidos, calor y masa.
+9. "On the Dynamics of the Capillary Jets" por Lord Rayleigh (Artículo clásico).
+10. *An Introduction to Fluid Dynamics* por G.K. Batchelor.

@@ -1,40 +1,30 @@
 # Física de Plasmas y Fusión
 
-La física de plasmas estudia gases ionizados en los que las interacciones colectivas entre partículas cargadas y campos electromagnéticos dominan la dinámica. Es un área fundamental para entender el Sol, el medio interplanetario, las auroras, ciertos procesos industriales y uno de los grandes retos energéticos del siglo XXI: la fusión controlada.
+La física de plasmas estudia el cuarto estado de la materia, un gas ionizado conformado por iones positivos y electrones libres, que exhibe un comportamiento colectivo bajo la influencia de fuerzas electromagnéticas. La fusión nuclear, por su parte, busca aprovechar la energía liberada al unir núcleos atómicos ligeros, utilizando plasmas confinados a temperaturas extremas.
 
 ## Temas de Estudio
 
-Explora cada una de las siguientes subcarpetas:
+- 🌌 **Conceptos Básicos de Plasma**: Definición, longitud de Debye, frecuencia de plasma, parámetros fundamentales.
+- 🧲 **Magnetohidrodinámica (MHD)**: Estudio de los plasmas como fluidos conductores bajo la influencia de campos magnéticos.
+- ☀️ **Fusión Nuclear y Confinamiento**: Reacciones de fusión, criterio de Lawson, confinamiento magnético (Tokamak, Stellarator) e inercial.
 
-- ⚡ **[Fundamentos de Plasmas](./Fundamentos_de_Plasmas)**: Cuasineutralidad, apantallamiento de Debye, frecuencias características y descripciones cinética y fluida.
-- 🧲 **[Magnetohidrodinámica](./Magnetohidrodinamica)**: Modelo MHD, equilibrio, estabilidad e inestabilidades en plasmas magnetizados.
-- 🔥 **[Confinamiento y Fusión](./Confinamiento_y_Fusion)**: Tokamaks, stellarators, condiciones de ignición y bases físicas de la energía de fusión.
-- 🌌 **[Plasmas Espaciales](./Plasmas_Espaciales)**: Viento solar, magnetosferas, reconexión magnética y clima espacial.
+## 📚 Recursos Recomendados
 
----
+### Cursos Online
+1. [Plasma Physics: Introduction - EPFL (Coursera)](https://www.coursera.org/)
+2. [Nuclear Energy: Science, Systems and Society - MIT (edX)](https://www.edx.org/)
+3. [Introduction to Plasma Physics - Princeton University (Coursera)](https://www.coursera.org/)
+4. [Fusion Energy: The Science of the Sun - University of York (FutureLearn)](https://www.futurelearn.com/)
+5. [Plasma Physics and Applications - MIT OpenCourseWare](https://ocw.mit.edu/)
 
-## 📚 Recursos y Cursos Recomendados
-
-### Cursos Online (5+)
-1. [MIT 22.611J - Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2006/): Curso base excelente sobre la física del plasma.
-2. [MIT 22.615 - MHD Theory of Fusion Systems](https://ocw.mit.edu/courses/22-615-mhd-theory-of-fusion-systems-spring-2007/): Introducción rigurosa a equilibrio y estabilidad MHD en fusión.
-3. [MIT 22.012 - Seminar: Fusion and Plasma Physics](https://ocw.mit.edu/courses/22-012-seminar-fusion-and-plasma-physics-spring-2006/): Panorama amplio de fusión, teoría y tecnología.
-4. [MIT 22.67J - Principles of Plasma Diagnostics](https://ocw.mit.edu/courses/22-67j-principles-of-plasma-diagnostics-fall-2023/): Cómo se miden densidad, temperatura, campos y partículas en plasmas.
-5. [PPPL - Undergraduate Course on Plasma Physics and Fusion Energy Sciences](https://www.pppl.gov/education/undergraduate): Muy útil para entrar en el área desde un enfoque moderno.
-6. [IPPEX - Interactive Plasma Physics Experience](https://ippex.pppl.gov/): Recurso interactivo para visualizar conceptos de plasma y tokamaks.
-
-### Artículos y Textos de Referencia (10+)
-1. **MIT OCW**: [Lecture Notes - Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/pages/lecture-notes/) - Notas muy valiosas para autoestudio.
-2. **MIT OCW**: [Readings - Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2006/pages/readings/) - Lista base de textos recomendados.
-3. **ITER**: [ITER Home](https://www.iter.org/) - Estado del arte en fusión magnética a gran escala.
-4. **ITER**: [Worldwide Fusion Links](https://www.iter.org/scientists/worldwide-fusion-links) - Mapa internacional de laboratorios y experimentos.
-5. **PPPL**: [Education](https://www.pppl.gov/education) - Portal educativo del Princeton Plasma Physics Laboratory.
-6. **NASA Science**: [Framework for Heliophysics Education](https://science.nasa.gov/science-nasa-gov-431638/) - Buen punto de entrada para plasmas espaciales.
-7. **NASA SVS**: [Wave & Plasma Zoo](https://svs.gsfc.nasa.gov/gallery/heliophysics-education-resources/) - Visualizaciones útiles de ondas y plasmas.
-8. **Wikipedia**: [Plasma](https://es.wikipedia.org/wiki/Plasma_(estado_de_la_materia)).
-9. **Wikipedia**: [Magnetohidrodinámica](https://es.wikipedia.org/wiki/Magnetohidrodin%C3%A1mica).
-10. **Wikipedia**: [Fusión nuclear](https://es.wikipedia.org/wiki/Fusi%C3%B3n_nuclear).
-11. **Libro**: "Introduction to Plasma Physics and Controlled Fusion" - Francis F. Chen.
-12. **Libro**: "Plasma Physics and Fusion Energy" - Jeffrey P. Freidberg.
-13. **Libro**: "Fundamentals of Plasma Physics" - J. A. Bittencourt.
-14. **Libro**: "Spheromaks" - P. M. Bellan.
+### Artículos y Textos de Referencia
+1. Chen, F. F. (2016). *Introduction to Plasma Physics and Controlled Fusion*. Springer.
+2. Bellan, P. M. (2006). *Fundamentals of Plasma Physics*. Cambridge University Press.
+3. Freidberg, J. P. (2007). *Plasma Physics and Fusion Energy*. Cambridge University Press.
+4. Gurnett, D. A., & Bhattacharjee, A. (2005). *Introduction to Plasma Physics: With Space and Laboratory Applications*. Cambridge University Press.
+5. Krall, N. A., & Trivelpiece, A. W. (1973). *Principles of Plasma Physics*. McGraw-Hill.
+6. Wesson, J. (2011). *Tokamaks* (Vol. 149). Oxford University Press.
+7. Goldston, R. J., & Rutherford, P. H. (1995). *Introduction to Plasma Physics*. CRC Press.
+8. Boyd, T. J. M., & Sanderson, J. J. (2003). *The Physics of Plasmas*. Cambridge University Press.
+9. Sturrock, P. A. (1994). *Plasma Physics: An Introduction to the Theory of Astrophysical, Geophysical & Laboratory Plasmas*. Cambridge University Press.
+10. Spitzer, L. (2006). *Physics of Fully Ionized Gases*. Dover Publications.

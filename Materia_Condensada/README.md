@@ -1,38 +1,30 @@
 # Materia Condensada
 
-La materia condensada estudia las propiedades colectivas de sistemas con un gran número de partículas, especialmente sólidos y líquidos. Es una de las ramas más amplias de la física moderna y conecta conceptos fundamentales con tecnologías como chips, sensores, materiales magnéticos y superconductores.
+La física de la materia condensada es la rama de la física que se encarga del estudio de las características físicas macroscópicas y microscópicas de la materia. Especialmente se enfoca en las fases condensadas que aparecen cuando el número de constituyentes de un sistema (átomos, moléculas o electrones) es grande y las interacciones entre ellos son fuertes. Las fases más comunes son los sólidos y los líquidos.
 
 ## Temas de Estudio
+- 💎 [Estructura Cristalina y Redes](./Estructura_Cristalina_y_Redes)
+- ⚡ [Propiedades Electrónicas y Bandas](./Propiedades_Electronicas_y_Bandas)
+- 🧲 [Magnetismo en Materia](./Magnetismo_en_Materia)
+- 🥶 [Superconductividad](./Superconductividad)
 
-Explora cada una de las siguientes subcarpetas:
+## 📚 Recursos Recomendados
 
-- 🧱 **[Cristalografía y Redes](./Cristalografia_y_Redes)**: Estructuras cristalinas, redes de Bravais, defectos y difracción.
-- ⚙️ **[Electrones en Sólidos](./Electrones_en_Solidos)**: Gas de electrones, bandas, superficie de Fermi y transporte.
-- 💻 **[Semiconductores](./Semiconductores)**: Band gap, dopaje, uniones p-n y dispositivos.
-- 🧲 **[Superconductividad y Magnetismo](./Superconductividad_y_Magnetismo)**: Orden magnético, efecto Meissner, pares de Cooper y fases colectivas.
+### Cursos Online
+1. **Física de la Materia Condensada (MIT OpenCourseWare):** Un curso riguroso que abarca la teoría de bandas, la dinámica de la red y las propiedades magnéticas.
+2. **Solid State Physics (NPTEL):** Excelente curso introductorio y avanzado de la India, con énfasis en conceptos de física del estado sólido.
+3. **Introduction to Solid State Physics (Coursera):** Un enfoque práctico sobre los sólidos cristalinos, estructura de bandas y defectos.
+4. **Quantum Theory of Condensed Matter (Stanford):** Curso enfocado en la interacción de muchos cuerpos y la teoría cuántica de campos en sólidos.
+5. **Topological Insulators (edX):** Para entender la materia condensada moderna y las fases topológicas.
 
----
-
-## 📚 Recursos y Cursos Recomendados
-
-### Cursos Online (5+)
-1. [MIT 8.231 - Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/): Introducción potente a la teoría cuántica de sólidos.
-2. [MIT 6.730 - Physics for Solid-State Applications](https://ocw.mit.edu/courses/6-730-physics-for-solid-state-applications-spring-2003/): Redes, vibraciones, electrones y transporte.
-3. [MIT 3.091SC - Introduction to Solid State Chemistry](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/): Entrada excelente a estructura y materiales.
-4. [MIT 8.511 - Theory of Solids I](https://ocw.mit.edu/courses/8-511-theory-of-solids-i-fall-2004/): Curso avanzado sobre estructura cristalina, bandas y fonones.
-5. [MIT 8.513 - Modern Quantum Many-body Physics for Condensed Matter Systems](https://ocw.mit.edu/courses/8-513-modern-quantum-many-body-physics-for-condensed-matter-systems-fall-2021/): Para una visión contemporánea de sistemas correlacionados.
-6. [Khan Academy - Dispositivos semiconductores](https://es.khanacademy.org/science/electrical-engineering/ee-semiconductor-devices): Muy útil para unir la física del sólido con aplicaciones electrónicas.
-
-### Artículos y Textos de Referencia (10+)
-1. **APS**: [DCMP Home](https://engage.aps.org/dcmp/home) - Visión institucional del campo y sus subáreas.
-2. **Wikipedia**: [Materia condensada](https://es.wikipedia.org/wiki/F%C3%ADsica_de_la_materia_condensada) - Entrada general a la disciplina.
-3. **Wikipedia**: [Red cristalina](https://es.wikipedia.org/wiki/Red_cristalina) - Bases estructurales de los sólidos.
-4. **Wikipedia**: [Teoría de bandas](https://es.wikipedia.org/wiki/Teor%C3%ADa_de_bandas) - Fundamento para distinguir metales, aislantes y semiconductores.
-5. **MIT OCW**: [Semiconductors](https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/electronic-materials/14-semiconductors/) - Clase específica sobre materiales semiconductores.
-6. **Scholarpedia**: [Bardeen-Cooper-Schrieffer theory](https://www.scholarpedia.org/article/Bardeen-Cooper-Schrieffer_theory) - Referencia clásica sobre superconductividad.
-7. **APS Journals**: [Physical Review B](https://prb.aps.org/) - Revista principal del área.
-8. **Libro**: "Introduction to Solid State Physics" - Charles Kittel.
-9. **Libro**: "Solid State Physics" - Ashcroft y Mermin.
-10. **Libro**: "Semiconductor Physics and Devices" - Donald Neamen.
-11. **Libro**: "Principles of Electronic Materials and Devices" - S. O. Kasap.
-12. **Libro**: "Quantum Theory of Solids" - Charles Kittel.
+### Artículos y Textos de Referencia
+1. Ashcroft, N. W., & Mermin, N. D. (1976). *Solid State Physics*. Saunders College. (El texto fundamental).
+2. Kittel, C. (2004). *Introduction to Solid State Physics*. Wiley. (Clásico introductorio).
+3. Simon, S. H. (2013). *The Oxford Solid State Basics*. Oxford University Press. (Moderno y pedagógico).
+4. Anderson, P. W. (1972). *More is Different*. Science. (Artículo seminal sobre el surgimiento de propiedades en materia condensada).
+5. Tinkham, M. (1996). *Introduction to Superconductivity*. McGraw-Hill.
+6. Altland, A., & Simons, B. (2010). *Condensed Matter Field Theory*. Cambridge University Press.
+7. Marder, M. P. (2010). *Condensed Matter Physics*. Wiley.
+8. Girvin, S. M., & Yang, K. (2019). *Modern Condensed Matter Physics*. Cambridge University Press.
+9. Chaikin, P. M., & Lubensky, T. C. (1995). *Principles of Condensed Matter Physics*. Cambridge.
+10. Bardeen, J., Cooper, L. N., & Schrieffer, J. R. (1957). *Theory of Superconductivity*. Physical Review.
