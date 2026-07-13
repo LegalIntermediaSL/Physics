@@ -112,6 +112,100 @@ Si $S_{hkl} = 0$, el pico de difracción predicho geométricamente por la red de
    
 **Conclusión:** En una red BCC de átomos idénticos (como el hierro $\alpha$), todos los planos cuya suma de índices de Miller sea impar se extinguen debido a interferencia destructiva perfecta del átomo central con los átomos de los vértices. En consecuencia, **el pico (1 0 0) no se observará en el difractograma de rayos X**. El primer pico visible corresponderá al (1 1 0).
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Factor de Estructura de la Red FCC
+Calcule el factor de estructura $S_{hkl}$ para una red cúbica centrada en las caras (FCC) formada por átomos idénticos con factor de dispersión atómica $f$. Determine las reglas de extinción.
+
+**Solución paso a paso:**
+La celda unitaria convencional FCC contiene 4 átomos en las siguientes posiciones relativas $(x,y,z)$:
+1) $(0,0,0)$
+2) $(1/2, 1/2, 0)$
+3) $(1/2, 0, 1/2)$
+4) $(0, 1/2, 1/2)$
+El factor de estructura geométrico es $S_{hkl} = \sum_{j=1}^4 f e^{-2\pi i (hx_j + ky_j + lz_j)}$.
+Sustituyendo las posiciones:
+$$ S_{hkl} = f \left[ 1 + e^{-i\pi(h+k)} + e^{-i\pi(h+l)} + e^{-i\pi(k+l)} \right] $$
+Usando la propiedad $e^{-i\pi n} = (-1)^n$:
+$$ S_{hkl} = f \left[ 1 + (-1)^{h+k} + (-1)^{h+l} + (-1)^{k+l} \right] $$
+Analizamos la paridad de los índices $(h,k,l)$:
+- Si $h,k,l$ son todos pares o todos impares (ej. 111, 200, 220), la suma de cualquier par será par. Entonces $(-1)^{\text{par}} = 1$.
+  $$ S_{hkl} = f [1 + 1 + 1 + 1] = 4f $$
+- Si hay una mezcla de pares e impares (ej. 100, 210, 211), al menos dos sumas serán impares y una par (o viceversa).
+  $$ S_{hkl} = f [1 - 1 - 1 + 1] = 0 $$
+Por lo tanto, la red FCC solo presenta picos de difracción cuando los índices $h,k,l$ tienen todos la misma paridad.
+
+### Problema 2: Volumen de la Red Recíproca
+Demuestre que el volumen de la celda primitiva en el espacio recíproco $V_{rec}$ está relacionado con el volumen de la celda primitiva directa $V_c$ por la relación $V_{rec} = (2\pi)^3 / V_c$.
+
+**Solución paso a paso:**
+El volumen de la celda en el espacio recíproco es el producto triple escalar de sus vectores base:
+$$ V_{rec} = \mathbf{b}_1 \cdot (\mathbf{b}_2 \times \mathbf{b}_3) $$
+Usando las definiciones de los vectores de la red recíproca:
+$$ \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V_c}, \quad \mathbf{b}_2 = 2\pi \frac{\mathbf{a}_3 \times \mathbf{a}_1}{V_c}, \quad \mathbf{b}_3 = 2\pi \frac{\mathbf{a}_1 \times \mathbf{a}_2}{V_c} $$
+Sustituyendo $\mathbf{b}_2$ y $\mathbf{b}_3$ en el producto vectorial:
+$$ \mathbf{b}_2 \times \mathbf{b}_3 = \frac{(2\pi)^2}{V_c^2} [(\mathbf{a}_3 \times \mathbf{a}_1) \times (\mathbf{a}_1 \times \mathbf{a}_2)] $$
+Aplicando la identidad del vector cuádruple $(\mathbf{A} \times \mathbf{B}) \times \mathbf{C} = \mathbf{B}(\mathbf{A}\cdot\mathbf{C}) - \mathbf{A}(\mathbf{B}\cdot\mathbf{C})$ con $\mathbf{C} = \mathbf{a}_1 \times \mathbf{a}_2$:
+$$ (\mathbf{a}_3 \times \mathbf{a}_1) \times \mathbf{C} = \mathbf{a}_1 (\mathbf{a}_3 \cdot \mathbf{C}) - \mathbf{a}_3 (\mathbf{a}_1 \cdot \mathbf{C}) $$
+Sabemos que $\mathbf{a}_3 \cdot (\mathbf{a}_1 \times \mathbf{a}_2) = V_c$ y $\mathbf{a}_1 \cdot (\mathbf{a}_1 \times \mathbf{a}_2) = 0$. Entonces:
+$$ \mathbf{b}_2 \times \mathbf{b}_3 = \frac{(2\pi)^2}{V_c^2} [\mathbf{a}_1 (V_c)] = \frac{(2\pi)^2}{V_c} \mathbf{a}_1 $$
+Ahora multiplicamos escalarmente por $\mathbf{b}_1$:
+$$ V_{rec} = \mathbf{b}_1 \cdot \left( \frac{(2\pi)^2}{V_c} \mathbf{a}_1 \right) = \frac{(2\pi)^2}{V_c} (\mathbf{b}_1 \cdot \mathbf{a}_1) $$
+Sabiendo que por definición $\mathbf{b}_1 \cdot \mathbf{a}_1 = 2\pi$:
+$$ V_{rec} = \frac{(2\pi)^3}{V_c} $$
+
+### Problema 3: Separación Interplanar $d_{hkl}$ en Sistema Cúbico
+Demuestre que la distancia interplanar $d_{hkl}$ para una red ortogonal (incluyendo la cúbica de lado $a$) está dada por $1/d^2 = (h/a)^2 + (k/b)^2 + (l/c)^2$. Evalúe para la red cúbica.
+
+**Solución paso a paso:**
+El vector de la red recíproca asociado al plano $(hkl)$ es:
+$$ \mathbf{G}_{hkl} = h\mathbf{b}_1 + k\mathbf{b}_2 + l\mathbf{b}_3 $$
+La distancia interplanar se define como $d_{hkl} = 2\pi / |\mathbf{G}_{hkl}|$. Por lo tanto, $1/d_{hkl}^2 = |\mathbf{G}_{hkl}|^2 / (2\pi)^2$.
+Para una red ortogonal pura con parámetros de red $a, b, c$:
+$$ \mathbf{a}_1 = a\mathbf{\hat{i}}, \quad \mathbf{a}_2 = b\mathbf{\hat{j}}, \quad \mathbf{a}_3 = c\mathbf{\hat{k}} $$
+Los vectores recíprocos son:
+$$ \mathbf{b}_1 = \frac{2\pi}{a}\mathbf{\hat{i}}, \quad \mathbf{b}_2 = \frac{2\pi}{b}\mathbf{\hat{j}}, \quad \mathbf{b}_3 = \frac{2\pi}{c}\mathbf{\hat{k}} $$
+Por lo tanto, $\mathbf{G}_{hkl} = \frac{2\pi h}{a}\mathbf{\hat{i}} + \frac{2\pi k}{b}\mathbf{\hat{j}} + \frac{2\pi l}{c}\mathbf{\hat{k}}$.
+El módulo al cuadrado es:
+$$ |\mathbf{G}_{hkl}|^2 = 4\pi^2 \left[ \left(\frac{h}{a}\right)^2 + \left(\frac{k}{b}\right)^2 + \left(\frac{l}{c}\right)^2 \right] $$
+Sustituyendo en la ecuación de la distancia interplanar:
+$$ \frac{1}{d_{hkl}^2} = \left(\frac{h}{a}\right)^2 + \left(\frac{k}{b}\right)^2 + \left(\frac{l}{c}\right)^2 $$
+Para una red cúbica, $a = b = c$, lo que simplifica la expresión a:
+$$ d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}} $$
+
+## 💻 Simulaciones Computacionales
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+def plot_bcc_lattice():
+    fig = plt.figure(figsize=(8, 8))
+    ax = fig.add_subplot(111, projection='3d')
+    
+    # BCC Unit Cell points
+    r = [-0.5, 0.5]
+    X, Y, Z = np.meshgrid(r, r, r)
+    
+    ax.scatter(X, Y, Z, color='blue', s=100, label='Esquinas')
+    ax.scatter([0], [0], [0], color='red', s=150, label='Centro (BCC)')
+    
+    # Draw unit cell edges
+    for x in r:
+        for y in r:
+            ax.plot([x, x], [y, y], [-0.5, 0.5], 'k-', alpha=0.3)
+            ax.plot([x, x], [-0.5, 0.5], [y, y], 'k-', alpha=0.3)
+            ax.plot([-0.5, 0.5], [x, x], [y, y], 'k-', alpha=0.3)
+            
+    ax.set_title("Simulación: Celda Unitaria BCC")
+    ax.legend()
+    plt.show()
+
+if __name__ == '__main__':
+    plot_bcc_lattice()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

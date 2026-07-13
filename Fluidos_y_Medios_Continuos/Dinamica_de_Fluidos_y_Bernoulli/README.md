@@ -74,6 +74,98 @@ graph TD
    $$ P_2 = 150000 + 500 (4 - 64) = 150000 + 500 (-60) $$
    $ P_2 = 150000 - 30000 = 120000 \text{ Pa} $ (O $ 1.2 \times 10^5 \text{ Pa} $).
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Efecto Venturi con Fluido Compresible**
+Considere el flujo isentrópico de un gas ideal ($\gamma = c_p/c_v$) a través de un tubo de Venturi. Deduzca la expresión exacta para el gasto másico $\dot{m}$ en función de las presiones de entrada $P_1$ y garganta $P_2$, y las áreas $A_1$, $A_2$.
+
+**Solución paso a paso:**
+1. Conservación de la masa: $\dot{m} = \rho_1 A_1 V_1 = \rho_2 A_2 V_2$.
+2. Conservación de la energía (flujo isentrópico de gas ideal): $c_p T_1 + \frac{V_1^2}{2} = c_p T_2 + \frac{V_2^2}{2}$. Usando $c_p T = \frac{\gamma}{\gamma-1} \frac{P}{\rho}$, la ecuación de Bernoulli compresible es:
+   $\frac{\gamma}{\gamma-1} \frac{P_1}{\rho_1} + \frac{V_1^2}{2} = \frac{\gamma}{\gamma-1} \frac{P_2}{\rho_2} + \frac{V_2^2}{2}$.
+3. Relación isentrópica: $P_1 / \rho_1^\gamma = P_2 / \rho_2^\gamma \implies \rho_2 = \rho_1 (P_2/P_1)^{1/\gamma}$.
+4. Expresamos $V_1$ usando continuidad: $V_1 = V_2 \frac{A_2}{A_1} \frac{\rho_2}{\rho_1} = V_2 \frac{A_2}{A_1} (P_2/P_1)^{1/\gamma}$.
+5. Sustituyendo $V_1$ en Bernoulli y factorizando $V_2^2/2$:
+   $\frac{V_2^2}{2} \left[ 1 - \left(\frac{A_2}{A_1}\right)^2 (P_2/P_1)^{2/\gamma} \right] = \frac{\gamma}{\gamma-1} \frac{P_1}{\rho_1} \left[ 1 - \frac{P_2}{P_1} \frac{\rho_1}{\rho_2} \right]$.
+6. Sabiendo que $\frac{\rho_1}{\rho_2} = (P_2/P_1)^{-1/\gamma}$, el corchete de la derecha es $1 - (P_2/P_1)^{(\gamma-1)/\gamma}$.
+7. Despejando $V_2$ e insertándolo en $\dot{m} = \rho_2 A_2 V_2 = A_2 \rho_1 (P_2/P_1)^{1/\gamma} V_2$, obtenemos la ecuación de de Saint-Venant y Wantzel:
+   $\dot{m} = A_2 \sqrt{ \frac{2\gamma}{\gamma-1} P_1 \rho_1 \left[ (P_2/P_1)^{2/\gamma} - (P_2/P_1)^{(\gamma+1)/\gamma} \right] } \left[ 1 - \left(\frac{A_2}{A_1}\right)^2 (P_2/P_1)^{2/\gamma} \right]^{-1/2}$.
+
+**Problema 2: Sifón con Fricción (Ecuación de Energía Generalizada)**
+Un sifón transfiere agua de un depósito grande a una elevación inferior $H$. El tubo tiene diámetro $D$, longitud total $L$ y un factor de fricción de Darcy $f$. La cima del sifón está a altura $h$ por encima del depósito. Calcule la velocidad de salida y la presión mínima absoluta asumiendo flujo turbulento rugoso.
+
+**Solución paso a paso:**
+1. Ecuación de energía entre la superficie del depósito (1) y la salida libre (2):
+   $\frac{P_1}{\gamma_w} + z_1 + \frac{V_1^2}{2g} = \frac{P_2}{\gamma_w} + z_2 + \frac{V_2^2}{2g} + h_L$.
+2. $P_1 = P_2 = P_{atm}$. $z_1 = H$, $z_2 = 0$. $V_1 \approx 0$.
+   La pérdida de carga es $h_L = f \frac{L}{D} \frac{V^2}{2g} + \sum K \frac{V^2}{2g}$ (ignoraremos pérdidas locales, $K=0$).
+   $H = \frac{V^2}{2g} \left( 1 + f \frac{L}{D} \right) \implies V = \sqrt{ \frac{2gH}{1 + f(L/D)} }$.
+3. La presión mínima ocurre en la cima del sifón (punto 3). Ecuación de energía entre 1 y 3 (longitud $L_1$ hasta la cima):
+   $\frac{P_{atm}}{\gamma_w} + H + 0 = \frac{P_3}{\gamma_w} + (H+h) + \frac{V^2}{2g} + f \frac{L_1}{D} \frac{V^2}{2g}$.
+4. Despejando $P_3$:
+   $\frac{P_3}{\gamma_w} = \frac{P_{atm}}{\gamma_w} - h - \frac{V^2}{2g} \left( 1 + f \frac{L_1}{D} \right)$.
+5. Sustituyendo $\frac{V^2}{2g} = \frac{H}{1 + f L/D}$, la presión mínima es:
+   $P_3 = P_{atm} - \gamma_w \left[ h + H \left( \frac{1 + f L_1/D}{1 + f L/D} \right) \right]$. Para evitar cavitación, $P_3$ debe ser mayor a la presión de vapor.
+
+**Problema 3: Tubo de Pitot-Estático y Altímetro**
+Un avión vuela a altura $z$ donde la densidad del aire es $\rho(z)$. Un tubo Pitot mide una presión de estancamiento $P_0$ y la toma estática mide $P$. Demuestre cómo el efecto de la compresibilidad (número de Mach $M$) afecta la lectura de la velocidad en comparación con la fórmula de Bernoulli incompresible.
+
+**Solución paso a paso:**
+1. Para un fluido compresible en régimen isentrópico, la relación entre presión total (estancamiento) y estática es:
+   $\frac{P_0}{P} = \left( 1 + \frac{\gamma - 1}{2} M^2 \right)^{\frac{\gamma}{\gamma - 1}}$.
+2. Expandiendo esto mediante el binomio de Newton para $M^2 \ll 1$:
+   $\frac{P_0}{P} \approx 1 + \frac{\gamma}{\gamma-1} \left( \frac{\gamma-1}{2} M^2 \right) + \frac{1}{2} \frac{\gamma}{\gamma-1} \left( \frac{\gamma}{\gamma-1} - 1 \right) \left( \frac{\gamma-1}{2} M^2 \right)^2$.
+   $= 1 + \frac{\gamma}{2} M^2 + \frac{\gamma}{8} M^4$.
+3. Sustituyendo la velocidad del sonido $c^2 = \gamma P/\rho$, tenemos $\frac{\gamma}{2} M^2 = \frac{\gamma}{2} \frac{V^2}{\gamma P/\rho} = \frac{\rho V^2}{2P}$.
+4. Por lo tanto, $P_0 - P = P \left( \frac{\gamma}{2} M^2 + \frac{\gamma}{8} M^4 \right) = \frac{1}{2} \rho V^2 \left( 1 + \frac{1}{4} M^2 + \dots \right)$.
+5. La fórmula de Bernoulli incompresible daría $P_0 - P = \frac{1}{2}\rho V_{inc}^2$. La verdadera diferencia de presión es mayor por el factor $(1 + M^2/4)$. El error relativo en la estimación de la presión al ignorar compresibilidad es de aproximadamente $M^2/4$, lo que significa un $1\%$ de error a $M \approx 0.2$.
+
+## 💻 Simulaciones Computacionales
+
+Simulación del principio de Bernoulli demostrando el efecto Venturi a lo largo de un tubo convergente-divergente unidimensional.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros del conducto
+x = np.linspace(0, 10, 100)
+# Perfil del radio (estrechamiento en el centro)
+R = 0.5 - 0.3 * np.exp(-(x - 5)**2 / 2)
+A = np.pi * R**2
+
+# Condiciones de flujo
+rho = 1000.0  # kg/m^3 (Agua)
+Q = 0.5       # Caudal volumétrico m^3/s
+P_in = 200000 # Presión entrada Pa
+
+# Conservación de masa (Caudal constante)
+v = Q / A
+
+# Ecuación de Bernoulli: P_in + 0.5*rho*v_in^2 = P_x + 0.5*rho*v_x^2
+v_in = v[0]
+P = P_in + 0.5 * rho * v_in**2 - 0.5 * rho * v**2
+
+fig, ax1 = plt.subplots(figsize=(10, 5))
+
+color = 'tab:blue'
+ax1.set_xlabel('Distancia longitudinal x (m)')
+ax1.set_ylabel('Velocidad (m/s)', color=color)
+ax1.plot(x, v, color=color, lw=2, label='Velocidad')
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  
+color = 'tab:red'
+ax2.set_ylabel('Presión Estática (Pa)', color=color)  
+ax2.plot(x, P, color=color, lw=2, label='Presión')
+ax2.tick_params(axis='y', labelcolor=color)
+
+plt.title("Efecto Venturi: Velocidad vs Presión Estática")
+plt.grid(alpha=0.3)
+fig.tight_layout()  
+plt.show()
+```
+
 ## 📚 Recursos
 ### Cursos Específicos
 1. ["Introduction to Fluid Mechanics" - Coursera](https://www.coursera.org/specializations/fluid-mechanics)

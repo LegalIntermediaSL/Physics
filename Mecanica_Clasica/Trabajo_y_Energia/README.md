@@ -79,6 +79,101 @@ Un péndulo de masa $m$ y cuerda de longitud $L$ se suelta desde el reposo con u
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Partícula en potencial de Morse intermolecular**
+El potencial de interacción entre dos átomos diatómicos se aproxima mediante el potencial de Morse: $U(r) = D_e [1 - e^{-a(r - r_e)}]^2$, donde $D_e$ es la profundidad del pozo, $r_e$ la distancia de equilibrio y $a$ una constante de anchura. Encuentre la constante de elasticidad efectiva $k_{eff}$ para oscilaciones muy pequeñas alrededor del equilibrio.
+**Solución paso a paso:**
+1. Para encontrar el punto de equilibrio, buscamos $r$ tal que la fuerza sea nula: $F = -\frac{dU}{dr} = 0$.
+2. $\frac{dU}{dr} = 2 D_e [1 - e^{-a(r - r_e)}] (-e^{-a(r - r_e)})(-a) = 2 a D_e e^{-a(r - r_e)} [1 - e^{-a(r - r_e)}]$.
+3. Igualando a cero, deducimos que el corchete debe anularse: $1 - e^{-a(r - r_e)} = 0 \implies e^{-a(r - r_e)} = 1 \implies r = r_e$. (El equilibrio está en $r_e$).
+4. Para hallar $k_{eff}$, calculamos la segunda derivada evaluada en el equilibrio $r=r_e$.
+5. Derivamos la expresión $\frac{dU}{dr} = 2 a D_e (e^{-a(r-r_e)} - e^{-2a(r-r_e)})$.
+6. $\frac{d^2U}{dr^2} = 2 a D_e ( -a e^{-a(r-r_e)} - (-2a) e^{-2a(r-r_e)} ) = 2 a^2 D_e ( 2 e^{-2a(r-r_e)} - e^{-a(r-r_e)} )$.
+7. Evaluando en $r = r_e$, la exponencial se hace 1:
+   $k_{eff} = \left. \frac{d^2U}{dr^2} \right|_{r_e} = 2 a^2 D_e ( 2(1) - 1 ) = 2 a^2 D_e$.
+8. Esta constante permite modelar la vibración atómica en infrarrojo como un oscilador armónico simple $E_n = \hbar \sqrt{\frac{2 a^2 D_e}{\mu}} (n + \frac{1}{2})$.
+
+**Problema 2: Teorema del Trabajo para masa deslizante sobre una cuña móvil**
+Una masa pequeña $m$ se suelta desde la cima de una cuña triangular de masa $M$ y altura $h$, apoyada sin fricción sobre un suelo horizontal. La superficie de la cuña también carece de fricción. Utilizando estrictamente conservación de momento y energía, halle la velocidad de la cuña $V$ justo cuando la masita llega al suelo.
+**Solución paso a paso:**
+1. No hay fuerzas externas netas en la dirección horizontal (la gravedad y normales apuntan en $y$). Se conserva el momento horizontal:
+   $\vec{P}_{tot, x} = 0 \implies m v_x + M V = 0 \implies v_x = -\frac{M}{m}V$.
+2. Note que $V$ es la velocidad de la cuña en el referencial inercial del laboratorio. La masita desliza a lo largo del perfil de la cuña. Su velocidad relativa a la cuña es paralela al perfil inclinado $\theta$.
+3. Sea $u$ la velocidad relativa de $m$ a lo largo de la cuña. La velocidad absoluta de $m$ es $\vec{v}_m = \vec{u} + \vec{V} = (u\cos\theta - V)\hat{i} - u\sin\theta\hat{j}$.
+4. Del paso 1, $v_x = u\cos\theta - V = -\frac{M}{m}V$.
+5. Despejamos la velocidad relativa: $u\cos\theta = V - \frac{M}{m}V = V\left(1 - \frac{M}{m}\right)$. Por tanto, $u = \frac{V(1 - M/m)}{\cos\theta}$. (Nota: Considerando signos, asumimos $V$ hacia la izquierda, y $m$ resbala a la derecha, de modo que $m v_x = M V$, lo que da $u\cos\theta - V = \frac{M}{m}V \implies u = \frac{(M+m)V}{m\cos\theta}$).
+6. Conservación de energía mecánica: el sistema completo aislado intercambia energía potencial por cinética.
+   $E_i = mgh$.
+   $E_f = \frac{1}{2}MV^2 + \frac{1}{2}m(v_x^2 + v_y^2)$.
+7. Expresamos la celeridad cuadrada absoluta de la masita:
+   $v_m^2 = v_x^2 + v_y^2 = \left(\frac{M}{m}V\right)^2 + (-u\sin\theta)^2$.
+8. Reemplazando $u$:
+   $v_m^2 = \left(\frac{M}{m}V\right)^2 + \left(\frac{(M+m)V\sin\theta}{m\cos\theta}\right)^2 = \frac{V^2}{m^2} \left[ M^2 + (M+m)^2 \tan^2\theta \right]$.
+9. Igualamos en la ecuación de energía:
+   $mgh = \frac{1}{2}MV^2 + \frac{1}{2}m \left( \frac{V^2}{m^2} \left[ M^2 + (M+m)^2 \tan^2\theta \right] \right)$.
+10. Despejamos $V$:
+    $2m^2 gh = m M V^2 + V^2 [ M^2 + (M+m)^2 \tan^2\theta ] = V^2 [ mM + M^2 + (M+m)^2 \tan^2\theta ] = V^2 (M+m)[ M + (M+m)\tan^2\theta ]$.
+    $V = \sqrt{\frac{2m^2 gh}{(M+m)(M + (M+m)\tan^2\theta)}}$.
+
+**Problema 3: Fuerzas no conservativas y bucle con rozamiento**
+Un pequeño bloque resbala por un bucle circular (loop-the-loop) vertical de radio $R$. Entra por la base inferior con velocidad $v_0$. El bucle no es liso; ejerce una fuerza de fricción viscosa proporcional a la velocidad angular del bloque $\vec{f} = -b \omega \hat{e}_\theta = -b \frac{v}{R} \hat{e}_\theta$. ¿Cuánto trabajo realiza esta fuerza friccional cuando el bloque llega a un ángulo $\theta$ desde la parte inferior?
+**Solución paso a paso:**
+1. Planteamos el teorema de las fuerzas vivas diferencialmente: $dW = dK$.
+2. $dW = dW_g + dW_{nc} = (-mg \sin\theta) (R d\theta) - \left(b \frac{v}{R}\right) (R d\theta)$.
+3. Escribimos la energía cinética diferencialmente: $dK = d(\frac{1}{2}mv^2) = mv dv$.
+4. Igualamos: $mv \frac{dv}{d\theta} d\theta = (-mgR \sin\theta - bv) d\theta$.
+5. Ecuación diferencial para la velocidad: $mv \frac{dv}{d\theta} + bv = -mgR \sin\theta$.
+6. Si bien es posible resolverla (EDO no lineal), el problema pide el trabajo total. Sabemos que $W_{nc} = \int -bv d\theta$.
+7. Como $v = R \frac{d\theta}{dt}$, el diferencial temporal surge mágicamente:
+   $W_{nc} = \int_{0}^{\theta} -b \left(R \frac{d\theta'}{dt}\right) d\theta' = -b R \int_0^\theta \frac{d\theta'}{dt} d\theta'$.
+   Cambiando la variable de integración temporal: $d\theta' = \omega dt$.
+   $W_{nc} = -b R \int_{0}^{t(\theta)} \omega^2 dt$.
+8. Esta forma integral denota precisamente la función de disipación de Rayleigh. Evaluada cinemáticamente, drena la celeridad según la historia temporal del paso de la partícula por la curva.
+
+## 💻 Simulaciones Computacionales
+
+Mapeo de las líneas equipotenciales y simulación de la trayectoria de una partícula conservativa en un pozo de potencial de Lennard-Jones (interacción molecular).
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+def lennard_jones_potential(x, y):
+    r = np.hypot(x, y)
+    r = np.clip(r, 0.8, None) # Evitar singularidad
+    return 4 * ((1/r)**12 - (1/r)**6)
+
+def force_field(x, y):
+    r = np.hypot(x, y)
+    r = np.clip(r, 0.8, None)
+    F_mag = 4 * (12*(1/r)**13 - 6*(1/r)**7)
+    return F_mag * (x/r), F_mag * (y/r)
+
+def motion(t, state):
+    x, y, vx, vy = state
+    fx, fy = force_field(x, y)
+    return [vx, vy, fx, fy]
+
+# Resolver trayectoria
+sol = solve_ivp(motion, [0, 5], [2.0, 0.5, -0.5, -0.2], t_eval=np.linspace(0, 5, 500))
+
+X, Y = np.meshgrid(np.linspace(-3, 3, 100), np.linspace(-3, 3, 100))
+Z = lennard_jones_potential(X, Y)
+
+plt.figure(figsize=(8, 6))
+cp = plt.contourf(X, Y, np.clip(Z, -2, 2), levels=30, cmap='viridis')
+plt.colorbar(cp, label='Energía Potencial $U(x,y)$')
+plt.plot(sol.y[0], sol.y[1], color='red', linewidth=2, label='Trayectoria')
+plt.scatter([0], [0], color='white', marker='x', s=100, label='Centro de Fuerza')
+plt.title('Conservación de Energía en Potencial de Lennard-Jones')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.legend()
+plt.show()
+```
+
 ## 📚 Recursos Específicos de Trabajo y Energía
 
 ### 🎓 Cursos y Clases Recomendadas (5-7)

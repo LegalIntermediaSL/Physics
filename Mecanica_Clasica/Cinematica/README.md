@@ -113,6 +113,107 @@ Un cañón dispara un proyectil con velocidad $v_0$ a un ángulo $\theta$. ¿Cu�
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Cinemática tensorial en coordenadas cilíndricas no inerciales**
+Un insecto camina radialmente hacia afuera a una velocidad constante $v_0$ sobre un disco que gira con aceleración angular constante $\alpha$ partiendo del reposo. Además, el disco entero acelera linealmente en la dirección del eje Z con $a_z = k t^2$. Determine el vector aceleración absoluta del insecto en cualquier instante $t$ utilizando el triedro cilíndrico local del insecto.
+**Solución paso a paso:**
+1. Definimos el vector posición en el marco fijo inercial usando la base móvil cilíndrica: $\vec{r}(t) = r(t)\hat{e}_r + z(t)\hat{k}$.
+2. Las condiciones iniciales dictan: $r(t) = v_0 t$, $\theta(t) = \frac{1}{2}\alpha t^2 \implies \dot{\theta} = \alpha t$, y $z(t) = \int \int a_z dt dt = \frac{k}{12}t^4$.
+3. La velocidad angular del marco es $\vec{\omega} = \alpha t \hat{k}$.
+4. Aplicamos el operador derivada absoluta: $\vec{v} = \dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_\theta + \dot{z}\hat{k} = v_0\hat{e}_r + (v_0 t)(\alpha t)\hat{e}_\theta + \frac{k}{3}t^3\hat{k} = v_0\hat{e}_r + v_0 \alpha t^2 \hat{e}_\theta + \frac{k}{3}t^3\hat{k}$.
+5. Derivamos para la aceleración, $\vec{a} = \left(\ddot{r} - r\dot{\theta}^2\right)\hat{e}_r + \left(r\ddot{\theta} + 2\dot{r}\dot{\theta}\right)\hat{e}_\theta + \ddot{z}\hat{k}$.
+6. Evaluando componentes: $\ddot{r} = 0$, $r\dot{\theta}^2 = (v_0 t)(\alpha t)^2 = v_0 \alpha^2 t^3$.
+7. $r\ddot{\theta} = (v_0 t)(\alpha) = v_0 \alpha t$ y la aceleración de Coriolis $2\dot{r}\dot{\theta} = 2(v_0)(\alpha t) = 2v_0 \alpha t$.
+8. Sumando en la dirección tangencial: $v_0 \alpha t + 2v_0 \alpha t = 3v_0 \alpha t$.
+9. La componente en z es dada por $\ddot{z} = k t^2$.
+10. Resultado final: $\vec{a}(t) = -v_0 \alpha^2 t^3 \hat{e}_r + 3v_0 \alpha t \hat{e}_\theta + k t^2 \hat{k}$.
+
+**Problema 2: Triedro de Frenet-Serret para una hélice cónica**
+Una partícula se mueve a lo largo de una hélice cónica parametrizada por $\vec{r}(t) = e^{-t}\cos(t)\hat{i} + e^{-t}\sin(t)\hat{j} + e^{-t}\hat{k}$. Determine el radio de curvatura $\rho(t)$ de la trayectoria.
+**Solución paso a paso:**
+1. Calculamos la velocidad: $\vec{v}(t) = \dot{\vec{r}}(t) = e^{-t}(-\cos t - \sin t)\hat{i} + e^{-t}(-\sin t + \cos t)\hat{j} - e^{-t}\hat{k}$.
+2. Su magnitud (celeridad) $v(t) = |\vec{v}| = e^{-t}\sqrt{(-\cos t - \sin t)^2 + (-\sin t + \cos t)^2 + (-1)^2} = e^{-t}\sqrt{1 + 2\cos t\sin t + 1 - 2\sin t\cos t + 1} = e^{-t}\sqrt{3}$.
+3. Calculamos la aceleración $\vec{a}(t) = \ddot{\vec{r}}(t)$.
+   $\ddot{x}(t) = e^{-t}(\cos t + \sin t + \sin t - \cos t) = 2e^{-t}\sin t$
+   $\ddot{y}(t) = e^{-t}(\sin t - \cos t - \cos t - \sin t) = -2e^{-t}\cos t$
+   $\ddot{z}(t) = e^{-t}$
+   $\vec{a}(t) = e^{-t}(2\sin t \hat{i} - 2\cos t \hat{j} + \hat{k})$.
+4. Calculamos el producto cruz $\vec{v} \times \vec{a}$:
+   $\vec{v} \times \vec{a} = e^{-2t} [ (-\sin t + \cos t - (-2\cos t(-1)))\hat{i} - (-\cos t - \sin t - (-1)(2\sin t))\hat{j} + (-2\cos t(-\cos t - \sin t) - 2\sin t(-\sin t + \cos t))\hat{k} ]$
+   $\vec{v} \times \vec{a} = e^{-2t} [ (\cos t - 3\sin t)\hat{i} + (\sin t + 3\cos t)\hat{j} + (2\cos^2 t + 2\sin^2 t)\hat{k} ] = e^{-2t} [ (\cos t - 3\sin t)\hat{i} + (\sin t + 3\cos t)\hat{j} + 2\hat{k} ]$.
+5. Módulo de $\vec{v} \times \vec{a}$:
+   $|\vec{v} \times \vec{a}|^2 = e^{-4t}[ (\cos t - 3\sin t)^2 + (\sin t + 3\cos t)^2 + 4 ] = e^{-4t}[ \cos^2 t - 6\cos t\sin t + 9\sin^2 t + \sin^2 t + 6\sin t\cos t + 9\cos^2 t + 4 ] = e^{-4t}[ 10 + 4 ] = 14 e^{-4t}$.
+   $|\vec{v} \times \vec{a}| = \sqrt{14} e^{-2t}$.
+6. El radio de curvatura está dado por $\rho = \frac{v^3}{|\vec{v} \times \vec{a}|}$.
+7. $\rho(t) = \frac{(e^{-t}\sqrt{3})^3}{\sqrt{14}e^{-2t}} = \frac{3\sqrt{3} e^{-3t}}{\sqrt{14} e^{-2t}} = 3\sqrt{\frac{3}{14}} e^{-t}$.
+
+**Problema 3: Integración de la ecuación de arrastre no lineal**
+Un cohete de prueba se desplaza horizontalmente (la gravedad no afecta este eje) partiendo con velocidad $v_0$. El motor se apaga y el fluido genera una resistencia aerodinámica puramente cuadrática $\vec{F} = -k v^2 \hat{v}$. Encuentre la distancia total $x(t)$ y demuestre que, teóricamente, el proyectil nunca se detiene en un tiempo finito, pero viaja una distancia infinita logarítmica.
+**Solución paso a paso:**
+1. Ecuación de movimiento: $m\frac{dv}{dt} = -k v^2$.
+2. Separación de variables para encontrar $v(t)$: $\int_{v_0}^{v} v^{-2} dv = \int_{0}^{t} -\frac{k}{m} dt$.
+3. $- \left( \frac{1}{v} - \frac{1}{v_0} \right) = -\frac{k}{m} t \implies \frac{1}{v} = \frac{1}{v_0} + \frac{k}{m} t = \frac{m + k v_0 t}{m v_0}$.
+4. $v(t) = \frac{m v_0}{m + k v_0 t}$.
+5. Nótese que $v(t) \to 0$ solo cuando $t \to \infty$, demostrando que matemáticamente el objeto nunca se detiene por completo en tiempo finito.
+6. Integramos para hallar posición: $x(t) = \int_0^t v(\tau) d\tau = \int_0^t \frac{m v_0}{m + k v_0 \tau} d\tau$.
+7. Cambio de variable $u = m + k v_0 \tau \implies du = k v_0 d\tau$:
+   $x(t) = \frac{m}{k} \int_{m}^{m+k v_0 t} \frac{1}{u} du = \frac{m}{k} \ln\left( \frac{m + k v_0 t}{m} \right)$.
+8. $x(t) = \frac{m}{k} \ln\left( 1 + \frac{k v_0}{m} t \right)$. Como el logaritmo diverge, $x \to \infty$ si $t \to \infty$.
+
+## 💻 Simulaciones Computacionales
+
+A continuación, se presenta una simulación avanzada en Python que resuelve numéricamente la trayectoria de un proyectil sujeto a la gravedad y a una fuerza de arrastre aerodinámico cuadrático.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+# Parámetros físicos
+g = 9.81        # Gravedad (m/s^2)
+m = 1.0         # Masa (kg)
+rho = 1.225     # Densidad del aire (kg/m^3)
+C_d = 0.47      # Coeficiente de arrastre (esfera)
+A = 0.01        # Área transversal (m^2)
+k = 0.5 * rho * C_d * A / m
+
+def projectile_motion(t, state):
+    x, y, vx, vy = state
+    v = np.hypot(vx, vy)
+    ax = -k * v * vx
+    ay = -g - k * v * vy
+    return [vx, vy, ax, ay]
+
+# Condiciones iniciales
+v0 = 50.0       # Velocidad inicial (m/s)
+theta = np.radians(45)
+state0 = [0, 0, v0 * np.cos(theta), v0 * np.sin(theta)]
+t_span = (0, 10)
+
+# Resolver sistema
+sol = solve_ivp(projectile_motion, t_span, state0, dense_output=True, events=lambda t, y: y[1])
+sol.t_events[0].size > 0 and sol.y_events[0].size > 0
+
+t = np.linspace(0, sol.t_events[0][0], 500)
+z = sol.sol(t)
+
+# Sin arrastre para comparar
+t_ideal = np.linspace(0, 2 * v0 * np.sin(theta) / g, 500)
+x_ideal = v0 * np.cos(theta) * t_ideal
+y_ideal = v0 * np.sin(theta) * t_ideal - 0.5 * g * t_ideal**2
+
+plt.figure(figsize=(10, 5))
+plt.plot(z[0], z[1], label='Con Arrastre Cuadrático', color='red', linewidth=2)
+plt.plot(x_ideal, y_ideal, '--', label='Vacío (Ideal)', color='blue')
+plt.title('Trayectoria de Proyectil bidimensional')
+plt.xlabel('Distancia (m)')
+plt.ylabel('Altura (m)')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos de Cinemática
 
 ### 🎓 Cursos y Clases Recomendadas (5-7)

@@ -98,6 +98,135 @@ Datos del Sol: $M_\odot \approx 2 \times 10^{30} \text{ kg}$, $R_\odot \approx 7
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Perfil de Presión en una Estrella de Densidad Constante**
+Utilice la ecuación de equilibrio hidrostático para derivar el perfil de presión interno $P(r)$ de una estrella esférica asumiendo un modelo extremadamente simplificado donde la densidad de masa es constante $\rho(r) = \rho_0$ en toda la estrella de masa $M$ y radio $R$. Demuestre que la presión central se puede expresar como $P_c = \frac{3GM^2}{8\pi R^4}$.
+
+**Solución paso a paso:**
+1. **Masa encerrada:**
+   Si la densidad es constante, la masa interior al radio $r$ es $M_r = \frac{4}{3}\pi r^3 \rho_0$.
+2. **Ecuación de equilibrio hidrostático:**
+   $\frac{dP}{dr} = -\frac{GM_r \rho_0}{r^2} = -\frac{G (\frac{4}{3}\pi r^3 \rho_0) \rho_0}{r^2} = -\frac{4\pi}{3} G \rho_0^2 r$.
+3. **Integración:**
+   Integramos desde el radio $r$ hasta la superficie $R$, asumiendo $P(R) = 0$:
+   $\int_{P(r)}^0 dP = \int_r^R -\frac{4\pi}{3} G \rho_0^2 r dr$.
+   $-P(r) = -\frac{4\pi}{3} G \rho_0^2 \left[ \frac{r^2}{2} \right]_r^R = -\frac{2\pi}{3} G \rho_0^2 (R^2 - r^2)$.
+   Por tanto, $P(r) = \frac{2\pi}{3} G \rho_0^2 (R^2 - r^2)$.
+4. **Presión Central:**
+   Evaluamos en $r = 0$: $P_c = \frac{2\pi}{3} G \rho_0^2 R^2$.
+   Usando $\rho_0 = \frac{M}{\frac{4}{3}\pi R^3}$, sustituimos:
+   $P_c = \frac{2\pi}{3} G \left( \frac{3M}{4\pi R^3} \right)^2 R^2 = \frac{2\pi}{3} G \frac{9M^2}{16\pi^2 R^6} R^2 = \frac{3GM^2}{8\pi R^4}$.
+
+**Problema 2: Ecuación de Estado de un Gas de Electrones Degenerado**
+Derive la relación de proporcionalidad entre la presión de degeneración y la densidad de masa para una enana blanca no relativista ($P \propto \rho^{5/3}$) usando principios de mecánica cuántica y el espacio de fase.
+
+**Solución paso a paso:**
+1. **Espacio de Fases de Fermi:**
+   En el cero absoluto idealizado, los electrones llenan los estados de energía más bajos hasta el momento de Fermi $p_F$.
+   El principio de exclusión de Pauli dicta un máximo de $2$ electrones por volumen cuántico $h^3$.
+   Densidad numérica: $n_e = \int_0^{p_F} \frac{2}{h^3} 4\pi p^2 dp = \frac{8\pi p_F^3}{3h^3} \implies p_F \propto n_e^{1/3}$.
+2. **Presión microscópica:**
+   La presión ejercida por un gas isótropo es $P = \frac{1}{3} \int n(p) v(p) p dp$.
+   Para el régimen no relativista, $v(p) = p / m_e$.
+   $P \propto \int_0^{p_F} p^2 \cdot \frac{p}{m_e} \cdot p dp \propto \int_0^{p_F} p^4 dp \propto p_F^5$.
+3. **Relación final:**
+   Sustituyendo $p_F \propto n_e^{1/3}$, obtenemos $P \propto (n_e^{1/3})^5 = n_e^{5/3}$.
+   Asumiendo neutralidad de carga, la masa de la estrella viene dada por los nucleones (protones y neutrones), por lo que la densidad de masa $\rho \propto n_e$.
+   Por tanto, $P_{deg} \propto \rho^{5/3}$.
+
+**Problema 3: Límite de la masa de Eddington**
+Determine la luminosidad máxima (Límite de Eddington) que una estrella de masa $M$ puede sostener antes de que la presión de la radiación expulse sus capas exteriores de hidrógeno. Exprese el resultado dependiente de la opacidad de dispersión de electrones (Thomson).
+
+**Solución paso a paso:**
+1. **Fuerza gravitatoria sobre un par electrón-protón:**
+   A una distancia $r$, la fuerza gravitatoria entrante sobre el átomo de hidrógeno (aproximado por la masa del protón $m_p$, ya que $m_p \gg m_e$) es:
+   $F_{grav} = \frac{GM m_p}{r^2}$.
+2. **Fuerza de la radiación:**
+   El flujo radiativo en la superficie $r$ es $F_{rad} = \frac{L}{4\pi r^2}$.
+   La radiación ejerce presión (momento transferido) sobre los electrones (que dominan la opacidad por dispersión de Thomson $\sigma_T$). Como protones y electrones están acoplados electrostáticamente, esta fuerza arrastra al plasma.
+   La fuerza repulsiva de radiación es $F_{rad} = \frac{dp}{dt} = \frac{\sigma_T F_{rad}}{c} = \frac{\sigma_T L}{4\pi r^2 c}$.
+3. **Condición límite:**
+   La estrella empieza a disgregarse cuando $F_{rad} \ge F_{grav}$.
+   Igualando ambas fuerzas:
+   $\frac{\sigma_T L_{Edd}}{4\pi r^2 c} = \frac{GM m_p}{r^2}$.
+   Nótese que la dependencia radial $r^2$ se cancela.
+4. **Despejando el Límite de Eddington:**
+   $L_{Edd} = \frac{4\pi G c m_p}{\sigma_T} M$.
+   Insertando constantes, se obtiene $\approx 3.2 \times 10^4 \left(\frac{M}{M_\odot}\right) L_\odot$. Estrellas por encima de esta luminosidad sufrirían vientos extremos que limitarían su crecimiento.
+
+## 💻 Simulaciones Computacionales
+
+La siguiente simulación en Python modela el interior de una estrella simplificada de secuencia principal (una politropa $n=3$, que aproxima una estrella con transporte radiativo) integrando la ecuación de Lane-Emden.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+def lane_emden(xi, y, n):
+    """
+    Ecuación de Lane-Emden para politropas: 
+    (1/xi^2) * d/dxi(xi^2 * dtheta/dxi) = -theta^n
+    Sistema de ODEs de primer orden:
+    dtheta/dxi = u
+    du/dxi = -theta^n - 2*u/xi
+    """
+    theta, u = y
+    
+    # Manejar singularidad en xi = 0
+    if xi == 0:
+        dtheta_dxi = 0
+        du_dxi = -1/3
+    else:
+        # Prevenir potencias fraccionarias de negativos
+        if theta < 0: theta = 0 
+        dtheta_dxi = u
+        du_dxi = -(theta**n) - (2/xi)*u
+        
+    return [dtheta_dxi, du_dxi]
+
+# Condición límite en el centro estelar (xi = 0)
+# theta(0) = 1, theta'(0) = 0
+y0 = [1.0, 0.0]
+
+# Pequeño desplazamiento inicial para evitar dividir por 0
+xi_span = (1e-5, 10.0)
+xi_eval = np.linspace(1e-5, 10.0, 500)
+
+plt.figure(figsize=(9, 6))
+
+# Índices politrópicos comunes
+indices = [1.5, 3.0] # 1.5: convectiva (gas ideal), 3.0: radiativa (estrella típica Eddington)
+
+for n in indices:
+    sol = solve_ivp(lane_emden, xi_span, y0, args=(n,), t_eval=xi_eval, method='RK45')
+    
+    # Encontrar la superficie de la estrella (donde theta cae a 0)
+    theta = sol.y[0]
+    surface_idx = np.where(theta <= 0)[0]
+    
+    if len(surface_idx) > 0:
+        idx = surface_idx[0]
+        xi_star = sol.t[:idx]
+        theta_star = theta[:idx]
+    else:
+        xi_star = sol.t
+        theta_star = theta
+        
+    # Densidad proporcional a theta^n
+    rho_norm = theta_star**n
+    
+    plt.plot(xi_star, rho_norm, label=f'Polítropa n={n}', lw=2)
+
+plt.title('Perfil de Densidad Interna Estelar (Soluciones de Lane-Emden)')
+plt.xlabel('Radio Normalizado $\\xi$')
+plt.ylabel('Densidad Normalizada $\\rho / \\rho_c$')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

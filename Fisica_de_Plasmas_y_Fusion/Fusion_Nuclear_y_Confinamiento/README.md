@@ -119,6 +119,112 @@ graph TD
 
 **Conclusión:** El reactor no se autosostendrá completamente, pero generará 45 veces más energía térmica de fusión que la energía inyectada para mantener el plasma caliente. Este es un reactor de muy alto rendimiento, muy superior al break-even ($Q=1$), y comparable al objetivo de diseño base de ITER ($Q \ge 10$).
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Tasa de Reacción y Energía de Ignición
+Calcule la densidad de potencia de fusión (en $\text{MW/m}^3$) de un plasma equimolar Deuterio-Tritio con densidad total $n_e = 10^{20} \, \text{m}^{-3}$ y una reactividad $\langle \sigma v \rangle = 1.1 \times 10^{-22} \, \text{m}^3/\text{s}$ (típica para $T = 10 \, \text{keV}$). ¿Cuál es el requerimiento de tiempo de confinamiento para alcanzar el break-even ideal ($Q=1$) si sólo consideramos pérdidas por transporte?
+
+**Solución paso a paso:**
+1. **Densidad de Potencia de Fusión:**
+Para una mezcla 50:50 de D-T, las densidades de combustible son $n_D = n_T = n_e / 2 = 0.5 \times 10^{20} \, \text{m}^{-3}$.
+La tasa volumétrica de reacciones es:
+$$ R_{DT} = n_D n_T \langle \sigma v \rangle = (0.5 \times 10^{20})^2 (1.1 \times 10^{-22}) = 2.75 \times 10^{17} \, \text{reacciones/m}^3\cdot\text{s} $$
+La energía liberada por cada reacción es $E_{fus} = 17.6 \, \text{MeV} = 2.82 \times 10^{-12} \, \text{J}$.
+Densidad de potencia total de fusión:
+$$ P_{fus} = R_{DT} E_{fus} = (2.75 \times 10^{17}) (2.82 \times 10^{-12}) = 7.75 \times 10^5 \, \text{W/m}^3 = 0.775 \, \text{MW/m}^3 $$
+
+2. **Requerimiento para Break-Even ($Q=1$):**
+En el break-even, la potencia de fusión total generada iguala a las pérdidas de potencia (ignorando Bremsstrahlung y asumiendo $T_e = T_i = 10 \, \text{keV}$):
+$$ P_{fus} = \frac{3 n k_B T}{\tau_E} $$
+Despejamos $\tau_E$:
+$$ \tau_E = \frac{3 n k_B T}{P_{fus}} = \frac{3 (10^{20}) (10 \times 10^3 \text{ eV}) (1.6 \times 10^{-19} \text{ J/eV})}{7.75 \times 10^5 \text{ W/m}^3} $$
+$$ \tau_E = \frac{4.8 \times 10^5}{7.75 \times 10^5} \approx 0.62 \, \text{s} $$
+Para que el reactor rompa el empate energético bajo estas condiciones ideales, la energía debe mantenerse por al menos $0.62$ segundos.
+
+### Problema 2: Compresión Inercial (Confinamiento Inercial)
+En fusión por confinamiento inercial (ICF), un pulso láser comprime esféricamente una cápsula de D-T sólido. Si la cápsula inicial tiene radio $r_0 = 1 \, \text{mm}$ y la densidad inicial es de $0.2 \, \text{g/cm}^3$, determine la densidad final y la masa volumétrica requerida si se quiere alcanzar un $\rho R = 3 \, \text{g/cm}^2$ para asegurar la quema eficiente del combustible.
+
+**Solución paso a paso:**
+La condición de ignición inercial requiere que la fracción de quemado sea alta, típicamente requiriendo el parámetro areal $\rho R \ge 3 \, \text{g/cm}^2$.
+1. Conservación de masa:
+La masa de la cápsula esférica de combustible es constante durante la implosión.
+$$ M = \frac{4}{3} \pi r_0^3 \rho_0 = \frac{4}{3} \pi R^3 \rho $$
+De aquí, el radio comprimido es $R = r_0 \left( \frac{\rho_0}{\rho} \right)^{1/3}$.
+
+2. Reemplazo en el criterio de densidad areal:
+$$ \rho R = \rho \left( r_0 \left( \frac{\rho_0}{\rho} \right)^{1/3} \right) = r_0 \rho_0^{1/3} \rho^{2/3} = 3 \, \text{g/cm}^2 $$
+
+3. Despeje de la densidad comprimida requerida $\rho$:
+$$ \rho^{2/3} = \frac{\rho R}{r_0 \rho_0^{1/3}} $$
+En unidades CGS: $r_0 = 0.1 \, \text{cm}$, $\rho_0 = 0.2 \, \text{g/cm}^3$.
+$$ \rho^{2/3} = \frac{3}{(0.1) (0.2)^{1/3}} = \frac{3}{(0.1) (0.585)} = \frac{3}{0.0585} = 51.3 $$
+$$ \rho = (51.3)^{3/2} \approx 367 \, \text{g/cm}^3 $$
+
+**Conclusión:** El plasma inercial debe ser comprimido a una densidad más de 1000 veces mayor que la sólida para frenar intrínsecamente las partículas alfa generadas y lograr la retroalimentación térmica estallante.
+
+### Problema 3: Factor de Reproducción de Tritio (TBR) en la Envoltura
+El tritio no existe de forma natural; debe ser reproducido (bred) en el "blanket" del reactor bombardeando Litio con los neutrones de la reacción D-T. Si el núcleo del reactor genera $N_0$ reacciones D-T, se liberan $N_0$ neutrones. Suponga que la probabilidad de que un neutrón produzca Tritio es $1.15$ debido a multiplicadores neutrónicos como Berilio. Sin embargo, hay una eficiencia de extracción del $90\%$ y el sistema se detiene el $5\%$ del tiempo por mantenimiento. ¿Cuál es la Tasa Efectiva de Reproducción (TBR efectivo)?
+
+**Solución paso a paso:**
+1. TBR Ideal:
+El sistema generará teóricamente $N_{bred} = 1.15 N_0$ átomos de Tritio en el interior del manto. El TBR ideal es de $1.15$.
+
+2. Pérdidas de Sistema:
+La eficiencia de recolección, confinamiento y purificación en la planta de tritio es $\eta_{ext} = 0.90$.
+Además, el decaimiento radiactivo del Tritio (vida media $\approx 12.3$ años) y las interrupciones imponen la disponibilidad del reactor. Si está desconectado $f_{down} = 0.05$, operará el $95\%$ del tiempo. (Para simplificar, tomamos directamente el factor de disponibilidad como penalización de tiempo de reacción, aunque rigurosamente afecta a la acumulación global).
+Tritio recuperado neto y disponible como combustible:
+$$ TBR_{net} = TBR_{ideal} \times \eta_{ext} \times (1 - f_{down}) $$
+$$ TBR_{net} = 1.15 \times 0.90 \times 0.95 = 0.983 $$
+
+**Conclusión:** Como el $TBR_{net} < 1.0$, el reactor consumirá más tritio del que logra reemplazar en el ciclo. Se necesita mejorar los multiplicadores neutrónicos o minimizar las pérdidas de recolección química en el manto para que el reactor sea autosostenible en combustible.
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Tasa de Reacción D-T y Criterio de Lawson
+
+Este código calcula y grafica la sección eficaz parametrizada de la reacción de fusión D-T y la curva ideal de ignición de Lawson (Producto Triple) asumiendo pérdida dominante por Bremsstrahlung a bajas temperaturas.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Temperaturas en keV
+T = np.logspace(0, 2, 500)
+
+# Usaremos un modelo más simple analítico para <sigma v> de D-T (en m^3/s)
+def get_sigmav_DT(T_keV):
+    # Ajuste fenomenológico válido entre 1 y 100 keV
+    return 3.68e-18 / (T_keV**(2/3)) * np.exp(-19.94 / T_keV**(1/3))
+
+sigmav_DT = get_sigmav_DT(T)
+
+# Producto triple n T tau_E (keV s / m^3) para ignición ideal
+# n T tau = 12 kT^2 / (E_alpha * <sigma v>)
+E_alpha_J = 3.52e6 * 1.602e-19
+k_B = 1.602e-16 # J / keV
+nTtau = (12 * k_B * T**2) / (E_alpha_J * sigmav_DT)
+
+fig, ax1 = plt.subplots(figsize=(10, 6))
+
+color = 'tab:red'
+ax1.set_xlabel('Temperatura (keV)')
+ax1.set_ylabel(r'Reactividad $\langle \sigma v \rangle$ (m$^3$/s)', color=color)
+ax1.loglog(T, sigmav_DT, color=color, linewidth=2)
+ax1.tick_params(axis='y', labelcolor=color)
+ax1.set_ylim(1e-26, 1e-21)
+
+ax2 = ax1.twinx()  
+color = 'tab:blue'
+ax2.set_ylabel(r'Producto Triple Requerido $n T \tau_E$ (m$^{-3}$ keV s)', color=color)
+ax2.loglog(T, nTtau, color=color, linestyle='--', linewidth=2)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.set_ylim(1e21, 1e24)
+
+plt.title('Fusión D-T: Reactividad y Condición de Ignición')
+plt.grid(True, which="both", ls="--", alpha=0.5)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

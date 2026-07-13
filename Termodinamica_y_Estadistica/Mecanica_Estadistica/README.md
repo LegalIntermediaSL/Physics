@@ -107,6 +107,101 @@ Los sistemas cuánticos con muchas partículas se analizan mediante números de 
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Modelo de Schottky de Dos Niveles**
+Considera un cristal con $N$ átomos no interactuantes. Cada átomo posee dos estados energéticos posibles: un estado base de energía $0$ y un estado excitado de energía $\epsilon > 0$. Determina la capacidad calorífica $C_V$ a temperatura $T$ y examina sus límites extremos.
+**Solución paso a paso:**
+1. La función de partición de una sola partícula es $Z_1 = e^{0} + e^{-\beta\epsilon} = 1 + e^{-\beta\epsilon}$.
+2. Dado que los átomos en el cristal son distinguibles (fijos en su red), la función de partición total es $Z = (Z_1)^N = (1 + e^{-\beta\epsilon})^N$.
+3. La energía media del sistema es $U = -\frac{\partial \ln Z}{\partial \beta} = -N \frac{\partial}{\partial \beta} \ln(1 + e^{-\beta\epsilon})$.
+4. Derivando: $U = N \frac{\epsilon e^{-\beta\epsilon}}{1 + e^{-\beta\epsilon}} = \frac{N\epsilon}{e^{\beta\epsilon} + 1}$.
+5. La capacidad calorífica es $C_V = \left( \frac{\partial U}{\partial T} \right)_V = \frac{\partial U}{\partial \beta} \frac{d\beta}{dT} = \left( \frac{\partial U}{\partial \beta} \right) \left(-\frac{1}{k_B T^2}\right)$.
+6. Evaluando la derivada respecto a $\beta$: $\frac{\partial U}{\partial \beta} = - \frac{N\epsilon^2 e^{\beta\epsilon}}{(e^{\beta\epsilon} + 1)^2}$.
+7. Así, $C_V = \frac{N\epsilon^2}{k_B T^2} \frac{e^{\beta\epsilon}}{(e^{\beta\epsilon} + 1)^2} = N k_B \left(\frac{\epsilon}{k_B T}\right)^2 \frac{e^{\epsilon/k_B T}}{(e^{\epsilon/k_B T} + 1)^2}$.
+8. Límites: Para $T \to 0$ ($\beta \to \infty$), $C_V \sim T^{-2} e^{-\epsilon/k_B T} \to 0$ (cumple la 3ra Ley). Para $T \to \infty$, $C_V \sim T^{-2} \to 0$. Esto genera un "Pico de Schottky" a temperaturas intermedias.
+
+**Problema 2: Gas de Fotones en una Cavidad**
+Deriva la ecuación de estado de la presión de radiación $P = \frac{1}{3}u(T)$, donde $u(T) = U/V$ es la densidad de energía, modelando la radiación electromagnética como un gas de fotones (bosones) encerrado en un volumen $V$.
+**Solución paso a paso:**
+1. El Gran Potencial para un gas de bosones (los fotones no se conservan, luego $\mu = 0$) viene dado por $\Phi = k_B T \sum_k \ln(1 - e^{-\beta\epsilon_k})$.
+2. Al estar en un volumen continuo macroscópico, transformamos la sumatoria en una integral sobre el momento continuo $p$: $\sum_k \to \frac{V}{(2\pi\hbar)^3} \int g_s d^3p$, donde la degeneración de espín del fotón (polarizaciones) es $g_s = 2$.
+3. Usando coordenadas esféricas para los momentos: $d^3p = 4\pi p^2 dp$. Sabiendo que para los fotones $E = pc$:
+$$ \Phi = k_B T \frac{2V}{8\pi^3 \hbar^3} \int_0^\infty 4\pi p^2 \ln(1 - e^{-\beta pc}) dp = \frac{Vk_B T}{\pi^2 \hbar^3} \int_0^\infty p^2 \ln(1 - e^{-\beta pc}) dp $$
+4. Integramos por partes, donde $u = \ln(1 - e^{-\beta pc})$ y $dv = p^2 dp$. Resulta en $v = \frac{1}{3}p^3$ y $du = \frac{\beta c e^{-\beta pc}}{1 - e^{-\beta pc}} dp$.
+5. El término de frontera desaparece. La integral se vuelve:
+$$ \Phi = -\frac{V}{3\pi^2 \hbar^3} \int_0^\infty \frac{p^3 c}{e^{\beta pc} - 1} dp $$
+6. Reconocemos que la energía total interna del gas es $U = \sum_k \langle n_k \rangle \epsilon_k = \frac{V}{\pi^2 \hbar^3} \int_0^\infty \frac{pc \cdot p^2}{e^{\beta pc} - 1} dp$.
+7. Comparando las integrales, $\Phi = -\frac{1}{3} U$.
+8. Como el gran potencial termodinámico también satisface $\Phi = -PV$, igualando términos deducimos que $-PV = -\frac{1}{3}U \implies P = \frac{1}{3} \frac{U}{V} = \frac{1}{3}u(T)$.
+
+**Problema 3: Energía de Fermi en Gas de Electrones 3D**
+Un metal se puede modelar como un gas de electrones (fermiones, espín 1/2) libres e independientes. Calcula la Energía de Fermi $E_F$ a temperatura $T=0\text{ K}$ como función de la densidad electrónica $n = N/V$.
+**Solución paso a paso:**
+1. A $T=0\text{ K}$, la distribución de Fermi-Dirac es un escalón de Heaviside perfecto. Los electrones llenan todos los estados cuánticos desde energía $0$ hasta el nivel máximo de energía $E_F$.
+2. La densidad de estados uniparticulares (incluyendo factor de degeneración $g_s = 2$ por el espín) en función del momento $p$ es $D(p)dp = 2 \frac{V}{h^3} 4\pi p^2 dp$.
+3. El número total de electrones $N$ es la integral de esta densidad desde $p=0$ hasta el momento de Fermi $p_F$ (correspondiente a $E_F$):
+$$ N = \int_0^{p_F} \frac{8\pi V}{h^3} p^2 dp = \frac{8\pi V}{h^3} \frac{p_F^3}{3} $$
+4. Despejamos el momento de Fermi en función de la densidad $n = N/V$:
+$$ p_F = \left( \frac{3N h^3}{8\pi V} \right)^{1/3} = \hbar \left( 3\pi^2 n \right)^{1/3} \quad (\text{usando } h = 2\pi\hbar) $$
+5. La Energía de Fermi es la energía cinética correspondiente a las partículas más energéticas en este momento límite de la esfera de Fermi:
+$$ E_F = \frac{p_F^2}{2m} $$
+6. Sustituyendo $p_F$:
+$$ E_F = \frac{\hbar^2}{2m} (3\pi^2 n)^{2/3} $$
+Este resultado monumental subyace a toda la teoría de metales y semiconductores.
+
+## 💻 Simulaciones Computacionales
+
+Esta simulación en Python utiliza la estadística de Fermi-Dirac y Bose-Einstein para visualizar la ocupación media de los estados de energía en función de la temperatura, evidenciando el comportamiento fermiónico (principio de exclusión) y la condensación bosónica.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def fermi_dirac(E, mu, T):
+    k_B = 8.617e-5 # eV/K
+    beta = 1 / (k_B * T)
+    return 1 / (np.exp(beta * (E - mu)) + 1)
+
+def bose_einstein(E, mu, T):
+    k_B = 8.617e-5
+    beta = 1 / (k_B * T)
+    # Evitar la singularidad para bosones
+    E_adj = np.clip(E, mu + 1e-6, np.inf)
+    return 1 / (np.exp(beta * (E_adj - mu)) - 1)
+
+E = np.linspace(0.0, 2.0, 500) # Energía en eV
+mu_f = 1.0 # Potencial químico para fermiones
+mu_b = 0.0 # Potencial químico para bosones (debe ser <= E_min)
+
+temperatures = [100, 300, 1000] # K
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
+
+# Fermi-Dirac
+for T in temperatures:
+    ax1.plot(E, fermi_dirac(E, mu_f, T), label=f'T = {T} K')
+ax1.axvline(mu_f, color='k', linestyle='--', label='$\\mu$ (Nivel de Fermi)')
+ax1.set_title('Estadística de Fermi-Dirac')
+ax1.set_xlabel('Energía (eV)')
+ax1.set_ylabel('Ocupación Media $\\langle n \\rangle$')
+ax1.legend()
+ax1.grid(True)
+
+# Bose-Einstein
+for T in temperatures:
+    ax2.plot(E, bose_einstein(E, mu_b, T), label=f'T = {T} K')
+ax2.set_title('Estadística de Bose-Einstein')
+ax2.set_xlabel('Energía (eV)')
+ax2.set_ylabel('Ocupación Media $\\langle n \\rangle$')
+ax2.set_ylim(0, 10) # Limitar y para ver la divergencia en E=mu
+ax2.legend()
+ax2.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

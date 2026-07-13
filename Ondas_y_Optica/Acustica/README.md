@@ -77,6 +77,101 @@ graph TD
 - Ingeniería de salas y aislamiento acústico.
 - Sonar, geofísica y monitoreo industrial.
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Efecto Doppler con Aceleración**
+Una sirena montada en una torre emite un sonido isotrópico de frecuencia $f_0 = 1200 \, \text{Hz}$. Un viento constante sopla a una velocidad $v_w = 15 \, \text{m/s}$ desde la sirena hacia un tren. El tren parte del reposo y se acerca a la torre con una aceleración $a = 2.5 \, \text{m/s}^2$. Considere la velocidad del sonido en el aire como $c = 340 \, \text{m/s}$. Calcule la frecuencia percibida por el tren en $t = 10 \, \text{s}$.
+
+**Solución paso a paso:**
+1. Determinamos la velocidad efectiva del sonido debido al viento: $c' = c + v_w = 340 + 15 = 355 \, \text{m/s}$.
+2. Velocidad del observador en $t = 10 \, \text{s}$: $v_o = a \cdot t = 2.5 \cdot 10 = 25 \, \text{m/s}$.
+3. Aplicamos el efecto Doppler: $f' = f_0 \left( \frac{c' + v_o}{c'} \right)$.
+4. Sustituyendo valores: $f' = 1200 \left( \frac{355 + 25}{355} \right) \approx 1284.5 \, \text{Hz}$.
+
+**Problema 2: Resonancia y Gases**
+Un tubo A de longitud $L_A$ (abierto) tiene $O_2$ ($\gamma=1.4, M=32$). Un tubo B (cerrado en un extremo) de longitud $L_B = 0.8 L_A$ tiene He ($\gamma=1.66, M=4$). A la misma $T$, el tercer armónico de A resuena con el primer sobretono de B. Evalúe si esto es físicamente posible.
+
+**Solución paso a paso:**
+1. Velocidades del sonido: $v_A = \sqrt{\frac{1.4 R T}{32}}$ y $v_B = \sqrt{\frac{1.66 R T}{4}}$. Por ende $v_B / v_A = \sqrt{\frac{1.66}{4} \cdot \frac{32}{1.4}} \approx 3.08$.
+2. Frecuencias: $f_{3,A} = \frac{3 v_A}{2 L_A}$, $f_{3,B} = \frac{3 v_B}{4 L_B} = \frac{3 v_B}{3.2 L_A}$.
+3. Igualando: $\frac{v_A}{2} = \frac{v_B}{3.2} \implies v_B = 1.6 v_A$.
+4. Dado que requerimos $v_B / v_A = 1.6$ para la resonancia pero las propiedades de los gases dictan $v_B / v_A = 3.08$, concluimos que es físicamente imposible a la misma temperatura.
+
+**Problema 3: Atenuación Acústica**
+Una onda esférica de presión se propaga en un medio viscoso. Su intensidad decae con la distancia $r$ como $I(r) = \frac{I_0}{r^2} e^{-2\alpha r}$. Determine la posición $r$ donde la tasa de pérdida de intensidad por unidad de longitud es máxima.
+
+**Solución paso a paso:**
+1. Tasa de pérdida: $L(r) = -\frac{dI}{dr} = I_0 e^{-2\alpha r} \left( \frac{2}{r^3} + \frac{2\alpha}{r^2} \right)$.
+2. Para maximizar la pérdida, derivamos $L(r)$ respecto a $r$ e igualamos a cero:
+   $L'(r) = I_0 e^{-2\alpha r} \left[ -2\alpha \left( \frac{2}{r^3} + \frac{2\alpha}{r^2} \right) - \frac{6}{r^4} - \frac{4\alpha}{r^3} \right] = 0$.
+3. Simplificando el paréntesis: $-\frac{4\alpha}{r^3} - \frac{4\alpha^2}{r^2} - \frac{6}{r^4} - \frac{4\alpha}{r^3} = 0$.
+4. Multiplicando por $r^4$: $4\alpha^2 r^2 + 8\alpha r + 6 = 0$. Esta ecuación no tiene raíces reales positivas (discriminante $64\alpha^2 - 96\alpha^2 < 0$), lo que implica que el máximo ocurre en el límite inferior de $r$ válido (origen efectivo).
+
+## 💻 Simulaciones Computacionales
+
+A continuación, se presenta un script en Python que simula el patrón de interferencia acústica bidimensional producido por dos fuentes puntuales (altavoces) emitiendo sonido de la misma frecuencia en fase. Utiliza `numpy` para el cálculo matricial y `matplotlib` para la visualización.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def simular_interferencia_acustica():
+    """
+    Simula y visualiza el patrón de interferencia espacial de dos
+    fuentes sonoras puntuales coherentes.
+    """
+    # Parámetros físicos
+    f = 1000.0          # Frecuencia (Hz)
+    c = 343.0           # Velocidad del sonido en el aire (m/s)
+    lam = c / f         # Longitud de onda (m)
+    k = 2 * np.pi / lam # Número de onda (rad/m)
+    
+    # Posición de las fuentes (d = separación)
+    d = 1.0             # Separación de 1 metro
+    x_fuente1, y_fuente1 = -d/2, 0.0
+    x_fuente2, y_fuente2 = d/2, 0.0
+    
+    # Grilla espacial
+    x = np.linspace(-2, 2, 500)
+    y = np.linspace(-2, 2, 500)
+    X, Y = np.meshgrid(x, y)
+    
+    # Distancia desde cada punto a las fuentes
+    r1 = np.sqrt((X - x_fuente1)**2 + (Y - y_fuente1)**2)
+    r2 = np.sqrt((X - x_fuente2)**2 + (Y - y_fuente2)**2)
+    
+    # Amplitud del campo de presión (onda esférica simplificada a 2D)
+    # P(r) = (P0 / r) * cos(kr - wt). Tomamos t=0.
+    # Para evitar división por cero, sumamos un pequeño epsilon
+    eps = 1e-3
+    P1 = (1.0 / (r1 + eps)) * np.cos(k * r1)
+    P2 = (1.0 / (r2 + eps)) * np.cos(k * r2)
+    
+    # Superposición
+    P_total = P1 + P2
+    
+    # Intensidad acústica proporcional al cuadrado de la amplitud
+    # Suavizamos para mejor visualización
+    Intensidad = P_total**2
+    Intensidad = np.clip(Intensidad, 0, np.percentile(Intensidad, 95))
+    
+    # Visualización
+    plt.figure(figsize=(8, 6))
+    plt.contourf(X, Y, Intensidad, 100, cmap='inferno')
+    plt.plot(x_fuente1, y_fuente1, 'wo', markersize=8, label='Fuente 1')
+    plt.plot(x_fuente2, y_fuente2, 'wo', markersize=8, label='Fuente 2')
+    plt.colorbar(label='Intensidad Acústica Relativa')
+    plt.title(f'Interferencia Acústica de 2 Fuentes (f = {f} Hz)')
+    plt.xlabel('Posición X (m)')
+    plt.ylabel('Posición Y (m)')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+if __name__ == '__main__':
+    simular_interferencia_acustica()
+```
+
 ## 📚 Recursos
 ### Cursos
 1. ["Acoustics: Basic Physics" - Coursera (UNSW Sydney)](https://www.coursera.org/learn/acoustics)

@@ -243,6 +243,115 @@ $$
 
 Esta forma parabólica invertida, fuertemente contrastante con el perfil gaussiano de un gas térmico de Maxwell-Boltzmann, es la evidencia principal reportada en las primeras condensaciones por Cornell, Wieman y Ketterle (Premio Nobel 2001).
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Efecto Stark Lineal en el Átomo de Hidrógeno
+Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido a un campo eléctrico externo uniforme $\vec{\mathcal{E}} = \mathcal{E}_0 \hat{z}$. Calcule el corrimiento de los niveles de energía utilizando la teoría de perturbaciones degenerada de primer orden.
+
+**Solución paso a paso:**
+1. Los estados degenerados para $n=2$ son $|2,0,0\rangle$, $|2,1,0\rangle$, $|2,1,1\rangle$, y $|2,1,-1\rangle$ en la base $|n,l,m\rangle$.
+2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
+3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
+4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+   $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+   donde $a_0$ es el radio de Bohr.
+5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+   $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
+
+### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
+Derive la expresión para los niveles de energía rotovibracionales de una molécula diatómica tratada como un oscilador armónico y rotor rígido acoplados, incluyendo la corrección de distorsión centrífuga. 
+
+**Solución paso a paso:**
+1. El Hamiltoniano molecular efectivo es $H = \frac{P^2}{2\mu} + \frac{L^2}{2\mu R^2} + V(R)$.
+2. Expandiendo el potencial alrededor del mínimo $R_e$: $V(R) \approx \frac{1}{2} k (R - R_e)^2$.
+3. La energía a orden cero es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1)$, donde $B_e = \frac{\hbar^2}{2\mu R_e^2}$.
+4. Para la distorsión centrífuga, el mínimo efectivo de la energía potencial efectiva $V_{\text{eff}}(R) = V(R) + \frac{\hbar^2 J(J+1)}{2\mu R^2}$ se desplaza.
+5. Minimizando $V_{\text{eff}}$: $k(R_c - R_e) - \frac{\hbar^2 J(J+1)}{\mu R_c^3} = 0 \implies \Delta R \approx \frac{\hbar^2 J(J+1)}{k \mu R_e^3}$.
+6. Sustituyendo de nuevo en la energía, el término de corrección es $-D_e J^2(J+1)^2$, donde $D_e = \frac{4B_e^3}{\hbar^2 \omega^2}$.
+7. La energía final es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1) - D_e J^2(J+1)^2$.
+
+### Ejercicio 3: Condensación de Bose-Einstein en una Trampa Armónica
+Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein de un gas ideal de $N$ bosones atrapados en un potencial armónico tridimensional isotrópico $V(r) = \frac{1}{2} m \omega^2 r^2$.
+
+**Solución paso a paso:**
+1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
+2. El número total de partículas en estados excitados viene dado por la integral:
+   $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
+4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+   $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
+6. Resolviendo para $T_c$:
+   $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
+
+## 💻 Simulaciones Computacionales
+
+Este script resuelve la ecuación no lineal de Gross-Pitaevskii (GPE) para el estado fundamental de un Condensado de Bose-Einstein (BEC) atrapado en un potencial armónico 1D, simulando el efecto de las repulsiones atómicas usando un método de evolución en tiempo imaginario.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros del grid y de simulación
+N = 512
+x_max = 10.0
+x = np.linspace(-x_max, x_max, N)
+dx = x[1] - x[0]
+dt = 0.005  # Paso de tiempo imaginario
+steps = 2000
+
+# Potencial Armónico de la Trampa Magnética
+V = 0.5 * x**2
+
+# Fuerza de interacción entre átomos (parámetro no lineal g)
+# g > 0 implica repulsión (ensanchamiento del condensado)
+g_values = [0.0, 10.0, 50.0]
+
+plt.figure(figsize=(10, 6))
+plt.plot(x, V, 'k--', label='Potencial de Trampa $V(x)$')
+
+for g in g_values:
+    # Estado inicial gaussiano de prueba
+    psi = np.exp(-0.5 * x**2)
+    psi /= np.sqrt(np.sum(np.abs(psi)**2) * dx)
+    
+    # Evolución en tiempo imaginario (psi -> exp(-H*tau) psi)
+    # Utilizamos el método Split-Step Fourier
+    k = np.fft.fftfreq(N, d=dx) * 2 * np.pi
+    T_op = np.exp(-0.5 * k**2 * dt)
+    
+    for _ in range(steps):
+        # Medio paso espacial (Potencial + Interacción no lineal)
+        V_eff = V + g * np.abs(psi)**2
+        psi *= np.exp(-0.5 * V_eff * dt)
+        
+        # Paso en el espacio de momentos (Energía cinética)
+        psi = np.fft.fft(psi)
+        psi *= T_op
+        psi = np.fft.ifft(psi)
+        
+        # Medio paso espacial restante
+        V_eff = V + g * np.abs(psi)**2
+        psi *= np.exp(-0.5 * V_eff * dt)
+        
+        # Renormalización obligatoria en tiempo imaginario
+        psi /= np.sqrt(np.sum(np.abs(psi)**2) * dx)
+        
+    densidad = np.abs(psi)**2
+    plt.plot(x, densidad, lw=2, label=f'BEC Densidad (g={g})')
+
+plt.xlim(-6, 6)
+plt.ylim(0, 1.2)
+plt.xlabel('Posición x')
+plt.ylabel('Densidad $|\psi(x)|^2$')
+plt.title('Estado Fundamental de un BEC (Ecuación de Gross-Pitaevskii)')
+plt.legend()
+plt.grid(alpha=0.3)
+plt.tight_layout()
+# plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

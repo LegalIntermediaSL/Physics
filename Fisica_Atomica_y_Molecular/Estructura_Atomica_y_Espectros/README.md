@@ -120,6 +120,105 @@ El elemento de la matriz dipolar eléctrica es vital. Cuando se descompone en la
 3. Para el espín de forma aislada: $\Delta m_s = 0$ (La luz interactúa principalmente sobre las coordenadas espaciales $\boldsymbol{r}$, no opera sobre los espinores).
 4. Para el momento total: $\Delta j = 0, \pm 1$ pero nunca la transición $j=0 \to j=0$.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Efecto Stark Lineal en el Átomo de Hidrógeno
+Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido a un campo eléctrico externo uniforme $\vec{\mathcal{E}} = \mathcal{E}_0 \hat{z}$. Calcule el corrimiento de los niveles de energía utilizando la teoría de perturbaciones degenerada de primer orden.
+
+**Solución paso a paso:**
+1. Los estados degenerados para $n=2$ son $|2,0,0\rangle$, $|2,1,0\rangle$, $|2,1,1\rangle$, y $|2,1,-1\rangle$ en la base $|n,l,m\rangle$.
+2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
+3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
+4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+   $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+   donde $a_0$ es el radio de Bohr.
+5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+   $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
+
+### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
+Derive la expresión para los niveles de energía rotovibracionales de una molécula diatómica tratada como un oscilador armónico y rotor rígido acoplados, incluyendo la corrección de distorsión centrífuga. 
+
+**Solución paso a paso:**
+1. El Hamiltoniano molecular efectivo es $H = \frac{P^2}{2\mu} + \frac{L^2}{2\mu R^2} + V(R)$.
+2. Expandiendo el potencial alrededor del mínimo $R_e$: $V(R) \approx \frac{1}{2} k (R - R_e)^2$.
+3. La energía a orden cero es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1)$, donde $B_e = \frac{\hbar^2}{2\mu R_e^2}$.
+4. Para la distorsión centrífuga, el mínimo efectivo de la energía potencial efectiva $V_{\text{eff}}(R) = V(R) + \frac{\hbar^2 J(J+1)}{2\mu R^2}$ se desplaza.
+5. Minimizando $V_{\text{eff}}$: $k(R_c - R_e) - \frac{\hbar^2 J(J+1)}{\mu R_c^3} = 0 \implies \Delta R \approx \frac{\hbar^2 J(J+1)}{k \mu R_e^3}$.
+6. Sustituyendo de nuevo en la energía, el término de corrección es $-D_e J^2(J+1)^2$, donde $D_e = \frac{4B_e^3}{\hbar^2 \omega^2}$.
+7. La energía final es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1) - D_e J^2(J+1)^2$.
+
+### Ejercicio 3: Condensación de Bose-Einstein en una Trampa Armónica
+Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein de un gas ideal de $N$ bosones atrapados en un potencial armónico tridimensional isotrópico $V(r) = \frac{1}{2} m \omega^2 r^2$.
+
+**Solución paso a paso:**
+1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
+2. El número total de partículas en estados excitados viene dado por la integral:
+   $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
+4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+   $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
+6. Resolviendo para $T_c$:
+   $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
+
+## 💻 Simulaciones Computacionales
+
+Este script en Python simula el Efecto Zeeman Anómalo, calculando y graficando cómo los niveles de energía de estructura fina se desdoblan debido a la interacción del espín y momento angular orbital con un campo magnético externo.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def lande_g_factor(L, S, J):
+    """Calcula el factor de Landé g_J."""
+    if J == 0:
+        return 0
+    return 1.0 + (J*(J+1) + S*(S+1) - L*(L+1)) / (2.0 * J*(J+1))
+
+# Analizamos la transición entre estado P (L=1, S=1/2) y estado S (L=0, S=1/2)
+# Como en el doblete del Sodio (D-lines)
+
+# Nivel Superior: P (L=1, S=1/2) -> Dos niveles J: 3/2 y 1/2
+levels = [
+    {'name': '2P_3/2', 'L': 1, 'S': 0.5, 'J': 1.5, 'E0': 2.104},
+    {'name': '2P_1/2', 'L': 1, 'S': 0.5, 'J': 0.5, 'E0': 2.102},
+    {'name': '2S_1/2', 'L': 0, 'S': 0.5, 'J': 0.5, 'E0': 0.0}
+]
+
+B_fields = np.linspace(0, 2.0, 100) # Campo magnético en Teslas
+mu_B = 5.788e-5 # Magnetón de Bohr en eV/T
+
+plt.figure(figsize=(8, 6))
+colors = {'2P_3/2': 'red', '2P_1/2': 'blue', '2S_1/2': 'black'}
+
+for level in levels:
+    J = level['J']
+    g_J = lande_g_factor(level['L'], level['S'], J)
+    
+    # Los m_J van desde -J hasta J
+    m_j_vals = np.arange(-J, J + 1, 1.0)
+    
+    for m_j in m_j_vals:
+        # Energía con perturbación Zeeman: E = E0 + g_j * mu_B * B * m_j
+        E_B = level['E0'] + g_J * mu_B * B_fields * m_j
+        plt.plot(B_fields, E_B, color=colors[level['name']], 
+                 label=level['name'] if m_j == J else "") # Label solo una vez
+        
+        # Anotación a la derecha del gráfico
+        plt.text(B_fields[-1]*1.02, E_B[-1], f'm_J={m_j}', 
+                 verticalalignment='center', fontsize=8, color=colors[level['name']])
+
+plt.title("Efecto Zeeman Anómalo: Desdoblamiento de Niveles de Energía")
+plt.xlabel("Campo Magnético Estático B (Teslas)")
+plt.ylabel("Energía (eV)")
+plt.xlim(0, 2.2)
+plt.legend(loc='center left')
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+# plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

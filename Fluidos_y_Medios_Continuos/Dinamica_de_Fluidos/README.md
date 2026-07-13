@@ -65,6 +65,132 @@ graph TD
     CapaLimite --> Separacion[Separación de Flujo y Estela]
 ```
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Ecuación de Continuidad en Coordenadas Cilíndricas**
+Compruebe si el campo de velocidades $\vec{v} = (kr) \hat{r} + (-2kz) \hat{z}$ en coordenadas cilíndricas satisface la ecuación de continuidad para un fluido incompresible y estacionario. Encuentre la función de corriente si existe.
+
+**Solución paso a paso:**
+1. Ecuación de continuidad incompresible: $\nabla \cdot \vec{v} = 0$.
+2. En coordenadas cilíndricas $(r, \theta, z)$: $\nabla \cdot \vec{v} = \frac{1}{r} \frac{\partial (r v_r)}{\partial r} + \frac{1}{r} \frac{\partial v_\theta}{\partial \theta} + \frac{\partial v_z}{\partial z}$.
+3. Sustituyendo $v_r = kr$, $v_\theta = 0$, $v_z = -2kz$:
+   $\nabla \cdot \vec{v} = \frac{1}{r} \frac{\partial (k r^2)}{\partial r} + 0 + \frac{\partial (-2kz)}{\partial z} = \frac{1}{r} (2kr) - 2k = 2k - 2k = 0$.
+4. Como la divergencia es cero, el campo es incompresible.
+5. Existe una función de corriente de Stokes $\psi(r,z)$ tal que $v_r = -\frac{1}{r}\frac{\partial \psi}{\partial z}$ y $v_z = \frac{1}{r}\frac{\partial \psi}{\partial r}$.
+6. Integrando $v_r = kr \implies -\frac{\partial \psi}{\partial z} = k r^2 \implies \psi = -k r^2 z + f(r)$.
+7. Derivando respecto a $r$: $v_z = \frac{1}{r} \frac{\partial \psi}{\partial r} = \frac{1}{r} (-2krz + f'(r)) = -2kz + \frac{f'(r)}{r}$.
+8. Como $v_z = -2kz$, entonces $f'(r) = 0$, por lo que $f(r) = C$. Tomamos $C=0$. La función de corriente es $\psi = -k r^2 z$.
+
+**Problema 2: Teorema de Transporte de Reynolds**
+Considere un chorro de agua de área transversal $A$ y velocidad $V$ que impacta normalmente contra una placa plana móvil que se aleja con velocidad $U$ ($U < V$). Calcule la fuerza ejercida sobre la placa.
+
+**Solución paso a paso:**
+1. Tomamos un volumen de control (VC) adherido a la placa, por lo que se mueve a velocidad $U$.
+2. La velocidad relativa del fluido respecto al VC es $V_{rel} = V - U$.
+3. El caudal másico que entra al VC es $\dot{m} = \rho A V_{rel} = \rho A (V - U)$.
+4. El fluido impacta y sale paralelo a la placa. En el sistema de referencia de la placa, la velocidad de salida en la dirección normal (x) es 0.
+5. Aplicamos la conservación del momento lineal en $x$: $\sum F_x = \frac{\partial}{\partial t} \int_{VC} v_x \rho dV + \int_{SC} v_x (\rho \vec{v}_{rel} \cdot d\vec{A})$.
+6. Para flujo estacionario, el término temporal es cero.
+7. El flujo de momento neto es $\dot{m}_{out} v_{x,out} - \dot{m}_{in} v_{x,in} = 0 - \dot{m} (V - U) = -\rho A (V - U)^2$.
+8. La fuerza sobre el fluido es $F_{fluido} = -\rho A (V - U)^2$. Por la tercera ley de Newton, la fuerza sobre la placa es $F = \rho A (V - U)^2$.
+
+**Problema 3: Vórtice de Rankine**
+Un modelo de vórtice tiene una velocidad tangencial dada por $v_\theta = \omega r$ para $r \leq R$ (núcleo sólido) y $v_\theta = \frac{\Gamma}{2\pi r}$ para $r > R$ (vórtice irrotacional). Para que la velocidad sea continua, encuentre $\Gamma$ y la distribución de presión $P(r)$ si $P(\infty) = P_0$.
+
+**Solución paso a paso:**
+1. Continuidad en $r=R$: $\omega R = \frac{\Gamma}{2\pi R} \implies \Gamma = 2\pi \omega R^2$.
+2. Usamos la ecuación de Euler en dirección radial: $\frac{dP}{dr} = \frac{\rho v_\theta^2}{r}$.
+3. Para la zona externa ($r > R$): $\frac{dP}{dr} = \rho \frac{\Gamma^2}{4\pi^2 r^3} = \rho \frac{\omega^2 R^4}{r^3}$.
+   Integrando de $r$ a $\infty$: $P(\infty) - P(r) = \rho \omega^2 R^4 \left[ -\frac{1}{2r^2} \right]_r^\infty = \frac{\rho \omega^2 R^4}{2r^2}$.
+   $P_{ext}(r) = P_0 - \frac{\rho \omega^2 R^4}{2r^2}$.
+4. Presión en $r=R$: $P(R) = P_0 - \frac{1}{2}\rho \omega^2 R^2$.
+5. Para la zona interna ($r \leq R$): $\frac{dP}{dr} = \frac{\rho (\omega r)^2}{r} = \rho \omega^2 r$.
+   Integrando de $r$ a $R$: $P(R) - P(r) = \frac{1}{2}\rho \omega^2 (R^2 - r^2)$.
+   $P_{int}(r) = P(R) - \frac{1}{2}\rho \omega^2 (R^2 - r^2) = P_0 - \frac{1}{2}\rho \omega^2 R^2 - \frac{1}{2}\rho \omega^2 R^2 + \frac{1}{2}\rho \omega^2 r^2$.
+6. Simplificando: $P_{int}(r) = P_0 - \rho \omega^2 R^2 + \frac{1}{2}\rho \omega^2 r^2$.
+
+## 💻 Simulaciones Computacionales
+
+Resolución numérica de las Ecuaciones de Navier-Stokes en 2D para el clásico problema de "Cavidad impulsada por tapa" (Lid-driven cavity) usando diferencias finitas.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+nx, ny = 41, 41
+nt = 100
+nit = 50
+dx = 2 / (nx - 1)
+dy = 2 / (ny - 1)
+x = np.linspace(0, 2, nx)
+y = np.linspace(0, 2, ny)
+X, Y = np.meshgrid(x, y)
+
+rho = 1.0
+nu = 0.1
+dt = 0.001
+
+u = np.zeros((ny, nx))
+v = np.zeros((ny, nx))
+p = np.zeros((ny, nx))
+b = np.zeros((ny, nx))
+
+def build_up_b(b, rho, dt, u, v, dx, dy):
+    b[1:-1, 1:-1] = (rho * (1 / dt * 
+                    ((u[1:-1, 2:] - u[1:-1, 0:-2]) / (2 * dx) + 
+                     (v[2:, 1:-1] - v[0:-2, 1:-1]) / (2 * dy)) -
+                    ((u[1:-1, 2:] - u[1:-1, 0:-2]) / (2 * dx))**2 -
+                    2 * ((u[2:, 1:-1] - u[0:-2, 1:-1]) / (2 * dy) *
+                         (v[1:-1, 2:] - v[1:-1, 0:-2]) / (2 * dx)) -
+                    ((v[2:, 1:-1] - v[0:-2, 1:-1]) / (2 * dy))**2))
+    return b
+
+def pressure_poisson(p, dx, dy, b):
+    pn = np.empty_like(p)
+    for _ in range(nit):
+        pn = p.copy()
+        p[1:-1, 1:-1] = (((pn[1:-1, 2:] + pn[1:-1, 0:-2]) * dy**2 + 
+                          (pn[2:, 1:-1] + pn[0:-2, 1:-1]) * dx**2) /
+                         (2 * (dx**2 + dy**2)) -
+                         dx**2 * dy**2 / (2 * (dx**2 + dy**2)) * b[1:-1, 1:-1])
+        # Condiciones de borde para presión
+        p[:, -1] = p[:, -2] ; p[0, :] = p[1, :]
+        p[:, 0] = p[:, 1]   ; p[-1, :] = 0
+    return p
+
+for _ in range(nt):
+    un = u.copy()
+    vn = v.copy()
+    b = build_up_b(b, rho, dt, u, v, dx, dy)
+    p = pressure_poisson(p, dx, dy, b)
+    
+    u[1:-1, 1:-1] = (un[1:-1, 1:-1] -
+                     un[1:-1, 1:-1] * dt / dx * (un[1:-1, 1:-1] - un[1:-1, 0:-2]) -
+                     vn[1:-1, 1:-1] * dt / dy * (un[1:-1, 1:-1] - un[0:-2, 1:-1]) -
+                     dt / (2 * rho * dx) * (p[1:-1, 2:] - p[1:-1, 0:-2]) +
+                     nu * (dt / dx**2 * (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+                           dt / dy**2 * (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+                           
+    v[1:-1, 1:-1] = (vn[1:-1, 1:-1] -
+                     un[1:-1, 1:-1] * dt / dx * (vn[1:-1, 1:-1] - vn[1:-1, 0:-2]) -
+                     vn[1:-1, 1:-1] * dt / dy * (vn[1:-1, 1:-1] - vn[0:-2, 1:-1]) -
+                     dt / (2 * rho * dy) * (p[2:, 1:-1] - p[0:-2, 1:-1]) +
+                     nu * (dt / dx**2 * (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+                           dt / dy**2 * (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+    
+    # Borde de lid-driven cavity
+    u[0, :] = 0; u[:, 0] = 0; u[:, -1] = 0; u[-1, :] = 1
+    v[0, :] = 0; v[-1, :] = 0; v[:, 0] = 0; v[:, -1] = 0
+
+plt.figure(figsize=(7, 5))
+plt.contourf(X, Y, p, alpha=0.5, cmap='viridis')
+plt.colorbar(label="Presión")
+plt.streamplot(X, Y, u, v, color='black')
+plt.title("Lid-Driven Cavity: Flujo bidimensional de Navier-Stokes")
+plt.xlabel("X"); plt.ylabel("Y")
+plt.show()
+```
+
 ## 📚 Recursos
 ### Cursos Específicos
 1. ["Introduction to Fluid Dynamics" - Coursera](https://www.coursera.org/learn/fluid-dynamics)

@@ -59,6 +59,93 @@ graph TD
     TeoremaDivergencia --> Arquimedes[Principio de Flotación de Arquímedes]
 ```
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Fuerza y Momento en una Compuerta Parabólica**
+Una compuerta en un embalse tiene la forma de una parábola $y = ax^2$ y un ancho $b$ constante perpendicular a la página. El vértice de la parábola está en el fondo del embalse a profundidad $H$. Calcule la fuerza hidrostática horizontal y vertical sobre la compuerta.
+
+**Solución paso a paso:**
+1. La fuerza horizontal es igual a la fuerza sobre la proyección vertical de la superficie parabólica. El área proyectada es un rectángulo de ancho $b$ y altura $H$.
+2. La profundidad del centroide del rectángulo proyectado es $h_c = H/2$.
+3. Fuerza horizontal: $F_H = \gamma h_c A_{proy} = \rho g (H/2) (b H) = \frac{1}{2} \rho g b H^2$.
+4. La fuerza vertical es igual al peso del volumen del fluido sobre la compuerta.
+5. El volumen se calcula integrando el área parabólica. $y = ax^2 \implies x = \sqrt{y/a}$. La altura máxima es $H = ax_{max}^2 \implies x_{max} = \sqrt{H/a}$.
+6. El área bajo la curva (fluido) es $A_p = \int_0^{x_{max}} (H - ax^2) dx = [Hx - \frac{a}{3}x^3]_0^{x_{max}} = H\sqrt{\frac{H}{a}} - \frac{a}{3} \left(\frac{H}{a}\right)^{3/2} = \left(1 - \frac{1}{3}\right) H \sqrt{\frac{H}{a}} = \frac{2}{3} H x_{max}$.
+7. Fuerza vertical: $F_V = \gamma \text{Volumen} = \rho g b A_p = \frac{2}{3} \rho g b H x_{max}$.
+8. La magnitud de la fuerza total es $F = \sqrt{F_H^2 + F_V^2}$ y su línea de acción pasa por el centro de presiones.
+
+**Problema 2: Estabilidad de Cuerpos Flotantes (Metacentro)**
+Un cono sólido circular recto de altura $H$ y radio base $R$, con densidad relativa $S < 1$, flota en agua con el vértice hacia abajo. Determine la condición matemática para $R$ y $H$ de modo que la posición de flotación sea estable.
+
+**Solución paso a paso:**
+1. El volumen desplazado es igual a la masa del cono: $V_D = S V_C = S \left(\frac{1}{3} \pi R^2 H\right)$.
+2. Si el cono está sumergido a una profundidad $h$, el volumen es $V_D = \frac{1}{3} \pi r^2 h$. Por semejanza, $r/h = R/H \implies r = h R/H$.
+3. Igualando: $\frac{1}{3} \pi \left(h \frac{R}{H}\right)^2 h = S \left(\frac{1}{3} \pi R^2 H\right) \implies h^3 = S H^3 \implies h = H S^{1/3}$.
+4. Centro de gravedad $G$: Para un cono, $z_G = \frac{3}{4}H$ desde el vértice.
+5. Centro de flotación $B$ (centroide del cono sumergido): $z_B = \frac{3}{4}h = \frac{3}{4}H S^{1/3}$.
+6. El radio a nivel de flotación es $r = R S^{1/3}$. Momento de inercia del área de flotación: $I_0 = \frac{\pi}{4} r^4 = \frac{\pi}{4} R^4 S^{4/3}$.
+7. Altura metacéntrica $BM = \frac{I_0}{V_D} = \frac{(\pi/4) R^4 S^{4/3}}{(1/3) \pi R^2 H S} = \frac{3}{4} \frac{R^2}{H} S^{1/3}$.
+8. Distancia $BG = z_G - z_B = \frac{3}{4}H - \frac{3}{4}H S^{1/3} = \frac{3}{4}H (1 - S^{1/3})$.
+9. Condición de estabilidad: $GM = BM - BG > 0 \implies \frac{3}{4} \frac{R^2}{H} S^{1/3} > \frac{3}{4}H (1 - S^{1/3})$.
+10. Simplificando: $\frac{R^2}{H^2} > \frac{1 - S^{1/3}}{S^{1/3}} \implies \left(\frac{R}{H}\right)^2 > S^{-1/3} - 1$.
+
+**Problema 3: Rotación de Masa Fluida (Paraboloide de Presión)**
+Un tanque cilíndrico de radio $R$ contiene agua hasta una altura $h_0$. El tanque se hace rotar con velocidad angular constante $\omega$ sobre su eje vertical central. Calcule la velocidad angular $\omega_{max}$ requerida para que el agua apenas exponga el fondo del tanque.
+
+**Solución paso a paso:**
+1. La superficie libre en rotación adopta la forma de un paraboloide: $z(r) = z_0 + \frac{\omega^2 r^2}{2g}$, donde $z_0$ es la altura en el centro ($r=0$).
+2. El volumen de un paraboloide de revolución entre $r=0$ y $r=R$ es la mitad del volumen del cilindro circunscrito: $V_{aire} = \frac{1}{2} (\pi R^2) \Delta z = \frac{1}{2} \pi R^2 (\frac{\omega^2 R^2}{2g})$.
+3. Por conservación del volumen de líquido, la elevación del nivel de agua en el borde es igual al descenso en el centro: $z_{borde} - h_0 = h_0 - z_0 = \frac{\omega^2 R^2}{4g}$.
+4. Así que $z_0 = h_0 - \frac{\omega^2 R^2}{4g}$.
+5. Si el agua apenas expone el centro del fondo, entonces $z_0 = 0$.
+6. Igualamos: $0 = h_0 - \frac{\omega^2 R^2}{4g} \implies \omega^2 = \frac{4 g h_0}{R^2}$.
+7. La velocidad angular requerida es $\omega_{max} = \frac{2}{R} \sqrt{g h_0}$.
+
+## 💻 Simulaciones Computacionales
+
+Simulación computacional del principio de flotación y cálculo del gradiente de presión estática en una columna de fluido estratificado.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Estratificación oceánica simple (termoclina)
+depth = np.linspace(0, 1000, 100) # m
+rho_surface = 1025.0
+rho_deep = 1040.0
+# Perfil de densidad sigmoideo
+rho = rho_surface + (rho_deep - rho_surface) / (1 + np.exp(-(depth - 300)/50))
+
+# Integración numérica para la presión hidrostática: dP = rho * g * dz
+g = 9.81
+P = np.zeros_like(depth)
+P[0] = 101325 # Patm en superficie
+
+for i in range(1, len(depth)):
+    dz = depth[i] - depth[i-1]
+    # Trapecio
+    rho_avg = 0.5 * (rho[i] + rho[i-1])
+    P[i] = P[i-1] + rho_avg * g * dz
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+
+ax1.plot(rho, depth, 'b-', lw=2)
+ax1.invert_yaxis()
+ax1.set_title("Perfil de Densidad (Océano)")
+ax1.set_xlabel("Densidad (kg/m^3)")
+ax1.set_ylabel("Profundidad (m)")
+ax1.grid(True)
+
+ax2.plot(P / 1e5, depth, 'r-', lw=2) # Presión en bar
+ax2.invert_yaxis()
+ax2.set_title("Presión Hidrostática")
+ax2.set_xlabel("Presión (bar)")
+ax2.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
+
 ## 📚 Recursos
 ### Cursos Específicos
 1. ["Physics 101: Fluid Statics" - Coursera](https://www.coursera.org/learn/physics-101)

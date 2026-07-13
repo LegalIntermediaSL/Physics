@@ -84,6 +84,111 @@ graph LR
    $$ s_m \approx \sqrt{ \frac{3.18 \times 10^{-3}}{1.62 \times 10^{10}} } \approx 1.4 \times 10^{-7} \text{ m} \text{ (0.14 micrómetros)} $$
    Esta minúscula amplitud de vibración es suficiente para ser percibida como un sonido muy fuerte.
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Efecto Doppler Generalizado**
+Un murciélago vuela a velocidad $v_b$ hacia una pared plana mientras emite pulsos ultrasónicos a frecuencia $f_0$. El murciélago percibe el eco reflejado en la pared con una frecuencia de batido $\Delta f$. Deduzca la expresión para $v_b$ en función de $\Delta f$, $f_0$ y la velocidad del sonido $c$.
+
+**Solución paso a paso:**
+1. Frecuencia recibida por la pared (observador en reposo, fuente móvil): $f_w = f_0 \left( \frac{c}{c - v_b} \right)$.
+2. La pared actúa como fuente estacionaria reflejando $f_w$. El murciélago la percibe como observador móvil acercándose: $f_r = f_w \left( \frac{c + v_b}{c} \right) = f_0 \left( \frac{c + v_b}{c - v_b} \right)$.
+3. La frecuencia de batido es $\Delta f = f_r - f_0 = f_0 \left( \frac{c + v_b}{c - v_b} - 1 \right) = f_0 \left( \frac{2v_b}{c - v_b} \right)$.
+4. Despejando $v_b$: $\Delta f (c - v_b) = 2 f_0 v_b \implies v_b = \frac{c \Delta f}{2 f_0 + \Delta f}$.
+
+**Problema 2: Impedancia Acústica**
+Calcule el coeficiente de transmisión de intensidad acústica del agua ($Z_1 = 1.48 \times 10^6 \, \text{kg/m}^2\text{s}$) al aire ($Z_2 = 415 \, \text{kg/m}^2\text{s}$) a incidencia normal.
+
+**Solución paso a paso:**
+1. El coeficiente de reflexión de intensidad para incidencia normal es $R = \left( \frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2$.
+2. Dado $Z_1 \gg Z_2$, $R \approx \left( \frac{-Z_1}{Z_1} \right)^2 \approx 1$.
+3. Computando exactamente: $R = \left( \frac{415 - 1.48 \times 10^6}{415 + 1.48 \times 10^6} \right)^2 = (-0.99944)^2 \approx 0.99888$.
+4. El coeficiente de transmisión es $T = 1 - R \approx 0.00112$, por lo que solo el $0.11\%$ de la energía acústica se transmite del agua al aire, explicando la sordera bajo el agua a sonidos aéreos.
+
+**Problema 3: Interferencia en 3D**
+Tres fuentes sonoras idénticas se ubican en los vértices de un triángulo equilátero de lado $L$. Emiten en fase con longitud de onda $\lambda = L/2$. Encuentre la intensidad acústica en el centro geométrico del triángulo en función de la intensidad $I_0$ de una sola fuente.
+
+**Solución paso a paso:**
+1. La distancia del centroide a cada vértice es $r = \frac{L}{\sqrt{3}}$.
+2. La fase espacial adquirida por cada onda al llegar al centroide es $\phi = k r = \frac{2\pi}{\lambda} \frac{L}{\sqrt{3}}$.
+3. Sustituyendo $\lambda = L/2$: $\phi = \frac{2\pi}{L/2} \frac{L}{\sqrt{3}} = \frac{4\pi}{\sqrt{3}} \approx 7.255 \, \text{rad}$.
+4. Como las tres fuentes son equidistantes y están en fase, las ondas llegan al centroide con la misma fase y amplitud $A$.
+5. La amplitud total es la suma coherente: $A_{tot} = A + A + A = 3A$.
+6. Como la intensidad es proporcional a la amplitud al cuadrado ($I \propto A^2$), la intensidad total es $I_{tot} = (3A)^2 = 9 I_0$.
+
+## 💻 Simulaciones Computacionales
+
+A continuación, se presenta un script en Python que simula el fenómeno de batido (pulsaciones) resultante de la superposición de dos ondas sonoras con frecuencias muy cercanas, y realiza un análisis de Fourier (FFT) para identificar las frecuencias individuales involucradas.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.fft import fft, fftfreq
+
+def simular_batido_sonoro():
+    """
+    Simula la superposición de dos ondas sonoras de frecuencias cercanas
+    mostrando el fenómeno de batido en el tiempo y su espectro de frecuencias.
+    """
+    # Parámetros de la simulación
+    fs = 44100            # Frecuencia de muestreo (Hz)
+    T = 0.5               # Duración (segundos)
+    t = np.linspace(0, T, int(fs * T), endpoint=False)
+    
+    # Frecuencias de las dos ondas (cercanas para producir batido)
+    f1 = 440.0            # La4 (Hz)
+    f2 = 448.0            # Frecuencia ligeramente mayor (Hz)
+    f_batido = abs(f1 - f2)
+    
+    # Generación de las señales
+    y1 = np.sin(2 * np.pi * f1 * t)
+    y2 = np.sin(2 * np.pi * f2 * t)
+    
+    # Superposición (Batido)
+    y_superposicion = y1 + y2
+    
+    # Transformada Rápida de Fourier (FFT)
+    N = len(t)
+    yf = fft(y_superposicion)
+    xf = fftfreq(N, 1 / fs)[:N//2]
+    yf_mag = 2.0/N * np.abs(yf[0:N//2])
+    
+    # Visualización
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
+    
+    # Gráfica en el dominio del tiempo
+    ax1.plot(t, y_superposicion, color='royalblue')
+    # Envolvente teórica del batido
+    envolvente = 2 * np.cos(2 * np.pi * (f_batido / 2) * t)
+    ax1.plot(t, envolvente, 'r--', alpha=0.8, linewidth=2, label=f'Envolvente (f_batido = {f_batido} Hz)')
+    ax1.plot(t, -envolvente, 'r--', alpha=0.8, linewidth=2)
+    
+    ax1.set_title('Dominio del Tiempo: Fenómeno de Batido (Pulsación)')
+    ax1.set_xlabel('Tiempo (s)')
+    ax1.set_ylabel('Amplitud')
+    ax1.set_xlim(0, 0.25) # Mostrar solo un cuarto de segundo para claridad
+    ax1.legend(loc='upper right')
+    ax1.grid(True)
+    
+    # Gráfica en el dominio de la frecuencia (Espectro)
+    ax2.plot(xf, yf_mag, color='darkorange')
+    ax2.set_title('Dominio de la Frecuencia: Espectro (FFT)')
+    ax2.set_xlabel('Frecuencia (Hz)')
+    ax2.set_ylabel('Magnitud')
+    ax2.set_xlim(400, 500) # Zoom alrededor de las frecuencias de interés
+    ax2.grid(True)
+    
+    # Marcadores de las frecuencias originales
+    ax2.axvline(f1, color='green', linestyle=':', label=f'f1 = {f1} Hz')
+    ax2.axvline(f2, color='purple', linestyle=':', label=f'f2 = {f2} Hz')
+    ax2.legend()
+    
+    plt.tight_layout()
+    plt.show()
+
+if __name__ == '__main__':
+    simular_batido_sonoro()
+```
+
 ## 📚 Recursos Específicos
 ### Cursos
 1. ["Acoustics: Basic Physics" - Coursera (UNSW Sydney)](https://www.coursera.org/learn/acoustics)

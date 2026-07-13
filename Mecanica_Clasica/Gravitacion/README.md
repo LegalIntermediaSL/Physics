@@ -82,6 +82,111 @@ La precesión mínima observada en Mercurio violaba esta simetría subyacente, p
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Campo en el interior de una esfera maciza hueca descentrada**
+Considere una esfera de radio $R$ con una densidad de masa uniforme $\rho$. Dentro de ella hay una cavidad esférica hueca (vacía) de radio $a$, cuyo centro está desplazado un vector $\vec{d}$ respecto al centro de la esfera original. Demuestre que el campo gravitacional en el interior de la cavidad es uniforme y calcule su vector.
+**Solución paso a paso:**
+1. Por el Principio de Superposición, el campo total $\vec{g}_{tot}$ es la suma del campo que produciría una esfera maciza completa de densidad $\rho$, más el campo de una esfera de radio $a$ y densidad negativa $-\rho$ (la cavidad).
+2. Para una esfera de densidad uniforme, aplicando la Ley de Gauss, el campo en el interior (a un vector de posición $\vec{r}$ desde el centro) es:
+   $\oint \vec{g} \cdot d\vec{A} = -4\pi G M_{int} = -4\pi G (\rho \frac{4}{3}\pi r^3)$.
+   $g (4\pi r^2) = -\frac{16\pi^2}{3} G \rho r^3 \implies \vec{g}(\vec{r}) = -\frac{4}{3}\pi G \rho \vec{r}$.
+3. Sea el centro de la esfera principal el origen. El campo creado por esta esfera sólida evaluado en un punto arbitrario $\vec{r}$ dentro de la cavidad es $\vec{g}_1 = -\frac{4}{3}\pi G \rho \vec{r}$.
+4. El centro de la cavidad está en $\vec{d}$. El vector desde el centro de la cavidad hasta el mismo punto de prueba es $\vec{r}' = \vec{r} - \vec{d}$.
+5. El campo producido por la "masa negativa" $-\rho$ en la cavidad es:
+   $\vec{g}_2 = -\frac{4}{3}\pi G (-\rho) \vec{r}' = \frac{4}{3}\pi G \rho (\vec{r} - \vec{d})$.
+6. Sumamos ambos campos para obtener el campo total dentro de la cavidad:
+   $\vec{g}_{tot} = \vec{g}_1 + \vec{g}_2 = -\frac{4}{3}\pi G \rho \vec{r} + \frac{4}{3}\pi G \rho (\vec{r} - \vec{d})$.
+7. Simplificando algebraicamente:
+   $\vec{g}_{tot} = -\frac{4}{3}\pi G \rho \vec{d}$.
+8. Este resultado no depende de $\vec{r}$. El campo gravitacional dentro de la cavidad es sorprendentemente **constante**, uniforme y apunta anti-paralelamente al vector de desplazamiento $\vec{d}$.
+
+**Problema 2: Perturbación en órbita y conservación del Vector Runge-Lenz**
+Un planeta de masa $m$ orbita el sol $M$ en una elipse de semieje mayor $a$ y excentricidad $\epsilon$. Encuentre la dependencia explícita entre la energía orbital $E$, el momento angular $\ell$ y la magnitud del vector Runge-Lenz $\vec{A} = \vec{p} \times \vec{L} - \mu k \hat{r}$, sabiendo que $k = GM\mu$.
+**Solución paso a paso:**
+1. Calculamos el producto punto del vector de Runge-Lenz consigo mismo para hallar su magnitud cuadrada $A^2 = \vec{A} \cdot \vec{A}$.
+2. $A^2 = (\vec{p} \times \vec{L} - \mu k \hat{r}) \cdot (\vec{p} \times \vec{L} - \mu k \hat{r})$.
+3. Desarrollamos: $A^2 = (\vec{p} \times \vec{L})^2 - 2\mu k \hat{r} \cdot (\vec{p} \times \vec{L}) + \mu^2 k^2$.
+4. Usando identidades vectoriales: $(\vec{p} \times \vec{L})^2 = p^2 L^2 - (\vec{p} \cdot \vec{L})^2$.
+5. Puesto que $\vec{L} = \vec{r} \times \vec{p}$, $\vec{p}$ es ortogonal a $\vec{L}$, así que $\vec{p} \cdot \vec{L} = 0$. Luego $(\vec{p} \times \vec{L})^2 = p^2 L^2 = 2\mu K L^2$, donde $K = \frac{p^2}{2\mu}$ es la energía cinética.
+6. El término cruzado requiere la permutación cíclica del triple producto escalar:
+   $\hat{r} \cdot (\vec{p} \times \vec{L}) = \vec{L} \cdot (\hat{r} \times \vec{p}) = \frac{1}{r} \vec{L} \cdot (\vec{r} \times \vec{p}) = \frac{1}{r} \vec{L} \cdot \vec{L} = \frac{L^2}{r}$.
+7. Sustituyendo los términos:
+   $A^2 = 2\mu K L^2 - 2\mu k \left(\frac{L^2}{r}\right) + \mu^2 k^2$.
+8. Factorizamos $2\mu L^2$:
+   $A^2 = 2\mu L^2 \left( K - \frac{k}{r} \right) + \mu^2 k^2$.
+9. Reconocemos que la energía mecánica total es $E = K - \frac{k}{r}$.
+10. $A^2 = 2\mu E L^2 + \mu^2 k^2 \implies \mathbf{A = \sqrt{2\mu E L^2 + \mu^2 k^2}}$. Este vector establece que la energía y momento angular fijan geométricamente la forma invariable de la órbita en el problema Kepleriano.
+
+**Problema 3: Radio de la esfera de la Muerte (Desgarro de marea)**
+Se tiene un objeto esférico denso de masa $M$ y un pequeño satélite esférico de masa $m$, radio $r$ y densidad homogénea, en órbita a distancia $R$. Encuentre a qué distancia límite $R_L$ (Límite de Roche en cuerpo rígido) la fuerza de marea gravitacional iguala a la gravedad propia del satélite en su superficie.
+**Solución paso a paso:**
+1. La fuerza gravitatoria ejercida por $M$ decae con la distancia. El diferencial de esta fuerza a lo largo del diámetro del satélite induce un gradiente de fuerza de marea que intenta desgarrarlo.
+2. Sea $F_G(R) = \frac{GMm}{R^2}$ la fuerza atractiva en el centro del satélite. En el borde más cercano a $M$, a distancia $R-r$, la fuerza es $F_G(R-r) = \frac{GMm}{(R-r)^2}$.
+3. La fuerza de marea neta sobre una partícula de prueba $dm$ depositada en ese borde extremo, en relación al marco en caída libre del centro de masa, es $\Delta F = \frac{GMdm}{(R-r)^2} - \frac{GMdm}{R^2}$.
+4. Usamos aproximación de Taylor de primer orden ya que $r \ll R$:
+   $(R-r)^{-2} = R^{-2}\left(1 - \frac{r}{R}\right)^{-2} \approx R^{-2}\left(1 + \frac{2r}{R}\right)$.
+5. Sustituyendo:
+   $\Delta F \approx \frac{GMdm}{R^2} \left( 1 + \frac{2r}{R} - 1 \right) = \frac{2GMdm r}{R^3}$.
+6. Esta fuerza de marea arranca $dm$ hacia el exterior. La gravedad propia del satélite trata de mantener a $dm$ sujeto: $F_{propia} = \frac{G m dm}{r^2}$.
+7. El desgarro comienza exactamente cuando $\Delta F = F_{propia}$:
+   $\frac{2GMdm r}{R_L^3} = \frac{G m dm}{r^2}$.
+8. Despejamos el límite radial $R_L$:
+   $R_L^3 = \frac{2GM r^3}{m} \implies R_L = r \left(\frac{2M}{m}\right)^{1/3}$.
+9. En términos de las densidades ($\rho_M = M / (\frac{4}{3}\pi R_M^3)$ y $\rho_m = m / (\frac{4}{3}\pi r^3)$):
+   $R_L = R_M \left( \frac{2\rho_M}{\rho_m} \right)^{1/3}$. Para la Tierra y la Luna, esto equivale a unos ~18,000 km, por debajo del cual se forman los anillos planetarios.
+
+## 💻 Simulaciones Computacionales
+
+Simulación del problema de los N-cuerpos bajo atracción gravitacional mutua. Este código resuelve las órbitas usando integración de ecuaciones diferenciales ordinarias.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+G = 1.0 # Constante gravitacional (unidades arbitrarias)
+m1, m2, m3 = 1.0, 1.0, 1.0 # Masas idénticas para la coreografía del 8
+
+# Coreografía en forma de 8
+v_x, v_y = 0.347111, 0.532728
+initial_state = [
+    0.97000436, -0.24308753,  # r1
+    -0.97000436, 0.24308753,  # r2
+    0.0, 0.0,                 # r3
+    -v_x/2, -v_y/2,           # v1
+    -v_x/2, -v_y/2,           # v2
+    v_x, v_y                  # v3
+]
+
+def gravity_n_body(t, state):
+    r1, r2, r3 = state[0:2], state[2:4], state[4:6]
+    v1, v2, v3 = state[6:8], state[8:10], state[10:12]
+    
+    def force(ri, rj, mj):
+        r_ij = rj - ri
+        return G * mj * r_ij / np.linalg.norm(r_ij)**3
+        
+    a1 = force(r1, r2, m2) + force(r1, r3, m3)
+    a2 = force(r2, r1, m1) + force(r2, r3, m3)
+    a3 = force(r3, r1, m1) + force(r3, r2, m2)
+    
+    return np.concatenate((v1, v2, v3, a1, a2, a3))
+
+t_span = (0, 10)
+sol = solve_ivp(gravity_n_body, t_span, initial_state, t_eval=np.linspace(0, 10, 1000), rtol=1e-9)
+
+plt.figure(figsize=(6, 6))
+plt.plot(sol.y[0], sol.y[1], label='Cuerpo 1', color='red')
+plt.plot(sol.y[2], sol.y[3], label='Cuerpo 2', color='blue')
+plt.plot(sol.y[4], sol.y[5], label='Cuerpo 3', color='green')
+plt.title('Coreografía en "8" del Problema de los 3 Cuerpos')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos de Gravitación
 
 ### 🎓 Cursos y Clases Recomendadas (5-7)

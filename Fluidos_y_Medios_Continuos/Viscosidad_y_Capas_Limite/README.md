@@ -70,6 +70,90 @@ graph TD
     Reflujo --> Estela[Estela de Baja Presión y Arrastre de Forma Masivo]
 ```
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Ecuación de Blasius para la Capa Límite Plana**
+A partir de la ecuación de von Kármán para cantidad de movimiento $\frac{\tau_w}{\rho U^2} = \frac{d\theta}{dx}$, calcule el espesor de la capa límite $\delta(x)$ asumiendo un perfil de velocidades de cuarto grado: $\frac{u}{U} = 2\eta - 2\eta^3 + \eta^4$ donde $\eta = y/\delta$.
+
+**Solución paso a paso:**
+1. El espesor de momentum $\theta$ es $\theta = \int_0^\delta \frac{u}{U} \left(1 - \frac{u}{U}\right) dy = \delta \int_0^1 f(\eta) (1 - f(\eta)) d\eta$.
+2. Con $f(\eta) = 2\eta - 2\eta^3 + \eta^4$, calculamos la integral (llamémosla $C_\theta$). Evaluando rigurosamente obtenemos $C_\theta = \frac{37}{315}$. Por lo tanto, $\theta = \frac{37}{315} \delta$.
+3. El esfuerzo cortante en la pared $\tau_w$ se evalúa como $\tau_w = \mu \left( \frac{\partial u}{\partial y} \right)_{y=0} = \frac{\mu U}{\delta} f'(0)$.
+4. Calculamos $f'(0)$: $f'(\eta) = 2 - 6\eta^2 + 4\eta^3 \implies f'(0) = 2$. Luego $\tau_w = \frac{2\mu U}{\delta}$.
+5. Reemplazamos en von Kármán: $\frac{2\mu U}{\rho U^2 \delta} = \frac{d}{dx} \left( \frac{37}{315} \delta \right) \implies \frac{2\nu}{U \delta} = \frac{37}{315} \frac{d\delta}{dx}$.
+6. Integramos separando variables: $\delta d\delta = \frac{630}{37} \frac{\nu}{U} dx$.
+7. $\frac{\delta^2}{2} = \frac{630}{37} \frac{\nu x}{U} \implies \delta^2 = \frac{1260}{37} \frac{\nu x}{U} \approx 34.05 \frac{\nu x}{U}$.
+8. Despejando $\delta$: $\delta = \sqrt{34.05} \sqrt{\frac{\nu x}{U}} \approx 5.84 \frac{x}{\sqrt{Re_x}}$. Este valor de aproximación polinómica es muy cercano al $5.0$ exacto de Blasius.
+
+**Problema 2: Flujo de Couette-Poiseuille Generalizado**
+Un fluido viscoso de viscosidad $\mu$ fluye entre dos placas paralelas separadas por una distancia $h$. La placa inferior ($y=0$) está fija, y la superior ($y=h$) se mueve a velocidad constante $V$. Existe además un gradiente de presión constante $\frac{dP}{dx} < 0$. Determine el perfil de velocidades y el caudal por unidad de ancho.
+
+**Solución paso a paso:**
+1. Ecuación de Navier-Stokes unidimensional: $\mu \frac{d^2u}{dy^2} = \frac{dP}{dx}$.
+2. Integramos dos veces respecto a $y$:
+   $\frac{du}{dy} = \frac{1}{\mu} \frac{dP}{dx} y + C_1$.
+   $u(y) = \frac{1}{2\mu} \frac{dP}{dx} y^2 + C_1 y + C_2$.
+3. Condiciones de contorno:
+   No deslizamiento en $y=0$: $u(0) = 0 \implies C_2 = 0$.
+   En $y=h$: $u(h) = V \implies \frac{1}{2\mu} \frac{dP}{dx} h^2 + C_1 h = V \implies C_1 = \frac{V}{h} - \frac{h}{2\mu} \frac{dP}{dx}$.
+4. Sustituyendo $C_1$:
+   $u(y) = \frac{1}{2\mu} \frac{dP}{dx} (y^2 - hy) + V \frac{y}{h}$. Este es un perfil parabólico superpuesto con uno lineal.
+5. El caudal $q$ por unidad de ancho es $q = \int_0^h u(y) dy$.
+   $q = \int_0^h \left[ \frac{1}{2\mu} \frac{dP}{dx} (y^2 - hy) + V \frac{y}{h} \right] dy$.
+6. $q = \frac{1}{2\mu} \frac{dP}{dx} \left( \frac{h^3}{3} - \frac{h^3}{2} \right) + V \left( \frac{h^2}{2h} \right) = \frac{1}{2\mu} \frac{dP}{dx} \left( -\frac{h^3}{6} \right) + \frac{Vh}{2} = \frac{Vh}{2} - \frac{h^3}{12\mu} \frac{dP}{dx}$.
+
+**Problema 3: Separación de la Capa Límite**
+Explique matemáticamente por qué un gradiente de presión adverso ($dP/dx > 0$) es necesario para que exista desprendimiento de la capa límite.
+
+**Solución paso a paso:**
+1. En la pared ($y=0$), la ecuación de Prandtl (Navier-Stokes simplificada) se reduce a $\mu \left( \frac{\partial^2 u}{\partial y^2} \right)_{wall} = \frac{dP}{dx}$, dado que $u=v=0$.
+2. Para que haya flujo desprendido o contraflujo cerca de la pared, el esfuerzo cortante debe cambiar de dirección, es decir, $(\partial u/\partial y)_{wall} < 0$.
+3. En el punto de separación exacto, el esfuerzo de corte en la pared es nulo: $(\partial u/\partial y)_{wall} = 0$.
+4. Como lejos de la pared $u \to U_{ext} > 0$, para pasar de un valor nulo de derivada en la pared a alcanzar la velocidad exterior, la curva $u(y)$ debe tener un punto de inflexión.
+5. En la separación, como el gradiente de velocidad pasa de ser negativo (zona separada) a positivo en la corriente principal, requiere una curvatura convexa cerca de la pared, lo que implica $(\partial^2 u/\partial y^2)_{wall} > 0$.
+6. De la ecuación del paso 1, si $(\partial^2 u/\partial y^2)_{wall} > 0$, esto exige estrictamente que $\frac{dP}{dx} > 0$.
+7. Por lo tanto, el flujo solo puede separarse bajo un gradiente de presión adverso, donde la presión fuerza al fluido a detenerse, superando el momento inercial.
+
+## 💻 Simulaciones Computacionales
+
+Solución numérica de la Ecuación de Blasius para la capa límite sobre una placa plana utilizando el método de Runge-Kutta y *Shooting Method*.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+# Ecuación de Blasius: f''' + 0.5 * f * f'' = 0
+# Sistema ODE de 1er orden:
+# y1 = f
+# y2 = f' (velocidad adimensional u/U)
+# y3 = f''
+def blasius(eta, y):
+    return [y[1], y[2], -0.5 * y[0] * y[2]]
+
+# Condiciones de contorno: f(0)=0, f'(0)=0, f'(inf)=1
+# Usamos Shooting Method para hallar y3(0) = f''(0)
+eta_max = 10.0
+# Sabemos empíricamente que f''(0) está cerca de 0.33206
+f2_guess = 0.3320573362
+
+sol = solve_ivp(blasius, [0, eta_max], [0, 0, f2_guess], t_eval=np.linspace(0, eta_max, 100))
+
+eta = sol.t
+f_prime = sol.y[1] # u / U_infty
+
+plt.figure(figsize=(6, 8))
+plt.plot(f_prime, eta, 'k-', lw=2)
+plt.axvline(0.99, color='r', linestyle='--', label=r'$u/U_\infty = 0.99$ (Borde de capa límite)')
+plt.axhline(4.91, color='g', linestyle='--', label=r'$\eta \approx 4.91$')
+plt.title("Perfil de Velocidad de la Capa Límite Laminar (Blasius)")
+plt.xlabel(r"Velocidad Adimensional $u/U_\infty$")
+plt.ylabel(r"Coordenada de similitud $\eta = y \sqrt{U_\infty / \nu x}$")
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos
 ### Cursos Específicos
 1. ["Viscous Fluid Flow" - NPTEL](https://nptel.ac.in/courses/112105228)

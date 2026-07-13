@@ -131,6 +131,121 @@ Calcule la velocidad del sonido, la velocidad de Alfvén y determine la velocida
 
 **Conclusión:** En el medio interestelar tenue con un campo magnético de $3\,\mu\text{G}$, las ondas compresionales magnéticas viajan a inmensas velocidades supersónicas, con la dinámica dictada puramente por la tensión magnética del campo galáctico ($v_f \approx v_A = 655 \, \text{km/s}$).
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Dinámica de la Reconexión de Sweet-Parker
+En el modelo MHD resistivo de Sweet-Parker para la reconexión magnética bidimensional, derive cualitativamente la velocidad de reconexión $v_{in}$ (velocidad a la que el plasma ingresa a la capa de difusión) en función del Número de Lundquist $S$.
+
+**Solución paso a paso:**
+Consideremos una capa de corriente plana de longitud $2L$ y grosor $2\delta$ ($\delta \ll L$).
+1. Conservación de masa en estado estacionario (fluido incompresible):
+El flujo que entra transversalmente debe igualar al que sale longitudinalmente:
+$$ v_{in} L \approx v_{out} \delta $$
+2. Aceleración magnética longitudinal:
+El plasma es eyectado a lo largo de la capa por la fuerza de tensión magnética. La velocidad de salida es el límite de la velocidad de Alfvén basada en el campo magnético entrante $B_{in}$:
+$$ v_{out} \approx v_A = \frac{B_{in}}{\sqrt{\mu_0 \rho}} $$
+3. Ley de inducción y difusión electromagnética:
+En la región de reconexión constante, el flujo convectivo de las líneas entrantes está equilibrado por la difusión resistiva a través de la capa estrecha:
+$$ v_{in} B_{in} \approx \eta \mu_0 J $$
+Por la ley de Ampère $J \approx B_{in} / (\mu_0 \delta)$, entonces:
+$$ v_{in} \approx \frac{\eta}{\delta} $$
+4. Resolviendo el sistema:
+Sustituyendo $\delta$ de la ecuación de masa $\delta \approx L (v_{in} / v_A)$ en la ecuación de difusión:
+$$ v_{in} \approx \frac{\eta}{L (v_{in}/v_A)} \implies v_{in}^2 \approx \frac{\eta v_A}{L} $$
+Dividiendo por $v_A^2$:
+$$ \left( \frac{v_{in}}{v_A} \right)^2 \approx \frac{\eta}{L v_A} = \frac{1}{S} \implies M_A = \frac{v_{in}}{v_A} \approx S^{-1/2} $$
+El parámetro adimensional $M_A$ es la tasa de reconexión magnética, escalando como el inverso de la raíz cuadrada del número de Lundquist $S$. En plasmas astrofísicos reales, $S$ es gigantesco ($\sim 10^{12}$), produciendo reconexiones extremadamente lentas que no logran explicar las fulguraciones solares explosivas; este es el defecto capital de Sweet-Parker resuelto posteriormente por modelos de reconexión rápida (ej. Petschek o turbulenta).
+
+### Problema 2: Equilibrio de una Z-pinch Lineal
+Un cilindro de plasma infinito conduce una corriente axial total $I_0$ con un perfil de densidad de corriente uniforme $J_z = I_0 / (\pi a^2)$ para $r < a$, y está rodeado por el vacío. Calcule la presión del plasma $p(r)$ en equilibrio asumiendo $p(a) = 0$, determinando explícitamente el perfil.
+
+**Solución paso a paso:**
+En un sistema Z-pinch, la ecuación de equilibrio radial MHD asume dependencia nula en $\theta$ y $z$, dejando solo la componente radial de la fuerza:
+$$ \frac{dp}{dr} = (\mathbf{J} \times \mathbf{B})_r = -J_z B_\theta $$
+Primero calculamos el campo magnético mediante Ampère en $r \le a$:
+$$ \oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_{encl} \implies 2\pi r B_\theta(r) = \mu_0 (J_z \pi r^2) $$
+$$ B_\theta(r) = \frac{\mu_0 J_z r}{2} = \frac{\mu_0 I_0 r}{2\pi a^2} $$
+Sustituyendo en la ecuación de fuerza:
+$$ \frac{dp}{dr} = - \left( \frac{I_0}{\pi a^2} \right) \left( \frac{\mu_0 I_0 r}{2\pi a^2} \right) = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} r $$
+Integramos desde el borde $r=a$ donde la presión es nula hasta un radio $r$:
+$$ \int_{0}^{p(r)} dp' = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} \int_{a}^{r} r' dr' $$
+$$ p(r) = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} \left[ \frac{r^2}{2} - \frac{a^2}{2} \right] = \frac{\mu_0 I_0^2}{4\pi^2 a^4} (a^2 - r^2) $$
+El perfil de presión exhibe un máximo en el centro del cordón del plasma, dictado completamente por la fuerza autoconstrictiva de su propia corriente inducida magnéticamente (efecto Pinch). 
+
+### Problema 3: Ondas de Alfvén y Congelamiento
+Demuestre de la ecuación MHD ideal linealizada que para ondas puras de Alfvén transversales ($\mathbf{k} \cdot \mathbf{v}_1 = 0$), las líneas de flujo del plasma siguen idénticamente a las oscilaciones de las líneas del campo magnético (congelamiento de flujo).
+
+**Solución paso a paso:**
+Para una perturbación de onda plana $\mathbf{v}_1 = \mathbf{v}_0 e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}$ con un campo magnético estático uniforme $\mathbf{B}_0 \parallel \mathbf{k}$, la ecuación lineal de inducción es:
+$$ \frac{\partial \mathbf{B}_1}{\partial t} = \nabla \times (\mathbf{v}_1 \times \mathbf{B}_0) $$
+En espacio de Fourier ($\partial_t \to -i\omega$, $\nabla \to i\mathbf{k}$):
+$$ -i\omega \mathbf{B}_1 = i\mathbf{k} \times (\mathbf{v}_1 \times \mathbf{B}_0) $$
+Usando la identidad vectorial del doble producto cruz $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = \mathbf{B}(\mathbf{A} \cdot \mathbf{C}) - \mathbf{C}(\mathbf{A} \cdot \mathbf{B})$:
+$$ -i\omega \mathbf{B}_1 = i [ \mathbf{v}_1(\mathbf{k} \cdot \mathbf{B}_0) - \mathbf{B}_0(\mathbf{k} \cdot \mathbf{v}_1) ] $$
+Dado que el modo de Alfvén es puramente de corte y transversal, la perturbación de velocidad $\mathbf{v}_1$ es perpendicular a la dirección de propagación ($\mathbf{k} \cdot \mathbf{v}_1 = 0$). Además, $\mathbf{k}$ es paralelo a $\mathbf{B}_0$, de modo que $\mathbf{k} \cdot \mathbf{B}_0 = k B_0$.
+Sustituyendo esto:
+$$ -\omega \mathbf{B}_1 = (k B_0) \mathbf{v}_1 $$
+Dado que para Alfvén puros la relación de dispersión es $\omega = k v_A = k \frac{B_0}{\sqrt{\mu_0 \rho}}$, reemplazamos:
+$$ - (k v_A) \mathbf{B}_1 = k B_0 \mathbf{v}_1 \implies \mathbf{v}_1 = - \frac{v_A}{B_0} \mathbf{B}_1 $$
+Esto revela que la fluctuación vectorial del campo magnético y la velocidad de los elementos fluidos son estrictamente proporcionales y en contrafase a nivel local. Las partículas fluidas arrastran la línea del campo perpendicularmente en sincronía perfecta sin deslizarse lateralmente, validando el postulado del Teorema de Alfvén dentro del límite macroscópico oscilatorio.
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Propagación de una Onda de Alfvén 1D
+
+Simula la propagación de una perturbación magnética transversal y la velocidad del fluido asociada a lo largo de un campo magnético estático $B_0$, resolviendo las ecuaciones MHD ideales linealizadas.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros MHD
+L = 10.0          # Longitud del dominio
+Nx = 200          # Número de puntos
+dx = L / Nx
+x = np.linspace(0, L, Nx)
+v_A = 1.0         # Velocidad de Alfvén normalizada
+dt = 0.5 * dx / v_A # Condición CFL
+Nt = 400
+
+# Arrays de estado: v_y (velocidad del fluido) y B_y (campo magnético transversal)
+vy = np.zeros(Nx)
+By = np.exp(-((x - 5.0)**2) / 0.5) # Perturbación inicial gaussiana en B
+
+# Para guardar la historia
+history_vy = []
+history_By = []
+
+# Bucle temporal usando diferencias finitas explícitas (Esquema Lax-Friedrichs simple)
+for n in range(Nt):
+    vy_new = np.zeros(Nx)
+    By_new = np.zeros(Nx)
+    
+    # Actualización interior
+    for i in range(1, Nx-1):
+        # Ecuación de momento linealizada
+        vy_new[i] = 0.5*(vy[i+1]+vy[i-1]) + (v_A * dt / dx) * 0.5 * (By[i+1] - By[i-1])
+        # Ecuación de inducción linealizada
+        By_new[i] = 0.5*(By[i+1]+By[i-1]) + (v_A * dt / dx) * 0.5 * (vy[i+1] - vy[i-1])
+        
+    vy = vy_new.copy()
+    By = By_new.copy()
+    
+    if n % 10 == 0:
+        history_By.append(By.copy())
+
+# Visualización del último instante guardado
+plt.figure(figsize=(10, 6))
+plt.plot(x, history_By[0], 'k--', label='t = 0 (Perturbación inicial)')
+plt.plot(x, history_By[-1], 'b-', linewidth=2, label=f't = final (Ondas propagándose)')
+plt.title('Propagación de Ondas de Alfvén (Perturbación Magnética $B_y$)')
+plt.xlabel('Posición $x$ a lo largo de $B_0$')
+plt.ylabel('Amplitud de la Perturbación')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

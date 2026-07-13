@@ -80,6 +80,94 @@ La longitud de onda está en el rango de los rayos X, adecuada para difracción 
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Efecto Compton Inverso**
+Considera un fotón de baja energía que choca contra un electrón ultra-relativista de energía $E_e \gg m_e c^2$. Calcula la energía máxima que el fotón puede adquirir (dispersión hacia atrás).
+**Solución paso a paso:**
+1. En el sistema de reposo del electrón inicial, el fotón incidente tiene una energía aumentada por el efecto Doppler relativista: $E'_0 \approx 2\gamma E_0$, donde $\gamma = E_e / m_e c^2$.
+2. En este marco de referencia, ocurre la dispersión Compton normal. Para un fotón de baja energía en este marco ($E'_0 \ll m_e c^2$), la transferencia de energía es pequeña, luego $E'_f \approx E'_0$.
+3. Transformamos de vuelta al sistema de laboratorio (donde el electrón inicialmente se movía rápido). El fotón reflejado hacia atrás (en la dirección del electrón) sufre otro corrimiento Doppler:
+$$ E_f \approx 2\gamma E'_f \approx 2\gamma (2\gamma E_0) = 4\gamma^2 E_0 $$
+4. Si la colisión es extrema (régimen de Klein-Nishina), toda la energía cinética del electrón se transfiere. Pero en el límite de baja energía, el fotón emerge con una energía multiplicada por un factor $4\gamma^2$, un mecanismo crucial en astrofísica de altas energías.
+
+**Problema 2: Cuantización de Sommerfeld-Wilson**
+Usa la regla de cuantización de Bohr-Sommerfeld $\oint p \, dq = n h$ para encontrar los niveles de energía de un oscilador armónico clásico $V(x) = \frac{1}{2}kx^2$.
+**Solución paso a paso:**
+1. La energía total es invariante: $E = \frac{p^2}{2m} + \frac{1}{2}kx^2$.
+2. Esta ecuación describe una elipse en el espacio de fase $(x,p)$:
+$$ \frac{p^2}{2mE} + \frac{x^2}{2E/k} = 1 $$
+3. Los semiejes de la elipse son $a = \sqrt{2E/k}$ (en $x$) y $b = \sqrt{2mE}$ (en $p$).
+4. El área de la elipse, que corresponde a la integral cíclica $\oint p \, dx$, es $\text{Área} = \pi a b$.
+5. Sustituimos: $\oint p \, dx = \pi \sqrt{2E/k} \sqrt{2mE} = 2\pi E \sqrt{m/k}$.
+6. Sabiendo que la frecuencia clásica es $\nu = \frac{1}{2\pi}\sqrt{\frac{k}{m}}$, la integral es $\oint p \, dx = \frac{E}{\nu}$.
+7. Aplicamos la regla de cuantización: $\frac{E}{\nu} = nh \implies E_n = nh\nu$. Este es el resultado correcto de Planck original (antes del punto cero de Schrödinger).
+
+**Problema 3: Longitud de onda térmica de de Broglie**
+Determina la longitud de onda de de Broglie térmica para un gas ideal clásico a temperatura $T$. Demuestra bajo qué condición los efectos cuánticos dominan.
+**Solución paso a paso:**
+1. Para un gas clásico, la energía cinética media en 3D es $E = \frac{3}{2} k_B T$.
+2. El momento cuadrático medio térmico es $p = \sqrt{2mE} = \sqrt{3mk_B T}$. Sin embargo, rigurosamente, se utiliza $p_{\text{term}} = \sqrt{2\pi m k_B T}$ al promediar en el espacio de momentos.
+3. La longitud de onda de de Broglie asociada es $\lambda_{\text{dB}} = \frac{h}{p} = \frac{h}{\sqrt{2\pi m k_B T}}$.
+4. El régimen cuántico comienza cuando el volumen de una partícula (la caja de de Broglie $\lambda_{\text{dB}}^3$) es del mismo orden de magnitud que el volumen promedio por partícula en el gas ($V/N = 1/n$).
+5. Por lo tanto, los efectos cuánticos son fundamentales cuando $n \lambda_{\text{dB}}^3 \gtrsim 1$, lo que significa altas densidades o temperaturas muy cercanas al cero absoluto (el criterio para un condensado de Bose-Einstein o un gas de Fermi degenerado).
+
+## 💻 Simulaciones Computacionales
+
+Esta simulación explora el origen de la física cuántica modelando la Ley de Radiación de Planck para la emisión del cuerpo negro y contrastándola con el colapso clásico de Rayleigh-Jeans (la catástrofe ultravioleta).
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.constants import h, c, k
+
+def planck_law(wavelength, T):
+    """Ley de Planck para la radiancia espectral."""
+    # Evitamos división por cero en lambda = 0
+    wavelength = np.clip(wavelength, 1e-10, None)
+    term1 = (2.0 * h * c**2) / (wavelength**5)
+    term2 = np.exp((h * c) / (wavelength * k * T)) - 1.0
+    return term1 / term2
+
+def rayleigh_jeans_law(wavelength, T):
+    """Aproximación clásica de Rayleigh-Jeans."""
+    wavelength = np.clip(wavelength, 1e-10, None)
+    return (2.0 * c * k * T) / (wavelength**4)
+
+# Rango de longitudes de onda: 100 nm a 3000 nm
+wavelengths = np.linspace(100e-9, 3000e-9, 500)
+wavelengths_nm = wavelengths * 1e9
+
+# Temperaturas a simular (en Kelvin)
+temperatures = [3000, 4000, 5000, 5778] # 5778 K es la temperatura superficial del Sol
+
+plt.figure(figsize=(10, 6))
+
+# Curvas de Planck
+colors = ['#FF4500', '#FF8C00', '#FFD700', '#1E90FF']
+for T, color in zip(temperatures, colors):
+    radiance = planck_law(wavelengths, T)
+    plt.plot(wavelengths_nm, radiance, label=f'Planck {T} K', color=color, linewidth=2)
+
+# Curva clásica de Rayleigh-Jeans para 5778 K
+radiance_rj = rayleigh_jeans_law(wavelengths, 5778)
+plt.plot(wavelengths_nm, radiance_rj, label='Rayleigh-Jeans 5778 K', 
+         color='black', linestyle='--', linewidth=2)
+
+# Limitamos el eje Y para ver la divergencia de Rayleigh-Jeans sin distorsionar todo
+plt.ylim(0, planck_law(wavelengths, 5778).max() * 1.5)
+plt.xlim(100, 3000)
+
+plt.title("Radiación del Cuerpo Negro: Ley de Planck vs Física Clásica")
+plt.xlabel("Longitud de Onda (nm)")
+plt.ylabel("Radiancia Espectral (W / m^3 / sr)")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.fill_betweenx([0, plt.ylim()[1]], 380, 750, color='gray', alpha=0.2, label='Rango Visible')
+plt.tight_layout()
+# plt.show() # Descomentar para visualizar
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

@@ -100,6 +100,91 @@ graph TD
 
 **Conclusión:** Un electrón cerca del tope de una banda en el cristal desarrolla una *masa inercial negativa*. Empujarlo en una dirección provoca que acelere en dirección opuesta (debido a intensas reflexiones de Bragg con la red). Esta anomalía física se trata convencionalmente definiendo la dinámica de las ausencias de electrones: los llamados **huecos** (holes), que exhiben masa positiva y carga eléctrica positiva.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Modelo Tight-Binding en 1D
+Considere una cadena unidimensional de átomos idénticos separados por una distancia $a$. Utilizando el modelo de enlaces fuertes (tight-binding) con solo interacciones a primeros vecinos (integral de salto $t$ e integral in-situ $E_0$), derive la relación de dispersión $E(k)$ de la banda electrónica resultante.
+
+**Solución paso a paso:**
+En el método tight-binding, la función de onda de Bloch se aproxima como una combinación lineal de orbitales atómicos $\phi(x)$ localizados en cada sitio de la red $x_n = na$:
+$$ \psi_k(x) = \frac{1}{\sqrt{N}} \sum_{n} e^{ikna} \phi(x - na) $$
+Insertamos esto en la ecuación de Schrödinger $\hat{H}\psi_k = E(k)\psi_k$ y multiplicamos por $\phi^*(x)$ e integramos en todo el espacio:
+$$ \sum_{n} e^{ikna} \int \phi^*(x) \hat{H} \phi(x - na) dx = E(k) \sum_{n} e^{ikna} \int \phi^*(x) \phi(x - na) dx $$
+Consideramos la aproximación de orbitales ortogonales in situ, de forma que el lado derecho resulta aproximadamente $E(k) e^0 = E(k)$.
+En el lado izquierdo, los elementos de matriz de $\hat{H}$ (energía de salto) son:
+$$ \int \phi^*(x) \hat{H} \phi(x) dx \approx E_0 \quad (n=0) $$
+$$ \int \phi^*(x) \hat{H} \phi(x \pm a) dx \approx -t \quad (n=\pm 1) $$
+Todos los términos de orden mayor ($|n| \ge 2$) se desprecian. Sustituyendo en la suma:
+$$ E_0 e^{i k (0)} - t e^{i k a} - t e^{-i k a} = E(k) $$
+Usando la relación de Euler $e^{ix} + e^{-ix} = 2\cos(x)$:
+$$ E(k) = E_0 - 2t \cos(ka) $$
+Esta es la dispersión de la banda. La banda tiene una anchura total $4t$, centrada en $E_0$.
+
+### Problema 2: Masa Efectiva en la Aproximación de Banda
+Usando el resultado del modelo de Tight-Binding 1D del ejercicio anterior, encuentre la expresión para la masa efectiva $m^*$ de los electrones cerca del fondo y del tope de la banda de energía. 
+
+**Solución paso a paso:**
+La definición semiclásica de la masa efectiva de transporte está relacionada con la curvatura de la banda energética en el espacio recíproco:
+$$ \frac{1}{m^*} = \frac{1}{\hbar^2} \frac{d^2E}{dk^2} $$
+Utilizamos la relación de dispersión obtenida $E(k) = E_0 - 2t \cos(ka)$.
+Derivamos dos veces respecto al vector de onda $k$:
+$$ \frac{dE}{dk} = 2t a \sin(ka) $$
+$$ \frac{d^2E}{dk^2} = 2t a^2 \cos(ka) $$
+Por lo tanto, la masa efectiva en función de $k$ es:
+$$ m^*(k) = \frac{\hbar^2}{2t a^2 \cos(ka)} $$
+1. **Cerca del fondo de la banda ($k \approx 0$):**
+   Evaluamos en $k=0$, donde $\cos(0) = 1$.
+   $$ m^*_{fondo} = \frac{\hbar^2}{2t a^2} > 0 $$
+   El electrón se comporta como una partícula clásica con masa positiva constante.
+2. **Cerca del tope de la banda ($k \approx \pm \pi/a$ en el borde de zona):**
+   Evaluamos en $k = \pm \pi/a$, donde $\cos(\pm \pi) = -1$.
+   $$ m^*_{tope} = -\frac{\hbar^2}{2t a^2} < 0 $$
+   La masa efectiva es negativa. Físicamente, un estado vacío cerca del tope (un "hueco") responderá a los campos electromagnéticos matemáticamente equivalente a poseer carga positiva y masa efectiva positiva $|m^*|$.
+
+### Problema 3: Modelo de Kronig-Penney y la Aparición de la Banda Prohibida
+Describa cualitativamente el modelo unidimensional de Kronig-Penney (pozos cuadrados periódicos de potencial $V_0$). Demuestre, analizando el comportamiento de contorno, por qué no hay soluciones para ciertos rangos de energía (bandas prohibidas o gaps).
+
+**Solución paso a paso:**
+En el modelo Kronig-Penney de red perfecta se emplea el teorema de Bloch, exigiendo que las soluciones para los pozo y las barreras se empalmen: $\psi_{n+1}(x) = e^{ika} \psi_n(x)$.
+La ecuación de Schrödinger rinde soluciones oscilatorias tipo senos o cosenos en las zonas de pozo ($E > 0$) y exponenciales decayentes en las zonas barrera ($E < V_0$).
+Al aplicar condiciones de continuidad de $\psi$ y $\psi'$ en las interfaces, el determinante del sistema lineal de coeficientes debe anularse para poseer soluciones no triviales.
+Tras el límite idealizado de un potencial tipo delta de Dirac (barreras infinitamente estrechas pero altas), se llega a la condición trascendental restrictiva:
+$$ P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(ka) $$
+donde $\alpha = \sqrt{2mE}/\hbar$ y $P \propto V_0$ mide la "fuerza" de los átomos.
+El lado derecho, $\cos(ka)$, representa la red cristalina y su valor **está matemáticamente restringido al intervalo $[-1, 1]$** puesto que $k$ debe ser un número real para estados propagantes.
+Sin embargo, la función del lado izquierdo, que depende de la energía de la partícula ($E \propto \alpha^2$), es oscilatoria pero excede la magnitud de $1$ periódicamente por la suma del seno.
+Cuando la energía de prueba $E$ arroja un valor para el lado izquierdo fuera del dominio $[-1, 1]$, no existe ningún número real $k$ que la satisfaga. Estos rangos de energía incompatibles son físicamente estados donde el electrón no puede propagarse por el cristal, reflejándose por interferencia destructiva de Bragg (las denominadas **Bandas Prohibidas o Band Gaps**).
+
+## 💻 Simulaciones Computacionales
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_tight_binding_bands_1d():
+    a = 1.0  # Lattice constant
+    t = 1.0  # Hopping parameter
+    E0 = 0.0 # On-site energy
+    
+    k = np.linspace(-np.pi/a, np.pi/a, 400)
+    E = E0 - 2 * t * np.cos(k * a)
+    
+    plt.figure(figsize=(8, 5))
+    plt.plot(k, E, label='$E(k) = E_0 - 2t \cos(ka)$', color='darkred', lw=2)
+    plt.axvline(-np.pi/a, color='k', linestyle='--', label='Borde Zona Brillouin')
+    plt.axvline(np.pi/a, color='k', linestyle='--')
+    plt.xlabel('Vector de onda k')
+    plt.ylabel('Energía E')
+    plt.title('Simulación: Estructura de Bandas 1D (Tight-Binding)')
+    plt.xticks([-np.pi/a, 0, np.pi/a], ['$-\pi/a$', '$0$', '$\pi/a$'])
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+if __name__ == '__main__':
+    plot_tight_binding_bands_1d()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

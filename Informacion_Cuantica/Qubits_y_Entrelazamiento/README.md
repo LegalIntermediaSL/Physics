@@ -154,6 +154,87 @@ $$ \langle S_{QM} \rangle = \langle A \otimes B \rangle - \langle A \otimes B' \
 $$ \langle S_{QM} \rangle = \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} = \frac{4}{\sqrt{2}} = 2\sqrt{2} \approx 2.828 $$
 Como $ 2\sqrt{2} > 2 $, **la mecánica cuántica viola flagrantemente el límite de la desigualdad CHSH**. Este hallazgo ratificado demuestra tajantemente que el Universo físico no puede ser descrito de manera concurrente por ninguna teoría que sostenga la coexistencia ininterrumpida del realismo intrínseco y la estricta localidad.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Desigualdad CHSH y Entrelazamiento
+Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ viola la desigualdad CHSH y encuentre el valor máximo de la correlación cuántica.
+
+**Solución paso a paso:**
+1. El operador CHSH es $S = A \otimes B + A \otimes B' + A' \otimes B - A' \otimes B'$. Para variables clásicas locales, $|\langle S \rangle| \le 2$.
+2. Elegimos las mediciones para Alice como $A = \sigma_z$ y $A' = \sigma_x$.
+3. Elegimos las mediciones para Bob como $B = \frac{-\sigma_z - \sigma_x}{\sqrt{2}}$ y $B' = \frac{\sigma_z - \sigma_x}{\sqrt{2}}$.
+4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
+5. Calculamos cada término:
+   $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+6. Sumando los términos, el valor de expectación es:
+   $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
+
+### Ejercicio 2: Código de Corrección de Errores de Shor (9 qubits)
+Muestre cómo el código de Shor protege contra un error de fase $Z$ arbitrario en el primer qubit.
+
+**Solución paso a paso:**
+1. El estado lógico $|0\rangle_L$ está codificado como $\frac{1}{2\sqrt{2}}(|000\rangle + |111\rangle)^{\otimes 3}$.
+2. Supongamos un error de fase en el primer qubit: $Z_1 |\psi_L\rangle$. El término interior pasa a ser $\frac{1}{\sqrt{2}}(Z|000\rangle + Z|111\rangle) = \frac{1}{\sqrt{2}}(|000\rangle - |111\rangle)$.
+3. Para detectar el error, realizamos mediciones de síndrome con los operadores estabilizadores del código de fase: $X_1 X_2 X_3 X_4 X_5 X_6$ y $X_4 X_5 X_6 X_7 X_8 X_9$.
+4. El error de fase es detectado por la medición cruzada entre los bloques. Equivalentemente, al aplicar compuertas Hadamard en cada bloque y realizar paridad $Z$ como en el código bit-flip, identificamos en qué bloque ocurrió el cambio de signo.
+5. Tras identificar que el error ocurrió en el primer bloque de 3 qubits, aplicamos el operador de corrección $Z$ correspondiente al bloque, el cual restaura la fase global relativa.
+6. El estado vuelve exactamente a $|\psi_L\rangle$ sin pérdida de información, probando la efectividad contra un error $Z_1$.
+
+### Ejercicio 3: Transformada de Fourier Cuántica (QFT)
+Construya el circuito y derive la acción de la QFT sobre un estado de base computacional de 3 qubits $|x\rangle = |x_2 x_1 x_0\rangle$.
+
+**Solución paso a paso:**
+1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
+2. Para 3 qubits, se puede reescribir como un producto tensorial:
+   $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
+4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
+5. Se repite el proceso para los qubits restantes, aplicando Hadamard y $R_2$ en $x_1$, y finalmente Hadamard en $x_0$.
+6. El circuito final requiere operaciones SWAP para invertir el orden de los qubits y coincidir con la convención estándar.
+
+## 💻 Simulaciones Computacionales
+
+Cálculo de la matriz densidad reducida y la entropía de von Neumann para cuantificar el entrelazamiento de un sistema bipartito.
+
+```python
+import numpy as np
+import scipy.linalg as la
+
+def partial_trace_2_qubits(rho_AB, trace_over_sys='B'):
+    """Calcula la traza parcial de un sistema de 2 qubits."""
+    rho_reduced = np.zeros((2, 2), dtype=complex)
+    if trace_over_sys == 'B':
+        for i in range(2):
+            for j in range(2):
+                rho_reduced[i, j] = rho_AB[2*i, 2*j] + rho_AB[2*i+1, 2*j+1]
+    else:
+        for i in range(2):
+            for j in range(2):
+                rho_reduced[i, j] = rho_AB[i, j] + rho_AB[i+2, j+2]
+    return rho_reduced
+
+def von_neumann_entropy(rho):
+    eigenvalues = np.linalg.eigvalsh(rho)
+    eigenvalues = eigenvalues[eigenvalues > 1e-10] # Evitar log(0)
+    return -np.sum(eigenvalues * np.log2(eigenvalues))
+
+# Estado de Bell |Phi+>
+psi = np.array([1, 0, 0, 1]) / np.sqrt(2)
+rho_global = np.outer(psi, psi.conj())
+
+print("Entropía del sistema global puro:", von_neumann_entropy(rho_global))
+
+rho_A = partial_trace_2_qubits(rho_global, 'B')
+print("\nMatriz densidad reducida Rho_A:")
+print(np.round(rho_A, 4))
+
+entropy_A = von_neumann_entropy(rho_A)
+print(f"\nEntropía de von Neumann de A: {entropy_A:.4f} bits")
+if np.isclose(entropy_A, 1.0):
+    print("-> El subsistema está máximamente entrelazado.")
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

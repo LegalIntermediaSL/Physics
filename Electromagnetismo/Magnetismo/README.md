@@ -86,6 +86,99 @@ Para medios isotrópicos y lineales, la relación se cierra con la permeabilidad
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Fuerza asimétrica sobre una espira cuadrada cruzada por alambre**
+Un hilo infinito lleva corriente estacionaria $I_1$ verticalmente a lo largo del eje Y. Una espira conductora cuadrada y rígida de lado $a$ que transporta corriente $I_2$ (en sentido horario) reposa en el plano XY coplanaria al hilo. El hilo infinito corta paralelamente al lado izquierdo de la espira, a una distancia transversal $d$ hacia la izquierda. Calcule el vector de fuerza magnética neto (magnitud y dirección) ejercido estrictamente sobre la espira entera.
+**Solución paso a paso:**
+1. El campo magnético $\vec{B}$ producido por el hilo infinito sobre la región $x > 0$ sigue la Ley de Biot-Savart, apuntando en $- \hat{k}$ (entrando al papel por convención de mano derecha). Su módulo a distancia $x$ (respecto al hilo) es $B(x) = \frac{\mu_0 I_1}{2\pi x}$.
+2. Posicionamiento: El lado vertical izquierdo está a $x = d$. El lado vertical derecho está a $x = d+a$. Los lados horizontales van desde $x = d$ hasta $x = d+a$.
+3. Evaluamos cada alambre rectilíneo por fuerza integral de Lorentz: $\vec{F} = \int I_2 d\vec{l} \times \vec{B}$.
+4. **Lado izquierdo (corriente baja en $- \hat{j}$):**
+   $\vec{F}_{izq} = I_2 \int_{y_0}^{y_0-a} (-dy \hat{j}) \times \left(-\frac{\mu_0 I_1}{2\pi d} \hat{k}\right)$.
+   El producto vectorial $(-\hat{j}) \times (-\hat{k}) = \hat{i}$. Su longitud es $a$.
+   $\vec{F}_{izq} = I_2 (a) \frac{\mu_0 I_1}{2\pi d} \hat{i}$. (Fuerza repulsiva alejándose del hilo central hacia la derecha).
+5. **Lado derecho (corriente sube en $+ \hat{j}$):**
+   $\vec{F}_{der} = I_2 \int_{y_0-a}^{y_0} (dy \hat{j}) \times \left(-\frac{\mu_0 I_1}{2\pi (d+a)} \hat{k}\right) = -I_2 a \frac{\mu_0 I_1}{2\pi (d+a)} \hat{i}$. (Fuerza atractiva tenue hacia el hilo central).
+6. **Lados superior e inferior (horizontales):**
+   Lado superior: $\vec{F}_{sup} = I_2 \int_{d}^{d+a} (dx \hat{i}) \times \left(-\frac{\mu_0 I_1}{2\pi x} \hat{k}\right) = I_2 \frac{\mu_0 I_1}{2\pi} \int_d^{d+a} \frac{dx}{x} \hat{j} = I_2 \frac{\mu_0 I_1}{2\pi} \ln\left(\frac{d+a}{d}\right) \hat{j}$.
+   Lado inferior: $\vec{F}_{inf} = I_2 \int_{d+a}^{d} (-dx \hat{i}) \times \left(-\frac{\mu_0 I_1}{2\pi x} \hat{k}\right) = -I_2 \frac{\mu_0 I_1}{2\pi} \ln\left(\frac{d+a}{d}\right) \hat{j}$.
+   Notoriamente $\vec{F}_{sup} + \vec{F}_{inf} = \vec{0}$, cancelando simétricamente el tensor de rotación que intentaba deformar la geometría superior e inferior.
+7. **Fuerza Neta Total:**
+   Suma lineal $\vec{F}_{net} = \vec{F}_{izq} + \vec{F}_{der} = \frac{\mu_0 I_1 I_2 a}{2\pi} \left( \frac{1}{d} - \frac{1}{d+a} \right) \hat{i}$.
+   $\vec{F}_{net} = \frac{\mu_0 I_1 I_2 a^2}{2\pi d(d+a)} \hat{i}$. La espira es macroscópicamente repelida hacia la derecha.
+
+**Problema 2: El Potencial Vector Magnético $\vec{A}$ de un Solenoide Infinito**
+Un solenoide ideal infinito, denso en vueltas $n$ por unidad de longitud y conduciendo $I_0$, tiene radio $R$. Determinar el vector $\vec{A}(\vec{r})$ tanto dentro ($r<R$) como fuera ($r>R$) e ilustrar que las integrales de contorno topológicas simulan un flujo de "campo virtual" ajeno a $\vec{B}$.
+**Solución paso a paso:**
+1. A partir de las identidades del rotacional, existe un equivalente magnético de la Ley de Stokes: el flujo del campo rotacional es idéntico a la integral de circulación de su vector potencial primario.
+   $\Phi_B = \int \vec{B} \cdot d\vec{S} = \int (\nabla \times \vec{A}) \cdot d\vec{S} = \oint \vec{A} \cdot d\vec{l}$.
+2. Por simetría azimutal en coordenadas cilíndricas, asumimos que $\vec{A}$ es acimutal y depende exclusivamente del radio local, i.e., $\vec{A}(r) = A(r)\hat{\phi}$. (Al igual que $\vec{B}$ para corrientes rectas cilíndricas).
+3. Evaluamos la integral de camino de $\vec{A}$ en un círculo coaxial de radio $r$:
+   $\oint \vec{A} \cdot d\vec{l} = A(r) (2\pi r)$.
+4. El campo $\vec{B}$ de un solenoide es uniforme dentro ($\vec{B} = \mu_0 n I_0 \hat{k}$) y estrictamente cero fuera.
+5. **Región interior ($r < R$):**
+   El flujo atravesando el bucle $r$ es $\Phi_B = B (\pi r^2) = (\mu_0 n I_0) \pi r^2$.
+   Igualando las integrales: $A_{int}(r) (2\pi r) = \mu_0 n I_0 \pi r^2 \implies \vec{A}_{int}(r) = \frac{\mu_0 n I_0}{2} r \, \hat{\phi}$.
+6. **Región exterior ($r > R$):**
+   El flujo encadenado no crece al extender el bucle; se satura estáticamente al tope transversal del solenoide macizo $\Phi_B = (\mu_0 n I_0) \pi R^2$. (Afuera el campo puntual $B$ es 0).
+   Igualando integrales: $A_{ext}(r) (2\pi r) = \mu_0 n I_0 \pi R^2 \implies \vec{A}_{ext}(r) = \frac{\mu_0 n I_0 R^2}{2 r} \, \hat{\phi}$.
+7. El Potencial Vector está lejos de ser cero al exterior del solenoide, decae analíticamente como $1/r$. Si bien su rotacional $\nabla \times \vec{A}$ produce $B=0$, el potencial virtual permea todo el espacio exterior (la base teórica vital del Efecto Aharonov-Bohm en física cuántica).
+
+**Problema 3: Plasma y diamagnetismo orbital perfecto (Efecto Meissner microscópico)**
+Considere una nube de plasma (átomos masivos ionizados positivamente e inmóviles, con electrones libres a su alrededor de masa $m$ y densidad global neutralizadora compensante) expuesta de sopetón a un campo magnético progresivo $\vec{B} = B \hat{k}$. Demuestre el origen molecular diamagnético hallando la alteración inducida en la frecuencia ciclotrónica, y aplique la Teoría de Larmor para comprobar si la magnetización $\vec{M}$ es alineada o anti-alineada respecto al agente perturbador magnético de entrada.
+**Solución paso a paso:**
+1. Suponga un electrón en órbita circular inercial natural de radio $r$ y velocidad $v_0$ regida por fuerza centrípeta culombiana. Se enciende gradualmente $B$.
+2. Por la Ley de Faraday inducida por el campo variable $d\vec{B}/dt$, se crea un campo eléctrico tangencial circundante:
+   $\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt} \implies E (2\pi r) = -\pi r^2 \frac{dB}{dt} \implies \vec{E} = -\frac{r}{2} \frac{dB}{dt} \hat{\phi}$.
+3. Este $\vec{E}$ acelerará o decelerará longitudinalmente a nuestro electrón según el par que aplique el torque de torsión $\vec{\tau} = \vec{r} \times (-e\vec{E})$.
+4. Segunda Ley de Newton rotacional microscópica:
+   $m r^2 \frac{d\omega}{dt} = \tau = r (-e) \left(-\frac{r}{2} \frac{dB}{dt}\right) = \frac{e r^2}{2} \frac{dB}{dt}$.
+5. Simplificando el momento de inercia y la geometría orbital:
+   $\frac{d\omega}{dt} = \frac{e}{2m} \frac{dB}{dt}$.
+6. Integrando desde $B=0$ (donde $\omega = \omega_0$) hasta el valor final $B$:
+   $\Delta\omega = \frac{e B}{2m}$. Esta modificación invariante se denomina la **Frecuencia de Larmor**.
+7. Si evaluamos la corriente alterada microscópicamente del bucle atómico tras esto, $I = \frac{-e}{T} = \frac{-e \omega}{2\pi}$. El cambio en la corriente equivale al cambio cinemático de rotación $\Delta I = -\frac{e}{2\pi} \Delta\omega = -\frac{e^2 B}{4\pi m}$.
+8. El cambio en el momento dipolar atómico (orbital) $\vec{m} = I \vec{a} = (\Delta I)(\pi r^2) \hat{k}$.
+   $\Delta\vec{m} = \left(-\frac{e^2 B}{4\pi m}\right)(\pi r^2) \hat{k} = -\frac{e^2 r^2}{4m} \vec{B}$.
+9. El signo estricto algebraico final negativo demuestra ontológicamente la Ley de Lenz intrínseca atómica y molecular. Sin importar el estado termodinámico ni la polaridad, la alteración de la precesión cuántica genera un momento dipolar neto y global $\vec{M}$ que se opone vehementemente a la penetración de un campo $\vec{B}$, definiendo que todos los materiales (desde ranas y fresas a superconductores tipo I) posean intrínsecamente un componente diamagnético inherente (Susceptibilidad $\chi_m < 0$).
+
+## 💻 Simulaciones Computacionales
+
+Simulación de la trayectoria de una partícula cargada en un campo magnético uniforme (fuerza de Lorentz), mostrando el movimiento ciclotrónico y el arrastre $\vec{E} \times \vec{B}$ si existiera campo eléctrico.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+q = 1.0
+m = 1.0
+B = np.array([0, 0, 1.0])  # Campo Magnético en z
+E = np.array([0, 0.2, 0])  # Pequeño campo Eléctrico en y
+
+def lorentz_force(t, state):
+    r = state[:3]
+    v = state[3:]
+    a = (q / m) * (E + np.cross(v, B))
+    return np.concatenate((v, a))
+
+# Velocidad inicial perpendicular al campo B
+state0 = [0, 0, 0, 1.0, 0, 0.1]
+t_span = (0, 30)
+
+sol = solve_ivp(lorentz_force, t_span, state0, t_eval=np.linspace(0, 30, 1000))
+
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot(sol.y[0], sol.y[1], sol.y[2], color='green', linewidth=2)
+ax.set_title('Movimiento Helicoidal (Fuerza de Lorentz + Arrastre $E \\times B$)')
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

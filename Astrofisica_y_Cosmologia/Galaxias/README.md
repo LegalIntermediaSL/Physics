@@ -103,6 +103,125 @@ Estas leyes son fundamentales como "candelas estándar" secundarias para medir d
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Perfil de Densidad de un Halo Isotermo de Materia Oscura**
+Demuestre, a partir de la ecuación de Jeans, que el perfil de densidad de una esfera isoterma singular de materia oscura sin colisiones escala exactamente como $\rho(r) \propto r^{-2}$ y deduzca la velocidad constante de la curva de rotación en función de la dispersión de velocidad unidimensional $\sigma$.
+
+**Solución paso a paso:**
+1. **Ecuación de Jeans esférica y estacionaria:**
+   Para un sistema con isotropía de velocidad radial y tangencial, y sin rotación neta, la ecuación de Jeans hidrostática análoga es:
+   $\frac{d(\rho \sigma^2)}{dr} = -\rho \frac{GM(r)}{r^2}$.
+2. **Hipótesis Isoterma:**
+   La dispersión de velocidades $\sigma$ (el "análogo de la temperatura") es constante en todo el radio.
+   $\sigma^2 \frac{d\rho}{dr} = -\rho \frac{GM(r)}{r^2} \implies \frac{1}{\rho} \frac{d\rho}{dr} = -\frac{GM(r)}{\sigma^2 r^2}$.
+3. **Solución tipo ley de potencia:**
+   Suponemos una solución del tipo $\rho(r) = C r^{-\alpha}$.
+   La masa encerrada es $M(r) = \int_0^r 4\pi x^2 (C x^{-\alpha}) dx = \frac{4\pi C}{3-\alpha} r^{3-\alpha}$ (asumiendo $\alpha < 3$).
+   Sustituyendo $\rho$ y $M(r)$ en la ecuación de Jeans:
+   $\frac{d}{dr}(\ln \rho) = \frac{-\alpha}{r} = -\frac{G}{\sigma^2 r^2} \frac{4\pi C}{3-\alpha} r^{3-\alpha} = -\frac{4\pi G C}{\sigma^2(3-\alpha)} r^{1-\alpha}$.
+4. **Igualación de exponentes:**
+   Para que la igualdad se sostenga para todo $r$, la potencia de $r$ debe coincidir:
+   $-1 = 1 - \alpha \implies \alpha = 2$.
+5. **Valor de la constante $C$:**
+   Sustituyendo $\alpha = 2$ en el coeficiente:
+   $\frac{-2}{r} = -\frac{4\pi G C}{\sigma^2 (1)} \frac{1}{r} \implies C = \frac{\sigma^2}{2\pi G}$.
+   Por lo tanto, $\rho(r) = \frac{\sigma^2}{2\pi G r^2}$.
+6. **Velocidad de rotación $V_c$:**
+   La velocidad de una órbita circular es $V_c^2(r) = \frac{GM(r)}{r}$.
+   Con $\alpha=2$, $M(r) = \frac{4\pi (\sigma^2/2\pi G)}{1} r = \frac{2\sigma^2 r}{G}$.
+   $V_c^2(r) = \frac{G (\frac{2\sigma^2 r}{G})}{r} = 2\sigma^2 \implies V_c = \sqrt{2}\sigma$. (La curva de rotación es perfectamente plana).
+
+**Problema 2: Relación de Tully-Fisher Dinámica**
+Usando el equilibrio rotacional (fuerza centrípeta gravitatoria) y asumiendo una relación teórica constante entre la masa y la luminosidad de las galaxias ($M/L = \text{const}$), derive una relación analítica entre la luminosidad intrínseca de una galaxia espiral y su velocidad máxima de rotación plana, deduciendo el valor del exponente.
+
+**Solución paso a paso:**
+1. **Base Dinámica:**
+   Para una galaxia cuyo componente dominante es un disco luminoso con masa $M$ contenida en un radio $R$, la velocidad de rotación es aproximadamente $V^2 \propto \frac{GM}{R}$.
+2. **Brillo Superficial Central Constante:**
+   Una propiedad observacional importante de las galaxias de disco es que su brillo superficial central intrínseco, denotado frecuentemente como $I_0 \propto L/R^2$, es sorprendentemente constante para diversas espirales (Ley de Freeman).
+   De aquí despejamos el radio $R$:
+   $R^2 \propto \frac{L}{I_0} \implies R \propto L^{1/2}$.
+3. **Masa Constante y Relación $M/L$:**
+   Si la relación $M/L = \Upsilon$ es constante en esta población de galaxias:
+   $M \propto L$.
+4. **Combinando las ecuaciones:**
+   Insertamos las proporcionalidades en la ley de la velocidad circular:
+   $V^2 \propto \frac{M}{R} \propto \frac{L}{L^{1/2}} = L^{1/2}$.
+   Elevando ambos lados al cuadrado:
+   $V^4 \propto L \implies L \propto V^4$.
+5. **Conclusión:**
+   El resultado predice un exponente de Tully-Fisher $\alpha \approx 4$. Observacionalmente se obtienen valores de $\alpha \approx 3.5 - 4$ (dependiendo de la banda fotométrica espectral). Las desviaciones revelan que $M/L$ no es estrictamente constante y que la masa total se ve fuertemente influenciada por la materia oscura de halo, no puramente estelar.
+
+**Problema 3: Tiempo de Fricción Dinámica (Chandrasekhar)**
+Estime de forma simplificada cómo depende el tiempo de vida (antes de fusionarse con el núcleo galáctico) de un cúmulo globular o una pequeña galaxia satélite de masa $m$, que orbita en un halo de galaxia masiva de fondo isótropo con densidad $\rho$.
+
+**Solución paso a paso:**
+1. **Ecuación de Fricción Dinámica:**
+   Una masa $m$ que se mueve a velocidad $v$ por un 'mar' de partículas pequeñas de masa $m_a$ y densidad total $\rho$, atrae partículas formando una 'estela' gravitatoria detrás. Esto causa un frenado neto:
+   $\frac{d\mathbf{v}}{dt} \approx -\frac{4\pi G^2 m \rho \ln \Lambda}{v^3} \mathbf{v}$. (Aproximación de Chandrasekhar para velocidad $v$ mayor a la dispersión de fondo).
+2. **Pérdida de Energía Angular:**
+   La aceleración paralela es $a = \frac{dv}{dt} \approx -\frac{C \cdot m}{v^2}$, donde $C = 4\pi G^2 \rho \ln \Lambda$.
+   La pérdida de energía orbital específica (por unidad de masa) o torque causará que la órbita (asumida casi circular) se encoja. Su momento angular específico $j \approx v r$ cae drásticamente.
+   Para mantener $V_c \approx$ const (curva plana galáctica), $\frac{dr}{dt} = \frac{1}{v_c} \frac{dj}{dt} = \frac{a \cdot r}{v_c}$.
+3. **Integración del tiempo de hundimiento:**
+   $\frac{dr}{dt} = - \frac{C \cdot m}{V_c^3} r$. (Para un pozo isotermo).
+   Integrando de un radio inicial $r_i$ a 0:
+   El tiempo de fricción dinámica $t_{fric} \propto \frac{V_c^3 r_i^2}{G^2 m \rho \ln \Lambda}$.
+4. **Relación masa y fricción:**
+   La observación clave es $t_{fric} \propto \frac{1}{m}$.
+   Las galaxias satélites más grandes y masivas sufren una fricción dinámica mucho mayor (la magnitud del frenado proporcional a su propia atracción gravitatoria). Caen rápidamente al núcleo de la galaxia huésped, mientras los pequeños cúmulos globulares pueden subsistir en el halo por un tiempo mayor a la edad de Hubble.
+
+## 💻 Simulaciones Computacionales
+
+Esta simulación en Python utiliza la ecuación de masa de un perfil de halo isoterma (materia oscura) combinado con un disco estelar (exponencial) para modelar y graficar la descomposición de la curva de rotación galáctica, demostrando la necesidad de la materia oscura.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros (Unidades arbitrarias: R en kpc, V en km/s)
+r = np.linspace(0.1, 30.0, 300)
+
+# 1. Componente de Disco Estelar (Aproximación de disco Freeman)
+# V_disk^2(r) se aproxima cualitativamente para alcanzar un pico y luego caer (Kepleriano en exterior)
+R_d = 3.0 # Longitud de escala del disco
+Sigma_0 = 100.0 # Densidad superficial central
+# Fórmula analítica simplificada para la forma del disco
+v_disk = 150.0 * (r / R_d) * np.exp(-r / (2 * R_d)) 
+
+# 2. Componente de Bulbo Central (Aproximación esférica de masa concentrada)
+M_bulge = 1e9 # masa
+r_bulge = 1.0 # radio de escala
+v_bulge = 80.0 * np.sqrt(r_bulge / (r + 0.1)) * np.exp(-r/10) # decae rápidamente
+
+# 3. Componente de Halo de Materia Oscura (Esfera isoterma)
+# V_halo^2 = G M(r)/r. Si M(r) propto r, V_halo = cte asintóticamente.
+# Utilizamos un halo de núcleo (pseudo-isoterma)
+r_c = 5.0 # radio del núcleo del halo
+v_halo_inf = 200.0 # velocidad asintótica
+v_halo = v_halo_inf * np.sqrt(1 - (r_c / r) * np.arctan(r / r_c))
+
+# 4. Curva de Rotación Total
+# Suma en cuadratura de las velocidades
+v_total = np.sqrt(v_disk**2 + v_bulge**2 + v_halo**2)
+
+plt.figure(figsize=(10, 6))
+plt.plot(r, v_total, 'k-', lw=3, label='Curva de Rotación Total Observada')
+plt.plot(r, v_halo, 'b--', lw=2, label='Contribución: Halo Materia Oscura')
+plt.plot(r, v_disk, 'r-.', lw=2, label='Contribución: Disco Estelar Luminoso')
+plt.plot(r, v_bulge, 'g:', lw=2, label='Contribución: Bulbo Central')
+
+plt.title('Descomposición de la Curva de Rotación Galáctica')
+plt.xlabel('Radio Galactocéntrico (kpc)')
+plt.ylabel('Velocidad de Rotación $V_c$ (km/s)')
+plt.legend()
+plt.grid(True)
+plt.ylim(0, 300)
+plt.xlim(0, 30)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

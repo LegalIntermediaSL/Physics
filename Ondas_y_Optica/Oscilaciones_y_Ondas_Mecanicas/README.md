@@ -64,6 +64,124 @@ graph LR
    - $ \omega = 2\pi f = 2\pi(50) = 100\pi \text{ rad/s} $.
 5. Ecuación de la onda: $ y(x,t) = 0.05 \sin\left(\frac{\pi}{2} x - 100\pi t\right) \text{ m} $.
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Reflexión de Ondas en Interfaz de Cuerdas**
+Una onda armónica $y_i = A \cos(k_1 x - \omega t)$ incide desde una cuerda de densidad $\mu_1$ hacia otra de densidad $\mu_2$. La tensión $T$ es uniforme en ambas. Demuestre la fórmula de conservación de la energía en la unión.
+
+**Solución paso a paso:**
+1. Potencia transmitida por la onda: $P = \frac{1}{2} \mu v \omega^2 A^2$. En términos de impedancia $Z = \sqrt{T\mu} = \mu v$, tenemos $P = \frac{1}{2} Z \omega^2 A^2$.
+2. Coeficientes de reflexión $R$ y transmisión $T$:
+   $A_r = \frac{Z_1 - Z_2}{Z_1 + Z_2} A_i \quad \text{y} \quad A_t = \frac{2 Z_1}{Z_1 + Z_2} A_i$.
+3. Potencia incidente: $P_i = \frac{1}{2} Z_1 \omega^2 A_i^2$.
+   Potencia reflejada: $P_r = \frac{1}{2} Z_1 \omega^2 A_r^2 = P_i \left( \frac{Z_1 - Z_2}{Z_1 + Z_2} \right)^2$.
+   Potencia transmitida: $P_t = \frac{1}{2} Z_2 \omega^2 A_t^2 = \frac{1}{2} Z_2 \omega^2 \left( \frac{2 Z_1}{Z_1 + Z_2} A_i \right)^2 = P_i \frac{4 Z_1 Z_2}{(Z_1 + Z_2)^2}$.
+4. Verificación de energía: $P_r + P_t = P_i \left( \frac{(Z_1 - Z_2)^2 + 4 Z_1 Z_2}{(Z_1 + Z_2)^2} \right)$.
+5. Expandiendo el numerador: $(Z_1 - Z_2)^2 + 4 Z_1 Z_2 = Z_1^2 - 2Z_1 Z_2 + Z_2^2 + 4 Z_1 Z_2 = Z_1^2 + 2 Z_1 Z_2 + Z_2^2 = (Z_1 + Z_2)^2$.
+6. Por ende, $P_r + P_t = P_i \frac{(Z_1 + Z_2)^2}{(Z_1 + Z_2)^2} = P_i$. La energía se conserva de forma exacta.
+
+**Problema 2: Oscilaciones de un Fluido en un Tubo en U**
+Un tubo en forma de U de sección transversal uniforme $A$ contiene un líquido de densidad $\rho$. La longitud total de la columna de líquido es $L$. Si el fluido se desplaza ligeramente de su posición, halle el período de las oscilaciones resultantes despreciando la fricción de las paredes.
+
+**Solución paso a paso:**
+1. Sea $x$ el desplazamiento vertical de un lado respecto al equilibrio. El otro lado se desplaza $-x$.
+2. La diferencia de altura total de las columnas es $2x$.
+3. La fuerza restauradora es el peso de esta diferencia de columna gravitacional: $F = -(\rho A (2x)) g = -2\rho g A x$.
+4. La masa total del líquido en oscilación es $m = \rho A L$.
+5. Ecuación de movimiento de Newton: $m \ddot{x} = F \implies \rho A L \ddot{x} = -2\rho g A x$.
+6. Simplificando: $L \ddot{x} + 2g x = 0 \implies \ddot{x} + \frac{2g}{L} x = 0$.
+7. Esta es la ecuación del oscilador armónico simple con frecuencia angular $\omega = \sqrt{\frac{2g}{L}}$.
+8. El período de las oscilaciones es $T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{L}{2g}}$.
+
+**Problema 3: Impedancia Mecánica en Sistema Masa-Resorte**
+Un oscilador de masa $m$, resorte $k$ y amortiguador $b$ es impulsado por una fuerza $F(t) = F_0 e^{i\omega t}$. Derive la impedancia mecánica $Z_m = F/v$ y exprese el desfase de la velocidad respecto a la fuerza aplicada.
+
+**Solución paso a paso:**
+1. Ecuación de movimiento: $m\ddot{x} + b\dot{x} + kx = F_0 e^{i\omega t}$.
+2. Asumimos solución en estado estacionario $x(t) = x_0 e^{i\omega t}$. La velocidad es $v(t) = \dot{x} = i\omega x_0 e^{i\omega t}$.
+3. Las derivadas son: $\ddot{x} = i\omega v$. Expresamos todo en función de la velocidad compleja $v$:
+   $m(i\omega v) + bv + k\left(\frac{v}{i\omega}\right) = F(t)$.
+4. Agrupando términos para la impedancia mecánica $Z_m = \frac{F(t)}{v(t)}$:
+   $Z_m = i\omega m + b - \frac{i k}{\omega} = b + i \left( \omega m - \frac{k}{\omega} \right)$.
+5. La parte real de la impedancia es la resistencia mecánica $b$, y la parte imaginaria es la reactancia mecánica $X_m = \omega m - k/\omega$.
+6. Expresada en forma polar: $Z_m = |Z_m| e^{i\phi}$, donde $|Z_m| = \sqrt{b^2 + X_m^2}$ y $\tan \phi = \frac{X_m}{b}$.
+7. Puesto que $v(t) = F(t) / Z_m$, el desfase de la velocidad respecto a la fuerza es $-\phi$.
+   Si $\omega = \sqrt{k/m}$ (resonancia), $X_m = 0$, $Z_m = b$, y la velocidad está en fase con la fuerza.
+
+## 💻 Simulaciones Computacionales
+
+A continuación, se presenta un script en Python que modela y visualiza los tres primeros modos normales (ondas estacionarias o armónicos) de una cuerda tensa fijada en ambos extremos, aplicando las condiciones de frontera de Dirichlet impuestas por la ecuación de onda unidimensional.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def simular_ondas_estacionarias():
+    """
+    Calcula y grafica los primeros tres modos normales de vibración
+    (ondas estacionarias) para una cuerda sujeta en ambos extremos.
+    """
+    # Parámetros físicos de la cuerda
+    L = 1.0       # Longitud de la cuerda (m)
+    T_tension = 100.0 # Tensión (N)
+    mu = 0.01     # Densidad lineal de masa (kg/m)
+    
+    # Velocidad de propagación de la onda transversal
+    v = np.sqrt(T_tension / mu)
+    
+    # Vector espacial (posiciones a lo largo de la cuerda)
+    x = np.linspace(0, L, 500)
+    
+    # Tiempo fijo para ilustrar los perfiles espaciales en amplitud máxima
+    # En t=0, cos(w*t) = 1, por lo que y(x) = A * sin(k_n * x)
+    
+    # Configuración del gráfico
+    fig, ax = plt.subplots(figsize=(10, 6))
+    
+    colores = ['royalblue', 'crimson', 'forestgreen']
+    
+    for n in range(1, 4):
+        # Longitud de onda y vector de onda para el n-ésimo armónico
+        lambda_n = 2 * L / n
+        k_n = 2 * np.pi / lambda_n
+        
+        # Frecuencia del modo
+        f_n = v / lambda_n
+        
+        # Perfil de la onda estacionaria (amplitud máxima normalizada)
+        A = 1.0
+        y = A * np.sin(k_n * x)
+        
+        # Graficamos el perfil
+        ax.plot(x, y, label=f'Modo n={n} ($f_{n}$ = {f_n:.1f} Hz)', 
+                color=colores[n-1], linewidth=2.5)
+        
+        # Sombreamos el área para mejor estética visual
+        ax.fill_between(x, 0, y, color=colores[n-1], alpha=0.1)
+        
+        # Marcamos los nodos (puntos donde la cuerda no se mueve)
+        nodos_x = [i * L / n for i in range(n + 1)]
+        nodos_y = [0] * len(nodos_x)
+        ax.plot(nodos_x, nodos_y, 'ko', markersize=6)
+        
+    ax.axhline(0, color='black', linewidth=1.5, linestyle='--')
+    ax.set_title(f'Modos Normales de Vibración (Ondas Estacionarias)\nL={L}m, v={v:.1f} m/s')
+    ax.set_xlabel('Posición en la cuerda $x$ (m)')
+    ax.set_ylabel('Amplitud Transversal $y$')
+    ax.grid(True, alpha=0.4)
+    ax.legend(loc='upper right')
+    
+    # Limites
+    ax.set_xlim(0, L)
+    ax.set_ylim(-1.5, 1.5)
+    
+    plt.tight_layout()
+    plt.show()
+
+if __name__ == '__main__':
+    simular_ondas_estacionarias()
+```
+
 ## 📚 Recursos Específicos
 ### Cursos
 1. ["Vibrations and Waves" - MIT OpenCourseWare (Walter Lewin)](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)

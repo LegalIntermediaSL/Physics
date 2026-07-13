@@ -88,6 +88,98 @@ Este código tiene 8 generadores estabilizadores:
 
 Gracias a la linealidad de la mecánica cuántica y la discretización de errores, si un código puede corregir los errores de la base de Pauli $X$, $Y$, y $Z$, también corrige superposiciones de ellos $c_1 X + c_2 Y + c_3 Z$, demostrando que **la continuidad de los estados cuánticos no impide la corrección**.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Desigualdad CHSH y Entrelazamiento
+Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ viola la desigualdad CHSH y encuentre el valor máximo de la correlación cuántica.
+
+**Solución paso a paso:**
+1. El operador CHSH es $S = A \otimes B + A \otimes B' + A' \otimes B - A' \otimes B'$. Para variables clásicas locales, $|\langle S \rangle| \le 2$.
+2. Elegimos las mediciones para Alice como $A = \sigma_z$ y $A' = \sigma_x$.
+3. Elegimos las mediciones para Bob como $B = \frac{-\sigma_z - \sigma_x}{\sqrt{2}}$ y $B' = \frac{\sigma_z - \sigma_x}{\sqrt{2}}$.
+4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
+5. Calculamos cada término:
+   $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+6. Sumando los términos, el valor de expectación es:
+   $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
+
+### Ejercicio 2: Código de Corrección de Errores de Shor (9 qubits)
+Muestre cómo el código de Shor protege contra un error de fase $Z$ arbitrario en el primer qubit.
+
+**Solución paso a paso:**
+1. El estado lógico $|0\rangle_L$ está codificado como $\frac{1}{2\sqrt{2}}(|000\rangle + |111\rangle)^{\otimes 3}$.
+2. Supongamos un error de fase en el primer qubit: $Z_1 |\psi_L\rangle$. El término interior pasa a ser $\frac{1}{\sqrt{2}}(Z|000\rangle + Z|111\rangle) = \frac{1}{\sqrt{2}}(|000\rangle - |111\rangle)$.
+3. Para detectar el error, realizamos mediciones de síndrome con los operadores estabilizadores del código de fase: $X_1 X_2 X_3 X_4 X_5 X_6$ y $X_4 X_5 X_6 X_7 X_8 X_9$.
+4. El error de fase es detectado por la medición cruzada entre los bloques. Equivalentemente, al aplicar compuertas Hadamard en cada bloque y realizar paridad $Z$ como en el código bit-flip, identificamos en qué bloque ocurrió el cambio de signo.
+5. Tras identificar que el error ocurrió en el primer bloque de 3 qubits, aplicamos el operador de corrección $Z$ correspondiente al bloque, el cual restaura la fase global relativa.
+6. El estado vuelve exactamente a $|\psi_L\rangle$ sin pérdida de información, probando la efectividad contra un error $Z_1$.
+
+### Ejercicio 3: Transformada de Fourier Cuántica (QFT)
+Construya el circuito y derive la acción de la QFT sobre un estado de base computacional de 3 qubits $|x\rangle = |x_2 x_1 x_0\rangle$.
+
+**Solución paso a paso:**
+1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
+2. Para 3 qubits, se puede reescribir como un producto tensorial:
+   $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
+4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
+5. Se repite el proceso para los qubits restantes, aplicando Hadamard y $R_2$ en $x_1$, y finalmente Hadamard en $x_0$.
+6. El circuito final requiere operaciones SWAP para invertir el orden de los qubits y coincidir con la convención estándar.
+
+## 💻 Simulaciones Computacionales
+
+Simulación del código de repetición de 3 qubits contra errores de *bit-flip* aleatorios mediante matrices densidad.
+
+```python
+import numpy as np
+import scipy.linalg as la
+
+# Operadores de Pauli
+I = np.eye(2)
+X = np.array([[0, 1], [1, 0]])
+
+def tensor_3(A, B, C):
+    return np.kron(A, np.kron(B, C))
+
+# Estados lógicos
+zero_L = np.zeros(8); zero_L[0] = 1.0  # |000>
+one_L = np.zeros(8); one_L[7] = 1.0    # |111>
+
+# Estado puro inicial: a|0_L> + b|1_L>
+alpha, beta = np.sqrt(0.7), np.sqrt(0.3)
+psi = alpha * zero_L + beta * one_L
+rho_initial = np.outer(psi, psi.conj())
+
+# Canal de error: probabilidad p de bit-flip en cada qubit
+p = 0.1
+E = [
+    ((1-p)**1.5, tensor_3(I, I, I)),
+    (np.sqrt(p)*(1-p), tensor_3(X, I, I)),
+    (np.sqrt(p)*(1-p), tensor_3(I, X, I)),
+    (np.sqrt(p)*(1-p), tensor_3(I, I, X))
+]
+
+rho_err = np.zeros_like(rho_initial, dtype=complex)
+for prob, op in E:
+    rho_err += op @ rho_initial @ op.T.conj()
+
+print(f"Fidelidad antes de correccion: {np.real(np.trace(rho_initial @ rho_err)):.4f}")
+
+# Proyectores de Síndrome y Recuperación
+P0 = tensor_3(I, I, I)
+P1 = tensor_3(X, I, I)
+P2 = tensor_3(I, X, I)
+P3 = tensor_3(I, I, X)
+
+# Para simplicidad, aplicamos la corrección ideal
+rho_corrected = (P0 @ rho_err @ P0 + P1 @ rho_err @ P1 + 
+                 P2 @ rho_err @ P2 + P3 @ rho_err @ P3)
+
+fidelidad = np.real(np.trace(rho_initial @ rho_corrected))
+print(f"Fidelidad tras corrección ideal mayoritaria: {fidelidad:.4f}")
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

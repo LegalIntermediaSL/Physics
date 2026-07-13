@@ -106,6 +106,107 @@ Las cuatro ecuaciones de Maxwell se reducen gloriosamente a tan solo dos ecuacio
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Paradoja de Ampère-Maxwell en carga de condensador de placas circulares**
+Un condensador de placas paralelas circulares de radio $R$ y separación $d$ está siendo cargado por una corriente constante $I(t) = I_0$. Considere un bucle amperiano circular de radio $r < R$ paralelo a las placas y ubicado en medio del condensador. Demuestre que calcular el campo magnético usando la corriente de desplazamiento produce exactamente el mismo resultado que calcularlo construyendo una superficie esférica curva enorme que atraviese los alambres externos, salvaguardando la invarianza topológica.
+**Solución paso a paso:**
+1. **Método 1: Superficie plana entre las placas (Corriente de Desplazamiento)**
+   La superficie plana enmarcada por el bucle no intercepta ninguna corriente de conducción ($I_{enc} = 0$). Solo actúa el término de Maxwell $\mu_0 \varepsilon_0 \frac{d\Phi_E}{dt}$.
+   Asumiendo campo eléctrico uniforme $E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\pi R^2 \varepsilon_0}$ entre las placas.
+   El flujo eléctrico encerrado es $\Phi_E = E (\pi r^2) = \frac{Q r^2}{\varepsilon_0 R^2}$.
+   Su derivada es $\frac{d\Phi_E}{dt} = \frac{r^2}{\varepsilon_0 R^2} \frac{dQ}{dt} = \frac{r^2}{\varepsilon_0 R^2} I_0$.
+   La Ley de Ampère-Maxwell: $\oint \vec{B} \cdot d\vec{l} = \mu_0 \varepsilon_0 \left( \frac{r^2}{\varepsilon_0 R^2} I_0 \right) \implies B (2\pi r) = \mu_0 I_0 \frac{r^2}{R^2}$.
+   $B = \frac{\mu_0 I_0 r}{2\pi R^2}$.
+2. **Método 2: Superficie en forma de globo (Corriente de Conducción)**
+   Definimos topológicamente la superficie delimitada por el mismo bucle $r$, pero la deformamos curvándola como un globo (superficie de bolsa) hasta que el hilo de cobre externo la perfore.
+   Ahora $I_{enc} = I_0$. ¡Pero el campo magnético no ha cambiado porque la frontera (el bucle) es la misma!
+   ¿Por qué cuadra? Porque la corriente de desplazamiento saliendo por los flancos de la "bolsa" dentro del dieléctrico compensa matemáticamente la corriente de conducción entrante.
+   Analíticamente: Corriente de desplazamiento a través de la bolsa parabólica fuera del cilindro de radio $r$. El flujo eléctrico exterior en la bolsa (de $r$ a $R$) es negativo (atraviesa al revés la Normal externa del recinto).
+   $\Phi_{E,\text{extra}} = E \pi (R^2 - r^2)$.
+   $I_{disp,\text{extra}} = \varepsilon_0 \frac{d\Phi}{dt} = I_0 \left(1 - \frac{r^2}{R^2}\right)$.
+   La corriente *neta* perforando la bolsa hacia adelante es: $I_{neta} = I_0 (\text{conduccion}) - I_{disp,\text{extra}} = I_0 - I_0(1 - \frac{r^2}{R^2}) = I_0 \frac{r^2}{R^2}$.
+   Evaluando en Ampère: $\oint \vec{B} \cdot d\vec{l} = \mu_0 \left(I_0 \frac{r^2}{R^2}\right) \implies B = \frac{\mu_0 I_0 r}{2\pi R^2}$.
+3. Ambas superficies dan idéntico resultado matemático, demostrando la genial consistencia de Maxwell ante deformaciones topológicas homólogas.
+
+**Problema 2: Reflexión y transmisión con incidencia normal (Ecuaciones de Fresnel)**
+Una onda electromagnética plana en el vacío ($n_1=1$) incide normalmente perpendicularmente sobre un medio dieléctrico transparente infinito de índice de refracción $n_2$. Plantee las condiciones de contorno electrodinámicas para deducir el coeficiente de reflexión de potencia $R$.
+**Solución paso a paso:**
+1. Definimos los campos. Onda incidente (viaja en $+z$): $\vec{E}_I = E_{I0} e^{i(k_1 z - \omega t)} \hat{x}$, $\vec{B}_I = \frac{1}{v_1} E_{I0} e^{i(k_1 z - \omega t)} \hat{y}$. ($v_1 = c$).
+2. Onda reflejada (viaja en $-z$): $\vec{E}_R = E_{R0} e^{i(-k_1 z - \omega t)} \hat{x}$, $\vec{B}_R = -\frac{1}{v_1} E_{R0} e^{i(-k_1 z - \omega t)} \hat{y}$. (Ojo al signo negativo en $\vec{B}_R$ por el producto $\vec{k} \times \vec{E}$).
+3. Onda transmitida (viaja en $+z$): $\vec{E}_T = E_{T0} e^{i(k_2 z - \omega t)} \hat{x}$, $\vec{B}_T = \frac{1}{v_2} E_{T0} e^{i(k_2 z - \omega t)} \hat{y}$. ($v_2 = c/n_2$).
+4. Las condiciones de frontera en $z=0$ (sin cargas ni corrientes libres en la interfaz dieléctrica):
+   I. Continuidad de $E_{tangencial}$: $E_I + E_R = E_T$.
+   II. Continuidad de $H_{tangencial} = \frac{B_{tangencial}}{\mu}$: Asumiendo dieléctricos no magnéticos ($\mu_1 \approx \mu_2 \approx \mu_0$), tenemos continuidad de $B_{tangencial}$: $B_I + B_R = B_T$.
+5. Sustituimos las magnitudes de campo magnético por las eléctricas:
+   $\frac{1}{v_1} E_{I0} - \frac{1}{v_1} E_{R0} = \frac{1}{v_2} E_{T0} \implies E_{I0} - E_{R0} = \frac{v_1}{v_2} E_{T0}$.
+6. Sabemos por óptica que $v = c/n$, así que $\frac{v_1}{v_2} = \frac{c/n_1}{c/n_2} = \frac{n_2}{n_1}$. Sea $\beta = \frac{n_2}{n_1} = n_2$ (ya que $n_1=1$).
+   $E_{I0} - E_{R0} = n_2 E_{T0}$.
+7. Tenemos un sistema: $E_{I0} + E_{R0} = E_{T0}$ y $E_{I0} - E_{R0} = n_2 E_{T0}$.
+8. Sustituyendo $E_{T0}$ en la segunda:
+   $E_{I0} - E_{R0} = n_2 (E_{I0} + E_{R0}) \implies E_{I0}(1 - n_2) = E_{R0}(1 + n_2)$.
+9. El coeficiente de amplitud reflejada es $r = \frac{E_{R0}}{E_{I0}} = \frac{1 - n_2}{1 + n_2}$.
+10. La reflectancia (potencia) relaciona vectores de Poynting, dependientes de amplitud al cuadrado: $R = |r|^2 = \left( \frac{n_1 - n_2}{n_1 + n_2} \right)^2$. Para luz de aire a vidrio de $n_2=1.5$, esto resulta en $\sim 4\%$.
+
+**Problema 3: Momento electromagnético y presión de radiación láser**
+Un láser industrial emite un haz cilíndrico de potencia media $P = 5\text{ kW}$. El rayo incide ortogonalmente sobre un bloque perfecto absorbente (cuerpo negro). Calcule la magnitud de la fuerza ejercida por la presión de radiación de la luz (momentum fields) sobre el objeto.
+**Solución paso a paso:**
+1. A nivel macroscópico continuo, el vector de Poynting promedio relaciona el flujo de energía direccional: $\langle S \rangle = \frac{P}{A}$, donde $A$ es la sección del haz.
+2. La densidad de momento electromagnético $\vec{g}_{em}$ almacenado en los campos está dada universalmente por: $\vec{g}_{em} = \frac{1}{c^2} \vec{S}$.
+3. Al incidir a velocidad $c$ contra el bloque, la cantidad de momento que transfiere el volumen luminoso cada segundo (y por unidad de área) es la presión de radiación $P_{rad}$.
+   Flujo de momento incidente $P_{rad} = c \langle g_{em} \rangle = c \left( \frac{1}{c^2} \langle S \rangle \right) = \frac{\langle S \rangle}{c}$.
+4. Como la superficie es $100\%$ absorbente, el haz se detiene por completo cediendo todo su momento. (Si fuera reflejante perfecta, sería el doble debido al rebote elástico fotónico).
+5. La fuerza neta ejercida $F_{rad}$ es el producto de la presión por el Área transversal:
+   $F_{rad} = P_{rad} \cdot A = \left(\frac{\langle S \rangle}{c}\right) A = \frac{P/A}{c} A = \frac{P}{c}$.
+6. Evaluando con números:
+   $F_{rad} = \frac{5000 \text{ J/s}}{3 \times 10^8 \text{ m/s}} = 1.67 \times 10^{-5} \text{ Newtons}$.
+7. Esta microscópica pero firme e inexorable fuerza de radiación es el motor teórico tras los diseños de las velas solares interplanetarias (IKAROS).
+
+## 💻 Simulaciones Computacionales
+
+Simulación de propagación de una Onda Electromagnética unidimensional (1D) en el vacío mediante el método FDTD (Diferencias Finitas en el Dominio del Tiempo) resolviendo las ecuaciones rotacionales acopladas.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros de simulación FDTD 1D
+nz = 200        # Nodos espaciales
+c = 1.0         # Velocidad de la luz normalizada
+dt = 0.5        # Paso temporal (Courant condition = 0.5)
+dz = 1.0        # Paso espacial
+
+E = np.zeros(nz)
+B = np.zeros(nz)
+
+history_E = []
+
+# Bucle en el tiempo
+for t in range(300):
+    # Actualizar B (Faraday)
+    for k in range(nz - 1):
+        B[k] = B[k] + (dt / dz) * (E[k + 1] - E[k])
+        
+    # Actualizar E (Ampère-Maxwell)
+    for k in range(1, nz):
+        E[k] = E[k] + (dt / dz) * (B[k] - B[k - 1])
+        
+    # Inyectar una perturbación gaussiana en el centro
+    E[nz // 2] += np.exp(-0.5 * ((t - 30) / 8.0)**2)
+    
+    if t % 3 == 0:
+        history_E.append(E.copy())
+
+# Graficar un instante de tiempo
+plt.figure(figsize=(8, 4))
+plt.plot(history_E[-20], color='purple')
+plt.title('Propagación de Pulso Electromagnético (FDTD)')
+plt.xlabel('Eje Z (Espacio)')
+plt.ylabel('Campo Eléctrico $E_x$')
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

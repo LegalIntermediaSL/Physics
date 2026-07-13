@@ -78,6 +78,92 @@ graph TD
 4. Calculamos $ \Delta P $ ($ L = 0.1 \text{ m} $):
    $ \Delta P = \frac{8 (4 \times 10^{-3}) (0.1) (0.3)}{(0.002)^2} = \frac{9.6 \times 10^{-4}}{4 \times 10^{-6}} = 240 \text{ Pa} $.
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Ecuación de Blasius para la Capa Límite Plana**
+A partir de la ecuación de von Kármán para cantidad de movimiento $\frac{\tau_w}{\rho U^2} = \frac{d\theta}{dx}$, calcule el espesor de la capa límite $\delta(x)$ asumiendo un perfil de velocidades de cuarto grado: $\frac{u}{U} = 2\eta - 2\eta^3 + \eta^4$ donde $\eta = y/\delta$.
+
+**Solución paso a paso:**
+1. El espesor de momentum $\theta$ es $\theta = \int_0^\delta \frac{u}{U} \left(1 - \frac{u}{U}\right) dy = \delta \int_0^1 f(\eta) (1 - f(\eta)) d\eta$.
+2. Con $f(\eta) = 2\eta - 2\eta^3 + \eta^4$, calculamos la integral (llamémosla $C_\theta$). Evaluando rigurosamente obtenemos $C_\theta = \frac{37}{315}$. Por lo tanto, $\theta = \frac{37}{315} \delta$.
+3. El esfuerzo cortante en la pared $\tau_w$ se evalúa como $\tau_w = \mu \left( \frac{\partial u}{\partial y} \right)_{y=0} = \frac{\mu U}{\delta} f'(0)$.
+4. Calculamos $f'(0)$: $f'(\eta) = 2 - 6\eta^2 + 4\eta^3 \implies f'(0) = 2$. Luego $\tau_w = \frac{2\mu U}{\delta}$.
+5. Reemplazamos en von Kármán: $\frac{2\mu U}{\rho U^2 \delta} = \frac{d}{dx} \left( \frac{37}{315} \delta \right) \implies \frac{2\nu}{U \delta} = \frac{37}{315} \frac{d\delta}{dx}$.
+6. Integramos separando variables: $\delta d\delta = \frac{630}{37} \frac{\nu}{U} dx$.
+7. $\frac{\delta^2}{2} = \frac{630}{37} \frac{\nu x}{U} \implies \delta^2 = \frac{1260}{37} \frac{\nu x}{U} \approx 34.05 \frac{\nu x}{U}$.
+8. Despejando $\delta$: $\delta = \sqrt{34.05} \sqrt{\frac{\nu x}{U}} \approx 5.84 \frac{x}{\sqrt{Re_x}}$. Este valor de aproximación polinómica es muy cercano al $5.0$ exacto de Blasius.
+
+**Problema 2: Flujo de Couette-Poiseuille Generalizado**
+Un fluido viscoso de viscosidad $\mu$ fluye entre dos placas paralelas separadas por una distancia $h$. La placa inferior ($y=0$) está fija, y la superior ($y=h$) se mueve a velocidad constante $V$. Existe además un gradiente de presión constante $\frac{dP}{dx} < 0$. Determine el perfil de velocidades y el caudal por unidad de ancho.
+
+**Solución paso a paso:**
+1. Ecuación de Navier-Stokes unidimensional: $\mu \frac{d^2u}{dy^2} = \frac{dP}{dx}$.
+2. Integramos dos veces respecto a $y$:
+   $\frac{du}{dy} = \frac{1}{\mu} \frac{dP}{dx} y + C_1$.
+   $u(y) = \frac{1}{2\mu} \frac{dP}{dx} y^2 + C_1 y + C_2$.
+3. Condiciones de contorno:
+   No deslizamiento en $y=0$: $u(0) = 0 \implies C_2 = 0$.
+   En $y=h$: $u(h) = V \implies \frac{1}{2\mu} \frac{dP}{dx} h^2 + C_1 h = V \implies C_1 = \frac{V}{h} - \frac{h}{2\mu} \frac{dP}{dx}$.
+4. Sustituyendo $C_1$:
+   $u(y) = \frac{1}{2\mu} \frac{dP}{dx} (y^2 - hy) + V \frac{y}{h}$. Este es un perfil parabólico superpuesto con uno lineal.
+5. El caudal $q$ por unidad de ancho es $q = \int_0^h u(y) dy$.
+   $q = \int_0^h \left[ \frac{1}{2\mu} \frac{dP}{dx} (y^2 - hy) + V \frac{y}{h} \right] dy$.
+6. $q = \frac{1}{2\mu} \frac{dP}{dx} \left( \frac{h^3}{3} - \frac{h^3}{2} \right) + V \left( \frac{h^2}{2h} \right) = \frac{1}{2\mu} \frac{dP}{dx} \left( -\frac{h^3}{6} \right) + \frac{Vh}{2} = \frac{Vh}{2} - \frac{h^3}{12\mu} \frac{dP}{dx}$.
+
+**Problema 3: Esfuerzos de Reynolds en Turbulencia**
+A partir de la descomposición de Reynolds ($u = \bar{u} + u'$, $v = \bar{v} + v'$), demuestre cómo el término convectivo no lineal en Navier-Stokes genera un esfuerzo cortante turbulento aparente.
+
+**Solución paso a paso:**
+1. Consideremos la ecuación de cantidad de movimiento en $x$: $\rho \left( \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} \right) = -\frac{\partial p}{\partial x} + \mu \nabla^2 u$.
+2. Por continuidad de un fluido incompresible ($\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0$), reescribimos el término convectivo: $u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = \frac{\partial (uu)}{\partial x} + \frac{\partial (uv)}{\partial y}$.
+3. Sustituyendo la descomposición y promediando en el tiempo (operador barra): $\overline{u'}=0, \overline{v'}=0$.
+   $\overline{uu} = \overline{(\bar{u} + u')(\bar{u} + u')} = \bar{u}\bar{u} + \overline{u'u'}$.
+   $\overline{uv} = \overline{(\bar{u} + u')(\bar{v} + v')} = \bar{u}\bar{v} + \overline{u'v'}$.
+4. Aplicando el promedio a la ecuación inercial:
+   $\rho \left( \frac{\partial \bar{u}}{\partial t} + \frac{\partial}{\partial x}(\bar{u}\bar{u}) + \frac{\partial}{\partial y}(\bar{u}\bar{v}) \right) = -\frac{\partial \bar{p}}{\partial x} + \mu \nabla^2 \bar{u} - \rho \left( \frac{\partial}{\partial x}(\overline{u'u'}) + \frac{\partial}{\partial y}(\overline{u'v'}) \right)$.
+5. Reagrupando la continuidad promediada para extraer las derivadas medias en $x$ e $y$, los términos de fluctuación actúan como gradientes de esfuerzo.
+6. El esfuerzo total efectivo sobre la capa media es $\tau = \mu \frac{\partial \bar{u}}{\partial y} - \rho \overline{u'v'}$. El segundo término, $\tau_{turb} = -\rho \overline{u'v'}$, es el esfuerzo de Reynolds de corte, que acopla las fluctuaciones verticales $v'$ con las horizontales $u'$, mezclando cantidad de movimiento e incrementando drásticamente el arrastre en flujos turbulentos.
+
+## 💻 Simulaciones Computacionales
+
+Simulación del espectro de energía cinética turbulenta, demostrando la famosa ley de cascada inercial $k^{-5/3}$ de Kolmogorov (1941).
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Rango de números de onda kappa
+kappa = np.logspace(0, 4, 200)
+
+# Parámetros macroscópicos
+epsilon = 0.1  # Tasa de disipación de energía
+C_k = 1.5      # Constante de Kolmogorov
+nu = 1e-5      # Viscosidad cinemática
+
+# Escala de disipación de Kolmogorov
+eta = (nu**3 / epsilon)**0.25
+kappa_eta = 1.0 / eta
+
+# Espectro de Kolmogorov K41
+E_k = C_k * epsilon**(2/3) * kappa**(-5/3)
+
+# Modelo exponencial de corte para la región disipativa
+E_k_dissipative = E_k * np.exp(-5.2 * (kappa * eta))
+
+plt.figure(figsize=(8, 6))
+plt.loglog(kappa, E_k, 'r--', label=r'Rango Inercial $\sim \kappa^{-5/3}$')
+plt.loglog(kappa, E_k_dissipative, 'b-', lw=2, label='Espectro Completo (con Disipación)')
+plt.axvline(kappa_eta, color='k', linestyle=':', label='Escala de Kolmogorov $\kappa_\eta$')
+
+plt.title("Cascada de Energía Turbulenta (Espectro de Kolmogorov)")
+plt.xlabel(r"Número de onda $\kappa$")
+plt.ylabel(r"Densidad Espectral $E(\kappa)$")
+plt.ylim(1e-10, 1e0)
+plt.legend()
+plt.grid(True, which="both", ls="--", alpha=0.5)
+plt.show()
+```
+
 ## 📚 Recursos
 ### Cursos Específicos
 1. ["Turbulent Flows" - NPTEL](https://nptel.ac.in/courses/112106266)

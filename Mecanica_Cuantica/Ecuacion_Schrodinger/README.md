@@ -91,6 +91,115 @@ Dado que $|\psi(x)|^2$ solo depende de la coordenada espacial $x$, la densidad d
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Ecuación de Continuidad de la Probabilidad**
+Deriva la ecuación de continuidad para la densidad de probabilidad cuántica a partir de la ecuación de Schrödinger dependiente del tiempo en 3D.
+**Solución paso a paso:**
+1. La ecuación de Schrödinger es $i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi$.
+2. Tomamos el conjugado complejo: $-i\hbar \frac{\partial \Psi^*}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi^* + V\Psi^*$ (asumiendo que $V$ es real).
+3. Multiplicamos la primera por $\Psi^*$ y la segunda por $\Psi$, y restamos la segunda de la primera:
+$$ i\hbar \left( \Psi^* \frac{\partial \Psi}{\partial t} + \Psi \frac{\partial \Psi^*}{\partial t} \right) = -\frac{\hbar^2}{2m} (\Psi^*\nabla^2\Psi - \Psi\nabla^2\Psi^*) $$
+4. El lado izquierdo es $i\hbar \frac{\partial}{\partial t}(\Psi^*\Psi) = i\hbar \frac{\partial \rho}{\partial t}$.
+5. El lado derecho se puede reescribir usando la identidad $\nabla \cdot (\Psi^*\nabla\Psi - \Psi\nabla\Psi^*)$.
+6. Definimos la corriente de probabilidad $\vec{J} = \frac{\hbar}{2mi}(\Psi^*\nabla\Psi - \Psi\nabla\Psi^*)$.
+7. Así obtenemos $\frac{\partial \rho}{\partial t} + \nabla \cdot \vec{J} = 0$, que es la ecuación de continuidad.
+
+**Problema 2: Evolución de un Paquete de Ondas Libre**
+Un electrón libre en 1D tiene una función de onda inicial gaussiana $\Psi(x,0) = \frac{1}{(2\pi a^2)^{1/4}} e^{-x^2 / 4a^2}$. Calcula el ancho del paquete $\Delta x(t)$ para $t>0$.
+**Solución paso a paso:**
+1. Escribimos $\Psi(x,0)$ en el espacio de momentos mediante la transformada de Fourier:
+$$ \phi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int \Psi(x,0) e^{-ipx/\hbar} dx = \left(\frac{2a^2}{\pi\hbar^2}\right)^{1/4} e^{-p^2 a^2 / \hbar^2} $$
+2. La evolución temporal en el espacio de momentos adquiere una fase $e^{-iE_p t/\hbar}$ con $E_p = p^2/2m$:
+$$ \phi(p,t) = \phi(p) e^{-i p^2 t / 2m\hbar} $$
+3. Transformamos de vuelta al espacio de posiciones:
+$$ \Psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}} \int \phi(p,t) e^{ipx/\hbar} dp $$
+La integral resultante es gaussiana compleja.
+4. Al calcular la densidad de probabilidad $|\Psi(x,t)|^2$, la nueva varianza se vuelve:
+$$ (\Delta x(t))^2 = a^2 + \left(\frac{\hbar t}{2ma}\right)^2 $$
+5. El paquete de ondas se dispersa con el tiempo, y el ancho es $\Delta x(t) = a \sqrt{1 + \left(\frac{\hbar t}{2ma^2}\right)^2}$.
+
+**Problema 3: Teorema de Ehrenfest para un Potencial Lineal**
+Considera una partícula en un campo gravitatorio uniforme, $V(x) = mgx$. Calcula la evolución temporal del valor esperado del momento $\langle p \rangle$ y la posición $\langle x \rangle$.
+**Solución paso a paso:**
+1. Por el Teorema de Ehrenfest: $\frac{d\langle p \rangle}{dt} = \langle -\frac{\partial V}{\partial x} \rangle$.
+2. Como $V(x) = mgx$, $\frac{\partial V}{\partial x} = mg$. Así que $\frac{d\langle p \rangle}{dt} = -mg$.
+3. Integrando respecto al tiempo: $\langle p \rangle(t) = \langle p \rangle(0) - mgt$.
+4. Para la posición, $\frac{d\langle x \rangle}{dt} = \frac{\langle p \rangle}{m}$.
+5. Sustituimos el momento: $\frac{d\langle x \rangle}{dt} = \frac{\langle p \rangle(0)}{m} - gt$.
+6. Integrando nuevamente: $\langle x \rangle(t) = \langle x \rangle(0) + \frac{\langle p \rangle(0)}{m} t - \frac{1}{2}gt^2$.
+Esto demuestra que los valores esperados siguen exactamente las trayectorias parabólicas clásicas de Newton.
+
+## 💻 Simulaciones Computacionales
+
+A continuación se presenta un script avanzado en Python que simula la evolución temporal de un paquete de ondas gaussiano sometido a un pozo de potencial cuántico utilizando el método de diferencias finitas (Crank-Nicolson) para la Ecuación de Schrödinger dependiente del tiempo.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from scipy.sparse import diags
+from scipy.sparse.linalg import spsolve
+
+# Parámetros físicos
+L = 10.0         # Longitud del dominio
+N = 500          # Número de puntos espaciales
+x = np.linspace(0, L, N)
+dx = x[1] - x[0]
+dt = 0.005       # Paso de tiempo
+steps = 200      # Número de pasos de tiempo a simular
+
+# Potencial (pozo armónico)
+V = 0.5 * (x - L/2)**2
+V[0] = V[-1] = 1e6 # Condiciones de frontera infinitas
+
+# Paquete de ondas inicial (Gaussiana)
+x0 = L / 4.0
+sigma = 0.5
+k0 = 5.0
+psi0 = np.exp(-0.5 * ((x - x0) / sigma)**2) * np.exp(1j * k0 * x)
+psi0 = psi0 / np.sqrt(np.sum(np.abs(psi0)**2) * dx) # Normalización
+
+# Operador de evolución (Crank-Nicolson)
+alpha = 1j * dt / (4 * dx**2)
+main_diag_A = 1 + 2*alpha + 1j * dt / 2 * V
+off_diag_A = -alpha * np.ones(N-1)
+main_diag_B = 1 - 2*alpha - 1j * dt / 2 * V
+off_diag_B = alpha * np.ones(N-1)
+
+A = diags([off_diag_A, main_diag_A, off_diag_A], [-1, 0, 1], format='csc')
+B = diags([off_diag_B, main_diag_B, off_diag_B], [-1, 0, 1], format='csc')
+
+# Simulación
+psi = psi0.copy()
+densities = []
+
+for _ in range(steps):
+    densities.append(np.abs(psi)**2)
+    # Resolver A * psi_new = B * psi_old
+    rhs = B.dot(psi)
+    psi = spsolve(A, rhs)
+
+# Visualización
+fig, ax = plt.subplots(figsize=(8, 5))
+line, = ax.plot(x, densities[0], color='blue', lw=2, label='|Ψ|²')
+ax.plot(x, V * 0.1, color='red', linestyle='--', label='Potencial V(x) (escalado)')
+ax.set_ylim(0, np.max(densities) * 1.2)
+ax.set_xlim(0, L)
+ax.set_xlabel('Posición x')
+ax.set_ylabel('Densidad de Probabilidad')
+ax.set_title('Evolución de un Paquete de Ondas Cuántico')
+ax.legend(loc='upper right')
+
+def animate(i):
+    line.set_ydata(densities[i])
+    return line,
+
+ani = animation.FuncAnimation(fig, animate, frames=steps, interval=50, blit=True)
+plt.tight_layout()
+# plt.show() # Descomentar para ver la animación localmente
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

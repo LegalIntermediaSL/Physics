@@ -97,6 +97,116 @@ Donde $r_s = \frac{2GM}{c^2}$ es el **Radio de Schwarzschild**.
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Desviación de la luz en la métrica de Schwarzschild**
+Calcule el ángulo de deflexión $\Delta \phi$ de un rayo de luz que pasa cerca de una estrella esféricamente simétrica de masa $M$ con un parámetro de impacto $b$.
+
+**Solución paso a paso:**
+1. **Ecuación de la órbita de fotones:**
+   A partir de $ds^2=0$ y las cantidades conservadas (energía $E$ y momento angular $L$) en Schwarzschild, la ecuación de la trayectoria de un fotón con $u = 1/r$ es:
+   $\frac{d^2u}{d\phi^2} + u = \frac{3GM}{c^2}u^2$.
+2. **Aproximación perturbativa:**
+   La solución de orden cero (espacio plano, sin masa) es una línea recta: $u_0 = \frac{\sin\phi}{b}$.
+   Para encontrar la perturbación debida a $M$, asumimos $u = u_0 + u_1$ donde $u_1 \ll u_0$.
+   Sustituyendo en la ED: $\frac{d^2u_1}{d\phi^2} + u_1 = \frac{3GM}{c^2} \frac{\sin^2\phi}{b^2} = \frac{3GM}{2bc^2}(1 - \cos 2\phi)$.
+3. **Resolución de la ED:**
+   Una solución particular es $u_1(\phi) = \frac{3GM}{2b^2 c^2} \left( 1 + \frac{1}{3} \cos 2\phi \right)$.
+   Sabiendo que $\cos 2\phi = 1 - 2\sin^2\phi$, reescribimos: $u_1(\phi) = \frac{GM}{b^2 c^2} (1 + \cos^2\phi)$.
+   Entonces, $u(\phi) \approx \frac{\sin\phi}{b} + \frac{GM}{b^2 c^2}(1 + \cos^2\phi)$.
+4. **Cálculo de la deflexión:**
+   El rayo viene desde el infinito $u=0$ en $\phi_1 \approx -\delta$ y escapa a $\phi_2 \approx \pi + \delta$.
+   Para $\phi = \pi + \delta$: $\sin(\pi+\delta) = -\sin\delta \approx -\delta$, y $\cos^2(\pi+\delta) \approx 1$.
+   $0 = -\frac{\delta}{b} + \frac{GM}{b^2 c^2}(1 + 1) \implies \delta = \frac{2GM}{bc^2}$.
+   El ángulo de deflexión total es $\Delta \phi = 2\delta = \frac{4GM}{bc^2}$.
+
+**Problema 2: Frecuencia orbital en ISCO (Innermost Stable Circular Orbit)**
+Determine el radio de la órbita circular estable más interna (ISCO) para una partícula masiva en la geometría de Schwarzschild, y calcule su frecuencia orbital coordinada.
+
+**Solución paso a paso:**
+1. **Potencial efectivo:**
+   Para una partícula masiva con momento angular específico $l = L/m$, el potencial efectivo radial es:
+   $V_{eff}(r) = \left(1 - \frac{r_s}{r}\right)\left(1 + \frac{l^2}{r^2c^2}\right)$, donde $r_s = \frac{2GM}{c^2}$.
+2. **Órbitas circulares:**
+   Se requieren dos condiciones: $V_{eff}'(r) = 0$ (extremo del potencial) y $V_{eff}''(r) \ge 0$ (estabilidad).
+   $V_{eff}'(r) = \frac{r_s}{r^2} - \frac{l^2}{r^3 c^2}\left(1 - \frac{3r_s}{2r}\right) = 0 \implies l^2 = \frac{r_s r^2 c^2}{2r - 3r_s}$.
+3. **Condición marginal de estabilidad (ISCO):**
+   $V_{eff}''(r) = 0$ en la transición.
+   Sustituyendo $l^2$ en $V_{eff}''(r) = 0$, se obtiene la condición radial $r - 3r_s = 0 \implies r_{ISCO} = 3r_s = \frac{6GM}{c^2}$.
+4. **Frecuencia orbital:**
+   Por la ecuación geodésica o la tercera ley de Kepler relativista en Schwarzschild, la velocidad angular coordinada es $\Omega = \frac{d\phi}{dt} = \sqrt{\frac{GM}{r^3}}$.
+   En el ISCO: $\Omega = \sqrt{\frac{GM}{(6GM/c^2)^3}} = \frac{c^3}{6\sqrt{6} G M}$.
+   La frecuencia orbital coordinada es $f_{ISCO} = \frac{\Omega}{2\pi} = \frac{c^3}{12\pi \sqrt{6} G M}$.
+
+**Problema 3: Avance del perihelio de Mercurio**
+Usando la métrica de Schwarzschild, obtenga el ángulo aproximado de precesión del perihelio por órbita para un planeta.
+
+**Solución paso a paso:**
+1. Usamos la ecuación de órbita con perturbación relativista (en notación $u=1/r$):
+   $u'' + u = \frac{GM}{h^2} + \frac{3GM}{c^2}u^2$, con momento angular $h$.
+2. La órbita newtoniana es $u_0 = \frac{GM}{h^2}(1 + e \cos \phi)$, con excentricidad $e$.
+3. Inyectamos $u_0$ en el término perturbativo $\frac{3GM}{c^2}u_0^2$.
+   Nos interesa el término resonante $\propto \cos \phi$, que causará la precesión secular:
+   $\frac{3GM}{c^2} \left[ \frac{G^2 M^2}{h^4} (1 + e \cos \phi)^2 \right] \approx \frac{6G^3 M^3 e}{c^2 h^4} \cos \phi$.
+4. La ecuación para $u$ queda (ignorando términos constantes/armónicos de alta frecuencia):
+   $u'' + u \approx \frac{GM}{h^2} + \alpha \cos \phi$, con $\alpha = \frac{6G^3 M^3 e}{c^2 h^4}$.
+5. Una solución aproximada es $u(\phi) \approx u_0 + \frac{\alpha}{2} \phi \sin \phi = \frac{GM}{h^2} \left( 1 + e \cos \phi + \frac{3G^2 M^2 e}{c^2 h^2} \phi \sin \phi \right)$.
+6. Para una perturbación pequeña, factorizamos $\cos(\phi - \delta\phi) \approx \cos\phi + \delta\phi \sin\phi$.
+   Entonces, $\delta\phi = \frac{3G^2 M^2}{c^2 h^2} \phi$.
+   Por cada órbita $\Delta\phi = 2\pi$, el avance del perihelio es $\Delta \omega = \frac{6\pi G^2 M^2}{c^2 h^2}$.
+   Usando $h^2 = GMa(1-e^2)$, $\Delta \omega = \frac{6\pi GM}{c^2 a (1-e^2)}$.
+
+## 💻 Simulaciones Computacionales
+
+Esta simulación en Python integra la ecuación de la geodésica para mostrar la precesión del perihelio de un planeta alrededor de una masa central en la métrica de Schwarzschild (efecto relativista de la órbita de Mercurio).
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+# Unidades normalizadas: GM = 1, c = 1
+def geodesic_derivs(state, phi, alpha):
+    # u = 1/r, state = [u, du/dphi]
+    u, u_prime = state
+    # Ecuación de órbita con perturbación GR: u'' + u = M/h^2 + 3M u^2 / c^2
+    # Normalizamos M/h^2 = 1 (órbita base)
+    # alpha representa 3GM^2/(c^2 h^2), el término de precesión
+    du_dphi = u_prime
+    du_prime_dphi = 1 - u + alpha * u**2
+    return [du_dphi, du_prime_dphi]
+
+# Parámetro relativista (exagerado para visualización)
+alpha = 0.05
+# Condiciones iniciales: apoastro
+u0 = 0.5   # 1 / r_max
+u_prime0 = 0.0
+state0 = [u0, u_prime0]
+
+# Rango de ángulos (varias órbitas)
+phi = np.linspace(0, 10 * np.pi, 2000)
+
+# Integración
+sol = odeint(geodesic_derivs, state0, phi, args=(alpha,))
+u = sol[:, 0]
+r = 1 / u
+
+# Conversión a coordenadas cartesianas
+x = r * np.cos(phi)
+y = r * np.sin(phi)
+
+plt.figure(figsize=(7, 7))
+plt.plot(x, y, 'b-', lw=1, label=f'Órbita Relativista ($\\alpha={alpha}$)')
+plt.plot(0, 0, 'ro', markersize=8, label='Masa Central (Agujero Negro / Estrella)')
+plt.title('Precesión del Perihelio en Relatividad General')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.axis('equal')
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas (5-7 Recomendados)

@@ -74,6 +74,78 @@ graph TD
 5. Alargamiento $ \Delta L $:
    $ \epsilon = \frac{\Delta L}{L_0} \implies \Delta L = \epsilon L_0 = (6.24 \times 10^{-4}) \times 2 = 1.248 \times 10^{-3} \text{ m} = 1.248 \text{ mm} $.
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Tensor de Tensiones y Esfuerzos Principales**
+Dado el tensor de tensiones $\boldsymbol{\sigma} = \begin{pmatrix} 50 & 20 & 0 \\ 20 & -10 & 0 \\ 0 & 0 & 30 \end{pmatrix} \, \text{MPa}$ en un punto de un material. Determine las tensiones principales, las direcciones principales y el esfuerzo cortante máximo absoluto.
+
+**Solución paso a paso:**
+1. Los autovalores del tensor son las tensiones principales. Como $\sigma_{z} = 30$ MPa y no hay esfuerzo cortante en los planos $z$, una tensión principal es $\sigma_3 = 30$ MPa (dirección $z$).
+2. Para el bloque $2\times2$ en $xy$, resolvemos $\det \begin{pmatrix} 50 - \lambda & 20 \\ 20 & -10 - \lambda \end{pmatrix} = 0$.
+3. Ecuación característica: $(50 - \lambda)(-10 - \lambda) - 400 = \lambda^2 - 40\lambda - 900 = 0$.
+4. Las raíces son $\lambda = \frac{40 \pm \sqrt{1600 - 4(1)(-900)}}{2} = 20 \pm \sqrt{400 + 900} = 20 \pm \sqrt{1300} = 20 \pm 10\sqrt{13} \approx 20 \pm 36.05$.
+5. Tensiones principales ordenadas: $\sigma_1 = 56.05$ MPa, $\sigma_2 = 30$ MPa, $\sigma_3 = -16.05$ MPa.
+6. El esfuerzo cortante máximo absoluto se da en el plano bisector de las tensiones principales máxima y mínima: $\tau_{max} = \frac{\sigma_1 - \sigma_3}{2} = \frac{56.05 - (-16.05)}{2} = \frac{72.1}{2} = 36.05$ MPa.
+7. Las direcciones (vectores propios) en $xy$ para $\sigma_1 = 56.05$: $\begin{pmatrix} -6.05 & 20 \\ 20 & -66.05 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = 0 \implies \tan \theta_p = \frac{y}{x} = \frac{6.05}{20} \approx 0.3025 \implies \theta_p \approx 16.8^\circ$.
+
+**Problema 2: Recipiente de Pared Gruesa (Tubo de Lamé)**
+Un cilindro de pared gruesa tiene radio interior $a$ y exterior $b$. Está sometido a una presión interna $P_i$ y externa $P_e = 0$. Encuentre la expresión para el esfuerzo tangencial máximo $\sigma_{\theta, max}$ utilizando las ecuaciones de Lamé.
+
+**Solución paso a paso:**
+1. Las ecuaciones de Lamé para los esfuerzos radial y tangencial son: $\sigma_r = A - \frac{B}{r^2}$ y $\sigma_\theta = A + \frac{B}{r^2}$.
+2. Condiciones de contorno: $\sigma_r(a) = -P_i$ y $\sigma_r(b) = 0$.
+3. Sustituyendo: $A - \frac{B}{a^2} = -P_i$ y $A - \frac{B}{b^2} = 0 \implies A = \frac{B}{b^2}$.
+4. Resolvemos para $B$: $\frac{B}{b^2} - \frac{B}{a^2} = -P_i \implies B \left( \frac{a^2 - b^2}{a^2 b^2} \right) = -P_i \implies B = \frac{P_i a^2 b^2}{b^2 - a^2}$.
+5. Por lo tanto, $A = \frac{P_i a^2}{b^2 - a^2}$.
+6. El esfuerzo tangencial es $\sigma_\theta(r) = \frac{P_i a^2}{b^2 - a^2} \left( 1 + \frac{b^2}{r^2} \right)$.
+7. Este esfuerzo es siempre de tracción (positivo) y su valor máximo ocurre en el radio interior $r=a$:
+   $\sigma_{\theta, max} = \frac{P_i a^2}{b^2 - a^2} \left( 1 + \frac{b^2}{a^2} \right) = P_i \frac{a^2 + b^2}{b^2 - a^2}$. Note que siempre es mayor que $P_i$.
+
+**Problema 3: Ley de Hooke Generalizada e Invariante de Dilatación**
+Para un material isotrópico y elástico lineal sometido a un tensor de tensiones $\sigma_{ij}$, demuestre que el cambio relativo de volumen (dilatación cúbica) $\theta = \varepsilon_{kk}$ es proporcional a la traza del tensor de tensiones $\sigma_{kk}$, y halle el módulo de compresibilidad volumétrica $K$ en función de $E$ y $\nu$.
+
+**Solución paso a paso:**
+1. La ley de Hooke generalizada es $\varepsilon_{ij} = \frac{1+\nu}{E} \sigma_{ij} - \frac{\nu}{E} \sigma_{kk} \delta_{ij}$.
+2. Para encontrar la dilatación cúbica $\theta$, tomamos la traza del tensor de deformaciones: $\theta = \varepsilon_{kk} = \varepsilon_{11} + \varepsilon_{22} + \varepsilon_{33}$.
+3. Usando la convención de Einstein de suma de índices repetidos, calculamos $\varepsilon_{kk}$:
+   $\varepsilon_{kk} = \frac{1+\nu}{E} \sigma_{kk} - \frac{\nu}{E} \sigma_{mm} \delta_{kk}$.
+4. Como estamos en 3D, $\delta_{kk} = \delta_{11} + \delta_{22} + \delta_{33} = 3$. La variable muda $\sigma_{mm}$ es igual a $\sigma_{kk}$.
+5. $\theta = \frac{1+\nu}{E} \sigma_{kk} - \frac{3\nu}{E} \sigma_{kk} = \frac{1 - 2\nu}{E} \sigma_{kk}$.
+6. Por definición, la presión hidrostática media es $P = -\frac{\sigma_{kk}}{3}$. Luego, $\theta = -3 \frac{1 - 2\nu}{E} P$.
+7. El módulo de compresibilidad es $K = -\frac{P}{\theta}$, por lo que sustituyendo obtenemos: $K = \frac{E}{3(1 - 2\nu)}$.
+
+## 💻 Simulaciones Computacionales
+
+Cálculo y visualización de la deflexión de una viga empotrada bajo carga continua mediante integración de la ecuación diferencial elástica.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Ecuación diferencial de la elástica: E*I*y'' = M(x)
+# Para una viga en voladizo con carga uniforme q: M(x) = -q*(L-x)^2 / 2
+
+L = 5.0        # Longitud de la viga (m)
+E = 200e9      # Módulo de Young (Pa) - Acero
+I = 1e-5       # Inercia de la sección transversal (m^4)
+q = 10000      # Carga distribuida (N/m)
+
+x = np.linspace(0, L, 100)
+# Integración analítica:
+# y(x) = (-q*x^2 / (24*E*I)) * (x^2 - 4*L*x + 6*L^2)
+deflection = (-q * x**2 / (24 * E * I)) * (x**2 - 4 * L * x + 6 * L**2)
+
+plt.figure(figsize=(10, 4))
+plt.plot(x, deflection * 1000, 'b-', lw=3) # Convertido a mm
+plt.fill_between(x, deflection * 1000, 0, color='blue', alpha=0.1)
+plt.axhline(0, color='black', linestyle='--')
+plt.title("Línea Elástica de Deflexión (Viga en Voladizo)")
+plt.xlabel("Longitud x (m)")
+plt.ylabel("Deflexión (mm)")
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos
 ### Cursos Específicos
 1. ["Mechanics of Materials I & II" - Coursera (Georgia Tech)](https://www.coursera.org/learn/mechanics-1)

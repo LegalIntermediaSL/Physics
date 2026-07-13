@@ -153,6 +153,111 @@ xychart-beta
 **Análisis de la Disminución a Alto $J$ (Efecto de Distorsión Centrífuga):**
 A números cuánticos rotacionales altos, la fuerza centrífuga que actúa sobre los núcleos durante la rápida rotación "estira" el enlace internuclear. Como la longitud del enlace efectiva $R$ aumenta, el momento de inercia $I = \mu R^2$ también aumenta. Puesto que $B \propto 1/I$, la constante rotacional efectiva disminuye, reduciendo ligeramente el espaciamiento $\Delta \nu$ entre los niveles de energía subsiguientes. Esto hace necesario incluir el término negativo correctivo $-D_e J^2(J+1)^2$.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Efecto Stark Lineal en el Átomo de Hidrógeno
+Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido a un campo eléctrico externo uniforme $\vec{\mathcal{E}} = \mathcal{E}_0 \hat{z}$. Calcule el corrimiento de los niveles de energía utilizando la teoría de perturbaciones degenerada de primer orden.
+
+**Solución paso a paso:**
+1. Los estados degenerados para $n=2$ son $|2,0,0\rangle$, $|2,1,0\rangle$, $|2,1,1\rangle$, y $|2,1,-1\rangle$ en la base $|n,l,m\rangle$.
+2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
+3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
+4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+   $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+   donde $a_0$ es el radio de Bohr.
+5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+   $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
+
+### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
+Derive la expresión para los niveles de energía rotovibracionales de una molécula diatómica tratada como un oscilador armónico y rotor rígido acoplados, incluyendo la corrección de distorsión centrífuga. 
+
+**Solución paso a paso:**
+1. El Hamiltoniano molecular efectivo es $H = \frac{P^2}{2\mu} + \frac{L^2}{2\mu R^2} + V(R)$.
+2. Expandiendo el potencial alrededor del mínimo $R_e$: $V(R) \approx \frac{1}{2} k (R - R_e)^2$.
+3. La energía a orden cero es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1)$, donde $B_e = \frac{\hbar^2}{2\mu R_e^2}$.
+4. Para la distorsión centrífuga, el mínimo efectivo de la energía potencial efectiva $V_{\text{eff}}(R) = V(R) + \frac{\hbar^2 J(J+1)}{2\mu R^2}$ se desplaza.
+5. Minimizando $V_{\text{eff}}$: $k(R_c - R_e) - \frac{\hbar^2 J(J+1)}{\mu R_c^3} = 0 \implies \Delta R \approx \frac{\hbar^2 J(J+1)}{k \mu R_e^3}$.
+6. Sustituyendo de nuevo en la energía, el término de corrección es $-D_e J^2(J+1)^2$, donde $D_e = \frac{4B_e^3}{\hbar^2 \omega^2}$.
+7. La energía final es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1) - D_e J^2(J+1)^2$.
+
+### Ejercicio 3: Condensación de Bose-Einstein en una Trampa Armónica
+Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein de un gas ideal de $N$ bosones atrapados en un potencial armónico tridimensional isotrópico $V(r) = \frac{1}{2} m \omega^2 r^2$.
+
+**Solución paso a paso:**
+1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
+2. El número total de partículas en estados excitados viene dado por la integral:
+   $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
+4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+   $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
+6. Resolviendo para $T_c$:
+   $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
+
+## 💻 Simulaciones Computacionales
+
+Este script computacional aproxima los niveles vibracionales moleculares diatómicos solucionando la ecuación de Schrödinger radial para un Potencial de Morse empírico, revelando el efecto de anarmonicidad en el acercamiento de los niveles cuánticos cerca del límite de disociación.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.sparse import diags
+from scipy.sparse.linalg import eigsh
+
+# Parámetros para un oscilador molecular de Morse genérico (ej. H2)
+De = 4.75          # Energía de disociación en eV
+re = 0.74          # Distancia internuclear de equilibrio en Angstroms
+a = 1.93           # Parámetro de anchura del pozo en Angstrom^-1
+mu = 918.0         # Masa reducida relativa a la masa electrónica
+hbar2_over_2m = 3.81  # Factor de conversión (aprox) para energías en eV y dist en A
+
+# Grid espacial (Distancia radial internuclear R)
+N = 1000
+R = np.linspace(0.2, 4.0, N)
+dR = R[1] - R[0]
+
+# Superficie de Energía Potencial (PES): Potencial de Morse
+V_morse = De * (1.0 - np.exp(-a * (R - re)))**2 - De
+
+# Hamiltoniano mediante diferencias finitas
+t_coeff = -hbar2_over_2m / (mu * dR**2)
+main_diag = -2.0 * t_coeff * np.ones(N) + V_morse
+off_diag = t_coeff * np.ones(N-1)
+
+H = diags([off_diag, main_diag, off_diag], [-1, 0, 1], format='csc')
+
+# Resolviendo los autovalores y autofunciones
+num_levels = 8
+eigenvalues, eigenvectors = eigsh(H, k=num_levels, which='SM')
+
+plt.figure(figsize=(10, 6))
+plt.plot(R, V_morse, 'k-', lw=2, label='Potencial de Morse V(R)')
+plt.axhline(0, color='gray', linestyle='--', label='Límite de Disociación')
+
+scale = 0.5
+colors = plt.cm.viridis(np.linspace(0, 1, num_levels))
+
+for i in range(num_levels):
+    E = eigenvalues[i]
+    psi = eigenvectors[:, i]
+    if psi[np.argmax(np.abs(psi))] < 0:
+        psi = -psi
+    
+    plt.axhline(E, color=colors[i], linestyle=':', alpha=0.5)
+    plt.plot(R, E + scale * psi, color=colors[i], label=f'v={i}')
+
+plt.title("Niveles Vibracionales Anarmónicos (Potencial de Morse)")
+plt.xlabel("Distancia Internuclear $R$ (Å)")
+plt.ylabel("Energía (eV)")
+plt.ylim(-De - 0.5, 1.0)
+plt.xlim(0.2, 4.0)
+plt.legend(loc='lower right', ncol=2)
+plt.grid(True, alpha=0.2)
+plt.tight_layout()
+# plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

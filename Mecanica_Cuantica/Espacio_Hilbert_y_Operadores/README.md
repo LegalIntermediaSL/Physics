@@ -89,6 +89,108 @@ $$ \sigma_x \sigma_p \ge \frac{\hbar}{2} $$
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Operador de Traslación Espacial**
+Demuestra que el operador $\hat{T}(a) = \exp(-i\hat{p}a/\hbar)$ actúa como un operador de traslación espacial sobre las funciones de onda.
+**Solución paso a paso:**
+1. Escribimos la acción del operador sobre una función $\psi(x)$ usando su expansión en serie de Taylor:
+$$ \hat{T}(a) = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{-ia}{\hbar} \right)^n \hat{p}^n $$
+2. En la base de posiciones, el operador momento es $\hat{p} = -i\hbar \frac{\partial}{\partial x}$.
+3. Sustituyendo $\hat{p}$ en la serie:
+$$ \hat{T}(a) = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{-ia}{\hbar} \right)^n \left(-i\hbar \frac{\partial}{\partial x}\right)^n = \sum_{n=0}^{\infty} \frac{(-a)^n}{n!} \frac{\partial^n}{\partial x^n} $$
+4. Aplicamos el operador a la función de onda $\psi(x)$:
+$$ \hat{T}(a)\psi(x) = \sum_{n=0}^{\infty} \frac{(-a)^n}{n!} \frac{\partial^n \psi}{\partial x^n} $$
+5. Esta es exactamente la serie de Taylor para $\psi(x - a)$. Por lo tanto, $\hat{T}(a)\psi(x) = \psi(x - a)$, demostrando que es el generador de las traslaciones espaciales.
+
+**Problema 2: Conmutador de Operadores de Momento Angular**
+Dados los operadores de momento angular $\hat{L}_i = \epsilon_{ijk} \hat{x}_j \hat{p}_k$, demuestra la relación de conmutación $[\hat{L}_x, \hat{L}_y] = i\hbar\hat{L}_z$.
+**Solución paso a paso:**
+1. Escribimos explícitamente los operadores: $\hat{L}_x = \hat{y}\hat{p}_z - \hat{z}\hat{p}_y$ y $\hat{L}_y = \hat{z}\hat{p}_x - \hat{x}\hat{p}_z$.
+2. Calculamos el conmutador: $[\hat{L}_x, \hat{L}_y] = [\hat{y}\hat{p}_z - \hat{z}\hat{p}_y, \hat{z}\hat{p}_x - \hat{x}\hat{p}_z]$.
+3. Usando la linealidad del conmutador:
+$$ [\hat{L}_x, \hat{L}_y] = [\hat{y}\hat{p}_z, \hat{z}\hat{p}_x] - [\hat{y}\hat{p}_z, \hat{x}\hat{p}_z] - [\hat{z}\hat{p}_y, \hat{z}\hat{p}_x] + [\hat{z}\hat{p}_y, \hat{x}\hat{p}_z] $$
+4. Como operadores de diferentes ejes conmutan, los términos centrales se anulan: $[\hat{y}\hat{p}_z, \hat{x}\hat{p}_z] = 0$ y $[\hat{z}\hat{p}_y, \hat{z}\hat{p}_x] = 0$.
+5. Los términos no nulos son:
+$$ [\hat{y}\hat{p}_z, \hat{z}\hat{p}_x] = \hat{y}\hat{p}_x [\hat{p}_z, \hat{z}] = \hat{y}\hat{p}_x (-i\hbar) $$
+$$ [\hat{z}\hat{p}_y, \hat{x}\hat{p}_z] = \hat{p}_y\hat{x} [\hat{z}, \hat{p}_z] = \hat{p}_y\hat{x} (i\hbar) $$
+6. Sumamos: $[\hat{L}_x, \hat{L}_y] = -i\hbar \hat{y}\hat{p}_x + i\hbar \hat{x}\hat{p}_y = i\hbar (\hat{x}\hat{p}_y - \hat{y}\hat{p}_x) = i\hbar \hat{L}_z$.
+
+**Problema 3: Matriz Densidad para un Estado Mixto**
+Considera un ensamble estadístico de espines 1/2 donde el $75\%$ está en el estado $|\uparrow_z\rangle$ y el $25\%$ en el estado $|\downarrow_z\rangle$. Calcula la matriz densidad $\hat{\rho}$ y el valor esperado de $\hat{S}_x$.
+**Solución paso a paso:**
+1. La matriz densidad se define como $\hat{\rho} = \sum p_i |\psi_i\rangle\langle\psi_i|$.
+2. Sustituyendo las probabilidades: $\hat{\rho} = 0.75 |\uparrow_z\rangle\langle\uparrow_z| + 0.25 |\downarrow_z\rangle\langle\downarrow_z|$.
+3. En la base $\{|\uparrow_z\rangle, |\downarrow_z\rangle\}$, esto se representa matricialmente como:
+$$ \rho = \begin{pmatrix} 0.75 & 0 \\ 0 & 0.25 \end{pmatrix} $$
+4. El operador $\hat{S}_x$ está dado por la matriz de Pauli $\sigma_x$:
+$$ \hat{S}_x = \frac{\hbar}{2} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} $$
+5. El valor esperado se calcula como $\langle \hat{S}_x \rangle = \operatorname{Tr}(\hat{\rho} \hat{S}_x)$.
+6. Multiplicando las matrices:
+$$ \hat{\rho} \hat{S}_x = \begin{pmatrix} 0.75 & 0 \\ 0 & 0.25 \end{pmatrix} \frac{\hbar}{2} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix} 0 & 0.75 \\ 0.25 & 0 \end{pmatrix} $$
+7. La traza de esta matriz es $0+0=0$. Por lo tanto, $\langle \hat{S}_x \rangle = 0$.
+
+## 💻 Simulaciones Computacionales
+
+El siguiente script ilustra el formalismo algebraico en el Espacio de Hilbert calculando los autovalores y autovectores del operador momento angular cuántico. Se enfoca en la construcción de las matrices de espín (Pauli para S=1/2) y analiza cómo evolucionan los valores esperados bajo un campo magnético.
+
+```python
+import numpy as np
+import scipy.linalg as la
+import matplotlib.pyplot as plt
+
+# Matrices de Pauli (Espín 1/2, omitiendo factor hbar/2 por simplicidad)
+sigma_x = np.array([[0, 1], [1, 0]], dtype=complex)
+sigma_y = np.array([[0, -1j], [1j, 0]], dtype=complex)
+sigma_z = np.array([[1, 0], [0, -1]], dtype=complex)
+
+# Hamiltoniano de un espín en un campo magnético B = (Bx, By, Bz)
+B = np.array([1.0, 0.5, 2.0]) # Vector campo magnético
+gamma = 1.0 # Relación giromagnética
+H = -gamma * (B[0]*sigma_x + B[1]*sigma_y + B[2]*sigma_z)
+
+# Diagonalización del Hamiltoniano (Problema de autovalores)
+eigenvalues, eigenvectors = la.eigh(H)
+print(f"Energías de los autoestados: {eigenvalues}")
+
+# Evolución temporal
+# Estado inicial: spin up a lo largo de z
+psi_0 = np.array([1, 0], dtype=complex)
+
+t_vals = np.linspace(0, 10, 200)
+exp_Sx = []
+exp_Sy = []
+exp_Sz = []
+
+for t in t_vals:
+    # Operador de evolución U(t) = exp(-iHt)
+    U = la.expm(-1j * H * t)
+    psi_t = U.dot(psi_0)
+    
+    # Cálculo de valores esperados <psi | sigma | psi>
+    sx_val = np.real(np.vdot(psi_t, sigma_x.dot(psi_t)))
+    sy_val = np.real(np.vdot(psi_t, sigma_y.dot(psi_t)))
+    sz_val = np.real(np.vdot(psi_t, sigma_z.dot(psi_t)))
+    
+    exp_Sx.append(sx_val)
+    exp_Sy.append(sy_val)
+    exp_Sz.append(sz_val)
+
+# Graficando las proyecciones del espín (Precesión de Larmor)
+plt.figure(figsize=(10, 6))
+plt.plot(t_vals, exp_Sx, label=r'$\langle S_x \rangle$', color='red')
+plt.plot(t_vals, exp_Sy, label=r'$\langle S_y \rangle$', color='green')
+plt.plot(t_vals, exp_Sz, label=r'$\langle S_z \rangle$', color='blue')
+plt.axhline(0, color='black', linewidth=0.8, linestyle='--')
+plt.title("Precesión de Larmor de un Espín 1/2 en Campo Magnético Estático")
+plt.xlabel("Tiempo t")
+plt.ylabel("Valor Esperado")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+# plt.show() # Descomentar para visualizar
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

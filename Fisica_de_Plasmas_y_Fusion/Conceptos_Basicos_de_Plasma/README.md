@@ -181,6 +181,94 @@ Se puede demostrar fácilmente que $\Gamma \propto \Lambda^{-2/3}$. Por lo tanto
    
 **Conclusión:** Dado que $\Lambda \approx 1.7 \times 10^8 \gg 1$, el plasma del Tokamak está extremadamente bien descrito por la teoría de plasmas ideales. Las colisiones binarias de corto alcance son poco frecuentes frente a las interacciones colectivas.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Apantallamiento de Debye en Plasma Multicomponente
+Considere un plasma no colisional compuesto por electrones (densidad $n_e$, temperatura $T_e$) y dos especies de iones (densidades $n_1, n_2$, cargas $Z_1 e, Z_2 e$, y temperaturas $T_1, T_2$). Derive la longitud de Debye efectiva $\lambda_D$.
+
+**Solución paso a paso:**
+Usando la ecuación de Poisson linealizada para pequeños potenciales $|e\phi| \ll k_B T$:
+$$ \nabla^2 \phi = -\frac{e}{\epsilon_0} (Z_1 n_1 + Z_2 n_2 - n_e) $$
+Asumiendo distribuciones de Boltzmann para cada especie en equilibrio termodinámico local:
+$$ n_j(\phi) \approx n_{j0} \left( 1 - \frac{q_j \phi}{k_B T_j} \right) $$
+Sustituyendo en la ecuación de Poisson y usando la condición de cuasineutralidad macroscópica $Z_1 n_{10} + Z_2 n_{20} = n_{e0}$:
+$$ \nabla^2 \phi = \frac{e^2}{\epsilon_0} \left( \frac{n_{e0}}{k_B T_e} + \frac{Z_1^2 n_{10}}{k_B T_1} + \frac{Z_2^2 n_{20}}{k_B T_2} \right) \phi \equiv \frac{1}{\lambda_D^2} \phi $$
+Por lo tanto, la longitud de Debye efectiva es:
+$$ \lambda_D = \left( \frac{e^2 n_{e0}}{\epsilon_0 k_B T_e} + \frac{e^2 Z_1^2 n_{10}}{\epsilon_0 k_B T_1} + \frac{e^2 Z_2^2 n_{20}}{\epsilon_0 k_B T_2} \right)^{-1/2} $$
+
+### Problema 2: Frecuencia de Plasma Electrónica con Presión Térmica
+Derive la relación de dispersión para ondas electrostáticas electrónicas considerando la presión térmica (ondas de Langmuir). Asuma propagación 1D y un proceso adiabático.
+
+**Solución paso a paso:**
+Ecuación de momento linealizada para el fluido electrónico:
+$$ m_e n_0 \frac{\partial v_{e1}}{\partial t} = -e n_0 E_1 - \frac{\partial p_{e1}}{\partial x} $$
+Proceso adiabático en 1D (con índice adiabático $\gamma = 3$):
+$$ p_{e1} = 3 k_B T_e n_{e1} $$
+Combinando con la ecuación de continuidad $\frac{\partial n_{e1}}{\partial t} + n_0 \frac{\partial v_{e1}}{\partial x} = 0$ y la Ley de Gauss $\frac{\partial E_1}{\partial x} = -\frac{e n_{e1}}{\epsilon_0}$, y asumiendo perturbaciones en forma de onda plana $\sim e^{i(kx - \omega t)}$:
+$$ -i\omega v_{e1} = -\frac{e}{m_e} E_1 - \frac{3 k_B T_e}{m_e n_0} (ik n_{e1}) $$
+Sustituyendo $v_{e1} = \frac{\omega}{k n_0} n_{e1}$ (de continuidad) y $E_1 = -\frac{i e}{\epsilon_0 k} n_{e1}$ (de Gauss):
+$$ -i\omega \left( \frac{\omega}{k n_0} n_{e1} \right) = -\frac{e}{m_e} \left( -\frac{i e}{\epsilon_0 k} n_{e1} \right) - i k \frac{3 k_B T_e}{m_e n_0} n_{e1} $$
+Multiplicando por $i k n_0$:
+$$ \omega^2 = \frac{n_0 e^2}{m_e \epsilon_0} + \frac{3 k_B T_e}{m_e} k^2 = \omega_{pe}^2 + 3 v_{th,e}^2 k^2 $$
+Esta es la conocida relación de dispersión de Bohm-Gross para ondas de plasma.
+
+### Problema 3: Parámetro de Acoplamiento y Régimen Ideal
+Calcule el parámetro de acoplamiento $\Gamma$ para el centro del Sol, donde la temperatura es $T \approx 1.5 \times 10^7$ K y la densidad electrónica es $n_e \approx 6 \times 10^{31} \text{ m}^{-3}$. Determine si se comporta como un plasma ideal.
+
+**Solución paso a paso:**
+El parámetro de acoplamiento $\Gamma$ es la razón entre la energía potencial de Coulomb media entre partículas vecinas y la energía térmica:
+$$ \Gamma = \frac{e^2}{4\pi\epsilon_0 a k_B T} $$
+Donde $a$ es el radio de Wigner-Seitz, dado por $a = \left( \frac{3}{4\pi n_e} \right)^{1/3}$.
+$$ a = \left( \frac{3}{4\pi (6 \times 10^{31})} \right)^{1/3} \approx 1.58 \times 10^{-11} \text{ m} $$
+Calculamos $\Gamma$ sustituyendo los valores:
+$$ \Gamma = \frac{(1.6 \times 10^{-19})^2}{4\pi (8.85 \times 10^{-12}) (1.58 \times 10^{-11}) (1.38 \times 10^{-23}) (1.5 \times 10^7)} $$
+$$ \Gamma \approx \frac{2.56 \times 10^{-38}}{3.63 \times 10^{-37}} \approx 0.07 $$
+Dado que $\Gamma \ll 1$, el plasma en el centro del Sol, a pesar de su altísima densidad que lo hace un fluido denso, se comporta como un gas de plasma ideal (débilmente acoplado) debido a su extrema temperatura termonuclear.
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Oscilaciones de Plasma Electrónico
+
+Este script modela un desplazamiento unidimensional inicial de un grupo de electrones en un fondo de iones fijos, demostrando oscilaciones armónicas a la frecuencia de plasma $\omega_{pe}$.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+# Parámetros del plasma
+n0 = 1e20       # Densidad (m^-3)
+e = 1.602e-19   # Carga (C)
+me = 9.109e-31  # Masa electrón (kg)
+eps0 = 8.854e-12 # Permitividad (F/m)
+
+omega_pe = np.sqrt(n0 * e**2 / (me * eps0))
+T_osc = 2 * np.pi / omega_pe
+
+def plasma_oscillation(y, t):
+    x, v = y
+    # Aceleración dv/dt = - (omega_pe^2) * x (fuerza restauradora)
+    dxdt = v
+    dvdt = -(omega_pe**2) * x
+    return [dxdt, dvdt]
+
+# Condiciones iniciales: pequeño desplazamiento x0, reposo v0=0
+x0 = 1e-5 # 10 micras
+y0 = [x0, 0.0]
+
+# Simulamos durante 3 periodos
+t = np.linspace(0, 3 * T_osc, 1000)
+sol = odeint(plasma_oscillation, y0, t)
+
+plt.figure(figsize=(10, 6))
+plt.plot(t / T_osc, sol[:, 0] * 1e6, 'b-', linewidth=2)
+plt.title('Oscilaciones de Plasma Electrónicas (Fluido Frío 1D)')
+plt.xlabel('Tiempo (Periodos $T_{pe}$)')
+plt.ylabel('Desplazamiento $x$ ($\mu$m)')
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

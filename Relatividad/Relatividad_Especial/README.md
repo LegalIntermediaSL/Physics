@@ -128,6 +128,113 @@ Y para fotones (masa invariante $m_0 = 0$), su energía está dada puramente por
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Colisión Inelástica Relativista**
+Dos partículas idénticas de masa en reposo $m_0$ se mueven la una hacia la otra con la misma velocidad $v$ relativa al sistema del laboratorio. Chocan frontalmente y se fusionan para formar una sola partícula de masa $M_0$. Calcule $M_0$ en función de $m_0$ y $v$, y determine la velocidad de la partícula resultante en el sistema de referencia de una de las partículas incidentes.
+
+**Solución paso a paso:**
+1. **Conservación del cuadrimomento en el laboratorio:**
+   El cuadrimomento inicial total es $P^\mu_{in} = P^\mu_1 + P^\mu_2$.
+   $P^\mu_1 = (\gamma m_0 c, \gamma m_0 v, 0, 0)$
+   $P^\mu_2 = (\gamma m_0 c, -\gamma m_0 v, 0, 0)$
+   $P^\mu_{in} = (2\gamma m_0 c, 0, 0, 0)$
+   Para la partícula final en reposo en el lab, su cuadrimomento es $P^\mu_{fin} = (M_0 c, 0, 0, 0)$.
+   Igualando componentes temporales: $M_0 c = 2\gamma m_0 c \implies M_0 = 2\gamma m_0 = \frac{2m_0}{\sqrt{1 - v^2/c^2}}$.
+2. **Transformación al sistema de una partícula (S'):**
+   Supongamos que el sistema S' viaja con la partícula 1 (velocidad $V = v$).
+   La velocidad de la partícula 2 en S' se obtiene mediante la regla relativista de adición de velocidades:
+   $u'_2 = \frac{-v - v}{1 - (-v)(v)/c^2} = -\frac{2v}{1 + v^2/c^2}$.
+   La partícula resultante de masa $M_0$ estaba en reposo en S. En S', S se mueve hacia la izquierda con velocidad $v$.
+   Por tanto, en S', la partícula resultante se mueve con velocidad $-v$.
+
+**Problema 2: Efecto Compton Inverso**
+Un electrón de alta energía con factor de Lorentz $\gamma \gg 1$ colisiona frontalmente con un fotón de baja energía de frecuencia $\nu_0$. Calcule la frecuencia máxima del fotón dispersado $\nu'$ tras la colisión.
+
+**Solución paso a paso:**
+1. En el sistema del laboratorio, el electrón tiene cuadrimomento $p^\mu = (\gamma m_e c, -p, 0, 0)$ (asumiendo fotón en $+x$ y electrón en $-x$). Con $\gamma \gg 1$, $p \approx \gamma m_e c$.
+   El fotón inicial tiene cuadrimomento $k^\mu = (h\nu_0/c, h\nu_0/c, 0, 0)$.
+2. En el sistema de reposo del electrón (S'), la energía del fotón incidente es (vía transformación de Lorentz con $v \approx c$ hacia $-x$):
+   $E'_{\gamma} = \gamma(E_{\gamma} - (-v)p_x) \approx \gamma h\nu_0 (1 + v/c) \approx 2\gamma h\nu_0$.
+3. Asumiendo que $E'_{\gamma} \ll m_e c^2$ (dispersión de Thomson en S'), el fotón rebota elásticamente:
+   El fotón dispersado en S' se emite hacia $+x$ con energía $E'_{f} \approx 2\gamma h\nu_0$.
+4. Transformando de vuelta al laboratorio:
+   $E_f = \gamma(E'_f + v p'_x) \approx \gamma(E'_f + c(E'_f/c)) \approx 2\gamma E'_f \approx 4\gamma^2 h\nu_0$.
+5. Por lo tanto, la frecuencia final es $\nu' \approx 4\gamma^2 \nu_0$. La energía del fotón se ha amplificado por un factor $\sim 4\gamma^2$.
+
+**Problema 3: Viaje a las estrellas y tiempo propio**
+Una nave espacial viaja desde la Tierra hacia un sistema estelar a distancia $D$ con una aceleración propia constante $g$ (medida en su sistema instantáneo de reposo) hasta el punto medio del viaje, donde desacelera a $-g$ hasta llegar. Calcule el tiempo transcurrido en la Tierra ($T$) y el tiempo propio experimentado por los astronautas ($\tau$).
+
+**Solución paso a paso:**
+1. **Fase de aceleración (0 a $D/2$):**
+   La ecuación de movimiento bajo aceleración propia $g$ es $\frac{d}{dt}(\gamma v) = g$. Integrando con $v(0)=0$:
+   $\gamma v = gt \implies \frac{v}{\sqrt{1-v^2/c^2}} = gt \implies v(t) = \frac{gt}{\sqrt{1+(gt/c)^2}}$.
+2. **Tiempo coordinado y distancia:**
+   $x(t) = \int v dt = \frac{c^2}{g} \left( \sqrt{1 + (gt/c)^2} - 1 \right)$.
+   En el punto medio, $x = D/2$. Entonces, $\frac{D}{2} = \frac{c^2}{g} \left( \sqrt{1 + (gt_{1/2}/c)^2} - 1 \right)$.
+   Despejando el tiempo $t_{1/2}$ en la Tierra para la mitad del viaje:
+   $t_{1/2} = \frac{c}{g} \sqrt{ \left( \frac{gD}{2c^2} + 1 \right)^2 - 1 }$.
+   El tiempo total terrestre es $T = 2 t_{1/2}$.
+3. **Tiempo propio:**
+   $d\tau = dt \sqrt{1-v^2/c^2} = \frac{dt}{\sqrt{1+(gt/c)^2}}$.
+   Integrando de $0$ a $t_{1/2}$:
+   $\tau_{1/2} = \int_0^{t_{1/2}} \frac{dt}{\sqrt{1+(gt/c)^2}} = \frac{c}{g} \text{arsinh}\left(\frac{gt_{1/2}}{c}\right)$.
+   El tiempo propio total del viaje es $\tau = 2 \tau_{1/2} = \frac{2c}{g} \text{arsinh}\left( \sqrt{ \left( \frac{gD}{2c^2} + 1 \right)^2 - 1 } \right) = \frac{2c}{g} \text{arcosh}\left(\frac{gD}{2c^2} + 1\right)$.
+
+## 💻 Simulaciones Computacionales
+
+A continuación, se presenta una simulación avanzada en Python que visualiza el fenómeno de la dilatación del tiempo y la contracción de Lorentz para un viajero relativista.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+# Constante de velocidad de la luz (simplificada)
+c = 1.0
+
+def lorentz_factor(v):
+    return 1 / np.sqrt(1 - (v**2 / c**2))
+
+# Configuración del espacio y observadores
+v_traveler = 0.8 * c
+gamma = lorentz_factor(v_traveler)
+
+# Tiempos para el observador en la Tierra (S)
+t_earth = np.linspace(0, 10, 100)
+# Tiempos propios para el viajero (S')
+t_traveler = t_earth / gamma
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+fig.suptitle('Simulación de Efectos Relativistas (v = 0.8c)')
+
+# Gráfica de dilatación temporal
+ax1.plot(t_earth, t_earth, label='Tiempo Terrestre (Rest Frame)', color='blue')
+ax1.plot(t_earth, t_traveler, label='Tiempo Viajero (Dilatado)', color='red')
+ax1.set_xlabel('Tiempo coordinado (Tierra)')
+ax1.set_ylabel('Tiempo propio transcurrido')
+ax1.set_title('Dilatación del Tiempo')
+ax1.legend()
+ax1.grid(True)
+
+# Contracción de longitudes (Visualización estática de un objeto moviéndose)
+L0 = 10.0 # Longitud propia
+L_contracted = L0 / gamma
+x = np.linspace(-15, 15, 400)
+rect_rest = np.where((x >= -L0/2) & (x <= L0/2), 1, 0)
+rect_mov = np.where((x >= -L_contracted/2) & (x <= L_contracted/2), 1, 0)
+
+ax2.fill_between(x, 0, rect_rest, color='blue', alpha=0.3, label=f'Reposo (L0 = {L0})')
+ax2.fill_between(x, 0, rect_mov, color='red', alpha=0.5, label=f'Movimiento (L = {L_contracted:.2f})')
+ax2.set_xlabel('Espacio x')
+ax2.set_yticks([])
+ax2.set_title('Contracción de Longitudes')
+ax2.legend()
+
+plt.tight_layout()
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas (5-7 Recomendados)

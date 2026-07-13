@@ -95,6 +95,121 @@ Este clásico problema se divide en dos fases distintas:
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Ecuación del Cohete de Tsiolkovsky en Campo Gravitatorio**
+Un cohete de masa inicial $M_0$ despega verticalmente desde la Tierra. Su motor eyecta gases hacia abajo a una velocidad de escape constante relativa al cohete, $v_e$, y a una tasa másica de quema constante $\frac{dm}{dt} = -\alpha$. Calcule la velocidad $v(t)$ del cohete en función del tiempo considerando gravedad constante $g$.
+**Solución paso a paso:**
+1. Usamos la Segunda Ley de Newton para un sistema de masa variable. El momento inicial del sistema cohete+gases evaluado en $t$ es $p(t) = m v$.
+2. En el instante $t + dt$, la masa del cohete es $m + dm$ (donde $dm < 0$) y su velocidad es $v + dv$. La masa del gas eyectado es $-dm$ y viaja con velocidad $v - v_e$ relativa a la Tierra.
+3. El momento en $t+dt$ es $p(t+dt) = (m+dm)(v+dv) + (-dm)(v - v_e) = mv + m dv + v dm + dv dm - v dm + v_e dm$. Despreciando el diferencial cuadrático, $dp = p(t+dt) - p(t) = m dv + v_e dm$.
+4. Según Newton, $\frac{dp}{dt} = \sum F_{ext} = -mg$.
+5. Sustituimos: $m \frac{dv}{dt} + v_e \frac{dm}{dt} = -mg$.
+6. Dividimos por la masa $m$: $dv = -v_e \frac{dm}{m} - g dt$.
+7. Integramos desde el estado inicial ($t=0, v=0, m=M_0$) hasta el instante $t$ (masa $m(t) = M_0 - \alpha t$):
+   $\int_0^v dv' = -v_e \int_{M_0}^{m} \frac{dm'}{m'} - g \int_0^t dt'$.
+8. $v(t) = -v_e \ln\left(\frac{m}{M_0}\right) - gt = v_e \ln\left(\frac{M_0}{m}\right) - gt$.
+9. Escrito explícitamente en función de $t$:
+   $v(t) = v_e \ln\left( \frac{M_0}{M_0 - \alpha t} \right) - gt$. (Condición: $\alpha v_e > M_0 g$ para levantar vuelo).
+
+**Problema 2: Dispersión 2D, colisión elástica en sistema Centro de Masa (CM)**
+Una partícula incidente de masa $m$ y velocidad $v_0\hat{i}$ colisiona elásticamente con otra idéntica de masa $m$ en reposo. Demuestre que el ángulo final entre los vectores velocidad de salida de ambas partículas es siempre de $90^\circ$ en el sistema del Laboratorio, empleando las propiedades geométricas del referencial de centro de masa.
+**Solución paso a paso:**
+1. En el referencial del Laboratorio (Lab), conservación de la energía y momento:
+   $m v_0^2 = m v_1^2 + m v_2^2 \implies v_0^2 = v_1^2 + v_2^2$.
+   $m \vec{v}_0 = m \vec{v}_1 + m \vec{v}_2 \implies \vec{v}_0 = \vec{v}_1 + \vec{v}_2$.
+2. De la conservación vectorial, elevamos el momento al cuadrado mediante el producto escalar:
+   $\vec{v}_0 \cdot \vec{v}_0 = (\vec{v}_1 + \vec{v}_2) \cdot (\vec{v}_1 + \vec{v}_2)$.
+   $v_0^2 = v_1^2 + v_2^2 + 2\vec{v}_1 \cdot \vec{v}_2$.
+3. Combinando esto con la conservación de energía ($v_0^2 = v_1^2 + v_2^2$):
+   $v_1^2 + v_2^2 = v_1^2 + v_2^2 + 2\vec{v}_1 \cdot \vec{v}_2 \implies 2\vec{v}_1 \cdot \vec{v}_2 = 0$.
+4. Si las velocidades de salida son no nulas, el producto escalar nulo implica que el coseno de su ángulo relativo es 0, ergo son estrictamente perpendiculares ($90^\circ$).
+5. **Comprobación alterna desde CM**: La velocidad del CM es $\vec{V}_{cm} = \frac{m v_0 \hat{i}}{2m} = \frac{v_0}{2} \hat{i}$. En el marco de CM, las partículas se aproximan frontalmente con idéntica celeridad $\pm \frac{v_0}{2}$. Al ser elástica la colisión, ambas salen con la misma celeridad $\frac{v_0}{2}$ pero dispersadas en sentidos diametralmente opuestos formando un ángulo $\theta_{cm}$.
+   $\vec{u}_1 = \frac{v_0}{2}(\cos\theta \hat{i} + \sin\theta \hat{j})$, $\vec{u}_2 = \frac{v_0}{2}(-\cos\theta \hat{i} - \sin\theta \hat{j})$.
+   Volviendo al Lab: $\vec{v}_1 = \vec{u}_1 + \vec{V}_{cm} = \frac{v_0}{2}( (\cos\theta+1)\hat{i} + \sin\theta \hat{j} )$.
+   $\vec{v}_2 = \vec{u}_2 + \vec{V}_{cm} = \frac{v_0}{2}( (-\cos\theta+1)\hat{i} - \sin\theta \hat{j} )$.
+   Evaluamos el producto escalar: $\vec{v}_1 \cdot \vec{v}_2 = \frac{v_0^2}{4}[ (1+\cos\theta)(1-\cos\theta) - \sin^2\theta ] = \frac{v_0^2}{4}[ 1 - \cos^2\theta - \sin^2\theta ] = 0$. ¡C.Q.D.!
+
+**Problema 3: Refracción mecánica inelástica en frontera**
+Una densa lámina macroscópica se comporta como una interfaz absorbente de momento normal (inercia superficial). Una bolita rebota sobre esta lámina plana infinita con un coeficiente de restitución $e \in (0,1)$. Si la bolita impacta con un ángulo de incidencia $\theta_i$ (medido desde la normal al plano) y velocidad $V_i$, determine el ángulo de reflexión $\theta_r$ y la pérdida total de energía cinética $\Delta K$.
+**Solución paso a paso:**
+1. Descomponemos el vector de velocidad incidente en componente paralela $V_{ix} = V_i \sin\theta_i$ y componente normal $V_{iy} = -V_i \cos\theta_i$.
+2. Al no existir fuerzas de fricción tangenciales durante el impacto instantáneo, la cantidad de movimiento paralela se conserva:
+   $m V_{fx} = m V_{ix} \implies V_{fx} = V_i \sin\theta_i$.
+3. La componente normal pierde energía mediante la colisión cuasi-plástica, regida por el coeficiente $e = -\frac{V_{fy}}{V_{iy}}$ (fórmula de Newton para impacto en superficie inamovible):
+   $V_{fy} = -e V_{iy} = e V_i \cos\theta_i$.
+4. El ángulo de salida $\theta_r$ (medido desde la normal saliente) se determina evaluando la relación trigonométrica final:
+   $\tan\theta_r = \frac{V_{fx}}{V_{fy}} = \frac{V_i \sin\theta_i}{e V_i \cos\theta_i} = \frac{\tan\theta_i}{e}$.
+   Esto revela un resultado anómalo fascinante: como $e < 1$, $\tan\theta_r > \tan\theta_i$, lo que implica que en choques disipativos macroscópicos los objetos siempre "salen más a ras de suelo" de lo que entraron.
+5. Determinación de $\Delta K$:
+   Energía Inicial $K_i = \frac{1}{2}m (V_{ix}^2 + V_{iy}^2) = \frac{1}{2}m V_i^2$.
+   Energía Final $K_f = \frac{1}{2}m (V_{fx}^2 + V_{fy}^2) = \frac{1}{2}m (V_i^2 \sin^2\theta_i + e^2 V_i^2 \cos^2\theta_i)$.
+6. La pérdida es $\Delta K = K_f - K_i = \frac{1}{2}m V_i^2 (\sin^2\theta_i + e^2 \cos^2\theta_i - 1)$.
+7. Sustituyendo $1 - \sin^2\theta_i = \cos^2\theta_i$:
+   $\Delta K = \frac{1}{2}m V_i^2 \cos^2\theta_i (e^2 - 1)$. Como $e < 1$, el valor es negativo indicando disipación, localizándose toda la merma térmica pura y exclusivamente en el vector de movimiento perpendicular al plano.
+
+## 💻 Simulaciones Computacionales
+
+Simulación de choque elástico 2D entre dos discos duros. El código ilustra la conservación de energía y del momento lineal en una dispersión (scattering).
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Masas y radios
+m1, m2 = 1.0, 1.0
+r1, r2 = 0.5, 0.5
+
+# Posiciones y velocidades iniciales
+p1 = np.array([-2.0, 0.2])
+v1 = np.array([1.0, 0.0])
+p2 = np.array([2.0, 0.0])
+v2 = np.array([-0.5, 0.0])
+
+dt = 0.01
+t = 0
+positions1, positions2 = [], []
+
+while np.linalg.norm(p1 - p2) > (r1 + r2) and t < 5:
+    p1 += v1 * dt
+    p2 += v2 * dt
+    positions1.append(p1.copy())
+    positions2.append(p2.copy())
+    t += dt
+
+# Colisión (elástica)
+n = (p1 - p2) / np.linalg.norm(p1 - p2) # vector normal
+v_rel = v1 - v2
+v_rel_n = np.dot(v_rel, n)
+
+if v_rel_n < 0:
+    j = -(2 * v_rel_n) / (1/m1 + 1/m2)
+    v1 += j * n / m1
+    v2 -= j * n / m2
+
+while t < 10:
+    p1 += v1 * dt
+    p2 += v2 * dt
+    positions1.append(p1.copy())
+    positions2.append(p2.copy())
+    t += dt
+
+pos1 = np.array(positions1)
+pos2 = np.array(positions2)
+
+plt.figure(figsize=(8, 4))
+plt.plot(pos1[:,0], pos1[:,1], label='Partícula 1', color='blue')
+plt.plot(pos2[:,0], pos2[:,1], label='Partícula 2', color='red')
+plt.scatter([pos1[0,0]], [pos1[0,1]], color='blue', marker='o')
+plt.scatter([pos2[0,0]], [pos2[0,1]], color='red', marker='o')
+plt.title('Scattering Elástico 2D (Choque Descentrado)')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos de Momento y Colisiones
 
 ### 🎓 Cursos y Clases Recomendadas (5-7)

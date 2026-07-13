@@ -117,6 +117,97 @@ Asumiendo ionización completa:
 La oblea dopada es manifiestamente **Tipo-p**, con $p = 10^{16} \, \text{cm}^{-3}$ y $n = 10^4 \, \text{cm}^{-3}$. 
 El nivel de Fermi del cristal ha caído drásticamente en la brecha, situándose a **0.358 eV por debajo** de su posición media intrínseca, aproximándose vertiginosamente a la banda de valencia. Esta asimetría gigantesca de portadores es el cimiento estadístico indispensable para originar los campos eléctricos de agotamiento en las uniones P-N.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Concentración Intrínseca de Portadores $n_i$
+A partir de las densidades efectivas de estados en las bandas de conducción ($N_c$) y valencia ($N_v$), derive la expresión para la concentración intrínseca de portadores $n_i$ en un semiconductor en equilibrio térmico y demuestre su dependencia exponencial con la temperatura.
+
+**Solución paso a paso:**
+En equilibrio térmico, la concentración de electrones $n$ en la banda de conducción y de huecos $p$ en la banda de valencia, usando estadística de Maxwell-Boltzmann (válida si el nivel de Fermi está al menos a $3k_B T$ del borde de banda), son:
+$$ n = N_c e^{-(E_c - E_F)/k_B T} $$
+$$ p = N_v e^{-(E_F - E_v)/k_B T} $$
+donde $N_c = 2(m_e^* k_B T / 2\pi\hbar^2)^{3/2}$ y $N_v = 2(m_h^* k_B T / 2\pi\hbar^2)^{3/2}$.
+El producto de estas concentraciones nos da la ley de acción de masas para semiconductores:
+$$ np = N_c N_v e^{-(E_c - E_v)/k_B T} $$
+La diferencia $E_c - E_v$ es precisamente la energía del gap prohibido $E_g$.
+Para un semiconductor intrínseco (sin dopar), por conservación de carga se debe cumplir que $n = p = n_i$.
+Entonces $n_i^2 = n p = N_c N_v e^{-E_g/k_B T}$.
+Tomando la raíz cuadrada:
+$$ n_i = \sqrt{N_c N_v} e^{-E_g / 2k_B T} $$
+Dado que $N_c, N_v \propto T^{3/2}$, la concentración intrínseca varía como $T^{3/2} e^{-E_g / 2k_B T}$.
+Esta fuerte dependencia exponencial domina, por lo que una pequeña variación de $T$ produce cambios de órdenes de magnitud en el número de portadores intrínsecos.
+
+### Problema 2: Energía de Ionización de Impurezas Donadoras
+Estime la energía de ionización de una impureza donadora (como fósforo) en silicio utilizando el modelo del átomo de hidrógeno de Bohr modificado para medios sólidos. ($m_e^* \approx 0.26 m_e$, $\epsilon_r \approx 11.7$).
+
+**Solución paso a paso:**
+En el modelo hidrogenoide, el electrón donado orbita alrededor del ión donador positivo incrustado en el cristal.
+Utilizamos los resultados del modelo de Bohr para la energía del estado fundamental, reemplazando la masa del electrón por la masa efectiva $m_e^*$ y la permitividad del vacío $\epsilon_0$ por la permitividad del material $\epsilon = \epsilon_r \epsilon_0$.
+La energía de ionización del átomo de hidrógeno en el vacío es:
+$$ E_H = \frac{m_e e^4}{8 \epsilon_0^2 h^2} = 13.6 \text{ eV} $$
+Para la impureza en el cristal, la energía de ionización será:
+$$ E_d = \frac{m_e^* e^4}{8 (\epsilon_r \epsilon_0)^2 h^2} = E_H \left( \frac{m_e^*}{m_e} \right) \left( \frac{1}{\epsilon_r^2} \right) $$
+Sustituyendo los valores para el Silicio:
+$$ E_d = 13.6 \text{ eV} \times (0.26) \times \left( \frac{1}{11.7^2} \right) $$
+$$ E_d = 13.6 \times 0.26 \times 0.0073 \approx 0.0258 \text{ eV} \approx 25.8 \text{ meV} $$
+Esta energía ($~25$ meV) es muy cercana a la energía térmica a temperatura ambiente ($k_B T \approx 26$ meV). Por esta razón, a temperatura ambiente, casi todos los donadores en silicio están completamente ionizados, aportando un electrón libre a la banda de conducción.
+
+### Problema 3: Potencial de Contacto en una Unión p-n
+Calcule el potencial de contacto $V_0$ (built-in potential) de una unión p-n abrupta de silicio a $T = 300$ K dopada con $N_A = 10^{16} \text{ cm}^{-3}$ y $N_D = 10^{15} \text{ cm}^{-3}$. Asuma $n_i \approx 10^{10} \text{ cm}^{-3}$ y $V_T = k_B T / q \approx 25.9$ mV.
+
+**Solución paso a paso:**
+Lejos de la región de agotamiento (en las zonas neutras), las concentraciones mayoritarias son aproximadamente $p_p \approx N_A$ y $n_n \approx N_D$.
+En el equilibrio, el nivel de Fermi debe ser constante en toda la estructura.
+En el lado p:
+$$ p_p = n_i e^{(E_i - E_{Fp}) / k_B T} \implies E_i^{(p)} - E_F = k_B T \ln\left(\frac{N_A}{n_i}\right) $$
+En el lado n:
+$$ n_n = n_i e^{(E_{Fn} - E_i) / k_B T} \implies E_F - E_i^{(n)} = k_B T \ln\left(\frac{N_D}{n_i}\right) $$
+El potencial de contacto surge de la diferencia entre el nivel intrínseco $E_i$ en los dos lados. Puesto que la energía potencial es $-q V(x) = E_i(x)$, la diferencia de potencial electrostático es $V_0 = \frac{1}{q} [E_i^{(p)} - E_i^{(n)}]$.
+Sumando las ecuaciones:
+$$ E_i^{(p)} - E_i^{(n)} = k_B T \ln\left(\frac{N_A}{n_i}\right) + k_B T \ln\left(\frac{N_D}{n_i}\right) = k_B T \ln\left(\frac{N_A N_D}{n_i^2}\right) $$
+Entonces el potencial de contacto en voltios es:
+$$ V_0 = V_T \ln\left(\frac{N_A N_D}{n_i^2}\right) $$
+Sustituyendo los valores:
+$$ V_0 = 0.0259 \ln\left(\frac{10^{16} \times 10^{15}}{(10^{10})^2}\right) = 0.0259 \ln(10^{11}) $$
+Sabiendo que $\ln(10) \approx 2.303$:
+$$ V_0 = 0.0259 \times 11 \times 2.303 \approx 0.656 \text{ V} $$
+El potencial de contacto es de aproximadamente 0.66 V.
+
+## 💻 Simulaciones Computacionales
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_intrinsic_carrier_concentration():
+    T = np.linspace(200, 600, 400)
+    k_B = 8.617e-5 # eV/K
+    
+    # Parametros para Si y Ge
+    Eg_Si = 1.12 # eV
+    Eg_Ge = 0.66 # eV
+    
+    # N_c * N_v proportional to T^3
+    # n_i ~ T^(3/2) * exp(-Eg / 2kT)
+    
+    ni_Si = (T**1.5) * np.exp(-Eg_Si / (2 * k_B * T))
+    ni_Ge = (T**1.5) * np.exp(-Eg_Ge / (2 * k_B * T))
+    
+    plt.figure(figsize=(9, 6))
+    plt.semilogy(1000/T, ni_Si, label='Silicio ($E_g = 1.12$ eV)')
+    plt.semilogy(1000/T, ni_Ge, label='Germanio ($E_g = 0.66$ eV)')
+    
+    plt.xlabel('$1000 / T$ ($K^{-1}$)')
+    plt.ylabel('Concentración de Portadores Intrínseca (Unidades Arb.)')
+    plt.title('Simulación: Dependencia de $n_i$ con la Temperatura')
+    plt.legend()
+    plt.grid(True, which="both", ls="--")
+    plt.show()
+
+if __name__ == '__main__':
+    plot_intrinsic_carrier_concentration()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

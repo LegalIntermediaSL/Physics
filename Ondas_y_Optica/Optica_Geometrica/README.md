@@ -84,6 +84,125 @@ Determine la matriz de transferencia de sistema (ABCD) para una lente gruesa de 
    $$ f = \frac{240}{17} \approx 14.12 \text{ cm} $$
    Si usáramos la aproximación de lente delgada $(d=0)$, habríamos tenido $1/f = (0.5)(1/10 + 1/20) = 0.5(3/20) = 3/40$, entonces $f_{delgada} = 13.33\text{ cm}$. El espesor añade una corrección importante.
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Principio de Fermat y Espejos Parabólicos**
+Demuestre utilizando el principio de Fermat que todos los rayos paralelos al eje óptico de un espejo parabólico convergen en su foco geométrico tras la reflexión, de modo que la imagen es perfectamente estigmática.
+
+**Solución paso a paso:**
+1. Consideremos un espejo parabólico de ecuación $y^2 = 4fx$. El foco está en $F(f, 0)$ y el eje óptico es el eje x.
+2. Un rayo incidente paralelo al eje $x$ viene desde $x = -\infty$, pero podemos tomar un frente de onda plano incidente estacionario en la directriz de la parábola, $x = -f$.
+3. El camino óptico para un rayo que golpea el espejo en $P(x, y)$ y va a $F(f, 0)$ comienza en la directriz. La distancia de la directriz al punto $P$ es $d_1 = x - (-f) = x + f$.
+4. La distancia desde $P(x, y)$ al foco $F(f, 0)$ es $d_2 = \sqrt{(x-f)^2 + y^2}$.
+5. Sustituyendo la ecuación de la parábola $y^2 = 4fx$:
+   $d_2 = \sqrt{x^2 - 2fx + f^2 + 4fx} = \sqrt{x^2 + 2fx + f^2} = \sqrt{(x+f)^2} = x + f$.
+6. El camino óptico total es $\Delta L = d_1 + d_2 = (x+f) + (x+f)$ desde un frente arbitrario, o directamente notamos que la propiedad fundamental geométrica de la parábola es que cualquier punto en ella es equidistante al foco y a la directriz. 
+7. Todos los rayos recorren el mismo camino óptico total al llegar al foco. Por el principio de Fermat, el tiempo de vuelo es el mismo, luego todos interfieren constructivamente en $F$, formando un punto imagen perfecto (estigmático).
+
+**Problema 2: Dioptrio Esférico y Lentes Gruesas**
+Una esfera de cristal de radio $R$ e índice de refracción $n = 2$ está en el aire. Encuentre la posición de la imagen de un objeto situado en el infinito mediante el cálculo directo de refracción en las dos superficies.
+
+**Solución paso a paso:**
+1. Fórmula del dioptrio esférico: $\frac{n_1}{s} + \frac{n_2}{s'} = \frac{n_2 - n_1}{r}$.
+2. Primera superficie: el objeto está en el infinito ($s_1 = \infty$), $n_1 = 1$, $n_2 = 2$, radio $r_1 = +R$.
+   $\frac{1}{\infty} + \frac{2}{s'_1} = \frac{2 - 1}{R} \implies \frac{2}{s'_1} = \frac{1}{R} \implies s'_1 = 2R$.
+   La imagen se forma a una distancia $2R$ del primer vértice.
+3. Segunda superficie: La imagen actuará como objeto virtual para la segunda cara. La distancia desde el primer vértice al segundo es $2R$ (diámetro). 
+   La posición del objeto para la segunda cara es $s_2 = 2R - s'_1 = 2R - 2R = 0$.
+4. Refracción en la segunda cara: $n_1 = 2$, $n_2 = 1$, $r_2 = -R$, $s_2 = 0$.
+   $\frac{2}{0} + \frac{1}{s'_2} = \frac{1 - 2}{-R} \implies \infty + \frac{1}{s'_2} = \frac{1}{R}$.
+   Esto implica $s'_2 = 0$. La imagen se forma justo en el vértice trasero (superficie) de la esfera de cristal.
+
+**Problema 3: Reflexión Total Interna y Fibras Ópticas**
+Una fibra óptica cilíndrica de índice $n_1$ está rodeada por un revestimiento de índice $n_2$ ($n_1 > n_2$). Calcule el ángulo de aceptación máximo $\theta_{max}$ en el aire ($n_0=1$) para que la luz sea guiada por la fibra.
+
+**Solución paso a paso:**
+1. Sea $\theta_i$ el ángulo de incidencia en el aire y $\theta_t$ el ángulo transmitido al núcleo de la fibra. Por ley de Snell: $n_0 \sin \theta_i = n_1 \sin \theta_t$.
+2. El rayo refractado incide en la interfaz núcleo-revestimiento con un ángulo $\phi = 90^\circ - \theta_t$ (respecto a la normal de esa pared).
+3. Para la reflexión total interna, requerimos que $\phi \geq \theta_c$, donde $\sin \theta_c = \frac{n_2}{n_1}$.
+4. Esto implica $\sin \phi \geq \frac{n_2}{n_1} \implies \cos \theta_t \geq \frac{n_2}{n_1}$.
+5. Expresamos $\cos \theta_t = \sqrt{1 - \sin^2 \theta_t} = \sqrt{1 - \left(\frac{\sin \theta_i}{n_1}\right)^2}$.
+6. Por lo tanto, $\sqrt{1 - \frac{\sin^2 \theta_i}{n_1^2}} \geq \frac{n_2}{n_1}$. Elevando al cuadrado: $1 - \frac{\sin^2 \theta_i}{n_1^2} \geq \frac{n_2^2}{n_1^2}$.
+7. $n_1^2 - \sin^2 \theta_i \geq n_2^2 \implies \sin^2 \theta_i \leq n_1^2 - n_2^2$.
+8. El ángulo máximo, o Apertura Numérica (NA), cumple: $\sin \theta_{max} = \sqrt{n_1^2 - n_2^2}$. Si $\sqrt{n_1^2 - n_2^2} \geq 1$, la fibra acepta luz desde cualquier ángulo $\theta_i < 90^\circ$.
+
+## 💻 Simulaciones Computacionales
+
+A continuación, se presenta un script en Python que realiza un trazado de rayos básico (ray tracing) a través de una lente delgada convergente, ilustrando cómo los rayos paralelos, centrales y focales se refractan para converger y formar una imagen real, siguiendo las leyes fundamentales de la óptica geométrica matricial.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def trazar_rayos_lente_delgada():
+    """
+    Simula el trazado de rayos principales (ray tracing) desde un objeto
+    hacia una lente convergente delgada para formar una imagen real.
+    """
+    # Parámetros del sistema óptico
+    f = 10.0      # Distancia focal (cm)
+    s = 30.0      # Distancia del objeto a la lente (cm)
+    h = 5.0       # Altura del objeto (cm)
+    
+    # Ecuación de las lentes: 1/f = 1/s + 1/s'
+    # s' = (s * f) / (s - f)
+    s_prima = (s * f) / (s - f)
+    
+    # Magnificación transversal: M = -s'/s = h'/h
+    M = -s_prima / s
+    h_prima = M * h
+    
+    # Configuración del lienzo
+    fig, ax = plt.subplots(figsize=(12, 6))
+    
+    # Dibujar eje óptico y la lente
+    ax.axhline(0, color='black', linestyle='-.', linewidth=1)
+    ax.axvline(0, color='lightblue', linewidth=4, alpha=0.8, label='Lente Delgada')
+    
+    # Dibujar focos
+    ax.plot([-f, f], [0, 0], 'ko', markersize=6, label='Focos (F, F\')')
+    ax.text(-f, -1, "F", ha='center', fontweight='bold')
+    ax.text(f, -1, "F'", ha='center', fontweight='bold')
+    
+    # Dibujar Objeto e Imagen
+    ax.arrow(-s, 0, 0, h, head_width=0.8, head_length=1.5, fc='blue', ec='blue', width=0.2)
+    ax.text(-s, h+1.5, "Objeto", ha='center', color='blue')
+    
+    ax.arrow(s_prima, 0, 0, h_prima, head_width=0.8, head_length=1.5, fc='red', ec='red', width=0.2)
+    ax.text(s_prima, h_prima-2, "Imagen Real", ha='center', color='red')
+    
+    # Rayo 1: Paralelo al eje óptico, pasa por el foco imagen
+    ax.plot([-s, 0], [h, h], 'g-', alpha=0.7)
+    ax.plot([0, s_prima, s_prima + 10], [h, h_prima, h_prima + 10*(h_prima-h)/s_prima], 'g-', alpha=0.7)
+    
+    # Rayo 2: Pasa por el centro óptico (no se desvía)
+    ax.plot([-s, s_prima, s_prima + 10], [h, h_prima, h_prima + 10*(h_prima-h)/(-s-s_prima)*(-1)], 'orange', alpha=0.7)
+    
+    # Rayo 3: Pasa por el foco objeto, emerge paralelo
+    ax.plot([-s, 0], [h, 0 + (-h)/(-s+f)*(f)], 'purple', alpha=0.7)
+    ax.plot([0, s_prima + 10], [h_prima, h_prima], 'purple', alpha=0.7)
+    
+    # Detalles visuales
+    ax.set_title(f'Trazado de Rayos: Lente Convergente (f={f} cm)\ns={s} cm, s\'={s_prima:.1f} cm, M={M:.2f}')
+    ax.set_xlabel('Posición en el eje óptico (cm)')
+    ax.set_ylabel('Altura (cm)')
+    ax.grid(True, linestyle=':', alpha=0.6)
+    ax.legend(loc='upper right')
+    
+    # Ajustar límites
+    ax.set_xlim(-s - 5, s_prima + 15)
+    
+    # Asegurar márgenes simétricos en Y
+    max_y = max(abs(h), abs(h_prima)) + 5
+    ax.set_ylim(-max_y, max_y)
+    
+    plt.tight_layout()
+    plt.show()
+
+if __name__ == '__main__':
+    trazar_rayos_lente_delgada()
+```
+
 ## 📚 Recursos Específicos
 ### Cursos
 1. ["Optics" - Coursera (University of Rochester)](https://www.coursera.org/learn/optics)

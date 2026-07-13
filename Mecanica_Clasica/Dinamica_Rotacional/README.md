@@ -86,6 +86,97 @@ Imagina que soltamos simultáneamente un aro hueco ($I = MR^2$), un cilindro mac
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Ecuaciones de Euler y precesión libre**
+Un satélite asimétrico tiene momentos principales de inercia $I_1 < I_2 < I_3$. Gira en el espacio profundo libre de torques con una velocidad angular inicial orientada muy cerca del eje principal asociado a $I_2$, tal que $\vec{\omega} = (\epsilon_1, \omega_2, \epsilon_3)$ donde $\epsilon_1, \epsilon_3 \ll \omega_2$. Demuestre analíticamente que la rotación alrededor de este eje intermedio es inestable y las perturbaciones crecerán exponencialmente.
+**Solución paso a paso:**
+1. Las Ecuaciones de Euler libres de torque ($\tau = 0$) son:
+   $I_1 \dot{\omega}_1 + (I_3 - I_2)\omega_2 \omega_3 = 0$
+   $I_2 \dot{\omega}_2 + (I_1 - I_3)\omega_3 \omega_1 = 0$
+   $I_3 \dot{\omega}_3 + (I_2 - I_1)\omega_1 \omega_2 = 0$
+2. Dado que $\omega_1 = \epsilon_1$ y $\omega_3 = \epsilon_3$ son pequeñas, el término $\omega_1 \omega_3$ es de segundo orden y despreciable. La segunda ecuación se reduce a $I_2 \dot{\omega}_2 \approx 0 \implies \omega_2 \approx \text{constante}$.
+3. Sustituyendo en la primera y tercera ecuación:
+   $\dot{\omega}_1 = -\frac{I_3 - I_2}{I_1} \omega_2 \omega_3$
+   $\dot{\omega}_3 = -\frac{I_2 - I_1}{I_3} \omega_2 \omega_1$
+4. Derivamos la primera ecuación con respecto al tiempo:
+   $\ddot{\omega}_1 = -\frac{I_3 - I_2}{I_1} \omega_2 \dot{\omega}_3$
+5. Sustituimos $\dot{\omega}_3$ de la otra ecuación:
+   $\ddot{\omega}_1 = -\frac{I_3 - I_2}{I_1} \omega_2 \left( -\frac{I_2 - I_1}{I_3} \omega_2 \omega_1 \right) = \frac{(I_3 - I_2)(I_2 - I_1)}{I_1 I_3} \omega_2^2 \omega_1$
+6. Dado que $I_1 < I_2 < I_3$, tenemos $(I_3 - I_2) > 0$ y $(I_2 - I_1) > 0$.
+7. Definimos una constante positiva $k^2 = \frac{(I_3 - I_2)(I_2 - I_1)}{I_1 I_3} \omega_2^2 > 0$.
+8. La EDO resultante es $\ddot{\omega}_1 = k^2 \omega_1$. Su solución es $\omega_1(t) = A e^{kt} + B e^{-kt}$.
+9. El término $e^{kt}$ crece exponencialmente en el tiempo. Cualquier mínima perturbación inicial $\epsilon_1$ se magnifica sin límite (hasta que la aproximación lineal falla), probando la **inestabilidad** del eje intermedio (Teorema de la Raqueta de Tenis).
+
+**Problema 2: Tensor de Inercia de un cono sólido**
+Determine el momento de inercia $I_z$ de un cono circular recto sólido de masa $M$, altura $h$ y radio base $R$, rotando sobre su eje de simetría (el eje $z$).
+**Solución paso a paso:**
+1. Asumimos densidad uniforme $\rho = \frac{M}{V} = \frac{M}{\frac{1}{3}\pi R^2 h}$.
+2. Alineamos el vértice del cono en el origen, abriéndose a lo largo del eje $z$ positivo. La ecuación de la superficie cónica lateral es $\frac{r}{z} = \frac{R}{h} \implies r = \frac{R}{h}z$.
+3. Integramos dividiendo el cono en discos infinitesimales apilados a lo largo de $z$. Cada disco de grosor $dz$ tiene una masa $dm = \rho dV = \rho (\pi r^2) dz$.
+4. El momento de inercia de un disco respecto a su eje central es $dI_z = \frac{1}{2} r^2 dm$.
+5. Sustituyendo $dm$: $dI_z = \frac{1}{2} r^2 (\rho \pi r^2 dz) = \frac{\pi \rho}{2} r^4 dz$.
+6. Sustituyendo la dependencia del radio con $z$: $r = \frac{R}{h}z \implies r^4 = \left(\frac{R}{h}\right)^4 z^4$.
+7. $dI_z = \frac{\pi \rho}{2} \left(\frac{R}{h}\right)^4 z^4 dz$.
+8. Integramos desde $z=0$ hasta $z=h$:
+   $I_z = \int_0^h \frac{\pi \rho}{2} \left(\frac{R}{h}\right)^4 z^4 dz = \frac{\pi \rho}{2} \left(\frac{R}{h}\right)^4 \left[ \frac{z^5}{5} \right]_0^h = \frac{\pi \rho}{2} \frac{R^4}{h^4} \frac{h^5}{5} = \frac{\pi \rho R^4 h}{10}$.
+9. Sustituyendo $\rho$:
+   $I_z = \frac{\pi}{10} \left( \frac{M}{\frac{1}{3}\pi R^2 h} \right) R^4 h = \frac{3}{10} M R^2$.
+
+**Problema 3: Bola de billar y rotación inicial**
+Se golpea horizontalmente el centro exacto de una bola de billar sólida de radio $R$ y masa $M$ en reposo. Comienza a deslizarse sin rotar a velocidad $v_0$ sobre una mesa con coeficiente de fricción cinético $\mu_k$. Calcule a qué tiempo $t$ la bola comienza a rodar sin resbalar de forma pura.
+**Solución paso a paso:**
+1. Inicialmente: $v = v_0$ y $\omega = 0$. Condición final buscada para rodar sin resbalar: $v_f = \omega_f R$.
+2. La fricción cinética $\vec{f}_k$ actúa en contra del deslizamiento. Su magnitud es $f_k = \mu_k N = \mu_k Mg$.
+3. Ecuación traslacional: $\sum F = -f_k = Ma \implies -\mu_k Mg = Ma \implies a = -\mu_k g$.
+4. Ecuación rotacional (tomando el centro de masa): El torque lo aplica la fricción. $\tau = f_k R = I \alpha$.
+5. Sabiendo que $I = \frac{2}{5}MR^2$ para una esfera sólida:
+   $\mu_k Mg R = \left(\frac{2}{5}MR^2\right)\alpha \implies \alpha = \frac{5\mu_k g}{2R}$.
+6. Cinemática del centro de masa: $v(t) = v_0 + at = v_0 - \mu_k g t$.
+7. Cinemática angular: $\omega(t) = \omega_0 + \alpha t = 0 + \frac{5\mu_k g}{2R} t$.
+8. Imponga la condición $v(t) = \omega(t) R$:
+   $v_0 - \mu_k g t = \left( \frac{5\mu_k g}{2R} t \right) R = \frac{5}{2}\mu_k g t$.
+9. Agrupando términos: $v_0 = \mu_k g t + \frac{5}{2}\mu_k g t = \frac{7}{2}\mu_k g t$.
+10. El tiempo de transición es $t = \frac{2v_0}{7\mu_k g}$.
+
+## 💻 Simulaciones Computacionales
+
+El Efecto Dzhanibekov o Teorema de la Raqueta de Tenis demuestra la inestabilidad de la rotación sobre el eje principal intermedio. Aquí se simulan las ecuaciones de Euler para el sólido rígido libre de torques.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+# Momentos principales de inercia (I1 < I2 < I3)
+I1, I2, I3 = 1.0, 2.0, 3.0
+
+def euler_equations(t, omega):
+    w1, w2, w3 = omega
+    dw1 = (I2 - I3) / I1 * w2 * w3
+    dw2 = (I3 - I1) / I2 * w3 * w1
+    dw3 = (I1 - I2) / I3 * w1 * w2
+    return [dw1, dw2, dw3]
+
+# Rotación dominada por el eje intermedio (w2) con pequeña perturbación
+omega0 = [0.1, 5.0, 0.1] 
+t_span = (0, 20)
+t_eval = np.linspace(*t_span, 1000)
+
+sol = solve_ivp(euler_equations, t_span, omega0, t_eval=t_eval)
+
+plt.figure(figsize=(10, 5))
+plt.plot(sol.t, sol.y[0], label='$\omega_1$ (Eje Menor)')
+plt.plot(sol.t, sol.y[1], label='$\omega_2$ (Eje Intermedio)')
+plt.plot(sol.t, sol.y[2], label='$\omega_3$ (Eje Mayor)')
+plt.title('Inestabilidad del Eje Intermedio (Efecto Dzhanibekov)')
+plt.xlabel('Tiempo')
+plt.ylabel('Velocidad Angular')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos de Dinámica Rotacional
 
 ### 🎓 Cursos y Clases Recomendadas (5-7)

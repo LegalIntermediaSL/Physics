@@ -85,6 +85,109 @@ Por ejemplo, para una carga puntual $q$ a distancia $d$ de un plano conductor in
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Fuerza asimétrica mediante el Método de Imágenes**
+Una carga puntual $+q$ está situada a una distancia $d$ por encima de un plano infinito conductor, inicialmente neutro y conectado firmemente a tierra ($V=0$). Encuentre el vector fuerza atractiva sobre la carga y demuestre que el trabajo necesario para moverla al infinito no obedece la forma estándar $U_{Coulomb} = k(q)(-q)/(2d)$.
+**Solución paso a paso:**
+1. Por unicidad, en la región $z>0$ (por encima del plano), el potencial de las cargas inducidas en el plano es idéntico al que produciría una "carga imagen" virtual puntual $-q$ situada especularmente a la distancia $-d$ (por debajo del suelo, $z=-d$).
+2. El campo eléctrico que "ve" la carga real $+q$ en $z=d$ es generado exclusivamente por su compañera fantasma $-q$ en $z=-d$.
+3. La distancia de separación efectiva es $2d$. Por la Ley de Coulomb:
+   $\vec{F} = -\frac{1}{4\pi\varepsilon_0} \frac{q^2}{(2d)^2} \hat{k} = -\frac{1}{16\pi\varepsilon_0} \frac{q^2}{d^2} \hat{k}$.
+4. El trabajo externo $W$ para sacar la carga $+q$ lentamente desde $z=d$ hasta $z \to \infty$ es la integral contra de esta fuerza atractiva:
+   $W = \int_{d}^{\infty} (-\vec{F}) \cdot d\vec{z} = \int_{d}^{\infty} \frac{1}{16\pi\varepsilon_0} \frac{q^2}{z^2} dz$.
+5. Evaluamos la integral analítica:
+   $W = \frac{q^2}{16\pi\varepsilon_0} \left[ -\frac{1}{z} \right]_d^\infty = \frac{q^2}{16\pi\varepsilon_0} \left( 0 - \left(-\frac{1}{d}\right) \right) = \frac{q^2}{16\pi\varepsilon_0 d}$.
+6. **Contraste ontológico:** Si existieran de verdad dos cargas aisladas reales estáticas separadas a $2d$, la energía del sistema sería $U_{real} = -\frac{1}{4\pi\varepsilon_0} \frac{q^2}{2d} = -\frac{q^2}{8\pi\varepsilon_0 d}$.
+7. El trabajo calculado para la imagen es exactamente la *mitad* de la energía del sistema de dos cargas aisladas. ¿Dónde está el factor 1/2? Proviene de que el ente $-q$ es *imaginario*; en realidad estamos arrastrando simultáneamente y sin coste al enjambre de electrones inducidos distribuidos superficialmente. 
+
+**Problema 2: Solución de Ecuación de Laplace (Armónicos Esféricos Básicos)**
+Un cascarón esférico conductor hueco sin carga de radio $R$ se introduce sumergido dentro de un campo eléctrico externo previamente uniforme $\vec{E}_0 = E_0 \hat{k}$. Obtenga el potencial $V(r, \theta)$ fuera de la esfera, demostrando la naturaleza dipolar exacta del campo perturbado usando separación de variables.
+**Solución paso a paso:**
+1. Dominio exterior: $\nabla^2 V = 0$ para $r \ge R$.
+2. Por simetría azimutal (no hay dependencia del ángulo horizontal $\phi$), la solución general en esféricas es una combinación lineal de Polinomios de Legendre:
+   $V(r,\theta) = \sum_{l=0}^\infty \left( A_l r^l + \frac{B_l}{r^{l+1}} \right) P_l(\cos\theta)$.
+3. **Condición de Frontera 1 ($r \to \infty$):** El campo recobra su uniformidad inmutable. $\vec{E} \to E_0 \hat{k}$. El potencial de un campo constante es $V_{ext} = -E_0 z = -E_0 r \cos\theta$.
+   Sustituyendo en la serie, para $r \to \infty$, los términos $B_l$ desaparecen. Solo sobreviven los $A_l$:
+   $\sum A_l r^l P_l(\cos\theta) = -E_0 r P_1(\cos\theta)$.
+   Igualando coeficiente a coeficiente (dada la ortogonalidad): $A_1 = -E_0$, y todos los demás $A_l = 0$.
+4. **Condición de Frontera 2 ($r = R$):** La esfera es equipotencial. Podemos anclar su voltaje base en 0, $V(R,\theta) = 0$.
+   Evaluamos la serie para cada $l$:
+   Para $l=1$: $A_1 R + \frac{B_1}{R^2} = 0 \implies -E_0 R + \frac{B_1}{R^2} = 0 \implies B_1 = E_0 R^3$.
+   Para todos los demás $l \neq 1$: $0 + \frac{B_l}{R^{l+1}} = 0 \implies B_l = 0$.
+5. Sustituimos todas las constantes $A_l$ y $B_l$ halladas analíticamente en la ecuación maestra:
+   $V(r,\theta) = \left( -E_0 r + \frac{E_0 R^3}{r^2} \right) \cos\theta = -E_0 r \cos\theta + E_0 R^3 \frac{\cos\theta}{r^2}$.
+6. El primer término es el fondo uniforme y liso inercial. El segundo término induce matemáticamente un potencial idéntico al de un **dipolo perfecto** $\left(\propto \frac{\cos\theta}{r^2}\right)$ situado en el origen estricto, con un momento dipolar efectivo inducido $\vec{p} = 4\pi\varepsilon_0 E_0 R^3 \hat{k}$.
+
+**Problema 3: Ecuación de Poisson unidimensional intrínseca: La unión p-n en semiconductores**
+Considere el modelo de carga espacial de Schottky para una unión p-n. La densidad de carga volumétrica es dependiente en el eje $x$ como:
+- $\rho(x) = -e N_a$ para $-x_p \le x < 0$ (Lado p).
+- $\rho(x) = +e N_d$ para $0 < x \le x_n$ (Lado n).
+- $\rho = 0$ fuera de la región de agotamiento.
+Integrando matemáticamente la Ecuación diferencial de Poisson, determine la expresión máxima del campo eléctrico $E_0$ y el potencial de barrera total (built-in voltage) $V_{bi}$.
+**Solución paso a paso:**
+1. Condición física de neutralidad de red total: la zona de deflexión tiene carga neta nula, $\int \rho dx = 0 \implies e N_a x_p = e N_d x_n$.
+2. Ecuación de Poisson 1D en el eje $x$: $\frac{dE}{dx} = \frac{\rho(x)}{\varepsilon}$.
+3. **Región n ($0 \le x \le x_n$):** $\frac{dE}{dx} = \frac{e N_d}{\varepsilon}$.
+   Integramos sujeta a la condición de frontera (campo nulo asintótico) $E(x_n) = 0$:
+   $E(x) = \int_{x_n}^x \frac{e N_d}{\varepsilon} dx' = \frac{e N_d}{\varepsilon}(x - x_n)$. (Note que el campo es negativo, apunta a la izquierda).
+   El máximo sucede geométricamente en $x=0$: $|E_{max}| = \frac{e N_d x_n}{\varepsilon}$.
+4. **Región p ($-x_p \le x \le 0$):** $\frac{dE}{dx} = -\frac{e N_a}{\varepsilon}$.
+   Integramos sujeta a $E(-x_p) = 0$:
+   $E(x) = -\frac{e N_a}{\varepsilon}(x + x_p)$.
+   Evaluando en $x=0$: $|E_{max}| = \frac{e N_a x_p}{\varepsilon}$. (Confirmamos con la neutralidad de carga que es el mismo valor que el anterior, asegurando continuidad $E(0^-) = E(0^+)$).
+5. Integración termodinámica del potencial electrostático: $V = -\int E dx$. El voltaje de barrera neto es el área bajo el triángulo de gradientes de campo $E(x)$.
+   Área de un triángulo = $\frac{1}{2} \cdot \text{base} \cdot \text{altura}$.
+   Base total es la anchura de depleción $W = x_p + x_n$. Altura total es $|E_{max}|$.
+   $V_{bi} = \frac{1}{2} (x_p + x_n) |E_{max}| = \frac{1}{2} (x_p + x_n) \frac{e N_d x_n}{\varepsilon}$.
+6. Usando de nuevo la relación asimétrica $x_p = x_n \frac{N_d}{N_a}$:
+   $x_p + x_n = x_n \left(\frac{N_d}{N_a} + 1\right) = x_n \left(\frac{N_a + N_d}{N_a}\right)$.
+   Entonces $V_{bi} = \frac{1}{2} x_n \left(\frac{N_a + N_d}{N_a}\right) \frac{e N_d x_n}{\varepsilon} = \frac{e}{2\varepsilon} \frac{N_d(N_a+N_d)}{N_a} x_n^2$.
+7. Si el dopaje asimétrico es $N_a \gg N_d$, la unión funciona virtualmente como un condensador asimétrico unilateral donde la tensión decae exclusivamente del lado débil.
+
+## 💻 Simulaciones Computacionales
+
+Simulación del campo eléctrico y de las líneas equipotenciales para un dipolo eléctrico utilizando `matplotlib.pyplot.streamplot` y gradientes de potencial.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Configuración del espacio
+x = np.linspace(-3, 3, 200)
+y = np.linspace(-3, 3, 200)
+X, Y = np.meshgrid(x, y)
+
+# Parámetros del dipolo
+q1, pos1 = 1.0, np.array([-1, 0])
+q2, pos2 = -1.0, np.array([1, 0])
+
+def electric_potential(q, pos, X, Y):
+    r = np.sqrt((X - pos[0])**2 + (Y - pos[1])**2)
+    return q / r
+
+# Potencial Total (Superposición)
+V = electric_potential(q1, pos1, X, Y) + electric_potential(q2, pos2, X, Y)
+
+# Campo Eléctrico E = - grad V
+Ey, Ex = np.gradient(-V)
+
+plt.figure(figsize=(8, 6))
+# Contornos equipotenciales
+levels = np.linspace(-2, 2, 25)
+plt.contour(X, Y, V, levels=levels, cmap='RdBu', alpha=0.5)
+# Líneas de campo
+plt.streamplot(X, Y, Ex, Ey, color=np.log(np.sqrt(Ex**2 + Ey**2)), cmap='inferno', density=1.2)
+# Cargas
+plt.scatter(*pos1, color='red', s=100, label='Carga +q')
+plt.scatter(*pos2, color='blue', s=100, label='Carga -q')
+plt.title('Campo Eléctrico y Potencial de un Dipolo')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

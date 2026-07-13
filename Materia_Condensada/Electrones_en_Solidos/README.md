@@ -101,6 +101,81 @@ graph TD
 
 **Conclusión:** La Energía de Fermi en el Cobre es de 7.02 eV, lo cual corresponde a una colosal temperatura termodinámica de más de ochenta mil grados Kelvin. Debido a que a temperatura ambiente ($T \sim 300 \, \text{K}$) se cumple que $T \ll T_F$, el gas electrónico en metales es un gas de fermiones altamente degenerado cuánticamente. Las excitaciones térmicas apenas afectan a los electrones en la base de la banda; sólo los electrones cercanos a la superficie de Fermi pueden absorber calor o conducir electricidad.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Energía de Fermi para un Gas de Electrones Libres en 3D
+Determine la expresión analítica para la energía de Fermi $E_F$ de un gas tridimensional de $N$ electrones libres confinados en un volumen $V$. 
+
+**Solución paso a paso:**
+La densidad de estados en el espacio de momento (espacio k) para un volumen tridimensional es constante, dada por $\frac{V}{(2\pi)^3}$.
+El número total de estados permitidos dentro de una esfera de radio $k_F$ (vector de onda de Fermi) considerando la degeneración de espín (2 electrones por estado k) es:
+$$ N = 2 \frac{V}{(2\pi)^3} \int_0^{k_F} 4\pi k^2 dk = \frac{V}{\pi^2} \frac{k_F^3}{3} $$
+Despejando $k_F$ en función de la densidad electrónica $n = N/V$:
+$$ k_F = (3\pi^2 n)^{1/3} $$
+La energía de Fermi es la energía cinética correspondiente a $k_F$:
+$$ E_F = \frac{\hbar^2 k_F^2}{2m} = \frac{\hbar^2}{2m} (3\pi^2 n)^{2/3} $$
+Esta es la energía máxima ocupada a temperatura $T=0$ K, un resultado puramente cuántico que surge del Principio de Exclusión de Pauli.
+
+### Problema 2: Densidad de Estados (DOS) en un Gas Bidimensional (2D)
+Demuestre que la densidad de estados en energía, $g(E)$, para un gas de electrones libres confinado estrictamente a dos dimensiones de área $A$ es constante respecto a la energía.
+
+**Solución paso a paso:**
+En 2D, el número total de estados con vector de onda menor que $k$ es:
+$$ N(k) = 2 \times \frac{A}{(2\pi)^2} \times (\pi k^2) = \frac{A k^2}{2\pi} $$
+Para electrones libres, la energía isotrópica es $E = \frac{\hbar^2 k^2}{2m}$. Despejamos $k^2$:
+$$ k^2 = \frac{2m E}{\hbar^2} $$
+Sustituyendo en $N(k)$ obtenemos el número de estados con energía menor que $E$:
+$$ N(E) = \frac{A}{2\pi} \left( \frac{2m E}{\hbar^2} \right) = \frac{A m E}{\pi \hbar^2} $$
+La densidad de estados $g(E)$ se define como la derivada del número total de estados respecto a la energía:
+$$ g(E) = \frac{dN(E)}{dE} = \frac{A m}{\pi \hbar^2} $$
+Como vemos, $g(E)$ es una constante independiente de $E$ (una función escalón si consideramos el fondo del pozo $E_0$).
+
+### Problema 3: Capacidad Calorífica del Gas de Electrones Libres
+En el modelo de Sommerfeld, demuestre por qué la contribución electrónica a la capacidad calorífica de un metal a bajas temperaturas es lineal respecto a $T$, es decir, $C_v \propto T$.
+
+**Solución paso a paso:**
+A temperatura $T > 0$, sólo los electrones cercanos a la energía de Fermi (dentro de una ventana térmica $\sim k_B T$) pueden ser excitados a estados vacíos superiores, porque los de menor energía están bloqueados por el principio de Pauli.
+La fracción de electrones que participan en las excitaciones térmicas es proporcional a $\frac{k_B T}{E_F}$.
+Cada electrón excitado aumenta su energía térmica en aproximadamente $\sim k_B T$.
+Por lo tanto, la energía interna térmica adicional total del sistema de $N$ electrones es:
+$$ \Delta U \approx N \left( \frac{k_B T}{E_F} \right) k_B T = \frac{N k_B^2 T^2}{E_F} $$
+La capacidad calorífica electrónica a volumen constante es la derivada respecto a $T$:
+$$ C_v = \frac{\partial U}{\partial T} \approx 2 \frac{N k_B^2}{E_F} T $$
+Haciendo el tratamiento riguroso con la integral de Fermi-Dirac, la constante exacta es:
+$$ C_v = \frac{\pi^2}{2} \frac{N k_B^2}{E_F} T \equiv \gamma T $$
+Esto demuestra que el calor específico electrónico decae a cero de forma lineal con $T$ para $T \to 0$.
+
+## 💻 Simulaciones Computacionales
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_fermi_dirac():
+    E = np.linspace(0.1, 10, 500)
+    E_F = 5.0 # Fermi energy in eV
+    k_B = 8.617e-5 # eV/K
+    
+    plt.figure(figsize=(10, 6))
+    for T in [0, 300, 1000, 3000]:
+        if T == 0:
+            f = np.where(E <= E_F, 1.0, 0.0)
+        else:
+            f = 1 / (np.exp((E - E_F) / (k_B * T)) + 1)
+        plt.plot(E, f, label=f'T = {T} K')
+        
+    plt.axvline(E_F, color='k', linestyle='--', label='$E_F$')
+    plt.xlabel('Energía (eV)')
+    plt.ylabel('Probabilidad de Ocupación $f(E)$')
+    plt.title('Simulación: Distribución de Fermi-Dirac a varias Temperaturas')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+if __name__ == '__main__':
+    plot_fermi_dirac()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

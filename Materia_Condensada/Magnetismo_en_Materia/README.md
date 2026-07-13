@@ -126,6 +126,98 @@ graph TD
 **Conclusión Matemática:** El coeficiente de proporcionalidad es estrictamente dependiente de la inversa de la temperatura absoluta $T$. Hemos deducido la icónica **Ley de Curie paramagnética**:
 $$ \chi = \frac{C}{T} \quad \text{donde la constante de Curie es} \quad C = \frac{\mu_0 N \mu_B^2}{k_B} $$
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Ley de Curie a Altas Temperaturas
+Utilice la estadística clásica de Maxwell-Boltzmann y la teoría de Langevin para derivar la Ley de Curie para un gas de momentos magnéticos no interactuantes (paramagnetismo ideal).
+
+**Solución paso a paso:**
+Consideramos $N$ momentos magnéticos $\vec{\mu}$ en un campo magnético externo $\vec{B}$. La energía de un dipolo es $E = -\vec{\mu} \cdot \vec{B} = -\mu B \cos\theta$.
+La probabilidad de encontrar un dipolo orientado en un ángulo $\theta$ es proporcional a $e^{-E / k_B T}$.
+La magnetización promedio a lo largo de $B$ es:
+$$ M = N \mu \langle \cos\theta \rangle = N \mu \frac{\int_0^\pi \cos\theta e^{\mu B \cos\theta / k_B T} 2\pi \sin\theta d\theta}{\int_0^\pi e^{\mu B \cos\theta / k_B T} 2\pi \sin\theta d\theta} $$
+Haciendo el cambio de variable $x = \cos\theta$ y definiendo $\alpha = \mu B / k_B T$:
+$$ \langle \cos\theta \rangle = \frac{\int_{-1}^1 x e^{\alpha x} dx}{\int_{-1}^1 e^{\alpha x} dx} = \coth\alpha - \frac{1}{\alpha} = L(\alpha) $$
+Donde $L(\alpha)$ es la función de Langevin.
+Para altas temperaturas o campos débiles, $\alpha \ll 1$. La expansión de Taylor de $L(\alpha)$ en el límite $\alpha \to 0$ es $L(\alpha) \approx \alpha/3$.
+Entonces la magnetización es:
+$$ M = N \mu \left( \frac{\mu B}{3 k_B T} \right) = \frac{N \mu^2}{3 k_B T} B $$
+Por lo tanto, la susceptibilidad paramagnética $\chi \approx \mu_0 M / B$ es:
+$$ \chi = \frac{\mu_0 N \mu^2}{3 k_B T} \equiv \frac{C}{T} $$
+Esto es idéntico a la Ley de Curie experimental, donde la constante $C$ es deducida formalmente.
+
+### Problema 2: Interacción de Intercambio de Heisenberg
+Explique matemáticamente el origen cuántico del ferromagnetismo usando el Hamiltoniano de intercambio de Heisenberg para un sistema de dos electrones.
+
+**Solución paso a paso:**
+El principio de Pauli obliga a que la función de onda total de dos fermiones (electrones) sea antisimétrica respecto al intercambio.
+La función total es el producto de una parte espacial $\phi(\mathbf{r}_1, \mathbf{r}_2)$ y una parte de espín $\chi(\mathbf{S}_1, \mathbf{S}_2)$.
+Existen dos combinaciones espaciales puras formadas por funciones orbitales atómicas ortogonales $u$ y $v$:
+Simétrica (S): $\phi_S = \frac{1}{\sqrt{2}} [u(\mathbf{r}_1)v(\mathbf{r}_2) + v(\mathbf{r}_1)u(\mathbf{r}_2)]$
+Antisimétrica (A): $\phi_A = \frac{1}{\sqrt{2}} [u(\mathbf{r}_1)v(\mathbf{r}_2) - v(\mathbf{r}_1)u(\mathbf{r}_2)]$
+Para que la función total sea antisimétrica:
+- Si $\phi$ es simétrica, el estado de espín $\chi$ debe ser un singulete (antisimétrico, espín total $S=0$).
+- Si $\phi$ es antisimétrica, el estado de espín $\chi$ debe ser un triplete (simétrico, espín total $S=1$).
+El valor esperado de la energía electrostática repulsiva (Coulomb) para estos estados difiere. Calculamos la diferencia energética $\Delta E = E_{singulete} - E_{triplete} = 2 J$, donde $J$ es la **integral de intercambio**:
+$$ J = \int \int u^*(\mathbf{r}_1) v^*(\mathbf{r}_2) \frac{e^2}{4\pi\epsilon_0|\mathbf{r}_1 - \mathbf{r}_2|} v(\mathbf{r}_1) u(\mathbf{r}_2) d^3r_1 d^3r_2 $$
+Como el estado cuántico de espín $\mathbf{S}_1 \cdot \mathbf{S}_2$ toma el valor $-3/4$ para el singulete y $+1/4$ para el triplete, podemos modelar de manera efectiva la energía del sistema parametrizando el espín como un operador:
+$$ \hat{H}_{Heisenberg} = -2J \, \mathbf{S}_1 \cdot \mathbf{S}_2 $$
+Si $J > 0$ (el estado triplete $S=1$ tiene menos energía repulsiva), los espines preferirán estar paralelos para minimizar la energía total. Este alineamiento espontáneo dictado puramente por la electrostática cuántica es el origen del Ferromagnetismo.
+
+### Problema 3: Paramagnetismo de Pauli
+Derive la expresión de la susceptibilidad paramagnética de Pauli a $T=0$ K para un gas de electrones libres de Fermi, demostrando que es independiente de la temperatura, a diferencia de los iones localizados.
+
+**Solución paso a paso:**
+Bajo un campo magnético $\vec{B}$, la energía del electrón con espín paralelo al campo (momentos antiparalelos) aumenta en $\mu_B B$, y la del espín antiparalelo (momentos paralelos) disminuye en $\mu_B B$.
+Esto produce un desdoblamiento rígido de las bandas de energía para espín up ($+$) y down ($-$).
+La densidad de estados es dividida por dos para cada dirección de espín: $g_{\pm}(E) = \frac{1}{2} g(E)$.
+Para mantener el mismo nivel de Fermi $E_F$ común, algunos electrones giran su espín para reequilibrar la energía.
+El número de electrones con espín a favor del campo excedente respecto a los de en contra es:
+$$ \Delta N = \int_{E_F - \mu_B B}^{E_F} \frac{1}{2} g(E) dE \approx \frac{1}{2} g(E_F) (\mu_B B) $$
+Este exceso de población de espines paralelos proporciona una magnetización neta al material:
+$$ M = \mu_B \times (N_\uparrow - N_\downarrow) = \mu_B \times (2 \Delta N) = \mu_B^2 g(E_F) B $$
+Donde $g(E_F)$ es la densidad total de estados al nivel de Fermi.
+La susceptibilidad de Pauli es entonces:
+$$ \chi_{Pauli} = \mu_0 \frac{M}{B} = \mu_0 \mu_B^2 g(E_F) $$
+Como $E_F$ y $g(E_F)$ dependen muy débilmente de la temperatura por debajo de la temperatura de Fermi (decenas de miles de Kelvin), la susceptibilidad paramagnética de Pauli en metales es casi constante, justificando este comportamiento anómalo.
+
+## 💻 Simulaciones Computacionales
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def ising_model_metropolis():
+    N = 20  # Grid size
+    T = 2.0 # Temperature (relative to J/k_B, critical is ~2.269)
+    steps = 50000
+    
+    # Initialize random spin grid (+1 or -1)
+    grid = np.random.choice([1, -1], size=(N, N))
+    
+    for _ in range(steps):
+        # Pick a random site
+        i, j = np.random.randint(0, N, size=2)
+        
+        # Calculate energy change
+        spin = grid[i, j]
+        neighbors = grid[(i+1)%N, j] + grid[(i-1)%N, j] + grid[i, (j+1)%N] + grid[i, (j-1)%N]
+        dE = 2 * spin * neighbors
+        
+        # Metropolis acceptance criterion
+        if dE <= 0 or np.random.rand() < np.exp(-dE / T):
+            grid[i, j] *= -1
+            
+    plt.figure(figsize=(6, 6))
+    plt.imshow(grid, cmap='coolwarm', interpolation='nearest')
+    plt.title(f"Simulación: Modelo de Ising 2D (T={T})")
+    plt.colorbar(label="Spin")
+    plt.show()
+
+if __name__ == '__main__':
+    ising_model_metropolis()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

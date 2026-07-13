@@ -104,6 +104,111 @@ Donde $\Omega_k = -kc^2 / (a^2 H^2)$. Las observaciones actuales (como la misió
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Temperatura del fondo cósmico y factor de escala**
+Sabiendo que el fondo cósmico de microondas (CMB) sigue un espectro de cuerpo negro, demuestre cómo varía la temperatura del CMB $T$ con el factor de escala cósmico $a(t)$. Calcule a qué factor de escala se formó el CMB si la temperatura de recombinación fue de $3000\text{ K}$ y hoy es de $2.725\text{ K}$.
+
+**Solución paso a paso:**
+1. **Conservación del número de fotones:**
+   En un volumen comóvil en expansión $V \propto a^3$, el número de fotones es constante. La densidad numérica de fotones de un cuerpo negro es $n_\gamma \propto T^3$.
+   Por tanto, $n_\gamma a^3 = \text{constante} \implies T^3 a^3 = \text{constante} \implies T \propto 1/a$.
+   Alternativamente, el corrimiento al rojo $1+z = \lambda_0/\lambda = a_0/a$. La energía de un fotón $E \propto 1/\lambda \propto a^{-1}$. Como $E \sim k_B T$, tenemos que $T(a) = T_0 / a$ (con $a_0 = 1$).
+2. **Cálculo del factor de escala:**
+   Sabiendo que $T(a) = \frac{T_0}{a}$:
+   $a_{rec} = \frac{T_0}{T_{rec}} = \frac{2.725}{3000} \approx 9.08 \times 10^{-4}$.
+   Esto corresponde a un corrimiento al rojo $z = \frac{1}{a} - 1 \approx 1100$.
+
+**Problema 2: Distancia Luminosa vs Distancia Comóvil**
+Derive la relación matemática general entre la distancia de luminosidad $d_L$ y la distancia comóvil radial $\chi$ en función del factor de escala de emisión $a_e$ (o corrimiento al rojo $z$).
+
+**Solución paso a paso:**
+1. **Flujo y luminosidad:**
+   La distancia luminosa se define mediante la conservación del flujo medido: $F = \frac{L_{int}}{4\pi d_L^2}$.
+2. **Propagación en el espacio en expansión:**
+   Supongamos una fuente cosmológica con luminosidad intrínseca $L_{int}$ (energía / tiempo en el emisor).
+   El número de fotones emitidos cruza una esfera de radio comóvil actual $d_c$. El área de esta esfera es $4\pi d_c^2$ (asumiendo universo plano, $k=0$, por lo que $d_c = \chi$).
+3. **Pérdida de energía y dilatación temporal:**
+   Cada fotón recibido pierde energía por el redshift cosmológico: $E_{rec} = E_{em} / (1+z) = E_{em} \cdot a_e$.
+   El intervalo de tiempo de emisión y recepción se dilata: $dt_{rec} = dt_{em} (1+z) = dt_{em} / a_e$.
+   El flujo observado es $F = \frac{L_{rec}}{\text{Área}} = \frac{E_{rec}/dt_{rec}}{4\pi d_c^2} = \frac{ (E_{em} / (1+z)) / (dt_{em} (1+z)) }{4\pi d_c^2} = \frac{L_{int}}{4\pi d_c^2 (1+z)^2}$.
+4. **Identificación de $d_L$:**
+   Comparando con la definición, obtenemos $d_L^2 = d_c^2 (1+z)^2$, de donde resulta:
+   $d_L = d_c (1+z) = \frac{d_c}{a_e}$.
+   En un universo plano, $d_c = c \int_0^z \frac{dz'}{H(z')}$, lo que permite vincular observables fotométricos a la historia de la expansión.
+
+**Problema 3: Edad del universo con Materia y Constante Cosmológica**
+Calcule la edad de un universo plano compuesto sólo de materia no relativista $\Omega_m$ y energía oscura (constante cosmológica $\Omega_\Lambda = 1 - \Omega_m$). Determine el límite de $t(a)$ cuando $a \rightarrow 0$ y expréselo en función de $H_0$.
+
+**Solución paso a paso:**
+1. La ecuación de Friedmann es:
+   $H^2 = H_0^2 \left( \Omega_m a^{-3} + \Omega_\Lambda \right)$.
+2. Sustituyendo $H = \frac{\dot{a}}{a}$:
+   $\dot{a} = H_0 \sqrt{\Omega_m a^{-1} + \Omega_\Lambda a^2}$.
+   $dt = \frac{1}{H_0} \frac{da}{\sqrt{\Omega_m a^{-1} + \Omega_\Lambda a^2}} = \frac{1}{H_0} \frac{\sqrt{a} da}{\sqrt{\Omega_m + \Omega_\Lambda a^3}}$.
+3. Para hallar la edad a un factor de escala $a$:
+   $t(a) = \frac{1}{H_0} \int_0^a \frac{x^{1/2} dx}{\sqrt{\Omega_m + \Omega_\Lambda x^3}}$.
+4. Hacemos el cambio de variable $u = \sqrt{\frac{\Omega_\Lambda}{\Omega_m}} x^{3/2} \implies du = \frac{3}{2} \sqrt{\frac{\Omega_\Lambda}{\Omega_m}} x^{1/2} dx$.
+   El integrando se transforma en:
+   $t(a) = \frac{2}{3H_0 \sqrt{\Omega_\Lambda}} \int \frac{du}{\sqrt{1 + u^2}}$.
+5. La primitiva es $\text{arsinh}(u)$, evaluada de 0 a $u(a)$:
+   $t(a) = \frac{2}{3H_0 \sqrt{\Omega_\Lambda}} \text{arsinh} \left( \sqrt{\frac{\Omega_\Lambda}{\Omega_m}} a^{3/2} \right)$.
+   Para el tiempo actual $a=1$:
+   $t_0 = \frac{2}{3H_0 \sqrt{\Omega_\Lambda}} \text{ln} \left( \sqrt{\frac{\Omega_\Lambda}{\Omega_m}} + \sqrt{\frac{\Omega_\Lambda}{\Omega_m} + 1} \right)$.
+   Con $\Omega_m \approx 0.3, \Omega_\Lambda \approx 0.7$, arroja el valor exacto $\sim 13.8$ Gyr.
+
+## 💻 Simulaciones Computacionales
+
+Esta simulación resuelve numéricamente la Ecuación de Friedmann utilizando `scipy.integrate.odeint` para rastrear el factor de escala $a(t)$ del universo bajo diferentes composiciones cosmológicas (materia, radiación y energía oscura).
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+# Constante de Hubble actual (normalizada a 1 para tiempo cósmico t_H)
+H0 = 1.0 
+
+def friedmann_eq(a, t, Omega_m, Omega_r, Omega_L):
+    # da/dt = H0 * sqrt(Omega_m/a + Omega_r/a^2 + Omega_L*a^2 + Omega_k)
+    # Asumimos universo plano: Omega_k = 1 - (Omega_m + Omega_r + Omega_L)
+    Omega_k = 1.0 - (Omega_m + Omega_r + Omega_L)
+    
+    # Evitar singularidad en a=0
+    if a < 1e-5:
+        a = 1e-5
+        
+    dadt = H0 * np.sqrt(Omega_m / a + Omega_r / (a**2) + Omega_L * (a**2) + Omega_k)
+    return dadt
+
+# Tiempos cósmicos (en unidades de 1/H0)
+t = np.linspace(0, 2.0, 500)
+a0 = 1e-4 # Factor de escala inicial pequeño
+
+# Diferentes modelos de universo
+models = {
+    'Materia ($\\Omega_m=1$)': (1.0, 0.0, 0.0),
+    'Radiación ($\\Omega_r=1$)': (0.0, 1.0, 0.0),
+    'Energía Oscura ($\\Omega_\\Lambda=1$)': (0.0, 0.0, 1.0),
+    'LCDM (Concordancia)': (0.3, 0.0, 0.7)
+}
+
+plt.figure(figsize=(10, 6))
+
+for name, (Om, Or, OL) in models.items():
+    a = odeint(friedmann_eq, a0, t, args=(Om, Or, OL))
+    plt.plot(t, a, label=name, lw=2)
+
+plt.axhline(1.0, color='k', linestyle='--', alpha=0.5, label='Hoy ($a=1$)')
+plt.title('Evolución del Factor de Escala Cósmico $a(t)$')
+plt.xlabel('Tiempo Cósmico (Unidades $1/H_0$)')
+plt.ylabel('Factor de Escala $a$')
+plt.ylim(0, 3)
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

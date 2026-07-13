@@ -104,6 +104,107 @@ Un bloque de masa $m$ se desliza hacia abajo por un plano inclinado con ángulo 
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Fuerza de restricción no holonómica en superficie esférica**
+Una partícula de masa $m$ descansa en el polo norte de una esfera lisa fija de radio $R$. Se le da un desplazamiento infinitesimal y comienza a deslizarse hacia abajo por efecto de la gravedad $g$. Determine el ángulo exacto $\theta$ (medido desde el polo norte) donde la partícula pierde contacto con la superficie, usando multiplicadores de Lagrange o dinámica newtoniana en polares.
+**Solución paso a paso:**
+1. Usamos coordenadas polares $r$ y $\theta$ con el origen en el centro de la esfera. Ecuación de restricción holonómica: $r = R$ (mientras haya contacto).
+2. Fuerzas sobre la masa: gravedad $\vec{W} = mg(\cos\theta \hat{e}_r - \sin\theta \hat{e}_\theta)$ y la Normal radial $\vec{N} = N\hat{e}_r$.
+3. Ecuación radial de Newton: $mg\cos\theta - N = m\frac{v^2}{R}$.
+4. Por conservación de la energía mecánica, desde $\theta=0$ a $\theta$:
+   $E_i = mgR$.
+   $E_f = mgR\cos\theta + \frac{1}{2}mv^2$.
+   Igualando: $mgR(1 - \cos\theta) = \frac{1}{2}mv^2 \implies v^2 = 2gR(1 - \cos\theta)$.
+5. Sustituimos $v^2$ en la ecuación de fuerzas:
+   $mg\cos\theta - N = \frac{m}{R}(2gR(1 - \cos\theta)) = 2mg - 2mg\cos\theta$.
+   $N = mg\cos\theta - 2mg + 2mg\cos\theta = mg(3\cos\theta - 2)$.
+6. La partícula abandona la esfera cuando la fuerza de contacto (Normal) se anula: $N \to 0$.
+7. $3\cos\theta - 2 = 0 \implies \cos\theta = \frac{2}{3}$.
+8. $\theta = \arccos(2/3) \approx 48.19^\circ$.
+
+**Problema 2: Masa variable, problema de la cuerda cayendo**
+Una cuerda perfectamente flexible y uniforme de masa lineal $\lambda$ y longitud $L$ cuelga inicialmente en reposo siendo sostenida por su extremo superior. El extremo se suelta de modo que la cuerda cae sobre una balanza de plato situada justo debajo de su extremo inferior. Determine la fuerza $F(t)$ que registra la balanza en función de la porción de cuerda que ya ha caído, $x$.
+**Solución paso a paso:**
+1. Cuando cae libremente una distancia $x$, el segmento de cuerda incidente tiene una velocidad dada por caída libre: $v = \sqrt{2gx}$.
+2. La balanza mide dos componentes de fuerza: el peso de la cuerda en reposo sobre ella ($W$) y la fuerza impulsiva debida a la transferencia de momento de los eslabones incidentes ($F_{imp}$).
+3. El peso acumulado en el plato es la longitud que ha impactado $x$ multiplicada por su masa lineal y la gravedad: $W = \lambda x g$.
+4. La fuerza impulsiva proviene de la Segunda Ley de Newton para flujo de masa: $F_{imp} = \dot{m} v = \frac{dm}{dt}v$.
+5. La tasa de masa depositada es $\frac{dm}{dt} = \lambda \frac{dx}{dt} = \lambda v$.
+6. Por lo tanto, $F_{imp} = (\lambda v)v = \lambda v^2$.
+7. Sustituyendo $v^2 = 2gx$, obtenemos $F_{imp} = \lambda (2gx) = 2\lambda x g$.
+8. Sumando ambas contribuciones, la balanza registra:
+   $F_{total} = W + F_{imp} = \lambda x g + 2\lambda x g = 3\lambda x g$.
+9. Esto demuestra el resultado clásico: la balanza siente exactamente **tres veces** el peso del segmento que ya está posado en ella. Al terminar de caer, mide $3Mg$ infinitesimalmente antes de volver a $Mg$.
+
+**Problema 3: Péndulo en marco acelerado (Efecto de equivalencia)**
+Un tren se mueve horizontalmente con aceleración constante $a$. Un péndulo de masa $m$ y longitud $L$ cuelga del techo. Encuentre el ángulo de equilibrio aparente $\theta_{eq}$ y la frecuencia angular $\omega$ de las pequeñas oscilaciones alrededor de este equilibrio desde el punto de vista del marco no inercial del tren.
+**Solución paso a paso:**
+1. En el marco acelerado, definimos un campo gravitacional efectivo sumando la aceleración de gravedad y la aceleración inercial de traslación ficticia:
+   $\vec{g}_{eff} = \vec{g} - \vec{a} = -g\hat{j} - a\hat{i}$.
+2. La magnitud de la gravedad efectiva es $g_{eff} = \sqrt{g^2 + a^2}$.
+3. El nuevo "suelo" o plomada aparente se alinea con la dirección de $\vec{g}_{eff}$. El ángulo $\theta_{eq}$ respecto a la vertical clásica está dado por:
+   $\tan\theta_{eq} = \frac{a}{g} \implies \theta_{eq} = \arctan\left(\frac{a}{g}\right)$.
+4. Para hallar la dinámica de las oscilaciones, la ecuación del péndulo simple con gravedad es $\ddot{\phi} + \frac{g}{L}\sin\phi = 0$.
+5. Por el Principio de Equivalencia, la dinámica local es idéntica si sustituimos la gravedad por su contraparte efectiva $g_{eff}$.
+6. $\ddot{\phi} + \frac{g_{eff}}{L}\sin\phi = 0$.
+7. Para pequeñas oscilaciones alrededor de este nuevo equilibrio, $\sin\phi \approx \phi$, la frecuencia angular resulta ser $\omega = \sqrt{\frac{g_{eff}}{L}}$.
+8. Finalmente, $\omega = \left( \frac{g^2 + a^2}{L^2} \right)^{1/4}$.
+
+## 💻 Simulaciones Computacionales
+
+A continuación, se presenta un modelo computacional para el Péndulo Doble, un sistema clásico que exhibe comportamiento caótico, resuelto usando `scipy.integrate`.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+# Parámetros del sistema
+g = 9.81
+L1, L2 = 1.0, 1.0
+m1, m2 = 1.0, 1.0
+
+def double_pendulum(t, y):
+    theta1, z1, theta2, z2 = y
+    c, s = np.cos(theta1-theta2), np.sin(theta1-theta2)
+
+    theta1dot = z1
+    theta2dot = z2
+    
+    # Ecuaciones de Euler-Lagrange
+    denom1 = (m1+m2)*L1 - m2*L1*c*c
+    z1dot = (m2*g*np.sin(theta2)*c - m2*s*(L1*z1**2*c + L2*z2**2) - (m1+m2)*g*np.sin(theta1)) / denom1
+    
+    denom2 = (L2/L1)*denom1
+    z2dot = ((m1+m2)*(L1*z1**2*s - g*np.sin(theta2) + g*np.sin(theta1)*c) + m2*L2*z2**2*s*c) / denom2
+    
+    return [theta1dot, z1dot, theta2dot, z2dot]
+
+# Condiciones iniciales
+y0 = [np.pi/2, 0, np.pi/2, 0]
+t_span = (0, 10)
+t_eval = np.linspace(*t_span, 1000)
+
+sol = solve_ivp(double_pendulum, t_span, y0, t_eval=t_eval, method='Radau')
+
+# Coordenadas cartesianas
+x1 = L1 * np.sin(sol.y[0])
+y1 = -L1 * np.cos(sol.y[0])
+x2 = x1 + L2 * np.sin(sol.y[2])
+y2 = y1 - L2 * np.cos(sol.y[2])
+
+plt.figure(figsize=(6, 6))
+plt.plot(x1, y1, label='Masa 1', alpha=0.5)
+plt.plot(x2, y2, label='Masa 2', color='red')
+plt.title('Trayectoria del Péndulo Doble (Caos Determinado)')
+plt.xlabel('x (m)')
+plt.ylabel('y (m)')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos de Dinámica
 
 ### 🎓 Cursos y Clases Recomendadas (5-7)

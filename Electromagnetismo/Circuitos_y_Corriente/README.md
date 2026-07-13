@@ -112,6 +112,108 @@ Esta energía se transfiere a los iones de la red cristalina a través de las co
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Modelo de conducción de Drude en estado transitorio**
+Un bloque metálico sin campo eléctrico interno es expuesto abruptamente en $t=0$ a un campo eléctrico uniforme $\vec{E}_0$ estático. Demuestre a través de la ecuación diferencial de Drude cómo la corriente eléctrica evoluciona transitoriamente antes de alcanzar la Ley de Ohm estacionaria.
+**Solución paso a paso:**
+1. La ecuación fundamental de movimiento para un electrón promedio en el modelo de Drude, incluyendo el arrastre de colisiones, es:
+   $m_e \frac{d\vec{v}_d}{dt} = -e\vec{E}_0 - \frac{m_e}{\tau}\vec{v}_d$.
+2. Esto es una ecuación diferencial ordinaria lineal de primer orden para $\vec{v}_d(t)$. Podemos reordenarla:
+   $\frac{d\vec{v}_d}{dt} + \frac{1}{\tau}\vec{v}_d = -\frac{e}{m_e}\vec{E}_0$.
+3. La solución a la EDO homogénea es $\vec{v}_{h}(t) = \vec{A} e^{-t/\tau}$.
+4. Una solución particular para el término constante es $\vec{v}_{p} = -\frac{e\tau}{m_e}\vec{E}_0$.
+5. La solución general es $\vec{v}_d(t) = \vec{A} e^{-t/\tau} - \frac{e\tau}{m_e}\vec{E}_0$.
+6. Usamos la condición inicial en $t=0$, donde la deriva era nula $\vec{v}_d(0) = \vec{0}$:
+   $\vec{0} = \vec{A} - \frac{e\tau}{m_e}\vec{E}_0 \implies \vec{A} = \frac{e\tau}{m_e}\vec{E}_0$.
+7. Sustituyendo de vuelta:
+   $\vec{v}_d(t) = -\frac{e\tau}{m_e}\vec{E}_0 \left( 1 - e^{-t/\tau} \right)$.
+8. La densidad de corriente está dada por $\vec{J}(t) = -n e \vec{v}_d(t)$:
+   $\vec{J}(t) = \left( \frac{n e^2 \tau}{m_e} \right) \vec{E}_0 \left( 1 - e^{-t/\tau} \right) = \sigma_0 \vec{E}_0 \left( 1 - e^{-t/\tau} \right)$.
+9. El estado estacionario ohmico $\vec{J} = \sigma_0 \vec{E}_0$ se alcanza asintóticamente tras unos pocos tiempos de relajación $\tau$ (típicamente femtosegundos para metales).
+
+**Problema 2: Puente de Wheatstone no equilibrado por análisis matricial de Nodos**
+Considere un puente de Wheatstone con resistencias $R_1, R_2$ (brazo izquierdo) y $R_3, R_4$ (brazo derecho) formando el rombo, y un galvanómetro de resistencia interna $R_g$ conectado transversalmente entre los brazos. El circuito es alimentado por una fuente $V_s$. Determine rigurosamente la caída de voltaje en el galvanómetro planteando la matriz de conductancias.
+**Solución paso a paso:**
+1. Definimos el nodo inferior como tierra ($V_0 = 0V$). El nodo superior está conectado al potencial $V_s$.
+2. Quedan dos nodos intermedios de incógnita:
+   $V_A$: Nodo entre $R_1$ (superior) y $R_2$ (inferior).
+   $V_B$: Nodo entre $R_3$ (superior) y $R_4$ (inferior).
+   El galvanómetro $R_g$ une $V_A$ y $V_B$.
+3. Planteamos la Ley de Corrientes de Kirchhoff (KCL) en el nodo $A$:
+   $\frac{V_A - V_s}{R_1} + \frac{V_A - 0}{R_2} + \frac{V_A - V_B}{R_g} = 0$.
+4. Planteamos KCL en el nodo $B$:
+   $\frac{V_B - V_s}{R_3} + \frac{V_B - 0}{R_4} + \frac{V_B - V_A}{R_g} = 0$.
+5. Reagrupamos términos en conductancias $G_i = 1/R_i$:
+   $V_A (G_1 + G_2 + G_g) - V_B G_g = V_s G_1$.
+   $-V_A G_g + V_B (G_3 + G_4 + G_g) = V_s G_3$.
+6. Esto es un sistema lineal $2 \times 2$:
+   $\begin{pmatrix} G_1+G_2+G_g & -G_g \\ -G_g & G_3+G_4+G_g \end{pmatrix} \begin{pmatrix} V_A \\ V_B \end{pmatrix} = \begin{pmatrix} V_s G_1 \\ V_s G_3 \end{pmatrix}$.
+7. Para encontrar la diferencia $\Delta V = V_A - V_B$, usamos la regla de Cramer para hallar $V_A$ y $V_B$:
+   $\Delta = (G_1+G_2+G_g)(G_3+G_4+G_g) - G_g^2$.
+8. $V_A = \frac{V_s G_1(G_3+G_4+G_g) + V_s G_3 G_g}{\Delta}$.
+   $V_B = \frac{V_s G_3(G_1+G_2+G_g) + V_s G_1 G_g}{\Delta}$.
+9. Restando directamente:
+   $\Delta V = \frac{V_s [ G_1 G_3 + G_1 G_4 + G_1 G_g + G_3 G_g - G_3 G_1 - G_3 G_2 - G_3 G_g - G_1 G_g ]}{\Delta} = \frac{V_s (G_1 G_4 - G_2 G_3)}{\Delta}$.
+10. La corriente en el galvanómetro es nula (puente equilibrado) si y sólo si $G_1 G_4 - G_2 G_3 = 0 \implies \frac{1}{R_1 R_4} = \frac{1}{R_2 R_3} \implies \frac{R_1}{R_2} = \frac{R_3}{R_4}$.
+
+**Problema 3: Red resistiva infinita plana cuadrada**
+Se tiene una malla infinita de resistencias idénticas $R$ dispuestas en forma de retícula cuadrada 2D (cada nodo conecta con 4 vecinos). Determine la resistencia equivalente entre dos nodos adyacentes usando el principio de superposición.
+**Solución paso a paso:**
+1. Imagine que inyectamos una corriente continua $I_0$ en un solo nodo $A$ y la extraemos por una frontera en el infinito.
+2. Por pura simetría radial isotrópica geométrica de la red cuadrada infinita, la corriente inyectada se divide equitativamente entre las 4 ramas conectadas al nodo $A$. La corriente en la rama $A \to B$ es $i_1 = \frac{I_0}{4}$.
+3. Ahora considere el caso opuesto: inyectamos $I_0$ en el infinito y la extraemos por el nodo adyacente $B$. De nuevo por simetría, la corriente de convergencia que llega por cada rama hacia $B$ es igual. La corriente en la rama $A \to B$ para este subproblema es $i_2 = \frac{I_0}{4}$.
+4. Como los circuitos de resistencias son sistemas lineales pasivos, podemos aplicar el **Principio de Superposición**. Superponemos los dos escenarios: inyectar en $A$ y extraer simultáneamente en $B$.
+5. La corriente neta que atraviesa directamente la rama que conecta $A$ y $B$ (resistencia $R$) es la suma directa:
+   $i_{AB} = i_1 + i_2 = \frac{I_0}{4} + \frac{I_0}{4} = \frac{I_0}{2}$.
+6. La caída de voltaje estricta a través de esa rama central es por la Ley de Ohm de un solo componente:
+   $V_{AB} = i_{AB} R = \left(\frac{I_0}{2}\right) R$.
+7. Macroscópicamente, la definición de resistencia equivalente (medida desde los terminales $A$ y $B$) está dada por $R_{eq} = \frac{V_{AB}}{I_0}$.
+8. Sustituimos $V_{AB}$:
+   $R_{eq} = \frac{(I_0/2) R}{I_0} = \mathbf{\frac{R}{2}}$. 
+
+## 💻 Simulaciones Computacionales
+
+Análisis de la respuesta transitoria de un circuito RLC en serie alimentado por un pulso de voltaje escalón. Se utiliza una Ecuación Diferencial de segundo orden.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+# Parámetros del circuito
+R = 2.0     # Ohms
+L = 1.0     # Henrys
+C = 0.1     # Farads
+V0 = 5.0    # Voltaje del escalón
+
+def rlc_circuit(t, state):
+    # state = [Carga q, Corriente i]
+    q, i = state
+    # L(di/dt) + Ri + q/C = V(t)
+    di_dt = (V0 - R*i - q/C) / L
+    return [i, di_dt]
+
+t_span = (0, 10)
+t_eval = np.linspace(*t_span, 500)
+sol = solve_ivp(rlc_circuit, t_span, [0, 0], t_eval=t_eval)
+
+q = sol.y[0]
+i = sol.y[1]
+v_c = q / C
+
+plt.figure(figsize=(10, 5))
+plt.plot(sol.t, v_c, label='Voltaje en Capacitor $V_c(t)$', color='blue')
+plt.plot(sol.t, i, label='Corriente $I(t)$', color='red')
+plt.title('Respuesta Transitoria de un Circuito RLC subamortiguado')
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Amplitud')
+plt.axhline(V0, color='gray', linestyle='--', label='Voltaje Fuente')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

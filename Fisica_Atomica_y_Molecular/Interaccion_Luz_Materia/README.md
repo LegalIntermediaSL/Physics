@@ -122,6 +122,107 @@ graph TD
     D --> F[Interferencia Multimodo Cuántica <br> Colapsos y Revivales Rabi]
 ```
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Efecto Stark Lineal en el Átomo de Hidrógeno
+Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido a un campo eléctrico externo uniforme $\vec{\mathcal{E}} = \mathcal{E}_0 \hat{z}$. Calcule el corrimiento de los niveles de energía utilizando la teoría de perturbaciones degenerada de primer orden.
+
+**Solución paso a paso:**
+1. Los estados degenerados para $n=2$ son $|2,0,0\rangle$, $|2,1,0\rangle$, $|2,1,1\rangle$, y $|2,1,-1\rangle$ en la base $|n,l,m\rangle$.
+2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
+3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
+4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+   $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+   donde $a_0$ es el radio de Bohr.
+5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+   $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
+
+### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
+Derive la expresión para los niveles de energía rotovibracionales de una molécula diatómica tratada como un oscilador armónico y rotor rígido acoplados, incluyendo la corrección de distorsión centrífuga. 
+
+**Solución paso a paso:**
+1. El Hamiltoniano molecular efectivo es $H = \frac{P^2}{2\mu} + \frac{L^2}{2\mu R^2} + V(R)$.
+2. Expandiendo el potencial alrededor del mínimo $R_e$: $V(R) \approx \frac{1}{2} k (R - R_e)^2$.
+3. La energía a orden cero es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1)$, donde $B_e = \frac{\hbar^2}{2\mu R_e^2}$.
+4. Para la distorsión centrífuga, el mínimo efectivo de la energía potencial efectiva $V_{\text{eff}}(R) = V(R) + \frac{\hbar^2 J(J+1)}{2\mu R^2}$ se desplaza.
+5. Minimizando $V_{\text{eff}}$: $k(R_c - R_e) - \frac{\hbar^2 J(J+1)}{\mu R_c^3} = 0 \implies \Delta R \approx \frac{\hbar^2 J(J+1)}{k \mu R_e^3}$.
+6. Sustituyendo de nuevo en la energía, el término de corrección es $-D_e J^2(J+1)^2$, donde $D_e = \frac{4B_e^3}{\hbar^2 \omega^2}$.
+7. La energía final es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1) - D_e J^2(J+1)^2$.
+
+### Ejercicio 3: Condensación de Bose-Einstein en una Trampa Armónica
+Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein de un gas ideal de $N$ bosones atrapados en un potencial armónico tridimensional isotrópico $V(r) = \frac{1}{2} m \omega^2 r^2$.
+
+**Solución paso a paso:**
+1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
+2. El número total de partículas en estados excitados viene dado por la integral:
+   $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
+4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+   $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
+6. Resolviendo para $T_c$:
+   $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
+
+## 💻 Simulaciones Computacionales
+
+Este programa simula numéricamente las Ecuaciones de Bloch Ópticas para un sistema atómico en presencia de un láser continuo y procesos de relajación disipativos (emisión espontánea y desfasamiento espectral), mostrando cómo se alcanza el equilibrio dinámico.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+def optical_bloch(state, t, Omega, Delta, Gamma, gamma_d):
+    """
+    Ecuaciones de Bloch ópticas para la matriz densidad de 2 niveles.
+    state = [rho_gg, rho_ee, Re(rho_ge), Im(rho_ge)]
+    """
+    r_gg, r_ee, r_ge_real, r_ge_imag = state
+    r_ge = r_ge_real + 1j * r_ge_imag
+    r_eg = np.conj(r_ge)
+    
+    # Dinámica de poblaciones
+    dr_gg = Gamma * r_ee + 1j * (Omega/2.0) * (r_eg - r_ge)
+    dr_ee = -Gamma * r_ee - 1j * (Omega/2.0) * (r_eg - r_ge)
+    
+    # Dinámica de coherencia (decaimiento total = Gamma/2 + gamma_d)
+    dr_ge = -(Gamma/2.0 + gamma_d + 1j*Delta) * r_ge - 1j * (Omega/2.0) * (r_ee - r_gg)
+    
+    return [np.real(dr_gg), np.real(dr_ee), np.real(dr_ge), np.imag(dr_ge)]
+
+# Parámetros experimentales
+Omega = 10.0      # Frecuencia de Rabi (fuerza del láser)
+Delta = 0.0       # Láser en estricta resonancia
+Gamma = 1.0       # Tasa de decaimiento espontáneo poblacional
+gamma_d = 0.5     # Tasa de decaimiento de desfasamiento extra (colisiones)
+
+t_span = np.linspace(0, 5.0, 500)
+# Inicialmente todo en el estado base |g>
+initial_state = [1.0, 0.0, 0.0, 0.0]
+
+# Resolución numérica
+solution = odeint(optical_bloch, initial_state, t_span, args=(Omega, Delta, Gamma, gamma_d))
+
+rho_gg = solution[:, 0]
+rho_ee = solution[:, 1]
+coherence_abs = np.sqrt(solution[:, 2]**2 + solution[:, 3]**2)
+
+plt.figure(figsize=(10, 6))
+plt.plot(t_span, rho_ee, 'r-', lw=2, label='Población Excitada $\\rho_{ee}$')
+plt.plot(t_span, rho_gg, 'b--', lw=2, label='Población Base $\\rho_{gg}$')
+plt.plot(t_span, coherence_abs, 'g-', lw=2, label='Magnitud de Coherencia $|\\rho_{ge}|$')
+
+plt.title("Dinámica de Ecuaciones de Bloch Ópticas con Disipación")
+plt.xlabel("Tiempo (en unidades de $1/\\Gamma$)")
+plt.ylabel("Elementos de la Matriz Densidad")
+plt.axhline(0.5, color='gray', linestyle=':', label='Límite de Saturación (0.5)')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+# plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

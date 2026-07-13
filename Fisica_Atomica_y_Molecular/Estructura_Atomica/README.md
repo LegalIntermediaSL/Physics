@@ -167,6 +167,92 @@ La energía preferida fundamental es inferida deductivamente recurriendo a las *
 
 **(Nota Científica:)** La corrección marginal experimentada de la línea analítica $H_\alpha = 656.3 \, \text{nm}$ (en vacío) reside principalmente debido a los minúsculos efectos estructurales acoplados y al ensanchamiento Doppler de las correcciones de estructura fina discutidas teóricamente arriba.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Efecto Stark Lineal en el Átomo de Hidrógeno
+Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido a un campo eléctrico externo uniforme $\vec{\mathcal{E}} = \mathcal{E}_0 \hat{z}$. Calcule el corrimiento de los niveles de energía utilizando la teoría de perturbaciones degenerada de primer orden.
+
+**Solución paso a paso:**
+1. Los estados degenerados para $n=2$ son $|2,0,0\rangle$, $|2,1,0\rangle$, $|2,1,1\rangle$, y $|2,1,-1\rangle$ en la base $|n,l,m\rangle$.
+2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
+3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
+4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+   $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+   donde $a_0$ es el radio de Bohr.
+5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+   $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
+
+### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
+Derive la expresión para los niveles de energía rotovibracionales de una molécula diatómica tratada como un oscilador armónico y rotor rígido acoplados, incluyendo la corrección de distorsión centrífuga. 
+
+**Solución paso a paso:**
+1. El Hamiltoniano molecular efectivo es $H = \frac{P^2}{2\mu} + \frac{L^2}{2\mu R^2} + V(R)$.
+2. Expandiendo el potencial alrededor del mínimo $R_e$: $V(R) \approx \frac{1}{2} k (R - R_e)^2$.
+3. La energía a orden cero es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1)$, donde $B_e = \frac{\hbar^2}{2\mu R_e^2}$.
+4. Para la distorsión centrífuga, el mínimo efectivo de la energía potencial efectiva $V_{\text{eff}}(R) = V(R) + \frac{\hbar^2 J(J+1)}{2\mu R^2}$ se desplaza.
+5. Minimizando $V_{\text{eff}}$: $k(R_c - R_e) - \frac{\hbar^2 J(J+1)}{\mu R_c^3} = 0 \implies \Delta R \approx \frac{\hbar^2 J(J+1)}{k \mu R_e^3}$.
+6. Sustituyendo de nuevo en la energía, el término de corrección es $-D_e J^2(J+1)^2$, donde $D_e = \frac{4B_e^3}{\hbar^2 \omega^2}$.
+7. La energía final es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1) - D_e J^2(J+1)^2$.
+
+### Ejercicio 3: Condensación de Bose-Einstein en una Trampa Armónica
+Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein de un gas ideal de $N$ bosones atrapados en un potencial armónico tridimensional isotrópico $V(r) = \frac{1}{2} m \omega^2 r^2$.
+
+**Solución paso a paso:**
+1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
+2. El número total de partículas en estados excitados viene dado por la integral:
+   $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
+4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+   $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
+6. Resolviendo para $T_c$:
+   $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
+
+## 💻 Simulaciones Computacionales
+
+Este script computa y visualiza la densidad de probabilidad radial de los orbitales del átomo de hidrógeno, implementando analíticamente los polinomios asociados de Laguerre derivados de la ecuación de Schrödinger central.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.special import genlaguerre
+from math import factorial
+
+def R_nl(n, l, r):
+    """Función de onda radial para el átomo de hidrógeno (Z=1).
+    r está en unidades de radio de Bohr (a0)."""
+    rho = 2.0 * r / n
+    # Factor de normalización
+    norm_term = np.sqrt((2.0/n)**3 * factorial(n - l - 1) / (2.0 * n * factorial(n + l)))
+    # Polinomio de Laguerre generalizado L_{n-l-1}^{2l+1}(rho)
+    L_poly = genlaguerre(n - l - 1, 2 * l + 1)(rho)
+    return norm_term * np.exp(-rho / 2.0) * (rho**l) * L_poly
+
+r_vals = np.linspace(0, 30, 1000)
+
+# Casos de orbitales a plotear (n, l)
+orbitals = [(1, 0, '1s'), (2, 0, '2s'), (2, 1, '2p'), (3, 0, '3s'), (3, 1, '3p'), (3, 2, '3d')]
+colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b']
+
+plt.figure(figsize=(12, 6))
+
+for (n, l, name), color in zip(orbitals, colors):
+    # Función de densidad de probabilidad radial P(r) = r^2 * |R(r)|^2
+    R = R_nl(n, l, r_vals)
+    P_r = r_vals**2 * R**2
+    plt.plot(r_vals, P_r, label=f'Orbital {name}', lw=2, color=color)
+
+plt.title("Densidad de Probabilidad Radial Atómica del Hidrógeno")
+plt.xlabel("Distancia al Núcleo $r$ (en radios de Bohr $a_0$)")
+plt.ylabel("Densidad Radial $P(r) = r^2 |R_{nl}(r)|^2$")
+plt.legend(loc='upper right')
+plt.grid(True, alpha=0.3)
+plt.xlim(0, 25)
+plt.tight_layout()
+# plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

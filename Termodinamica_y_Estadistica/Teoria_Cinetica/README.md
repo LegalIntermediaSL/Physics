@@ -106,6 +106,97 @@ La distribución es asimétrica y refleja una curva de "campana" modificada (ses
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Cálculo del Camino Libre Medio**
+Deriva la fórmula para el camino libre medio $\lambda$ de un gas ideal compuesto por moléculas modeladas como esferas rígidas de diámetro $d$, con densidad numérica $n = N/V$.
+**Solución paso a paso:**
+1. Imaginemos que una molécula viaja a una velocidad $\langle v \rangle$ y barre un cilindro de sección transversal $\sigma = \pi d^2$ (donde $d$ es el radio de colisión, es decir, dos veces el radio molecular).
+2. En un tiempo $\Delta t$, el cilindro barrido tiene un volumen $V_c = \sigma \langle v \rangle \Delta t$.
+3. El número de colisiones sufridas equivale al número de partículas diana en ese volumen: $Z = n V_c = n \sigma \langle v \rangle \Delta t$.
+4. El camino libre medio se define como la distancia total recorrida dividida por el número de colisiones:
+$$ \lambda = \frac{\langle v \rangle \Delta t}{Z} = \frac{\langle v \rangle \Delta t}{n \sigma \langle v \rangle \Delta t} = \frac{1}{n \sigma} $$
+5. Una derivación más rigurosa usando la distribución de Maxwell-Boltzmann de velocidades relativas entre partículas $\langle v_{\text{rel}} \rangle = \sqrt{2} \langle v \rangle$, nos da:
+$$ Z = n \sigma \sqrt{2} \langle v \rangle \Delta t \implies \lambda = \frac{1}{\sqrt{2} n \pi d^2} $$
+Esta fórmula predice que el camino libre de los gases decrece al aumentar la presión.
+
+**Problema 2: Frecuencia de Colisión con la Pared (Flujo Efusivo)**
+A partir de la distribución de velocidades de Maxwell-Boltzmann, calcula el flujo molecular $\Phi$, es decir, el número de partículas que colisionan contra una unidad de área de una pared plana por unidad de tiempo.
+**Solución paso a paso:**
+1. Consideremos un elemento de área $dA$ en la pared $YZ$. Solo las partículas con velocidad $v_x > 0$ colisionarán.
+2. En un tiempo $dt$, todas las partículas en el volumen $dV = v_x dt dA$ llegarán al área. El número es $dN = (N/V) v_x dt dA = n v_x dt dA$.
+3. Por tanto, el flujo es $d\Phi = \frac{dN}{dA dt} = n v_x$.
+4. Debemos integrar este flujo microscópico sobre todas las partículas promediadas por la distribución de probabilidad unidimensional $f(v_x)$:
+$$ \Phi = n \int_0^\infty v_x f(v_x) dv_x $$
+5. La distribución gaussiana unidimensional es $f(v_x) = \left(\frac{m}{2\pi k_B T}\right)^{1/2} e^{-mv_x^2 / 2k_B T}$.
+6. Resolviendo la integral estándar:
+$$ \int_0^\infty v_x e^{-mv_x^2 / 2k_B T} dv_x = \frac{k_B T}{m} $$
+7. Resulta $\Phi = n \left(\frac{m}{2\pi k_B T}\right)^{1/2} \frac{k_B T}{m} = n \sqrt{\frac{k_B T}{2\pi m}}$.
+8. Sabiendo que la velocidad media escalar 3D es $\langle v \rangle = \sqrt{\frac{8 k_B T}{\pi m}}$, observamos que $\sqrt{\frac{k_B T}{2\pi m}} = \frac{1}{4} \langle v \rangle$.
+9. Concluimos que $\Phi = \frac{1}{4} n \langle v \rangle$, una fórmula fundamental en física del vacío y efusión de gases (Ley de Graham).
+
+**Problema 3: Distribución de Velocidades Extremas (V_p, Promedio y RMS)**
+Dada la distribución de velocidades de Maxwell-Boltzmann: $f(v) = 4\pi \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 e^{-mv^2 / 2k_B T}$.
+Encuentra la velocidad más probable $v_p$ y verifica que $v_p < \langle v \rangle < v_{\text{rms}}$.
+**Solución paso a paso:**
+1. La velocidad más probable $v_p$ es el máximo de la función de densidad de probabilidad. Encontramos esto derivando y haciendo cero:
+$$ \frac{df}{dv} \propto \frac{d}{dv} (v^2 e^{-av^2}) = 2v e^{-av^2} - 2av^3 e^{-av^2} = 0 $$
+Donde $a = \frac{m}{2k_B T}$.
+2. Dividiendo por $2v e^{-av^2}$, obtenemos $1 - av^2 = 0 \implies v_p = \frac{1}{\sqrt{a}} = \sqrt{\frac{2k_B T}{m}}$.
+3. La velocidad media se calcula integrando: $\langle v \rangle = \int_0^\infty v f(v) dv$.
+Con una integral tipo gamma, $\langle v \rangle = \sqrt{\frac{8 k_B T}{\pi m}} \approx 1.59 \sqrt{\frac{k_B T}{m}}$.
+4. La velocidad cuadrática media $v_{\text{rms}} = \sqrt{\langle v^2 \rangle}$ se obtuvo previamente: $v_{\text{rms}} = \sqrt{\frac{3 k_B T}{m}} \approx 1.73 \sqrt{\frac{k_B T}{m}}$.
+5. Comparando los factores numéricos frente al término común $\sqrt{k_B T / m}$:
+   - $v_p = 1.414$
+   - $\langle v \rangle = 1.596$
+   - $v_{\text{rms}} = 1.732$
+Queda demostrado matemáticamente que la relación de jerarquía es siempre $v_p < \langle v \rangle < v_{\text{rms}}$ debido a la asimetría log-normal de la distribución exponencial.
+
+## 💻 Simulaciones Computacionales
+
+La siguiente simulación en Python traza la distribución de velocidades de Maxwell-Boltzmann para un gas ideal a diferentes temperaturas, mostrando cómo la velocidad cuadrática media y la velocidad más probable se desplazan térmicamente.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.constants import k, atomic_mass
+
+def maxwell_boltzmann(v, m, T):
+    """
+    Distribución de velocidades de Maxwell-Boltzmann.
+    v: array de velocidades (m/s)
+    m: masa de una molécula (kg)
+    T: temperatura (K)
+    """
+    factor = 4 * np.pi * (m / (2 * np.pi * k * T))**1.5
+    return factor * (v**2) * np.exp(-m * v**2 / (2 * k * T))
+
+# Masa de una molécula de Oxígeno (O2)
+mass_O2 = 32.0 * atomic_mass
+
+v = np.linspace(0, 2000, 1000)
+temperatures = [100, 300, 1000] # Kelvin
+
+plt.figure(figsize=(10, 6))
+
+for T in temperatures:
+    f_v = maxwell_boltzmann(v, mass_O2, T)
+    plt.plot(v, f_v, label=f'T = {T} K')
+    
+    # Calcular y marcar V_p (Velocidad más probable)
+    v_p = np.sqrt(2 * k * T / mass_O2)
+    plt.axvline(v_p, color=plt.gca().lines[-1].get_color(), linestyle='--', alpha=0.5)
+
+plt.title('Distribución de Velocidades de Maxwell-Boltzmann (Gas O$_2$)')
+plt.xlabel('Velocidad $v$ (m/s)')
+plt.ylabel('Densidad de Probabilidad $f(v)$')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.xlim(0, 2000)
+plt.ylim(0, max(maxwell_boltzmann(v, mass_O2, temperatures[0])) * 1.1)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

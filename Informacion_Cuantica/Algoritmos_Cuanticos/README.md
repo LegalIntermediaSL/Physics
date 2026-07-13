@@ -102,6 +102,112 @@ En el algoritmo de estimación de fase o búsqueda de periodos (esencia de Shor)
 3. La aplicación de la inversa $\text{QFT}^\dagger$ aísla las frecuencias de esta señal discreta inter-estados. Extrae la periodicidad del patrón de interferencia en fases complejas para obtener el periodo $r$.
 4. Dado $r$ y con la certidumbre matemática de que si es par y $a^{r/2} \not\equiv -1 \pmod M$, los factores del módulo se pueden obtener clásicamente en tiempo polinómico mediante el algoritmo de Euclides calculando $\text{mcd}(a^{r/2} \pm 1, M)$.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Desigualdad CHSH y Entrelazamiento
+Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)$ viola la desigualdad CHSH y encuentre el valor máximo de la correlación cuántica.
+
+**Solución paso a paso:**
+1. El operador CHSH es $S = A \otimes B + A \otimes B' + A' \otimes B - A' \otimes B'$. Para variables clásicas locales, $|\langle S \rangle| \le 2$.
+2. Elegimos las mediciones para Alice como $A = \sigma_z$ y $A' = \sigma_x$.
+3. Elegimos las mediciones para Bob como $B = \frac{-\sigma_z - \sigma_x}{\sqrt{2}}$ y $B' = \frac{\sigma_z - \sigma_x}{\sqrt{2}}$.
+4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
+5. Calculamos cada término:
+   $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+6. Sumando los términos, el valor de expectación es:
+   $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
+
+### Ejercicio 2: Código de Corrección de Errores de Shor (9 qubits)
+Muestre cómo el código de Shor protege contra un error de fase $Z$ arbitrario en el primer qubit.
+
+**Solución paso a paso:**
+1. El estado lógico $|0\rangle_L$ está codificado como $\frac{1}{2\sqrt{2}}(|000\rangle + |111\rangle)^{\otimes 3}$.
+2. Supongamos un error de fase en el primer qubit: $Z_1 |\psi_L\rangle$. El término interior pasa a ser $\frac{1}{\sqrt{2}}(Z|000\rangle + Z|111\rangle) = \frac{1}{\sqrt{2}}(|000\rangle - |111\rangle)$.
+3. Para detectar el error, realizamos mediciones de síndrome con los operadores estabilizadores del código de fase: $X_1 X_2 X_3 X_4 X_5 X_6$ y $X_4 X_5 X_6 X_7 X_8 X_9$.
+4. El error de fase es detectado por la medición cruzada entre los bloques. Equivalentemente, al aplicar compuertas Hadamard en cada bloque y realizar paridad $Z$ como en el código bit-flip, identificamos en qué bloque ocurrió el cambio de signo.
+5. Tras identificar que el error ocurrió en el primer bloque de 3 qubits, aplicamos el operador de corrección $Z$ correspondiente al bloque, el cual restaura la fase global relativa.
+6. El estado vuelve exactamente a $|\psi_L\rangle$ sin pérdida de información, probando la efectividad contra un error $Z_1$.
+
+### Ejercicio 3: Transformada de Fourier Cuántica (QFT)
+Construya el circuito y derive la acción de la QFT sobre un estado de base computacional de 3 qubits $|x\rangle = |x_2 x_1 x_0\rangle$.
+
+**Solución paso a paso:**
+1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
+2. Para 3 qubits, se puede reescribir como un producto tensorial:
+   $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
+4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
+5. Se repite el proceso para los qubits restantes, aplicando Hadamard y $R_2$ en $x_1$, y finalmente Hadamard en $x_0$.
+6. El circuito final requiere operaciones SWAP para invertir el orden de los qubits y coincidir con la convención estándar.
+
+## 💻 Simulaciones Computacionales
+
+A continuación se presenta una simulación completa del Algoritmo de Búsqueda de Grover utilizando un simulador de vectores de estado en Python.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def hadamard_transform(n):
+    H = np.array([[1, 1], [1, -1]]) / np.sqrt(2)
+    H_n = H
+    for _ in range(n - 1):
+        H_n = np.kron(H_n, H)
+    return H_n
+
+def grover_oracle(n, target_state):
+    N = 2**n
+    oracle = np.eye(N)
+    oracle[target_state, target_state] = -1
+    return oracle
+
+def grover_diffusion(n):
+    N = 2**n
+    H_n = hadamard_transform(n)
+    U_0 = np.eye(N)
+    U_0[0, 0] = -1
+    return H_n @ U_0 @ H_n
+
+def simulate_grover(n_qubits, target):
+    N = 2**n_qubits
+    state = np.zeros(N)
+    state[0] = 1.0
+    
+    # Superposición inicial
+    H_n = hadamard_transform(n_qubits)
+    state = H_n @ state
+    
+    # Número óptimo de iteraciones
+    iterations = int(np.pi / 4 * np.sqrt(N))
+    
+    oracle = grover_oracle(n_qubits, target)
+    diffusion = grover_diffusion(n_qubits)
+    
+    probs = []
+    probs.append(np.abs(state)**2)
+    
+    for _ in range(iterations):
+        state = oracle @ state
+        state = diffusion @ state
+        probs.append(np.abs(state)**2)
+        
+    return probs
+
+n = 4  # 4 qubits, 16 estados
+target_idx = 11
+probabilities = simulate_grover(n, target_idx)
+
+plt.figure(figsize=(10, 5))
+plt.bar(range(2**n), probabilities[-1], color='indigo')
+plt.title(f"Probabilidades finales - Algoritmo de Grover (Target: |{target_idx}⟩)")
+plt.xlabel("Estado Base")
+plt.ylabel("Probabilidad")
+plt.xticks(range(2**n))
+plt.grid(axis='y', alpha=0.5)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

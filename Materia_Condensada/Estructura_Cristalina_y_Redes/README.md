@@ -87,6 +87,104 @@ graph TD
    
 **Conclusión Fundamental:** Las matemáticas demuestran rígidamente que la red recíproca de una red FCC (Cúbica Centrada en las Caras) es una red BCC (Cúbica Centrada en el Cuerpo) con arista de longitud $4\pi/a$. Este es uno de los teoremas de dualidad geométrica más prominentes y estéticamente agradables en la cristalografía.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Fracción de Empaquetamiento de la Red HCP
+Calcule el factor de empaquetamiento atómico (APF) de la estructura hexagonal compacta (HCP) asumiendo esferas duras.
+
+**Solución paso a paso:**
+En la celda unitaria de la estructura HCP ideal, la base basal es un romboide con dos triángulos equiláteros de lado $a$. El volumen de la celda hexagonal base es el área de la base multiplicada por la altura $c$:
+El área basal es $A = a^2 \sin(60^\circ) = \frac{\sqrt{3}}{2} a^2$.
+El volumen total es $V_{celda} = \frac{\sqrt{3}}{2} a^2 c$.
+En una red HCP, la relación ideal c/a se determina por geometría tetraédrica: $c/a = \sqrt{8/3}$.
+Por lo tanto, $V_{celda} = \frac{\sqrt{3}}{2} a^3 \sqrt{\frac{8}{3}} = \sqrt{2} a^3$.
+El número de átomos dentro de esta celda primitiva es exactamente 2.
+El radio de las esferas que están en contacto en el plano basal es $R = a/2$.
+El volumen de los átomos dentro de la celda es:
+$$ V_{átomos} = 2 \times \frac{4}{3} \pi R^3 = 2 \times \frac{4}{3} \pi \left( \frac{a}{2} \right)^3 = \frac{\pi}{3} a^3 $$
+El Factor de Empaquetamiento (APF) es la razón:
+$$ APF = \frac{V_{átomos}}{V_{celda}} = \frac{\frac{\pi}{3} a^3}{\sqrt{2} a^3} = \frac{\pi}{3\sqrt{2}} \approx 0.74 $$
+Este es el máximo empaquetamiento teóricamente posible para esferas idénticas (idéntico a la estructura FCC).
+
+### Problema 2: Índices de Miller de un Plano Intersecante
+Determine los índices de Miller de un plano en una red cúbica simple que intercepta los ejes cristalográficos principales en las distancias $2a$, $3a$ y $a$ del origen.
+
+**Solución paso a paso:**
+El procedimiento estándar para hallar los índices de Miller $(hkl)$ es:
+1. Encontrar las intersecciones del plano con los ejes, expresadas en términos de las constantes de red. Aquí son 2, 3 y 1.
+2. Tomar los inversos de estos números:
+   $$ 1/2, \quad 1/3, \quad 1/1 $$
+3. Multiplicar por el mínimo común múltiplo (MCM) de los denominadores (que es 6) para reducirlos a los números enteros más pequeños posibles:
+   $$ 6 \times (1/2) = 3 $$
+   $$ 6 \times (1/3) = 2 $$
+   $$ 6 \times (1/1) = 6 $$
+Por lo tanto, los índices de Miller para este plano son $(3 2 6)$.
+
+### Problema 3: Red Recíproca de la Red BCC
+Demuestre que la red recíproca de una estructura cúbica centrada en el cuerpo (BCC) de lado $a$ es una estructura cúbica centrada en las caras (FCC) con un tamaño de celda de $4\pi/a$.
+
+**Solución paso a paso:**
+Los vectores primitivos de la red BCC directa son:
+$$ \mathbf{a}_1 = \frac{a}{2} (\mathbf{\hat{i}} + \mathbf{\hat{j}} - \mathbf{\hat{k}}) $$
+$$ \mathbf{a}_2 = \frac{a}{2} (-\mathbf{\hat{i}} + \mathbf{\hat{j}} + \mathbf{\hat{k}}) $$
+$$ \mathbf{a}_3 = \frac{a}{2} (\mathbf{\hat{i}} - \mathbf{\hat{j}} + \mathbf{\hat{k}}) $$
+El volumen de esta celda primitiva es $V_c = \mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3) = \frac{a^3}{2}$.
+Calculamos el primer vector primitivo recíproco $\mathbf{b}_1$:
+$$ \mathbf{a}_2 \times \mathbf{a}_3 = \frac{a^2}{4} \left( (\mathbf{\hat{j}}+\mathbf{\hat{k}}-\mathbf{\hat{i}}) \times (\mathbf{\hat{i}}+\mathbf{\hat{k}}-\mathbf{\hat{j}}) \right) = \frac{a^2}{2} (\mathbf{\hat{i}} + \mathbf{\hat{j}}) $$
+$$ \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V_c} = 2\pi \frac{\frac{a^2}{2}(\mathbf{\hat{i}}+\mathbf{\hat{j}})}{a^3/2} = \frac{2\pi}{a} (\mathbf{\hat{i}} + \mathbf{\hat{j}}) $$
+Por permutación cíclica para los otros dos:
+$$ \mathbf{b}_2 = \frac{2\pi}{a} (\mathbf{\hat{j}} + \mathbf{\hat{k}}), \quad \mathbf{b}_3 = \frac{2\pi}{a} (\mathbf{\hat{k}} + \mathbf{\hat{i}}) $$
+Estos tres vectores $\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3$ son exactamente los vectores primitivos canónicos de una red FCC en el espacio recíproco. La arista del cubo de dicha red recíproca es $2 \times \frac{2\pi}{a} = \frac{4\pi}{a}$.
+
+## 💻 Simulaciones Computacionales
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_reciprocal_lattice_2d():
+    # Direct lattice primitive vectors (Hexagonal)
+    a1 = np.array([1, 0])
+    a2 = np.array([0.5, np.sqrt(3)/2])
+    
+    # Reciprocal lattice vectors
+    area = np.cross(a1, a2)
+    b1 = 2 * np.pi * np.array([a2[1], -a2[0]]) / area
+    b2 = 2 * np.pi * np.array([-a1[1], a1[0]]) / area
+    
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+    
+    # Generate points
+    n = np.arange(-3, 4)
+    N1, N2 = np.meshgrid(n, n)
+    
+    # Direct lattice
+    Rx = N1 * a1[0] + N2 * a2[0]
+    Ry = N1 * a1[1] + N2 * a2[1]
+    ax1.scatter(Rx, Ry, color='blue')
+    ax1.quiver(0, 0, a1[0], a1[1], angles='xy', scale_units='xy', scale=1, color='r')
+    ax1.quiver(0, 0, a2[0], a2[1], angles='xy', scale_units='xy', scale=1, color='g')
+    ax1.set_title("Red Directa (Hexagonal)")
+    ax1.set_aspect('equal')
+    ax1.grid(True)
+    
+    # Reciprocal lattice
+    Gx = N1 * b1[0] + N2 * b2[0]
+    Gy = N1 * b1[1] + N2 * b2[1]
+    ax2.scatter(Gx, Gy, color='purple')
+    ax2.quiver(0, 0, b1[0], b1[1], angles='xy', scale_units='xy', scale=1, color='r')
+    ax2.quiver(0, 0, b2[0], b2[1], angles='xy', scale_units='xy', scale=1, color='g')
+    ax2.set_title("Red Recíproca")
+    ax2.set_aspect('equal')
+    ax2.grid(True)
+    
+    plt.tight_layout()
+    plt.show()
+
+if __name__ == '__main__':
+    plot_reciprocal_lattice_2d()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

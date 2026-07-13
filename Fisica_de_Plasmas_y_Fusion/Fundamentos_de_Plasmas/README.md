@@ -115,6 +115,103 @@ graph TD
 
 **Conclusión:** El plasma se comporta como un medio dieléctrico altamente dispersivo. Para altas frecuencias ($\omega > \omega_{pe}$), $\epsilon(\omega) > 0$ y las ondas electromagnéticas se propagan (ej. transmisión ionosférica, luz). Para bajas frecuencias ($\omega < \omega_{pe}$), $\epsilon(\omega) < 0$ y el plasma refleja o hace decaer evanescente la onda electromagnética (el fenómeno responsable de que la radio de baja frecuencia rebote en la ionosfera).
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Amortiguamiento de Landau desde Vlasov-Poisson
+Calcule el decaimiento de una onda electrostática usando la relación de dispersión dieléctrica linealizada obtenida de la ecuación de Vlasov:
+$$ 1 + \frac{\omega_{pe}^2}{k} \int_{-\infty}^{\infty} \frac{\partial f_0 / \partial v}{\omega - kv} dv = 0 $$
+Asuma que $f_0(v)$ es una distribución maxwelliana y $\omega / k \gg v_{th}$ (ondas rápidas).
+
+**Solución paso a paso:**
+La integral tiene un polo en $v = \omega/k$. Utilizando el contorno de Landau en el plano complejo, la integral de Cauchy se separa en el valor principal de Cauchy (VP) y un residuo:
+$$ \int_C \frac{\partial f_0 / \partial v}{kv - \omega} dv = \text{VP} \int \frac{\partial f_0 / \partial v}{kv - \omega} dv + i\pi \left. \frac{\partial f_0}{\partial v} \right|_{v=\omega/k} \frac{1}{|k|} $$
+Para la parte real (oscilatoria), asumimos $\omega = \omega_r + i\gamma$ con $|\gamma| \ll \omega_r$. El valor principal para la maxwelliana expandido en serie asintótica para altas velocidades de fase da:
+$$ 1 - \frac{\omega_{pe}^2}{\omega_r^2} \left( 1 + \frac{3k^2 v_{th}^2}{\omega_r^2} \right) = 0 \implies \omega_r^2 \approx \omega_{pe}^2 + 3k^2 v_{th}^2 $$
+Para la parte imaginaria $\gamma$, que representa el decaimiento o amortiguamiento de la onda, igualamos las contribuciones imaginarias de la función dieléctrica $\epsilon(\omega, k) = \epsilon_r + i\epsilon_i = 0$:
+$$ \gamma \approx -\frac{\epsilon_i(\omega_r, k)}{\partial \epsilon_r / \partial \omega_r} $$
+Calculando el residuo de la maxwelliana $f_0(v) = \frac{1}{\sqrt{2\pi v_{th}^2}} e^{-v^2/2v_{th}^2}$:
+$$ \epsilon_i = -\pi \frac{\omega_{pe}^2}{k^2} \left. \frac{\partial f_0}{\partial v} \right|_{\omega_r/k} = \sqrt{\frac{\pi}{2}} \frac{\omega_{pe}^2}{k^2} \frac{\omega_r}{k v_{th}^3} e^{-\omega_r^2/2k^2 v_{th}^2} $$
+Sustituyendo el jacobiano $\partial \epsilon_r / \partial \omega_r \approx 2/\omega_r$:
+$$ \gamma = -\omega_r \sqrt{\frac{\pi}{8}} \frac{1}{(k\lambda_D)^3} \exp\left( -\frac{1}{2(k\lambda_D)^2} - \frac{3}{2} \right) $$
+Esto demuestra matemáticamente la transferencia de energía de la onda a las partículas resonantes que viajan ligeramente más despacio que la velocidad de fase.
+
+### Problema 2: Inestabilidad de Dos Haces (Two-Stream Instability)
+Considere un plasma de electrones fríos en un fondo iónico neutralizador. Suponga que los electrones están divididos en dos haces de igual densidad $n_0/2$ moviéndose con velocidades $+v_0$ y $-v_0$. Derive la relación de dispersión y encuentre la tasa máxima de crecimiento de la inestabilidad.
+
+**Solución paso a paso:**
+Partimos de la función dieléctrica para $N$ fluidos fríos no relativistas:
+$$ \epsilon(\omega, k) = 1 - \sum_j \frac{\omega_{pj}^2}{(\omega - k v_{0j})^2} = 0 $$
+Para nuestro caso, con dos haces electrónicos simétricos:
+$$ 1 = \frac{\omega_{pe}^2/2}{(\omega - kv_0)^2} + \frac{\omega_{pe}^2/2}{(\omega + kv_0)^2} $$
+Multiplicando por los denominadores:
+$$ (\omega^2 - k^2 v_0^2)^2 = \frac{\omega_{pe}^2}{2} \left( (\omega + kv_0)^2 + (\omega - kv_0)^2 \right) = \omega_{pe}^2 (\omega^2 + k^2 v_0^2) $$
+Esta es una ecuación bicuadrática para $\omega$. Resolviendo para $\omega^2$:
+$$ \omega^2 = k^2 v_0^2 + \frac{\omega_{pe}^2}{2} \pm \sqrt{ \left( k^2 v_0^2 + \frac{\omega_{pe}^2}{2} \right)^2 - k^2 v_0^2 (k^2 v_0^2 - \omega_{pe}^2) } $$
+La inestabilidad ocurre cuando $\omega^2 < 0$, lo que implica que $\omega$ tiene una componente imaginaria pura $\omega = i\gamma$, creciendo exponencialmente en el tiempo.
+Esto requiere $k^2 v_0^2 < \omega_{pe}^2$.
+La tasa de crecimiento máxima se encuentra optimizando $\gamma(k)$. Tomando derivadas, el máximo ocurre en $k \approx \frac{\sqrt{3}}{2} \frac{\omega_{pe}}{v_0}$, rindiendo una tasa de crecimiento de la inestabilidad $\gamma_{max} = \frac{\omega_{pe}}{2}$.
+
+### Problema 3: Cortes (Cutoffs) de Ondas Electromagnéticas
+Determine las frecuencias de corte para las ondas electromagnéticas polarizadas circularmente (modo R y modo L) propagándose paralelamente a un campo magnético estático $B_0$.
+
+**Solución paso a paso:**
+Para propagación paralela $\mathbf{k} \parallel \mathbf{B}_0$, la relación de dispersión tensorial del plasma magnetizado se desacopla en dos modos de polarización circular:
+El índice de refracción $N^2 = \left( \frac{kc}{\omega} \right)^2$ está dado por:
+$$ N_R^2 = 1 - \frac{\omega_{pe}^2}{\omega (\omega - \Omega_{ce})} \quad \text{(Modo Right / Extraordinario)} $$
+$$ N_L^2 = 1 - \frac{\omega_{pe}^2}{\omega (\omega + \Omega_{ce})} \quad \text{(Modo Left / Ordinario)} $$
+donde $\Omega_{ce} = e B_0 / m_e$ es la frecuencia ciclotrónica electrónica.
+Los cortes ocurren cuando la onda se refleja, es decir $N^2 = 0$ (o $k=0$).
+Para el modo R ($N_R^2 = 0$):
+$$ \omega^2 - \omega \Omega_{ce} - \omega_{pe}^2 = 0 $$
+$$ \omega_R = \frac{\Omega_{ce} + \sqrt{\Omega_{ce}^2 + 4\omega_{pe}^2}}{2} $$
+Para el modo L ($N_L^2 = 0$):
+$$ \omega^2 + \omega \Omega_{ce} - \omega_{pe}^2 = 0 $$
+$$ \omega_L = \frac{-\Omega_{ce} + \sqrt{\Omega_{ce}^2 + 4\omega_{pe}^2}}{2} $$
+Las ondas con frecuencias menores a estos umbrales son evanescentes, demostrando que el campo magnético levanta la degeneración del plasma isotrópico y causa birrefringencia en medios interestelares.
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Relación de Dispersión de Ondas de Plasma Electrónico
+
+Calcula y grafica la relación de dispersión (frecuencia vs número de onda) para las ondas de Langmuir en un plasma cálido usando la aproximación fluida de Bohm-Gross: $\omega^2 = \omega_{pe}^2 + 3 k^2 v_{th}^2$.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros físicos
+n0 = 1e18       # Densidad electrónica m^-3
+e = 1.602e-19   # Carga elemental C
+me = 9.109e-31  # Masa del electrón kg
+eps0 = 8.854e-12
+k_B = 1.38e-23  # Constante de Boltzmann J/K
+T_e = 1e5       # Temperatura en K
+
+# Frecuencia de plasma y velocidad térmica
+omega_pe = np.sqrt(n0 * e**2 / (me * eps0))
+v_th = np.sqrt(k_B * T_e / me)
+lambda_D = v_th / omega_pe
+
+# Rango del número de onda normalizado k * lambda_D
+k_lam = np.linspace(0.0, 0.5, 100)
+k = k_lam / lambda_D
+
+# Relación de dispersión Bohm-Gross
+omega = np.sqrt(omega_pe**2 + 3 * k**2 * v_th**2)
+
+plt.figure(figsize=(10, 6))
+plt.plot(k_lam, omega / omega_pe, 'b-', linewidth=2)
+plt.axhline(1.0, color='r', linestyle='--', label='Fluido Frío ($\omega_{pe}$)')
+
+plt.title('Relación de Dispersión: Ondas de Langmuir (Bohm-Gross)')
+plt.xlabel('Número de Onda Normalizado $k \lambda_D$')
+plt.ylabel('Frecuencia Normalizada $\omega / \omega_{pe}$')
+plt.fill_between(k_lam, omega / omega_pe, 1.0, alpha=0.1, color='blue', label='Efectos Térmicos (Dispersión)')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

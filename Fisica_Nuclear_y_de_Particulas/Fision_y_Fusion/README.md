@@ -114,6 +114,101 @@ $$ n \tau_E \approx 10^{20} \text{ s m}^{-3} $$
 Este triple producto (densidad $\times$ confinamiento $\times$ temperatura) es la métrica de éxito definitiva para reactores de fusión comercial (como el diseño Tokamak usado en ITER) o de confinamiento inercial (como el NIF).
 
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Fórmula Semiempírica de Masas y Estabilidad Isobarica
+Determine el núcleo más estable contra decaimiento beta para una familia isobárica con $A = 125$. Utilice la fórmula semiempírica de masas considerando las constantes típicas.
+
+**Solución paso a paso:**
+1. La masa atómica de un núcleo isobárico es aproximadamente una parábola en función de $Z$:
+   $$ M(A,Z) \approx \alpha Z^2 + \beta Z + \gamma $$
+2. Los términos relevantes de la fórmula de Bethe-Weizsäcker que dependen de $Z$ son el término de Coulomb y el de asimetría:
+   $$ E_C = a_c \frac{Z(Z-1)}{A^{1/3}} \approx a_c \frac{Z^2}{A^{1/3}}, \quad E_A = a_a \frac{(A-2Z)^2}{A} $$
+3. Maximizando la energía de ligadura con respecto a $Z$ (o minimizando la masa):
+   $$ \frac{\partial E_B}{\partial Z} = -2 a_c \frac{Z}{A^{1/3}} + 4 a_a \frac{A-2Z}{A} = 0 $$
+4. Despejando $Z$ para el isóbaro más estable ($Z_{min}$):
+   $$ Z_{min} = \frac{A}{2 + \frac{a_c}{2 a_a} A^{2/3}} $$
+5. Utilizando valores típicos $a_c = 0.71$ MeV y $a_a = 23.2$ MeV para $A = 125$:
+   $$ Z_{min} = \frac{125}{2 + \frac{0.71}{46.4} (125)^{2/3}} = \frac{125}{2 + 0.0153 \times 25} = \frac{125}{2.3825} \approx 52.4 $$
+6. El número atómico entero más cercano es $Z = 52$, que corresponde al Telurio ($^{125}\text{Te}$).
+
+### Ejercicio 2: Cinemática Relativista del Decaimiento del Pion
+Un pion neutro ($\pi^0$) en reposo decae en dos fotones ($\pi^0 \to \gamma + \gamma$). Si el pion se mueve con una velocidad $v = 0.8c$ en el sistema del laboratorio, calcule las energías máxima y mínima de los fotones emitidos.
+
+**Solución paso a paso:**
+1. En el sistema de reposo (CM) del pion, por conservación del cuadrimomento, ambos fotones tienen la misma energía $E'_1 = E'_2 = \frac{m_\pi c^2}{2}$.
+2. El pion se mueve en el sistema de laboratorio (Lab) con velocidad $v=0.8c$, por lo que el factor de Lorentz es $\gamma = \frac{1}{\sqrt{1-0.8^2}} = \frac{1}{0.6} = \frac{5}{3}$.
+3. Usamos la transformación de Lorentz para la energía del fotón: $E = \gamma E' (1 + \beta \cos\theta')$, donde $\theta'$ es el ángulo de emisión en el sistema CM relativo a la velocidad del pion.
+4. La energía máxima ocurre cuando el fotón se emite hacia adelante ($\theta'=0$):
+   $$ E_{max} = \gamma \frac{m_\pi c^2}{2} (1 + \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 + 0.8) = 112.5 \times 1.8 = 202.5 \text{ MeV} $$
+5. La energía mínima ocurre cuando el fotón se emite hacia atrás ($\theta'=\pi$):
+   $$ E_{min} = \gamma \frac{m_\pi c^2}{2} (1 - \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 - 0.8) = 112.5 \times 0.2 = 22.5 \text{ MeV} $$
+6. Verificación: $E_{max} + E_{min} = 225 \text{ MeV}$, que es precisamente la energía total del pion en el sistema de laboratorio ($E = \gamma m_\pi c^2$).
+
+### Ejercicio 3: Sección Eficaz de Dispersión de Rutherford Cuántica
+A partir de la Regla de Oro de Fermi y la aproximación de Born, derive la sección diferencial de dispersión de una partícula de carga $z e$ y masa $m$ por un núcleo de carga $Z e$.
+
+**Solución paso a paso:**
+1. El potencial de Coulomb es $V(r) = \frac{z Z e^2}{4\pi\epsilon_0 r}$.
+2. En la primera aproximación de Born, la amplitud de dispersión es proporcional a la transformada de Fourier del potencial:
+   $$ f(\theta) = -\frac{m}{2\pi\hbar^2} \int V(r) e^{i \vec{q} \cdot \vec{r}} d^3r $$
+   donde $\vec{q} = \vec{k}_f - \vec{k}_i$ es la transferencia de momento.
+3. Para asegurar convergencia, se utiliza un potencial apantallado $V(r) e^{-\mu r}$ y luego se toma $\mu \to 0$. La integral resulta en:
+   $$ \int \frac{e^{-\mu r}}{r} e^{i \vec{q} \cdot \vec{r}} d^3r = \frac{4\pi}{q^2 + \mu^2} \xrightarrow{\mu \to 0} \frac{4\pi}{q^2} $$
+4. La magnitud de la transferencia de momento, considerando dispersión elástica ($|\vec{k}_i| = |\vec{k}_f| = k$), es $q = 2k \sin(\theta/2)$.
+5. Sustituyendo todo, la amplitud es:
+   $$ f(\theta) = -\frac{m z Z e^2}{2\pi\hbar^2 4\pi\epsilon_0} \frac{4\pi}{(2k \sin(\theta/2))^2} = -\frac{z Z e^2}{16\pi\epsilon_0 E \sin^2(\theta/2)} $$
+6. La sección diferencial es $\frac{d\sigma}{d\Omega} = |f(\theta)|^2$:
+   $$ \frac{d\sigma}{d\Omega} = \left( \frac{z Z e^2}{16\pi\epsilon_0 E} \right)^2 \frac{1}{\sin^4(\theta/2)} $$
+   que coincide exactamente con el resultado clásico de Rutherford.
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Pico de Gamow en Fusión Nuclear
+
+Este código en Python calcula y visualiza el "Pico de Gamow", mostrando cómo la convolución de la distribución de energía de Maxwell-Boltzmann y la probabilidad de penetración cuántica (factor de Gamow) genera una ventana de energía óptima para la fusión termonuclear.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros para la reacción p-p en el núcleo solar
+T = 1.5e7  # Temperatura en Kelvin
+k_B = 8.617e-5  # Constante de Boltzmann en eV/K
+kT = k_B * T / 1000  # kT en keV
+
+# Rango de energías en keV
+E = np.linspace(0.1, 30, 1000)
+
+# Distribución de Maxwell-Boltzmann (proporcional a exp(-E/kT))
+MB_dist = np.exp(-E / kT)
+
+# Factor de penetración de Gamow (proporcional a exp(-sqrt(E_G/E)))
+# E_G para la reacción p-p es aprox 493 keV
+E_G = 493.0
+Gamow_factor = np.exp(-np.sqrt(E_G / E))
+
+# Pico de Gamow (Producto de ambas)
+Gamow_peak = MB_dist * Gamow_factor
+
+# Normalización para facilitar la visualización conjunta
+MB_dist_norm = MB_dist / np.max(MB_dist)
+Gamow_factor_norm = Gamow_factor / np.max(Gamow_factor)
+Gamow_peak_norm = Gamow_peak / np.max(Gamow_peak)
+
+plt.figure(figsize=(10, 6))
+plt.plot(E, MB_dist_norm, 'b--', label='Maxwell-Boltzmann (Disponibilidad térmica)')
+plt.plot(E, Gamow_factor_norm, 'r--', label='Factor de Gamow (Penetración cuántica)')
+plt.plot(E, Gamow_peak_norm, 'g-', linewidth=3, label='Pico de Gamow (Ventana de fusión)')
+
+plt.title(f'Pico de Gamow para Fusión p-p (T = {T:.1e} K)')
+plt.xlabel('Energía (keV)')
+plt.ylabel('Probabilidad (Normalizada)')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online

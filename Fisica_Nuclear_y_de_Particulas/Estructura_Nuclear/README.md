@@ -168,6 +168,108 @@ graph TD
     Par -.->|Emparejamiento| N5(Núcleos con Z par y N par son más estables)
 ```
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Fórmula Semiempírica de Masas y Estabilidad Isobarica
+Determine el núcleo más estable contra decaimiento beta para una familia isobárica con $A = 125$. Utilice la fórmula semiempírica de masas considerando las constantes típicas.
+
+**Solución paso a paso:**
+1. La masa atómica de un núcleo isobárico es aproximadamente una parábola en función de $Z$:
+   $$ M(A,Z) \approx \alpha Z^2 + \beta Z + \gamma $$
+2. Los términos relevantes de la fórmula de Bethe-Weizsäcker que dependen de $Z$ son el término de Coulomb y el de asimetría:
+   $$ E_C = a_c \frac{Z(Z-1)}{A^{1/3}} \approx a_c \frac{Z^2}{A^{1/3}}, \quad E_A = a_a \frac{(A-2Z)^2}{A} $$
+3. Maximizando la energía de ligadura con respecto a $Z$ (o minimizando la masa):
+   $$ \frac{\partial E_B}{\partial Z} = -2 a_c \frac{Z}{A^{1/3}} + 4 a_a \frac{A-2Z}{A} = 0 $$
+4. Despejando $Z$ para el isóbaro más estable ($Z_{min}$):
+   $$ Z_{min} = \frac{A}{2 + \frac{a_c}{2 a_a} A^{2/3}} $$
+5. Utilizando valores típicos $a_c = 0.71$ MeV y $a_a = 23.2$ MeV para $A = 125$:
+   $$ Z_{min} = \frac{125}{2 + \frac{0.71}{46.4} (125)^{2/3}} = \frac{125}{2 + 0.0153 \times 25} = \frac{125}{2.3825} \approx 52.4 $$
+6. El número atómico entero más cercano es $Z = 52$, que corresponde al Telurio ($^{125}\text{Te}$).
+
+### Ejercicio 2: Cinemática Relativista del Decaimiento del Pion
+Un pion neutro ($\pi^0$) en reposo decae en dos fotones ($\pi^0 \to \gamma + \gamma$). Si el pion se mueve con una velocidad $v = 0.8c$ en el sistema del laboratorio, calcule las energías máxima y mínima de los fotones emitidos.
+
+**Solución paso a paso:**
+1. En el sistema de reposo (CM) del pion, por conservación del cuadrimomento, ambos fotones tienen la misma energía $E'_1 = E'_2 = \frac{m_\pi c^2}{2}$.
+2. El pion se mueve en el sistema de laboratorio (Lab) con velocidad $v=0.8c$, por lo que el factor de Lorentz es $\gamma = \frac{1}{\sqrt{1-0.8^2}} = \frac{1}{0.6} = \frac{5}{3}$.
+3. Usamos la transformación de Lorentz para la energía del fotón: $E = \gamma E' (1 + \beta \cos\theta')$, donde $\theta'$ es el ángulo de emisión en el sistema CM relativo a la velocidad del pion.
+4. La energía máxima ocurre cuando el fotón se emite hacia adelante ($\theta'=0$):
+   $$ E_{max} = \gamma \frac{m_\pi c^2}{2} (1 + \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 + 0.8) = 112.5 \times 1.8 = 202.5 \text{ MeV} $$
+5. La energía mínima ocurre cuando el fotón se emite hacia atrás ($\theta'=\pi$):
+   $$ E_{min} = \gamma \frac{m_\pi c^2}{2} (1 - \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 - 0.8) = 112.5 \times 0.2 = 22.5 \text{ MeV} $$
+6. Verificación: $E_{max} + E_{min} = 225 \text{ MeV}$, que es precisamente la energía total del pion en el sistema de laboratorio ($E = \gamma m_\pi c^2$).
+
+### Ejercicio 3: Sección Eficaz de Dispersión de Rutherford Cuántica
+A partir de la Regla de Oro de Fermi y la aproximación de Born, derive la sección diferencial de dispersión de una partícula de carga $z e$ y masa $m$ por un núcleo de carga $Z e$.
+
+**Solución paso a paso:**
+1. El potencial de Coulomb es $V(r) = \frac{z Z e^2}{4\pi\epsilon_0 r}$.
+2. En la primera aproximación de Born, la amplitud de dispersión es proporcional a la transformada de Fourier del potencial:
+   $$ f(\theta) = -\frac{m}{2\pi\hbar^2} \int V(r) e^{i \vec{q} \cdot \vec{r}} d^3r $$
+   donde $\vec{q} = \vec{k}_f - \vec{k}_i$ es la transferencia de momento.
+3. Para asegurar convergencia, se utiliza un potencial apantallado $V(r) e^{-\mu r}$ y luego se toma $\mu \to 0$. La integral resulta en:
+   $$ \int \frac{e^{-\mu r}}{r} e^{i \vec{q} \cdot \vec{r}} d^3r = \frac{4\pi}{q^2 + \mu^2} \xrightarrow{\mu \to 0} \frac{4\pi}{q^2} $$
+4. La magnitud de la transferencia de momento, considerando dispersión elástica ($|\vec{k}_i| = |\vec{k}_f| = k$), es $q = 2k \sin(\theta/2)$.
+5. Sustituyendo todo, la amplitud es:
+   $$ f(\theta) = -\frac{m z Z e^2}{2\pi\hbar^2 4\pi\epsilon_0} \frac{4\pi}{(2k \sin(\theta/2))^2} = -\frac{z Z e^2}{16\pi\epsilon_0 E \sin^2(\theta/2)} $$
+6. La sección diferencial es $\frac{d\sigma}{d\Omega} = |f(\theta)|^2$:
+   $$ \frac{d\sigma}{d\Omega} = \left( \frac{z Z e^2}{16\pi\epsilon_0 E} \right)^2 \frac{1}{\sin^4(\theta/2)} $$
+   que coincide exactamente con el resultado clásico de Rutherford.
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Energía de Enlace por Nucleón (Fórmula Semiempírica de Masas)
+
+Este script en Python calcula y grafica la curva de energía de enlace por nucleón (B/A) utilizando el modelo de la gota líquida para los isótopos más estables de cada elemento.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Constantes de la fórmula semiempírica (MeV)
+aV = 15.67
+aS = 17.23
+aC = 0.714
+aA = 23.29
+aP = 11.2
+
+def binding_energy(A, Z):
+    # Términos
+    vol = aV * A
+    surf = aS * A**(2/3)
+    coul = aC * Z**2 / (A**(1/3))
+    asym = aA * (A - 2*Z)**2 / A
+    
+    # Emparejamiento
+    N = A - Z
+    if Z % 2 == 0 and N % 2 == 0:
+        pairing = aP / np.sqrt(A)
+    elif Z % 2 != 0 and N % 2 != 0:
+        pairing = -aP / np.sqrt(A)
+    else:
+        pairing = 0
+        
+    B = vol - surf - coul - asym + pairing
+    return B
+
+# Aproximación para el Z más estable para un A dado
+A_vals = np.arange(10, 250)
+Z_stable = A_vals / (2 + (aC / (2 * aA)) * A_vals**(2/3))
+Z_vals = np.round(Z_stable)
+
+B_per_A = [binding_energy(A, Z) / A for A, Z in zip(A_vals, Z_vals)]
+
+plt.figure(figsize=(10, 6))
+plt.plot(A_vals, B_per_A, 'b-', label='Modelo de Gota Líquida')
+plt.axvline(x=56, color='r', linestyle='--', label='Hierro-56 (Máxima Estabilidad)')
+plt.title('Energía de Enlace por Nucleón vs Número Másico (A)')
+plt.xlabel('Número Másico (A)')
+plt.ylabel('Energía de Enlace por Nucleón (MeV)')
+plt.grid(True)
+plt.legend()
+plt.show()
+```
+
 ## 📚 Recursos
 
 ### Cursos Online

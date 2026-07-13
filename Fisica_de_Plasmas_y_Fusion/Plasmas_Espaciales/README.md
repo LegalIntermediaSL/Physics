@@ -105,6 +105,124 @@ En la capa de difusión disipativa a escala electrónica, la ecuación generaliz
 **Conclusión:** La magnetopausa ha sido comprimida violentamente desde sus $10 \, R_E$ nominales hasta $R_{mp} \approx 5.3 \, R_E$.
 Dado que los satélites geoestacionarios (comunicaciones, clima) orbitan a $6.6 \, R_E$, este evento de súper tormenta dejaría a los satélites **fuera del escudo magnético terrestre**, sumergiéndolos directamente en la turbulenta y radioactiva "Magnetosheath", poniéndolos en severo peligro de fallos electrónicos inducidos.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Modelo del Espiral Magnético de Parker
+Asumiendo un Sol en rotación con velocidad angular $\Omega_\odot$ y un viento solar de velocidad constante $u_w$ estrictamente radial lejos de la superficie, derive la forma geométrica de las líneas de campo magnético interplanetario (IMF) en el plano ecuatorial. Demuestre que forman la espiral de Arquímedes y calcule el "ángulo de espiral" en la órbita de la Tierra (1 AU).
+
+**Solución paso a paso:**
+Consideremos el marco de referencia en corrotación con el Sol. En este marco (sistema ideal estacionario), la ley de congelamiento de flujo dicta que la velocidad del fluido es estrictamente paralela al campo magnético: $\mathbf{u}' \parallel \mathbf{B}$.
+En el marco sidéreo inercial, la velocidad del plasma cuenta con una componente de rotación arrastrada desde el origen $\mathbf{v}_\phi = \Omega_\odot r$, de manera que la velocidad corrotante aparente del viento visto desde el Sol rígidamente giratorio es:
+$$ \mathbf{u}' = u_w \hat{r} - \Omega_\odot r \hat{\phi} $$
+Como $\mathbf{B}$ es paralelo a $\mathbf{u}'$, las componentes de $\mathbf{B} = (B_r, B_\phi, 0)$ satisfacen:
+$$ \frac{B_\phi}{B_r} = \frac{- \Omega_\odot r}{u_w} $$
+En coordenadas polares $(r, \phi)$, la ecuación diferencial de una línea de campo geométricamente es $r d\phi / dr = B_\phi / B_r$.
+$$ \frac{r d\phi}{dr} = -\frac{\Omega_\odot r}{u_w} \implies d\phi = -\frac{\Omega_\odot}{u_w} dr $$
+Integrando desde la superficie fuente $r_0$ hasta $r$:
+$$ \phi(r) - \phi_0 = -\frac{\Omega_\odot}{u_w} (r - r_0) $$
+Esta es matemáticamente la ecuación de la Espiral de Arquímedes.
+Para la Tierra, la distancia $r \approx 1 \, \text{AU} = 1.5 \times 10^{11} \, \text{m}$, y el periodo de rotación ecuatorial solar es unos $25.4$ días, $\Omega_\odot = \frac{2\pi}{25.4 \times 86400} \approx 2.86 \times 10^{-6} \, \text{rad/s}$. Si tomamos $u_w \approx 400 \, \text{km/s} = 4 \times 10^5 \, \text{m/s}$:
+El ángulo de espiral del IMF (el ángulo entre la dirección radial y el campo), está dado por:
+$$ \tan \theta_P = \left| \frac{B_\phi}{B_r} \right| = \frac{\Omega_\odot r}{u_w} = \frac{(2.86 \times 10^{-6}) (1.5 \times 10^{11})}{4 \times 10^5} \approx \frac{429}{400} \approx 1.07 $$
+$$ \theta_P = \arctan(1.07) \approx 47^\circ $$
+Esto indica que el campo magnético del sol no nos alcanza radialmente, sino que intercepta la Tierra con un ángulo de unos 45 grados de desviación matutina.
+
+### Problema 2: Presión Magnética en la Cola de la Magnetosfera (Magnetotail)
+Asuma que el lóbulo magnético en la cola oscura de la Tierra es modelable geométricamente como un cilindro largo de radio $R_T$ que transporta el campo magnético $\mathbf{B}_L$ estrictamente paralelo al cilindro. El exterior está bañado por la vaina (magnetosheath) con plasma a presión $p_s$ y densidad $n_s$. Despreciando el campo magnético externo, determine el campo magnético en el lóbulo $B_L$.
+
+**Solución paso a paso:**
+En la transición de las fronteras magnetosféricas estacionarias largas donde la tensión tangencial magnética y la curvatura son despreciables, el equilibrio requiere estricta continuidad de la presión total (cinética + magnética) a través de la frontera de la magnetopausa externa hacia el lóbulo.
+$$ \left( p + \frac{B^2}{2\mu_0} \right)_{Lóbulo} = \left( p + \frac{B^2}{2\mu_0} \right)_{Vaina} $$
+El lóbulo de la cola magnética está prácticamente vacío de partículas comparado con su inmenso campo; es una estructura magnéticamente dominada, por tanto $p_{Lóbulo} \approx 0$.
+En contraste, asumimos según el enunciado que en la región exterior el campo magnético tangencial dispersado es pequeño, entonces su término magnético puede subestimarse, siendo dominante la presión térmica o estática del plasma $p_s$.
+Igualando:
+$$ \frac{B_L^2}{2\mu_0} \approx p_s $$
+$$ B_L \approx \sqrt{2\mu_0 p_s} $$
+El campo geomagnético en la inmensa cola se autosustenta estrictamente equilibrando con su presión interna la presión termodinámica ejercida por el viento solar circundante fluyendo hacia el abismo exterior. 
+
+### Problema 3: Reflexión de Ondas de Radio Cortas en la Ionosfera
+La ionosfera de la Tierra presenta capas sucesivas (D, E, F1, F2) con densidades crecientes de electrones, alcanzando un pico de $N_{max} \approx 10^{12} \, \text{m}^{-3}$ en la capa F2 alrededor de 300 km de altitud. Utilizando la aproximación de un plasma sin campo magnético en este estrato local para oscilaciones de alta frecuencia, determine la "Frecuencia Crítica" máxima $f_c$ de señales de radio terrestres verticales que pueden rebotar en la ionosfera (Skip radio propagation).
+
+**Solución paso a paso:**
+Para ondas electromagnéticas puramente transversales no magnetizadas en propagación vertical, la relación de dispersión local es:
+$$ \omega^2 = \omega_{pe}^2 + c^2 k^2 $$
+La onda de radio penetrará la ionosfera conforme viaja hacia arriba, enfrentando un gradiente creciente de densidad, lo que incrementa $\omega_{pe}(z)$.
+La frecuencia de la onda emitida ($\omega$) es constante. A medida que entra, su número de onda local $k(z)$ debe disminuir (la fase se ensancha) para satisfacer la relación de dispersión:
+$$ c^2 k(z)^2 = \omega^2 - \omega_{pe}(z)^2 $$
+La reflexión ocurre idénticamente cuando el vector de onda se anula localmente ($k(z) = 0$), en ese punto el índice de refracción es nulo y la señal se vuelve evanescente perdiéndose en el horizonte imaginario, lo cual significa que se refleja.
+La condición de reflexión es: $\omega = \omega_{pe}(z_{reflejo})$.
+La frecuencia de onda más alta capaz de reflejarse será la que encuentre apenas la densidad máxima absoluta antes de escapar del planeta:
+$$ \omega_{max} = \omega_{pe}(N_{max}) = \sqrt{\frac{N_{max} e^2}{m_e \epsilon_0}} $$
+En frecuencia lineal $f_c = \frac{\omega_{max}}{2\pi} \approx 8.98 \sqrt{N_{max}}$ (fórmula empírica práctica en Hz y $\text{m}^{-3}$).
+$$ f_c \approx 8.98 \sqrt{10^{12}} = 8.98 \times 10^6 \, \text{Hz} = 8.98 \, \text{MHz} $$
+**Conclusión:** Cualquier señal de comunicación vertical a la Tierra que exceda $\sim 9 \, \text{MHz}$ perforará limpiamente la ionosfera escapando al espacio profundo (vital para comunicarse con satélites). Las estaciones de radiodifusión en Onda Corta (SW) utilizan frecuencias hábilmente calculadas menores que esto pero radiadas oblicuamente, de modo que logran la refracción iónica y se rebotan en "saltos" intercontinentales transoceánicos que rebasan la curvatura terrestre.
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Solución del Viento Solar de Parker
+
+Este script resuelve la topología de la ecuación diferencial del viento solar isotérmico, identificando el punto crítico y dibujando la solución física transónica que escapa de la gravedad estelar.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import fsolve
+
+# Normalizamos variables:
+# u_norm = u / c_s (Número de Mach M)
+# r_norm = r / r_c
+# La ecuación de Parker normalizada es: (M - 1/M) dM/dr = 2/r - 2/r^2
+
+r_norm = np.linspace(0.1, 10, 500)
+
+# Ecuación algebraica implícita integral del viento solar:
+# M^2 - 1 - 2*ln(M) = 4*ln(r_norm) + 4/r_norm - 3
+# Definimos la función para buscar raíces:
+def parker_eq(M, r):
+    return M**2 - 1 - 2*np.log(M) - 4*np.log(r) - 4/r + 3
+
+M_sup = np.zeros_like(r_norm)
+M_sub = np.zeros_like(r_norm)
+
+for i, r in enumerate(r_norm):
+    # Buscamos solución supersónica (M > 1)
+    # y solución subsónica (M < 1)
+    if r == 1.0:
+        M_sup[i] = 1.0
+        M_sub[i] = 1.0
+    else:
+        # Adivinanzas iniciales basadas en el radio
+        guess_sup = r if r > 1 else 2.0
+        guess_sub = 0.5/r**2 if r > 1 else 0.5
+        
+        sol_sup = fsolve(parker_eq, guess_sup, args=(r,))
+        sol_sub = fsolve(parker_eq, guess_sub, args=(r,))
+        
+        M_sup[i] = sol_sup[0]
+        M_sub[i] = sol_sub[0]
+
+# Construimos la solución física completa (Viento Solar)
+# Combina rama subsónica para r < 1 y supersónica para r > 1
+solar_wind = np.where(r_norm <= 1.0, M_sub, M_sup)
+# Brisa solar (totalmente subsónica)
+solar_breeze = M_sub
+
+plt.figure(figsize=(10, 6))
+plt.plot(r_norm, solar_wind, 'r-', linewidth=3, label='Viento Solar (Transónico)')
+plt.plot(r_norm, solar_breeze, 'b--', linewidth=2, label='Brisa Solar (Subsónica)')
+
+plt.axvline(1.0, color='k', linestyle=':', label='Punto Crítico Sonico ($r_c$)')
+plt.axhline(1.0, color='k', linestyle=':')
+
+plt.title('Modelo Isotérmico del Viento Solar de Parker')
+plt.xlabel('Distancia Normalizada $r / r_c$')
+plt.ylabel('Velocidad Normalizada (Mach $u / c_s$)')
+plt.ylim(0, 3.5)
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

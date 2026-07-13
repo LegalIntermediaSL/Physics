@@ -158,6 +158,106 @@ graph TD
    - Para $\Delta m_L = -1$ (transiciones $\sigma^-$), $h\nu = h\nu_0 + \mu_B B$.
 7. **Conclusión:** Aunque haya $5 \times 3 = 15$ posibles pares de estados inicial-final, las estrictas reglas de selección limitan los decaimientos permitidos, observándose exactamente un triplete de Lorentz en el espectro: tres componentes polarizadas separadas energéticamente por una cantidad discreta y exacta de $\mu_B B$.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Ejercicio 1: Efecto Stark Lineal en el Átomo de Hidrógeno
+Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido a un campo eléctrico externo uniforme $\vec{\mathcal{E}} = \mathcal{E}_0 \hat{z}$. Calcule el corrimiento de los niveles de energía utilizando la teoría de perturbaciones degenerada de primer orden.
+
+**Solución paso a paso:**
+1. Los estados degenerados para $n=2$ son $|2,0,0\rangle$, $|2,1,0\rangle$, $|2,1,1\rangle$, y $|2,1,-1\rangle$ en la base $|n,l,m\rangle$.
+2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
+3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
+4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+   $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+   donde $a_0$ es el radio de Bohr.
+5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+   $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
+
+### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
+Derive la expresión para los niveles de energía rotovibracionales de una molécula diatómica tratada como un oscilador armónico y rotor rígido acoplados, incluyendo la corrección de distorsión centrífuga. 
+
+**Solución paso a paso:**
+1. El Hamiltoniano molecular efectivo es $H = \frac{P^2}{2\mu} + \frac{L^2}{2\mu R^2} + V(R)$.
+2. Expandiendo el potencial alrededor del mínimo $R_e$: $V(R) \approx \frac{1}{2} k (R - R_e)^2$.
+3. La energía a orden cero es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1)$, donde $B_e = \frac{\hbar^2}{2\mu R_e^2}$.
+4. Para la distorsión centrífuga, el mínimo efectivo de la energía potencial efectiva $V_{\text{eff}}(R) = V(R) + \frac{\hbar^2 J(J+1)}{2\mu R^2}$ se desplaza.
+5. Minimizando $V_{\text{eff}}$: $k(R_c - R_e) - \frac{\hbar^2 J(J+1)}{\mu R_c^3} = 0 \implies \Delta R \approx \frac{\hbar^2 J(J+1)}{k \mu R_e^3}$.
+6. Sustituyendo de nuevo en la energía, el término de corrección es $-D_e J^2(J+1)^2$, donde $D_e = \frac{4B_e^3}{\hbar^2 \omega^2}$.
+7. La energía final es $E_{v,J} = \hbar \omega \left(v + \frac{1}{2}\right) + B_e J(J+1) - D_e J^2(J+1)^2$.
+
+### Ejercicio 3: Condensación de Bose-Einstein en una Trampa Armónica
+Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein de un gas ideal de $N$ bosones atrapados en un potencial armónico tridimensional isotrópico $V(r) = \frac{1}{2} m \omega^2 r^2$.
+
+**Solución paso a paso:**
+1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
+2. El número total de partículas en estados excitados viene dado por la integral:
+   $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
+4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+   $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
+6. Resolviendo para $T_c$:
+   $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
+
+## 💻 Simulaciones Computacionales
+
+Esta simulación analiza cómo responde un sistema cuántico de dos niveles ante un pulso láser aplicando teoría dependiente del tiempo. Se simulan las Oscilaciones de Rabi bajo distintas desintonizaciones (detunings), observando cómo la absorción pierde eficiencia fuera de resonancia.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+def rabi_dynamics(state, t, Omega, Delta):
+    """
+    Ecuaciones diferenciales acopladas para los coeficientes de amplitud
+    de un sistema de dos niveles (aproximación RWA).
+    state = [Re(c_g), Im(c_g), Re(c_e), Im(c_e)]
+    """
+    cg_r, cg_i, ce_r, ce_i = state
+    cg = cg_r + 1j*cg_i
+    ce = ce_r + 1j*ce_i
+    
+    # Ecuaciones de Schrödinger con RWA
+    dcg_dt = 1j * (Omega / 2.0) * ce * np.exp(1j * Delta * t)
+    dce_dt = 1j * (Omega / 2.0) * cg * np.exp(-1j * Delta * t)
+    
+    return [np.real(dcg_dt), np.imag(dcg_dt), np.real(dce_dt), np.imag(dce_dt)]
+
+t_span = np.linspace(0, 10, 500)
+Omega_0 = 2.0 * np.pi  # Frecuencia de Rabi (Resonante)
+
+# Condiciones iniciales: Población entera en el estado base |g>
+initial_state = [1.0, 0.0, 0.0, 0.0]
+
+# Diferentes valores de Desintonización (Detuning Delta)
+detunings = [0.0, 1.0 * np.pi, 2.0 * np.pi]
+colors = ['#d62728', '#2ca02c', '#1f77b4']
+
+plt.figure(figsize=(9, 5))
+
+for Delta, color in zip(detunings, colors):
+    solution = odeint(rabi_dynamics, initial_state, t_span, args=(Omega_0, Delta))
+    
+    # Probabilidad de estar en el estado excitado |e>
+    ce_real = solution[:, 2]
+    ce_imag = solution[:, 3]
+    prob_e = ce_real**2 + ce_imag**2
+    
+    label_str = 'Resonante ($\\Delta = 0$)' if Delta == 0 else f'Desintonizado ($\\Delta = {Delta/np.pi:.1f}\\pi$)'
+    plt.plot(t_span, prob_e, lw=2, color=color, label=label_str)
+
+plt.title("Oscilaciones de Rabi en un Sistema de Dos Niveles (Interacción Luz-Materia)")
+plt.xlabel("Tiempo (Unidades Arbitrarias)")
+plt.ylabel("Probabilidad de Excitación $P_e(t)$")
+plt.legend(loc='upper right')
+plt.grid(True, alpha=0.3)
+plt.ylim(0, 1.05)
+plt.tight_layout()
+# plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

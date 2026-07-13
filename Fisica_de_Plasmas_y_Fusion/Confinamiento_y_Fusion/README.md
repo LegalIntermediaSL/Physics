@@ -118,6 +118,104 @@ En la realidad, el transporte en Tokamaks suele ser **Anómalo**, dominado por t
    El criterio de estabilidad exige que $q > 1$ (típicamente $q_a > 2$ a $3$ para asegurar estabilidad global frente a interrupciones kink externas).
    Como $q_a \approx 2.84 > 1$, la condición básica de estabilidad se cumple. El plasma mantendrá su confinamiento general contra el modo ideal de cuerpo rígido.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Desplazamiento de Shafranov en un Tokamak
+Derive cualitativamente la necesidad de un campo magnético vertical para mantener el equilibrio toroidal de un plasma (Desplazamiento de Shafranov). Considere la fuerza de expansión del aro.
+
+**Solución paso a paso:**
+En una geometría toroidal, un anillo de plasma experimenta una fuerza neta hacia afuera a lo largo del radio mayor $R$ debido a tres efectos principales:
+1. La presión cinética del plasma (fuerza de expansión del neumático).
+2. La presión magnética del campo poloidal interno, que es más fuerte en el lado interior del toro (efecto $1/R$).
+3. La tensión del campo magnético toroidal, que intenta enderezar las líneas de campo.
+La fuerza de expansión por unidad de longitud del toro es aproximadamente:
+$$ F_R \approx \frac{\mu_0 I_p^2}{2} \left( \ln\frac{8R}{a} - \frac{3}{2} + \beta_p \right) $$
+donde $I_p$ es la corriente del plasma, $a$ el radio menor, y $\beta_p$ la beta poloidal.
+Para compensar esta fuerza centrífuga efectiva y mantener el equilibrio, se requiere aplicar un campo magnético vertical externo $B_v$ mediante bobinas poloidales externas. La fuerza de Lorentz restauradora es $F_L = I_p \times B_v \times 2\pi R$. Igualando, obtenemos el campo vertical necesario:
+$$ B_v = \frac{\mu_0 I_p}{4\pi R} \left( \ln\frac{8R}{a} - \frac{3}{2} + \beta_p + \frac{l_i}{2} \right) $$
+Esto estabiliza el eje magnético y previene el desplazamiento de Shafranov contra la pared exterior.
+
+### Problema 2: Factor de Seguridad $q(r)$ para Perfil Parabólico de Corriente
+Calcule el perfil del factor de seguridad $q(r)$ en la aproximación cilíndrica para un plasma de tokamak con densidad de corriente plana $J_z(r) = J_0 (1 - r^2/a^2)$.
+
+**Solución paso a paso:**
+El campo magnético poloidal $B_\theta(r)$ se obtiene mediante la ley de Ampère:
+$$ \oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 \int \mathbf{J} \cdot d\mathbf{A} $$
+$$ 2\pi r B_\theta(r) = \mu_0 \int_0^r J_0 \left( 1 - \frac{r'^2}{a^2} \right) 2\pi r' dr' $$
+$$ r B_\theta(r) = \mu_0 J_0 \left[ \frac{r'^2}{2} - \frac{r'^4}{4a^2} \right]_0^r = \mu_0 J_0 \left( \frac{r^2}{2} - \frac{r^4}{4a^2} \right) $$
+$$ B_\theta(r) = \frac{\mu_0 J_0 r}{2} \left( 1 - \frac{r^2}{2a^2} \right) $$
+El factor de seguridad en aproximación cilíndrica es $q(r) = \frac{r B_\phi}{R B_\theta(r)}$. Sustituyendo $B_\theta(r)$:
+$$ q(r) = \frac{r B_\phi}{R \frac{\mu_0 J_0 r}{2} \left( 1 - \frac{r^2}{2a^2} \right)} = \frac{2 B_\phi}{\mu_0 R J_0 \left( 1 - \frac{r^2}{2a^2} \right)} $$
+Para $r=0$ (en el eje magnético): $q(0) = \frac{2 B_\phi}{\mu_0 R J_0}$.
+Para $r=a$ (en el borde): $q(a) = \frac{2 B_\phi}{\mu_0 R J_0 (1/2)} = 2 q(0)$.
+Esto demuestra que un perfil de corriente concentrado en el centro resulta en un perfil $q(r)$ que aumenta hacia el exterior, lo cual es favorable para la estabilidad frente a modos magnéticos (shear magnético positivo).
+
+### Problema 3: Criterio de Lawson con Impurezas
+Modifique la deducción del criterio de Lawson para incluir una fracción de impurezas de Carbono ($Z=6$) dada por $f_C = n_C/n_i$, que incrementa las pérdidas radiativas de Bremsstrahlung.
+
+**Solución paso a paso:**
+La presencia de impurezas incrementa la densidad de electrones por cuasineutralidad: $n_e = n_i + Z n_C = n_i (1 + Z f_C)$.
+La potencia de radiación de Bremsstrahlung escala con $Z_{eff}$, la carga efectiva del plasma:
+$$ P_{br} \propto n_e \sum (n_k Z_k^2) = n_e n_i (1 + Z^2 f_C) $$
+$$ Z_{eff} = \frac{\sum n_k Z_k^2}{n_e} = \frac{n_i + n_C Z^2}{n_i + n_C Z} = \frac{1 + f_C Z^2}{1 + f_C Z} $$
+La potencia radiativa aumenta fuertemente: $P_{br}' = P_{br} (1 + Z f_C)(1 + Z^2 f_C)$.
+El calentamiento alfa sigue siendo proporcional a la densidad de combustible, $P_\alpha \propto n_D n_T = n_i^2/4$.
+La condición de ignición requiere $P_\alpha \ge P_{trans} + P_{br}'$.
+Si la radiación $P_{br}'$ domina las pérdidas térmicas $P_{trans}$, el requerimiento de $n\tau_E$ se eleva exponencialmente. De hecho, si la concentración de Carbono supera aproximadamente el $5\%$, la curva de ignición de Lawson diverge a infinito, significando que la ignición es imposible a cualquier temperatura debido a la purga catastrófica de energía mediante radiación de rayos X (límite de radiación por impurezas).
+
+## 💻 Simulaciones Computacionales
+
+### Simulación: Órbitas de Partículas y Derivas en Campos E x B
+
+Este código calcula numéricamente y grafica la trayectoria en espiral de una partícula cargada bajo la influencia de un campo magnético uniforme y un campo eléctrico transversal, mostrando el movimiento de deriva $\mathbf{E} \times \mathbf{B}$.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+q = 1.602e-19
+m = 1.673e-27  # Protón
+B_val = 1.0    # Campo B en z
+E_val = 1000.0 # Campo E en y
+
+def lorentz_force(t, Y):
+    x, y, z, vx, vy, vz = Y
+    
+    # E = (0, E, 0)
+    Ex, Ey, Ez = 0, E_val, 0
+    # B = (0, 0, B)
+    Bx, By, Bz = 0, 0, B_val
+    
+    ax = (q/m) * (Ex + vy*Bz - vz*By)
+    ay = (q/m) * (Ey + vz*Bx - vx*Bz)
+    az = (q/m) * (Ez + vx*By - vy*Bx)
+    
+    return [vx, vy, vz, ax, ay, az]
+
+# Velocidad de deriva analítica v_E = E/B (dirección x)
+v_E = E_val / B_val
+
+# Condiciones iniciales (en reposo)
+Y0 = [0, 0, 0, 0, 0, 0]
+t_span = (0, 3e-7)
+t_eval = np.linspace(*t_span, 5000)
+
+sol = solve_ivp(lorentz_force, t_span, Y0, t_eval=t_eval, rtol=1e-8, atol=1e-8)
+
+plt.figure(figsize=(10, 6))
+plt.plot(sol.y[0]*1e3, sol.y[1]*1e3, label='Trayectoria real')
+plt.plot(v_E * sol.t * 1e3, np.zeros_like(sol.t), 'r--', label='Deriva E x B teórica')
+
+plt.title('Deriva E x B de un Protón')
+plt.xlabel('x (mm) - Dirección de la deriva')
+plt.ylabel('y (mm) - Dirección del campo E')
+plt.legend()
+plt.grid(True)
+plt.axis('equal')
+plt.show()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos Específicos

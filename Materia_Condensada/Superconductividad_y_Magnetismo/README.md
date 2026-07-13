@@ -79,6 +79,81 @@ Utilice la ley de Clogston-Chandrasekhar para calcular teóricamente la intensid
 
 **Conclusión Física:** El material Nb-X ultradelgado sí **sostendrá la fase de superconductividad coexistente** a pesar del entorno fuertemente magnético que lo permea en el bulk. Este es el principio rector para diseñar ciertos "superconductores de aleación pesada" que soportan simultáneamente flujos de intercambio ferromagnéticos y supercorrientes bosónicas a muy bajas temperaturas.
 
+## 📝 Guía de Ejercicios Resueltos
+
+### Problema 1: Efecto Isotópico y Teoría BCS
+La temperatura crítica de un elemento superconductor está vinculada experimentalmente a su masa isotópica $M$ mediante la relación $T_c \propto M^{-\alpha}$. Demuestre teóricamente que la teoría BCS (Bardeen-Cooper-Schrieffer) predice $\alpha = 0.5$ en el límite de acoplamiento débil.
+
+**Solución paso a paso:**
+En la teoría BCS de acoplamiento débil (cuando el potencial de interacción electrón-fonón $V$ por la densidad de estados $N(0)$ cumple $N(0)V \ll 1$), la temperatura crítica $T_c$ se obtiene de:
+$$ k_B T_c \approx 1.13 \hbar \omega_D e^{-1 / N(0)V} $$
+donde $\omega_D$ es la frecuencia de Debye de la red cristalina, indicativa de la energía fonónica característica.
+En el modelo simple de osciladores acoplados de masa iónica $M$ y constante restauradora de muelle $K$ (asociada a los enlaces químicos), la frecuencia máxima $\omega_D$ es proporcional a la frecuencia del oscilador armónico básico:
+$$ \omega_D \propto \sqrt{\frac{K}{M}} $$
+Puesto que distintos isótopos de un material cambian $M$ pero dejan la estructura electrónica y, por ende, el acoplamiento $V$ y la fuerza elástica $K$ prácticamente invariantes, tenemos que:
+$$ T_c \propto \omega_D \propto M^{-1/2} $$
+Por lo tanto, la teoría BCS predice intrínsecamente un exponente isotópico $\alpha = 1/2$.
+Esto fue una prueba definitiva de que los fonones (vibraciones reticulares) median la atracción entre electrones (formación de pares de Cooper) responsable de la superconductividad clásica.
+
+### Problema 2: Penetración Magnética y el Parámetro de Ginzburg-Landau
+Dadas la longitud de coherencia $\xi \approx 3$ nm y la longitud de penetración $\lambda_L \approx 150$ nm de un compuesto cuprato (YBa$_2$Cu$_3$O$_{7-x}$), calcule el parámetro de Ginzburg-Landau $\kappa$. Justifique si se trata de un superconductor de tipo I o tipo II y comente cómo el magnetismo entra al material.
+
+**Solución paso a paso:**
+El parámetro de Ginzburg-Landau se define adimensionalmente como el cociente:
+$$ \kappa = \frac{\lambda_L}{\xi} $$
+Sustituyendo los valores provistos:
+$$ \kappa = \frac{150 \text{ nm}}{3 \text{ nm}} = 50 $$
+La teoría fenomenológica de Ginzburg-Landau indica que la transición de energía superficial en la interfaz entre una región normal y una superconductora cambia de signo en $\kappa = 1/\sqrt{2} \approx 0.707$.
+- Si $\kappa < 1/\sqrt{2}$, la energía superficial es positiva y el campo es totalmente expulsado (Tipo I).
+- Si $\kappa > 1/\sqrt{2}$, la energía superficial es negativa (Tipo II).
+Puesto que $\kappa = 50 \gg 1/\sqrt{2}$, este es un superconductor fuertemente de **Tipo II**.
+Por su energía superficial negativa, es termodinámicamente favorable maximizar la interfase normal/superconductor cuando se supera el primer campo crítico $H_{c1}$. Por ello, el campo magnético no se expulsa repentinamente, sino que penetra en el material formando una red de filamentos de fase normal (vórtices de Abrikosov). Cada vórtice encierra un cuanto de flujo magnético $\Phi_0$ centrado en un núcleo normal (de tamaño $\sim \xi$), mientras que el superconductor en su entorno filtra las corrientes superflúas de apantallamiento en un área extensa (de tamaño $\sim \lambda_L$). Este es el **estado mixto**.
+
+### Problema 3: Superconductividad y Ferromagnetismo Competitivo
+Explique por qué, en los materiales convencionales, el ferromagnetismo y la superconductividad son fases antagonistas, utilizando los argumentos sobre la orientación de los espines (Límite paramagnético de Clogston-Chandrasekhar).
+
+**Solución paso a paso:**
+1. **El par de Cooper convencional:**
+En la teoría BCS, la superconductividad se logra apareando electrones con espines opuestos y momento opuesto (estado de singlete de espín, $S=0$, $\mathbf{k}\uparrow$ y $-\mathbf{k}\downarrow$). Esto es óptimo porque las energías de los estados de espín up y down son idénticas en ausencia de campo, permitiendo maximizar los estados de par disponibles en la superficie de Fermi.
+2. **Influencia del intercambio Ferromagnético:**
+En un medio ferromagnético, los espines electrónicos están sujetos a un enorme "campo de intercambio" interno (interacción de canje de Heisenberg). Este campo de intercambio produce el efecto Zeeman, dividiendo y desplazando (spin-splitting) drásticamente la banda de energía de electrones con espín paralelo respecto a los de espín antiparalelo.
+3. **Destrucción del singlete:**
+Para crear un par de Cooper singlete, necesitamos formar pares de un electrón up y un electrón down situados a energías idénticas cerca del nivel de Fermi original. El desdoblamiento Zeeman fuerza a que los estados de igual energía tengan valores de $\mathbf{k}$ considerablemente distintos. Esto debilita severamente o extingue la interacción atractiva electrón-fonón, que es fuertemente picuda para momento neto del par igual a cero.
+4. **El Límite Termodinámico (Clogston-Chandrasekhar):**
+Si el campo de intercambio interno (efectivamente un campo magnético $H_M$) impone una polarización de espín (energía de ganancia de desdoblamiento magnético $\mu_B H_M$) que supera la energía de condensación de emparejamiento superconductor por par (que es del orden del gap de energía $\Delta_0$ a temperatura $T=0$), el sistema prefiere destrozar los pares para ganar energía de alineación ferromagnética. El campo magnético en el que se rompen todos los pares de singlete es el campo límite de Pauli $H_p \approx \Delta_0 / (\sqrt{2} \mu_B)$. Puesto que en los ferromagnetos el campo interno excede largamente a $H_p$, destruyen instantáneamente la superconductividad. Solo estados atípicos como la superconductividad de triplete de espín (espines paralelos, $S=1$) tienen chance de coexistir con ferromagnetismo, en algunos compuestos exóticos (p.ej., UGe$_2$).
+
+## 💻 Simulaciones Computacionales
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_pauli_limit():
+    T_c = 1.0 # T_c normalized
+    T = np.linspace(0, T_c, 200)
+    
+    # Gap BCS approximation (interpolation)
+    Delta_T = np.sqrt(1 - (T/T_c)**3.2) # Phenomenological approximation
+    
+    # Pauli limit H_p ~ Delta(T) / sqrt(2) * mu_B
+    # We plot normalized H_p(T) / H_p(0)
+    H_p = Delta_T
+    
+    plt.figure(figsize=(8, 5))
+    plt.plot(T, H_p, label='$H_p(T) / H_p(0)$', color='purple', lw=2)
+    plt.fill_between(T, H_p, alpha=0.3, color='purple', label='Fase Superconductora')
+    
+    plt.xlabel('Temperatura Normalizada $T/T_c$')
+    plt.ylabel('Campo Crítico de Pauli $H_p$ (Normalizado)')
+    plt.title('Simulación: Destrucción de la Superconductividad por Límite de Pauli')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+if __name__ == '__main__':
+    plot_pauli_limit()
+```
+
 ## 📚 Recursos Específicos
 
 ### Cursos

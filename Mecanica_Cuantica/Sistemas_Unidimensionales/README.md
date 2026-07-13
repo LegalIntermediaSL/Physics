@@ -101,6 +101,121 @@ La probabilidad es del 60.9%, mucho mayor al 33.3% clásico esperado, debido a q
 
 ---
 
+## 📝 Guía de Ejercicios Resueltos
+
+**Problema 1: Potencial Delta Atractivo de Dirac**
+Encuentra el estado ligado y su energía para una partícula de masa $m$ bajo la influencia de un potencial de pozo de la forma $V(x) = -\alpha \delta(x)$ con $\alpha > 0$.
+**Solución paso a paso:**
+1. La ecuación de Schrödinger es $-\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} - \alpha \delta(x)\psi = E\psi$.
+2. Para $x \neq 0$, $V=0$. Las soluciones acotadas para estados ligados ($E < 0$) son ondas evanescentes: $\psi(x) = A e^{-\kappa x}$ (para $x>0$) y $\psi(x) = A e^{+\kappa x}$ (para $x<0$), donde $\kappa = \sqrt{-2mE}/\hbar$. Podemos escribir $\psi(x) = A e^{-\kappa |x|}$.
+3. Integramos la ecuación de Schrödinger en un intervalo $[-\epsilon, +\epsilon]$ alrededor del origen y tomamos el límite $\epsilon \to 0$:
+$$ -\frac{\hbar^2}{2m} \left( \left. \frac{d\psi}{dx} \right|_{0^+} - \left. \frac{d\psi}{dx} \right|_{0^-} \right) - \alpha \psi(0) = 0 $$
+4. Calculamos los saltos de las derivadas en $x=0$:
+$$ \left. \frac{d\psi}{dx} \right|_{0^+} = -A\kappa, \quad \left. \frac{d\psi}{dx} \right|_{0^-} = +A\kappa $$
+5. Sustituimos en la condición de discontinuidad: $-\frac{\hbar^2}{2m} (-2A\kappa) = \alpha A$.
+6. Simplificando obtenemos $\frac{\hbar^2 \kappa}{m} = \alpha \implies \kappa = \frac{m\alpha}{\hbar^2}$.
+7. Recordando que $E = -\frac{\hbar^2 \kappa^2}{2m}$, la energía del único estado ligado es $E_0 = -\frac{m\alpha^2}{2\hbar^2}$.
+
+**Problema 2: Barrera de Potencial y Aproximación WKB**
+Estima el coeficiente de transmisión $T$ para una barrera de potencial parabólica invertida $V(x) = V_0 - \frac{1}{2}kx^2$ usando la aproximación WKB para un electrón de energía $E < V_0$.
+**Solución paso a paso:**
+1. La aproximación WKB para el coeficiente de transmisión es $T \approx \exp\left( -2 \int_{x_1}^{x_2} \kappa(x) dx \right)$, donde $\kappa(x) = \frac{\sqrt{2m(V(x) - E)}}{\hbar}$.
+2. Encontramos los puntos de retorno $x_1, x_2$ igualando $E = V(x)$:
+$$ E = V_0 - \frac{1}{2}kx^2 \implies x_{1,2} = \pm \sqrt{\frac{2(V_0 - E)}{k}} $$
+3. Evaluamos la integral $I = \int_{-x_0}^{x_0} \sqrt{2m \left( V_0 - E - \frac{1}{2}kx^2 \right)} dx$, donde $x_0 = \sqrt{\frac{2(V_0 - E)}{k}}$.
+4. Esta integral tiene la forma del área de un semi-círculo/elipse. Sea $V_0 - E = \Delta E$:
+$$ I = \sqrt{mk} \int_{-x_0}^{x_0} \sqrt{x_0^2 - x^2} dx $$
+5. La integral matemática $\int_{-a}^a \sqrt{a^2-x^2} dx = \frac{\pi}{2}a^2$.
+6. Así, $I = \sqrt{mk} \frac{\pi}{2} x_0^2 = \sqrt{mk} \frac{\pi}{2} \frac{2\Delta E}{k} = \pi \Delta E \sqrt{\frac{m}{k}}$.
+7. Notando que la frecuencia natural del oscilador parabólico es $\omega = \sqrt{k/m}$, $I = \frac{\pi \Delta E}{\omega}$.
+8. Sustituyendo en $T$: $T \approx \exp\left( -2 \frac{I}{\hbar} \right) = \exp\left( -\frac{2\pi(V_0 - E)}{\hbar\omega} \right)$.
+
+**Problema 3: Base del Oscilador Armónico e Incertidumbre**
+Para el estado fundamental $|0\rangle$ del oscilador armónico cuántico, demuestra explícitamente usando los operadores de creación y aniquilación que se minimiza el principio de incertidumbre de Heisenberg ($\Delta x \Delta p = \hbar / 2$).
+**Solución paso a paso:**
+1. Definimos $\hat{x} = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dagger)$ y $\hat{p} = -i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a} - \hat{a}^\dagger)$.
+2. En el estado base, $\langle 0 | \hat{x} | 0 \rangle = 0$ y $\langle 0 | \hat{p} | 0 \rangle = 0$ debido a la simetría de paridad y las propiedades de $\hat{a}|0\rangle = 0$.
+3. Calculamos $\langle \hat{x}^2 \rangle = \frac{\hbar}{2m\omega} \langle 0 | (\hat{a} + \hat{a}^\dagger)^2 | 0 \rangle$.
+Al expandir: $\hat{a}^2 + \hat{a}\hat{a}^\dagger + \hat{a}^\dagger\hat{a} + (\hat{a}^\dagger)^2$. Los términos $\hat{a}^2$ y $(\hat{a}^\dagger)^2$ cambian el estado en $\pm 2$ cuantos, dando un producto interno cero con $|0\rangle$.
+4. Usamos el conmutador $[\hat{a}, \hat{a}^\dagger] = 1 \implies \hat{a}\hat{a}^\dagger = 1 + \hat{a}^\dagger\hat{a}$.
+Así, $\langle 0 | \hat{a}\hat{a}^\dagger | 0 \rangle = 1 + \langle 0|\hat{a}^\dagger\hat{a}|0\rangle = 1 + 0 = 1$.
+5. Por lo tanto, $(\Delta x)^2 = \langle \hat{x}^2 \rangle = \frac{\hbar}{2m\omega}$.
+6. Del mismo modo para $\langle \hat{p}^2 \rangle = -\frac{m\hbar\omega}{2} \langle 0 | (\hat{a} - \hat{a}^\dagger)^2 | 0 \rangle$.
+Expansión arroja un término útil $-\hat{a}\hat{a}^\dagger$, que aporta $-1$.
+7. $(\Delta p)^2 = \langle \hat{p}^2 \rangle = \frac{m\hbar\omega}{2}$.
+8. Multiplicando las varianzas: $(\Delta x)^2(\Delta p)^2 = \left( \frac{\hbar}{2m\omega} \right) \left( \frac{m\hbar\omega}{2} \right) = \frac{\hbar^2}{4}$.
+Tomando la raíz cuadrada, obtenemos $\Delta x \Delta p = \hbar / 2$, el límite inferior exacto.
+
+## 💻 Simulaciones Computacionales
+
+A continuación se presenta un script que calcula y grafica numéricamente las funciones de onda (eigenestados) y los niveles de energía del oscilador armónico cuántico resolviendo el problema de autovalores del Hamiltoniano mediante un esquema de diferencias finitas de matriz dispersa.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.sparse import diags
+from scipy.sparse.linalg import eigsh
+
+# Parámetros del espacio y del oscilador
+N = 1000        # Puntos de la malla
+L = 10.0        # Dimensión de la caja
+x = np.linspace(-L/2, L/2, N)
+dx = x[1] - x[0]
+
+# Constantes físicas (unidades naturales: m=1, hbar=1)
+m = 1.0
+hbar = 1.0
+omega = 1.0
+
+# Potencial del oscilador armónico V(x) = (1/2)*m*omega^2*x^2
+V = 0.5 * m * omega**2 * x**2
+
+# Construcción del Hamiltoniano H = T + V usando diferencias finitas
+# Derivada segunda: d^2/dx^2 f_i approx (f_{i+1} - 2f_i + f_{i-1}) / dx^2
+t_coeff = -hbar**2 / (2.0 * m * dx**2)
+
+main_diag = -2.0 * t_coeff * np.ones(N) + V
+off_diag = t_coeff * np.ones(N-1)
+
+H = diags([off_diag, main_diag, off_diag], [-1, 0, 1], format='csc')
+
+# Resolviendo para los primeros 5 autoestados
+num_eigenstates = 5
+eigenvalues, eigenvectors = eigsh(H, k=num_eigenstates, which='SM')
+
+# Graficando
+plt.figure(figsize=(10, 7))
+plt.plot(x, V, color='black', linewidth=2, label='Potencial Armónico $V(x)$')
+
+# Escala para la visualización de las funciones de onda
+scale = 2.0 
+
+colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd']
+for i in range(num_eigenstates):
+    E = eigenvalues[i]
+    psi = eigenvectors[:, i]
+    # Aseguramos un signo consistente para los gráficos
+    if psi[np.argmax(np.abs(psi))] < 0:
+        psi = -psi
+    
+    # Dibujamos el nivel de energía
+    plt.axhline(E, color=colors[i], linestyle='--', alpha=0.5)
+    
+    # Dibujamos la función de onda desplazada al nivel de energía correspondiente
+    plt.plot(x, E + scale * psi, color=colors[i], 
+             label=f'n={i}, $E_{i}$={E:.2f} $\hbar\omega$')
+
+plt.xlim(-5, 5)
+plt.ylim(0, max(eigenvalues) + 1)
+plt.xlabel('Posición (x)')
+plt.ylabel('Energía / Amplitud de Onda')
+plt.title('Estados Ligados del Oscilador Armónico Cuántico (1D)')
+plt.legend(loc='upper right')
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+# plt.show() # Descomentar para visualizar
+```
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
