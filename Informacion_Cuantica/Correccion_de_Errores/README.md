@@ -182,24 +182,40 @@ print(f"Fidelidad tras corrección ideal mayoritaria: {fidelidad:.4f}")
 
 ## 📚 Recursos Específicos
 
-### Cursos
+### Cursos Recomendados
 1. [Quantum Error Correction (edX - Delft University)](https://www.edx.org/course/quantum-error-correction)
 2. [Fault-Tolerant Quantum Computing (Coursera)](https://www.coursera.org/learn/fault-tolerant-quantum-computing)
-3. [Quantum Codes and Topology (MIT OpenCourseWare)](https://ocw.mit.edu/courses/quantum-codes)
-4. [Introduction to Stabilizer Codes (Stanford)](https://quantum.stanford.edu/courses/stabilizer-codes)
-5. [Error Correction in Quantum Systems (FutureLearn)](https://www.futurelearn.com/courses/error-correction-quantum)
+3. [Introduction to Stabilizer Codes (Stanford)](https://quantum.stanford.edu/courses/stabilizer-codes)
 
 ### Artículos y Simulaciones
-1. [Scheme for reducing decoherence in quantum computer memory (P. Shor, 1995)](https://doi.org/10.1103/PhysRevA.52.R2493)
-2. [Surface codes: Towards practical large-scale quantum computation (A. Fowler et al., 2012)](https://arxiv.org/abs/1208.0928)
-3. [Stim: Fast Quantum Error Correction Simulator (C. Gidney, 2021)](https://arxiv.org/abs/2103.02202)
-4. [PyMatching: A Python package for decoding quantum error-correcting codes (Higgott, 2021)](https://arxiv.org/abs/2105.13082)
-5. [Topological quantum memory (E. Dennis et al., 2002)](https://arxiv.org/abs/quant-ph/0110143)
-6. [Fault-tolerant quantum computation with constant error rate (Aharonov & Ben-Or, 1997)](https://arxiv.org/abs/quant-ph/9611025)
-7. [Quantum Error Correction for Beginners (Devitt et al., 2013)](https://arxiv.org/abs/0905.2794)
-8. [Stabilizer Codes and Quantum Error Correction (Gottesman, 1997)](https://arxiv.org/abs/quant-ph/9705052)
+1. **Scheme for reducing decoherence in quantum computer memory (P. Shor, 1995)**
+   - **Enlace:** [https://doi.org/10.1103/PhysRevA.52.R2493](https://doi.org/10.1103/PhysRevA.52.R2493)
+   - **Importancia Teórica:** Este histórico trabajo mostró por primera vez que la decoherencia de múltiples tipos (bit-flip y phase-flip) puede corregirse utilizando la redundancia de entrelazamiento, sin violar el teorema de no-clonación.
+   - **Fondo Matemático:** Construye el estado codificado entrelazando 9 qubits para 1 qubit lógico. Utiliza proyectores estabilizadores locales como $Z_1 Z_2$ y $X_1 X_2 X_3 X_4 X_5 X_6$ para proyectar el error continuo en un error discreto corregible:
+     $$
+     E |\psi_L\rangle \xrightarrow{\text{Medida}} P_k |\psi_L\rangle
+     $$
+   - **Implicaciones Físicas:** Demostró la viabilidad a largo plazo de la computación cuántica, mitigando la creencia previa de que los errores analógicos acumularían inevitablemente un ruido catastrófico.
+
+2. **Surface codes: Towards practical large-scale quantum computation (A. Fowler et al., 2012)**
+   - **Enlace:** [https://arxiv.org/abs/1208.0928](https://arxiv.org/abs/1208.0928)
+   - **Importancia Teórica:** Los códigos de superficie (una clase de códigos topológicos) poseen el umbral de tolerancia a fallos más alto conocido ($\approx 1\%$), y demandan únicamente interacciones geométricas de 2-vecinos (arquitectura bidimensional local).
+   - **Fondo Matemático:** El Hamiltoniano de superficie (código Torico de Kitaev) se basa en estabilizadores tipo placa $B_p$ y cruz $A_v$:
+     $$
+     H = - \sum_v A_v - \sum_p B_p \quad \text{donde} \quad A_v = \prod_{i \in \text{star}(v)} X_i, \quad B_p = \prod_{j \in \text{plaquette}(p)} Z_j
+     $$
+   - **Implicaciones Físicas:** Conecta la teoría de la información con las fases topológicas de la materia (quasipartículas anyónicas). Es el modelo dominante propuesto para la computación escalable moderna por Google e IBM.
+
+3. **Stabilizer Codes and Quantum Error Correction (Gottesman, 1997)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/9705052](https://arxiv.org/abs/quant-ph/9705052)
+   - **Importancia Teórica:** La tesis fundacional de Gottesman que establece el poderoso formalismo algebraico estabilizador.
+   - **Fondo Matemático:** Explota el subgrupo de Pauli $\mathcal{S} \subset \mathcal{P}_n$. El subespacio lógico se define como el autoespacio de $+1$ para cada estabilizador:
+     $$
+     \mathcal{C} = \{ |\psi\rangle \mid S_i |\psi\rangle = |\psi\rangle, \forall S_i \in \mathcal{S} \}
+     $$
+     Demuestra que las compuertas lógicas pueden rastrearse actualizando generadores (Teorema de Gottesman-Knill).
+   - **Implicaciones Físicas:** Unifica los códigos clásicos lineales con los cuánticos y provee una simulación eficiente de un subconjunto de circuitos cuánticos en computadoras clásicas.
 
 ### 📖 Referencias Útiles y Bibliografía
 1. [Quantum Computation and Quantum Information (Nielsen & Chuang)](https://doi.org/10.1017/CBO9780511976667)
 2. [Quantum Error Correction (D. A. Lidar, T. A. Brun)](https://doi.org/10.1017/CBO9781139034807)
-3. [Topological Quantum Computation (Z. Wang)](https://bookstore.ams.org/cbms-112/)

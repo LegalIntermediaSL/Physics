@@ -273,27 +273,45 @@ plt.grid(True)
 plt.show()
 ```
 
-## 📚 Recursos
+## 📚 Recursos Específicos
 
-### Cursos Online
-1. "[The Standard Model](https://ocw.mit.edu/courses/physics/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/)" (MIT OCW)
-2. "[Particle Physics: An Introduction](https://www.coursera.org/learn/particle-physics)" (Coursera)
-3. "[Beyond the Standard Model](https://www.edx.org/)" (edX)
-4. "[Quantum Electrodynamics and Chromodynamics](https://online.stanford.edu/)" (Stanford Online)
-5. "[Symmetry and the Standard Model](https://www.maths.cam.ac.uk/)" (University of Cambridge)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 8.701 Introduction to Nuclear and Particle Physics](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/)**
+   Una travesía monumental a través de las interacciones débiles y fuertes, cubriendo experimentalmente la búsqueda y descubrimiento de las piezas clave del Modelo Estándar.
+2. **[Stanford: Theoretical Minimum - Particle Physics 1](https://theoreticalminimum.com/courses/particle-physics-1/2009/fall)**
+   Exquisito tratamiento matemático introductorio sobre simetrías $SU(N)$, teorías de campo y reglas de Feynman por el Prof. Leonard Susskind.
+3. **[Cambridge DAMTP: Standard Model Lectures](http://www.damtp.cam.ac.uk/user/tong/smodel.html)**
+   Lecturas canónicas avanzadas sobre la cromodinámica cuántica y unificación electrodébil por el Prof. David Tong, imprescindibles para formalismo matemático.
 
-### Artículos y Simulaciones
-1. "[A Model of Leptons](https://doi.org/10.1103/PhysRevLett.19.1264)" (S. Weinberg, 1967)
-2. "[Broken Symmetries and the Masses of Gauge Bosons](https://doi.org/10.1103/PhysRevLett.13.508)" (P. W. Higgs, 1964)
-3. "[The Discovery of the Top Quark](https://www.fnal.gov/pub/science/top-quark.html)" (Fermilab)
-4. "[CERN Open Data Portal - Standard Model Analyses](https://opendata.cern.ch/)"
-5. "[Neutrino Oscillations](https://doi.org/10.1103/PhysRevLett.81.1562)" (Super-Kamiokande, 1998)
-6. "[Elementary Particles](https://phet.colorado.edu/)" (PhET Interactive Simulations)
-7. "[CP Violation in the Kaon System](https://doi.org/10.1103/PhysRevLett.13.138)" (Cronin & Fitch, 1964)
-8. "[Quantum Chromodynamics at high energies](https://doi.org/10.1103/RevModPhys.67.157)" (Review Article)
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Observation of a new particle in the search for the Standard Model Higgs boson"** - *ATLAS Collaboration (2012), Physics Letters B 716*  
+   [Link al artículo original (ScienceDirect/CERN)](https://doi.org/10.1016/j.physletb.2012.08.020)
+   
+   **Importancia Teórica y Relevancia:** 
+   Documenta empíricamente la existencia de la última pieza faltante del Modelo Estándar. El descubrimiento del Bosón de Higgs validó experimentalmente el mecanismo teórico propuesto en 1964 que dota de masa al universo a través de la ruptura espontánea de la simetría de gauge electrodébil.
+   
+   **Contexto Matemático:** 
+   Para detectar una partícula altamente inestable (su vida media es minúscula), ATLAS tuvo que rastrear los canales de decaimiento acoplados al Higgs. La sección eficaz y la razón de decaimiento (branching ratio, $BR$) dependen de los acoplamientos del Higgs:
+   $$ \Gamma(H \to f\bar{f}) = \frac{N_c G_F m_f^2 M_H}{4\pi\sqrt{2}} \left( 1 - \frac{4m_f^2}{M_H^2} \right)^{3/2} $$
+   donde la anchura de decaimiento (probabilidad) para un canal fermiónico depende inherentemente de la masa del fermión al cuadrado ($m_f^2$), reflejando el acoplamiento directo de Yukawa $y_f \propto m_f$. En el artículo, destacan canales como $H \to \gamma\gamma$ (una anomalía cuántica a 1-loop mediada por un loop del quark top o bosones W) debido a su señal ultra-limpia frente a un tremendo fondo hadrónico de Bremsstrahlung. 
+
+2. **"Quantum Chromodynamics at high energies"** - *L. N. Lipatov (1995), Physics Reports 286, 131* / (Relacionado con libertad asintótica y PDF)  
+   *Nota: Se recomienda también "Asymptotic Freedom in Parton Language" de Gross y Wilczek (1973).*  
+   [Link al artículo de Gross & Wilczek (APS)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.8.3633)
+   
+   **Importancia Teórica y Relevancia:** 
+   La formulación de la Cromodinámica Cuántica (QCD) requería justificar el confinamiento a bajas energías (los quarks no pueden existir libres) y la libertad asintótica (a muy altas energías se comportan casi como partículas libres).
+   
+   **Contexto Matemático:** 
+   El avance radical fue probar que las teorías de gauge no abelianas ($SU(3)_C$) poseen una "función Beta" ($\beta(g)$) inherentemente negativa. La ecuación del Grupo de Renormalización para la constante de acoplamiento fuerte $\alpha_s(Q^2)$ a orden de 1-loop se deriva como:
+   $$ \mu \frac{\partial \alpha_s}{\partial \mu} = \beta(\alpha_s) = - \frac{\alpha_s^2}{2\pi} \left( 11 - \frac{2}{3}n_f \right) $$
+   Donde $n_f$ es el número de sabores de quarks operativos a esa escala de energía. Puesto que $n_f = 6 \le 16$, el factor entre paréntesis es positivo y la función $\beta$ completa es negativa. Integrando esto desde un impulso transferido de referencia $Q_0$ hasta $Q$, obtenemos:
+   $$ \alpha_s(Q^2) = \frac{\alpha_s(Q_0^2)}{1 + \frac{\alpha_s(Q_0^2)}{12\pi} (33 - 2n_f) \ln(Q^2/Q_0^2)} $$
+   Esta fórmula matemática atestigua el milagro del Modelo Estándar: conforme el momento transferido $Q^2 \to \infty$, la interacción se desvanece $\alpha_s(Q^2) \to 0$ (Libertad Asintótica).
 
 ### 📖 Referencias Útiles y Bibliografía
-- Halzen, F., & Martin, A. D. (1984). *[Quarks and Leptons](https://www.wiley.com/en-us/Quarks+and+Leptons%3A+An+Introductory+Course+in+Modern+Particle+Physics-p-9780471887416)*. John Wiley & Sons.
-- Griffiths, D. J. (2008). *[Introduction to Elementary Particles](https://www.wiley.com/en-us/Introduction+to+Elementary+Particles%2C+2nd%2C+Revised+Edition-p-9783527406012)*. Wiley-VCH.
-- Thomson, M. (2013). *[Modern Particle Physics](https://doi.org/10.1017/CBO9781139525367)*. Cambridge University Press.
-- Schwartz, M. D. (2014). *[Quantum Field Theory and the Standard Model](https://doi.org/10.1017/CBO9781139048040)*. Cambridge.
+- Halzen, F., & Martin, A. D. (1984). *Quarks and Leptons*. John Wiley & Sons.
+- Griffiths, D. J. (2008). *Introduction to Elementary Particles*. Wiley-VCH.
+- Thomson, M. (2013). *Modern Particle Physics*. Cambridge University Press.
+- Schwartz, M. D. (2014). *Quantum Field Theory and the Standard Model*. Cambridge University Press.

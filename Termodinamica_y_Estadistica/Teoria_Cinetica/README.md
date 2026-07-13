@@ -135,7 +135,7 @@ $$ \int_0^\infty v_x e^{-mv_x^2 / 2k_B T} dv_x = \frac{k_B T}{m} $$
 8. Sabiendo que la velocidad media escalar 3D es $\langle v \rangle = \sqrt{\frac{8 k_B T}{\pi m}}$, observamos que $\sqrt{\frac{k_B T}{2\pi m}} = \frac{1}{4} \langle v \rangle$.
 9. Concluimos que $\Phi = \frac{1}{4} n \langle v \rangle$, una fórmula fundamental en física del vacío y efusión de gases (Ley de Graham).
 
-**Problema 3: Distribución de Velocidades Extremas (V_p, Promedio y RMS)**
+**Problema 3: Distribución de Velocidades Extremas ($V_p$, Promedio y RMS)**
 Dada la distribución de velocidades de Maxwell-Boltzmann: $f(v) = 4\pi \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 e^{-mv^2 / 2k_B T}$.
 Encuentra la velocidad más probable $v_p$ y verifica que $v_p < \langle v \rangle < v_{\text{rms}}$.
 **Solución paso a paso:**
@@ -200,25 +200,37 @@ plt.show()
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-1. **Feynman Lectures on Physics:** [Vol I, Ch. 39 & 40](https://www.feynmanlectures.caltech.edu/I_39.html) - Capítulos 39 (Teoría cinética de los gases) y 40 (Mecánica estadística).
-2. **MIT 8.044 (Statistical Physics I):** [Página del Curso](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Primeras sesiones centradas en la derivación de Maxwell y las distribuciones de velocidad.
-3. **Stanford - Mecánica Estadística (Susskind):** [Enlace al Curso](https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) - Conferencias sobre el significado físico de la equipartición de la energía.
-4. **Yale PHYS 200 - Thermodynamics:** [Yale Open Courses](https://oyc.yale.edu/physics/phys-200) - Clases específicas sobre la derivación de la ley de los gases ideales desde el modelo microscópico.
-5. **Coursera / edX - Physics Intro:** [edX Introductory Physics](https://www.edx.org/course/introduction-to-mechanics) - Módulos que exploran visualmente cómo surgen propiedades macroscópicas desde partículas chocando.
+1. **[MIT OpenCourseWare: 8.044 Statistical Physics I](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/)** - Aborda meticulosamente la teoría probabilística y las deducciones analíticas de la distribución de velocidades cinéticas de Maxwell-Boltzmann en la primera mitad del curso.
+2. **[Yale Courses: Fundamentals of Physics I (PHYS 200) - Ramamurti Shankar](https://oyc.yale.edu/physics/phys-200)** - Excelentes explicaciones para estudiantes de primeros años acerca de cómo las colisiones caóticas con las paredes del recipiente se manifiestan como la presión estática macroscópica.
+3. **[Feynman Lectures on Physics (Vol. 1: Ch. 39 & 40)](https://www.feynmanlectures.caltech.edu/I_39.html)** - Los capítulos sobre teoría cinética y mecánica estadística están imbuidos de la pedagogía intuitiva insuperable de Richard Feynman, clarificando la conexión entre choques moleculares elásticos e irreversibilidad.
+4. **[UC Berkeley Webcasts: Physics 7B](https://archive.org/details/ucberkeley-webcast-physics-7b-spring-2012)** - Cubre fuertemente calor, temperatura teórica y expansiones de gas a través de la lente mecanicista macro/micro.
 
-### 📝 Artículos e Interactivos Interesantes
-1. **PhET - Gases Intro:** [Simulador de Gases](https://phet.colorado.edu/es/simulation/gases-intro) - Una simulación increíble para medir presiones, temperaturas y ver colisiones de partículas en tiempo real.
-2. **Artículo de Einstein de 1905 sobre el Movimiento Browniano:** [Brownian Motion](https://en.wikipedia.org/wiki/Brownian_motion) - Un pilar histórico para probar la teoría cinética de la materia y la existencia de los átomos.
-3. **Maxwell-Boltzmann Distribution Calculator:** [HyperPhysics Tool](http://hyperphysics.phy-astr.gsu.edu/hbase/Kinetic/maxspe.html) - Para explorar la distribución de velocidades de diferentes gases a distintas temperaturas y masas molares.
-4. **FísicaLab - Teoría Cinética:** [Lección Interactiva](https://www.fisicalab.com/tema/teoria-cinetica-gases) - Explicación detallada paso a paso para estudiantes de los postulados fundamentales.
-5. **Wikipedia - Teoría cinética de los gases:** [Artículo Principal](https://es.wikipedia.org/wiki/Teor%C3%ADa_cin%C3%A9tica) - Exhaustivo artículo con todas las derivaciones matemáticas paso a paso.
-6. **Wolfram Demonstrations - Gas en una caja:** [Simulación 3D](https://demonstrations.wolfram.com/IdealGasInABox/) - Simulador interactivo que muestra las trayectorias de partículas y colisiones elásticas.
-7. **HyperPhysics - Equipartición de la energía:** [Teorema de Equipartición](http://hyperphysics.phy-astr.gsu.edu/hbase/Kinetic/eqpar.html) - Gráficos y explicaciones claras de los grados de libertad vibracionales, rotacionales y traslacionales.
-8. **Falstad - Gas 2D Simulation:** [Falstad Gas 2D](http://www.falstad.com/gas/) - Applet muy útil para ver la estadística de colisiones.
+### 📝 Artículos Científicos Históricos y Avanzados
+
+1. **Illustrations of the Dynamical Theory of Gases**  
+   *James Clerk Maxwell (1860)*. [The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, 19(124), 19-32](https://zenodo.org/record/1431326).  
+   **Importancia Teórica:** El salto monumental donde Maxwell asume, antes que nadie, que las partículas en un gas en equilibrio no viajan a una velocidad única $v_{rms}$, sino que exhiben una distribución aleatoria de velocidades gobernada por la mecánica probabilística y el caos molecular (ausencia de memoria de choques previos).  
+   **Fondo Matemático:** Separando componentes isótropas, Maxwell demostró geométricamente que la única función de densidad de probabilidad independiente $f(v_x, v_y, v_z) = f(v_x)f(v_y)f(v_z)$ que respeta la simetría esférica $v^2$ es una gaussiana. La densidad de probabilidad respecto al módulo de velocidad $v$ es:
+   $$ f(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2k_B T}\right) $$
+   **Implicaciones Físicas:** Predijo asombrosamente fenómenos de transporte gaseoso; entre ellos, que la viscosidad interna de un gas ideal puro (a diferencia de un fluido denso) es absolutamente *independiente de su presión* macroscópica.
+
+2. **Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen (Sobre el movimiento de pequeñas partículas suspendidas en un líquido estacionario exigido por la teoría cinético-molecular del calor)**  
+   *Albert Einstein (1905)*. [Annalen der Physik, 322(8), 549-560](https://onlinelibrary.wiley.com/doi/10.1002/andp.19053220806).  
+   **Importancia Teórica:** Este es uno de los famosos artículos del "Año Milagroso" (Annus Mirabilis) de Einstein. Resolvió el misterio del *Movimiento Browniano* (el movimiento estocástico en zigzag de un grano de polen microscópico en agua) y proporcionó la prueba experimental empírica decisiva de la existencia atómica que silenció a los físicos antiatomistas (como Ernst Mach).  
+   **Fondo Matemático:** Combinando la teoría cinética clásica y principios estocásticos con la hidrodinámica (viscosidad $\eta$), Einstein derivó el coeficiente de difusión termodinámico libre $D$:
+   $$ D = \frac{k_B T}{6\pi \eta a} $$
+   y vinculó el desplazamiento cuadrático medio con el tiempo de evolución aleatoria, revelando que su varianza crece de modo difusivo y no balístico:
+   $$ \langle x^2 \rangle = 2 D t $$
+   **Implicaciones Físicas:** Permitía el cálculo del número de Avogadro $N_A$ midiendo con un microscopio el recorrido browniano de esferitas, y validaba irrevocablemente la realidad de las colisiones moleculares caóticas.
+
+3. **On the Relation between the Second Law of Thermodynamics and Probability Calculus**  
+   *Ludwig Boltzmann (1877)*. [Sitzungsberichte der Akademie der Wissenschaften, Wien 76, 373-435](https://en.wikipedia.org/wiki/Boltzmann%27s_entropy_formula).  
+   **Importancia Teórica:** Después de Maxwell, Boltzmann expande la teoría analizando cómo el equilibrio termodinámico macroscópico del gas ideal emerge como el estado macroestadístico más matemáticamente probable de entre todos sus ensambles.  
+   **Fondo Matemático:** Analiza las permutaciones combinatorias logarítmicas de las distribuciones cinéticas, llevando a la ecuación que fundó el puente final micro-macro:
+   $$ S = k_B \ln \Omega $$
+   **Implicaciones Físicas:** La teoría de los gases ideales dejó de ser solo un modelo mecánico y se convirtió en la base conceptual ineludible de la termodinámica fundamental y la flecha asimétrica cosmológica del tiempo.
 
 ### 📖 Referencias Útiles y Bibliografía
-* [Fundamentals of Statistical and Thermal Physics - Reif, F.](https://books.google.com/books?id=0sM4DgAAQBAJ) - Proporciona excelentes secciones tempranas detallando los postulados de la teoría cinética.
-* [An Introduction to Thermal Physics - Schroeder, D. V.](https://physics.weber.edu/thermal/) - Aborda la teoría cinética y sus aplicaciones astrofísicas o atmosféricas con ejemplos muy interesantes.
-* [Thermal Physics - Kittel, C. & Kroemer, H.](https://www.macmillanlearning.com/college/us/product/Thermal-Physics/p/0716710889) - Tiene análisis claros sobre el teorema de equipartición y la distribución de velocidades.
-* [The Feynman Lectures on Physics, Vol. 1 - Feynman, R.](https://www.feynmanlectures.caltech.edu/) - Los capítulos correspondientes son magistrales para comprender la intuición detrás de la presión.
-* [Concepts in Thermal Physics - Blundell, S. J. & Blundell, K. M.](https://global.oup.com/academic/product/concepts-in-thermal-physics-9780199562107) - Libro altamente recomendado para estudiantes universitarios, claro y moderno en la exposición de la teoría de gases.
+1. **Stephen J. Blundell & Katherine M. Blundell - [Concepts in Thermal Physics (Oxford, 2009)](https://global.oup.com/academic/product/concepts-in-thermal-physics-9780199562107)** - Excepcional para el nivel de pregrado. Brinda una exposición fluida que entrelaza la termodinámica tradicional con las demostraciones deductivas de la teoría cinética (viscosidad, difusión y efusión molecular).
+2. **David V. Schroeder - [An Introduction to Thermal Physics (Oxford, 2021)](https://global.oup.com/academic/product/an-introduction-to-thermal-physics-9780193884386)** - El libro más amigable del área. Sus secciones de teoría cinética presentan excelentes aplicaciones empíricas y atmosféricas.
+3. **Frederick Reif - [Fundamentals of Statistical and Thermal Physics (Waveland Press)](https://books.google.com/books?id=0sM4DgAAQBAJ)** - Ofrece capítulos completos minuciosamente deducidos del límite fluido a sistemas colisionales, sección de transporte integral (ecuación de Boltzmann simplificada) con enorme rigor analítico.

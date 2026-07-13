@@ -221,25 +221,30 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[Magnetism and Magnetic Materials (NPTEL)](https://nptel.ac.in):** Tratamiento completo, desde momentos atómicos hasta dominios magnéticos.
-2. **[Spintronics and Magnetism (edX)](https://www.edx.org):** Para aplicaciones modernas del magnetismo en dispositivos de espín.
-3. **[Quantum Magnetism (MIT OCW)](https://ocw.mit.edu):** Aborda modelos de Heisenberg y efectos de muchos cuerpos magnéticos.
-4. **[Solid State Magnetism (Coursera)](https://www.coursera.org):** Curso introductorio a diamagnetismo, paramagnetismo y ferromagnetismo.
-5. **[Magnetic Phase Transitions (Oxford lectures)](https://www.ox.ac.uk):** Teoría de campo medio y fluctuaciones térmicas.
+1. **[MIT OCW: 8.231 Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/)**: Aborda de manera analítica la fenomenología magnética y el Hamiltoniano de Heisenberg.
+2. **[NPTEL: Magnetism and Superconductivity](https://nptel.ac.in/courses/115101121)**: Curso detallado sobre diamagnetismo, paramagnetismo, ferromagnetismo y la teoría del campo medio de Weiss.
+3. **[Stanford Online: Quantum Mechanics](https://online.stanford.edu/courses/soe-yeeqm-quantum-mechanics-scientists-and-engineers)**: Para entender en profundidad el espín y la mecánica cuántica responsable de la interacción de intercambio magnética.
 
 ### Artículos y Simulaciones
-1. **[Ising Model Simulator](https://mattbierbaum.github.io/ising.js/):** (Varios en GitHub o HTML5) para observar transiciones de fase y dominios en 2D.
-2. **["Giant Magnetoresistance" (Fert & Grünberg, Nobel lectures)](https://www.nobelprize.org):** El artículo sobre el descubrimiento de la GMR.
-3. **[OOMMF (Object Oriented Micromagnetic Framework)](https://math.nist.gov/oommf/):** El software estándar para simular dominios micromagnéticos.
-4. **["Spin Glasses and Complexity" (Giorgio Parisi)](https://arxiv.org):** Artículos sobre sistemas magnéticos desordenados.
-5. **[PhET - Magnets and Electromagnets](https://phet.colorado.edu):** Nivel básico, pero excelente para entender campos generados por imanes.
-6. **["The Hubbard Model" (Review articles)](https://journals.aps.org):** Para profundizar en cómo el magnetismo surge de repulsión coulombsiana.
-7. **[Mumax3](https://mumax.github.io):** Simulador magnético acelerado por GPU (muy utilizado en investigación actual).
-8. **["Magnetic Skyrmions" (Nature Physics)](https://www.nature.com):** Artículo sobre texturas magnéticas topológicas modernas.
+1. **["Giant Magnetoresistance of (001)Fe/(001)Cr Magnetic Superlattices" por M. N. Baibich, A. Fert et al. (1988)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.61.2472)**
+   - **Importancia Teórica:** Este artículo ganador del Premio Nobel de Física marcó el nacimiento de la espintrónica (electrónica basada en el espín). Demostró el efecto de Magnetorresistencia Gigante (GMR) en superredes multicapas.
+   - **Fondo Matemático:** La GMR se explica a través de la dispersión de electrones dependiente del espín, descrita por el modelo de dos corrientes de Mott. Las conductividades para espines "up" ($\uparrow$) y "down" ($\downarrow$) son desiguales en los metales ferromagnéticos. Para la configuración de magnetizaciones paralelas (P) y antiparalelas (AP) entre capas adyacentes de Fe separadas por un espaciador no magnético de Cr, las resistividades netas toman la forma:
+     $$ \rho_{P} \approx \frac{\rho_\uparrow \rho_\downarrow}{\rho_\uparrow + \rho_\downarrow}, \quad \rho_{AP} \approx \frac{\rho_\uparrow + \rho_\downarrow}{4} $$
+     El ratio de magnetorresistencia se define clásicamente como:
+     $$ \frac{\Delta \rho}{\rho} = \frac{\rho_{AP} - \rho_{P}}{\rho_{P}} = \frac{(\rho_\uparrow - \rho_\downarrow)^2}{4\rho_\uparrow \rho_\downarrow} $$
+     Lo cual resulta en un cambio masivo en la resistencia eléctrica bajo un campo magnético externo al alterar el alineamiento de las capas.
+   - **Implicaciones Físicas:** Las válvulas de espín derivadas de este efecto permitieron el dramático incremento de la densidad de almacenamiento de información en discos duros, sentando las bases tecnológicas de la era de la información masiva.
+
+2. **["Quantum Mechanics of Many-Electron Systems" por P.A.M. Dirac (1929)](https://royalsocietypublishing.org/doi/10.1098/rspa.1929.0094)**
+   - **Importancia Teórica:** Fundamentó el modelo de Heisenberg-Dirac mediante el formalismo generalizado de la mecánica cuántica de múltiples cuerpos, justificando rigurosamente que las interacciones de los espines atómicos provienen exclusivamente del Principio de Pauli.
+   - **Fondo Matemático:** Demuestra que al proyectar el Hamiltoniano repulsivo de Coulomb sobre el subespacio de funciones de onda totalmente antisimétricas, la energía de intercambio puede representarse usando el operador permutación $P_{ij}$. Con la relación matricial $P_{ij} = \frac{1}{2} \left(1 + \frac{4}{\hbar^2} \mathbf{S}_i \cdot \mathbf{S}_j \right)$, el Hamiltoniano de interacción se reescribe como una interacción de acoplamiento de espines de Heisenberg:
+     $$ \mathcal{H}_{\text{eff}} = E_0 - \sum_{i<j} J_{ij} \, \mathbf{S}_i \cdot \mathbf{S}_j $$
+     donde $J_{ij}$ es la integral de intercambio repulsiva electrostática:
+     $$ J_{ij} = \int \int \phi_i^*(\mathbf{r}_1) \phi_j^*(\mathbf{r}_2) \frac{e^2}{4\pi\epsilon_0|\mathbf{r}_1 - \mathbf{r}_2|} \phi_i(\mathbf{r}_2) \phi_j(\mathbf{r}_1) d^3r_1 d^3r_2 $$
+   - **Implicaciones Físicas:** Concluye que, paradójicamente, el fuerte alineamiento magnético (ferromagnetismo) que se observa a escalas macroscópicas no proviene de dipolos magnéticos interactuando, sino de fuerzas eléctricas monumentales disfrazadas matemáticamente de interacciones magnéticas efectivas por la antisimetría fermiónica.
+
+3. **[OOMMF (Object Oriented Micromagnetic Framework)](https://math.nist.gov/oommf/)**: Una poderosa herramienta de simulación para modelado micromagnético, usada mundialmente para simular configuraciones de dominios magnéticos de Landau-Lifshitz-Gilbert (LLG) y paredes de Bloch.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Blundell, S. *Magnetism in Condensed Matter*](https://global.oup.com). Oxford. (El mejor libro introductorio del tema).
-2. [Coey, J. M. D. *Magnetism and Magnetic Materials*](https://www.cambridge.org). Cambridge.
-3. [Cullity, B. D., & Graham, C. D. *Introduction to Magnetic Materials*](https://www.wiley.com). Wiley.
-4. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://archive.org). (Capítulos 31-33).
-5. [Kittel, C. *Introduction to Solid State Physics*](https://archive.org). (Capítulos de magnetismo).
+1. [Blundell, S. *Magnetism in Condensed Matter*](https://global.oup.com/academic/product/magnetism-in-condensed-matter-9780198505914) - El texto definitivo de introducción para magnetismo en sólidos.
+2. [Coey, J. M. D. *Magnetism and Magnetic Materials*](https://www.cambridge.org/highereducation/books/magnetism-and-magnetic-materials/09BC11AF43C142B28B4666E31E2A40E0) - Cobertura profunda del origen atómico al magnetismo macroscópico.

@@ -157,25 +157,28 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[Interplay of Magnetism and Superconductivity (NPTEL advanced)](https://nptel.ac.in):** Análisis de cómo el magnetismo normalmente destruye la superconductividad y excepciones notables.
-2. **[Strongly Correlated Electron Systems (MIT OCW)](https://ocw.mit.edu):** Curso avanzado sobre fermiones pesados donde coexisten ambas fases.
-3. **[Quantum Phase Transitions (Coursera / edX)](https://www.coursera.org):** Teoría de transiciones cuánticas en el cero absoluto entre estados magnéticos y superconductores.
-4. **[Advanced Solid State Physics (Cambridge)](https://www.cam.ac.uk):** Discusión sobre simetrías rotas.
-5. **[Unconventional Superconductors (Oxford lectures)](https://www.ox.ac.uk):** Estudio de casos donde las fluctuaciones magnéticas median los pares de Cooper.
+1. **[NPTEL: Superconductivity and Magnetism](https://nptel.ac.in/courses/115101121)**: Curso magistral dedicado a examinar cómo ambas fases rompen diferentes simetrías y los mecanismos de sus interacciones conflictivas en sólidos con correlaciones fuertes.
+2. **[MIT OCW: 8.231 Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/)**: Para un desarrollo más termodinámico y formal sobre la ruptura de pares.
+3. **[Coursera/EPFL: Topology in Condensed Matter](https://www.coursera.org/learn/topology-condensed-matter)**: Excelente análisis del cruce exótico topológico donde un superconductor acoplado por efecto espín-órbita al magnetismo genera estados excitados tipo fermión de Majorana.
 
 ### Artículos y Simulaciones
-1. **["Coexistence of superconductivity and magnetism" (Review of Modern Physics)](https://journals.aps.org/rmp/):** Artículo comprensivo sobre sistemas donde ambos fenómenos ocurren simultáneamente.
-2. **["Magnetic Fluctuations in High-Tc Cuprates" (Nature Physics)](https://www.nature.com):** Sobre el origen magnético de los superconductores de alta temperatura.
-3. **[MuSR (Muon Spin Rotation) virtual labs](https://www.psi.ch/en/lmu):** Técnicas experimentales para detectar magnetismo en materiales superconductores.
-4. **["Ferromagnetic Superconductors" (UGe2, URhGe, etc.)](https://arxiv.org):** Literatura sobre materiales muy peculiares que combinan ambos mundos de forma cooperativa.
-5. **[SQUIDs simulators (Falstad / Python)](https://www.falstad.com/circuit/):** Interacción práctica entre un dispositivo superconductor y flujos magnéticos muy débiles.
-6. **["Majorana Fermions in Condensed Matter" (Alicea, ROP)](https://arxiv.org):** Sobre cómo la combinación de un campo magnético y un superconductor (con acoplamiento espín-órbita) da lugar a estos estados exóticos.
-7. **[Simulación de vórtices magnéticos en superconductores](https://github.com):** Herramientas GL para ver campos penetrando en forma de líneas de flujo (vórtices de Abrikosov).
-8. **["Spin-Triplet Superconductivity" (Physics Today)](https://physicstoday.scitation.org):** Cuando los pares de Cooper se forman con espines paralelos.
+1. **["Observation of Superconductivity in Ferromagnetic UGe2" por S. S. Saxena et al. (Nature, 2000)](https://www.nature.com/articles/35020500)**
+   - **Importancia Teórica:** Este artículo causó un asombro fundacional porque se creía teóricamente imposible que un ferromagneto masivo (F) sufriera de manera intrínseca y homogénea una transición hacia la superconductividad sin apagar antes el ferromagnetismo (por el límite de paramagnetismo de Pauli).
+   - **Fondo Matemático:** El emparejamiento electrónico singlete clásico de BCS ($\mathbf{k}\uparrow$, $-\mathbf{k}\downarrow$) está absolutamente vetado en un ferromagneto fuerte porque las bandas magnéticas intercambiadas Zeeman están brutalmente divididas, imposibilitando aparear fermiones con momentos simétricos en el nivel de Fermi. 
+     Para sobrevivir, la función de onda de pares de Cooper se ve obligada a adquirir estadística de **triplete de espín** ($S=1$, permitiendo estados espaciales orbitales $L=1, 3...$ es decir *onda P*), tal como:
+     $$ |\Psi_{triplete}\rangle \propto \left( c^\dagger_{\mathbf{k}\uparrow} c^\dagger_{-\mathbf{k}\uparrow} + e^{i\phi} c^\dagger_{\mathbf{k}\downarrow} c^\dagger_{-\mathbf{k}\downarrow} \right) |0\rangle $$
+     Esta antisimetría cuántica orbital forzada permite que los electrones con espines enteramente alineados al enorme campo molecular logren una atracción termodinámica e interceptar el estado condensado.
+   - **Implicaciones Físicas:** Demuestra empíricamente el surgimiento de nuevos e inexplorados estados colectivos fermiónicos topológicos, probando que el paradigma BCS no solo está restringido al gas no magnético estándar, sino que puede abarcar apareamientos magnéticamente sintonizados.
+
+2. **["Majorana fermions in a tunable semiconductor device" (Science, 2012)](https://www.science.org/doi/10.1126/science.1222360)**
+   - **Importancia Teórica:** Reporta las primeras huellas serias del Fermión de Majorana (partículas que son sus propias antipartículas, conceptualizadas inicialmente en física de altas energías) emergiendo paradójicamente dentro de la materia condensada.
+   - **Fondo Matemático:** La física teórica subyacente surge de acoplar un material ferromagnético Zeeman local $V_Z = g \mu_B B$ en contacto con un hilo cuántico fuertemente acoplado en espín-órbita (Rashba $\alpha_R$), y promediando por cercanía (efecto proximidad) con un superconductor macroscópico $s$-wave usual $\Delta$. El Hamiltoniano 1D topológico (similar al modelo de Kitaev 1D) que rige al estado de quasipartícula adquiere la estructura:
+     $$ \mathcal{H} = \left( \frac{-\hbar^2 \partial_x^2}{2m^*} - \mu \right) \tau_z + i\alpha_R \partial_x \tau_z \sigma_y + V_Z \sigma_x + \Delta \tau_x $$
+     donde $\sigma$ y $\tau$ son matrices de Pauli para espín y hueco-partícula (Nambu). Cuando la condición del gap invertido $V_Z > \sqrt{\Delta^2 + \mu^2}$ es violada topológicamente, surgen modos ligados puros de energía $E=0$ en los extremos físicos espaciales del hilo. El operador que crea esta excitación exótica satisface $\gamma = \gamma^\dagger$ y $\gamma^2 = 1$.
+   - **Implicaciones Físicas:** Estas quasipartículas de estado sólido tienen estadísticas no-abelianas excepcionales, prometiendo el diseño arquitectónico de una computadora cuántica topológica intrínsecamente protegida de la decoherencia externa.
+
+3. **[OOMMF (Object Oriented Micromagnetic Framework)](https://math.nist.gov/oommf/)**: Para resolver dinámicas estáticas complejas con espines compitiendo. En la conjunción F/S (Ferro/Superconductor), se acoplan módulos OOMMF modificados que penalizan dinámicamente la infiltración de dominios para observar transiciones tipo criptomagnéticas.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Tinkham, M. *Introduction to Superconductivity*](https://store.doverpublications.com).
-2. [Blundell, S. *Magnetism in Condensed Matter*](https://global.oup.com).
-3. [Annett, J. F. *Superconductivity, Superfluids and Condensates*](https://global.oup.com). Oxford University Press.
-4. [Kittel, C. *Introduction to Solid State Physics*](https://archive.org).
-5. [Sachdev, S. *Quantum Phase Transitions*](https://www.cambridge.org). Cambridge University Press.
+1. [Tinkham, M. *Introduction to Superconductivity* (2da ed.)](https://store.doverpublications.com/products/9780486435039) - Trata a la perfección las formulaciones de Ginzburg-Landau donde el magnetismo externo y el diamagnetismo pelean.
+2. [Blundell, S. *Magnetism in Condensed Matter*](https://global.oup.com/academic/product/magnetism-in-condensed-matter-9780198505914) - Indispensable lectura de la ruptura simétrica del ferromagnetismo.

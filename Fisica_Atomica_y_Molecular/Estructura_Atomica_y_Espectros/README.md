@@ -230,16 +230,28 @@ plt.tight_layout()
 
 ### Artículos y Simulaciones
 1. [Rydberg, J. R. (1890). *On the structure of the line-spectra of the chemical elements*.](https://www.tandfonline.com/doi/abs/10.1080/14786449008619945)
-2. [Bohr, N. (1913). *On the Constitution of Atoms and Molecules*.](https://www.tandfonline.com/doi/abs/10.1080/14786441308634955)
-3. [PhET Simulation: Hydrogen Atom Models](https://phet.colorado.edu/en/simulations/hydrogen-atom)
-4. [PhET Simulation: Molecules and Light](https://phet.colorado.edu/en/simulations/molecules-and-light)
-5. [Michelson, A. A. (1891). *Visibility of Interference-Fringes in the Focus of a Telescope*.](https://www.tandfonline.com/doi/abs/10.1080/14786449108620111)
-6. [Zeeman, P. (1897). *On the influence of Magnetism on the Nature of the Light emitted by a Substance*.](https://www.tandfonline.com/doi/abs/10.1080/14786449708620965)
-7. [Stark, J. (1914). *Observation of the Separation of Spectral Lines by an Electric Field*.](https://www.nature.com/articles/092401b0)
-8. [Kramers, H. A., & Heisenberg, W. (1925). *Over de strooiing van straling door atomen*.](https://link.springer.com/article/10.1007/BF02980009)
+### 🎓 Cursos y Clases Recomendadas
+1. [MIT OCW 8.421 Atomic and Optical Physics I (Wolfgang Ketterle)](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/): Módulos sobre la estructura atómica, interacción espín-órbita, reglas de selección y ensanchamiento espectral.
+2. [NPTEL Atomic and Molecular Physics (Prof. Amal Kumar Das)](https://nptel.ac.in/courses/115105100): Cobertura profunda del efecto Stark y Zeeman, y cómo alteran las líneas espectrales observadas.
+3. [Yale PHYS 201 (Ramamurti Shankar)](https://oyc.yale.edu/physics/phys-201): Las últimas conferencias tocan aspectos cualitativos de la cuantización de momento angular y el modelo del átomo.
+
+### 📝 Artículos Científicos Clave
+1. **Sommerfeld, A. (1916). "Zur Quantentheorie der Spektrallinien"**. *Annalen der Physik*, 356(17), 1-94. [DOI: 10.1002/andp.19163561702](https://doi.org/10.1002/andp.19163561702)
+   *Importancia Teórica y Matemática:* Extiende el modelo de Bohr para incluir órbitas elípticas e introduce correcciones relativistas. Define la constante de estructura fina $\alpha$:
+   $$ \alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} \approx \frac{1}{137} $$
+   *Implicaciones Físicas:* Las correcciones relativistas de Sommerfeld explicaron el desdoblamiento del nivel fundamental de hidrógeno (estructura fina) antes del descubrimiento del espín del electrón, revelando la necesidad del tratamiento relativista en la espectroscopía de precisión.
+
+2. **Lamb, W. E., & Retherford, R. C. (1947). "Fine Structure of the Hydrogen Atom by a Microwave Method"**. *Phys. Rev.*, 72(3), 241-243. [DOI: 10.1103/PhysRev.72.241](https://doi.org/10.1103/PhysRev.72.241)
+   *Importancia Teórica y Matemática:* Demostró experimentalmente que los estados $2S_{1/2}$ y $2P_{1/2}$ del hidrógeno, degenerados según la ecuación de Dirac, en realidad están separados por $\sim 1057$ MHz. El desplazamiento provocado por fluctuaciones del vacío puede aproximarse como:
+   $$ \Delta E_{\text{Lamb}} \propto \alpha^5 m_e c^2 $$
+   *Implicaciones Físicas:* Rompió la degeneración exacta de Dirac, lo cual fue el impulso experimental crítico e inmediato para el desarrollo moderno de la Electrodinámica Cuántica (QED) por Feynman, Schwinger y Tomonaga.
+
+3. **Stark, J. (1914). "Beobachtungen über den Effekt des elektrischen Feldes auf Spektrallinien I"**. *Annalen der Physik*, 348(5), 965-982. [DOI: 10.1002/andp.19143480507](https://doi.org/10.1002/andp.19143480507)
+   *Importancia Teórica y Matemática:* Estudio del desdoblamiento espectral bajo campos eléctricos $E_{\text{ext}}$. El Hamiltoniano de perturbación (Efecto Stark) es:
+   $$ \hat{H}' = e \vec{r} \cdot \vec{E}_{\text{ext}} $$
+   *Implicaciones Físicas:* Demuestra cómo la simetría esférica se rompe, mezclando estados de diferente paridad. Para el estado fundamental del hidrógeno se da un efecto Stark cuadrático, mientras que en estados excitados degenerados, produce un efecto Stark lineal.
 
 ### 📖 Referencias Útiles y Bibliografía
-- [Foot, C. J. (2005). *Atomic Physics*. Oxford University Press.](https://global.oup.com/academic/product/atomic-physics-9780198506966)
-- [Bransden, B. H., & Joachain, C. J. (2003). *Physics of Atoms and Molecules*. Pearson Education.](https://www.pearson.com/en-us/subject-catalog/p/physics-of-atoms-and-molecules/P200000005739)
-- [Haken, H., & Wolf, H. C. (2005). *The Physics of Atoms and Quanta*. Springer.](https://link.springer.com/book/10.1007/3-540-29281-2)
-- [Demtröder, W. (2010). *Atoms, Molecules and Photons*. Springer.](https://link.springer.com/book/10.1007/978-3-642-10298-1)
+1. **Libro**: [Atomic Physics - C.J. Foot](https://global.oup.com/academic/product/atomic-physics-9780198506966) (Capítulos 4-5). Explicación brillante de la estructura fina/hiperfina y efecto Zeeman.
+2. **Libro**: [Physics of Atoms and Molecules - B.H. Bransden & C.J. Joachain](https://www.pearson.com/en-gb/subject-catalog/p/physics-of-atoms-and-molecules/P200000005272/9780582356924). Referencia pesada y analítica para espectroscopía rigurosa.
+3. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 6: Teoría de Perturbaciones). Muestra explícitamente cómo derivar la estructura fina del hidrógeno sumando el término cinético relativista y el término de espín-órbita.

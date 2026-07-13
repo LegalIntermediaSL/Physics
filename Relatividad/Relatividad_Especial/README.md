@@ -237,30 +237,36 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### 🎓 Cursos y Clases Recomendadas (5-7 Recomendados)
-1. **[Stanford University: Special Relativity (Leonard Susskind)](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring)** - Clases magistrales profundas enfocadas en la derivación rigurosa de la métrica de Minkowski y el espacio-tiempo.
-2. **[MIT OpenCourseWare: 8.20 Introduction to Special Relativity](https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2005/)** - Curso universitario completo del Independent Activities Period (IAP) con tareas, notas y exámenes.
-3. **[Yale Courses: Fundamentals of Physics (Ramamurti Shankar)](https://oyc.yale.edu/physics/phys-200)** - Las últimas conferencias del curso brindan una de las introducciones más intuitivas a la cinemática relativista.
-4. **[Coursera: Understanding Einstein: The Special Theory of Relativity](https://www.coursera.org/learn/einstein-relativity)** - Curso de Stanford enfocado en desmitificar los conceptos físicos y filosóficos subyacentes.
-5. **[World Science U: Special Relativity (Brian Greene)](https://www.worldscienceu.com/courses/special-relativity-primer/)** - Módulos altamente interactivos llenos de animaciones visuales para comprender dilatación temporal y simultaneidad.
-6. **[Khan Academy: Special Relativity](https://es.khanacademy.org/science/physics/special-relativity)** - Explicaciones sencillas paso a paso, ideales para quienes no tienen conocimientos profundos de cálculo.
-7. **[Perimeter Institute: Special Relativity](https://perimeterinstitute.ca/training/perimeter-scholars-international/psi-lectures)** - Charlas para estudiantes de física teórica que buscan transitar hacia mecánica cuántica relativista.
+### 🎓 Cursos y Clases Recomendadas
+1. **[Stanford University: Special Relativity (Leonard Susskind)](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring)** - Clases magistrales profundas enfocadas en la derivación rigurosa de la métrica de Minkowski, el espacio-tiempo y los tensores.
+2. **[MIT OpenCourseWare: 8.20 Introduction to Special Relativity](https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2005/)** - Curso universitario completo del MIT con énfasis en la cinemática, la dinámica relativista y las paradojas (gemelos, pértiga y granero).
+3. **[Yale Courses: Fundamentals of Physics I (PHYS 200) - Ramamurti Shankar](https://oyc.yale.edu/physics/phys-200)** - Las últimas conferencias del curso brindan una de las introducciones más claras e intuitivas a los postulados de Einstein y la transformación de Lorentz.
+4. **[Coursera: Understanding Einstein: The Special Theory of Relativity](https://www.coursera.org/learn/einstein-relativity)** - Curso de la Universidad de Stanford que busca desmitificar los conceptos físicos, filosóficos y matemáticos subyacentes, centrándose en el espacio-tiempo.
 
-### 📝 Artículos y Simulaciones Interesantes (8-10 Recomendados)
-1. **Documento Original**: [On the Electrodynamics of Moving Bodies (1905)](http://www.fourmilab.ch/etexts/einstein/specrel/www/) - La traducción clásica al inglés del artículo de Einstein.
-2. **Simulador**: [PhET Viaje Espacial Relativista](https://phet.colorado.edu/en/simulations/relativity) - Explora la dilatación del tiempo y la contracción de Lorentz interactivamente.
-3. **Simulador**: [A Slower Speed of Light (MIT Game Lab)](http://gamelab.mit.edu/games/a-slower-speed-of-light/) - Juego que simula los efectos visuales de moverse cerca de la velocidad de la luz (efecto Doppler, aberración).
-4. **Simulador**: [Test of Relativity (Visualizing Relativistic Effects)](https://a-way-to-go.com/) - Visualización de la deformación óptica a altas velocidades.
-5. **Wikipedia**: [Minkowski Space](https://en.wikipedia.org/wiki/Minkowski_space) - Fundamental para entender los diagramas de espacio-tiempo y la causalidad mediante conos de luz.
-6. **Scholarpedia**: [Special Relativity](http://www.scholarpedia.org/article/Special_relativity) - Revisión profunda revisada por pares sobre la estructura matemática de la teoría.
-7. **Stanford Encyclopedia**: [Conventionality of Simultaneity](https://plato.stanford.edu/entries/spacetime-convensimul/) - Discusión filosófica sobre la sincronización de relojes de Poincaré-Einstein.
-8. **MinutePhysics**: [Special Relativity Series (YouTube)](https://www.youtube.com/playlist?list=PL3z817C-p6788-bZ8s8C3lJ78vA1tK7_S) - Explicaciones animadas cortas que aclaran las famosas paradojas de la relatividad.
-9. **FísicaLab**: [Postulados y Cinemática Relativista](https://www.fisicalab.com/tema/relatividad-especial) - Ejercicios resueltos y teoría para nivel bachillerato.
-10. **HyperPhysics**: [Relativistic Energy and Momentum](http://hyperphysics.phy-astr.gsu.edu/hbase/relativ/releng.html) - Esquemas conceptuales sobre $E=mc^2$ y colisiones.
+### 📝 Artículos Científicos Históricos y Avanzados
+
+1. **Zur Elektrodynamik bewegter Körper (Sobre la electrodinámica de los cuerpos en movimiento)**  
+   *Albert Einstein (1905)*. [Annalen der Physik, 322(10), 891-921](https://onlinelibrary.wiley.com/doi/10.1002/andp.19053221004).  
+   **Importancia Teórica:** Este es el artículo fundacional de la Relatividad Especial. Einstein resuelve la asimetría en la inducción electromagnética de Maxwell y descarta la necesidad del éter luminífero.  
+   **Fondo Matemático:** Establece empíricamente los dos postulados. A partir de ellos, deduce las transformaciones de Lorentz para el espacio y el tiempo, demostrando que la simultaneidad es relativa:
+   $$ t' = \frac{t - vx/c^2}{\sqrt{1 - v^2/c^2}} $$
+   **Implicaciones Físicas:** Cambió irrevocablemente nuestra comprensión del tiempo absoluto newtoniano, demostrando que la medida del tiempo y la longitud dependen del estado de movimiento del observador.
+
+2. **Raum und Zeit (Espacio y Tiempo)**  
+   *Hermann Minkowski (1909)*. [Physikalische Zeitschrift, 10, 104-111](https://es.wikisource.org/wiki/Espacio_y_tiempo_(Hermann_Minkowski)).  
+   **Importancia Teórica:** Introdujo la interpretación geométrica de la relatividad especial, unificando el espacio tridimensional y el tiempo unidimensional en un continuo cuatridimensional (el Espacio-Tiempo de Minkowski).  
+   **Fondo Matemático:** Define la métrica invariante $ds^2$, demostrando que la distancia espacio-temporal entre dos eventos es absoluta para cualquier observador inercial:
+   $$ ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2 = \eta_{\mu\nu} dx^\mu dx^\nu $$
+   **Implicaciones Físicas:** Sentó el formalismo matemático de cuadrivectores (como el cuadrimomento $p^\mu$) necesario para que, años más tarde, Einstein pudiera desarrollar la Relatividad General mediante geometría diferencial.
+
+3. **Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig? (¿Depende la inercia de un cuerpo de su contenido de energía?)**  
+   *Albert Einstein (1905)*. [Annalen der Physik, 323(13), 639-641](https://onlinelibrary.wiley.com/doi/10.1002/andp.19053231314).  
+   **Importancia Teórica:** Publicado meses después de su artículo principal, deduce la ecuación más famosa de la física, relacionando la masa inercial con la energía en reposo.  
+   **Fondo Matemático:** Analiza la emisión de dos pulsos de luz en direcciones opuestas desde un cuerpo en reposo y visto desde un sistema en movimiento. El balance del cambio de energía cinética requiere que la masa del cuerpo disminuya en $\Delta m = E/c^2$, generalizado como:
+   $$ E_0 = m_0 c^2 $$
+   **Implicaciones Físicas:** Demuestra que masa y energía son manifestaciones de la misma entidad física, lo cual es la base de la fisión y fusión nuclear.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. **[Edwin F. Taylor & John Archibald Wheeler - Spacetime Physics](https://www.eftaylor.com/spacetimephysics/)** - Probablemente el mejor libro de introducción a la relatividad especial, famoso por su claridad pedagógica y uso de "fábulas" físicas.
-2. **[A.P. French - Special Relativity (M.I.T. Introductory Physics Series)](https://archive.org/details/specialrelativit0000fren)** - Un clásico riguroso utilizado durante décadas para enseñar cinemática y dinámica relativista.
-3. **[Wolfgang Rindler - Introduction to Special Relativity](https://global.oup.com/academic/product/introduction-to-special-relativity-9780198539520)** - Texto estándar y más formal, ideal para profundizar en cuadrivectores y tensores.
-4. **[David J. Griffiths - Introduction to Electrodynamics](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/40B7E0D3528A32A17EFB738C2ACAEFDE)** - El capítulo 12 es famoso por presentar cómo la relatividad especial unifica la electricidad y el magnetismo en el tensor electromagnético.
-5. **[Robert Resnick - Introduction to Special Relativity](https://archive.org/details/introductiontosp0000resn)** - Una presentación clara que conecta con la física general y ofrece excelentes problemas de final de capítulo.
+1. **Edwin F. Taylor & John Archibald Wheeler - [Spacetime Physics (W. H. Freeman, 1992)](https://www.eftaylor.com/spacetimephysics/)** - El mejor libro pedagógico para desarrollar intuición sobre diagramas de espacio-tiempo y la métrica de Lorentz.
+2. **David J. Griffiths - [Introduction to Electrodynamics (Cambridge University Press)](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/40B7E0D3528A32A17EFB738C2ACAEFDE)** - El Capítulo 12 es magistral al tratar cómo el campo magnético emerge como un efecto relativista del campo eléctrico al aplicar el formalismo covariante (tensor $F^{\mu\nu}$).
+3. **Wolfgang Rindler - [Introduction to Special Relativity (Oxford University Press)](https://global.oup.com/academic/product/introduction-to-special-relativity-9780198539520)** - Un texto avanzado y riguroso para profundizar en tensores, cuadrivectores y espinores, sentando las bases para cursos de Relatividad General.

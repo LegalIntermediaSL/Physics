@@ -211,25 +211,29 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[Semiconductor Devices (Coursera / NCKU)](https://www.coursera.org):** Fundamentos físicos de diodos y transistores.
-2. **[Physics of Semiconductors (NPTEL)](https://nptel.ac.in):** Teoría rigurosa del transporte y óptica en semiconductores.
-3. **[Nanoelectronics (MIT OCW)](https://ocw.mit.edu):** Semiconductores en la escala nanométrica.
-4. **[Solid State Devices (edX)](https://www.edx.org):** Aplicaciones prácticas de los principios de dopaje y uniones p-n.
-5. **[Optoelectronics (Stanford)](https://online.stanford.edu):** Interacción de semiconductores con la luz (LEDs y láseres).
+1. **[MIT OCW: 6.012 Microelectronic Devices and Circuits](https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/)**: Excelente aproximación a la física de uniones p-n y al comportamiento del transistor MOS y bipolar, enfocada fuertemente a las ecuaciones de transporte y dopaje.
+2. **[nanoHUB/Purdue: Semiconductor Devices I & II](https://nanohub.org/courses/sd1)**: Un análisis moderno, fenomenalmente animado sobre la estadística de portadores y las ecuaciones de deriva-difusión.
+3. **[Stanford Online: Nanoelectronics](https://online.stanford.edu/courses/soe-yeeqn-nanoelectronics)**: Para extender la teoría del semiconductor hacia los regímenes de transporte balístico a nanoescala.
 
 ### Artículos y Simulaciones
-1. **[nanoHUB PN Junction Lab](https://nanohub.org):** Simulador fenomenal para ver perfiles de bandas, campos eléctricos y corrientes en uniones p-n.
-2. **[PhET - Semiconductors](https://phet.colorado.edu):** Excelente simulación para visualizar dopaje tipo $p$ y tipo $n$ y el movimiento de portadores.
-3. **["The Transistor: 60 Years Later" (IEEE Spectrum)](https://spectrum.ieee.org):** Artículo histórico sobre el impacto de la física de semiconductores.
-4. **[TCAD Sentaurus / Silvaco](https://www.synopsys.com):** (Menciones de software profesional) Herramientas estándar de la industria para simular dispositivos.
-5. **["Moore's Law and the Future of Semiconductors" (Nature)](https://www.nature.com):** Reflexión sobre los límites de los dispositivos actuales.
-6. **[Bandgap Engineering (Capasso, Science)](https://www.science.org):** Cómo diseñar materiales modificando sus bandas.
-7. **[BJT / MOSFET Simulators (Falstad)](https://www.falstad.com/circuit/):** Circuitos y uniones simuladas en tiempo real.
-8. **["Two-dimensional semiconductors" (Nature Nanotechnology)](https://www.nature.com):** Introducción a los semiconductores basados en TMDs (MoS2, etc.).
+1. **["Electron-Hole Drops in Semiconductors" por T. M. Rice (1977)](https://www.sciencedirect.com/science/article/pii/0038109877913349)**
+   - **Importancia Teórica:** Describe el fenómeno de condensación en el cual, bajo alta excitación óptica y muy bajas temperaturas, el gas libre de excitones (pares electrón-hueco unidos coulombianamente) sufre una transición de fase termodinámica para formar un "líquido metálico" macroscópico análogo a gotas de agua.
+   - **Fondo Matemático:** El Hamiltoniano interactuante del plasma de electrones y huecos es sometido a un análisis termodinámico. El sistema tiene una fase gas aislante a baja densidad $\rho$ y una fase líquida metálica a alta densidad $\rho_c$. La energía de la gota por par e-h se parametriza minimizando la energía en función del parámetro de densidad de radio de Wigner-Seitz $r_s$:
+     $$ E(r_s) = E_{kin}(r_s) + E_{exch}(r_s) + E_{corr}(r_s) = \frac{a}{r_s^2} - \frac{b}{r_s} + E_{corr}(r_s) $$
+     donde $E_{exch}$ es la energía de intercambio de Hartree-Fock atractiva, y $E_{corr}$ incluye correlaciones complejas (como RPA).
+   - **Implicaciones Físicas:** Demuestra cómo un semiconductor puede experimentar transiciones de fase puramente gobernadas por interacciones correlacionadas electrón-electrón impulsadas ópticamente, de forma similar al modelo gas-líquido de Van der Waals.
+
+2. **["Shockley-Queisser Limit on the Efficiency of a P-N Junction Solar Cell" (1961)](https://aip.scitation.org/doi/10.1063/1.1736034)**
+   - **Importancia Teórica:** Establece el límite termodinámico máximo insuperable de eficiencia para la conversión de luz solar a electricidad utilizando una unión P-N de banda prohibida simple.
+   - **Fondo Matemático:** El cálculo impone un balance detallado (equilibrio termodinámico de radiación) asumiendo el espectro de Planck $I(E, T_s)$ emitido por el Sol ($T_s \approx 6000\text{ K}$). Para un semiconductor de bandgap $E_g$, los fotones con $E < E_g$ se pierden transparentemente, y los fotones con $E > E_g$ desperdician el exceso térmicamente (termalización) bajando hasta $E_g$. La corriente máxima extraíble, suponiendo 1 electrón por fotón, es:
+     $$ J_{sc} = q \int_{E_g}^{\infty} \frac{I(E, T_s)}{E} dE $$
+     La potencia saliente, penalizada por la recombinación radiativa fundamental en el balance térmico de la celda a $T_c \approx 300\text{ K}$, genera una eficiencia termodinámica final $\eta(E_g)$:
+     $$ \eta(E_g) = \frac{V_{oc} \cdot J_{sc} \cdot FF}{P_{in}} $$
+     donde la eficiencia pico matemática arroja matemáticamente un $\approx 33.7\%$ óptimo para un semiconductor con $E_g \approx 1.34\text{ eV}$ (afortunadamente, el GaAs y el Silicio caen muy cerca de este pico radiativo).
+   - **Implicaciones Físicas:** Condiciona todo el esfuerzo de ingeniería en dispositivos fotovoltaicos. Es el motivo por el cual hoy en día se buscan tecnologías multi-unión (tándem) o perovskitas superpuestas con silicio para superar este límite estricto de banda única.
+
+3. **[nanoHUB: PN Junction Lab](https://nanohub.org/resources/pnjunction)**: Potentísimo simulador numérico que resuelve en tiempo real y tridimensionalmente las ecuaciones no lineales de Poisson acopladas a deriva-difusión (Drift-Diffusion) para obtener perfiles de bandas e intensidades de campo en interfaces.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Sze, S. M. *Physics of Semiconductor Devices*](https://www.wiley.com). Wiley (El estándar de la industria).
-2. [Kittel, C. *Introduction to Solid State Physics*](https://archive.org) (Capítulo 8).
-3. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://archive.org) (Capítulo 28).
-4. [Streetman, B. G., & Banerjee, S. K. *Solid State Electronic Devices*](https://www.pearson.com). Pearson.
-5. [Pierret, R. F. *Semiconductor Device Fundamentals*](https://archive.org). Addison-Wesley.
+1. [Sze, S. M., & Ng, K. K. *Physics of Semiconductor Devices*](https://www.wiley.com/en-us/Physics+of+Semiconductor+Devices%2C+3rd+Edition-p-9780471143239) - El libro definitivo y más referenciado globalmente de la industria semiconductora.
+2. [Pierret, R. F. *Semiconductor Device Fundamentals*](https://www.pearson.com/en-us/subject-catalog/p/semiconductor-device-fundamentals/P200000006764) - Texto pedagógico introductorio ideal para estadistica de portadores.

@@ -179,24 +179,30 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[Electrons in Crystals (MIT OCW)](https://ocw.mit.edu):** Análisis profundo del teorema de Bloch.
-2. **[Quantum Physics of Materials (Coursera)](https://www.coursera.org):** Introducción al gas de electrones libres.
-3. **[NPTEL Electron Theory of Solids](https://nptel.ac.in):** Detalles sobre el modelo de Kronig-Penney y bandas.
-4. **[Condensed Matter Theory (Stanford)](https://online.stanford.edu):** Correlaciones electrónicas avanzadas.
-5. **[Many-Body Physics (Cambridge)](https://www.cam.ac.uk):** Tratamiento de sistemas interactuantes y efectos colectivos.
+1. **[MIT OCW: 8.231 Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/)**: Aborda de manera analítica la teoría de Sommerfeld, el teorema de Bloch y el origen de las estructuras de bandas de energía en sólidos periódicos.
+2. **[Stanford Online: Quantum Mechanics for Scientists and Engineers](https://online.stanford.edu/courses/soe-yeeqm-quantum-mechanics-scientists-and-engineers)**: Proporciona las bases fundamentales de mecánica cuántica necesarias para comprender los estados de los electrones en potenciales periódicos.
+3. **[NPTEL: Solid State Physics](https://nptel.ac.in/courses/115105099)**: Detalles exhaustivos sobre el modelo de Kronig-Penney y dinámica de electrones casi libres.
 
 ### Artículos y Simulaciones
-1. **[nanoHUB Band Structure Lab](https://nanohub.org):** Simulador de estructuras de bandas unidimensionales y 3D.
-2. **["The Free Electron Model of Metals" (Sommerfeld, original overview)](https://archive.org):** Perspectiva histórica del modelo de Drude-Sommerfeld.
-3. **[Fermi Surface Viewer](http://www.xcrysden.org/):** Herramientas online (como XCrySDen) para visualizar superficies de Fermi.
-4. **["Electrons in artificial lattices" (Nature)](https://www.nature.com):** Artículo sobre electrones en superredes y materiales 2D.
-5. **[Quantum Espresso / PySCF Tutorials](https://www.quantum-espresso.org/):** Guías para simular electrones en cristales desde primeros principios.
-6. **["Topological Band Theory" (Review of Modern Physics)](https://journals.aps.org/rmp/):** Para ir más allá del teorema de Bloch clásico.
-7. **[PhET: Conductivity](https://phet.colorado.edu):** Simulación educativa sobre bandas y conductividad.
-8. **[ARPES Database](https://arxiv.org):** Repositorios que muestran estructuras de bandas experimentales reales medidas con ARPES.
+1. **["The Band Theory of Graphite" por P. R. Wallace (1947)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.71.622)**
+   - **Importancia Teórica:** Fue el primer cálculo teórico de la estructura de bandas del grafeno y grafito utilizando el método de enlace fuerte (tight-binding). Es fundamental por haber predicho los puntos de Dirac 60 años antes del aislamiento experimental del grafeno.
+   - **Fondo Matemático:** El Hamiltoniano de amarre fuerte considerando vecinos más cercanos sobre la red de panal de abeja (que contiene dos subredes, A y B) se formula como una matriz $2 \times 2$. Los valores propios de energía para los electrones $\pi$ están dados por:
+     $$ E(\mathbf{k}) = \pm \gamma_0 \sqrt{1 + 4\cos\left(\frac{\sqrt{3} k_x a}{2}\right)\cos\left(\frac{k_y a}{2}\right) + 4\cos^2\left(\frac{k_y a}{2}\right)} $$
+     En las esquinas de la zona de Brillouin (los puntos $K$ y $K'$), la dispersión de energía se vuelve lineal respecto al momento cristalino $\mathbf{q} = \mathbf{k} - \mathbf{K}$:
+     $$ E(\mathbf{q}) \approx \pm \hbar v_F |\mathbf{q}| $$
+     donde $v_F$ es la velocidad de Fermi (aproximadamente $10^6 \text{ m/s}$).
+   - **Implicaciones Físicas:** Demostró que los electrones en el grafeno obedecen la ecuación relativista de Dirac en lugar de la ecuación de Schrödinger no relativista, actuando como fermiones de Dirac sin masa. Esto tiene profundas implicaciones en la conductividad balística del material.
+
+2. **["Colloquium: Topological insulators" por M. Z. Hasan y C. L. Kane (2010)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.82.3045)**
+   - **Importancia Teórica:** Artículo fundacional que unifica la topología con la teoría de bandas clásica. Introduce los materiales aislantes topológicos que son aislantes en su interior pero conductores perfectos en su superficie.
+   - **Fondo Matemático:** La estructura topológica se caracteriza por el invariante topológico de Chern (para el efecto Hall cuántico) o el invariante $\mathbb{Z}_2$ (para sistemas con simetría de inversión temporal). La curvatura de Berry $\mathbf{\Omega}(\mathbf{k})$ de una banda de Bloch $|u_{n\mathbf{k}}\rangle$ se define como:
+     $$ \mathbf{\Omega}_n(\mathbf{k}) = i \langle \nabla_{\mathbf{k}} u_{n\mathbf{k}} | \times | \nabla_{\mathbf{k}} u_{n\mathbf{k}} \rangle $$
+     El número de Chern $C_n$, que debe ser un entero invariante, se obtiene integrando sobre toda la primera zona de Brillouin (BZ):
+     $$ C_n = \frac{1}{2\pi} \int_{\text{BZ}} d^2k \, \Omega_{n,z}(\mathbf{k}) $$
+   - **Implicaciones Físicas:** Concluye que la presencia de estados de superficie metálicos (y fuertemente polarizados en espín) está topológicamente protegida contra el desorden, las impurezas y las perturbaciones suaves, ofreciendo una ruta hacia una espintrónica robusta y la computación cuántica tolerante a fallos.
+
+3. **[nanoHUB: Band Structure Lab](https://nanohub.org/resources/bandstr)**: Herramienta de simulación de alta calidad que permite visualizar y calcular estructuras de bandas electrónicas en sólidos utilizando diferentes modelos de masa y potenciales periódicos.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://archive.org) (Capítulos sobre gas de electrones y bandas).
-2. [Kittel, C. *Introduction to Solid State Physics*](https://archive.org).
-3. [Simon, S. H. *The Oxford Solid State Basics*](https://global.oup.com).
-4. [Marder, M. P. *Condensed Matter Physics*](https://www.wiley.com).
+1. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://www.cengage.com/c/solid-state-physics-1e-ashcroft/9780030839931/) - Un tratamiento insuperable para la fenomenología del gas de electrones.
+2. [Kittel, C. *Introduction to Solid State Physics* (8va ed.)](https://www.wiley.com/en-us/Introduction+to+Solid+State+Physics%2C+8th+Edition-p-9780471415268) - Excelente abordaje introductorio al modelo de Kronig-Penney.

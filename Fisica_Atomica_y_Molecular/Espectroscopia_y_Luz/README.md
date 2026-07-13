@@ -260,27 +260,25 @@ plt.tight_layout()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Light and Matter - MIT OCW](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/)
-2. [Spectroscopy - Coursera](https://www.coursera.org/learn/spectroscopy)
-3. [Atomic and Optical Physics - MIT (YouTube)](https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhZZpaQTOuFI7)
-4. [Quantum Optics - edX](https://www.edx.org/course/quantum-optics)
-5. [Molecular Spectroscopy - University of Manchester](https://www.coursera.org/learn/spectroscopy)
+### 🎓 Cursos y Clases Recomendadas
+1. [MIT 8.421 Atomic and Optical Physics I (Wolfgang Ketterle)](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/): Fundamental para la comprensión teórica de la interacción átomo-luz y la estructura fina/hiperfina subyacente a los espectros atómicos.
+2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Las secciones sobre momento angular proporcionan la base indispensable para comprender las reglas de selección de dipolo eléctrico.
+3. [NPTEL Atomic and Molecular Physics (Prof. Amal Kumar Das)](https://nptel.ac.in/courses/115105100): Curso exhaustivo centrado explícitamente en espectroscopía de un electrón, multielectrónica y efectos de campos externos (Zeeman, Stark).
+4. [Coursera - Spectroscopy (University of Manchester)](https://www.coursera.org/learn/spectroscopy): Análisis conceptual de diversas técnicas espectroscópicas y su interpretación práctica.
+5. [Oxford University Physics Lectures (James Binney)](https://podcasts.ox.ac.uk/series/quantum-mechanics): Profundiza en los operadores de radiación y la teoría de perturbaciones aplicadas al campo electromagnético.
 
-### Artículos y Simulaciones
-1. [Einstein, A. (1916). *Strahlungs-emission und -absorption nach der Quantentheorie*.](https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.19163561702)
-2. [PhET Simulation: Molecules and Light](https://phet.colorado.edu/en/simulations/molecules-and-light)
-3. [PhET Simulation: Lasers](https://phet.colorado.edu/en/simulations/lasers)
-4. [Townes, C. H., & Schawlow, A. L. (1955). *Microwave Spectroscopy*. McGraw-Hill.](https://store.doverpublications.com/048661798x.html)
-5. [Bloembergen, N. (1982). *Nonlinear optics and spectroscopy*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.54.685)
-6. [Schawlow, A. L. (1982). *Spectroscopy in a new light*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.54.697)
-7. [PhET Simulation: Color Vision](https://phet.colorado.edu/en/simulations/color-vision)
-8. [PhET Simulation: Blackbody Spectrum](https://phet.colorado.edu/en/simulations/blackbody-spectrum)
-9. [Lamb, W. E., & Retherford, R. C. (1947). *Fine Structure of the Hydrogen Atom by a Microwave Method*.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.72.241)
-10. [Purcell, E. M. (1946). *Spontaneous Emission Probabilities at Radio Frequencies*.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.69.37)
+### 📝 Artículos e Interactivos Interesantes
+1. **PhET Interactive Simulations:** [Models of the Hydrogen Atom](https://phet.colorado.edu/en/simulations/hydrogen-atom) - Para visualizar las predicciones históricas (Plum Pudding, Bohr, De Broglie, Schrödinger) ante el choque de fotones.
+2. **PhET Interactive Simulations:** [Neon Lights & Other Discharge Lamps](https://phet.colorado.edu/en/simulations/neon-lights) - Ejemplifica la colisión de electrones y fotones que produce los espectros de líneas de emisión en gases nobles.
+3. **HyperPhysics:** [Atomic Spectra](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/atspect.html) - Compendio conciso con cálculos, fórmulas y diagramas de niveles de energía para los elementos más comunes.
+4. **Wikipedia:** [Espectroscopía](https://es.wikipedia.org/wiki/Espectroscopia) - Visión global de los tipos de espectroscopía y su desarrollo histórico.
+5. **Wikipedia:** [Reglas de selección](https://es.wikipedia.org/wiki/Regla_de_selecci%C3%B3n) - Explicación matricial detallada sobre por qué ciertas transiciones "están prohibidas".
+6. **NIST Atomic Spectra Database:** [NIST ASD](https://physics.nist.gov/PhysRefData/ASD/lines_form.html) - La base de datos de investigación real y oficial mundial con todos los niveles de energía atómica comprobados y sus líneas asociadas.
+7. **Documental BBC:** [Atom - The Clash of Titans (Jim Al-Khalili)](https://www.youtube.com/watch?v=GOFFRnEcbwY) - Relato visual e histórico excepcional del debate Bohr-Einstein sobre el salto cuántico y los espectros.
+8. **Wolfram Demonstrations:** [Hydrogen Atom Radial Functions](https://demonstrations.wolfram.com/HydrogenAtomRadialFunctions/) - Para observar directamente las probabilidades radiales de donde saltan los electrones.
 
 ### 📖 Referencias Útiles y Bibliografía
-- [Hollas, J. M. (2004). *Modern Spectroscopy*. John Wiley & Sons.](https://www.wiley.com/en-us/Modern+Spectroscopy%2C+4th+Edition-p-9780470844168)
-- [Demtröder, W. (2014). *Laser Spectroscopy: Basic Concepts and Instrumentation*. Springer.](https://link.springer.com/book/10.1007/978-3-662-44641-6)
-- [Bernath, P. F. (2015). *Spectra of Atoms and Molecules*. Oxford University Press.](https://global.oup.com/academic/product/spectra-of-atoms-and-molecules-9780190252215)
-- [Loudon, R. (2000). *The Quantum Theory of Light*. Oxford University Press.](https://global.oup.com/academic/product/the-quantum-theory-of-light-9780198501763)
+1. **Libro**: [Atomic Physics - C.J. Foot](https://global.oup.com/academic/product/atomic-physics-9780198506966) (Capítulos 1-4). Aborda excelentemente el modelo de Bohr y luego el modelo mecanocuántico de los espectros.
+2. **Libro**: [Physics of Atoms and Molecules - B.H. Bransden & C.J. Joachain](https://www.pearson.com/en-gb/subject-catalog/p/physics-of-atoms-and-molecules/P200000005272/9780582356924). Es la referencia absoluta para un tratamiento físico-matemático riguroso de las reglas de selección y efectos de campos magnéticos (Zeeman) sobre espectros.
+3. **Libro**: [Fundamentals of Molecular Spectroscopy - C.N. Banwell](https://www.mheducation.co.in/fundamentals-of-molecular-spectroscopy-9781259062599-india). Estándar dorado (más accesible que Bransden) para químicos y físicos de estado sólido.
+4. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 9). Contiene la derivación paso a paso explícita de los coeficientes de Einstein mediante la teoría de perturbaciones dependiente del tiempo.

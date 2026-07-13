@@ -202,25 +202,32 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[Introducción a la Superconductividad (Coursera / NPTEL)](https://www.coursera.org):** Excelente cubrimiento de fenomenología y London.
-2. **[Solid State Physics 2 (MIT OCW)](https://ocw.mit.edu):** Dedica una parte muy sustancial a la teoría de Ginzburg-Landau y BCS.
-3. **[Superconductivity and Superfluidity (Cambridge lectures)](https://www.cam.ac.uk):** Fenómenos cuánticos macroscópicos relacionados.
-4. **[Quantum Matter (edX)](https://www.edx.org):** Analiza pares de Cooper y estados topológicos superconductores.
-5. **[Applied Superconductivity (Stanford)](https://online.stanford.edu):** Enfocado en aplicaciones de ingeniería (SQUIDs, imanes MRI).
+1. **[MIT OCW: 8.231 Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/)**: Aborda de manera analítica la teoría fenomenológica de Ginzburg-Landau y los fundamentos de BCS.
+2. **[NPTEL: Superconductivity](https://nptel.ac.in/courses/115101121)**: Tratamiento matemático riguroso de la atenuación de London y formación de los vórtices de flujo (estado mixto Abrikosov).
+3. **[Coursera/EPFL: Topology in Condensed Matter: Tying Quantum Knots](https://www.coursera.org/learn/topology-condensed-matter)**: Módulo avanzado para entender las formas topológicamente triviales vs no triviales de superconductividad de onda P (p-wave).
 
 ### Artículos y Simulaciones
-1. **["Theory of Superconductivity" (Bardeen, Cooper, Schrieffer, 1957)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.108.1175):** El artículo original de Physical Review, fundamental en la física del siglo XX.
-2. **[PhET - Superconductivity (legacy)](https://phet.colorado.edu):** Simulación visual del efecto Meissner y diamagnetismo perfecto.
-3. **["High-Temperature Superconductivity" (Bednorz & Müller, Nobel lecture)](https://www.nobelprize.org):** Historia de los cupratos.
-4. **[Vórtices de Abrikosov (Simulaciones GL)](https://github.com):** Scripts en Python/MATLAB para visualizar la red de vórtices en superconductores Tipo II.
-5. **["Quantum Computing with Superconducting Qubits" (Review en Nature)](https://www.nature.com):** Superconductividad aplicada a la tecnología de frontera actual.
-6. **[Documentales sobre levitación magnética y Maglev](https://www.youtube.com):** Para ver el efecto macroscópico del pinning de flujo.
-7. **[QuTiP (Quantum Toolbox in Python)](https://qutip.org/):** Útil para simular circuitos superconductores (SQUIDs y transmones).
-8. **["Room-temperature superconductivity" (Debates recientes en Nature)](https://www.nature.com):** Literatura contemporánea sobre los polémicos avances recientes (hidruros bajo presión).
+1. **["Theory of Superconductivity" por Bardeen, Cooper, y Schrieffer (1957)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.108.1175)**
+   - **Importancia Teórica:** El artículo ganador del Premio Nobel que resolvió el más profundo rompecabezas de la materia condensada de la época, demostrando matemáticamente cómo el orden magnético y electrónico es dominado termodinámicamente por la interacción fonónica que forma pares de electrones y condensa.
+   - **Fondo Matemático:** El marco matemático fundamental es la teoría de los muchos cuerpos con técnica variacional para construir el vacío BCS $|BCS\rangle$:
+     $$ |BCS\rangle = \prod_{\mathbf{k}} (u_\mathbf{k} + v_\mathbf{k} c^\dagger_{\mathbf{k}\uparrow} c^\dagger_{-\mathbf{k}\downarrow}) |0\rangle $$
+     Minimizando la energía del estado fundamental, las amplitudes de probabilidad deben cumplir la condición de consistencia del Gap ($\Delta$):
+     $$ \Delta = \sum_\mathbf{k'} V_{\mathbf{k}\mathbf{k'}} u_\mathbf{k'} v_\mathbf{k'} = \frac{V}{2} \sum_{\mathbf{k}} \frac{\Delta}{E_\mathbf{k}} \tanh\left(\frac{E_\mathbf{k}}{2k_B T}\right) $$
+     donde $E_\mathbf{k} = \sqrt{\epsilon_\mathbf{k}^2 + \Delta^2}$ es el espectro dispersivo de las cuasipartículas recién creadas (Bogoliubones). Resolviendo la integral sobre la densidad de estados $N(0)$ resulta en la universal y hermosa predicción BCS:
+     $$ \Delta(T=0) = \frac{\hbar\omega_D}{\sinh(1/N(0)V)} \approx 2\hbar\omega_D e^{-1 / N(0)V} $$
+   - **Implicaciones Físicas:** Esta brecha en la superficie de Fermi prohíbe las excitaciones de disipación de baja energía, aislando el flujo macroscópico del gas de electrones que conduce la electricidad sin rozamiento ohmico en un condensado de momento coherente.
+
+2. **["Quantum Computing with Superconducting Qubits" (Nature, 2013)](https://www.nature.com/articles/nature12010)**
+   - **Importancia Teórica:** Demuestra la aplicación contemporánea y revolucionaria de la superconductividad macroscópica para el control de la información cuántica universal mediante elementos de circuito LC anarmónicos (las uniones Josephson).
+   - **Fondo Matemático:** El elemento que hace que el qubit sea funcional es la Unión Josephson (dos superconductores separados por un aislante muy delgado). La supercorriente transfiere pares de Cooper por efecto túnel y está regida por las relaciones constitutivas estáticas y dinámicas de Josephson respecto a la diferencia de la fase del superfluido cuántico $\phi = \theta_2 - \theta_1$:
+     $$ I_s = I_c \sin(\phi) \quad \text{y} \quad \frac{\partial \phi}{\partial t} = \frac{2e}{\hbar} V $$
+     Esto define una inductancia no lineal que escala inversamente con el voltaje efectivo. El hamiltoniano del circuito superconductor (Qubit tipo Transmón) en el régimen del átomo artificial en el pozo de fase es:
+     $$ \hat{H} = 4E_C (\hat{n} - n_g)^2 - E_J \cos(\hat{\phi}) $$
+     donde $[\hat{\phi}, \hat{n}] = i$. Esta anarmonicidad evita el problema de las transiciones lineales degeneradas en el oscilador armónico convencional de LC.
+   - **Implicaciones Físicas:** Al crear espectros de energía desigualmente espaciados, el sistema macroscópico LC actúa como un verdadero átomo artificial abordable, permitiendo la conmutación controlada entre el estado fundamental y el primer estado excitado, que es la columna de la moderna computación cuántica de Google y de IBM.
+
+3. **[QuTiP (Quantum Toolbox in Python)](https://qutip.org/)**: El estándar para la investigación en óptica cuántica y circuitos superconductores, que permite simular transiciones e interacciones Hamiltoniana-Maestra a nivel del qubit de estado sólido.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Tinkham, M. *Introduction to Superconductivity*](https://store.doverpublications.com). McGraw-Hill. (El libro definitivo sobre el tema).
-2. [Schrieffer, J. R. *Theory of Superconductivity*](https://archive.org). CRC Press.
-3. [De Gennes, P. G. *Superconductivity of Metals and Alloys*](https://archive.org). Westview Press.
-4. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://archive.org) (Capítulo 34).
-5. [Kittel, C. *Introduction to Solid State Physics*](https://archive.org) (Capítulo sobre superconductividad).
+1. [Tinkham, M. *Introduction to Superconductivity* (2da ed.)](https://store.doverpublications.com/products/9780486435039) - El libro definitivo, obligatorio para todo estudiante de física moderna o cuántica macroscópica.
+2. [De Gennes, P. G. *Superconductivity of Metals and Alloys*](https://www.taylorfrancis.com/books/mono/10.1201/9780429497032/superconductivity-metals-alloys-gennes) - Excelente para uniones S-N-S y el formalismo espacial de cuasipartículas (BdG).

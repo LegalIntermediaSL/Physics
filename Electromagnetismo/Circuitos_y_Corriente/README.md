@@ -214,18 +214,9 @@ plt.grid(True)
 plt.show()
 ```
 
-## 📚 Recursos Específicos
+## 📚 Recursos Específicos de Circuitos y Corriente
 
 ### 🎓 Cursos y Clases Recomendadas
-1. [MIT 6.002 - Circuits and Electronics](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/): Clásico y excelente curso para dominar el análisis de circuitos a nivel universitario y en diseño de ingeniería.
-2. [Khan Academy - Ingeniería Eléctrica (Circuitos)](https://es.khanacademy.org/science/electrical-engineering): Explicaciones en video con resolución detallada de análisis nodales, leyes de Kirchhoff, Norton y Thevenin.
-3. [Coursera - Linear Circuits 1: DC Analysis](https://www.coursera.org/learn/linear-circuits-d-c-analysis): Enfoque especializado sobre corrientes continuas, fuentes dependientes y simulaciones por parte del Georgia Tech.
-4. [edX - Circuits and Electronics 1: Basic Circuit Analysis](https://www.edx.org/course/circuits-and-electronics-1-basic-circuit-analysis): Curso fundamental respaldado por MITx para modelar fenómenos físicos con elementos pasivos y activos.
-5. [Feynman Lectures on Physics - Vol II, Ch 22: AC Circuits](https://www.feynmanlectures.caltech.edu/II_22.html): Introducción a la respuesta en frecuencia, impedancias complejas y resonancia de un modo excepcionalmente intuitivo.
-6. [NPTEL - Basic Electrical Circuits](https://nptel.ac.in/courses/117106108): Explicaciones formales que cubren teoremas de redes, grafos de circuitos, y respuestas transitorias paso a paso.
-
-### 📝 Artículos e Interactivos Interesantes
-1. [PhET - Circuit Construction Kit: DC](https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc): Una herramienta magnífica y muy pedagógica para construir circuitos virtuales y medir con multímetros.
 2. [PhET - Circuit Construction Kit: AC](https://phet.colorado.edu/en/simulations/circuit-construction-kit-ac): Ideal para ver cómo se comportan capacitores e inductores frente a estímulos alternos.
 3. [Falstad Circuit Simulator](http://www.falstad.com/circuit/): Un emulador de topologías de circuitos en el navegador web altamente avanzado, visual, interactivo y en tiempo real.
 4. [Wikipedia: Ley de Ohm](https://es.wikipedia.org/wiki/Ley_de_Ohm): Recorrido detallado de la base conceptual que rige a la conducción eléctrica en materiales.

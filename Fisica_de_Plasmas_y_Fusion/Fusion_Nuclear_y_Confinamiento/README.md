@@ -227,27 +227,37 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Nuclear Energy - MIT OpenCourseWare](https://ocw.mit.edu)
-2. [Introduction to Fusion Energy - TU/e (Coursera)](https://www.coursera.org)
-3. [Fusion Materials - NPTEL](https://nptel.ac.in)
-4. [ITER E-Learning Courses](https://www.iter.org/)
-5. [Inertial Confinement Fusion - LLNL Short Courses](https://lasers.llnl.gov)
-6. [Thermonuclear Reactor Design - Tokyo Institute of Technology](https://www.titech.ac.jp)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.011 Nuclear Engineering: Science, Systems and Society](https://ocw.mit.edu/courses/22-011-nuclear-engineering-science-systems-and-society-fall-2020/)**
+   Módulo sobre energía de fusión, balances energéticos y diseños de reactores.
+2. **[EPFL: Plasma Physics and Applications](https://www.edx.org/course/plasma-physics-and-applications)**
+   Incluye una fuerte orientación hacia el confinamiento magnético, Tokamaks y el proyecto ITER.
 
-### Artículos y Simulaciones
-1. [Lawson, J. D. (1957). *Some Criteria for a Power Producing Thermonuclear Reactor*. Proc. Phys. Soc.](https://doi.org/10.1088/0370-1301/70/1/303)
-2. [Nuckolls, J., Wood, L., Thiessen, A., & Zimmerman, G. (1972). *Laser Compression of Matter to Super-High Densities*. Nature.](https://www.nature.com/articles/239139a0)
-3. [Hurricane, O. A., et al. (2014). *Fuel gain exceeding unity in an inertially confined fusion implosion*. Nature.](https://www.nature.com/articles/nature13008)
-4. [Rebut, P. H. (1995). *ITER: The first experimental fusion reactor*. Fusion Engineering and Design.](https://doi.org/10.1016/0920-3796(95)90103-5)
-5. [Abu-Shumays, I. K., et al. (1999). *Simulations for ICF Experiments*.](https://doi.org/10.1109/99.757313)
-6. [ITER - The Way to New Energy (Sitio oficial)](https://www.iter.org/)
-7. [National Ignition Facility (NIF) - Confinamiento Inercial](https://lasers.llnl.gov/)
-8. [HELIOS](https://www.prism-cs.com/Software/Helios/Helios.html) - 1D Radiation Magnetohydrodynamics Code for ICF.
-9. [FLASH](https://flash.rochester.edu/) - Multiphysics code for laser fusion.
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Some Criteria for a Power Producing Thermonuclear Reactor"** - *J. D. Lawson (1957), Proc. Phys. Soc. Section B, 70, 6*  
+   [Link al artículo original (IOP)](https://iopscience.iop.org/article/10.1088/0370-1301/70/1/303)
+   
+   **Importancia Teórica y Relevancia:** 
+   Estableció el estándar oro para la viabilidad comercial de la fusión nuclear: el Criterio de Lawson. Define la frontera teórica absoluta entre un plasma que consume energía y uno que se autosustenta.
+   
+   **Contexto Matemático:** 
+   Al evaluar el balance entre la producción de energía por la reactividad térmica cruzada $\langle \sigma v \rangle$ y las pérdidas disipativas irrecuperables por Bremsstrahlung, Lawson encontró que el umbral de ignición obedece a una función del producto densidad-tiempo de confinamiento. Para la reacción D-T dominante:
+   $$ n \tau_E \ge \frac{12 k_B T}{\langle \sigma v \rangle E_{\text{fus}} - C_{br} T^{1/2}} $$
+   Esta desigualdad paramétrica impone, a la temperatura ideal de $15 \, \text{keV}$, que $n \tau_E \ge 10^{20} \, \text{s m}^{-3}$, definiendo matemáticamente el tamaño colosal y las especificaciones magnéticas necesarias para reactores comerciales futuros.
+
+2. **"Laser Compression of Matter to Super-High Densities: Thermonuclear (CTR) Applications"** - *J. Nuckolls et al. (1972), Nature 239, 139-142*  
+   [Link al artículo original (Nature)](https://www.nature.com/articles/239139a0)
+   
+   **Importancia Teórica y Relevancia:** 
+   El artículo pionero que delineó teórica y matemáticamente el esquema de Fusión por Confinamiento Inercial (ICF) utilizando láseres de alta potencia para comprimir microesferas de D-T, sentando las bases fundacionales de instalaciones como el NIF (National Ignition Facility).
+   
+   **Contexto Matemático:** 
+   El artículo demostró que calentar un plasma a densidad sólida no es suficiente porque la energía láser requerida escalaría prohibitivamente y la onda de expansión térmica desarmaría el blanco antes de quemarse. En su lugar, derivaron que una compresión adiabática esférica (mediante una implosión guiada por presión de ablación) requiere que la densidad areal comprimida cumpla:
+   $$ \rho R \ge \frac{m_i c_s}{\langle \sigma v \rangle} \approx 3 \, \text{g/cm}^2 $$
+   Para maximizar la fracción de quemado ($f \approx \frac{\rho R}{\rho R + 6}$), el blanco debe comprimirse a densidades gigantescas ($\sim 1000$ veces la densidad sólida) limitando la energía láser de ignición a regímenes factibles (megajulios en lugar de gigajulios), aprovechando la propagación de una onda de quemado termonuclear iniciada en un 'hot-spot' central.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Atzeni, S., & Meyer-ter-Vehn, J. (2004). *The Physics of Inertial Fusion*. Oxford University Press.](https://global.oup.com/academic/product/the-physics-of-inertial-fusion-9780198562641)
-2. [Wesson, J. (2011). *Tokamaks* (Vol. 149). Oxford University Press.](https://global.oup.com/academic/product/tokamaks-9780199592234)
-3. [McCracken, G., & Stott, P. (2012). *Fusion: The Energy of the Universe*. Academic Press.](https://www.sciencedirect.com/book/9780123846563/fusion)
-4. [Stacey, W. M. (2010). *Fusion Plasma Physics*. Wiley-VCH.](https://www.wiley.com/en-us/Fusion+Plasma+Physics%2C+2nd+Edition-p-9783527409679)
+- Wesson, J. (2011). *Tokamaks*. Oxford University Press.
+- Atzeni, S., & Meyer-ter-Vehn, J. (2004). *The Physics of Inertial Fusion*. Oxford University Press.
+- Freidberg, J. P. (2007). *Plasma Physics and Fusion Energy*. Cambridge University Press.

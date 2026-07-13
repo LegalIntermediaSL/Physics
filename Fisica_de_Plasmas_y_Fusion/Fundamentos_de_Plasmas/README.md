@@ -214,25 +214,40 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Fundamentals of Plasmas - NPTEL](https://nptel.ac.in)
-2. [Introduction to Plasma Physics - Coursera](https://www.coursera.org)
-3. [Kinetic Theory of Plasmas - Oxford University](https://www.ox.ac.uk)
-4. [Fluid Models for Plasmas - MIT OCW](https://ocw.mit.edu)
-5. [Waves and Instabilities in Plasmas - UCLA](https://www.ucla.edu)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.611J Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/)**
+   Excelente abordaje de las ecuaciones cinéticas, modelos fluidos y propagación de ondas.
+2. **[NPTEL: Fundamentals of Plasmas](https://nptel.ac.in/courses/115/102/115102020/)**
+   Curso analítico intenso centrado en la teoría cinética y derivaciones matemáticas detalladas.
 
-### Artículos y Simulaciones
-1. [Stix, T. H. (1992). *Waves in Plasmas*. Springer.](https://link.springer.com/book/10.1007/978-3-642-88029-7)
-2. [Kruskal, M. D., & Schwarzschild, M. (1954). *Some Instabilities of a Completely Ionized Plasma*. Proc. Roy. Soc. A.](https://royalsocietypublishing.org/doi/10.1098/rspa.1954.0120)
-3. [Penrose, O. (1960). *Microscopic Equations for a Plasma*. Physics of Fluids.](https://aip.scitation.org/doi/10.1063/1.1706024)
-4. [Dawson, J. M. (1983). *Particle simulation of plasmas*. Reviews of Modern Physics.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.55.403)
-5. [Birdsall, C. K., & Langdon, A. B. (1991). *Plasma Physics via Computer Simulation*.](https://doi.org/10.1887/0750301171)
-6. [EPOCH](https://epochpic.github.io/) - PIC code for plasma physics simulations.
-7. [Smilei](https://smileipic.github.io/Smilei/) - Collaborative Particle-In-Cell code.
-8. [PIConGPU](https://picongpu.hzdr.de/) - GPU-accelerated PIC code.
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"On the Vibrations of the Electronic Plasma"** - *L. D. Landau (1946), Journal of Physics USSR 10, 25*  
+   [Link a revisión moderna e historia (Physics Today)](https://physicstoday.scitation.org/doi/10.1063/PT.3.4341)
+   
+   **Importancia Teórica y Relevancia:** 
+   Constituye el triunfo indiscutible de la Teoría Cinética sobre las aproximaciones puramente fluidas. Landau demostró analíticamente que las ondas en plasmas no colisionales, descritas por la ecuación de Vlasov, experimentan un amortiguamiento profundo y riguroso sin necesidad de colisiones.
+   
+   **Contexto Matemático:** 
+   La derivación resolvió la singularidad de resonancia $v = \omega/k$ de la integral dispersiva en el formalismo de Vlasov-Poisson:
+   $$ 1 + \frac{\omega_{pe}^2}{k} \int_C \frac{\partial f_0 / \partial v}{\omega - kv} dv = 0 $$
+   Landau propuso deformar el contorno de integración $C$ en el plano complejo de velocidades, aplicando el Teorema de los Residuos de Cauchy. Extrajo un componente imaginario en la frecuencia $ \omega = \omega_r + i\gamma $, demostrando un decaimiento de fase (fase mixing):
+   $$ \gamma \approx -\omega_{pe} \sqrt{\frac{\pi}{8}} \frac{1}{(k \lambda_D)^3} \exp\left( -\frac{1}{2(k \lambda_D)^2} - \frac{3}{2} \right) $$
+   Esta proeza reveló matemáticamente la transferencia microscópica de energía colectiva a partículas cuasi-resonantes, sentando las bases modernas de todo el calentamiento por microondas y las inestabilidades de haces.
+
+2. **"Microscopic Equations for a Plasma"** - *O. Penrose (1960), Physics of Fluids 3, 258*  
+   [Link al artículo original (AIP)](https://aip.scitation.org/doi/10.1063/1.1706024)
+   
+   **Importancia Teórica y Relevancia:** 
+   Penrose generalizó poderosamente los resultados de Landau, aportando un criterio de estabilidad universal (El Criterio de Penrose) para cualquier distribución arbitraria de velocidades $f_0(v)$ en sistemas no colisionales.
+   
+   **Contexto Matemático:** 
+   El problema de las inestabilidades micro-cinéticas (como el 'two-stream instability') requerían un tratamiento sistemático más allá de distribuciones maxwellianas térmicas simples. Penrose aplicó métodos de variables complejas al mapeo conforme de la función de dispersión dieléctrica en el plano complejo. Estableció que, dado un mínimo local en la función de distribución de velocidades $f(v)$ (es decir, distribuciones tipo joroba o 'bump-on-tail') en una velocidad $v = v_m$ (donde $f'(v_m)=0$ y $f''(v_m)>0$), el plasma será inestable a perturbaciones electrostáticas si y solo si la integral del valor principal de Cauchy satisface la condición:
+   $$ \int_{-\infty}^{\infty} \frac{f(v) - f(v_m)}{(v - v_m)^2} dv > 0 $$
+   Este teorema matemáticamente elegante se volvió un hito fundamental. Indica de manera precisa que no basta con tener dos jorobas de haces interactuando para producir una inestabilidad; la "profundidad" relativa de las corrientes debe sobrepasar un umbral estadístico estricto, guiando la comprensión de inestabilidades turbulentas en aceleradores y reactores.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Bellan, P. M. (2006). *Fundamentals of Plasma Physics*. Cambridge University Press.](https://www.cambridge.org/core/books/fundamentals-of-plasma-physics/9DB30D2E142F6B12C20EECCDF0AFE259)
-2. [Krall, N. A., & Trivelpiece, A. W. (1973). *Principles of Plasma Physics*. McGraw-Hill.](https://www.osti.gov/biblio/4279766)
-3. [Swanson, D. G. (2003). *Plasma Waves*. Institute of Physics Publishing.](https://doi.org/10.1201/9781420034440)
-4. [Boyd, T. J. M., & Sanderson, J. J. (2003). *The Physics of Plasmas*. Cambridge University Press.](https://www.cambridge.org/core/books/physics-of-plasmas/10A38CDA6F2CEEABF5B46882C7C49EFD)
+- Stix, T. H. (1992). *Waves in Plasmas*. Springer.
+- Boyd, T. J. M., & Sanderson, J. J. (2003). *The Physics of Plasmas*. Cambridge University Press.
+- Bellan, P. M. (2006). *Fundamentals of Plasma Physics*. Cambridge University Press.
+- Chen, F. F. (1984). *Introduction to Plasma Physics and Controlled Fusion*. Springer.

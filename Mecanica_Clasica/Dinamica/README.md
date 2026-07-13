@@ -207,26 +207,27 @@ plt.show()
 
 ## 📚 Recursos Específicos de Dinámica
 
-### 🎓 Cursos y Clases Recomendadas (5-7)
-1. **[MIT 8.01 - Newton's Laws of Motion (Walter Lewin)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-2-newtons-laws-of-motion/)**: Semanas 2 y 3 dedicadas exclusivamente a resolver problemas clásicos de dinámica.
-2. **[Yale PHYS 200 - Lecture 3: Newton's Laws of Motion](https://oyc.yale.edu/physics/phys-200/lecture-3)**: Un análisis riguroso de qué son realmente la masa y la inercia.
-3. **[Khan Academy - Fuerzas y Leyes de Newton](https://es.khanacademy.org/science/physics/forces-newtons-laws)**: Diagramas de cuerpo libre paso a paso y fuerzas interactivas.
-4. **[Coursera - Engineering Mechanics: Statics & Dynamics (Georgia Tech)](https://www.coursera.org/learn/engineering-mechanics-statics)**: Un enfoque muy práctico sobre fuerzas en estructuras y aceleración de componentes mecánicos.
-5. **[NPTEL - Engineering Mechanics (IIT)](https://nptel.ac.in/courses/122/104/122104015/)**: Excelente curso centrado en problemas de dinámica rigurosa con un enfoque ingenieril avanzado.
+### 🎓 Cursos y Clases Recomendadas
+1. **[MIT 8.01: Classical Mechanics (Walter Lewin)](https://ocw.mit.edu/courses/8-01-physics-i-classical-mechanics-fall-1999/)**: Cubre las Leyes de Newton, fricción y dinámica de sistemas con ejemplos experimentales en vivo (clases 6 a 14).
+2. **[Stanford Leonard Susskind's Classical Mechanics (The Theoretical Minimum)](https://theoreticalminimum.com/courses/classical-mechanics/2011/fall)**: Curso enfocado en la física teórica profunda; transiciona de las leyes de Newton a los Lagrangianos y Hamiltonianos.
+3. **[Yale PHYS 200: Fundamentals of Physics I (R. Shankar)](https://oyc.yale.edu/physics/phys-200)**: Análisis profundo sobre osciladores armónicos acoplados y dinámica no inercial.
 
-### 📝 Artículos, Simulaciones e Interactivos (8-10)
-1. **Artículo Histórico**: [Principia Mathematica en español](http://www.cervantesvirtual.com/obra/principios-matematicos-de-la-filosofia-natural--0/) - Leer las propias palabras de Newton al definir la inercia y fuerza.
-2. **Artículo (Stanford)**: [Newton's Philosophiae Naturalis Principia Mathematica](https://plato.stanford.edu/entries/newton-principia/) - Análisis filosófico detallado de sus leyes axiomáticas.
-3. **Simulador**: [PhET - Fuerzas y Movimiento (Conceptos básicos)](https://phet.colorado.edu/es/simulations/forces-and-motion-basics) - Excelente para visualizar empujones, tirones y fuerzas de fricción.
-4. **Simulador**: [PhET - Rampa, Fuerzas y Movimiento](https://phet.colorado.edu/es/simulations/ramp-forces-and-motion) - Ajusta el coeficiente de fricción de un plano inclinado y observa diagramas de cuerpo libre cambiantes.
-5. **Video Analítico**: [Veritasium - Why Gravity is NOT a Force](https://www.youtube.com/watch?v=XRr1kaXKBsU) - Interesante contraste entre la dinámica newtoniana y relativista.
-6. **Artículo**: [Friction and Drag (HyperPhysics)](http://hyperphysics.phy-astr.gsu.edu/hbase/frict.html) - Conceptos básicos sobre rozamiento aerodinámico y fuerzas disipativas.
-7. **Simulador**: [GeoGebra - Diagramas de Cuerpo Libre](https://www.geogebra.org/m/J2K6D3x5) - Applets para practicar la suma vectorial de fuerzas con polígonos.
-8. **Video Experimental**: [SmarterEveryDay - Fluid Dynamics and Drag](https://www.youtube.com/watch?v=3u_R4yqHqA8) - Impacto visual de las fuerzas de arrastre fluidas que complican la ley de Newton.
+### 📝 Artículos, Publicaciones y Teoría Avanzada
+1. **[The Variational Principles of Mechanics (Lanczos, 1949 / Dover Edition)](https://store.doverpublications.com/products/9780486650678)**
+   - *Importancia Teórica*: Muestra cómo las Ecuaciones de Newton se derivan del Principio de Mínima Acción.
+   - *Contexto Matemático*: La trayectoria física $\vec{q}(t)$ que minimiza el funcional de acción $\mathcal{S} = \int_{t_1}^{t_2} L(q, \dot{q}, t) dt$, donde el Lagrangiano es $L = T - V$. La variación de la acción $\delta \mathcal{S} = 0$ nos da las Ecuaciones de Euler-Lagrange: 
+     $$ \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) - \frac{\partial L}{\partial q_i} = 0 $$
+     Esto es equivalente a $\vec{F} = m\vec{a}$ pero válido en cualquier sistema de coordenadas generalizadas.
+   - *Implicaciones*: Cambia el paradigma de fuerzas puntuales vectoriales a energías escalares globales del sistema, base de toda la física moderna (incluso cuántica).
+2. **[Foucault's Pendulum and the Coriolis Effect (Sommerfeld, Mechanics Lectures)](https://www.elsevier.com/books/mechanics/sommerfeld/978-0-12-654650-8)**
+   - *Importancia Teórica*: Explicación matemática estricta de las fuerzas ficticias en sistemas rotatorios (no inerciales).
+   - *Contexto Matemático*: En la Tierra (marco giratorio con $\vec{\Omega}$), la aceleración aparente es $\vec{a}' = \vec{g} - 2\vec{\Omega} \times \vec{v}' - \vec{\Omega} \times (\vec{\Omega} \times \vec{r}')$. Para un péndulo largo, la componente horizontal de Coriolis induce una precesión lenta del plano de oscilación con velocidad angular $\omega_P = \Omega \sin \lambda$, donde $\lambda$ es la latitud.
+   - *Implicaciones*: Comprueba la rotación de la Tierra sin necesidad de mirar a los astros, confirmando las transformaciones de coordenadas no inerciales.
+3. **[On the Problem of Three Bodies (Poincaré, 1890)](https://link.springer.com/article/10.1007/BF02392006)**
+   - *Importancia Teórica*: Estableció que los sistemas dinámicos deterministas newtonianos pueden presentar Caos y sensibilidad a las condiciones iniciales.
+   - *Contexto Matemático*: Poincaré demostró que las ecuaciones de Newton $\ddot{\vec{r}}_i = \sum G m_i m_j (\vec{r}_j - \vec{r}_i) / |\vec{r}_i - \vec{r}_j|^3$ no tienen soluciones analíticas cerradas para $N \geq 3$ utilizando integrales de movimiento. Introdujo las secciones de Poincaré y la teoría de perturbaciones homoclínicas.
+   - *Implicaciones*: Da nacimiento a la Teoría del Caos; el determinismo laplaciano falla pragmáticamente por la divergencia exponencial de trayectorias colindantes (exponente de Lyapunov positivo $\lambda > 0$).
 
 ### 📖 Referencias Útiles y Bibliografía
-- **[Classical Dynamics of Particles and Systems (Marion & Thornton)](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Clave para ir un paso más allá de la física de primer año, abordando fuerzas centrales y acopladas.
-- **[Classical Mechanics (John R. Taylor)](https://uscibooks.aip.org/books/classical-mechanics/)**: Su tratamiento sobre fuerzas con resistencia del aire (drag) y fuerzas restauradoras es magnífico.
-- **[Classical Mechanics (Goldstein)](https://en.wikipedia.org/wiki/Classical_Mechanics_(Goldstein_book))**: Aborda la dinámica desde el principio de D'Alembert, esencial para la formulación lagrangiana de sistemas restringidos.
-- **[Física Universitaria (Sears & Zemansky)](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000003295/9780135159552)**: Extenso banco de ejercicios sobre tensiones, resortes, planos inclinados y máquinas de Atwood.
-- **[Introduction to Classical Mechanics (David Morin)](https://www.cambridge.org/highereducation/books/introduction-to-classical-mechanics/31CB8B93623D3F14E1EE98B223D1DE47)**: Lleno de problemas retadores de dinámica, famoso por su rigor matemático intuitivo y sus limericks.
+- **[Classical Dynamics of Particles and Systems (Thornton & Marion)](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Perfecto para problemas numéricos aplicados a fuerzas de arrastre y oscilaciones dinámicas.
+- **[Mechanics - L. D. Landau & E. M. Lifshitz (Course of Theoretical Physics)](https://www.elsevier.com/books/mechanics/landau/978-0-08-021022-3)**: El texto sagrado ruso para la mecánica; inicia la dinámica asumiendo directamente la homogeneidad e isotropía del espacio.

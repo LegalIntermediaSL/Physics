@@ -212,25 +212,36 @@ plt.show()
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-1. **[Stanford University: Cosmology (Leonard Susskind)](https://theoreticalminimum.com/courses/cosmology/2013/winter)** - Parte del "Theoretical Minimum", explica en detalle las métricas y ecuaciones de Friedmann usando la relatividad general.
-2. **[MIT 8.286 The Early Universe](https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/)** - Curso completo por Alan Guth, el creador de la teoría de la inflación cósmica, disponible en MIT OpenCourseWare.
-3. **[Perimeter Institute Seminars](https://pirsa.org/)** - Grabaciones gratuitas de conferencias avanzadas debatiendo el estado actual del modelo estándar cosmológico.
-4. **[Coursera: From the Big Bang to Dark Energy](https://www.coursera.org/learn/big-bang)** - Curso de la Universidad de Tokio (Hitoshi Murayama) que cubre la formación de estructuras, inflación y energía oscura.
-5. **[UC Irvine - Physics 20B: Cosmology (James Bullock)](https://www.youtube.com/playlist?list=PLqOZ6FD_RQ7nwb-mX-Z6G5fFv9yO-F18i)** - Clases fundamentales de pregrado que enseñan la historia térmica del universo y materia oscura.
+1. **[MIT OpenCourseWare: 8.286 The Early Universe (Alan Guth)](https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/)** - Un curso magistral en video dictado por el mismísimo arquitecto de la teoría de la inflación cósmica. Cubre métricas FLRW, materia oscura, bariogénesis y radiación primordial sin requerir cálculo tensorial previo en RG extrema.
+2. **[Stanford University: Cosmology (Leonard Susskind)](https://theoreticalminimum.com/courses/cosmology/2013/winter)** - Parte del ciclo "The Theoretical Minimum", desarrolla de manera precisa y amena las matemáticas de las Ecuaciones de Friedmann y la evolución del factor de escala.
+3. **[UC Irvine: Physics 20B - Cosmology (James Bullock)](https://www.youtube.com/playlist?list=PLqOZ6FD_RQ7nwb-mX-Z6G5fFv9yO-F18i)** - Destacada serie de clases de pregrado que detalla la historia térmica del universo temprano, Big Bang Nucleosynthesis (BBN) y la formación del CMB.
+4. **[Perimeter Institute: Cosmology (PSI Lectures)](https://pirsa.org/)** - Charlas y seminarios avanzados que discuten la física teórica contemporánea de la inflación (teoría de perturbaciones) y el problema moderno de la tensión de Hubble.
 
-### 📝 Artículos e Interactivos Interesantes
-1. [Planck Legacy Archive (ESA)](http://pla.esac.esa.int/) - Acceso a los mapas e imágenes reales del fondo cósmico de microondas obtenidos por la misión Planck.
-2. [Ned Wright's Cosmology Tutorial & Calculator](http://www.astro.ucla.edu/~wright/CosmoCalc.html) - Herramienta clave e interactiva para calcular tiempos, distancias y escalas según el corrimiento al rojo ($z$).
-3. [Wikipedia: Timeline of the early universe](https://en.wikipedia.org/wiki/Timeline_of_the_early_universe) - Un repaso cronológico profundo y detallado de las primeras fracciones de segundo.
-4. [NASA WMAP Science](https://map.gsfc.nasa.gov/universe/) - Recurso educativo sobre la misión WMAP que estableció de forma precisa la edad del universo (13.77 mil millones de años).
-5. [The Dark Energy Survey (DES)](https://www.darkenergysurvey.org/) - Página oficial con los hallazgos y metodologías para trazar la historia de expansión cósmica.
-6. [Scholarpedia: Inflationary Cosmology](http://www.scholarpedia.org/article/Cosmic_inflation) - Un análisis riguroso escrito por expertos sobre cómo la inflación resuelve los problemas del Big Bang clásico.
-7. [Cosmic Microwave Background Simulator](http://lambda.gsfc.nasa.gov/) - Herramientas de simulación y bases de datos del LAMBDA (Legacy Archive for Microwave Background Data Analysis).
-8. [Supernova Cosmology Project](http://scp.berkeley.edu/) - Datos históricos y explicaciones sobre el descubrimiento de la energía oscura usando supernovas Tipo Ia.
+### 📝 Artículos Científicos Históricos y Avanzados
+
+1. **A Relation between Distance and Radial Velocity among Extra-Galactic Nebulae (Una relación entre la distancia y la velocidad radial entre nebulosas extragalácticas)**  
+   *Edwin Hubble (1929)*. [Proceedings of the National Academy of Sciences, 15(3), 168-173](https://www.pnas.org/doi/10.1073/pnas.15.3.168).  
+   **Importancia Teórica:** El hito observacional fundacional de la cosmología moderna. Utilizando Cefeidas para medir distancias, Hubble demostró de forma concluyente que las galaxias ("nebulosas espirales") no solo están fuera de la Vía Láctea, sino que se alejan sistemáticamente, probando la expansión métrica del espacio.  
+   **Fondo Matemático:** Establece empíricamente la Ley de Hubble (hoy Hubble-Lemaître), relacionando la velocidad de recesión aparente $v$ (obtenida del corrimiento al rojo $z$ estelar) con la distancia propia $D$:
+   $$ v = H_0 D $$
+   **Implicaciones Físicas:** Demolió el modelo del "Universo Estático" propuesto inicialmente por Einstein y condujo directamente a la formulación empírica del origen del universo a partir de un punto concentrado: el "Átomo Primigenio" (Big Bang).
+
+2. **A Measurement of Excess Antenna Temperature at 4080 Mc/s (Una medida del exceso de temperatura de antena a 4080 Mc/s)**  
+   *Arno Penzias & Robert Wilson (1965)*. [The Astrophysical Journal, 142, 419-421](https://ui.adsabs.harvard.edu/abs/1965ApJ...142..419P/abstract).  
+   **Importancia Teórica:** Confirma de forma accidental pero decisiva el Fondo Cósmico de Microondas (CMB), la radiación térmica isotrópica fósil predicha teóricamente por Gamow, Alpher y Herman para un universo que comenzó en un estado extremadamente caliente y se ha enfriado por expansión.  
+   **Fondo Matemático:** Observan un ruido de fondo que corresponde a un espectro de cuerpo negro perfecto no direccional, validando la ley del desplazamiento de Wien termodinámica en cosmología:
+   $$ T(z) = T_0 (1 + z) $$
+   A un $z \approx 1100$ (era de la recombinación atómica), la temperatura cayó por debajo del límite de ionización del hidrógeno (unos $3000\text{ K}$), liberando para siempre el baño de fotones al universo, que hoy medimos enfriado astronómicamente a $T_0 = 2.725\text{ K}$.  
+   **Implicaciones Físicas:** Hizo descartar por completo el Modelo del Estado Estacionario (Steady State) en cosmología, consolidando al Big Bang como la única teoría aceptada de la evolución cósmica general.
+
+3. **Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant (Evidencia observacional con supernovas de un universo en aceleración y una constante cosmológica)**  
+   *A. Riess et al. (High-Z Supernova Search Team) & S. Perlmutter et al. (Supernova Cosmology Project) (1998/1999)*. [The Astronomical Journal, 116(3), 1009-1038](https://iopscience.iop.org/article/10.1086/300499).  
+   **Importancia Teórica:** El descubrimiento más revolucionario en astrofísica de finales del s. XX, demostrando que la expansión del universo no se está frenando por la gravedad mutua de la materia, sino que está acelerando positivamente.  
+   **Fondo Matemático:** Midiendo explosiones de Supernovas Tipo Ia lejanas como candelas estándar (determinando así su distancia luminosa $d_L$), hallaron que están mucho más tenues de lo esperado en un universo dominado por la materia. Esto obliga a incluir un término positivo dominante de "Energía Oscura" ($\Omega_\Lambda$) en la Ecuación de Aceleración de Friedmann-Raychaudhuri:
+   $$ \frac{\ddot{a}}{a} = -\frac{4\pi G}{3}\rho_m + \frac{\Lambda c^2}{3} > 0 $$
+   **Implicaciones Físicas:** Llevó a la adopción formal del modelo Concordante Lambda-CDM ($\Lambda$CDM), donde el ~68% del cosmos se compone de una repulsión de vacío inexplicable, sellando el destino de un "Big Freeze" (muerte térmica) eterna e insalvable para nuestro universo.
 
 ### 📖 Referencias Útiles y Bibliografía
-- **["Cosmology" - Steven Weinberg](https://global.oup.com/academic/product/cosmology-9780198526827)**: Un texto fundamental y riguroso; es el estándar de oro en cursos de posgrado.
-- **["Introduction to Cosmology" - Barbara Ryden](https://www.cambridge.org/highereducation/books/introduction-to-cosmology/A7080DA9D6A9C5D089E4670DAB5259B2)**: Posiblemente el libro de introducción a la cosmología más claro y accesible para nivel de pregrado, excelente para entender la Ecuación de Friedmann.
-- **["The First Three Minutes" - Steven Weinberg](https://www.basicbooks.com/titles/steven-weinberg/the-first-three-minutes/9780465024377/)**: Un clásico de divulgación que explica de manera brillante la termodinámica del universo temprano.
-- **["Modern Cosmology" - Scott Dodelson](https://shop.elsevier.com/books/modern-cosmology/dodelson/978-0-12-815948-4)**: Texto avanzado muy utilizado que se enfoca en las perturbaciones cosmológicas y el análisis del CMB.
-- **["An Introduction to Modern Cosmology" - Andrew Liddle](https://www.wiley.com/en-us/An+Introduction+to+Modern+Cosmology%2C+3rd+Edition-p-9781118502143)**: Otra opción fenomenal, un poco más breve que Ryden, para cursos introductorios universitarios.
+1. **Barbara Ryden - [Introduction to Cosmology (Cambridge University Press)](https://www.cambridge.org/highereducation/books/introduction-to-cosmology/A7080DA9D6A9C5D089E4670DAB5259B2)** - Posiblemente el libro de introducción pedagógica más claro y ameno a nivel de pregrado, excepcional para derivar y aplicar en ejercicios prácticos la métrica FLRW y las ecuaciones de Friedmann.
+2. **Steven Weinberg - [Cosmology (Oxford University Press)](https://global.oup.com/academic/product/cosmology-9780198526827)** - Una joya moderna e implacablemente rigurosa firmada por un físico ganador del Premio Nobel, enfocada explícitamente en el desarrollo avanzado de tensores y perturbaciones cosmológicas inflacionarias (posgrado).
+3. **Scott Dodelson & Fabian Schmidt - [Modern Cosmology (Academic Press, 2da Ed)](https://shop.elsevier.com/books/modern-cosmology/dodelson/978-0-12-815948-4)** - El estándar contemporáneo indispensable y avanzado que enseña explícitamente cómo interpretar analíticamente el espectro de potencias del CMB y analizar numéricamente las anisotropías térmicas cósmicas.

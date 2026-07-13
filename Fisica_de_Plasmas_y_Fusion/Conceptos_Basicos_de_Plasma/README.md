@@ -271,27 +271,37 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Plasma Physics - Part 1 (MIT OCW)](https://ocw.mit.edu)
-2. [Introduction to Plasmas (Coursera/Princeton)](https://www.coursera.org)
-3. [Fundamentals of Plasmas - NPTEL](https://nptel.ac.in)
-4. [Plasma Physics Fundamentals - EPFL](https://www.epfl.ch)
-5. [Basic Plasma Phenomena - Summer School PPPL](https://www.pppl.gov)
-6. [Introduction to High-Temperature Plasmas - UTokyo](https://www.u-tokyo.ac.jp)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.611J Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/)**
+   Excelente introducción teórica desde las órbitas de partículas individuales hasta modelos fluidos.
+2. **[EPFL: Plasma Physics and Applications](https://www.edx.org/course/plasma-physics-and-applications)**
+   Curso completo que abarca ondas de plasma, apantallamiento de Debye y aplicaciones en reactores Tokamak.
 
-### Artículos y Simulaciones
-1. [Langmuir, I. (1928). *Oscillations in Ionized Gases*. Proc. Natl. Acad. Sci.](https://doi.org/10.1073/pnas.14.8.627)
-2. [Tonks, L., & Langmuir, I. (1929). *A General Theory of the Plasma of an Arc*. Physical Review.](https://doi.org/10.1103/PhysRev.33.195)
-3. [Vlasov, A. A. (1938). *On Vibration Properties of Electron Gas*. Soviet Physics.](https://doi.org/10.1070/PU1968v010n06ABEH003709)
-4. [Landau, L. D. (1946). *On the Vibrations of the Electronic Plasma*. Journal of Physics.](https://doi.org/10.1007/978-1-4615-7792-7_11)
-5. [Debye, P., & Hückel, E. (1923). *The theory of electrolytes*. Physikalische Zeitschrift.](https://gallica.bnf.fr/ark:/12148/bpt6k15367j)
-6. [NRL Plasma Formulary](https://www.nrl.navy.mil/) - Fórmulas de Plasma Fundamentales.
-7. [PhET Interactive Simulations - Charges and Fields](https://phet.colorado.edu/en/simulations/charges-and-fields) - Simulación.
-8. [PlasmaPy](https://www.plasmapy.org/) - Paquete de Python para simulaciones básicas de plasmas.
-9. [BOUT++ Framework](https://boutproject.github.io/) - Simulaciones fluidas 3D.
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Oscillations in Ionized Gases"** - *I. Langmuir (1928), Proc. Natl. Acad. Sci. 14, 627*  
+   [Link al artículo original (PNAS)](https://www.pnas.org/doi/10.1073/pnas.14.8.627)
+   
+   **Importancia Teórica y Relevancia:** 
+   En este texto fundacional, Langmuir bautizó por primera vez al gas ionizado como "plasma" (por su similitud con el plasma sanguíneo transportando corpúsculos) e identificó matemáticamente el modo de oscilación colectiva de alta frecuencia de los electrones.
+   
+   **Contexto Matemático:** 
+   Langmuir observó perturbaciones que no podían explicarse por colisiones binarias. Al derivar la fuerza restauradora electrostática creada por un desplazamiento macroscópico local de electrones respecto a un fondo de iones (fuerza de Poisson), descubrió un movimiento armónico simple. La frecuencia natural encontrada es la ahora célebre frecuencia de plasma electrónica:
+   $$ \omega_{pe} = \sqrt{ \frac{n_e e^2}{m_e \epsilon_0} } $$
+   Este parámetro define la escala de tiempo fundamental ($\tau_p \sim \omega_{pe}^{-1}$) en la cual el plasma responde para apantallar perturbaciones eléctricas y restaurar la cuasineutralidad, actuando como la frontera teórica que separa el comportamiento de un gas neutro del de un plasma colectivo.
+
+2. **"On the Vibrations of the Electronic Plasma"** - *L. D. Landau (1946), Journal of Physics USSR 10, 25*  
+   [Link a revisión moderna e historia (Physics Today)](https://physicstoday.scitation.org/doi/10.1063/PT.3.4341)
+   
+   **Importancia Teórica y Relevancia:** 
+   Proporcionó la primera solución analítica rigurosa de la ecuación de Vlasov (modelo cinético sin colisiones), descubriendo el fenómeno contraintuitivo del "Amortiguamiento de Landau". Demostró que las ondas electrostáticas en un plasma pueden amortiguarse exponencialmente en el tiempo sin disipación térmica (sin entropía colisional).
+   
+   **Contexto Matemático:** 
+   Usando métodos de integración en el plano complejo, Landau sorteó la singularidad $v = \omega/k$ de la ecuación de Vlasov linealizada usando el famoso Contorno de Landau. La respuesta dieléctrica longitudinal revela un decaimiento con una tasa de amortiguamiento $\gamma$:
+   $$ \gamma \approx -\omega_{pe} \sqrt{\frac{\pi}{8}} \frac{1}{(k \lambda_D)^3} \exp\left( -\frac{1}{2(k \lambda_D)^2} - \frac{3}{2} \right) $$
+   Físicamente, esto implica un intercambio de energía onda-partícula sin fricción. Las partículas resonantes que viajan ligeramente más lento que la onda (con velocidad $v \lesssim v_{phase}$) absorben energía, 'surfeando' el gradiente de potencial de la onda y amortiguando la amplitud macroscópica del campo eléctrico.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Chen, F. F. (1984). *Introduction to Plasma Physics and Controlled Fusion*. Springer.](https://link.springer.com/book/10.1007/978-3-319-22309-4)
-2. [Bittencourt, J. A. (2004). *Fundamentals of Plasma Physics*. Springer.](https://link.springer.com/book/10.1007/978-1-4757-4030-1)
-3. [Goldston, R. J., & Rutherford, P. H. (1995). *Introduction to Plasma Physics*. CRC Press.](https://www.routledge.com/Introduction-to-Plasma-Physics/Goldston-Rutherford/p/book/9780750301831)
-4. [Inan, U. S., & Gołkowski, M. (2011). *Principles of Plasma Physics for Engineers and Scientists*. Cambridge University Press.](https://www.cambridge.org/core/books/principles-of-plasma-physics-for-engineers-and-scientists/8636E21B66D673DAA792E5B9423C3502)
+- Chen, F. F. (1984). *Introduction to Plasma Physics and Controlled Fusion*. Springer.
+- Bittencourt, J. A. (2004). *Fundamentals of Plasma Physics*. Springer.
+- Bellan, P. M. (2006). *Fundamentals of Plasma Physics*. Cambridge University Press.

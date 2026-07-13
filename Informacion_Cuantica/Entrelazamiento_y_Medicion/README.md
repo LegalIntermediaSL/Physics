@@ -277,24 +277,40 @@ else:
 
 ## 📚 Recursos Específicos
 
-### Cursos
+### Cursos Recomendados
 1. [Quantum Entanglement and Decoherence (Coursera)](https://www.coursera.org/learn/quantum-entanglement)
 2. [Quantum Measurement (MIT OpenCourseWare)](https://ocw.mit.edu/courses/quantum-measurement)
 3. [The Physics of Quantum Information (edX)](https://www.edx.org/course/physics-of-quantum-information)
-4. [Fundamentals of Quantum Entanglement (FutureLearn)](https://www.futurelearn.com/courses/quantum-entanglement-fundamentals)
-5. [Quantum Mechanics and Measurement (Stanford Online)](https://online.stanford.edu/courses/quantum-mechanics-measurement)
 
 ### Artículos y Simulaciones
-1. [Can Quantum-Mechanical Description of Physical Reality Be Considered Complete? (Einstein, Podolsky, Rosen, 1935)](https://doi.org/10.1103/PhysRev.47.777)
-2. [On the Einstein Podolsky Rosen paradox (J. S. Bell, 1964)](https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195)
-3. [Quantum entanglement for babies (Chris Ferrie)](https://csferrie.com/books/quantum-entanglement-for-babies/)
-4. [Quantum Theory of Measurement (Wheeler & Zurek, 1983)](https://press.princeton.edu/books/paperback/9780691083162/quantum-theory-and-measurement)
-5. [Decoherence and the transition from quantum to classical (W. Zurek, 2003)](https://arxiv.org/abs/quant-ph/0306072)
-6. [Quirk: Drag-and-drop quantum circuit simulator](https://algassert.com/quirk)
-7. [IBM Quantum Composer](https://quantum-computing.ibm.com/composer/)
-8. [Quantum Nonlocality and Information (Popescu & Rohrlich, 1994)](https://doi.org/10.1007/BF02058098)
+1. **Can Quantum-Mechanical Description of Physical Reality Be Considered Complete? (Einstein, Podolsky, Rosen, 1935)**
+   - **Enlace:** [https://doi.org/10.1103/PhysRev.47.777](https://doi.org/10.1103/PhysRev.47.777)
+   - **Importancia Teórica:** El artículo EPR, que formalizó conceptualmente el entrelazamiento cuántico señalándolo paradójicamente como "acción espeluznante a distancia" (spooky action at a distance).
+   - **Fondo Matemático:** Examina estados inseparables de la forma $|\psi\rangle = \int dp |p\rangle |-p\rangle$, donde la posición relativa $x_1 - x_2$ y momento total $p_1 + p_2$ conmutan:
+     $$
+     [X_1 - X_2, P_1 + P_2] = [X_1, P_1] - [X_2, P_2] = i\hbar - i\hbar = 0
+     $$
+   - **Implicaciones Físicas:** Demuestra que si se exige causalidad local estricta, la mecánica cuántica no puede describir de manera completa todos los elementos de la realidad física, impulsando las teorías de variables ocultas.
+
+2. **On the Einstein Podolsky Rosen paradox (J. S. Bell, 1964)**
+   - **Enlace:** [https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195](https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195)
+   - **Importancia Teórica:** Las desigualdades de Bell. Proveyó el mecanismo matemático para falsar empíricamente cualquier teoría de variables ocultas locales.
+   - **Fondo Matemático:** Establece que para cualquier modelo determinista local, la correlación de medidas $P(\vec{a}, \vec{b})$ debe satisfacer la desigualdad de CHSH:
+     $$
+     |E(a, b) - E(a, b') + E(a', b) + E(a', b')| \leq 2
+     $$
+     Mientras que la mecánica cuántica para el estado singlete viola este límite alcanzando $2\sqrt{2}$.
+   - **Implicaciones Físicas:** Probó que el universo, en su nivel fundamental, es intrínsecamente no-local, marcando el nacimiento de la teoría de la información cuántica experimental.
+
+3. **Decoherence and the transition from quantum to classical (W. Zurek, 2003)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/0306072](https://arxiv.org/abs/quant-ph/0306072)
+   - **Importancia Teórica:** Resuelve en gran medida el problema de la medición explicando el colapso aparente y cómo surge el mundo clásico macroscópico a partir de la cuántica (Darwinismo Cuántico).
+   - **Fondo Matemático:** Estudia la dinámica de la matriz de densidad reducida $\rho_S = \text{Tr}_E[\rho_{SE}]$ bajo un hamiltoniano de interacción con el entorno $H_{int}$. La decoherencia suprime los términos no diagonales de $\rho_S$ en la base de "pointer states":
+     $$
+     \rho_S(t) \approx \sum_i P_i |\pi_i\rangle \langle \pi_i|
+     $$
+   - **Implicaciones Físicas:** Desmitifica el papel del observador consciente, mostrando que la interacción continua y no evitable con el ambiente es lo que induce la selección de superposiciones viables.
 
 ### 📖 Referencias Útiles y Bibliografía
 1. [Quantum Computation and Quantum Information (Nielsen & Chuang)](https://doi.org/10.1017/CBO9780511976667)
-2. [Speakable and Unspeakable in Quantum Mechanics (J. S. Bell)](https://doi.org/10.1017/CBO9780511815676)
-3. [Quantum Measurement (V. B. Braginsky, F. Ya. Khalili)](https://doi.org/10.1017/CBO9780511622748)
+2. [Quantum Measurement (V. B. Braginsky, F. Ya. Khalili)](https://doi.org/10.1017/CBO9780511622748)

@@ -176,27 +176,29 @@ plt.show()
 
 ## 📚 Recursos Específicos de Trabajo y Energía
 
-### 🎓 Cursos y Clases Recomendadas (5-7)
-1. **[MIT 8.01 - Work and Energy (Walter Lewin)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-4-work-and-energy/)**: Un bloque magistral que muestra el inmenso poder de las leyes de conservación para evitar las engorrosas ecuaciones diferenciales directas.
-2. **[Yale PHYS 200 - Lecture 4: Conservation of Energy](https://oyc.yale.edu/physics/phys-200/lecture-4)**: Shankar formaliza brillantemente el trabajo mecánico como una integral de línea y el uso del operador gradiente para el potencial.
-3. **[Khan Academy - Trabajo y Energía](https://es.khanacademy.org/science/physics/work-and-energy)**: Excelente progresión desde el cálculo de nivel básico hasta temas intermedios usando resortes (Ley de Hooke).
-4. **[Coursera - Introduction to Mechanics, Part 1 (Rice University)](https://www.coursera.org/learn/physics-101-forces-kinematics)**: Un análisis en profundidad de la energía mecánica, fuerzas no conservativas y máquinas simples.
-5. **[edX - Dynamics and Energy (MITx)](https://www.edx.org/course/mechanics-momentum-and-energy)**: Simulaciones interactivas enfocadas a comprender los pozos de potencial y los puntos de equilibrio estable e inestable.
+### 🎓 Cursos y Clases Recomendadas
+1. **[MIT 8.01: Work and Energy (Walter Lewin)](https://ocw.mit.edu/courses/8-01-physics-i-classical-mechanics-fall-1999/)**: Lewin pendulando una bola de boliche directo hacia su rostro es una de las mayores demostraciones de la inquebrantable fe en la conservación de la energía mecánica.
+2. **[Stanford - Classical Mechanics: The Theoretical Minimum (Susskind)](https://theoreticalminimum.com/courses/classical-mechanics/2011/fall)**: Profundiza fenomenalmente en cómo la energía se traduce en el Hamiltoniano de un sistema en el espacio de fases $H(q, p) = T + V$.
+3. **[Yale PHYS 200: Work and Energy (R. Shankar)](https://oyc.yale.edu/physics/phys-200)**: Transición matemática rigurosa desde la sumatoria de fuerzas hacia los teoremas funcionales de trayectorias integradas.
 
-### 📝 Artículos, Simulaciones e Interactivos (8-10)
-1. **Artículo / Matemática**: [Gradient, Divergence and Curl (Math is Fun)](https://www.mathsisfun.com/calculus/gradient-divergence-curl.html) - Para comprender qué significa el teorema $ec{F} = -
-abla U$ y las fuerzas conservativas.
-2. **Artículo Histórico**: [James Prescott Joule and the Conservation of Energy](https://www.aps.org/publications/apsnews/201507/physicshistory.cfm) - El fascinante experimento de las paletas y la deducción del equivalente mecánico del calor.
-3. **Simulador**: [PhET - Energía en la Pista de Patinaje](https://phet.colorado.edu/es/simulations/energy-skate-park) - Para entender visualmente el trasvase continuo entre cinética, potencial gravitacional y térmica.
-4. **Simulador**: [PhET - Masas y Resortes](https://phet.colorado.edu/es/simulations/masses-and-springs) - Conservación de la energía mecánica con sistemas que implican Energía Potencial Elástica oscilante.
-5. **Video/Visualización**: [SmarterEveryDay - Pendulum demonstration](https://www.youtube.com/watch?v=02w9lSii_Hs) - Intuición física extrema en la vida real confiando en la conservación de $E$.
-6. **Artículo**: [Work and Kinetic Energy (HyperPhysics)](http://hyperphysics.phy-astr.gsu.edu/hbase/work.html) - Resumen conciso sobre el teorema fundamental trabajo-energía para fuerzas escalares netas.
-7. **Simulador**: [GeoGebra - Pozo de Potencial Oscilador Armónico](https://www.geogebra.org/m/jJjF4D3d) - Explora cómo las partículas están atrapadas en valles de potencial parabólico (resortes).
-8. **Video Analítico**: [Veritasium - Surprising Applications of the Magnus Effect](https://www.youtube.com/watch?v=2OSrvzNW9FE) - Cuando las fuerzas no conservativas consumen energía mecánica para alterar trayectorias.
+### 📝 Artículos, Publicaciones y Teoría Avanzada
+1. **[On the Conservation of Force (Hermann von Helmholtz, 1847)](https://es.wikipedia.org/wiki/Conservaci%C3%B3n_de_la_energ%C3%ADa)**
+   - *Importancia Teórica*: Un hito en la historia de la ciencia donde Helmholtz establece unificadamente el Principio de Conservación de la Energía, argumentando que calor, luz, electricidad y movimiento mecánico son todas transformaciones equivalentes de la misma "fuerza" viva ($E$).
+   - *Contexto Matemático*: Postula que los campos centrales conservativos (como gravedad y resortes puros) siempre admiten una función escalar de energía potencial $U(\vec{r})$, tal que el trabajo en un ciclo cerrado topológico sea siempre idénticamente cero:
+     $$ \oint_C \vec{F} \cdot d\vec{r} = 0 \iff \nabla \times \vec{F} = \vec{0} $$
+   - *Implicaciones*: Anuló el paradigma de la creación mágica del movimiento (máquinas de movimiento perpetuo de primer grado), erigiendo el Primer Principio de la Termodinámica.
+2. **[Symmetry and Conservation Laws: Noether's Theorem (Emmy Noether, 1918)](https://arxiv.org/abs/physics/0503066)**
+   - *Importancia Teórica*: ¿Por qué se conserva la energía? Noether dio la respuesta final matemática asociando la energía a la invariancia traslacional del tiempo.
+   - *Contexto Matemático*: Si las leyes fundamentales no cambian a lo largo de las eras (el Lagrangiano $L$ no depende del tiempo de forma explícita, $\frac{\partial L}{\partial t} = 0$), entonces el Hamiltoniano es una constante rigurosa en el flujo del tiempo temporal:
+     $$ \frac{dH}{dt} = \sum \dot{q}_i \frac{\partial L}{\partial q_i} + \ddot{q}_i \frac{\partial L}{\partial \dot{q}_i} - \left( \sum \frac{\partial L}{\partial q_i} \dot{q}_i + \frac{\partial L}{\partial \dot{q}_i} \ddot{q}_i + \frac{\partial L}{\partial t} \right) = - \frac{\partial L}{\partial t} = 0 $$
+   - *Implicaciones*: La energía $E = H$ es el ente generador de las traslaciones temporales. Si el universo evoluciona idénticamente hoy y mañana, la Energía global del Cosmos debe conservarse perennemente.
+3. **[Small Oscillations and Harmonic Approximations (Goldstein, Classical Mechanics)](https://en.wikipedia.org/wiki/Classical_Mechanics_(Goldstein_book))**
+   - *Importancia Teórica*: Demostración analítica de por qué el Universo entero se aproxima infinitesimalmente mediante "resortes" y ondas armónicas de la ley de Hooke.
+   - *Contexto Matemático*: Para cualquier sistema en reposo atrapado en el fondo asimétrico y amorfo de un pozo de energía potencial mínimo local $x_0$, la expansión funcional analítica de Taylor truncada da:
+     $$ U(x) \approx U(x_0) + \frac{1}{2} \left( \frac{d^2 U}{dx^2} \right)_{x_0} (x - x_0)^2 = \frac{1}{2} k_{efectivo} \Delta x^2 $$
+   - *Implicaciones*: Las moléculas diatómicas (vibraciones del infrarrojo en CO2) o los péndulos bajo gravedad se comportan como osciladores armónicos perfectos a amplitudes minúsculas. Toda la acústica, la teoría cuántica de campos fotónicos fonónicos (cuantización segunda) se basa en esta inexorable asimetría geométrica parabólica truncada de la Energía Potencial.
 
 ### 📖 Referencias Útiles y Bibliografía
-- **[Classical Mechanics (John R. Taylor)](https://uscibooks.aip.org/books/classical-mechanics/)**: Incluye un análisis fenomenal sobre la oscilación en torno a mínimos de potencial genéricos, expandiendo la energía en series de Taylor.
-- **[Classical Dynamics of Particles and Systems (Marion & Thornton)](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Sus primeros capítulos asientan el formalismo de la integral de trayectoria y el uso exhaustivo de campos gradientes.
-- **[Classical Mechanics (Herbert Goldstein)](https://en.wikipedia.org/wiki/Classical_Mechanics_(Goldstein_book))**: Fundamento clave para saltar hacia la formulación Lagrangiana; reescribe toda la física basada en el Principio de Hamilton de la Mínima Acción.
-- **[Física Universitaria (Sears & Zemansky)](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000003295/9780135159552)**: Una cantidad enorme de ejemplos prácticos sobre conservación, bucles circulares (loop-the-loop) y potencias de sistemas de tracción.
+- **[Analytical Mechanics - L. Hand & J. Finch](https://www.cambridge.org/highereducation/books/analytical-mechanics/9780521575720)**: Lectura sublime, muy matemática, que desarrolla toda la estática y dinámica apoyándose íntegramente en las variaciones del Trabajo Virtual (D'Alembert) y Hamiltonianos.
+- **[Classical Mechanics - John R. Taylor](https://uscibooks.aip.org/books/classical-mechanics/)**: Magníficos capítulos enfocados a demostrar con álgebra lineal multidimensional por qué la condición rotacional $\nabla \times \vec{F} = \vec{0}$ en 3D permite al operador "gradiente" definir con seguridad los campos energéticos de montaña.
 - **[The Feynman Lectures on Physics (Vol 1, Cap. 4)](https://www.feynmanlectures.caltech.edu/I_04.html)**: Considerada por muchos como la mejor exposición conceptual escrita sobre qué "es" la energía.

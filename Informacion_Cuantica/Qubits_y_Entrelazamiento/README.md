@@ -237,25 +237,36 @@ if np.isclose(entropy_A, 1.0):
 
 ## 📚 Recursos Específicos
 
-### Cursos
+### Cursos Recomendados
 1. [Quantum Information Science I, Part 1 (MITx on edX)](https://www.edx.org/course/quantum-information-science-i-part-1)
 2. [Understanding Quantum Mechanics (Coursera)](https://www.coursera.org/learn/quantum-mechanics)
-3. [Qubits and Quantum States (FutureLearn)](https://www.futurelearn.com/courses/qubits-quantum-states)
-4. [Quantum Entanglement and Its Applications (Stanford Online)](https://online.stanford.edu/courses/quantum-entanglement)
-5. [The Physics of Quantum Information (edX)](https://www.edx.org/course/physics-of-quantum-information)
-6. [Quantum Mechanics and Quantum Computation (UC Berkeley)](https://www.coursera.org/learn/quantum-mechanics-computation)
+3. [Quantum Entanglement and Its Applications (Stanford Online)](https://online.stanford.edu/courses/quantum-entanglement)
 
 ### Artículos y Simulaciones
-1. [IBM Quantum Composer (Simulador online de circuitos)](https://quantum-computing.ibm.com/composer/)
-2. [Quirk (Simulador cuántico de código abierto)](https://algassert.com/quirk)
-3. [Quantum entanglement for babies (Chris Ferrie)](https://csferrie.com/books/quantum-entanglement-for-babies/)
-4. [Quantum mechanics of multi-particle systems (E. Schrödinger, 1935)](https://doi.org/10.1017/S030500410001355X)
-5. [On the Einstein Podolsky Rosen paradox (J. S. Bell, 1964)](https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195)
-6. [Can Quantum-Mechanical Description of Physical Reality Be Considered Complete? (Einstein, Podolsky, Rosen, 1935)](https://doi.org/10.1103/PhysRev.47.777)
-7. [Decoherence and the transition from quantum to classical (W. Zurek, 2003)](https://arxiv.org/abs/quant-ph/0306072)
-8. [Experimental realization of EPR paradox (Aspect et al., 1982)](https://doi.org/10.1103/PhysRevLett.49.1804)
+1. **On the Einstein Podolsky Rosen paradox (J. S. Bell, 1964)**
+   - **Enlace:** [https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195](https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195)
+   - **Importancia Teórica:** Las desigualdades de Bell separan de manera falsable la mecánica cuántica de cualquier modelo clásico de realidad local.
+   - **Fondo Matemático:** Las correlaciones locales $E(a, b) = \int d\lambda \rho(\lambda) A(a,\lambda) B(b,\lambda)$ restringen la suma CHSH a ser menor a 2, mientras la mecánica cuántica permite una cota de Tsirelson de $2\sqrt{2}$:
+     $$
+     |\langle A_1 B_1 \rangle - \langle A_1 B_2 \rangle + \langle A_2 B_1 \rangle + \langle A_2 B_2 \rangle| \leq 2\sqrt{2}
+     $$
+   - **Implicaciones Físicas:** Demuestra definitivamente que la naturaleza entrelazada es inherentemente no local y que carece de parámetros preexistentes ocultos puramente locales.
+
+2. **Experimental realization of EPR paradox (Aspect et al., 1982)**
+   - **Enlace:** [https://doi.org/10.1103/PhysRevLett.49.1804](https://doi.org/10.1103/PhysRevLett.49.1804)
+   - **Importancia Teórica:** El primer test verdaderamente robusto en cerrar las brechas (loopholes) sobre las desigualdades de Bell usando mediciones retrasadas ópticamente.
+   - **Fondo Matemático:** Mide la coincidencia de polarización para fotones en estado entrelazado $|\psi\rangle = \frac{1}{\sqrt{2}}(|V,V\rangle + |H,H\rangle)$. Los detectores variaban su ángulo rápido para violar efectivamente CHSH en un marco espaciotemporal de causa-efecto estrictamente aislado.
+   - **Implicaciones Físicas:** Descartó la comunicación a la velocidad de la luz entre polarizadores como fuente para coordinar los colapsos. Concedió el Premio Nobel 2022 para Alain Aspect y sus colegas.
+
+3. **Decoherence and the transition from quantum to classical (W. Zurek, 2003)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/0306072](https://arxiv.org/abs/quant-ph/0306072)
+   - **Importancia Teórica:** Aborda cómo y por qué los estados entrelazados cuánticos puros pierden coherencia, cediendo a una matriz estadística clásica mixta por interacción incontrolada con el baño ambiental.
+   - **Fondo Matemático:** El ambiente induce supresión exponencial de elementos de densidad no diagonal $e^{-\Gamma t}$. La tasa $\Gamma$ escala como $d^2$, impidiendo aislar correlaciones largas:
+     $$
+     \rho(t) \propto \begin{pmatrix} 1 & e^{-\Gamma t} \\ e^{-\Gamma t} & 1 \end{pmatrix} \rightarrow \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+     $$
+   - **Implicaciones Físicas:** Identifica la decoherencia inducida por el medio ambiente (einselection) como el cuello de botella fundamental en el camino hacia construir cualquier qubit o entrelazamiento macroscópico.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Quantum Computation and Quantum Information (Nielsen & Chuang)](https://doi.org/10.1017/CBO9780511976667)
-2. [Speakable and Unspeakable in Quantum Mechanics (J. S. Bell)](https://doi.org/10.1017/CBO9780511815676)
-3. [Principles of Quantum Mechanics (R. Shankar)](https://doi.org/10.1007/978-1-4757-0576-8)
+1. [Speakable and Unspeakable in Quantum Mechanics (J. S. Bell)](https://doi.org/10.1017/CBO9780511815676)
+2. [Principles of Quantum Mechanics (R. Shankar)](https://doi.org/10.1007/978-1-4757-0576-8)

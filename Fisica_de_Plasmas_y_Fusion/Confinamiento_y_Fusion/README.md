@@ -218,25 +218,37 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Nuclear Energy: Science, Systems and Society - MIT](https://ocw.mit.edu)
-2. [Introduction to Fusion Energy - TU Eindhoven](https://www.tue.nl)
-3. [Magnetic Confinement Fusion - Max Planck Institute](https://www.ipp.mpg.de)
-4. [Fusion Engineering and Reactor Design - ITER Organization](https://www.iter.org)
-5. [Advanced Tokamak Physics - Princeton PPPL](https://www.pppl.gov)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.011 / 22.112 Nuclear Engineering](https://ocw.mit.edu/courses/22-011-nuclear-engineering-science-systems-and-society-fall-2020/)**
+   Bases termodinámicas de la fusión nuclear y la ciencia de los reactores de confinamiento magnético.
+2. **[EPFL: Plasma Physics and Applications](https://www.edx.org/course/plasma-physics-and-applications)**
+   Enfoque profundo en tokamaks, stellarators y equilibrio de plasma, con contribuciones del Swiss Plasma Center.
 
-### Artículos y Simulaciones
-1. [Lawson, J. D. (1957). *Some Criteria for a Power Producing Thermonuclear Reactor*. Proc. Phys. Soc.](https://doi.org/10.1088/0370-1301/70/1/303)
-2. [Artsimovich, L. A. (1972). *Tokamak Devices*. Nuclear Fusion.](https://doi.org/10.1088/0029-5515/12/2/001)
-3. [Boozer, A. H. (1998). *What is a stellarator?*. Physics of Plasmas.](https://doi.org/10.1063/1.872721)
-4. [Hawryluk, R. J. (1998). *Results from deuterium-tritium tokamak confinement experiments*. Reviews of Modern Physics.](https://doi.org/10.1103/RevModPhys.70.537)
-5. [Ongena, J., et al. (2016). *Magnetic Confinement Fusion*. Nature Physics.](https://doi.org/10.1038/nphys3745)
-6. [ITER - Official Simulations and Videos](https://www.iter.org/)
-7. [EUROfusion - Educational Materials](https://www.euro-fusion.org/)
-8. [FreeGS](https://github.com/freegs-plasma/freegs) - Grad-Shafranov solver.
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Some Criteria for a Power Producing Thermonuclear Reactor"** - *J. D. Lawson (1957), Proc. Phys. Soc. Section B, 70, 6*  
+   [Link al artículo original (IOP)](https://iopscience.iop.org/article/10.1088/0370-1301/70/1/303)
+   
+   **Importancia Teórica y Relevancia:** 
+   El artículo monumental que introdujo el famoso "Criterio de Lawson", la métrica técnica definitiva e ineludible que debe cumplir cualquier diseño de reactor termonuclear para alcanzar el punto de auto-mantenimiento (breakeven o ignición) en el que la energía liberada iguala o supera la introducida.
+   
+   **Contexto Matemático:** 
+   Lawson analizó el balance de potencia global de un volumen de plasma a temperatura extrema. Consideró la potencia producida por la reacción $\langle \sigma v \rangle$ y descontó implacablemente las pérdidas inexorables por radiación de Bremsstrahlung térmica ($P_{br} \propto Z_{eff} n_e^2 T^{1/2}$) y conducción difusiva ($\propto n k_B T / \tau_E$). El equilibrio en estado estacionario para una reacción D-T impuso que el triple producto debe superar una curva crítica paramétrica en función de la temperatura $T$:
+   $$ n_e \tau_E \ge \frac{12 k_B T}{\langle \sigma v \rangle E_{\text{fus}} - C_{br} T^{1/2}} $$
+   Para alcanzar la temperatura óptima de D-T ($\sim 15 \, \text{keV}$), dedujo que el producto de la densidad iónica por el tiempo de confinamiento energético debe satisfacer estrictamente $n \tau_E \ge 10^{20} \, \text{s m}^{-3}$. Este umbral matemático gobierna el dimensionamiento colosal de reactores como ITER (enfocado en gran $\tau_E$ y baja $n$) y láseres como NIF (enfocados en minúsculo $\tau_E$ y asombrosa $n$ de compresión).
+
+2. **"Tokamak Devices"** - *L. A. Artsimovich (1972), Nuclear Fusion 12, 215*  
+   [Link al artículo original (IAEA)](https://iopscience.iop.org/article/10.1088/0029-5515/12/2/001)
+   
+   **Importancia Teórica y Relevancia:** 
+   Artsimovich, director del programa de fusión soviético, sintetizó en esta obra histórica la física subyacente y los resultados empíricos que demostraron la superioridad aplastante del diseño Tokamak sobre otras configuraciones como el Z-pinch, catapultándolo al paradigma mundial de fusión magnética.
+   
+   **Contexto Matemático:** 
+   El análisis expone la inestabilidad de las líneas puramente toroidales o poloidales y justifica la necesidad imperativa de un "shear" (cizallamiento) magnético y de un factor de seguridad de Kruskal-Shafranov superior a 1 en todo el plasma para apaciguar las inestabilidades magnetohidrodinámicas (MHD) a gran escala. El confinamiento estable en un sistema de revolución axisimétrico se garantiza topológicamente enrollando helicoidalmente el campo, de forma que la trayectoria en la superficie magnética obedece:
+   $$ q(r) = \frac{r B_\phi}{R B_\theta} > 1 $$
+   Donde el factor de seguridad $q$ debe exceder holgadamente la unidad en el borde del plasma ($q_a \approx 3$). El artículo también discute pioneramente las desviaciones del transporte de partículas de las predicciones clásicas cilíndricas (difusión de Coulomb) debido a partículas atrapadas ("banana orbits"), inaugurando empíricamente la era de la teoría de transporte neoclásico y turbulento para toros simétricos.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Wesson, J. (2011). *Tokamaks* (4th ed.). Oxford University Press.](https://global.oup.com/academic/product/tokamaks-9780199592234)
-2. [Freidberg, J. P. (2007). *Plasma Physics and Fusion Energy*. Cambridge University Press.](https://www.cambridge.org/core/books/plasma-physics-and-fusion-energy/22378DFA6F78FC21FC13C23DCD09E2B7)
-3. [Kikuchi, M., Lackner, K., & Tran, M. Q. (2012). *Fusion Physics*. IAEA.](https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1562_web.pdf)
-4. [Miyamoto, K. (2005). *Plasma Physics and Controlled Nuclear Fusion*. Springer.](https://link.springer.com/book/10.1007/3-540-27249-1)
+- Wesson, J. (2011). *Tokamaks*. Oxford University Press.
+- Freidberg, J. P. (2007). *Plasma Physics and Fusion Energy*. Cambridge University Press.
+- Chen, F. F. (1984). *Introduction to Plasma Physics and Controlled Fusion*. Springer.

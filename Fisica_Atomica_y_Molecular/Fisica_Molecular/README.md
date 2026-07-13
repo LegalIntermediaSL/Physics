@@ -260,25 +260,25 @@ plt.tight_layout()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Molecular Physics - University of Manchester (Coursera)](https://www.coursera.org/learn/spectroscopy)
-2. [Introduction to Molecular Spectroscopy - NPTEL](https://nptel.ac.in/courses/104104084)
-3. [Physical Chemistry: Molecular Structure - MIT OCW](https://ocw.mit.edu/courses/5-61-physical-chemistry-fall-2017/)
-4. [Quantum Chemistry - Stanford (edX)](https://www.edx.org/course/quantum-mechanics-of-molecular-structures)
-5. [Atoms and Molecules - Coursera](https://www.coursera.org/specializations/quantum-mechanics-atoms-molecules)
+### 🎓 Cursos y Clases Recomendadas
+1. [MIT 5.73 Quantum Mechanics I (Robert Field)](https://ocw.mit.edu/courses/5-73-quantum-mechanics-i-fall-2002/): Orientado puramente hacia la química cuántica, cubriendo la aproximación Born-Oppenheimer y las estructuras rotovibracionales desde un punto de vista espectroscópico experto.
+2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Conferencias enfocadas en sistemas multipolares y la explicación fundamental de por qué ocurren los enlaces en la naturaleza desde el formalismo de estados entrelazados.
+3. [NPTEL Atomic and Molecular Physics (Prof. Amal Kumar Das)](https://nptel.ac.in/courses/115105100): Módulos posteriores orientados fuertemente a la conformación de espectros de bandas, enlaces químicos, y espectroscopía Raman.
+4. [Coursera - Introduction to Physical Chemistry (University of Manchester)](https://www.coursera.org/learn/physical-chemistry): Introducción mucho más suave a la termodinámica de sistemas moleculares, la teoría de Orbitales Moleculares, y el cálculo del momento de inercia.
+5. [Yale PHYS 201 (Ramamurti Shankar)](https://oyc.yale.edu/physics/phys-201): Cierra el curso de introducción a cuántica tocando levemente cómo se ensamblan las moléculas mediante pozos de potencial superpuestos.
 
-### Artículos y Simulaciones
-1. [Born, M., & Oppenheimer, R. (1927). *Zur Quantentheorie der Molekeln*. Annalen der Physik.](https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.19273892002)
-2. [Heitler, W., & London, F. (1927). *Wechselwirkung neutraler Atome und homöopolare Bindung nach der Quantenmechanik*.](https://link.springer.com/article/10.1007/BF01397394)
-3. [PhET Simulation: Molecule Shapes](https://phet.colorado.edu/en/simulations/molecule-shapes)
-4. [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/)
-5. [Mulliken, R. S. (1932). *Electronic Structures of Polyatomic Molecules and Valence*. Phys. Rev.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.40.55)
-6. [Pauling, L. (1931). *The Nature of the Chemical Bond*. J. Am. Chem. Soc.](https://pubs.acs.org/doi/abs/10.1021/ja01355a027)
-7. [PhET Simulation: Molecule Polarity](https://phet.colorado.edu/en/simulations/molecule-polarity)
-8. [PhET Simulation: Atomic Interactions](https://phet.colorado.edu/en/simulations/atomic-interactions)
+### 📝 Artículos e Interactivos Interesantes
+1. **PhET Interactive Simulations:** [Molecule Shapes](https://phet.colorado.edu/en/simulations/molecule-shapes) - Para visualizar geometría VSEPR básica y disposición de pares solitarios.
+2. **PhET Interactive Simulations:** [Molecule Polarity](https://phet.colorado.edu/en/simulations/molecule-polarity) - Explora interacciones de enlace y la suma de dipolos para crear moléculas polares.
+3. **PhET Interactive Simulations:** [Microwaves and Ovens](https://phet.colorado.edu/en/simulations/microwaves-and-ovens) - Una demostración fantástica de la excitación de los niveles rotacionales del agua con radiación de microondas.
+4. **HyperPhysics:** [Molecular Spectra](http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/molspe.html) - Gráficas de los pozos de potencial (curvas de Morse), niveles vibracionales y la notación de rama P, Q, R.
+5. **Wikipedia:** [Aproximación de Born-Oppenheimer](https://es.wikipedia.org/wiki/Aproximaci%C3%B3n_de_Born-Oppenheimer) - Lectura detallada sobre el desacoplamiento matemático de los movimientos nucleares y electrónicos.
+6. **Wikipedia:** [Efecto Raman](https://es.wikipedia.org/wiki/Efecto_Raman) - Explicación de la dispersión inelástica, clave en la espectroscopía de moléculas que no poseen momento dipolar.
+7. **LibreTexts Chemistry:** [Molecular Orbital Theory](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/09%3A_Chemical_Bonding_in_Diatomic_Molecules/9.06%3A_Molecular_Orbital_Theory) - Introducción visual y matemática a LCAO, orbitales de enlace ($\sigma, \pi$) y antienlace ($\sigma^*, \pi^*$).
+8. **NIST Chemistry WebBook:** [NIST WebBook](https://webbook.nist.gov/chemistry/) - Base de datos termoquímica y espectral masiva para casi cualquier molécula pequeña; ideal para buscar constantes rotacionales ($B$) reales.
 
 ### 📖 Referencias Útiles y Bibliografía
-- [Herzberg, G. (1950). *Molecular Spectra and Molecular Structure*. D. Van Nostrand Company.](https://www.springer.com/gp/book/9780894642685)
-- [Atkins, P., & Friedman, R. (2011). *Molecular Quantum Mechanics*. Oxford University Press.](https://global.oup.com/academic/product/molecular-quantum-mechanics-9780199541423)
-- [Bransden, B. H., & Joachain, C. J. (2003). *Physics of Atoms and Molecules*. Pearson Education.](https://www.pearson.com/en-us/subject-catalog/p/physics-of-atoms-and-molecules/P200000005739)
-- [McHale, J. L. (2017). *Molecular Spectroscopy*. CRC Press.](https://www.routledge.com/Molecular-Spectroscopy/McHale/p/book/9781466586581)
+1. **Libro**: [Physics of Atoms and Molecules - B.H. Bransden & C.J. Joachain](https://www.pearson.com/en-gb/subject-catalog/p/physics-of-atoms-and-molecules/P200000005272/9780582356924) (Capítulos 9, 10 y 11). Cobertura exhaustiva, densa y matemáticamente rigurosa de las moléculas diatómicas, poliatómicas y sus espectros de absorción/emisión asociados.
+2. **Libro**: [Molecular Quantum Mechanics - P.W. Atkins & R.S. Friedman](https://global.oup.com/academic/product/molecular-quantum-mechanics-9780199541423). El texto clásico y enormemente popular y accesible para químicos físicos; detalla la teoría de grupos, la construcción de orbitales, y las transiciones de Raman.
+3. **Libro**: [Fundamentals of Molecular Spectroscopy - C.N. Banwell](https://www.mheducation.co.in/fundamentals-of-molecular-spectroscopy-9781259062599-india). Estándar dorado (mucho más amigable que Bransden) que aborda explícita y didácticamente los espectros rotacionales, vibracionales, Raman y electrónicos.
+4. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 7 y 8). Incluye una muy lúcida introducción a la molécula del ión de hidrógeno $H_2^+$ en el contexto del principio variacional, y a la aproximación WKB usada en el enlace del hidrógeno.

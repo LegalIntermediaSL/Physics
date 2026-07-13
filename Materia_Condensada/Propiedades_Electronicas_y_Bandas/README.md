@@ -188,25 +188,31 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[Semiconductor Devices (Coursera / Purdue)](https://www.coursera.org):** Excelente introducción a cómo las bandas definen la funcionalidad de los dispositivos.
-2. **[Quantum Theory of Materials (Oxford)](https://www.ox.ac.uk):** Teoría rigurosa sobre el comportamiento de electrones en redes periódicas.
-3. **[Electronic Structure of Solids (MIT OCW)](https://ocw.mit.edu):** Enfocado en modelos de enlace fuerte (tight-binding) y ondas planas.
-4. **[NPTEL Electronic Materials](https://nptel.ac.in):** Estudio detallado de materiales semiconductores y metales.
-5. **[Band Theory of Solids (edX)](https://www.edx.org):** Ideal para estudiantes que recién se introducen al espacio k y zonas de Brillouin.
+1. **[MIT OCW: 8.231 Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/)**: Análisis maestro de las zonas de Brillouin y la estructura de bandas en semiconductores.
+2. **[Purdue/nanoHUB: Fundamentals of Nanoelectronics](https://nanohub.org/courses/FNE)**: Curso en profundidad sobre el transporte cuántico electrónico (formalismo NEGF) y estructuras de bandas con matrices de enlace fuerte.
+3. **[NPTEL: Solid State Physics](https://nptel.ac.in/courses/115105099)**: Tratamiento matemático profundo de electrones casi libres y masa efectiva.
 
 ### Artículos y Simulaciones
-1. **[nanoHUB "Band Structure"](https://nanohub.org):** Simulador online interactivo para calcular estructuras de bandas.
-2. **["Energy Bands in Solids" (Bloch's original concepts)](https://archive.org):** Notas sobre la formulación original del teorema de Bloch.
-3. **[Wannier90 (Software)](http://www.wannier.org/):** Herramienta clave para construir orbitales localizados a partir de bandas (simulaciones avanzadas).
-4. **["Graphene: Status and Prospects" (Geim, Science)](https://www.science.org):** Artículo sobre el modelo de bandas más famoso y de cono de Dirac.
-5. **[Tight-Binding Studio](https://tight-binding.com/):** Aplicación para generar bandas de energía con modelos tight-binding fenomenológicos.
-6. **[VASP / Quantum Espresso examples](https://www.quantum-espresso.org/):** Simulaciones DFT para obtener bandas de materiales reales.
-7. **["The physics of bandgaps" (Review paper)](https://journals.aps.org):** Lectura fundamental sobre por qué se abren los bandgaps.
-8. **[ARPES simulators](https://arxiv.org):** Para entender cómo se miden las bandas experimentalmente con fotoemisión.
-9. **[PhET Semiconductors](https://phet.colorado.edu):** Muestra conceptos básicos de bandas de valencia y conducción interactivos.
+1. **["Electronic structure of solids" por J. M. Ziman (1971)](https://www.cambridge.org/core/books/principles-of-the-theory-of-solids/A0B91C2E0B202D0E6A26DF86EAD0D9F6)** (Referencia clásica)
+   - **Importancia Teórica:** Consolida el marco de seudopotenciales, explicando por qué los electrones en muchos metales actúan asombrosamente como si fueran libres, a pesar del inmenso potencial electrostático atómico.
+   - **Fondo Matemático:** Introduce el método OPW (Orthogonalized Plane Waves). La función de onda de valencia $|\psi_v\rangle$ se construye ortogonalizando una onda plana $|\mathbf{k}\rangle$ contra los estados de los electrones del núcleo (core) $|c\rangle$:
+     $$ |\psi_v\rangle = |\mathbf{k}\rangle - \sum_c |c\rangle \langle c | \mathbf{k} \rangle $$
+     Cuando se inserta en la ecuación de Schrödinger, el término ortogonalizado se agrupa con el potencial atómico real $V(\mathbf{r})$ formando un *seudopotencial* $W$:
+     $$ W |\mathbf{k}\rangle = \left( V + \sum_c (E - E_c)|c\rangle\langle c| \right) |\mathbf{k}\rangle $$
+     Dado que $E > E_c$, el segundo término actúa como una *repulsión efectiva* (derivada de la ortogonalidad cuántica impuesta por el Principio de Pauli), que cancela casi exactamente la fuerte atracción nuclear $V(\mathbf{r})$.
+   - **Implicaciones Físicas:** Esta cancelación es la razón física de que el modelo de "electrón libre" de Sommerfeld funcione tan absurdamente bien para metales como el sodio o aluminio. Justificó el uso de modelos perturbativos.
+
+2. **["Quantum Spin Hall Insulator State in HgTe Quantum Wells" por M. König et al. (2007)](https://www.science.org/doi/10.1126/science.1148047)**
+   - **Importancia Teórica:** La primera realización experimental de un aislante topológico 2D, donde la inversión de bandas mediada por acoplamiento espín-órbita crea estados de borde unidimensionales sin disipación.
+   - **Fondo Matemático:** El sistema se describe mediante un modelo continuo tipo Dirac (Hamiltoniano BHZ). En la base de los estados con momento angular total $(|E1+\rangle, |H1+\rangle, |E1-\rangle, |H1-\rangle)$, el Hamiltoniano efectivo $4\times4$ en el espacio $\mathbf{k} = (k_x, k_y)$ es:
+     $$ H(\mathbf{k}) = \begin{pmatrix} h(\mathbf{k}) & 0 \\ 0 & h^*(-\mathbf{k}) \end{pmatrix} $$
+     donde el bloque $2\times2$ para el espín efectivo "arriba" es:
+     $$ h(\mathbf{k}) = \epsilon(\mathbf{k})\mathbb{I} + \mathbf{d}(\mathbf{k}) \cdot \boldsymbol{\sigma} $$
+     con $d_z(\mathbf{k}) = M - B(k_x^2 + k_y^2)$ y $d_x + i d_y = A(k_x + i k_y)$. El parámetro crítico es la "masa de Dirac" $M$ dictada por el grosor del pozo cuántico (HgTe).
+   - **Implicaciones Físicas:** Al variar el grosor del pozo cuántico de HgTe, $M$ cambia de signo (inversión de banda topológica), protegiendo canales de conducción de espín polarizado en los bordes macroscópicos del material que están teóricamente exentos de retrodispersión no magnética.
+
+3. **[nanoHUB: Band Structure Lab](https://nanohub.org/resources/bandstr)**: Entorno en la nube para calcular y trazar diagramas de bandas precisos para diversos semiconductores utilizando métodos empíricos de pseudopotencial y amarre fuerte (tight-binding).
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://archive.org) (Particularmente caps. 8-10).
-2. [Kittel, C. *Introduction to Solid State Physics*](https://archive.org).
-3. [Sutton, A. P. *Electronic Structure of Materials*](https://global.oup.com). Oxford University Press.
-4. [Sze, S. M. *Physics of Semiconductor Devices*](https://www.wiley.com). Wiley.
+1. [Kittel, C. *Introduction to Solid State Physics* (8va ed.)](https://www.wiley.com/en-us/Introduction+to+Solid+State+Physics%2C+8th+Edition-p-9780471415268) - Fundamentos del modelo de electrón casi libre.
+2. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://www.cengage.com/c/solid-state-physics-1e-ashcroft/9780030839931/) - El tratamiento analítico canónico del modelo LCAO.

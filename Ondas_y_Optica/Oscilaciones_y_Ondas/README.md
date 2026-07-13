@@ -185,27 +185,31 @@ if __name__ == '__main__':
     simular_osciladores_acoplados()
 ```
 
-## 📚 Recursos
+## 📚 Recursos Específicos
+
 ### Cursos
-1. ["Vibrations and Waves" - MIT OpenCourseWare (Walter Lewin)](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)
-2. ["Waves and Optics" - edX (Rice University)](https://www.edx.org/course/waves-and-optics)
-3. ["Oscillations and Waves" - Khan Academy](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
-4. ["Vibrations and Waves" - NPTEL (IIT Bombay)](https://nptel.ac.in/courses/115101011)
-5. ["Physics 101: Simple Harmonic Motion" - Coursera](https://www.coursera.org/learn/physics-101)
+1. **[MIT OCW: 8.03 Physics III: Vibrations and Waves](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)**: El curso insignia de Walter Lewin sobre la temática. Una exhibición perfecta de osciladores acoplados, simetrías y transformadas de Fourier, con abundancia de experimentos reales.
+2. **[Coursera/Yale: Introduction to Mechanics, Part 2](https://www.coursera.org/learn/mechanics-part2)**: Incluye clases rigurosas de Shankar que abordan analíticamente los osciladores armónicos amortiguados.
+3. **[NPTEL: Waves and Oscillations](https://nptel.ac.in/courses/115101011)**: Detalla de manera excelsa el concepto matricial de la matriz dinámica $M\ddot{x} = Kx$ para autovalores normales en mallas cristalinas.
 
 ### Artículos y Simulaciones
-1. ["Masses and Springs" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/masses-and-springs)
-2. ["Wave on a String" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-on-a-string)
-3. ["Pendulum Lab" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/pendulum-lab)
-4. ["Coupled Oscillators Simulation" - oPhysics](https://ophysics.com/w2.html)
-5. ["Resonance Simulator" - PhET](https://phet.colorado.edu/en/simulations/resonance)
-6. ["Harmonic Motion and Circular Motion" - oPhysics](https://ophysics.com/k6.html)
-7. ["Lissajous Figures Simulation" - oPhysics](https://ophysics.com/w3.html)
-8. ["Standing Waves on a String" - oPhysics](https://ophysics.com/w8.html)
-9. ["Fourier: Making Waves" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/fourier-making-waves)
+1. **["Nonlinear Dynamics and Chaos" por S. H. Strogatz (Capítulo de Osciladores No Lineales)](https://www.taylorfrancis.com/books/mono/10.1201/9780429492563/nonlinear-dynamics-chaos-steven-strogatz)** (Fragmentos Históricos y Físicos)
+   - **Importancia Teórica:** Muestra cómo el modelo pacífico del oscilador de Hooke ($F=-kx$) se fractura bajo fuerzas intensas o disipaciones excéntricas. Introduce al oscilador amortiguado negativo clásico, el Oscilador de Van der Pol, crucial para los primeros radios, circuitos biológicos rítmicos neuronales (marcapasos del corazón) y ciclos límite estructurales (aleteo aerodinámico de puentes).
+   - **Fondo Matemático:** El Oscilador de Van der Pol viene modelado por una fuerza no-conservativa y no-lineal $\ddot{x} + \mu (x^2 - 1)\dot{x} + x = 0$. 
+     El término de fricción $\mu(x^2 - 1)\dot{x}$ es sumamente peculiar. Si la amplitud actual es pequeña $(|x| < 1)$, el coeficiente es negativo, lo que infunde una inyección exponencial (retroalimentación positiva) de energía al sistema, inestabilizando el reposo. Si la amplitud es gigantesca $(|x| > 1)$, el coeficiente es positivamente viscoso amortiguador, devorando energía e impidiendo un colapso explosivo divergente.
+   - **Implicaciones Físicas:** Por el Teorema de Poincaré-Bendixson, el sistema obligatoriamente cae atrapado termodinámicamente en una única órbita periódica cerrada autosostenida ("Ciclo Límite"). No importa cómo inicie el sistema, el oscilador convergirá a oscilar por la eternidad en la misma órbita asimétrica exacta, sin depender del estado inicial, siendo la primera ventana rigurosa al estudio analítico del Caos y fractales.
+
+2. **["Solitons and the Inverse Scattering Transform" por M. J. Ablowitz](https://epubs.siam.org/doi/book/10.1137/1.9781611970883)**
+   - **Importancia Teórica:** Rompe el paradigma de la Ecuación de Onda Lineal (D'Alembert) que predecía la dispersión de pulsos. Un solitón es un colosal pulso robusto de onda única que se desplaza eternamente sin cambiar su forma al estabilizar la dispersión natural disipadora balanceándola matemáticamente contra un término de no-linealidad amplificadora. (Históricamente observado por J.S. Russell galopando en un canal a caballo en 1834).
+   - **Fondo Matemático:** En agua de canal estrecho y largo, la elevación solitaria $\eta(x,t)$ responde rigurosamente a la endiablada ecuación diferencial diferencial no lineal de Korteweg-de Vries (KdV):
+     $$ \frac{\partial \eta}{\partial t} + 6\eta \frac{\partial \eta}{\partial x} + \frac{\partial^3 \eta}{\partial x^3} = 0 $$
+     El término central $6\eta \partial_x\eta$ provoca que los picos altos viajen más rápido (inclinando el frente de onda), mientras el término dispersivo $\partial^3_{xxx}\eta$ trata de deshacer el pico desparramando sus colas de baja longitud. 
+     La solución asombrosa es el solitón puro secante-hiperbólico constante, viajando a velocidad de fase pura $c$: 
+     $$ \eta(x,t) = \frac{c}{2} \text{sech}^2\left( \frac{\sqrt{c}}{2} (x - ct - x_0) \right) $$
+   - **Implicaciones Físicas:** Dos de estos pulsos al colisionar se atraviesan mutuamente como si fueran corpúsculos o fantasmas, preservando tamaño, masa e identidad luego del impacto, solo exhibiendo un leve desfase posicional. Fundamento indispensable para que hoy los cables de fibra óptica submarinos envíen terabytes de pulsos láser intercontinentales sin que estos se vuelvan borrosos durante el gigantesco viaje por el océano.
+
+3. **[PhET Interactive: Normal Modes & Strings](https://phet.colorado.edu/en/simulations/normal-modes)**: Simulador de mecánica hamiltoniana interactiva; ideal para armar cristales oscilatorios acoplados unidimensionales y observar Fourier emerger vívidamente en modos normales purísimos de onda estacionaria.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Vibrations and Waves* por A.P. French](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362)
-2. [*Physics of Waves* por William C. Elmore y Mark A. Heald](https://store.doverpublications.com/products/9780486649269)
-3. ["The Feynman Lectures on Physics, Vol. I" (Capítulos 21-31)](https://www.feynmanlectures.caltech.edu/I_toc.html)
-4. [*Vibrations and Waves in Physics* por Iain G. Main](https://www.cambridge.org/core/books/vibrations-and-waves-in-physics/B1E1E6B9E93C3852DF39634B0B9D65E1)
+1. [French, A.P. *Vibrations and Waves* (MIT Intro Physics Series)](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362) - El texto definitivo nivel licenciatura. Explica soberbiamente por qué existen y cómo operan matemáticamente las impedancias de onda.
+2. [Elmore, W.C. & Heald, M.A. *Physics of Waves*](https://store.doverpublications.com/products/9780486649269) - Expande severamente la ecuación de D'Alembert usando variables complejas y contorno de propagación vectorial.

@@ -181,27 +181,30 @@ if __name__ == '__main__':
 ```
 
 ## 📚 Recursos Específicos
+
 ### Cursos
-1. ["Physics III: Vibrations and Waves" - MIT OCW](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)
-2. ["Exploring Quantum Optics" - Coursera (École Polytechnique)](https://www.coursera.org/learn/quantum-optics)
-3. ["Waves and Optics" - edX (Rice University)](https://www.edx.org/course/waves-and-optics)
-4. ["Light and Optics" - Khan Academy](https://www.khanacademy.org/science/physics/light-waves)
-5. ["Optics" - NPTEL (IIT Kharagpur)](https://nptel.ac.in/courses/115105099)
-6. ["Understanding Optics" - Coursera (University of Central Florida)](https://www.coursera.org/learn/optics)
+1. **[MIT OCW: 8.03 Physics III: Vibrations and Waves](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)**: El legendario profesor Walter Lewin presenta demostraciones experimentales insuperables para polarización, interferencia y difracción.
+2. **[Coursera/École Polytechnique: Exploring Quantum Optics](https://www.coursera.org/learn/quantum-optics)**: Transición esencial para entender qué ocurre cuando el campo de luz clásica en la óptica física (interferencia de rendijas) es llevado al límite de un solo fotón (electrodinámica cuántica cavitacional).
+3. **[NPTEL: Optics](https://nptel.ac.in/courses/115105099)**: Tratamiento matemático sumamente denso sobre el principio de Huygens-Fresnel y óptica de Fourier.
 
 ### Artículos y Simulaciones
-1. ["Wave Interference" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-interference)
-2. ["Quantum Wave Interference" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/quantum-wave-interference)
-3. ["Single Slit Diffraction" - oPhysics](https://ophysics.com/l5.html)
-4. ["Double Slit Interference" - oPhysics](https://ophysics.com/l4.html)
-5. ["Polarization of Light" - oPhysics](https://ophysics.com/l3.html)
-6. ["Michelson Interferometer Simulation" - Amrita O-labs](http://vlab.amrita.edu/?sub=1&brch=189&sim=1106&cnt=1)
-7. ["Diffraction Grating Simulation" - oPhysics](https://ophysics.com/l6.html)
-8. ["Thin Film Interference" - oPhysics](https://ophysics.com/l7.html)
-9. ["Faraday Effect and Polarization" - HyperPhysics](http://hyperphysics.phy-astr.gsu.edu/hbase/phyopt/faraday.html)
+1. **["A Dynamical Theory of the Electromagnetic Field" por J. C. Maxwell (1865)](https://royalsocietypublishing.org/doi/10.1098/rstl.1865.0008)** (Histórico y Teórico)
+   - **Importancia Teórica:** La revolución más importante en la óptica después de Newton. Maxwell demostró que la luz que se estudiaba en laboratorios ópticos no era más que una perturbación transversal autosostenida en los campos electromagnéticos, calculando su velocidad a partir de constantes netamente eléctricas.
+   - **Fondo Matemático:** Maxwell formuló un conjunto de 20 ecuaciones (hoy condensadas vectorialmente por Heaviside a 4). Al perturbar el rotacional de su Ley de Ampère-Maxwell con la Ley de Faraday para el vacío, eliminó un campo para aislar el campo eléctrico $\vec{E}$, obteniendo la Ecuación de Onda Vectorial Pura:
+     $$ \nabla \times (\nabla \times \vec{E}) = -\mu_0 \epsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} $$
+     Usando la identidad vectorial general $\nabla \times (\nabla \times \vec{E}) = \nabla(\nabla \cdot \vec{E}) - \nabla^2 \vec{E}$, y sabiendo que en el vacío no hay cargas eléctricas netas para divergir el campo $\nabla \cdot \vec{E} = 0$ (Ley de Gauss), se reduce a un laplaciano puro:
+     $$ \nabla^2 \vec{E} = \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2} \quad \text{donde} \quad c = \frac{1}{\sqrt{\mu_0 \epsilon_0}} $$
+   - **Implicaciones Físicas:** Probó teóricamente que la óptica es tan solo un subconjunto de muy alta frecuencia del electromagnetismo general, aniquilando al éter mecánico como medio necesario para la propagación.
+
+2. **["Optical coherence and quantum optics" por L. Mandel y E. Wolf (Review moderno)](https://www.cambridge.org/core/books/optical-coherence-and-quantum-optics/2C0B8EFBE9AA4D20BE401CE763CB1B06)**
+   - **Importancia Teórica:** Expande la óptica física a regímenes donde la luz tiene fluctuaciones parciales, estocásticas o estadísticas. Un haz de luz nunca es una onda senoidal infinita; posee propiedades aleatorias definidas por "funciones de correlación", esenciales para describir láseres o interferometría estelar.
+   - **Fondo Matemático:** La coherencia entre dos puntos en campos aleatorios espaciotemporales se captura rigurosamente mediante el grado complejo de coherencia mutua (Teorema de Zernike-Van Cittert) $\Gamma_{12}(\tau) = \langle E^*(\vec{r}_1, t) E(\vec{r}_2, t+\tau) \rangle$. La intensidad en el plano de observación de Young está dictada completamente por la parte real de este tensor cruzado:
+     $$ I(P) = I_1 + I_2 + 2\sqrt{I_1 I_2} |\gamma_{12}(\tau)| \cos(\alpha_{12}(\tau) - \delta) $$
+     donde $|\gamma_{12}(\tau)| \le 1$ es el grado de coherencia de la fuente extensa y caótica, lo que rige si veremos interferencia (visibilidad de franjas) o tan solo una suma de luz informe.
+   - **Implicaciones Físicas:** Habilita el funcionamiento de los interferómetros estelares gigantescos (como el de Michelson) que son capaces de medir el minúsculo diámetro angular estelar analizando matemáticamente cuán rápido la "visibilidad" (el contraste) de los patrones interféricos se degrada al separar espacialmente los espejos captores.
+
+3. **[oPhysics: Interactive Interference and Polarization](https://ophysics.com/l4.html)**: Conjunto de applets que resuelven gráficamente la integración escalar de difracción (sinc) permitiendo manipular anchos de rendija, distancias y longitudes láser dinámicamente.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Principles of Optics* por Max Born y Emil Wolf](https://www.cambridge.org/core/books/principles-of-optics/1B445037E90B051D57457FBD56A1F6E2)
-2. [*Introduction to Electrodynamics* por David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/9781108420419)
-3. [*Optics* por Eugene Hecht](https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780133977226)
-4. ["On the Theory of Light and Colors" por Thomas Young](https://royalsocietypublishing.org/doi/10.1098/rstl.1802.0004)
+1. [Born, M., & Wolf, E. *Principles of Optics* (7ma ed.)](https://www.cambridge.org/core/books/principles-of-optics/1B445037E90B051D57457FBD56A1F6E2) - El texto canónico mundial definitivo. Invaluable para aberraciones integrales y óptica de Fourier.
+2. [Hecht, E. *Optics* (5ta ed.)](https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780133977226) - El texto pedagógico universitario estándar; muy amigable y expansivo con demostraciones.

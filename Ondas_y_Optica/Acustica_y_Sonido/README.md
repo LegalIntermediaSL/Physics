@@ -190,27 +190,28 @@ if __name__ == '__main__':
 ```
 
 ## 📚 Recursos Específicos
+
 ### Cursos
-1. ["Acoustics: Basic Physics" - Coursera (UNSW Sydney)](https://www.coursera.org/learn/acoustics)
-2. ["Fundamentals of Audio and Music Engineering" - Coursera (University of Rochester)](https://www.coursera.org/learn/audio-engineering)
-3. ["Introduction to Acoustics" - edX (TU Delft)](https://www.edx.org/course/introduction-to-acoustics)
-4. ["Architectural Acoustics" - NPTEL (IIT Kharagpur)](https://nptel.ac.in/courses/105105152)
-5. ["Vibrations and Waves" - MIT OCW](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)
-6. ["Sound and Waves" - Khan Academy](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
+1. **[MIT OCW: 2.066 Acoustics and Sensing](https://ocw.mit.edu/courses/2-066-acoustics-and-sensing-fall-2012/)**: Excelente para asimilar cómo las ondas acústicas son el medio fundamental para explorar la hidrodinámica y sensado marino.
+2. **[Coursera: Fundamentals of Audio and Music Engineering (Rochester)](https://www.coursera.org/learn/audio-engineering)**: Conecta la física matemática de las ondas mecánicas con el procesamiento y percepción acústica humana.
+3. **[NPTEL: Architectural Acoustics](https://nptel.ac.in/courses/105105152)**: Profundiza en fenómenos de difracción, reverberación de Sabine, y control de transmisión sonora de sala.
 
 ### Artículos y Simulaciones
-1. ["Sound" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/sound)
-2. ["Wave on a String" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-on-a-string)
-3. ["Normal Modes" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/normal-modes)
-4. ["Online Tone Generator" - Szynalski](https://www.szynalski.com/tone-generator/)
-5. ["Ripple Tank" - Falstad](http://www.falstad.com/ripple/)
-6. ["Doppler Effect Simulation" - oPhysics](https://ophysics.com/w11.html)
-7. ["Standing Waves Simulation" - oPhysics](https://ophysics.com/w8.html)
-8. ["Beat Frequency Simulation" - oPhysics](https://ophysics.com/w10.html)
-9. ["Physics of Musical Instruments" - UNSW](https://newt.phys.unsw.edu.au/jw/basics.html)
+1. **["Theory of the Acoustic Radiation Force" por L.V. King (1934)](https://royalsocietypublishing.org/doi/10.1098/rspa.1934.0190)**
+   - **Importancia Teórica:** Revela los efectos no lineales que la acústica puede ejercer. Mientras la acústica lineal describe ondas donde la presión temporal promedio es cero ($\langle p' \rangle = 0$), King demostró analíticamente que la dispersión de sonido alrededor de objetos produce una fuerza de radiación continua promediada en el tiempo (Acoustic Radiation Force).
+   - **Fondo Matemático:** Para calcular esta fuerza, la ecuación de momento de Navier-Stokes debe ser retenida hasta el segundo orden en el desarrollo de la perturbación (retener el término convectivo material $(\vec{v}\cdot\nabla)\vec{v}$). La fuerza estacionaria sobre una pequeña esfera de radio $a \ll \lambda$ en una onda estacionaria $p = p_0 \cos(kx)\cos(\omega t)$ resulta proporcional a la energía acústica promediada espacialmente $E_{ac}$:
+     $$ F_R = \frac{5\pi}{6} k a^3 E_{ac} \sin(2kx) \left( \frac{\rho_{esf} - \rho_0}{2\rho_{esf} + \rho_0} \right) $$
+   - **Implicaciones Físicas:** Esta fuerza empuja a los objetos hacia los nodos o antinodos espaciales de presión. Constituye el principio físico rector de las "pinzas acústicas" (Acoustic Tweezers) modernas, permitiendo la levitación acústica paramétrica de células u objetos pesados utilizando metamateriales sonoros sin tocarlos en absoluto.
+
+2. **["Acoustic Black Holes" por V.V. Krylov (2004)](https://asa.scitation.org/doi/10.1121/1.1710502)**
+   - **Importancia Teórica:** Traslación asombrosa de la astrofísica a la mecánica elástica. Demuestra cómo una cuña sólida diseñada con un perfil de grosor que sigue una ley de potencia (perfil decreciente hasta cero) actúa funcionalmente igual a un horizonte de sucesos para ondas acústicas de flexión.
+   - **Fondo Matemático:** La velocidad de fase de una onda flexional en una placa sólida disminuye al reducirse el grosor local $h(x)$. Si diseñamos $h(x) = \epsilon x^m$ (para $m \ge 2$), la velocidad se precipita a cero conforme la onda avanza hacia la punta ($x \to 0$): $c(x) \propto \sqrt{h(x)} \to 0$. El tiempo de viaje de la onda para alcanzar el borde se calcula como:
+     $$ t = \int_{x_0}^0 \frac{dx}{c(x)} \propto \int_{x_0}^0 x^{-m/2} dx $$
+     Si $m \ge 2$, ¡la integral diverge asintóticamente a $\infty$! La onda nunca logra alcanzar el extremo matemáticamente, y en la práctica cualquier remanente amortiguador la disipa por completo, reduciendo el coeficiente de reflexión exactamente a cero.
+   - **Implicaciones Físicas:** Permite el diseño de terminaciones amortiguadoras absolutas para vehículos (aviones o autos), extinguiendo el 100% de la energía de vibración acústica que entra a la cuña sin necesidad de materiales de goma pesados, lo que se ha popularizado en diseños estructurales avanzados.
+
+3. **[PhET: Sound and Waves](https://phet.colorado.edu/en/simulations/sound)**: Entorno ideal para observar frentes de onda interactivos, patrones de interferencia de dos fuentes (efectos muaré temporales) y dependencia barométrica.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Fundamentals of Acoustics* por Lawrence E. Kinsler et al.](https://www.wiley.com/en-us/Fundamentals+of+Acoustics%2C+4th+Edition-p-9780471847892)
-2. [*The Theory of Sound* por Lord Rayleigh](https://archive.org/details/theoryofsound01rayl)
-3. [*Acoustics* por Leo L. Beranek](https://asa.scitation.org/doi/book/10.1121/1.4920216)
-4. [*Vibrations and Waves* por A.P. French](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362)
+1. [Pierce, A. D. *Acoustics: An Introduction to Its Physical Principles and Applications*](https://link.springer.com/book/10.1007/978-3-030-11214-1) - El texto definitivo nivel graduado que integra acústica no lineal e impedancia.
+2. [Blackstock, D. T. *Fundamentals of Physical Acoustics*](https://www.wiley.com/en-us/Fundamentals+of+Physical+Acoustics-p-9780471319794) - Formulación magistral de ecuaciones termodinámicas perturbativas.

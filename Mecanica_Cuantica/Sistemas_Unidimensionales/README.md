@@ -219,24 +219,26 @@ plt.tight_layout()
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-1. [MIT 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Serie de clases meticulosamente dedicadas a pozos cuadrados, pozos finitos, dispersión en escalones de potencial y funciones de onda atadas.
+1. [MIT OCW 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Serie de clases meticulosamente dedicadas a pozos cuadrados, pozos finitos, dispersión en escalones de potencial y funciones de onda atadas.
 2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Lecciones que resuelven el oscilador armónico cuántico de manera puramente algebraica usando operadores de creación y destrucción.
-3. [NPTEL Quantum Mechanics I (IIT Madras)](https://nptel.ac.in/courses/115106066): Enfoque analítico riguroso en las soluciones matemáticas de sistemas 1D, ideal para quienes buscan derivaciones paso a paso de las ecuaciones diferenciales.
-4. [MIT 8.05 Quantum Physics II (Barton Zwiebach)](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/): Repaso profundo de los potenciales en una dimensión haciendo énfasis en los teoremas generales de degeneración y nodos de la función de onda.
-5. [Coursera - Quantum Mechanics (University of Colorado)](https://www.coursera.org/learn/quantum-mechanics): Análisis visual de las barreras de potencial y cálculo detallado del coeficiente de transmisión de túnel.
+3. [MIT OCW 8.05 Quantum Physics II (Barton Zwiebach)](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/): Repaso profundo de los potenciales en una dimensión haciendo énfasis en los teoremas generales de degeneración y nodos.
 
-### 📝 Artículos e Interactivos Interesantes
-1. **PhET Interactive Simulations:** [Quantum Bound States](https://phet.colorado.edu/en/simulations/bound-states) - Magnífica simulación para construir potenciales arbitrarios y visualizar los niveles de energía discretos.
-2. **PhET Interactive Simulations:** [Quantum Tunneling and Wave Packets](https://phet.colorado.edu/en/simulations/quantum-tunneling) - Simulador en tiempo real que permite mandar paquetes de ondas Gaussianos hacia barreras y ver las ondas transmitidas y reflejadas.
-3. **Falstad Quantum 1D Applet:** [QM 1D](http://www.falstad.com/qm1d/) - (Imprescindible) Visualiza fasores, funciones de onda, valores esperados y evolución temporal para el oscilador armónico y otras geometrías 1D.
-4. **HyperPhysics:** [Particle in a Box](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/schr.html#c3) - Descripción concisa con calculadora interactiva de energías según la anchura y masa.
-5. **HyperPhysics:** [Quantum Harmonic Oscillator](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/hosc.html) - Resume maravillosamente las energías y grafica las distribuciones probabilísticas contra el caso clásico.
-6. **Wikipedia:** [Oscilador Armónico Cuántico](https://es.wikipedia.org/wiki/Oscilador_arm%C3%B3nico_cu%C3%A1ntico) - Artículo completo, incluye tablas con las formas explícitas de los polinomios de Hermite.
-7. **Wikipedia:** [Efecto Túnel](https://es.wikipedia.org/wiki/Efecto_t%C3%BAnel) - Artículo teórico sobre el cálculo matemático, la aproximación WKB y aplicaciones.
-8. **Wolfram Demonstrations Project:** [Harmonic Oscillator Wavefunctions](https://demonstrations.wolfram.com/HarmonicOscillatorWavefunctions/) - Manipula los parámetros $n$ y $\omega$ para visualizar la probabilidad cuántica y su límite clásico.
+### 📝 Artículos Científicos Clave
+1. **Gamow, G. (1928). "Zur Quantentheorie des Atomkernes"**. *Zeitschrift für Physik*, 51(3-4), 204-212. [DOI: 10.1007/BF01343196](https://doi.org/10.1007/BF01343196)
+   *Importancia Teórica y Matemática:* Formula la teoría de la desintegración radiactiva alfa mediante el efecto túnel cuántico. Calcula la probabilidad de transmisión a través de la barrera Coulombiana:
+   $$ T \approx \exp\left( - \frac{2}{\hbar} \int_{r_0}^{R} \sqrt{2m (V(r) - E)} \, dr \right) $$
+   *Implicaciones Físicas:* Fue el primer gran triunfo predictivo del efecto túnel cuántico en sistemas unidimensionales radiales efectivos, estableciendo una relación directa entre el periodo de semidesintegración y la energía de la partícula alfa (Ley de Geiger-Nuttall).
+
+2. **Dirac, P. A. M. (1927). "The Quantum Theory of the Emission and Absorption of Radiation"**. *Proc. R. Soc. Lond. A*, 114(767), 243-265. [DOI: 10.1098/rspa.1927.0039](https://doi.org/10.1098/rspa.1927.0039)
+   *Importancia Teórica y Matemática:* Introdujo formalmente los operadores escalera (creación y aniquilación) para tratar modos electromagnéticos equivalentes a osciladores armónicos 1D, un formalismo algebraico central:
+   $$ \hat{H} = \hbar \omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right), \quad [\hat{a}, \hat{a}^\dagger] = 1 $$
+   *Implicaciones Físicas:* No solo resolvió el problema espectral del oscilador de forma elegante, sino que fundamentó la Segunda Cuantización, transformando osciladores abstractos en "partículas" (fotones).
+
+3. **Kramers, H. A. (1926). "Wellenmechanik und halbzählige Quantisierung"**. *Zeitschrift für Physik*, 39, 828-840. [DOI: 10.1007/BF01451751](https://doi.org/10.1007/BF01451751)
+   *Importancia Teórica y Matemática:* Junto con Brillouin y Wentzel (WKB), desarrolla una solución asintótica a la ecuación de Schrödinger dependiente de la acción semiclásica $S(x)$:
+   $$ \psi(x) \approx \frac{1}{\sqrt{p(x)}} \exp\left( \pm \frac{i}{\hbar} \int p(x) dx \right) $$
+   *Implicaciones Físicas:* La aproximación WKB en una dimensión proporcionó la conexión explícita entre la teoría cuántica rigurosa y las reglas de cuantización de Bohr-Sommerfeld de la antigua mecánica cuántica.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 2). El estándar de oro. Todo el capítulo está dedicado a problemas en 1D: pozo infinito, oscilador, partícula libre y barrera de potencial.
-2. **Libro**: [Quantum Mechanics - Claude Cohen-Tannoudji](https://www.wiley.com/en-us/Quantum+Mechanics%2C+Volume+1%3A+Basic+Concepts%2C+Tools%2C+and+Applications%2C+2nd+Edition-p-9783527345533) (Vol. 1). Aborda en detalle los complementos matemáticos y soluciones hipergeométricas para potenciales en una dimensión.
-3. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulos 5 y 7). Su resolución analítica y algebraica del oscilador armónico unidimensional es insuperable.
-4. **Libro**: [Feynman Lectures on Physics - Richard Feynman](https://www.feynmanlectures.caltech.edu/III_toc.html) (Vol. III). Aporta una perspectiva única sobre los estados base en el amoníaco y cómo modelos simples 1D explican moléculas complejas.
+1. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 2). Estándar indiscutible para problemas en 1D.
+2. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulos 5 y 7).

@@ -204,27 +204,30 @@ if __name__ == '__main__':
 ```
 
 ## 📚 Recursos Específicos
+
 ### Cursos
-1. ["Optics" - Coursera (University of Rochester)](https://www.coursera.org/learn/optics)
-2. ["Introduction to Light" - edX](https://www.edx.org/course/introduction-to-light)
-3. ["Geometric Optics" - Khan Academy](https://www.khanacademy.org/science/physics/geometric-optics)
-4. ["Physics III: Waves and Optics" - MIT OCW](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)
-5. ["Ray Optics" - NPTEL (IIT Bombay)](https://nptel.ac.in/courses/115101011)
-6. ["Applied Optics" - Coursera](https://www.coursera.org/learn/applied-optics)
+1. **[MIT OCW: 8.03 Physics III: Vibrations and Waves](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)**: Lewin expone el principio de Fermat de forma soberbia y cómo los frentes de onda colapsan en trayectorias discretas.
+2. **[Coursera/Colorado: Introduction to Optical Engineering](https://www.coursera.org/specializations/optical-engineering)**: Aborda las aberraciones geométricas de Seidel (esférica, coma, astigmatismo) usando matrices ABCD reales para láseres.
+3. **[NPTEL: Ray Optics](https://nptel.ac.in/courses/115101011)**: Tratamiento matemático matricial impecable sobre la formulación paraxial completa de Gauss y puntos nodales.
 
 ### Artículos y Simulaciones
-1. ["Geometric Optics" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/geometric-optics)
-2. ["Bending Light" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/bending-light)
-3. ["Lens and Mirror Simulator" - oPhysics](https://ophysics.com/l12.html)
-4. ["Refraction and Snell's Law" - oPhysics](https://ophysics.com/l8.html)
-5. ["Total Internal Reflection" - oPhysics](https://ophysics.com/l9.html)
-6. ["Prism Simulator" - oPhysics](https://ophysics.com/l11.html)
-7. ["Ray Tracing Tool" - Ricktu288](https://ricktu288.github.io/ray-optics/)
-8. ["Optics Bench" - Amrita O-labs](http://vlab.amrita.edu/?sub=1&brch=281&sim=1509&cnt=1)
-9. ["Interactive Ray Tracing" - PhET](https://phet.colorado.edu/en/simulations/geometric-optics-basics)
+1. **["Sir W.R. Hamilton’s Theory of Systems of Rays" (1828)](https://www.maths.tcd.ie/pub/HistMath/People/Hamilton/Rays/Rays.pdf)**
+   - **Importancia Teórica:** William Rowan Hamilton unificó de golpe el principio de Fermat de la óptica geométrica con la mecánica analítica de la acción mínima de Lagrange. Fue la pista teórica principal que llevó a Schrödinger, 100 años después, a deducir su ecuación cuántica partiendo de la analogía entre materia y óptica.
+   - **Fondo Matemático:** Hamilton demostró que el trazado geométrico entero puede derivarse a partir de una única Función Característica $V(\vec{r}_0, \vec{r}_1)$, que representa el camino óptico exacto entre el plano emisor y el receptor en un sistema asimétrico:
+     $$ V(\vec{r}_0, \vec{r}_1) = \int_{\vec{r}_0}^{\vec{r}_1} n(x,y,z) ds $$
+     Al aplicar la formulación del principio de mínima acción, demostró que el vector unitario de la dirección del rayo saliente está dado estrictamente por el gradiente de esta matriz espacial:
+     $$ \vec{v}_1 = \frac{1}{n_1} \nabla_{\vec{r}_1} V \quad \text{y} \quad \vec{v}_0 = -\frac{1}{n_0} \nabla_{\vec{r}_0} V $$
+   - **Implicaciones Físicas:** Al igual que en la mecánica clásica donde conocer el lagrangiano resuelve toda la dinámica futura, si uno conoce (o diseña) la función característica $V$ del bloque de cristal o arreglo de lentes, puede predecir exactamente hacia dónde escapará cada rayo de luz sin tener que calcular explícitamente refracciones sucesivas de Snell en múltiples interfaces intrincadas, dando nacimiento al análisis de aberraciones puramente algebraico.
+
+2. **["Gradient-Index (GRIN) Optics: A Review" (Moore, 1980)](https://opg.optica.org/ao/abstract.cfm?uri=ao-19-7-1035)**
+   - **Importancia Teórica:** Analiza los medios donde la luz se curva de forma continua y elegante, no abruptamente en paredes discretas. Es la física matemática usada detrás del camuflaje ("mirages", oasis del desierto) y el diseño de endoscopios de fibra GRIN de un milímetro de diámetro sin usar cristal curvo.
+   - **Fondo Matemático:** Cuando el índice $n$ no es constante, sino un perfil paraboide inyectado como $n(r) = n_0(1 - \frac{1}{2}g^2 r^2)$ (con $r$ la distancia radial del cilindro), la ecuación del Eikonal de rayos se reduce, para pequeños ángulos, a la ecuación de un oscilador armónico simple para la trayectoria meridional geométrica:
+     $$ \frac{d^2 r(z)}{dz^2} + g^2 r(z) = 0 $$
+     Cuyas soluciones exactas son funciones armónicas tipo $r(z) = r_0 \cos(gz) + \frac{\theta_0}{g} \sin(gz)$.
+   - **Implicaciones Físicas:** Esto es milagroso; los rayos de luz trazan trayectorias sinusoidales en espiral continuas a lo largo de un cilindro perfecto y plano, enfocándose a sí mismos periódicamente en un "punto focal" interno repetitivo sin que haya una sola superficie esférica curva en toda la fibra, abaratando e impulsando la fibra óptica para telecomunicaciones intercontinentales.
+
+3. **[Ray Optics Simulator web-app (Ricktu288)](https://ricktu288.github.io/ray-optics/)**: Un entorno "sandbox" inigualable escrito en JS que resuelve trayectorias ópticas complejas dibujadas a mano mediante las leyes de Snell aplicadas numéricamente paso a paso.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Optics* por Eugene Hecht](https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780133977226)
-2. [*Fundamentals of Physics* (Capítulos de Óptica) por Halliday & Resnick](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+12th+Edition-p-9781119773511)
-3. ["Book of Optics" - Alhazen (Contexto Histórico)](https://archive.org/details/AlhazenBookOfOptics)
-4. [*Principles of Optics* por Max Born y Emil Wolf](https://www.cambridge.org/core/books/principles-of-optics/1B445037E90B051D57457FBD56A1F6E2)
+1. [Hecht, E. *Optics* (5ta ed.)](https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780133977226) - Un trato ejemplar del diseño matricial ABCD para lentes complejas.
+2. [Gerrard, A., & Burch, J. M. *Introduction to Matrix Methods in Optics*](https://store.doverpublications.com/products/9780486680446) - Exclusivamente centrado en la matriz de transferencia y cavidades láser.

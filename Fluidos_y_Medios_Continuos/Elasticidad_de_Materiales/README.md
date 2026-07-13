@@ -146,28 +146,41 @@ plt.grid(True)
 plt.show()
 ```
 
-## 📚 Recursos
-### Cursos Específicos
-1. ["Mechanics of Materials I & II" - Coursera (Georgia Tech)](https://www.coursera.org/learn/mechanics-1)
-2. ["Theory of Elasticity" - NPTEL](https://nptel.ac.in/courses/112105159)
-3. ["Solid Mechanics" - MIT OCW](https://ocw.mit.edu/courses/mechanical-engineering/2-001-mechanics-materials-i-fall-2006/)
-4. ["Introduction to Finite Element Analysis" - edX](https://www.edx.org/course/introduction-to-finite-element-analysis)
-5. ["Advanced Mechanics of Deformable Solids" - Coursera](https://www.coursera.org/learn/solid-mechanics)
-6. ["Continuum Mechanics of Solids" - NPTEL](https://nptel.ac.in/courses/112105166)
+## 📚 Recursos Específicos
+
+### Cursos Recomendados
+1. [Mechanics of Materials I & II (Coursera - Georgia Tech)](https://www.coursera.org/learn/mechanics-1)
+2. [Solid Mechanics (MIT OCW)](https://ocw.mit.edu/courses/mechanical-engineering/2-001-mechanics-materials-i-fall-2006/)
+3. [Continuum Mechanics (Coursera / edX)](https://www.edx.org/course/continuum-mechanics)
 
 ### Artículos y Simulaciones
-1. [Calculadoras de Tensión-Deformación y Círculo de Mohr](https://www.efunda.com/formulae/solid_mechanics/mat_mechanics/mohr_circle.cfm)
-2. [SimScale: Finite Element Analysis (FEA) Basic Tutorials](https://www.simscale.com/blog/2014/10/finite-element-analysis/)
-3. [Ansys Student: Structural Mechanics Simulations](https://www.ansys.com/academic/students)
-4. ["On the Mathematical Foundations of Elasticity" - A.L. Cauchy](https://en.wikipedia.org/wiki/Linear_elasticity)
-5. ["Ut tensio, sic vis" - Robert Hooke (Historical reference)](https://en.wikipedia.org/wiki/Hooke%27s_law)
-6. ["The Mathematical Theory of Elasticity" - A.E.H. Love (Classic text)](https://archive.org/details/mathematicaltheo00loveuoft)
-7. [SolidWorks Simulation Express Tutorials](https://my.solidworks.com/training/path/17/solidworks-simulation)
-8. [PhET Simulations on Hooke's Law and Springs](https://phet.colorado.edu/en/simulations/hookes-law)
-9. [*Mechanics of Materials* - R.C. Hibbeler (Selected chapters)](https://www.amazon.com/Mechanics-Materials-10th-Russell-Hibbeler/dp/0134319656)
+1. **De potentia restitutiva, or of spring (Robert Hooke, 1678)**
+   - **Enlace:** [https://en.wikipedia.org/wiki/Hooke%27s_law](https://en.wikipedia.org/wiki/Hooke%27s_law)
+   - **Importancia Teórica:** Establece la Ley de Hooke, "ut tensio, sic vis", marcando el inicio de la elasticidad lineal para sólidos deformables.
+   - **Fondo Matemático:** En mecánica del medio continuo, esta ley se generaliza mediante el tensor constitutivo de elasticidad de cuarto orden $C_{ijkl}$ que relaciona el tensor de esfuerzos de Cauchy $\sigma_{ij}$ y el tensor de deformación infinitesimal $\varepsilon_{kl}$:
+     $$
+     \sigma_{ij} = \sum_{k,l} C_{ijkl} \varepsilon_{kl}
+     $$
+   - **Implicaciones Físicas:** Es la aproximación lineal fundamental a cualquier pozo de potencial interatómico cerca del equilibrio, sustentando la resistencia de materiales.
+
+2. **On the Mathematical Foundations of Elasticity (A.L. Cauchy, 1827)**
+   - **Enlace:** [https://en.wikipedia.org/wiki/Linear_elasticity](https://en.wikipedia.org/wiki/Linear_elasticity)
+   - **Importancia Teórica:** Cauchy introdujo el concepto de tensión (stress) y deformación, formulando rigurosamente la mecánica de cuerpos deformables.
+   - **Fondo Matemático:** Establece el teorema del tetraedro de Cauchy, que demuestra que el vector tensión $\mathbf{T}^{(\mathbf{n})}$ en una superficie normal $\mathbf{n}$ es una transformación lineal del tensor de tensiones $\boldsymbol{\sigma}$:
+     $$
+     \mathbf{T}^{(\mathbf{n})} = \boldsymbol{\sigma} \cdot \mathbf{n} \quad \text{o en índices:} \quad T_i = \sum_j \sigma_{ij} n_j
+     $$
+   - **Implicaciones Físicas:** Cambió la perspectiva global de cuerpos a medios continuos locales, vital para derivar las ecuaciones de equilibrio mecánico.
+
+3. **Non-linear Elastic Deformations (R.W. Ogden, 1984)**
+   - **Enlace:** [https://store.doverpublications.com/0486696480.html](https://store.doverpublications.com/0486696480.html)
+   - **Importancia Teórica:** Fundamenta el tratamiento de materiales hiperelásticos y grandes deformaciones donde la aproximación lineal (Hooke) fracasa espectacularmente (ej. cauchos y polímeros).
+   - **Fondo Matemático:** Utiliza la función de densidad de energía de deformación $W$. El tensor nominal de tensiones de Piola-Kirchhoff $\mathbf{P}$ se deriva respecto al gradiente de deformación $\mathbf{F}$:
+     $$
+     \mathbf{P} = \frac{\partial W}{\partial \mathbf{F}}
+     $$
+   - **Implicaciones Físicas:** Permite predecir comportamientos complejos isotrópicos incompresibles en elastómeros modernos sometidos a estrés masivo en ingeniería y biomecánica.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Theory of Elasticity* - S.P. Timoshenko y J.N. Goodier](https://www.amazon.com/Theory-Elasticity-Stephen-P-Timoshenko/dp/0070858055)
-2. [*Theory of Elasticity* - L.D. Landau y E.M. Lifshitz](https://www.amazon.com/Theory-Elasticity-Course-Theoretical-Physics/dp/075062633X)
-3. [*Continuum Mechanics* - A.J.M. Spencer](https://www.amazon.com/Continuum-Mechanics-Dover-Books-Physics/dp/0486435946)
-4. [*Advanced Mechanics of Materials* - A.P. Boresi](https://www.amazon.com/Advanced-Mechanics-Materials-Arthur-Boresi/dp/0471438812)
+1. [Theory of Elasticity (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Theory-Elasticity-Course-Theoretical-Physics/dp/075062633X)
+2. [Continuum Mechanics (A.J.M. Spencer)](https://www.amazon.com/Continuum-Mechanics-Dover-Books-Physics/dp/0486435946)

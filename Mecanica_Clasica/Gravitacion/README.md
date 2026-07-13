@@ -189,26 +189,30 @@ plt.show()
 
 ## 📚 Recursos Específicos de Gravitación
 
-### 🎓 Cursos y Clases Recomendadas (5-7)
-1. **[MIT 8.01 - Universal Gravity (Walter Lewin)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-10-rotational-energy/)**: Cubre magistralmente las Leyes de Kepler, la mecánica celeste y el concepto de energía en el espacio profundo.
-2. **[Yale PHYS 200 - Lecture 7: Universal Gravitation](https://oyc.yale.edu/physics/phys-200/lecture-7)**: Deducción formal del cálculo orbital, secciones cónicas y reducción al problema de un solo cuerpo.
-3. **[Khan Academy - Gravitación y Órbitas](https://es.khanacademy.org/science/physics/centripetal-force-and-gravitation)**: Excelente guía de paso a paso, abarcando peso aparente en el espacio y órbitas satelitales.
-4. **[Coursera - Orbital Mechanics (University of Colorado Boulder)](https://www.coursera.org/learn/spacecraft-dynamics-kinematics)**: Un enfoque desde la ingeniería aeroespacial de las maniobras orbitales de Hohmann y las esferas de influencia gravitacional.
-5. **[edX - Astrophysics: Cosmology (ANU)](https://www.edx.org/course/astrophysics-cosmology)**: Para ir más allá, conectando la gravedad de Newton con su rol fundamental en la estructura cosmológica.
+### 🎓 Cursos y Clases Recomendadas
+1. **[MIT 8.01: Gravity and Orbits (Walter Lewin)](https://ocw.mit.edu/courses/8-01-physics-i-classical-mechanics-fall-1999/)**: Cubre las leyes de Kepler empíricamente y deduce la fuerza inversa del cuadrado de Newton.
+2. **[Yale PHYS 200: Law of Gravitation (R. Shankar)](https://oyc.yale.edu/physics/phys-200)**: Análisis profundo del problema de los dos cuerpos, reducción a la masa reducida y cálculo de la energía potencial en el infinito.
+3. **[Stanford - General Relativity (Susskind)](https://theoreticalminimum.com/courses/general-relativity/2012/fall)**: Para dar el salto desde la gravedad newtoniana a la concepción del espacio-tiempo curvo, empezando con el Principio de Equivalencia.
 
-### 📝 Artículos, Simulaciones e Interactivos (8-10)
-1. **Artículo Histórico**: [Kepler's Discovery of the Laws of Planetary Motion (Scholarpedia)](http://www.scholarpedia.org/article/Kepler%27s_laws_of_planetary_motion) - Relato de cómo Kepler dedujo sus empíricas elipses de los datos de Tycho Brahe.
-2. **Artículo (Cavendish)**: [El Experimento de Cavendish (Wikipedia)](https://es.wikipedia.org/wiki/Experimento_de_Cavendish) - Cómo la humanidad "pesó" la Tierra midiendo directamente la esquiva constante universal $G$.
-3. **Simulador**: [PhET - Laboratorio de Gravedad](https://phet.colorado.edu/es/simulations/gravity-and-orbits) - Construye tu propio sistema solar y observa cómo varían las trayectorias parabólicas, hiperbólicas o elípticas.
-4. **Simulador**: [PhET - Mi Sistema Solar](https://phet.colorado.edu/es/simulations/my-solar-system) - Excelente herramienta interactiva para jugar con órbitas multicuerpo inestables.
-5. **Juego Educativo**: [Kerbal Space Program](https://www.kerbalspaceprogram.com/) - El mejor simulador espacial jamás creado para entender instintivamente la mecánica orbital newtoniana.
-6. **Video Documental**: [Carl Sagan's Cosmos - Kepler & Newton](https://www.youtube.com/watch?v=zSzBksEbxYg) - Clips icónicos que enlazan el trabajo místico de Kepler con el genio matemático de Newton.
-7. **Artículo**: [Gravity and General Relativity (HyperPhysics)](http://hyperphysics.phy-astr.gsu.edu/hbase/Relativ/grel.html) - Sobre cómo y cuándo la aproximación clásica falla respecto a los agujeros negros.
-8. **Simulador**: [Newton's Cannon on a Mountain](https://contrib.pbslearningmedia.org/WGBH/nvce/vis_cannon/vis_cannon.html) - La clásica demostración interactiva del experimento mental original de Newton para orbitar la Tierra.
+### 📝 Artículos, Publicaciones y Teoría Avanzada
+1. **[The Runge-Lenz Vector and the Kepler Problem (Goldstein, 1975)](https://aapt.scitation.org/doi/10.1119/1.10023)**
+   - *Importancia Teórica*: Explora la simetría "escondida" (simetría dinámica SO(4)) del potencial central $V(r) = -k/r$.
+   - *Contexto Matemático*: En la mecánica celeste, la fuerza gravitatoria de Newton conserva no solo la energía $E$ y el momento angular $\vec{L}$, sino un tercer vector, el vector de Laplace-Runge-Lenz:
+     $$ \vec{A} = \vec{p} \times \vec{L} - \mu k \hat{r} $$
+     La conservación de $\vec{A}$ implica algebraicamente que las órbitas acotadas ($E < 0$) son cónicas perfectamente cerradas y sin precesión. El corrimiento del perihelio de Mercurio se debió a perturbaciones que rompen exactamente esta invariancia $\frac{d\vec{A}}{dt} \neq 0$.
+   - *Implicaciones*: Explica la degeneración "accidental" de los niveles de energía del átomo de hidrógeno en mecánica cuántica (que obedece al mismo potencial inverso).
+2. **[Newton's Theorem on the Gravitational Field of Spherical Shells (Principia, 1687)](https://cudl.lib.cam.ac.uk/view/PR-ADV-B-00039-00001/1)**
+   - *Importancia Teórica*: El Teorema del Cascarón Esférico (*Shell Theorem*) probó que un cuerpo masivo esférico simétrico se comporta gravitacionalmente en su exterior como si toda su masa se concentrara en un punto matemático central.
+   - *Contexto Matemático*: Newton integró anillos infinitesimales superficiales; hoy usamos la Ley de Gauss. Para un cascarón esférico $M$ de radio $R$, el campo interno $(r<R)$ resulta ser cero debido a la perfecta cancelación simétrica escalar del potencial:
+     $$ V(r < R) = - \frac{GM}{R} = \text{constante} \implies \vec{g} = -\nabla V = \vec{0} $$
+     Para $r > R$, $\vec{g} = -\frac{GM}{r^2}\hat{r}$.
+   - *Implicaciones*: Validó el que Newton pudiera modelar a los gigantescos planetas físicos como simples masas puntuales sin error matemático.
+3. **[Tidal Forces and the Roche Limit (Édouard Roche, 1848)](https://en.wikipedia.org/wiki/Roche_limit)**
+   - *Importancia Teórica*: Teoría fundamental en astrofísica para comprender la estabilidad estructural bajo gradientes gravitacionales (fuerzas de marea).
+   - *Contexto Matemático*: La fuerza gravitatoria de marea a través de un cuerpo de diámetro $2r$ orbitando a un cuerpo mayor $M$ a distancia $R$ viene de la expansión diferencial de Taylor del campo. La condición límite para que la auto-gravedad del satélite sucumba ante el desgarro de marea arroja el Límite de Roche rígido:
+     $$ d = R_M \left( \frac{2 \rho_M}{\rho_m} \right)^{1/3} $$
+   - *Implicaciones*: Explica la formación y persistencia de los anillos de Saturno y advierte de la espaguetización (*spaghettification*) cerca del horizonte de eventos de un Agujero Negro, donde el tensor de curvatura de Riemann es colosal.
 
 ### 📖 Referencias Útiles y Bibliografía
-- **[Classical Mechanics (John R. Taylor)](https://uscibooks.aip.org/books/classical-mechanics/)**: Extraordinario capítulo sobre el problema de la fuerza central (two-body problem) y órbitas perturbadas.
-- **[Orbital Mechanics for Engineering Students (Howard D. Curtis)](https://www.elsevier.com/books/orbital-mechanics-for-engineering-students/curtis/978-0-08-102133-0)**: La biblia moderna para los cálculos específicos que se usan hoy en día en satélites y viajes interplanetarios.
-- **[Classical Dynamics of Particles and Systems (Marion & Thornton)](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Su tratamiento de las secciones eficaces, las fuerzas tipo $1/r^2$ y el vector de Runge-Lenz es fundamental.
-- **[Principia Mathematica (Isaac Newton)](https://es.wikipedia.org/wiki/Philosophi%C3%A6_naturalis_principia_mathematica)**: Aunque ilegible como texto moderno, los postulados sobre la Ley Universal y el Teorema de Cascarón Esférico provienen directamente de aquí.
-- **[Gravity: An Introduction to Einstein's General Relativity (James Hartle)](https://www.cambridge.org/highereducation/books/gravity/D8B1C6BB1E413B52701198A019448AFE)**: Para aquellos que desean ver la frontera superior de la gravedad newtoniana.
+- **[Classical Mechanics - John R. Taylor](https://uscibooks.aip.org/books/classical-mechanics/)**: El Capítulo 8 sobre Problemas de Fuerza Central provee la deducción más didáctica posible sobre el problema Kepleriano, secciones cónicas y órbitas de Hohmann.
+- **[Orbital Mechanics for Engineering Students - H. Curtis](https://www.elsevier.com/books/orbital-mechanics-for-engineering-students/curtis/978-0-08-102133-0)**: Extenso tratado riguroso para aplicaciones aeroespaciales prácticas: problemas de tres cuerpos restringidos, maniobras de transferencia orbital y encuentros planetarios.

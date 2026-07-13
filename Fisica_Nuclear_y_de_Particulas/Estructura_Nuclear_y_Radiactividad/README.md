@@ -244,26 +244,41 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Online
-1. "[Nuclear Physics Fundamentals](https://www.coursera.org/learn/nuclear-physics)" (Coursera)
-2. "[Radiation and Radioactivity](https://www.edx.org/course/radiation-and-radioactivity)" (edX)
-3. "[Applied Nuclear Physics](https://ocw.mit.edu/courses/nuclear-engineering/22-02-introduction-to-applied-nuclear-physics-spring-2012/)" (MIT OCW)
-4. "[Introduction to Nuclear Science](https://online.stanford.edu/)" (Stanford Online)
-5. "[Nuclear Reactions and Isotope Production](https://www.coursera.org/)" (Coursera)
-6. "[Health Physics and Radiation Protection](https://www.edx.org/)" (edX)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.02 Introduction to Applied Nuclear Physics](https://ocw.mit.edu/courses/22-02-introduction-to-applied-nuclear-physics-spring-2012/)**
+   Un recurso excepcionalmente estructurado del Departamento de Ingeniería Nuclear del MIT, que ahonda en las reglas estadísticas de decaimiento y protección contra radiación.
+2. **[University of Michigan: NERS 311 - Elements of Nuclear Engineering and Radiological Sciences](https://open.umich.edu/find/open-educational-resources/engineering/ners-311-elements-nuclear-engineering-radiological-sciences)**
+   Contiene formidables exposiciones de las matemáticas subyacentes a las cadenas de isótopos y el análisis de la ecuación de transporte radiológico.
 
-### Artículos y Simulaciones
-1. "[Radioactive Dating Game](https://phet.colorado.edu/en/simulations/radioactive-dating-game)" (PhET Interactive Simulations)
-2. "[Nuclear Fission](https://phet.colorado.edu/en/simulations/nuclear-fission)" (PhET Interactive Simulations)
-3. "[Radioactivity and transmutation of elements](https://www.jstor.org/stable/90831)" (Rutherford & Soddy, 1903)
-4. "[Chart of Nuclides](https://www.nndc.bnl.gov/nudat3/)" (NNDC)
-5. "[The Mass of the Neutron](https://doi.org/10.1038/129312a0)" (J. Chadwick, 1932)
-6. "[On the Constitution of Atoms and Molecules](https://doi.org/10.1080/14786441308634955)" (N. Bohr, 1913)
-7. "[Nuclear Data Sheets for A=1 to 294](https://www.nndc.bnl.gov/nds/)" (NNDC)
-8. "[Beta Decay and the Neutrino Hypothesis](https://arxiv.org/abs/physics/0609139)" (W. Pauli, 1930)
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Quantum Theory of the Atomic Nucleus"** - *G. Gamow (1928), Zeitschrift für Physik 51, 204*  
+   *(Traducción y revisión de las fuentes originales sobre desintegración Alfa)*
+   [Link al repositorio histórico (Springer)](https://link.springer.com/article/10.1007/BF01343196)
+   
+   **Importancia Teórica y Relevancia:** 
+   La explicación mecano-cuántica de Gamow sobre el decaimiento alfa fue la primera aplicación matemática exitosa del naciente principio de la probabilidad de tunelaje cuántico (quantum tunneling) en la física nuclear, erradicando una aparente paradoja energética de décadas.
+   
+   **Contexto Matemático:** 
+   Gamow resolvió la ecuación de Schrödinger esférica radial dependiente del tiempo para un núcleo emisor, introduciendo una componente de energía imaginaria ($E = E_0 - i \lambda \hbar / 2$) para describir los estados cuasi-ligados que resultan en la exponencial atenuación del estado padre.
+   Aplicando la condición WKB (Wentzel-Kramers-Brillouin) al potencial de Coulomb fuera del pozo nuclear ($V(r) = 2(Z-2)e^2/4\pi\epsilon_0 r$), calculó rigurosamente la probabilidad de escape $T$:
+   $$ \ln(T) \approx - \frac{2\pi (Z-2) e^2}{\hbar v} + \frac{8 e}{\hbar} \sqrt{\frac{m (Z-2) R}{\pi \epsilon_0}} $$
+   donde $v$ es la velocidad de la partícula asintótica. Esto ofreció por vez primera una base matemática a la célebre Ley empírica de Geiger-Nuttall, confirmando que las partículas alfa de menor energía perciben exponencialmente mayor opacidad de la barrera.
+
+2. **"Versuch einer Theorie der $\beta$-Strahlen. I" (Attempt at a theory of $\beta$-rays)** - *E. Fermi (1934), Zeitschrift für Physik 88, 161*  
+   [Link al artículo original (Springer)](https://link.springer.com/article/10.1007/BF01351864)
+   
+   **Importancia Teórica y Relevancia:** 
+   Enrico Fermi resolvió el insalvable misterio del espectro continuo del decaimiento beta. Formalizó y adoptó la hipótesis del neutrino de Pauli para salvar la conservación del momento y la energía, instaurando la fenomenología fundacional de la Interacción Débil.
+   
+   **Contexto Matemático:** 
+   En una audaz asimetría respecto al electromagnetismo de la QED, Fermi teorizó un contacto puntual de cuatro fermiones, ignorando inicialmente el bosón mediador vectorial.
+   La tasa diferencial de decaimiento (anchura espectral) fue deducida utilizando la Regla de Oro, integrando sobre el volumen del espacio de las fases tridimensional, asumiendo un neutrino sin masa:
+   $$ d\Gamma \propto G_F^2 |M_{fi}|^2 F(Z, E) p_e E_e (E_0 - E_e)^2 dp_e $$
+   donde $G_F \approx 1.166 \times 10^{-5} \text{ GeV}^{-2}$ es la celebérrima Constante de Acoplamiento de Fermi, y $F(Z,E)$ es el Factor de Fermi, una integral de repulsión/atracción electrostática coulombiana que la función de onda de Dirac del electrón sufriente sufre por el núcleo residente. 
+   Esta formulación predijo la forma del espectro con una precisión milimétrica, y la constante $G_F$ subsistió inquebrantable hasta la llegada del Modelo Estándar Electro-Débil unificado de Glashow-Weinberg-Salam.
 
 ### 📖 Referencias Útiles y Bibliografía
-- Krane, K. S. (1987). *[Introductory Nuclear Physics](https://www.wiley.com/en-us/Introductory+Nuclear+Physics%2C+3rd+Edition-p-9780471805533)*. John Wiley & Sons.
-- Turner, J. E. (2007). *[Atoms, Radiation, and Radiation Protection](https://www.wiley.com/en-us/Atoms%2C+Radiation%2C+and+Radiation+Protection%2C+3rd+Edition-p-9783527406067)*. Wiley-VCH.
-- Lilley, J. (2001). *[Nuclear Physics: Principles and Applications](https://www.wiley.com/en-us/Nuclear+Physics%3A+Principles+and+Applications-p-9780471979364)*. Wiley.
-- Knoll, G. F. (2010). *[Radiation Detection and Measurement](https://www.wiley.com/en-us/Radiation+Detection+and+Measurement%2C+4th+Edition-p-9780470131480)*. Wiley.
+- Krane, K. S. (1987). *Introductory Nuclear Physics*. John Wiley & Sons.
+- Turner, J. E. (2007). *Atoms, Radiation, and Radiation Protection*. Wiley-VCH.
+- Lilley, J. (2001). *Nuclear Physics: Principles and Applications*. Wiley.

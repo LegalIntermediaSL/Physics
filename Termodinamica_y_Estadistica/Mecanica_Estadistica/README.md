@@ -205,25 +205,36 @@ plt.show()
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-1. **Stanford - Statistical Mechanics (Leonard Susskind):** [Enlace al Curso](https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) - Esencial, se adentra directamente en la lógica matemática subyacente y la física de la información.
-2. **MIT 8.044 (Statistical Physics I):** [Página en MIT OCW](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Excelente enfoque formal desde sistemas discretos a gases cuánticos.
-3. **Perimeter Institute - Statistical Physics:** [PIPSI Lectures](https://pirsa.org/) - Clases de maestría con nivel avanzado, ideal para física de materia condensada.
-4. **Oxford - Statistical Mechanics Lectures:** [Enlace a YouTube](https://www.youtube.com/playlist?list=PL4d5Ztf9HeEkOqE6Rndn5d3xU-X2CqJj4) - Serie de clases muy claras enfocadas en los diferentes ensambles de Gibbs.
-5. **NPTEL - Statistical Mechanics:** [Curso NPTEL](https://nptel.ac.in/courses/115/103/115103113/) - Curso intensivo y muy matemático para entender derivaciones canónicas y gran canónicas.
+1. **[Stanford University: Statistical Mechanics (Leonard Susskind)](https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring)** - Clases geniales que abordan directamente la física fundamental, comenzando con el teorema de Liouville, los microestados, el entrelazamiento de información y la derivación del ensamble de Gibbs.
+2. **[MIT OpenCourseWare: 8.044 Statistical Physics I](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/)** - Excelente desarrollo universitario formal. Pasa rigurosamente de la termodinámica macroscópica a las variables aleatorias continuas, ensambles de Gibbs, y aplicaciones como el gas fotónico.
+3. **[Perimeter Institute: Statistical Physics (PSI Lectures)](https://pirsa.org/)** - Diversos minicursos intensivos de maestría orientados a la teoría de transiciones de fase críticas, el modelo de Ising y renormalización en mecánica estadística avanzada.
+4. **[Oxford University: Statistical Mechanics](https://podcasts.ox.ac.uk/series/statistical-mechanics)** - Clases de audio/video magistrales que cubren la derivación de la Función de Partición ($Z$) para ensambles canónicos y las estadísticas cuánticas (Bose-Einstein, Fermi-Dirac).
 
-### 📝 Artículos e Interactivos Interesantes
-1. **Simulación Ising Model:** [Ising Model Simulation](https://mattbierbaum.github.io/ising.js/) - Visualizar el ferromagnetismo y las transiciones de fase críticas desde un ensamble de espines en interacción.
-2. **Catástrofe Ultravioleta e Historia de Planck:** [Ultraviolet Catastrophe](https://en.wikipedia.org/wiki/Ultraviolet_catastrophe) - Leer sobre cómo el conteo estadístico de fotones inició la revolución cuántica.
-3. **Bose-Einstein Condensation (PhET / Videos):** [PhET BEC](https://phet.colorado.edu/es/simulation/legacy/states-of-matter) - Animaciones y artículos detallando el fenómeno macroscópico que ocurre cuando la ocupación cuántica diverge hacia el estado fundamental.
-4. **Scholarpedia - Gibbs Ensembles:** [Statistical Ensembles](http://www.scholarpedia.org/article/Ensemble_(physics)) - Artículo avanzado sobre los fundamentos de los colectivos microcanónico, canónico y gran canónico.
-5. **Wikipedia - Función de partición:** [Partition Function](https://es.wikipedia.org/wiki/Funci%C3%B3n_de_partici%C3%B3n_(mec%C3%A1nica_estad%C3%ADstica)) - Explicación detallada de cómo calcular variables termodinámicas a partir de $Z$.
-6. **HyperPhysics - Quantum Statistics:** [Estadísticas Cuánticas](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/quastat.html) - Resumen de las diferencias entre las estadísticas de Maxwell-Boltzmann, Fermi-Dirac y Bose-Einstein.
-7. **Stanford Encyclopedia of Philosophy:** [Philosophy of StatMech](https://plato.stanford.edu/entries/statphys-statmech/) - Filosofía de la mecánica estadística, abordando la irreversibilidad y las probabilidades.
-8. **Wolfram Demonstrations - Maxwell-Boltzmann Distribution:** [Simulación](https://demonstrations.wolfram.com/MaxwellBoltzmannDistribution/) - Visualización interactiva de la distribución energética.
+### 📝 Artículos Científicos Históricos y Avanzados
+
+1. **Weitere Studien über das Wärmegleichgewicht unter Gasmolekülen (Estudios adicionales sobre el equilibrio térmico entre moléculas de gas)**  
+   *Ludwig Boltzmann (1872)*. [Sitzungsberichte der Akademie der Wissenschaften, Wien 66, 275-370](https://en.wikipedia.org/wiki/H-theorem).  
+   **Importancia Teórica:** Es la obra cumbre donde Boltzmann formula su célebre Teorema-H (H-Theorem), intentando derivar la flecha irreversible del tiempo macroscópico partiendo puramente de leyes microscópicas reversibles de colisión mecanicista.  
+   **Fondo Matemático:** Boltzmann define una cantidad estadística de su distribución $f(\mathbf{v}, t)$ llamada funcional $H$:
+   $$ H(t) = \int f(\mathbf{v}, t) \ln f(\mathbf{v}, t) d^3\mathbf{v} $$
+   Mediante su ecuación de transporte, demuestra matemáticamente que por interacciones de colisión, la derivada del tiempo siempre decrece ($\frac{dH}{dt} \le 0$), identificando astutamente $-H$ como proporcional a la entropía $S$.  
+   **Implicaciones Físicas:** Fundamentó el concepto estadístico de entropía. Originó críticas masivas (paradojas de Loschmidt y Zermelo) que lo forzaron a reinterpretar la Segunda Ley no como una ley absoluta e inviolable, sino probabilísticamente asintótica.
+
+2. **On the Elementary Theory of Statistical Mechanics**  
+   *J. Willard Gibbs (1902)*. [Dover Books (Elementary Principles in Statistical Mechanics)](https://archive.org/details/elementaryprinci00gibb).  
+   **Importancia Teórica:** Un tratado monumental que estructuró matemáticamente toda la disciplina en su forma actual, inventando el concepto del *espacio de fases* y los *ensambles estadísticos*.  
+   **Fondo Matemático:** Desarrolla el Ensamble Canónico de forma abstracta e independiente de la naturaleza atómica (resolviendo los ataques anti-atomistas de su época). Demuestra que para un sistema en equilibrio a temperatura $T$, la distribución de densidad en el espacio de fases depende del Hamiltoniano $\mathcal{H}$:
+   $$ \rho(\mathbf{q}, \mathbf{p}) = \frac{1}{Z} \exp\left(-\frac{\mathcal{H}(\mathbf{q}, \mathbf{p})}{k_B T}\right) \quad \text{donde} \quad Z = \int d^{3N}q \, d^{3N}p \, e^{-\beta \mathcal{H}} $$
+   **Implicaciones Físicas:** Proporciona un marco matemático unificado y universal capaz de derivar todos los potenciales termodinámicos macroscópicos a partir del colectivo canónico y gran canónico.
+
+3. **Plancksches Gesetz und Lichtquantenhypothese (La ley de Planck y la hipótesis de los cuantos de luz)**  
+   *Satyendra Nath Bose & Albert Einstein (1924)*. [Zeitschrift für Physik, 26(1), 178-181](https://link.springer.com/article/10.1007/BF01327326).  
+   **Importancia Teórica:** En este asombroso artículo enviado por Bose y traducido por Einstein, se deriva el espectro de cuerpo negro de Planck de una forma revolucionaria: tratando a los fotones como un gas de partículas estadísticamente idénticas e indistinguibles.  
+   **Fondo Matemático:** Si existen estados cuánticos discretos, y las partículas bosónicas (espín entero) pueden agruparse sin restricciones de exclusión, la ocupación estadística de un estado energético discreto $i$ es:
+   $$ \langle n_i \rangle = \frac{1}{e^{(E_i - \mu)/k_B T} - 1} $$
+   **Implicaciones Físicas:** Nace la "Estadística de Bose-Einstein". Poco después, Einstein la extendería a átomos con masa para formular la teórica *Condensación de Bose-Einstein*, un nuevo estado de la materia donde la entropía macroscópica colapsa a nivel microscópico al llegar a $0\text{ K}$, hallado experimentalmente recién en 1995.
 
 ### 📖 Referencias Útiles y Bibliografía
-* [Statistical Mechanics - Pathria, R. K.](https://www.elsevier.com/books/statistical-mechanics/pathria/978-0-12-382188-1) - Texto clásico y riguroso de nivel posgrado, excelente para el desarrollo teórico profundo de los ensambles.
-* [Fundamentals of Statistical and Thermal Physics - Reif, F.](https://books.google.com/books?id=0sM4DgAAQBAJ) - Fundamental para el entendimiento detallado de la conexión micro-macro.
-* [Thermal Physics - Kittel, C. & Kroemer, H.](https://www.macmillanlearning.com/college/us/product/Thermal-Physics/p/0716710889) - Un libro moderno con un enfoque estadístico desde la primera página, muy claro en conceptos cuánticos.
-* [Statistical Physics, Part 1 - Landau, L. D. & Lifshitz, E. M.](https://www.elsevier.com/books/statistical-physics/landau/978-0-08-023039-9) - Parte de la legendaria serie, brillante e indispensable para los teóricos rigurosos.
-* [The Principles of Statistical Mechanics - Tolman, R. C.](https://store.doverpublications.com/products/9780486638966) - Una referencia histórica inigualable sobre los fundamentos conceptuales de la teoría clásica y cuántica.
+1. **R. K. Pathria & Paul D. Beale - [Statistical Mechanics (Elsevier/Academic Press, 3rd Ed)](https://www.elsevier.com/books/statistical-mechanics/pathria/978-0-12-382188-1)** - El libro estándar para cursos de posgrado. Rigor matemático supremo, ideal para dominar condensación BE, gases de Fermi, transiciones de fase y fluctuaciones de Onsager.
+2. **Kerson Huang - [Statistical Mechanics (Wiley)](https://www.wiley.com/en-us/Statistical+Mechanics%2C+2nd+Edition-p-9780471815181)** - Un clásico respetado con una exposición profunda de la teoría de gases imperfectos (expansión virial), superfluidez e Ising.
+3. **Frederick Reif - [Fundamentals of Statistical and Thermal Physics (Waveland Press)](https://books.google.com/books?id=0sM4DgAAQBAJ)** - Un texto extenso, didáctico y extremadamente formativo que une termodinámica clásica, caminos aleatorios microscópicos y ensambles de manera magistral (recomendado a nivel de pregrado).

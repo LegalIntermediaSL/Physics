@@ -208,28 +208,43 @@ plt.tight_layout()
 plt.show()
 ```
 
-## 📚 Recursos
+## 📚 Recursos Específicos
 
-### Cursos Online
-1. "[Particle Accelerators](https://learninghub.cern.ch/)" (CERN E-learning)
-2. "[Detector Technologies for Particle Physics](https://ocw.mit.edu/courses/physics/8-811-particle-physics-ii-fall-2005/)" (MIT OCW)
-3. "[Medical Applications of Particle Physics](https://www.coursera.org/learn/medical-applications-particle-physics)" (Coursera)
-4. "[Data Analysis in High Energy Physics](https://www.edx.org/course/data-analysis-in-high-energy-physics)" (edX)
-5. "[Instrumentation and Detection](https://online.stanford.edu/)" (Stanford Online)
-6. "[Advanced Particle Accelerators](https://uspas.fnal.gov/)" (US Particle Accelerator School)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 8.701 Introduction to Nuclear and Particle Physics](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/)**
+   Un curso completo impartido por el Prof. Markus Klute, que aborda de manera introductoria y avanzada los aceleradores y detectores fundamentales.
+2. **[CERN Accelerator School (CAS)](https://cas.web.cern.ch/)**
+   Proporciona material y notas de conferencias de la principal escuela de diseño de aceleradores del mundo, cubriendo la dinámica avanzada de haces.
+3. **[US Particle Accelerator School (USPAS)](https://uspas.fnal.gov/)**
+   Materiales oficiales para estudiantes avanzados en la física de los aceleradores y la tecnología de microondas aplicadas.
 
-### Artículos y Simulaciones
-1. "[The Large Hadron Collider: Harvest of Run 1](https://link.springer.com/book/10.1007/978-3-319-15001-7)" (Springer, 2015)
-2. "[Particle Detectors](https://doi.org/10.1017/CBO9780511812606)" (Grupen & Shwartz, 2008)
-3. "[Principles of Charged Particle Acceleration](https://onlinelibrary.wiley.com/)" (Stanley Humphries)
-4. "[CERN Virtual Tour y Simulaciones](https://home.cern/resources/video/cern/cern-virtual-tour)"
-5. "[The ATLAS Experiment at the CERN Large Hadron Collider](https://doi.org/10.1088/1748-0221/3/08/S08003)" (2008, JINST)
-6. "[The CMS experiment at the CERN LHC](https://doi.org/10.1088/1748-0221/3/08/S08004)" (2008, JINST)
-7. "[Simulador de Colisiones](https://phet.colorado.edu/en/simulations/category/physics)" (PhET)
-8. "[Development of Silicon Strip Detectors](https://arxiv.org/)" (Review Article)
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"The Large Hadron Collider: Design and Performance"** - *L. Evans and P. Bryant (2008), JINST 3 S08001*  
+   [Link al artículo original](https://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08001)
+   
+   **Importancia Teórica y Relevancia:** 
+   Este artículo describe el diseño y la puesta en marcha del acelerador de partículas más potente del mundo (LHC). El desafío fundamental recae en el diseño de los imanes superconductores dipolares, los cuales deben desviar protones ultra-relativistas en una órbita circular estricta.
+   
+   **Contexto Matemático:** 
+   La rigidez magnética del haz (magnetic rigidity), $B\rho$, define la relación entre el campo magnético $B$ y el radio de curvatura $\rho$ para una partícula de momento $p$ y carga $q$:
+   $$ B\rho = \frac{p}{q} $$
+   A velocidades ultra-relativistas, el momento se aproxima a $p \approx E/c$. En el LHC, para alcanzar una energía de colisión $E = 7 \text{ TeV}$ por haz, y con un radio en los arcos de $\rho \approx 2800 \text{ m}$, el campo magnético necesario es:
+   $$ B = \frac{7 \times 10^{12} \text{ eV}}{c \cdot 2800 \text{ m} \cdot e} \approx 8.33 \text{ T} $$
+   El artículo documenta teórica y experimentalmente cómo esta inmensa exigencia se alcanza operando cables de aleación Niobio-Titanio a temperaturas de superfluido ($1.9 \text{ K}$).
+
+2. **"The ATLAS Experiment at the CERN Large Hadron Collider"** - *The ATLAS Collaboration (2008), JINST 3 S08003*  
+   [Link al artículo original](https://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08003)
+   
+   **Importancia Teórica y Relevancia:** 
+   Explica exhaustivamente la arquitectura del detector ATLAS. La innovación teórica y de ingeniería más descollante es el gigantesco espectrómetro de muones toroidal, que permite medir la curvatura transversal de los muones con extremada precisión en el exterior de la cámara calorimétrica.
+   
+   **Contexto Matemático:** 
+   La resolución del momento transversal, $\Delta p_T / p_T$, para una traza en un campo magnético homogéneo mide la precisión intrínseca del espectrómetro de trazas. Viene dada fenomenológicamente por:
+   $$ \frac{\Delta p_T}{p_T} = \frac{p_T \sigma_x}{0.3 B L^2} \sqrt{\frac{720}{N+4}} $$
+   donde $\sigma_x$ es la resolución espacial inherente al sensor (típicamente micrómetros), $L$ es la longitud efectiva de la trayectoria transversal dentro del campo magnético $B$, y $N$ es el número de puntos discretos medidos a lo largo de la traza. El artículo demuestra que maximizar $L$ (construyendo detectores inmensos como ATLAS) e incrementar $B$ son los métodos más críticos para minimizar la incertidumbre estadística y sistemática en colisiones de momentos extremadamente altos.
 
 ### 📖 Referencias Útiles y Bibliografía
-- Leo, W. R. (1994). *[Techniques for Nuclear and Particle Physics Experiments](https://link.springer.com/book/10.1007/978-3-642-57920-2)*. Springer.
-- Knoll, G. F. (2010). *[Radiation Detection and Measurement](https://www.wiley.com/en-us/Radiation+Detection+and+Measurement%2C+4th+Edition-p-9780470131480)*. John Wiley & Sons.
-- Wiedemann, H. (2015). *[Particle Accelerator Physics](https://link.springer.com/book/10.1007/978-3-319-18317-6)*. Springer.
-- Halzen, F., & Martin, A. D. (1984). *[Quarks and Leptons](https://www.wiley.com/en-us/Quarks+and+Leptons%3A+An+Introductory+Course+in+Modern+Particle+Physics-p-9780471887416)*. John Wiley & Sons.
+- Leo, W. R. (1994). *Techniques for Nuclear and Particle Physics Experiments*. Springer. [DOI: 10.1007/978-3-642-57920-2](https://link.springer.com/book/10.1007/978-3-642-57920-2)
+- Wiedemann, H. (2015). *Particle Accelerator Physics*. Springer. [DOI: 10.1007/978-3-319-18317-6](https://link.springer.com/book/10.1007/978-3-319-18317-6)
+- Knoll, G. F. (2010). *Radiation Detection and Measurement*. Wiley.

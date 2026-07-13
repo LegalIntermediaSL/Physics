@@ -212,26 +212,28 @@ plt.show()
 
 ## 📚 Recursos Específicos de Momento y Colisiones
 
-### 🎓 Cursos y Clases Recomendadas (5-7)
-1. **[MIT 8.01 - Momentum and Collisions (Walter Lewin)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-5-momentum-and-impulse/)**: Impresionantes demostraciones de choques en rieles de aire sin fricción y conservación vectorial.
-2. **[Yale PHYS 200 - Lecture 11: Conservation of Momentum](https://oyc.yale.edu/physics/phys-200/lecture-11)**: Profundo vínculo entre la simetría traslacional del espacio y el teorema de Noether.
-3. **[Khan Academy - Momento Lineal e Impulso](https://es.khanacademy.org/science/physics/linear-momentum)**: Ejercicios para interiorizar cálculos 1D y 2D en colisiones elásticas e inelásticas.
-4. **[Coursera - Physics 101 - Forces and Kinematics (Rice University)](https://www.coursera.org/learn/physics-101-forces-kinematics)**: Buena sección dedicada al impulso, coeficientes de restitución y conservación de sistemas cerrados.
-5. **[edX - Momentum and Energy (MITx)](https://www.edx.org/course/mechanics-momentum-and-energy)**: Desafíos matemáticos y problemas prácticos analizando la energía perdida en las explosiones y choques inelásticos.
+### 🎓 Cursos y Clases Recomendadas
+1. **[MIT 8.01: Momentum, Impulse & Collisions (Walter Lewin)](https://ocw.mit.edu/courses/8-01-physics-i-classical-mechanics-fall-1999/)**: Clases épicas donde Lewin prueba la conservación vectorial disparando balines y demostrando el centro de masa mediante mazos arrojados al aire.
+2. **[Yale PHYS 200: Conservation of Momentum and Noether's Theorem (R. Shankar)](https://oyc.yale.edu/physics/phys-200)**: Introduce magistralmente el nexo irrompible entre las simetrías espaciales del universo y las cantidades que se conservan en un choque.
+3. **[edX: Engineering Mechanics - Particle Dynamics (MITx)](https://www.edx.org/course/engineering-mechanics-particle-dynamics)**: Curso exigente enfocado al modelado cinético avanzado y balística de impactos.
 
-### 📝 Artículos, Simulaciones e Interactivos (8-10)
-1. **Artículo**: [Conservation of Momentum (HyperPhysics)](http://hyperphysics.phy-astr.gsu.edu/hbase/conser.html) - Mapas conceptuales excelentes con desgloses de ecuaciones para colisiones.
-2. **Simulador**: [PhET - Laboratorio de Colisiones](https://phet.colorado.edu/es/simulations/collision-lab) - Crea colisiones 1D y 2D elásticas e inelásticas, midiendo los vectores $p$ y $K$ en tiempo real.
-3. **Video Educativo**: [SmarterEveryDay - Ver balas impactar a cámara superlenta](https://www.youtube.com/watch?v=QfDoQwIAaXg) - Un acercamiento fenomenal muy visual y tangible a las colisiones puramente inelásticas.
-4. **Artículo**: [Centro de Masas (Wikipedia)](https://es.wikipedia.org/wiki/Centro_de_masas) - Repaso matemático sobre los cálculos continuos (integrales) de distribuciones asimétricas.
-5. **Simulador**: [Walter Fendt - Choque Elástico e Inelástico](https://www.walter-fendt.de/html5/phes/collision_es.htm) - Un applet clásico para probar fórmulas de coeficientes de restitución.
-6. **Artículo**: [Rocket Equation of Tsiolkovsky (Scholarpedia)](http://www.scholarpedia.org/article/Tsiolkovsky_rocket_equation) - Estudio riguroso de cómo el momento lineal permite el viaje espacial arrojando masa hacia atrás.
-7. **Video Analítico**: [Veritasium - The Bizarre Behavior of Rotating Bodies](https://www.youtube.com/watch?v=1n-HMSCDYtM) - Aunque mezcla momento angular, muestra la importancia crítica del centro de masa en colisiones excéntricas.
-8. **Simulador**: [GeoGebra - Péndulo Balístico](https://www.geogebra.org/m/eUDBxK8B) - Explora las dos fases de este histórico sistema y cómo la energía se disipa.
+### 📝 Artículos, Publicaciones y Teoría Avanzada
+1. **[Invariant Variation Problems (Emmy Noether, 1918)](https://arxiv.org/abs/physics/0503066)**
+   - *Importancia Teórica*: El Teorema de Noether es, argumentablemente, el descubrimiento teórico más hermoso e importante de la física teórica del siglo XX.
+   - *Contexto Matemático*: Postula que toda simetría diferenciable continua de la Acción $\mathcal{S}$ de un sistema genera una ley de conservación local estricta. Si el Lagrangiano $L(q_i, \dot{q}_i, t)$ es invariante frente a una traslación espacial infinitesimal $\delta \vec{r} = \vec{\epsilon}$ (homogeneidad del espacio vacío):
+     $$ \frac{\partial L}{\partial \vec{r}} = 0 \implies \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\vec{r}}} \right) = \frac{d}{dt}(\vec{p}) = \vec{0} $$
+     El momento conjugado se conserva universalmente.
+   - *Implicaciones*: Transforma la Conservación del Momento Lineal de una simple "consecuencia" de la 3ª Ley de Newton, a un requisito axiomático del tejido cosmológico isotrópico.
+2. **[Center-of-Mass Frame in Elastic Scattering (Rutherford, 1911)](https://doi.org/10.1080/14786440508637080)**
+   - *Importancia Teórica*: Este histórico documento analizó cómo partículas alfa rebotaban en el núcleo de átomos de oro, fundando el análisis diferencial de secciones transversales (Cross Section).
+   - *Contexto Matemático*: Evaluar choques bi-dimensionales (2D) es algebraicamente denso en el Marco del Laboratorio (Lab Frame). Si aplicamos una transformación Galileana para situarnos en el Centro de Masa (donde $\vec{P}_{total} = \vec{0}$), las partículas incidentes $m_1$ y $m_2$ tienen momentos opuestos iniciales ($\vec{p}_{1i} = -\vec{p}_{2i}$) y momentos opuestos finales de idéntica magnitud ($\vec{p}_{1f} = -\vec{p}_{2f}$). El problema de 6 variables se reduce a un solo parámetro: el ángulo de dispersión polar $\theta_{CM}$.
+   - *Implicaciones*: Es el marco analítico obligatorio que usan en todos los aceleradores de partículas modernos (LHC, CERN) para inferir la estructura atómica tras colisiones inelásticas de alta energía.
+3. **[The Dynamics of Variable Mass Systems: Tsiolkovsky Rocket Equation (Tsiolkovsky, 1903)](https://en.wikipedia.org/wiki/Tsiolkovsky_rocket_equation)**
+   - *Importancia Teórica*: Describe que para acelerar un sistema en el vacío sideral sin rozar contra un entorno externo, es imperativo expulsar continuamente masa a alta velocidad relativa, cediéndole momento.
+   - *Contexto Matemático*: Del balance general $\vec{F}_{ext} = \frac{d\vec{P}}{dt}$, y sin gravedad, el cohete de masa variable eyecta gas con velocidad exhaustiva relativa $-v_e$. La integración da como resultado una ganancia logarítmica extrema de velocidad $\Delta v$:
+     $$ \Delta v = v_e \ln \left( \frac{m_0}{m_f} \right) $$
+   - *Implicaciones*: Demuestra que viajar al espacio requiere que un cohete sea mayormente combustible líquido ($m_0 \gg m_f$), dado que la ganancia de velocidad es terriblemente ineficiente (logarítmica).
 
 ### 📖 Referencias Útiles y Bibliografía
-- **[Classical Dynamics of Particles and Systems (Marion & Thornton)](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Contiene uno de los mejores capítulos para dominar el paso del referencial de Laboratorio al referencial del Centro de Masa.
-- **[Classical Mechanics (John R. Taylor)](https://uscibooks.aip.org/books/classical-mechanics/)**: Excepcional explicación intuitiva y formal del uso del centro de masa, así como de sistemas de masa variable (cohetes y cadenas cayendo).
-- **[Introduction to Classical Mechanics (David Morin)](https://www.cambridge.org/highereducation/books/introduction-to-classical-mechanics/31CB8B93623D3F14E1EE98B223D1DE47)**: Tiene decenas de problemas endiablados sobre colisiones en 2D e interacciones relativas que destrozan la intuición básica.
-- **[Física Universitaria (Sears & Zemansky)](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000003295/9780135159552)**: Extenso banco de ejercicios estándar de choques de billar, balas y bloques pendulares de obligada resolución para estudiantes.
-- **[The Feynman Lectures on Physics (Vol 1)](https://www.feynmanlectures.caltech.edu/I_toc.html)**: Feynman ahonda en cómo la simetría y las leyes de conservación de colisiones son más fundamentales que el propio concepto de "fuerza".
+- **[Classical Dynamics of Particles and Systems - Marion & Thornton](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: El Capítulo de "Dinámica de un Sistema de Partículas" provee desgloses matriciales exhaustivos de las transformaciones Lab $\to$ CM y deducciones sobre la ecuación escalar del cohete.
+- **[Classical Mechanics - John R. Taylor](https://uscibooks.aip.org/books/classical-mechanics/)**: Los capítulos iniciales traen problemas fantásticos sobre cohetes de propulsión de iones y colisiones frontales ultra-inelásticas de objetos de plastilina.

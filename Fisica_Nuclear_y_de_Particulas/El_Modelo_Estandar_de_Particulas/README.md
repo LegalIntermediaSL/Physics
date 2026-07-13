@@ -244,27 +244,42 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Online
-1. "[Particle Physics](https://ocw.mit.edu/courses/physics/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/)" (MIT OCW)
-2. "[The Discovery of the Higgs Boson](https://www.coursera.org/learn/higgs-boson)" (Coursera - University of Edinburgh)
-3. "[Quantum Field Theory](https://online.stanford.edu/courses/physics330-quantum-field-theory)" (Stanford University / edX)
-4. "[The Standard Model of Particle Physics](https://online.stanford.edu/)" (Stanford Online)
-5. "[Symmetries, Particles and Fields](https://www.maths.cam.ac.uk/undergrad/course/symmetries-particles-and-fields)" (University of Cambridge)
-6. "[Introduction to String Theory](https://ocw.mit.edu/courses/physics/8-821-string-theory-fall-2008/)" (MIT OCW)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 8.701 Introduction to Nuclear and Particle Physics](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/)**
+   Aborda experimentalmente y teóricamente el Modelo Estándar, interacciones débiles y fuertes.
+2. **[Stanford: Theoretical Minimum - Particle Physics 1](https://theoreticalminimum.com/courses/particle-physics-1/2009/fall)**
+   Curso célebre de Leonard Susskind, introduciendo las bases del Modelo Estándar, SU(3)xSU(2)xU(1), de manera pedagógica pero rigurosa.
+3. **[Cambridge DAMTP: Standard Model Lectures](http://www.damtp.cam.ac.uk/user/tong/smodel.html)**
+   Apuntes rigurosos de David Tong sobre las Teorías de Gauge y el Modelo Estándar, altamente recomendados para profundización matemática.
 
-### Artículos y Simulaciones
-1. "[CERN Document Server y Open Data Portal](https://opendata.cern.ch/)"
-2. "[PDG (Particle Data Group): The Review of Particle Physics](https://pdg.lbl.gov/)"
-3. "[A Model of Leptons](https://doi.org/10.1103/PhysRevLett.19.1264)" (S. Weinberg, 1967)
-4. "[Broken Symmetries and the Masses of Gauge Bosons](https://doi.org/10.1103/PhysRevLett.13.508)" (P. W. Higgs, 1964)
-5. "[A Schematic Model of Baryons and Mesons](https://doi.org/10.1016/S0031-9163(64)92001-3)" (M. Gell-Mann, 1964)
-6. "[Observation of a new particle in the search for the Standard Model Higgs boson](https://doi.org/10.1016/j.physletb.2012.08.020)" (ATLAS Collaboration, 2012)
-7. "[Observation of a new boson at a mass of 125 GeV](https://doi.org/10.1016/j.physletb.2012.08.021)" (CMS Collaboration, 2012)
-8. "[Partial-symmetries of weak interactions](https://doi.org/10.1016/0029-5582(61)90469-2)" (S. L. Glashow, 1961)
-9. "[Quarks and Leptons Simulation](https://phet.colorado.edu/)" (PhET)
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Broken Symmetries and the Masses of Gauge Bosons"** - *P. W. Higgs (1964), Phys. Rev. Lett. 13, 508*  
+   [Link al artículo original (APS)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.13.508)
+   
+   **Importancia Teórica y Relevancia:** 
+   El legendario artículo que demuestra matemáticamente cómo los bosones de gauge mediadores pueden adquirir masa a través de un mecanismo de ruptura de simetría sin violar las identidades de Ward. Esto da solución a la problemática de los bosones W y Z masivos.
+   
+   **Contexto Matemático:** 
+   Higgs analizó la teoría electromagnética escalar. Consideró un potencial tipo "sombrero mexicano":
+   $$ V(\phi) = \mu^2 \phi^* \phi + \lambda (\phi^* \phi)^2 $$
+   con $\mu^2 < 0$. Al expandir el campo alrededor del mínimo asimétrico $ \phi_0 = \sqrt{-\mu^2/2\lambda} $, es decir, $\phi(x) = \phi_0 + \frac{1}{\sqrt{2}}(h_1(x) + i h_2(x))$, y acoplándolo al campo gauge covariante $D_\mu = \partial_\mu - i q A_\mu$, el término cinético genera:
+   $$ (D_\mu \phi)^* (D^\mu \phi) \approx \frac{1}{2} (\partial_\mu h_1)^2 + q^2 \phi_0^2 A_\mu A^\mu $$
+   El término cuadrático del campo $A_\mu$ actúa precisamente como un término de masa efectivo $m_A = \sqrt{2} q \phi_0$. El campo sin masa (el bosón de Nambu-Goldstone $h_2$) es completamente "absorbido" para proporcionar el grado de libertad longitudinal necesario para que el bosón vectorial transversal obtenga masa (el célebre "Mecanismo de Higgs").
+
+2. **"A Model of Leptons"** - *S. Weinberg (1967), Phys. Rev. Lett. 19, 1264*  
+   [Link al artículo original (APS)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.19.1264)
+   
+   **Importancia Teórica y Relevancia:** 
+   El artículo fundacional de la teoría electrodébil. Weinberg integra el mecanismo de simetría espontáneamente rota con el grupo de isospín débil e hipercarga $SU(2)_L \times U(1)_Y$, creando la base moderna del Modelo Estándar.
+   
+   **Contexto Matemático:** 
+   En su obra, introduce el ángulo de mezcla (ahora llamado ángulo de Weinberg) $\theta_W$ para rotar los autoestados de interacción a los autoestados físicos masivos. Define analíticamente la mezcla de los bosones neutros:
+   $$ A_\mu = \sin\theta_W W_\mu^3 + \cos\theta_W B_\mu $$
+   $$ Z_\mu = \cos\theta_W W_\mu^3 - \sin\theta_W B_\mu $$
+   donde el requerimiento fundamental de un fotón ($A_\mu$) sin masa restringe incondicionalmente la forma de la matriz de masa en la representación. Weinberg estableció magistralmente la relación teórica universal $e = g \sin\theta_W$, unificando para la eternidad la constante de estructura fina (electromagnetismo) con la fuerza débil.
 
 ### 📖 Referencias Útiles y Bibliografía
-- Halzen, F., & Martin, A. D. (1984). *[Quarks and Leptons: An Introductory Course in Modern Particle Physics](https://www.wiley.com/en-us/Quarks+and+Leptons%3A+An+Introductory+Course+in+Modern+Particle+Physics-p-9780471887416)*. John Wiley & Sons.
-- Griffiths, D. J. (2008). *[Introduction to Elementary Particles](https://www.wiley.com/en-us/Introduction+to+Elementary+Particles%2C+2nd%2C+Revised+Edition-p-9783527406012)*. Wiley-VCH.
-- Thomson, M. (2013). *[Modern Particle Physics](https://doi.org/10.1017/CBO9781139525367)*. Cambridge University Press.
-- Perkins, D. H. (2000). *[Introduction to High Energy Physics](https://doi.org/10.1017/CBO9780511809040)*. Cambridge University Press.
+- Halzen, F., & Martin, A. D. (1984). *Quarks and Leptons*. John Wiley & Sons.
+- Griffiths, D. J. (2008). *Introduction to Elementary Particles*. Wiley-VCH.
+- Thomson, M. (2013). *Modern Particle Physics*. Cambridge University Press.

@@ -171,24 +171,27 @@ plt.tight_layout()
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-1. [MIT 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Clases 1 y 2, absolutamente excelentes para motivación histórica, relatando paso a paso el fallo espectacular de la física clásica.
-2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Introducción magistral a la "rareza cuántica" utilizando la fenomenología del experimento de la doble rendija.
-3. [Física Cuántica Básica (Universidad de Colorado)](https://www.coursera.org/learn/quantum-mechanics): Clases teóricas (Coursera/edX) que cubren exhaustivamente los orígenes históricos de la teoría de los cuantos.
-4. [Yale PHYS 201 (Ramamurti Shankar)](https://oyc.yale.edu/physics/phys-201): Las primeras conferencias de este curso brindan una transición inigualable entre la óptica de ondas clásica y el fotón cuántico.
-5. [Khan Academy - Quantum Physics](https://es.khanacademy.org/science/physics/quantum-physics): Módulos cortos enfocados en comprender cualitativamente y cuantitativamente la radiación de cuerpo negro y el efecto fotoeléctrico.
+1. [MIT OCW 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Clases 1 y 2, absolutamente excelentes para motivación histórica.
+2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Introducción magistral a la "rareza cuántica".
+3. [Yale PHYS 201 (Ramamurti Shankar)](https://oyc.yale.edu/physics/phys-201): Las primeras conferencias de este curso brindan una transición inigualable entre la óptica clásica y el fotón cuántico.
 
-### 📝 Artículos e Interactivos Interesantes
-1. **PhET Interactive Simulations:** [Photoelectric Effect](https://phet.colorado.edu/en/simulations/photoelectric) - Excelente simulación visual del experimento que le dio el Nobel a Einstein.
-2. **PhET Interactive Simulations:** [Blackbody Spectrum](https://phet.colorado.edu/en/simulations/blackbody-spectrum) - Visualiza cómo cambia la curva de emisión de Planck en función de la temperatura del objeto.
-3. **HyperPhysics:** [Wave-Particle Duality](http://hyperphysics.phy-astr.gsu.edu/hbase/mod1.html) - Mapa conceptual interactivo que conecta la fórmula de De Broglie, el fotón y los experimentos.
-4. **Wikipedia:** [Experimento de Davisson-Germer](https://es.wikipedia.org/wiki/Experimento_de_Davisson-Germer) - Descripción de la primera evidencia experimental firme de la difracción de electrones predicha por de Broglie.
-5. **Wikipedia:** [Catástrofe Ultravioleta](https://es.wikipedia.org/wiki/Cat%C3%A1strofe_ultravioleta) - Explicación matemática del fallo de la ley de Rayleigh-Jeans.
-6. **Stanford Encyclopedia of Philosophy:** [The Equivalence of Mass and Energy & Quantum Early Origins](https://plato.stanford.edu/entries/equivME/) - Contexto filosófico sobre la materia y la energía a la luz de los descubrimientos de 1905.
-7. **Artículo Original:** [A Heuristic Point of View Concerning the Production and Transformation of Light](https://einsteinpapers.press.princeton.edu/vol2-trans/100) - Traducción al inglés del artículo original de Einstein de 1905.
-8. **PhysicsWorld:** [Quantum Physics Early History](https://physicsworld.com/c/quantum/) - Artículos sobre el centenario del modelo de Bohr y la relevancia del átomo de hidrógeno.
+### 📝 Artículos Científicos Clave
+1. **Planck, M. (1901). "On the Law of Distribution of Energy in the Normal Spectrum"**. *Annalen der Physik*, 4(3), 553-563. [DOI: 10.1002/andp.19013090310](https://doi.org/10.1002/andp.19013090310)
+   *Importancia Teórica y Matemática:* Resuelve la catástrofe ultravioleta asumiendo matemáticamente que la energía de los osciladores térmicos es proporcional a su frecuencia:
+   $$ E_n = nh\nu, \quad \rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \frac{1}{e^{h\nu / k_B T} - 1} $$
+   *Implicaciones Físicas:* Fue el nacimiento del "cuanto", probando que el intercambio de energía materia-radiación es discontinuo, revolucionando la termodinámica estadística y abriendo la puerta a la física cuántica.
+
+2. **Einstein, A. (1905). "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt"**. *Annalen der Physik*, 17(6), 132-148. [DOI: 10.1002/andp.19053220607](https://doi.org/10.1002/andp.19053220607)
+   *Importancia Teórica y Matemática:* Explica el efecto fotoeléctrico postulando que la luz en sí misma está cuantizada en fotones discretos:
+   $$ K_{\max} = h\nu - \Phi $$
+   *Implicaciones Físicas:* Extiende la cuantización de Planck (que aplicaba a osciladores de materia) a los propios campos electromagnéticos, introduciendo la noción dual corpúsculo-onda de la luz e impulsando el desarrollo futuro de la QED.
+
+3. **de Broglie, L. (1924). "Recherches sur la théorie des quanta"** (Tesis). *Annales de Physique*, 10(3), 22-128. [DOI: 10.1051/anphys/192510030022](https://doi.org/10.1051/anphys/192510030022)
+   *Importancia Teórica y Matemática:* Postula que cualquier partícula material masiva moviéndose con momento $p$ tiene asociada una longitud de onda:
+   $$ \lambda = \frac{h}{p} = \frac{h}{\gamma m_0 v} $$
+   *Implicaciones Físicas:* Introduce la dualidad onda-partícula generalizada. Justifica directamente las reglas empíricas de cuantización de órbitas de Bohr-Sommerfeld al requerir ondas estacionarias constructivas en las trayectorias atómicas.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. **Libro**: [Quantum Physics of Atoms, Molecules, Solids, Nuclei, and Particles - Eisberg & Resnick](https://www.wiley.com/en-us/Quantum+Physics+of+Atoms%2C+Molecules%2C+Solids%2C+Nuclei%2C+and+Particles%2C+2nd+Edition-p-9780471873730). Un texto fantástico sobre la física moderna y los experimentos fundamentales.
-2. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Introduction). Repaso de la fenomenología antes de entrar a Schrödinger.
-3. **Libro**: [Quantum Physics - Stephen Gasiorowicz](https://www.wiley.com/en-us/Quantum+Physics%2C+3rd+Edition-p-9780471057000) (Capítulo 1). Detalles numéricos y experimentales sobre el cuerpo negro y el efecto Compton.
-4. **Libro**: [Concepts of Modern Physics - Arthur Beiser](https://www.mheducation.com/highered/product/concepts-modern-physics-beiser/M9780072448481.html). Ideal para una base conceptual firme en los fenómenos relativistas y cuánticos pioneros.
+1. **Libro**: [Quantum Physics of Atoms, Molecules, Solids, Nuclei, and Particles - Eisberg & Resnick](https://www.wiley.com/en-us/Quantum+Physics+of+Atoms%2C+Molecules%2C+Solids%2C+Nuclei%2C+and+Particles%2C+2nd+Edition-p-9780471873730). Texto fantástico sobre los experimentos fundamentales.
+2. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C).
+3. **Libro**: [Concepts of Modern Physics - Arthur Beiser](https://www.mheducation.com/highered/product/concepts-modern-physics-beiser/M9780072448481.html).

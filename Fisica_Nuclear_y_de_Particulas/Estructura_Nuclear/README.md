@@ -270,27 +270,47 @@ plt.legend()
 plt.show()
 ```
 
-## 📚 Recursos
+## 📚 Recursos Específicos
 
-### Cursos Online
-1. "[Nuclear Structure and Reactions](https://ocw.mit.edu/courses/physics/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/)" (MIT OCW)
-2. "[Introduction to Nuclear Physics](https://www.coursera.org/learn/nuclear-physics)" (Coursera)
-3. "[Advanced Nuclear Physics](https://www.edx.org/)" (edX)
-4. "[Nuclear Models and Decay](https://online.stanford.edu/)" (Stanford Online)
-5. "[Many-Body Physics in Nuclear Systems](https://phys.washington.edu/)" (University of Washington)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.02 Introduction to Applied Nuclear Physics](https://ocw.mit.edu/courses/22-02-introduction-to-applied-nuclear-physics-spring-2012/)**
+   Excelente curso que profundiza en la estructura y fenomenología nuclear, abarcando desde los modelos de capas hasta reacciones de dispersión de neutrones.
+2. **[MIT OCW: 8.701 Introduction to Nuclear and Particle Physics](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/)**
+   Proporciona el puente entre la estructura hadrónica de baja energía (QCD) y los modelos nucleares tradicionales.
+3. **[NNDC: National Nuclear Data Center (Brookhaven)](https://www.nndc.bnl.gov/)**
+   No es un curso, sino la base de datos más exhaustiva del mundo sobre estructura y dinámica nuclear (NuDat 3, ENSDF).
 
-### Artículos y Simulaciones
-1. "[The Shell Model of the Nucleus](https://www.nobelprize.org/prizes/physics/1963/mayer/lecture/)" (Maria Goeppert Mayer, Nobel Lecture)
-2. "[On the Structure of Atomic Nuclei](https://www.nobelprize.org/prizes/physics/1975/bohr/lecture/)" (A. Bohr and B. Mottelson)
-3. "[Nuclear Structure Database](https://www.nndc.bnl.gov/)" (NNDC)
-4. "[Collective Model of the Nucleus](https://doi.org/10.1103/RevModPhys.28.432)" (Review Article)
-5. "[Build a Nucleus](https://phet.colorado.edu/en/simulations/build-a-nucleus)" (PhET Interactive Simulations)
-6. "[Magic Numbers in Nuclear Structure](https://physicstoday.scitation.org/)" (Physics Today)
-7. "[Isospin in Nuclear Physics](https://www.annualreviews.org/)" (Annual Review of Nuclear Science)
-8. "[The Liquid Drop Model and Nuclear Fission](https://doi.org/10.1103/PhysRev.56.426)" (N. Bohr, J.A. Wheeler)
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"On the Structure of Atomic Nuclei"** - *A. Bohr and B. R. Mottelson (1975)*  
+   [Link a la Nobel Lecture (NobelPrize.org)](https://www.nobelprize.org/prizes/physics/1975/bohr/lecture/)
+   
+   **Importancia Teórica y Relevancia:** 
+   Aage Bohr (hijo de Niels Bohr) y Ben Mottelson resolvieron la inconsistencia fundamental entre el modelo de la gota líquida macroscópico (comportamiento colectivo) y el modelo de capas independiente cuántico, fusionándolos en el **Modelo Colectivo Unificado**.
+   
+   **Contexto Matemático:** 
+   Bohr demostró que un núcleo esférico cerrado en el modelo de capas, al excitarse o añadirle nucleones de valencia, se deforma, comportándose como un rotor asimétrico cuántico de muchos cuerpos.
+   El Hamiltoniano rotacional de un núcleo deformado con forma elipsoidal se escribe intrínsecamente como:
+   $$ \hat{H}_{rot} = \frac{\hbar^2}{2 \mathcal{J}} \mathbf{R}^2 $$
+   donde $\mathcal{J}$ es el momento de inercia dinámico y $\mathbf{R}$ el momento angular rotacional colectivo. 
+   Para núcleos par-par ($J_{base} = 0^+$), la energía de los niveles rotacionales excitados sigue rígidamente la secuencia:
+   $$ E_J = \frac{\hbar^2}{2 \mathcal{J}} J(J+1) $$
+   con $J = 0, 2, 4, \dots$ (los estados impares son prohibidos por la simetría de paridad). La precisión abrumadora de este escalamiento $J(J+1)$ en el espectro gamma validó magistralmente su teoría unificada.
+
+2. **"On Closed Shells in Nuclei. II"** - *M. Goeppert Mayer (1950), Phys. Rev. 78, 16*  
+   [Link al artículo original (APS)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.78.16)
+   
+   **Importancia Teórica y Relevancia:** 
+   El documento que solidificó rigurosamente la existencia del acoplamiento espín-órbita gigante, que explica teóricamente los números mágicos del modelo de capas (las anomalías de energía de ligadura).
+   
+   **Contexto Matemático:** 
+   La base fundamental residió en el Hamiltoniano central más el acoplamiento relativista:
+   $$ \hat{H} = \frac{p^2}{2m} + V(r) - \lambda \left( \frac{1}{r} \frac{dV(r)}{dr} \right) \mathbf{L} \cdot \mathbf{S} $$
+   donde $\lambda > 0$ refleja un acoplamiento repulsivo respecto al gradiente del potencial (contrario a la estructura atómica de los electrones).
+   La genialidad matemática de Mayer fue demostrar que la expectativa radial del desdoblamiento para un potencial de oscilador armónico escalaba fuertemente con el número cuántico de momento angular $l$.
+   El splitting de energía, $\Delta E \propto l \cdot \hbar^2$, provoca que la capa $1g_{9/2}$ caiga verticalmente de su degeneración original, cerrándose el hueco mágico $N,Z = 50$, lo que fue un avance triunfal predictivo.
 
 ### 📖 Referencias Útiles y Bibliografía
-- Krane, K. S. (1987). *[Introductory Nuclear Physics](https://www.wiley.com/en-us/Introductory+Nuclear+Physics%2C+3rd+Edition-p-9780471805533)*. John Wiley & Sons.
-- Wong, S. S. M. (1998). *[Introductory Nuclear Physics](https://www.wiley.com/en-us/Introductory+Nuclear+Physics%2C+2nd+Edition-p-9780471239734)*. Wiley.
-- Bohr, A., & Mottelson, B. R. (1998). *[Nuclear Structure](https://www.worldscientific.com/worldscibooks/10.1142/3530)*. World Scientific.
-- Heyde, K. (1994). *[Basic Ideas and Concepts in Nuclear Physics](https://www.routledge.com/Basic-Ideas-and-Concepts-in-Nuclear-Physics-An-Introductory-Approach/Heyde/p/book/9780750305341)*. CRC Press.
+- Krane, K. S. (1987). *Introductory Nuclear Physics*. John Wiley & Sons.
+- Bohr, A., & Mottelson, B. R. (1998). *Nuclear Structure*. World Scientific.
+- Heyde, K. (1994). *Basic Ideas and Concepts in Nuclear Physics*. CRC Press.

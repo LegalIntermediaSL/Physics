@@ -211,27 +211,42 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Online
-1. "[Plasma Physics and Applications](https://www.edx.org/course/plasma-physics-and-applications)" (edX - EPFL)
-2. "[Nuclear Reactor Physics Basics](https://www.coursera.org/learn/nuclear-reactor-physics)" (Coursera)
-3. "[Energy Processing in Stars](https://ocw.mit.edu/courses/physics/8-284-modern-astrophysics-spring-2006/)" (University of Arizona OCW / MIT)
-4. "[Introduction to Plasma Physics](https://ocw.mit.edu/courses/nuclear-engineering/22-611j-introduction-to-plasma-physics-i-fall-2003/)" (MIT OCW)
-5. "[Fusion Energy: Principles and Technology](https://online.stanford.edu/)" (Stanford Online)
-6. "[Advanced Nuclear Reactor Engineering](https://www.edx.org/)" (edX)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.011 / 22.112 Nuclear Engineering](https://ocw.mit.edu/courses/22-011-nuclear-engineering-science-systems-and-society-fall-2020/)**
+   Curso detallado sobre la física y los principios termodinámicos de los reactores de fisión.
+2. **[EPFL: Plasma Physics and Applications](https://www.edx.org/course/plasma-physics-and-applications)**
+   Curso introductorio en edX sobre la física del plasma y la fusión nuclear magnética, enfocado en el Criterio de Lawson y las inestabilidades MHD.
+3. **[ITER Educational Resources](https://www.iter.org/education)**
+   Repositorio exhaustivo de la física detrás de los reactores Tokamak y el gran proyecto internacional de fusión.
 
-### Artículos y Simulaciones
-1. "[ITER Educational Resources (Simulador Tokamak)](https://www.iter.org/education/)"
-2. "[Energy production in stars](https://doi.org/10.1103/PhysRev.55.434)" (H. Bethe, 1939)
-3. "[The Discovery of Nuclear Fission](https://doi.org/10.1038/143239a0)" (L. Meitner, O. R. Frisch, 1939)
-4. "[IAEA Nuclear Data Section](https://www-nds.iaea.org/)"
-5. "[The Mechanism of Nuclear Fission](https://doi.org/10.1103/PhysRev.56.426)" (N. Bohr and J. A. Wheeler, 1939)
-6. "[Nuclear Fission](https://phet.colorado.edu/en/simulations/nuclear-fission)" (PhET Interactive Simulations)
-7. "[Plasma confinement in Tokamaks](https://www.iter.org/mach/Tokamak)" (Review Article)
-8. "[Inertial Confinement Fusion](https://lasers.llnl.gov/science/icf)" (NIF Publications)
-9. "[Design and Operation of Pressurized Water Reactors](https://www.iaea.org/publications)" (IAEA Bulletin)
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"The Mechanism of Nuclear Fission"** - *N. Bohr and J. A. Wheeler (1939), Phys. Rev. 56, 426*  
+   [Link al artículo original (APS)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.56.426)
+   
+   **Importancia Teórica y Relevancia:** 
+   Es el primer artículo que expuso un marco teórico mecano-cuántico y semiclásico completo para explicar la fisión del Uranio bombardeado por neutrones, sentando las bases inmutables de la física nuclear aplicada.
+   
+   **Contexto Matemático:** 
+   El análisis descansa sobre la deformación topológica de la "gota" nuclear. Introducen parámetros de deformación elipsoidal $\alpha_2, \alpha_3, \dots$ en series de polinomios de Legendre para el radio nuclear local:
+   $$ R(\theta) = R_0 \left[ 1 + \alpha_0 + \alpha_2 P_2(\cos\theta) + \alpha_3 P_3(\cos\theta) + \dots \right] $$
+   Calcularon analíticamente cómo variaba la energía de superficie (tensión nuclear) y la repulsión de Coulomb con $\alpha_2$. Demostraron que el núcleo es inestable frente a fisión espontánea si el parámetro de fisibilidad excede un valor crítico universal:
+   $$ x = \frac{E_c^{(0)}}{2 E_s^{(0)}} = \frac{Z^2/A}{(Z^2/A)_{\text{crit}}} $$
+   Donde $(Z^2/A)_{\text{crit}} \approx 47.8$. Para un núcleo con $x < 1$, existe una barrera de fisión $E_f$. Para el isótopo $ ^{235}\text{U} $, probaron teóricamente que la simple captura de un neutrón térmico sin energía cinética aporta una energía de excitación $E_{exc} > E_f$, suficiente para inducir escisión instantánea (fisión inducida), mientras que el isótopo $ ^{238}\text{U} $ presenta un $E_f$ más alto, requiriendo impacto de neutrones rápidos.
+
+2. **"Energy Production in Stars"** - *H. A. Bethe (1939), Phys. Rev. 55, 434*  
+   [Link al artículo original (APS)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.55.434)
+   
+   **Importancia Teórica y Relevancia:** 
+   El magistral trabajo donde Hans Bethe resolvió el enigma milenario de la fuente de energía del Sol y las estrellas, identificando tanto la cadena protón-protón para estrellas ligeras como el ciclo CNO (Carbono-Nitrógeno-Oxígeno) para estrellas masivas.
+   
+   **Contexto Matemático:** 
+   El reto astronómico estribaba en modelar la interacción fuerte mediante la probabilidad de penetración cuántica (efecto túnel). Bethe calculó meticulosamente la sección eficaz astronómica promediada espectralmente (tasa de reacción):
+   $$ \langle \sigma v \rangle = \int_0^\infty v \cdot \frac{S(E)}{E} \exp\left(-2\pi \eta\right) f(v) \, dv $$
+   Donde el parámetro de Sommerfeld es $\eta = \frac{Z_1 Z_2 e^2}{\hbar v}$. Observó que la tasa de generación de energía con la temperatura ($T$) en la Cadena p-p seguía una ley fenomenológica empírica $\epsilon_{pp} \propto \rho T^4$, mientras que el Ciclo CNO escalaba exponencialmente como $\epsilon_{CNO} \propto \rho T^{17}$. Esto predijo asombrosamente que estrellas con un núcleo ligeramente más caliente ($> 1.7 \times 10^7 \, \text{K}$) queman hidrógeno primordialmente a través de átomos más pesados actuando como catalizadores, sentando el paradigma de la evolución estelar.
 
 ### 📖 Referencias Útiles y Bibliografía
-- Lamarsh, J. R., & Baratta, A. J. (2001). *[Introduction to Nuclear Engineering](https://www.pearson.com/en-us/subject-catalog/p/introduction-to-nuclear-engineering/P200000006763)*. Prentice Hall.
-- Chen, F. F. (1984). *[Introduction to Plasma Physics and Controlled Fusion](https://link.springer.com/book/10.1007/978-1-4757-5595-4)*. Springer.
+- Lamarsh, J. R., & Baratta, A. J. (2001). *Introduction to Nuclear Engineering*. Prentice Hall.
+- Chen, F. F. (1984). *Introduction to Plasma Physics and Controlled Fusion*. Springer.
 - Krane, K. S. (1987). *[Introductory Nuclear Physics](https://www.wiley.com/en-us/Introductory+Nuclear+Physics%2C+3rd+Edition-p-9780471805533)*. John Wiley & Sons.
 - Stacey, W. M. (2010). *[Fusion Plasma Physics](https://www.wiley.com/en-us/Fusion+Plasma+Physics%2C+2nd+Edition-p-9783527411344)*. Wiley-VCH.

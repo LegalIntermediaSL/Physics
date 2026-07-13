@@ -188,25 +188,37 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos
+### Cursos Recomendados
 1. [Quantum Computing and Simulation (Coursera)](https://www.coursera.org/learn/quantum-computing-simulation)
 2. [Simulating Nature with Quantum Computers (edX)](https://www.edx.org/course/simulating-nature)
-3. [Introduction to Quantum Simulation (FutureLearn)](https://www.futurelearn.com/courses/quantum-simulation)
-4. [Quantum Simulation and Algorithm Design (MIT OpenCourseWare)](https://ocw.mit.edu/courses/quantum-simulation)
-5. [Algorithms and Quantum Simulations with Qiskit (IBM)](https://qiskit.org/learn)
-6. [QuTiP Tutorials and Lectures (QuTiP)](https://qutip.org/tutorials.html)
+3. [Quantum Information Science I (MITx on edX)](https://www.edx.org/course/quantum-information-science-i-part-1)
 
 ### Artículos y Simulaciones
-1. [Simulating Physics with Computers (R. Feynman, 1982)](https://doi.org/10.1007/BF02650179)
-2. [Universal Quantum Simulators (S. Lloyd, 1996)](https://science.sciencemag.org/content/273/5278/1073)
-3. [Qiskit (Quantum Information Science Kit)](https://qiskit.org)
-4. [QuTiP: Quantum Toolbox in Python (Johansson et al., 2012)](https://arxiv.org/abs/1211.6518)
-5. [Quantum algorithm for linear systems of equations (Harrow et al., 2009)](https://arxiv.org/abs/0811.3171)
-6. [Simulation of Electronic Structure Hamiltonians using Quantum Computers (Whitfield et al., 2011)](https://arxiv.org/abs/1001.3855)
-7. [Theory of variational quantum simulation (Yuan et al., 2019)](https://arxiv.org/abs/1812.08767)
-8. [PennyLane: Quantum machine learning and optimization (Bergholm et al., 2018)](https://arxiv.org/abs/1811.04968)
+1. **Simulating Physics with Computers (R. Feynman, 1982)**
+   - **Enlace:** [https://doi.org/10.1007/BF02650179](https://doi.org/10.1007/BF02650179)
+   - **Importancia Teórica:** El artículo que dio origen a la computación cuántica al sugerir que solo una máquina basada en las reglas cuánticas podría simular mecánicas cuánticas sin un coste exponencial.
+   - **Fondo Matemático:** Feynman examinó la probabilidad intrínseca y la no-localidad en el espacio de configuración completo de las variables, postulando un simulador universal $U(t) = e^{-iHt}$.
+   - **Implicaciones Físicas:** Inició la búsqueda de hardware cuántico para superar las limitaciones de la simulación clásica en química cuántica y la física de materia condensada.
+
+2. **Universal Quantum Simulators (S. Lloyd, 1996)**
+   - **Enlace:** [https://science.sciencemag.org/content/273/5278/1073](https://science.sciencemag.org/content/273/5278/1073)
+   - **Importancia Teórica:** Formaliza la intuición de Feynman, probando matemáticamente que un simulador cuántico universal puede operar eficientemente simulando sistemas locales.
+   - **Fondo Matemático:** Emplea la expansión de Suzuki-Trotter para dividir el Hamiltoniano total $H = \sum_j H_j$ en pasos manejables, limitando el error de los conmutadores no nulos:
+     $$
+     e^{-i H t} \approx \left( \prod_j e^{-i H_j \Delta t} \right)^{t/\Delta t}
+     $$
+   - **Implicaciones Físicas:** Garantiza la viabilidad de la simulación molecular dinámica, reduciendo la barrera teórica de la simulación de materiales exóticos.
+
+3. **A variational eigenvalue solver on a photonic quantum processor (Peruzzo et al., 2014)**
+   - **Enlace:** [https://arxiv.org/abs/1304.3061](https://arxiv.org/abs/1304.3061)
+   - **Importancia Teórica:** Introduce el Variational Quantum Eigensolver (VQE), un algoritmo híbrido cuántico-clásico, resiliente al ruido y pilar de los algoritmos NISQ actuales.
+   - **Fondo Matemático:** Usa el principio variacional de Rayleigh-Ritz:
+     $$
+     E_0 \leq \frac{\langle \psi(\vec{\theta}) | H | \psi(\vec{\theta}) \rangle}{\langle \psi(\vec{\theta}) | \psi(\vec{\theta}) \rangle}
+     $$
+     donde $|\psi(\vec{\theta})\rangle$ es un ansatz parametrizado, y la CPU clásica optimiza $\vec{\theta}$ mediante gradiente descendente estocástico.
+   - **Implicaciones Físicas:** Hizo realizable la química cuántica de moléculas pequeñas con el hardware ruidoso de la era contemporánea.
 
 ### 📖 Referencias Útiles y Bibliografía
 1. [Quantum Computation and Quantum Information (Nielsen & Chuang)](https://doi.org/10.1017/CBO9780511976667)
 2. [Quantum Computer Science: An Introduction (N. David Mermin)](https://doi.org/10.1017/CBO9780511813870)
-3. [Principles of Quantum Mechanics (R. Shankar)](https://doi.org/10.1007/978-1-4757-0576-8)

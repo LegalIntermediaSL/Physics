@@ -172,25 +172,30 @@ if __name__ == '__main__':
     simular_interferencia_acustica()
 ```
 
-## 📚 Recursos
+## 📚 Recursos Específicos
+
 ### Cursos
-1. ["Acoustics: Basic Physics" - Coursera (UNSW Sydney)](https://www.coursera.org/learn/acoustics)
-2. ["Fundamentals of Audio and Music Engineering" - Coursera (University of Rochester)](https://www.coursera.org/learn/audio-engineering)
-3. ["Introduction to Acoustics" - edX (TU Delft)](https://www.edx.org/course/introduction-to-acoustics)
-4. ["Architectural Acoustics" - NPTEL (IIT Kharagpur)](https://nptel.ac.in/courses/105105152)
-5. ["Sound and Waves" - Khan Academy](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
+1. **[MIT OCW: 2.066 Acoustics and Sensing](https://ocw.mit.edu/courses/2-066-acoustics-and-sensing-fall-2012/)**: Curso exhaustivo sobre la propagación del sonido, impedancia, y el uso de sondas acústicas marinas, empleando tensores de esfuerzo y dinámica de fluidos.
+2. **[Coursera/UNSW: Acoustics - Basic Physics](https://www.coursera.org/learn/acoustics)**: Para asimilar las ondas viajeras, los decibelios y los principios de acústica arquitectónica.
+3. **[NPTEL: Fundamentals of Acoustics](https://nptel.ac.in/courses/112104234)**: Derivaciones rigurosas de la ecuación de onda tridimensional y los potenciales de velocidad acústica por IIT Kanpur.
 
 ### Artículos y Simulaciones
-1. ["Sound" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/sound)
-2. ["Wave Interference" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-interference)
-3. ["Hearing Frequency Test" - Online Tone Generator](https://www.szynalski.com/tone-generator/)
-4. ["The Physics of Music" - Michigan Technological University](https://pages.mtu.edu/~suits/Physicsofmusic.html)
-5. ["Ultrasound in Medicine" - Physics World](https://physicsworld.com/a/ultrasound-in-medicine/)
-6. ["Ripple Tank Simulation" - Falstad](http://www.falstad.com/ripple/)
-7. ["Acoustic Metamaterials" - Science Direct](https://www.sciencedirect.com/topics/engineering/acoustic-metamaterials)
-8. ["Doppler Effect Simulation" - oPhysics](https://ophysics.com/w11.html)
+1. **["The Theory of Sound" por Lord Rayleigh (Vol. I & II)](https://www.cambridge.org/core/books/theory-of-sound/B0F33A18C1D6B408B1271DDEB2A4B3A8)**
+   - **Importancia Teórica:** Esta es la Biblia fundacional de la acústica. Rayleigh sistematizó matemáticamente casi toda la disciplina, desde vibraciones de cuerdas, membranas y placas, hasta la difracción esférica del sonido.
+   - **Fondo Matemático:** Rayleigh introdujo el método perturbativo de Rayleigh-Ritz para calcular frecuencias naturales. Si tenemos una cuerda inhomogénea, aproximamos la frecuencia fundamental estimando un perfil de desplazamiento $y(x)$ (por ejemplo, elástico estático) e igualamos la energía potencial máxima con la cinética máxima:
+     $$ \omega^2 \approx \frac{\int_0^L T \left( \frac{dy}{dx} \right)^2 dx}{\int_0^L \rho(x) y^2 dx} $$
+     Este principio variacional garantiza que la frecuencia calculada siempre será un límite superior a la frecuencia fundamental real (Principio de Rayleigh), una herramienta vital cuando las ecuaciones diferenciales exactas no tienen solución analítica.
+   - **Implicaciones Físicas:** Transformó la acústica de un conjunto de observaciones empíricas musicales a una rama madura del análisis de valores de contorno en física matemática, posibilitando el diseño analítico de resonadores e instrumentos.
+
+2. **["Acoustic Metamaterials and Phononic Crystals" por P. A. Deymier (2013)](https://link.springer.com/book/10.1007/978-3-642-31232-8)**
+   - **Importancia Teórica:** Muestra cómo los materiales estructurados artificialmente pueden manipular las ondas sonoras más allá de los límites de los materiales naturales, permitiendo la "invisibilidad" acústica, superlentes y guías de onda con índice de refracción negativo.
+   - **Fondo Matemático:** Se describe la propagación a través de celdas unitarias periódicas usando el teorema de Bloch para la ecuación acústica. La densidad efectiva $\rho_{\text{eff}}(\omega)$ y el módulo volumétrico efectivo $K_{\text{eff}}(\omega)$ se vuelven funciones tensoriales dispersivas fuertemente dependientes de la frecuencia, dadas por resonancias locales. Cerca de una resonancia de Helmholtz interna $\omega_0$:
+     $$ \rho_{\text{eff}}(\omega) = \rho_0 \left( 1 - \frac{F \omega_0^2}{\omega^2 - \omega_0^2 + i\gamma\omega} \right) $$
+     Si $\omega \gtrsim \omega_0$, la densidad efectiva se vuelve *negativa* ($\rho_{\text{eff}} < 0$). Esto implica que la aceleración del medio ocurre en dirección opuesta al gradiente de presión impulsora local, prohibiendo la propagación de modos sonoros ordinarios (abriendo un "bandgap" acústico absoluto).
+   - **Implicaciones Físicas:** Provee la base para aislamientos sonoros perfectos en bandas de frecuencias específicas (estructuras fonónicas) y la construcción de capas de camuflaje que obligan al sonido del sonar marino a rodear un objeto como si no estuviera ahí.
+
+3. **[nanoHUB: Acoustic Wave Simulation](https://nanohub.org)**: Simulador en red de elementos finitos (FEM) para ver la propagación modal de presión a través de barreras u orificios (resonadores).
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Fundamentals of Acoustics* por Lawrence E. Kinsler et al.](https://www.wiley.com/en-us/Fundamentals+of+Acoustics%2C+4th+Edition-p-9780471847892)
-2. [*Acoustics* por Leo L. Beranek](https://asa.scitation.org/doi/book/10.1121/1.4920216)
-3. [*The Theory of Sound* por Lord Rayleigh](https://archive.org/details/theoryofsound01rayl)
+1. [Kinsler, L. E., et al. *Fundamentals of Acoustics* (4ta ed.)](https://www.wiley.com/en-us/Fundamentals+of+Acoustics%2C+4th+Edition-p-9780471847892) - Texto imperativo, claro balance de derivación rigurosa y física aplicada.
+2. [Landau, L. D., & Lifshitz, E. M. *Fluid Mechanics*](https://www.sciencedirect.com/bookseries/course-of-theoretical-physics) - El capítulo de ondas sonoras es una obra de arte físico-matemática rigurosa.

@@ -183,26 +183,33 @@ if __name__ == '__main__':
 ```
 
 ## 📚 Recursos Específicos
+
 ### Cursos
-1. ["Vibrations and Waves" - MIT OpenCourseWare (Walter Lewin)](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)
-2. ["Physics of Waves" - edX](https://www.edx.org/course/waves-and-optics)
-3. ["Mechanical Waves" - Khan Academy](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound)
-4. ["Introduction to Oscillations and Waves" - Coursera](https://www.coursera.org/learn/physics-101)
-5. ["Vibrations and Waves" - NPTEL (IIT Bombay)](https://nptel.ac.in/courses/115101011)
+1. **[MIT OCW: 8.03 Physics III: Vibrations and Waves](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)**: Aborda de manera analítica y experimental las transiciones fenomenológicas desde el oscilador armónico simple acoplado al límite continuo.
+2. **[Coursera/EPFL: Mechanics 2 - Oscillations](https://www.coursera.org/learn/mechanics-2)**: Se enfoca en formalismos lagrangianos puristas para derivar la dinámica del batido acústico y mecánico sin necesidad de tensiones analizadas con Newton.
+3. **[NPTEL: Waves and Oscillations](https://nptel.ac.in/courses/115101011)**: Tratamiento matemático riguroso de medios continuos y la respuesta espectral y armónica (Resonancia) para ingenieros estructurales y geólogos acústicos.
 
 ### Artículos y Simulaciones
-1. ["Wave on a String" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-on-a-string)
-2. ["Masses and Springs" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/masses-and-springs)
-3. ["Normal Modes" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/normal-modes)
-4. ["Longitudinal vs Transverse Waves" - oPhysics](https://ophysics.com/w7.html)
-5. ["Standing Waves Simulation" - oPhysics](https://ophysics.com/w8.html)
-6. ["Beat Frequency" - oPhysics](https://ophysics.com/w10.html)
-7. ["Resonance in a Tube" - oPhysics](https://ophysics.com/w9.html)
-8. ["Wave Interference" - PhET Interactive Simulations](https://phet.colorado.edu/en/simulations/wave-interference)
-9. ["Simple Harmonic Motion" - oPhysics](https://ophysics.com/w1.html)
+1. **["Theory of Normal Modes in Multi-Degree-of-Freedom Systems" (Review clásico)](https://link.springer.com/book/10.1007/978-94-015-7795-3)**
+   - **Importancia Teórica:** Conecta los problemas discretos (moléculas en vibración, masa-resorte, péndulos adyacentes) con el análisis universal del espectro de Fourier, unificando cómo los objetos aparentemente aleatorios resuenan como sumas ponderadas finitas de "frecuencias puras" inalterables.
+   - **Fondo Matemático:** En un sistema mecánico no disipativo de $N$ grados de libertad descrito por el vector desplazamiento columna $\mathbf{q}(t)$, cerca del equilibrio el hamiltoniano asume la forma cinética de masa matricial $\mathbf{M}$ simétrica-positiva y la rigidez de Hooke $\mathbf{K}$:
+     $$ \mathbf{M} \mathbf{\ddot{q}} + \mathbf{K} \mathbf{q} = \mathbf{0} $$
+     Para las soluciones de estado estacionario oscilatorio purísimo $\mathbf{q}(t) = \mathbf{a} e^{i\omega t}$, insertándolas devuelven la ecuación de autovalores generalizada (Generalized Eigenvalue Problem en Algebra Lineal):
+     $$ (\mathbf{K} - \omega^2 \mathbf{M}) \mathbf{a} = \mathbf{0} $$
+     Asegurando el determinante $|\mathbf{K} - \omega^2 \mathbf{M}| = 0$, obtenemos exactamente $N$ frecuencias propias (polinomio característico) y $N$ autovectores (modos normales orquestales). La solución general es una superposición lineal (onda batiente caótica): $\mathbf{q}(t) = \sum_{j=1}^N c_j \mathbf{a}_j e^{i\omega_j t}$.
+   - **Implicaciones Físicas:** Demuestra universalmente que el comportamiento de cualquier puente que oscila por el viento, cualquier molécula de CO2 vibrante por choque infrarrojo, o cualquier cristal en fase, no es aleatorio: todos están obligados a seguir el ritmo intrínseco de los autovalores invariantes dependientes estrictamente de su simetría física constructiva y no de cómo fueron excitados incialmente.
+
+2. **["Wave Propagation in Elastic Solids" por J.D. Achenbach](https://www.sciencedirect.com/book/9780720403251/wave-propagation-in-elastic-solids)**
+   - **Importancia Teórica:** Fundacional para la Sismología Teórica e Ingeniería Civil Antiterremotos, extendiendo la ecuación de la cuerda d'Alembert simple al dominio infinito tridimensional tensorial para cualquier masa dúctil con módulo de corte transversal.
+   - **Fondo Matemático:** Utilizando la ecuación constitutiva de Hooke tensorial generalizada isótropa con los dos parámetros de elasticidad de Lamé ($\lambda$ y $\mu_{corte}$), la perturbación del cuerpo elástico (Ecuación de Navier-Cauchy) se define con base de desplazamientos $\mathbf{u}$:
+     $$ \rho \frac{\partial^2 \mathbf{u}}{\partial t^2} = (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u}) + \mu \nabla^2 \mathbf{u} $$
+     Mediante la invención genial del Teorema de Descomposición de Helmholtz vectorizado, postulamos que cualquier perturbación física deformante $\mathbf{u}$ del mundo es una suma pura de un campo dilatacional sin rotación (gradiente escalar) y un campo torsional divergencia-cero (rotacional vectorial): $\mathbf{u} = \nabla \Phi + \nabla \times \mathbf{H}$. Al introducirlos, la matriz se desenreda en dos frentes de onda independientes desacoplados que jamás se mezclan viajando por la tierra:
+     $$ \nabla^2 \Phi = \frac{1}{c_L^2} \frac{\partial^2 \Phi}{\partial t^2} \quad (c_L = \sqrt{\frac{\lambda + 2\mu}{\rho}}, \text{ Onda Longitudinal } P) $$
+     $$ \nabla^2 \mathbf{H} = \frac{1}{c_T^2} \frac{\partial^2 \mathbf{H}}{\partial t^2} \quad (c_T = \sqrt{\frac{\mu}{\rho}}, \text{ Onda Transversal } S) $$
+   - **Implicaciones Físicas:** Esta abstracción puramente matemática corrobora por qué en un desastre de terremoto, las estaciones sismológicas de medición siempre detectan un primer sacudón expansivo super rápido de presión (ondas primarias $P$) inofensivas, seguido fatalmente minutos después de las ondas de corte cortantes devastadoras (ondas secundarias $S$ de transversal cortadura estructural), brindando el retardo natural indispensable actual para advertir segundos valiosos y disparar alarmas de ciudades sísmicas (México, Japón).
+
+3. **[oPhysics: Resonance Simulation](https://ophysics.com/w2.html)**: Simulador ideal para cambiar dinámicamente constantes de amortiguamiento en un oscilador empujado y observar cuán estrecha (fino valor de Q) o ancha se vuelve la absorción pico de energía (Lorentziana) dependiendo de la disipación viscosa termodinámica.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Vibrations and Waves* por A.P. French](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362)
-2. [*Physics of Waves* por William C. Elmore y Mark A. Heald](https://store.doverpublications.com/products/9780486649269)
-3. ["The Feynman Lectures on Physics, Vol. I"](https://www.feynmanlectures.caltech.edu/I_toc.html)
-4. [*Fundamentals of Physics* por Halliday & Resnick](https://www.wiley.com/en-us/Fundamentals+of+Physics%2C+12th+Edition-p-9781119773511)
+1. [French, A.P. *Vibrations and Waves* (MIT Intro Physics Series)](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362) - Texto fundamental por excelencia de MIT, desglosando la física y las analogías eléctricas y acústicas con las cuerdas acopladas.
+2. [Elmore, W.C. & Heald, M.A. *Physics of Waves*](https://store.doverpublications.com/products/9780486649269) - Aterriza en la profundidad matemática para transiciones modales, Fourier, frentes e impedancias en sistemas acústicos.

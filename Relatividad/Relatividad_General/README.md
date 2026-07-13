@@ -209,30 +209,35 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### 🎓 Cursos y Clases Recomendadas (5-7 Recomendados)
-1. **[Stanford University: General Relativity (Leonard Susskind)](https://theoreticalminimum.com/courses/general-relativity/2012/fall)** - Excelente punto de partida para aprender sobre la geometría riemanniana, métricas y las ecuaciones de campo de Einstein de forma accesible.
-2. **[MIT OpenCourseWare: 8.962 General Relativity (Scott Hughes)](https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/)** - Curso integral de posgrado que cubre a fondo tensores, métricas de Schwarzschild, ondas gravitacionales y cosmología.
-3. **[Perimeter Institute: General Relativity Courses](https://perimeterinstitute.ca/training/perimeter-scholars-international/psi-lectures)** - Múltiples cursos ofrecidos por investigadores de primer nivel sobre la estructura causal, horizontes de eventos y gravedad cuántica.
-4. **[International Centre for Theoretical Sciences (ICTS): General Relativity](https://www.youtube.com/playlist?list=PL04QVxpjcnjjB7Qx7xJtd9Y7X8iYx5n0z)** - Clases en video de alta calidad sobre la formulación geométrica de la gravedad.
-5. **[Coursera: Astrophysics and General Relativity](https://www.coursera.org/learn/general-relativity)** - Variedad de cursos modulares impartidos por diferentes universidades explorando los aspectos astrofísicos.
-6. **[PBS Space Time (YouTube)](https://www.youtube.com/playlist?list=PLsPUh22kYmNBl4h0i4mC51829e_jT-0c1)** - Serie exhaustiva sobre el espacio-tiempo, la métrica y cómo los objetos verdaderamente caen en un campo gravitatorio curvo.
-7. **[Date un Vlog / Javier Santaolalla (YouTube)](https://www.youtube.com/c/DateunVlog)** - Para construir intuición física fundamental sobre por qué la gravedad no es una fuerza, previo a introducir las matemáticas pesadas.
+### 🎓 Cursos y Clases Recomendadas
+1. **[Stanford University: General Relativity (Leonard Susskind)](https://theoreticalminimum.com/courses/general-relativity/2012/fall)** - Un excelente punto de partida que introduce tensores y geometría de Riemann paso a paso para estudiantes sin formación matemática avanzada previa.
+2. **[MIT OpenCourseWare: 8.962 General Relativity (Scott Hughes)](https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/)** - Curso de nivel de posgrado extremadamente completo. Aborda derivaciones complejas del tensor de curvatura de Riemann, la solución de Schwarzschild y la emisión de ondas gravitacionales.
+3. **[Perimeter Institute: General Relativity (PSI Lectures)](https://pirsa.org/)** - Diversas clases magistrales de nivel avanzado centradas en estructuras causales, el diagrama de Penrose-Carter, horizontes de sucesos y agujeros negros rotatorios (solución de Kerr).
+4. **[NPTEL: General Theory of Relativity](https://nptel.ac.in/courses/115/106/115106059/)** - Un curso profundo en matemáticas, cubriendo derivadas covariantes, la conexión afín y el formalismo de tetradas.
 
-### 📝 Artículos y Simulaciones Interesantes (8-10 Recomendados)
-1. **Simulador**: [Black Hole Simulator / Ray Tracing](http://sirxemic.github.io/Interstellar/) - Visualización interactiva del trazado de rayos alrededor de un agujero negro de Schwarzschild y de Kerr.
-2. **Simulador**: [Gravity Simulator (Test of Relativity)](https://testofrelativity.com/) - Herramientas para visualizar cómo las masas deforman el espacio en un modelo bidimensional (análogo elástico).
-3. **Simulador**: [LIGO Gravitational Wave Observatory](https://www.ligo.org/) - Datos interactivos, audios de los "chirps" y animaciones de la fusión de agujeros negros.
-4. **Living Reviews in Relativity**: [Journal](https://link.springer.com/journal/41114) - La revista de mayor impacto con revisiones detalladas y gratuitas de expertos mundiales en diversas áreas de relatividad general.
-5. **Wikipedia**: [Ecuaciones del Campo de Einstein](https://es.wikipedia.org/wiki/Ecuaciones_del_campo_de_Einstein) - Desglose detallado componente por componente de la ecuación fundamental.
-6. **Wikipedia**: [Métrica de Schwarzschild](https://es.wikipedia.org/wiki/M%C3%A9trica_de_Schwarzschild) - La primera solución exacta a las Ecuaciones de Einstein y la base para estudiar agujeros negros no rotatorios.
-7. **Scholarpedia**: [General Relativity](http://www.scholarpedia.org/article/General_relativity) - Enciclopedia curada por expertos sobre los cimientos matemáticos de la teoría.
-8. **Artículo Histórico**: [The Foundation of the General Theory of Relativity (1916)](https://einsteinpapers.press.princeton.edu/) - Traducción de la obra maestra fundacional de Albert Einstein.
-9. **Quanta Magazine**: [Black Holes & General Relativity](https://www.quantamagazine.org/physics/) - Reportajes actualizados sobre la frontera del conocimiento (paradoja de la información, entrelazamiento y ER=EPR).
-10. **Stanford Encyclopedia of Philosophy**: [Hole Argument (El Argumento del Agujero)](https://plato.stanford.edu/entries/spacetime-holearg/) - Un fascinante problema histórico-filosófico con el que luchó Einstein al desarrollar las ecuaciones covariantes.
+### 📝 Artículos Científicos Históricos y Avanzados
+
+1. **Die Grundlage der allgemeinen Relativitätstheorie (Los fundamentos de la Teoría de la Relatividad General)**  
+   *Albert Einstein (1916)*. [Annalen der Physik, 354(7), 769-822](https://onlinelibrary.wiley.com/doi/10.1002/andp.19163540702).  
+   **Importancia Teórica:** La presentación maestra, estructurada y completa de la Relatividad General tras años de intentos fallidos ("el argumento del agujero"). Eleva el Principio de Equivalencia a una formulación geométrica covariante.  
+   **Fondo Matemático:** Introduce las Ecuaciones de Campo de Einstein que acoplan la geometría del espacio-tiempo con el contenido de energía-impulso (materia):
+   $$ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} $$
+   **Implicaciones Físicas:** Define la gravedad como curvatura y no como fuerza newtoniana; logra derivar analíticamente la precesión anómala del perihelio de Mercurio y predice la deflexión de la luz, ambos confirmados observacionalmente.
+
+2. **Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie (Sobre el campo gravitacional de una masa puntual según la teoría de Einstein)**  
+   *Karl Schwarzschild (1916)*. [Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften, 189-196](https://arxiv.org/abs/physics/9905030). *(Traducción al inglés en arXiv)*.  
+   **Importancia Teórica:** Publicado pocas semanas después del artículo de Einstein (y poco antes de la muerte de Schwarzschild en la Primera Guerra Mundial), representa la primera solución exacta no trivial a las Ecuaciones de Einstein en el vacío ($T_{\mu\nu}=0$).  
+   **Fondo Matemático:** Deriva la métrica esféricamente simétrica y estática para una masa puntual $M$, revelando el "radio de Schwarzschild" $r_s = 2GM/c^2$:
+   $$ ds^2 = \left(1 - \frac{r_s}{r}\right) c^2 dt^2 - \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 - r^2 d\Omega^2 $$
+   **Implicaciones Físicas:** Introduce matemáticamente el concepto de singularidad gravitacional y horizonte de sucesos, sentando las bases teóricas de la física de los agujeros negros, mucho antes de que se entendiera su posibilidad física.
+
+3. **Observation of Gravitational Waves from a Binary Black Hole Merger (GW150914)**  
+   *B. P. Abbott et al. (LIGO Scientific Collaboration) (2016)*. [Physical Review Letters, 116(6), 061102](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102).  
+   **Importancia Teórica:** La primera observación directa de ondas gravitacionales, cien años después de su predicción por Einstein en la aproximación de campo débil de RG.  
+   **Fondo Matemático:** Las ondas se comportan como perturbaciones espaciales $h_{\mu\nu}$ sobre una métrica de fondo plana $\eta_{\mu\nu}$ que satisfacen una ecuación de onda linealizada $\Box \bar{h}_{\mu\nu} = 0$ (en el calibre armónico en el vacío). La señal "chirp" coincide milimétricamente con las simulaciones de Relatividad Numérica de la fusión orbital completa y "ringdown" de dos agujeros negros masivos.  
+   **Implicaciones Físicas:** Confirma de forma concluyente la existencia de agujeros negros estelares binarios, la radiación gravitacional transportando energía según la fórmula del cuadrupolo, e inicia la era de la astronomía multi-mensajero.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. **[Bernard F. Schutz - A First Course in General Relativity](https://www.cambridge.org/highereducation/books/a-first-course-in-general-relativity/94B2E0D6528A32A17EFB738C2ACAEFDE)** - Ampliamente considerado como el mejor libro introductorio para estudiantes de pregrado; muy claro en el desarrollo matemático y cálculo tensorial.
-2. **[James B. Hartle - Gravity: An Introduction to Einstein's General Relativity](https://www.pearson.com/en-us/subject-catalog/p/gravity-an-introduction-to-einsteins-general-relativity/P200000004543/9780805386622)** - Adopta un enfoque "physics first", enseñando aplicaciones físicas (agujeros negros, cosmología) utilizando métricas dadas antes de sumergirse en la geometría diferencial pesada.
-3. **[Sean M. Carroll - Spacetime and Geometry: An Introduction to General Relativity](https://www.cambridge.org/highereducation/books/spacetime-and-geometry/1F2F2D1F6E20700B025C6BE60037BD62)** - Un excelente texto puente entre el pregrado y el posgrado, moderno, intuitivo y riguroso.
-4. **[Robert M. Wald - General Relativity](https://press.uchicago.edu/ucp/books/book/chicago/G/bo5952261.html)** - El estándar de oro para los cursos de posgrado. Altamente matemático, riguroso y abstracto, utilizando la notación moderna libre de índices y formas diferenciales.
-5. **[Charles W. Misner, Kip S. Thorne, John Archibald Wheeler - Gravitation (MTW)](https://press.princeton.edu/books/hardcover/9780691177793/gravitation)** - El libro enciclopédico de referencia de 1973 (apodado "la guía telefónica" por su tamaño). Profundo, poético, con abundantes diagramas y un enfoque geométrico inigualable.
+1. **Sean M. Carroll - [Spacetime and Geometry: An Introduction to General Relativity (Cambridge, 2019)](https://www.cambridge.org/highereducation/books/spacetime-and-geometry/1F2F2D1F6E20700B025C6BE60037BD62)** - El equilibrio perfecto entre accesibilidad intuitiva y rigor matemático de alto nivel, ideal para cursos modernos de posgrado o pregrado avanzado.
+2. **Bernard F. Schutz - [A First Course in General Relativity (Cambridge, 2009)](https://www.cambridge.org/highereducation/books/a-first-course-in-general-relativity/94B2E0D6528A32A17EFB738C2ACAEFDE)** - La recomendación más sólida para el primer acercamiento matemático; es sumamente cuidadoso en la enseñanza del cálculo tensorial.
+3. **Charles W. Misner, Kip S. Thorne, John Archibald Wheeler - [Gravitation (Princeton University Press, 1973)](https://press.princeton.edu/books/hardcover/9780691177793/gravitation)** - Conocida coloquialmente como "MTW" (o "el ladrillo"). Un clásico monumental, enciclopédico y muy geométrico (usando formas diferenciales) que no ha perdido vigencia en su poder conceptual.

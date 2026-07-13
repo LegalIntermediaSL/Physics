@@ -209,23 +209,28 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[Introduction to Crystallography (MIT OCW)](https://ocw.mit.edu):** Conceptos básicos y notación.
-2. **[Solid State Chemistry (edX)](https://www.edx.org):** Para entender cómo se forman los cristales.
-3. **[Diffraction and Symmetry (Coursera)](https://www.coursera.org):** Enfoque práctico sobre simetrías y grupos puntuales.
-4. **[NPTEL Crystallography](https://nptel.ac.in):** Estudio riguroso de índices de Miller y redes de Bravais.
-5. **[Advanced Structural Analysis (Stanford online)](https://online.stanford.edu):** Profundización en difracción de electrones y neutrones.
+1. **[MIT OCW: 3.012 Fundamentals of Materials Science](https://ocw.mit.edu/courses/3-012-fundamentals-of-materials-science-fall-2005/)**: Un curso profundo sobre termodinámica y estructura de materiales, cubriendo los fundamentos de la cristalografía, simetrías y redes de Bravais.
+2. **[NPTEL: Solid State Physics](https://nptel.ac.in/courses/115105099)**: Este curso en línea del Instituto Indio de Tecnología cubre de manera rigurosa la difracción de rayos X, la red recíproca y los grupos espaciales.
+3. **[Coursera: Materials Science: 10 Things Every Engineer Should Know](https://www.coursera.org/learn/materials-science)**: Aunque introductorio, ofrece un excelente punto de partida conceptual sobre cómo la estructura cristalina dicta las propiedades de los materiales.
 
 ### Artículos y Simulaciones
-1. **[VESTA Software](https://jp-minerals.org/vesta/en/):** Simulador y visualizador de estructuras cristalinas en 3D.
-2. **[PhET Crystal Structures](https://phet.colorado.edu):** Simulaciones interactivas para entender empaquetamiento compacto.
-3. **[Bilbao Crystallographic Server](https://www.cryst.ehu.es/):** Base de datos y herramientas de simetría.
-4. **["Crystallography of Quasicrystals" (Steinhardt)](https://arxiv.org):** Artículo seminal sobre cristales no periódicos.
-5. **[Crystallography Open Database (COD)](http://www.crystallography.net/cod/):** Catálogo de estructuras cristalinas reales.
-6. **[Materials Project](https://nextgen.materialsproject.org/):** Base de datos para ver celdas unitarias calculadas con DFT.
-7. **["Bragg's Law in 21st Century" (Physics Today)](https://physicstoday.scitation.org):** Artículo moderno sobre el impacto de la cristalografía.
-8. **[CrystalMaker](https://www.crystalmaker.com/):** Software (con versiones demo) para construir y visualizar redes animadas.
+1. **["Crystallography of Quasicrystals" por Steinhardt et al.](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.53.2477)**
+   - **Importancia Teórica:** Este artículo revolucionó la comprensión de la periodicidad espacial al introducir el concepto de cuasicristales, estructuras que poseen un orden de largo alcance pero carecen de simetría traslacional.
+   - **Fondo Matemático:** El marco matemático utiliza transformadas de Fourier sobre redes cuasiperiódicas. Mientras que para un cristal clásico el factor de estructura $S(\mathbf{G})$ es no nulo solo para vectores de la red recíproca $\mathbf{G}$, en un cuasicristal, el conjunto de vectores de onda forma un módulo densamente poblado pero numerable de la forma:
+     $$ \mathbf{G} = \sum_{i=1}^d n_i \mathbf{b}_i $$
+     donde $d > 3$ es la dimensión del espacio supersimétrico en el cual el cuasicristal es una proyección, y $n_i \in \mathbb{Z}$.
+   - **Implicaciones Físicas:** Demuestra que la difracción con simetría icosaédrica (prohibida por los teoremas de restricción cristalográfica clásicos en 3D) es físicamente realizable, abriendo nuevos campos en el diseño de aleaciones metálicas con propiedades térmicas y de fricción exóticas.
+
+2. **["The Phase Problem in X-ray Crystallography" (Acta Crystallographica)](https://journals.iucr.org/a/issues/1990/01/00/a31034/)**
+   - **Importancia Teórica:** Analiza matemáticamente el "problema de la fase", el obstáculo fundamental en la resolución de estructuras cristalinas a partir de datos de difracción, ya que los detectores solo miden la intensidad (módulo al cuadrado) y pierden la fase de la onda dispersada.
+   - **Fondo Matemático:** La densidad de electrones $\rho(\mathbf{r})$ está dada por la transformada inversa de Fourier de los factores de estructura $F_{\mathbf{h}}$:
+     $$ \rho(\mathbf{r}) = \frac{1}{V} \sum_{\mathbf{h}} |F_{\mathbf{h}}| e^{i\phi_{\mathbf{h}}} e^{-2\pi i \mathbf{h} \cdot \mathbf{r}} $$
+     El experimento proporciona solo $|F_{\mathbf{h}}| \propto \sqrt{I_{\mathbf{h}}}$. Los métodos directos explotan desigualdades matemáticas y relaciones de probabilidad entre fases $\phi_{\mathbf{h}}$, como la relación de la triplete de fase de Hauptman y Karle:
+     $$ \phi_{\mathbf{h}} + \phi_{\mathbf{k}} + \phi_{-\mathbf{h}-\mathbf{k}} \approx 0 $$
+   - **Implicaciones Físicas:** La resolución de este problema permitió la cristalografía de macromoléculas biológicas complejas, incluyendo proteínas y el propio ADN, revolucionando la biología molecular moderna.
+
+3. **[VESTA (Visualization for Electronic and STructural Analysis)](https://jp-minerals.org/vesta/en/)**: Un programa de simulación avanzado de modelado en 3D para visualizar estructuras atómicas y densidades electrónicas, indispensable para estudios de ciencia de materiales.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Kittel, C. *Introduction to Solid State Physics*](https://archive.org) (Capítulos 1 y 2).
-2. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://archive.org).
-3. [Hammond, C. *The Basics of Crystallography and Diffraction*](https://global.oup.com).
+1. [Kittel, C. *Introduction to Solid State Physics* (8va ed.)](https://www.wiley.com/en-us/Introduction+to+Solid+State+Physics%2C+8th+Edition-p-9780471415268) - La biblia clásica de la materia condensada.
+2. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://www.cengage.com/c/solid-state-physics-1e-ashcroft/9780030839931/) - Un tratamiento más riguroso de la red recíproca y los grupos de simetría espacial.

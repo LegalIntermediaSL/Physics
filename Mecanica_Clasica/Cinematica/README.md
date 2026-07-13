@@ -216,27 +216,25 @@ plt.show()
 
 ## 📚 Recursos Específicos de Cinemática
 
-### 🎓 Cursos y Clases Recomendadas (5-7)
-1. **[MIT 8.01 - Kinematics (Walter Lewin)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-1-kinematics/)**: La primera semana del famoso curso, centrada en sistemas 1D y 2D y con una claridad asombrosa.
-2. **[Yale PHYS 200 - Lecture 2: Vectors in Multiple Dimensions](https://oyc.yale.edu/physics/phys-200/lecture-2)**: Tratamiento profundo de vectores en cinemática, con aplicaciones al movimiento 3D.
-3. **[Khan Academy - Movimiento Unidimensional y Bidimensional](https://es.khanacademy.org/science/physics/one-dimensional-motion)**: Práctica interactiva paso a paso para dominar gráficas y ecuaciones.
-4. **[Coursera - Kinematics and Dynamics (UPenn)](https://www.coursera.org/learn/robotics-kinematics)**: Curso específico sobre cómo modelar sistemas mecánicos y su movimiento espacial.
-5. **[edX - Classical Mechanics (MITx)](https://www.edx.org/course/mechanics-kinematics-and-dynamics)**: Módulos interactivos enfocados a la resolución de problemas cinemáticos avanzados.
-6. **[Física en Línea - Universidad de los Andes](https://fisica.uniandes.edu.co/)**: Módulos en español con simulaciones de trayectoria y problemas de encuentro de móviles.
+### 🎓 Cursos y Clases Recomendadas
+1. **[MIT 8.01: Classical Mechanics (Walter Lewin, Fall 1999)](https://ocw.mit.edu/courses/8-01-physics-i-classical-mechanics-fall-1999/)**: Curso legendario que introduce la cinemática en 1D, 2D y 3D con demostraciones experimentales impecables.
+2. **[Stanford PHYS 41: Mechanics](https://physics.stanford.edu/news/phys-41-mechanics)**: Abordaje más profundo con enfoque en cálculo vectorial avanzado aplicable a sistemas de coordenadas curvilíneas.
+3. **[edX - Classical Mechanics (MITx 8.01.1x)](https://www.edx.org/course/mechanics-kinematics-and-dynamics)**: Módulos interactivos y evaluaciones rigurosas de la cinemática del punto.
 
-### 📝 Artículos, Simulaciones e Interactivos (8-10)
-1. **Artículo**: [Galileo's Experiments on Falling Bodies (Scholarpedia)](http://www.scholarpedia.org/article/Galileo%27s_experiments_on_falling_bodies) - Análisis histórico de los planos inclinados.
-2. **Artículo**: [Ecuación de Torricelli y su deducción](https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Torricelli) - Historia y uso de las fórmulas independientes del tiempo.
-3. **Simulador**: [PhET - Movimiento de un Proyectil](https://phet.colorado.edu/es/simulations/projectile-motion) - Ajusta masa, arrastre aerodinámico y gravedad de proyectiles.
-4. **Simulador**: [PhET - El Hombre Móvil](https://phet.colorado.edu/es/simulations/moving-man) - Clave para intuir gráficas de posición, velocidad y aceleración en el tiempo.
-5. **Simulador**: [FísicaLab - Cinemática](https://www.fisicalab.com/tema/cinematica-conceptos) - Problemas interactivos y animaciones de movimientos MRU/MRUA.
-6. **Video**: [The Physics of Bullet Drop (YouTube)](https://www.youtube.com/watch?v=cxvsHNRXLjw) - La independencia de ejes visualizada en situaciones de alcance extremo.
-7. **Artículo**: [Kinematics of Mechanisms (HyperPhysics)](http://hyperphysics.phy-astr.gsu.edu/hbase/kinm.html) - Cinemática aplicada al mundo real (engranajes, levas, poleas).
-8. **Simulador**: [GeoGebra - Tiro Parabólico Interactivo](https://www.geogebra.org/m/eDkG6vG9) - Applets de la comunidad para ver los vectores de velocidad variando su componente en Y.
+### 📝 Artículos, Publicaciones y Teoría Avanzada
+1. **[The Kinematics of an Electron (Dirac, 1928)](https://doi.org/10.1098/rspa.1928.0023)**
+   - *Importancia Teórica*: Aunque es un documento de mecánica cuántica relativista, este "paper" seminal establece cómo la cinemática del punto debe modificarse drásticamente bajo transformaciones de Lorentz.
+   - *Contexto Matemático*: Introduce formalmente los espinores. En cinemática clásica, la posición $\vec{r}(t)$ se transforma bajo el grupo de Galileo. Dirac muestra que las ecuaciones cinemáticas requieren matrices complejas $\alpha_i, \beta$ anticonmutativas para preservar la invarianza invariante de Lorentz, $ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2$.
+   - *Implicaciones*: La cinemática clásica falla a altas velocidades $v \to c$.
+2. **[On the Kinematics of Rigid Bodies (Euler, 1776)](https://scholarlycommons.pacific.edu/euler-works/478/)**
+   - *Importancia Teórica*: Fundacional para todo el análisis cinemático de rotaciones tridimensionales.
+   - *Contexto Matemático*: Euler demuestra el teorema de rotación, el cual estipula que cualquier desplazamiento cinemático de un cuerpo rígido con un punto fijo se puede describir como una rotación unívoca por un ángulo $\theta$ sobre un eje fijo $\hat{n}$. Matricialmente, toda matriz de rotación ortogonal propia $\mathbf{R} \in SO(3)$ cumple $\det(\mathbf{R}) = +1$ y tiene al menos un valor propio $\lambda = 1$.
+   - *Implicaciones*: Sienta las bases para las ecuaciones dinámicas rotacionales y la robótica moderna.
+3. **[Geometry of Time and Space in Kinematics (Minkowski, 1908)](https://en.wikisource.org/wiki/Translation:Space_and_Time)**
+   - *Importancia Teórica*: La cinemática adquiere su forma geométrica suprema.
+   - *Contexto Matemático*: Unifica el espacio $\mathbb{R}^3$ y el tiempo $t$ en una variedad seudoeuclidiana de 4 dimensiones $\mathbb{R}^{1,3}$. El cuadrivector posición se define como $x^\mu = (ct, \vec{r})$, y la cuadrivelocidad es $U^\mu = \frac{dx^\mu}{d\tau} = \gamma (c, \vec{v})$, donde $d\tau = dt/\gamma$ es el tiempo propio. La magnitud invariante es $U^\mu U_\mu = c^2$.
+   - *Implicaciones*: Elimina la noción de un tiempo absoluto universal.
 
 ### 📖 Referencias Útiles y Bibliografía
-- **[Classical Mechanics por Herbert Goldstein](https://en.wikipedia.org/wiki/Classical_Mechanics_(Goldstein_book))**: Obra fundamental; aunque se enfoca en mecánica analítica, los capítulos iniciales asientan bases formales.
-- **[Classical Mechanics por John R. Taylor](https://uscibooks.aip.org/books/classical-mechanics/)**: Excelente texto para transición entre física general y teórica. Muy claro en cinemática polar y 3D.
-- **[Classical Dynamics of Particles and Systems por Stephen T. Thornton y Jerry B. Marion](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Conocido como el "Marion", incluye un tratamiento excepcionalmente claro sobre sistemas de partículas.
-- **[Física Universitaria por Sears y Zemansky](https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000003295/9780135159552)**: El libro base estándar con cientos de problemas propuestos de cinemática de nivel básico a intermedio.
-- **[The Feynman Lectures on Physics (Vol 1)](https://www.feynmanlectures.caltech.edu/I_toc.html)**: Para una discusión filosófica e intuitiva sobre el tiempo, el espacio y la relatividad de Galileo.
+- **[Classical Mechanics - H. Goldstein, C. Poole, J. Safko](https://www.pearson.com/en-us/subject-catalog/p/classical-mechanics/P200000003328/9780201657029)**: El texto estándar para pregrado y posgrado en cinemática analítica.
+- **[Introduction to Classical Mechanics - D. Morin (Cambridge University Press)](https://www.cambridge.org/highereducation/books/introduction-to-classical-mechanics/31CB8B93623D3F14E1EE98B223D1DE47)**: Enfoque riguroso y matemático con ejercicios complejos sobre movimiento relativo y coordenadas curvilíneas.

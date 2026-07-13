@@ -194,25 +194,27 @@ plt.tight_layout()
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas
-1. [MIT 8.05 Quantum Physics II (Barton Zwiebach)](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/): La primera mitad del curso enseña rigurosamente la notación de Dirac, espacios vectoriales complejos y formalismo de operadores hermitianos.
+1. [MIT OCW 8.05 Quantum Physics II (Barton Zwiebach)](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/): La primera mitad del curso enseña rigurosamente la notación de Dirac, espacios vectoriales complejos y formalismo de operadores hermitianos.
 2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Primeros videos de la serie que arrancan directamente desde el enfoque de espacios vectoriales usando el espín como motivación principal.
-3. [Perimeter Institute (PSI) Lectures](https://perimeterinstitute.ca/training/perimeter-scholars-international/lectures): Cursos de maestría sobre fundamentos matemáticos de la Cuántica, con énfasis en el álgebra de Hilbert y los operadores.
-4. [NPTEL - Quantum Mechanics I (Prof. P. Ramadevi)](https://nptel.ac.in/courses/115106066): Una aproximación sistemática y matemática al formalismo, explicando operadores, conmutadores y representaciones matriciales.
-5. [Oxford University Quantum Physics (James Binney)](https://podcasts.ox.ac.uk/series/quantum-mechanics): Lecciones que clarifican la conexión profunda entre los operadores y los observables físicos.
-6. [Coursera - Mathematics for Machine Learning/Quantum Mechanics](https://www.coursera.org/specializations/mathematics-machine-learning): Cursos de revisión de Álgebra Lineal que cubren productos internos y diagonalización de matrices.
+3. [NPTEL - Quantum Mechanics I (Prof. P. Ramadevi)](https://nptel.ac.in/courses/115106066): Una aproximación sistemática y matemática al formalismo, explicando operadores, conmutadores y representaciones matriciales.
 
-### 📝 Artículos e Interactivos Interesantes
-1. **Wikipedia:** [Notación Bra-Ket](https://es.wikipedia.org/wiki/Notaci%C3%B3n_bra-ket) - Guía completa para familiarizarse visualmente con las reglas de cálculo de Dirac.
-2. **Wikipedia:** [Espacio de Hilbert](https://es.wikipedia.org/wiki/Espacio_de_Hilbert) - Definición formal de convergencia, producto interno y topología.
-3. **Stanford Encyclopedia of Philosophy:** [The Mathematical Formalism of Quantum Mechanics](https://plato.stanford.edu/entries/qt-issues/#MatFor) - Análisis riguroso del porqué se escogió este andamiaje matemático.
-4. **HyperPhysics:** [Operators in Quantum Mechanics](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/qmoper.html) - Tablas resumiendo los operadores fundamentales (momento, posición, energía, etc.).
-5. **Visualizando Espacios Complejos (3Blue1Brown):** [Essence of Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra) - Vital para entender transformaciones lineales, eigenvectors y eigenvalues.
-6. **Scholarpedia:** [Dirac Notation](http://www.scholarpedia.org/article/Dirac_notation) - Artículo de expertos sobre la flexibilidad y poder de esta notación universal.
-7. **Documental Histórico:** [Quantum Mechanics History](https://www.youtube.com/watch?v=CBrsWPCp_rs) - Cualquiera sobre el trabajo conjunto e independiente de Heisenberg, Schrödinger y Dirac.
-8. **Quanta Magazine:** [Quantum Mechanics Articles](https://www.quantamagazine.org/physics/) - Artículos divulgativos sobre Entrelazamiento y Geometría del Espacio de Hilbert.
+### 📝 Artículos Científicos Clave
+1. **Dirac, P. A. M. (1939). "A new notation for quantum mechanics"**. *Mathematical Proceedings of the Cambridge Philosophical Society*, 35(3), 416-418. [DOI: 10.1017/S030500410002118X](https://doi.org/10.1017/S030500410002118X)
+   *Importancia Teórica y Matemática:* Introduce formalmente la notación *Bra-Ket* para representar vectores en el espacio de Hilbert y su dual. Define los productos internos y externos algebraicamente:
+   $$ \langle \phi | \psi \rangle \in \mathbb{C}, \quad |\psi\rangle \langle \phi | = \hat{O} $$
+   *Implicaciones Físicas:* Simplificó drásticamente la manipulación de operadores y demostró la invarianza de la mecánica cuántica ante cambios de base, unificando la mecánica matricial y ondulatoria.
+
+2. **von Neumann, J. (1927). "Mathematische Begründung der Quantenmechanik"**. *Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen*, 1927, 1-57. [Link GDZ](https://gdz.sub.uni-goettingen.de/id/PPN252457811_1927)
+   *Importancia Teórica y Matemática:* Establece el marco riguroso de la teoría cuántica usando espacios de Hilbert de dimensión infinita. Formula el teorema espectral para operadores autoadjuntos:
+   $$ \hat{A} = \int \lambda \, dE(\lambda) $$
+   *Implicaciones Físicas:* Puso la mecánica cuántica sobre bases matemáticas inexpugnables, definiendo precisamente qué constituye un "observable" (operador hermitiano acotado o no acotado denso) y un estado físico (operador de densidad).
+
+3. **Robertson, H. P. (1929). "The Uncertainty Principle"**. *Phys. Rev.*, 34, 163-164. [DOI: 10.1103/PhysRev.34.163](https://doi.org/10.1103/PhysRev.34.163)
+   *Importancia Teórica y Matemática:* Derivación general del principio de incertidumbre a partir de las relaciones de conmutación empleando la desigualdad de Cauchy-Schwarz en espacios de Hilbert:
+   $$ \sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right| $$
+   *Implicaciones Físicas:* Demuestra que la incertidumbre de Heisenberg no es un artefacto de los instrumentos de medición ni exclusivo de posición/momento, sino una propiedad fundamental del álgebra no conmutativa de cualquier par de observables incompatibles.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulo 1). El mejor resumen de álgebra lineal en un espacio vectorial complejo para físicos de todo el mercado.
-2. **Libro**: [Modern Quantum Mechanics - J.J. Sakurai](https://www.cambridge.org/highereducation/books/modern-quantum-mechanics/144AE26BDEFB9A7CB06C0CD0696D12CA) (Capítulo 1). Se centra de inmediato en el formalismo abstracto usando el experimento de Stern-Gerlach.
-3. **Libro**: [The Principles of Quantum Mechanics - Paul Dirac](https://global.oup.com/academic/product/the-principles-of-quantum-mechanics-9780198520115). La obra maestra original donde se introdujo por primera vez la notación bra-ket.
-4. **Libro**: [Mathematical Foundations of Quantum Mechanics - John von Neumann](https://press.princeton.edu/books/paperback/9780691178578/mathematical-foundations-of-quantum-mechanics). Para aquellos interesados en el rigor matemático absoluto de la teoría de operadores.
+1. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulo 1). Resumen excelente del álgebra lineal.
+2. **Libro**: [Mathematical Foundations of Quantum Mechanics - John von Neumann](https://press.princeton.edu/books/paperback/9780691178578/mathematical-foundations-of-quantum-mechanics). 
+3. **Libro**: [The Principles of Quantum Mechanics - Paul Dirac](https://global.oup.com/academic/product/the-principles-of-quantum-mechanics-9780198520115). La obra fundacional original.

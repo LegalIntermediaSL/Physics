@@ -354,25 +354,28 @@ plt.tight_layout()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Atomic and Optical Physics I - MIT OCW](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/)
-2. [Atomic and Optical Physics II - MIT OCW](https://ocw.mit.edu/courses/8-422-atomic-and-optical-physics-ii-spring-2013/)
-3. [Quantum Optics - École Polytechnique (Coursera)](https://www.coursera.org/learn/quantum-optics-1)
-4. [Laser Cooling and Trapping - UMD Physics](https://jqi.umd.edu/research/laser-cooling-and-trapping)
-5. [Ultracold Quantum Gases - Collège de France](https://www.college-de-france.fr/site/en-jean-dalibard/index.htm)
+### 🎓 Cursos y Clases Recomendadas
+1. [MIT OCW 8.421 Atomic and Optical Physics I (Wolfgang Ketterle)](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/): Curso profundo impartido por un Premio Nobel sobre las interacciones átomo-fotón, osciladores de Rabi y fuerzas dispersivas.
+2. [MIT OCW 8.422 Atomic and Optical Physics II](https://ocw.mit.edu/courses/8-422-atomic-and-optical-physics-ii-spring-2013/): Continuación enfocada en el enfriamiento láser, atrapamiento y el estudio de los gases degenerados de Bose y Fermi.
+3. [Collège de France - Ultracold Quantum Gases (Jean Dalibard)](https://www.college-de-france.fr/site/en-jean-dalibard/index.htm): Conferencias magistrales avanzadas sobre fluidos cuánticos y gases ultrafríos.
 
-### Artículos y Simulaciones
-1. [Chu, S. (1998). *The manipulation of neutral particles*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.70.685)
-2. [Cohen-Tannoudji, C. (1998). *Manipulating atoms with photons*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.70.707)
-3. [Phillips, W. D. (1998). *Laser cooling and trapping of neutral atoms*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.70.721)
-4. [Ketterle, W. (2002). *When atoms behave as waves: Bose-Einstein condensation and the atom laser*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.74.1131)
-5. [Cornell, E. A., & Wieman, C. E. (2002). *Bose-Einstein condensation in a dilute gas*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.74.875)
-6. [PhET Simulation: Quantum Interference](https://phet.colorado.edu/en/simulations/quantum-interference)
-7. [PhET Simulation: Lasers](https://phet.colorado.edu/en/simulations/lasers)
-8. [Bloch, I., Dalibard, J., & Zwerger, W. (2008). *Many-body physics with ultracold gases*. Rev. Mod. Phys.](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.80.885)
+### 📝 Artículos Científicos Clave
+1. **Anderson, M. H., Ensher, J. R., Matthews, M. R., Wieman, C. E., & Cornell, E. A. (1995). "Observation of Bose-Einstein Condensation in a Dilute Atomic Vapor"**. *Science*, 269(5221), 198-201. [DOI: 10.1126/science.269.5221.198](https://doi.org/10.1126/science.269.5221.198)
+   *Importancia Teórica y Matemática:* Demuestra por primera vez un BEC en un gas térmico tridimensional confinado armónicamente. La dinámica obedece la teoría de campo medio de Gross-Pitaevskii:
+   $$ \left( -\frac{\hbar^2}{2m}\nabla^2 + V_{\text{ext}} + g|\psi|^2 \right) \psi = \mu \psi $$
+   *Implicaciones Físicas:* Premio Nobel de Física en 2001. Comprobó la predicción de Einstein sobre el surgimiento de coherencia macroscópica masiva bajo $T_c \approx 170$ nK, instaurando un sistema modelo para la simulación de física de materia condensada.
+
+2. **Chu, S. (1998). "The manipulation of neutral particles"**. *Rev. Mod. Phys.*, 70(3), 685-706. [DOI: 10.1103/RevModPhys.70.685](https://doi.org/10.1103/RevModPhys.70.685)
+   *Importancia Teórica y Matemática:* Artículo de conferencia Nobel que destila la base de las fuerzas de dispersión atómicas y los coeficientes de fricción sub-Doppler:
+   $$ F_{\text{Doppler}} \approx -4\hbar k^2 \frac{I}{I_{\text{sat}}} \frac{-2\Delta/\Gamma}{(1+(2\Delta/\Gamma)^2)^2} v \equiv -\alpha v $$
+   *Implicaciones Físicas:* Desarrolló conceptualmente el mecanismo de la "melaza óptica" tridimensional, permitiendo enfriar gases neutrales hasta la barrera del límite Doppler e infranqueando el camino al condensado de Bose-Einstein.
+
+3. **Raab, E. L., Prentiss, M., Cable, A., Chu, S., & Pritchard, D. E. (1987). "Trapping of Neutral Sodium Atoms with Radiation Pressure"**. *Phys. Rev. Lett.*, 59(23), 2631-2634. [DOI: 10.1103/PhysRevLett.59.2631](https://doi.org/10.1103/PhysRevLett.59.2631)
+   *Importancia Teórica y Matemática:* Presenta el desarrollo de la Trampa Magneto-Óptica (MOT), uniendo los efectos radiativos (enfriamiento Doppler) con un gradiente cuadrupolar magnético:
+   $$ \Delta_{\text{eff}}^{\pm} = \Delta \mp kv \mp \frac{\mu_B g_F}{\hbar} b' z $$
+   *Implicaciones Físicas:* La MOT generó simultáneamente confinamiento espacial ($-\kappa z$) y disipación de momento ($-\alpha v$). Hoy en día representa el estándar dorado en los laboratorios de átomos fríos y cuánticos.
 
 ### 📖 Referencias Útiles y Bibliografía
-- [Foot, C. J. (2005). *Atomic Physics*. Oxford University Press.](https://global.oup.com/academic/product/atomic-physics-9780198506966)
-- [Metcalf, H. J., & van der Straten, P. (1999). *Laser Cooling and Trapping*. Springer.](https://link.springer.com/book/10.1007/978-1-4612-1470-0)
-- [Pethick, C. J., & Smith, H. (2002). *Bose-Einstein Condensation in Dilute Gases*. Cambridge University Press.](https://www.cambridge.org/core/books/boseeinstein-condensation-in-dilute-gases/9B70C6558661E6DE9A1C63B4895D31D2)
-- [Scully, M. O., & Zubairy, M. S. (1997). *Quantum Optics*. Cambridge University Press.](https://www.cambridge.org/core/books/quantum-optics/2C0485908FA5E1E66678C62A860F5E8E)
+1. **Libro**: [Foot, C. J. (2005). *Atomic Physics*. Oxford University Press](https://global.oup.com/academic/product/atomic-physics-9780198506966). Referencia definitiva para enfriamiento láser y trampa magnetoóptica.
+2. **Libro**: [Metcalf, H. J., & van der Straten, P. (1999). *Laser Cooling and Trapping*. Springer](https://link.springer.com/book/10.1007/978-1-4612-1470-0).
+3. **Libro**: [Pethick, C. J., & Smith, H. (2002). *Bose-Einstein Condensation in Dilute Gases*. Cambridge University Press](https://www.cambridge.org/core/books/boseeinstein-condensation-in-dilute-gases/9B70C6558661E6DE9A1C63B4895D31D2). Deriva detalladamente la ecuación de Gross-Pitaevskii.

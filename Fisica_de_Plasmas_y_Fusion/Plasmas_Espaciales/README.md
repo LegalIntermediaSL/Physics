@@ -225,28 +225,37 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Space Plasma Physics - UCL](https://www.ucl.ac.uk)
-2. [Physics of the Solar Corona - UIO](https://www.uio.no)
-3. [Heliophysics Summer School - UCAR](https://cpaess.ucar.edu)
-4. [Space Weather: Observation and Modeling - Coursera](https://www.coursera.org)
-5. [Solar System Plasmas - University of Michigan](https://umich.edu)
-6. [Magnetospheric Physics - KTH](https://www.kth.se)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 16.55 Ionized Gases](https://ocw.mit.edu/courses/16-55-ionized-gases-fall-2014/)**
+   Cubre dinámicas de gases ionizados en ambientes espaciales, magnetosferas y propulsión.
+2. **[Heliophysics Summer School (UCAR)](https://cpaess.ucar.edu/heliophysics/summer-school)**
+   Seminarios y materiales de clase avanzados centrados explícitamente en el sistema Sol-Tierra y viento solar.
 
-### Artículos y Simulaciones
-1. [Parker, E. N. (1958). *Dynamics of the Interplanetary Gas and Magnetic Fields*. The Astrophysical Journal.](https://doi.org/10.1086/146503)
-2. [Dungey, J. W. (1961). *Interplanetary Magnetic Field and the Auroral Zones*. Physical Review Letters.](https://doi.org/10.1103/PhysRevLett.6.47)
-3. [Vasyliunas, V. M. (1975). *Theoretical models of magnetic field line merging*. Reviews of Geophysics.](https://doi.org/10.1029/RG013i001p00303)
-4. [Coroniti, F. V. (1985). *Space plasma physics*. Reviews of Geophysics.](https://doi.org/10.1029/RG023i002p00445)
-5. [Kivelson, M. G., & Russell, C. T. (1995). *Introduction to Space Physics*. Cambridge.](https://www.cambridge.org/core/books/introduction-to-space-physics/DEAB3782C7C43E24E677F21F64A0B85E)
-6. [CCMC - Community Coordinated Modeling Center](https://ccmc.gsfc.nasa.gov/) - Space weather models.
-7. [BATS-R-US](https://csem.engin.umich.edu/tools/swmf/bats-r-us.php) - Global MHD modeling of the magnetosphere.
-8. [Vlasiator](https://www.helsinki.fi/en/researchgroups/vlasiator) - Vlasov code for Earth's magnetosphere.
-9. [OpenGGCM](https://unh.edu) - Open Geospace General Circulation Model.
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Dynamics of the Interplanetary Gas and Magnetic Fields"** - *E. N. Parker (1958), The Astrophysical Journal 128, 664*  
+   [Link al artículo original (ApJ)](https://iopscience.iop.org/article/10.1086/146503)
+   
+   **Importancia Teórica y Relevancia:** 
+   El artículo paradigmático que predijo matemáticamente la existencia del Viento Solar. Parker demostró que la vasta atmósfera de la corona solar es insostenible en equilibrio estático y debe expandirse radialmente como un flujo transónico, llenando el medio interplanetario.
+   
+   **Contexto Matemático:** 
+   Al resolver la ecuación estacionaria de momento radial para un gas isotérmico gravitacional, encontró una topología de soluciones en el espacio de fases. La única curva que satisface las condiciones de contorno (baja velocidad en la corona e isobárica nula en el infinito) es la solución singular que atraviesa el punto crítico sónico $r_c = GM/2c_s^2$. La ecuación que la describe resulta:
+   $$ \left( u - \frac{c_s^2}{u} \right) \frac{du}{dr} = \frac{2 c_s^2}{r} - \frac{GM}{r^2} $$
+   Parker probó elegantemente que, si el plasma gana suficiente energía térmica en la corona para extender su perfil más allá de $r_c$, se produce una boquilla termodinámica de Laval gravitacional: se acelera desde un flujo subsónico a uno implacablemente supersónico lejos del sol, arrasando con los modelos previos estáticos del espacio interplanetario.
+
+2. **"Interplanetary Magnetic Field and the Auroral Zones"** - *J. W. Dungey (1961), Physical Review Letters 6, 47*  
+   [Link al artículo original (PRL)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.6.47)
+   
+   **Importancia Teórica y Relevancia:** 
+   Dungey introdujo el primer modelo coherente del acoplamiento topológico dinámico entre el Viento Solar y la magnetosfera de la Tierra: "El Ciclo de Dungey". Postuló que la reconexión magnética (corte y empalme) a macroescala era la causa fundamental detrás de las auroras y la convección del plasma ionosférico.
+   
+   **Contexto Matemático:** 
+   El artículo estableció topológicamente que cuando el Campo Magnético Interplanetario (IMF, acarreado por el viento solar) tiene un componente orientado hacia el sur (antiparalelo al campo diurno ecuatorial de la Tierra), se forma obligatoriamente un Punto-X neutral ($\mathbf{B}=0$) en la magnetopausa frontal. La inducción eléctrica global trans-magnetosférica impulsa plasma a través del separatrix por la deriva de convección:
+   $$ \mathbf{v}_E = \frac{\mathbf{E} \times \mathbf{B}}{B^2} $$
+   El flujo es barrido antisunward sobre los casquetes polares, almacenando flujo magnético y energía electromagnética de Poynting en las aletas de la vasta magnetocola. Allí, una segunda reconexión nocturna en la capa neutral lanza el plasma hacia atrás en dirección a la Tierra, bombardeando la atmósfera y detonando el óvalo auroral en el proceso de descarga.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Gurnett, D. A., & Bhattacharjee, A. (2005). *Introduction to Plasma Physics: With Space and Laboratory Applications*. Cambridge.](https://www.cambridge.org/core/books/introduction-to-plasma-physics/28DAA72AF30A4B4B9C8991206CC8C654)
-2. [Kivelson, M. G., & Russell, C. T. (1995). *Introduction to Space Physics*. Cambridge University Press.](https://www.cambridge.org/core/books/introduction-to-space-physics/DEAB3782C7C43E24E677F21F64A0B85E)
-3. [Baumjohann, W., & Treumann, R. A. (2012). *Basic Space Plasma Physics*. Imperial College Press.](https://www.worldscientific.com/worldscibooks/10.1142/p850)
-4. [Kallenrode, M.-B. (2004). *Space Physics: An Introduction to Plasmas and Particles in the Heliosphere and Magnetospheres*. Springer.](https://link.springer.com/book/10.1007/978-3-662-09419-3)
-5. [Parks, G. K. (2004). *Physics of Space Plasmas: An Introduction*. Westview Press.](https://www.taylorfrancis.com/books/mono/10.4324/9780429497534/physics-space-plasmas-george-parks)
+- Kivelson, M. G., & Russell, C. T. (1995). *Introduction to Space Physics*. Cambridge University Press.
+- Gurnett, D. A., & Bhattacharjee, A. (2005). *Introduction to Plasma Physics: With Space and Laboratory Applications*. Cambridge University Press.
+- Baumjohann, W., & Treumann, R. A. (2012). *Basic Space Plasma Physics*. Imperial College Press.

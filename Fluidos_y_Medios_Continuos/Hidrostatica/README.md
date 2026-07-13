@@ -146,29 +146,42 @@ plt.tight_layout()
 plt.show()
 ```
 
-## 📚 Recursos
-### Cursos Específicos
-1. ["Physics 101: Fluid Statics" - Coursera](https://www.coursera.org/learn/physics-101)
-2. ["Hydrostatics and Pneumatics" - NPTEL](https://nptel.ac.in/)
-3. ["Basic Fluid Mechanics: Statics" - MIT OCW](https://ocw.mit.edu/)
-4. ["Introduction to Oceanography and Hydrostatics" - edX](https://www.edx.org/)
-5. ["Hydraulic Engineering" - NPTEL](https://nptel.ac.in/courses/105105110)
-6. ["Atmospheric and Oceanic Fluid Dynamics" - Coursera](https://www.coursera.org/)
+## 📚 Recursos Específicos
+
+### Cursos Recomendados
+1. [Physics 101: Fluid Statics and Pascal's Principle (Coursera)](https://www.coursera.org/learn/physics-101)
+2. [Fluid Mechanics: Statics and Kinematics (edX)](https://www.edx.org/learn/fluid-mechanics)
+3. [Introductory Physics: Fluids (MIT OCW)](https://ocw.mit.edu/courses/physics/8-01sc-classical-mechanics-fall-2016/fluid-mechanics/)
 
 ### Artículos y Simulaciones
-1. ["On Floating Bodies" - Archimedes](https://en.wikipedia.org/wiki/On_Floating_Bodies)
-2. [PhET Interactive Simulations: "Under Pressure"](https://phet.colorado.edu/en/simulations/under-pressure)
-3. [PhET Interactive Simulations: "Buoyancy"](https://phet.colorado.edu/en/simulations/buoyancy)
-4. ["The Treatise on the Equilibrium of Liquids" - Blaise Pascal](https://archive.org/details/physicaltreatise00pasc)
-5. [Virtual Labs: Hydraulic Press Simulation](https://vlab.amrita.edu/?sub=1&brch=74&sim=1521&cnt=1)
-6. [CFD Online: Hydrostatic Pressure Profiles](https://www.cfd-online.com/)
-7. ["Stability of Floating Bodies" - Journal of Ship Research](https://sname.org/journal-of-ship-research)
-8. [NOAA: Atmospheric Hydrostatic Balance Models](https://www.noaa.gov/)
-9. ["Experimental Verification of Archimedes Principle" - Lab Guides](https://www.physicsclassroom.com/)
-10. [SimScale: Dam and Reservoir Static Pressure Simulations](https://www.simscale.com/projects/)
+1. **On Floating Bodies (Archimedes, c. 250 BC)**
+   - **Enlace:** [https://en.wikipedia.org/wiki/On_Floating_Bodies](https://en.wikipedia.org/wiki/On_Floating_Bodies)
+   - **Importancia Teórica:** El texto fundador de la hidrostática, estableció el famoso principio de empuje para objetos total o parcialmente sumergidos.
+   - **Fondo Matemático:** El principio de Arquímedes dictamina que la fuerza de flotación $F_B$ equivale al peso del fluido desplazado:
+     $$
+     F_B = \rho_{\text{fluido}} \cdot V_{\text{sumergido}} \cdot g
+     $$
+   - **Implicaciones Físicas:** Demuestra el equilibrio de fuerzas estáticas gravitacionales en medios continuos, aplicable universalmente a barcos, globos aerostáticos e isostasia geológica.
+
+2. **The Treatise on the Equilibrium of Liquids (Blaise Pascal, 1653)**
+   - **Enlace:** [https://archive.org/details/physicaltreatise00pasc](https://archive.org/details/physicaltreatise00pasc)
+   - **Importancia Teórica:** Formuló el Principio de Pascal, aclarando que en un fluido incompresible en reposo, cualquier variación de presión se transmite isotrópicamente sin atenuación.
+   - **Fondo Matemático:** Define la igualdad de tensiones isotrópicas:
+     $$
+     \Delta P_1 = \Delta P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2}
+     $$
+   - **Implicaciones Físicas:** Constituye la base física de la prensa hidráulica y la transmisión de potencia en la ingeniería civil, multiplicando la fuerza lineal mediante geometría de área.
+
+3. **Stability of Floating Bodies (Journal of Ship Research)**
+   - **Enlace:** [https://sname.org/journal-of-ship-research](https://sname.org/journal-of-ship-research)
+   - **Importancia Teórica:** Examina las condiciones rigurosas de equilibrio rotacional en el diseño hidroestático moderno.
+   - **Fondo Matemático:** La estabilidad depende de la posición relativa del metacentro $M$ y el centro de gravedad $G$. Para estabilidad asintótica de un ángulo pequeño $\theta$, el par restaurador $\tau$ obedece:
+     $$
+     \tau = W \cdot \overline{GM} \cdot \sin(\theta)
+     $$
+     donde $\overline{GM} > 0$ exige que el metacentro esté arriba de la gravedad.
+   - **Implicaciones Físicas:** Crucial para la arquitectura naval y el diseño de boyas oceanográficas frente a perturbaciones estocásticas de las olas marinas.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Fluid Mechanics* - L.D. Landau y E.M. Lifshitz](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
-2. [*Fluid Mechanics* - Pijush K. Kundu y Ira M. Cohen](https://www.amazon.com/Fluid-Mechanics-Pijush-K-Kundu/dp/012405935X)
-3. [*Fundamentals of Fluid Mechanics* - Bruce R. Munson](https://www.amazon.com/Fundamentals-Fluid-Mechanics-Bruce-Munson/dp/1118116135)
-4. [*Hydrodynamics* - Sir Horace Lamb](https://www.amazon.com/Hydrodynamics-Sir-Horace-Lamb/dp/0486602567)
+1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
+2. [Introduction to Fluid Mechanics (R.W. Fox, A.T. McDonald)](https://www.amazon.com/Fox-McDonalds-Introduction-Fluid-Mechanics/dp/1119616175)

@@ -188,25 +188,29 @@ if __name__ == '__main__':
 ## 📚 Recursos Específicos
 
 ### Cursos
-1. **[MIT OCW 8.231 - Physics of Solids](https://ocw.mit.edu):** Explora la estructura de la red recíproca con gran detalle matemático.
-2. **[Cristalografía y Simetría (Coursera)](https://www.coursera.org):** Para aprender a identificar grupos espaciales.
-3. **[Solid State Physics (NPTEL)](https://nptel.ac.in):** Excelentes clases magistrales enfocadas en difracción de rayos X y redes de Bravais.
-4. **[X-Ray Diffraction in Crystals (edX)](https://www.edx.org):** Técnicas experimentales e interpretación de difractogramas.
-5. **[Introduction to Crystallography (Oxford online materials)](https://www.ox.ac.uk):** Recursos interactivos y visuales para entender índices de Miller.
-6. **[Symmetry in Condensed Matter (Cambridge)](https://www.cam.ac.uk):** Un curso avanzado para usar la teoría de grupos aplicada a las redes.
+1. **[MIT OCW: 3.012 Fundamentals of Materials Science](https://ocw.mit.edu/courses/3-012-fundamentals-of-materials-science-fall-2005/)**: Un curso extenso sobre la estructura fundamental a nivel atómico y termodinámico.
+2. **[edX: Symmetry, Structure and Tensor Properties of Materials](https://www.edx.org/course/symmetry-structure-and-tensor-properties-of-materi)**: Detalla de manera magistral los grupos puntuales y espaciales en la cristalografía estructural.
+3. **[NPTEL: Solid State Physics](https://nptel.ac.in/courses/115105099)**: Módulo de física del estado sólido con un fuerte enfoque en las redes directas e inversas.
 
 ### Artículos y Simulaciones
-1. **[PhET Interactive Simulations - "Crystal Lattice"](https://phet.colorado.edu):** Simulación visual básica para ver arreglos atómicos.
-2. **[VESTA (Visualization for Electronic and STructural Analysis)](https://jp-minerals.org/vesta/en/):** Software indispensable para visualizar redes y densidades electrónicas.
-3. **[O-PTIR and X-Ray Scattering (Article)](https://pubs.acs.org):** Ejemplos recientes en caracterización estructural.
-4. **["The Discovery of X-Ray Diffraction" (W.L. Bragg, original papers)](https://www.nobelprize.org):** La historia y fundamentos físicos desde la fuente.
-5. **[Bilbao Crystallographic Server](https://www.cryst.ehu.es/):** Una herramienta online esencial para estudiar simetrías espaciales.
-6. **[Mercury (CSD)](https://www.ccdc.cam.ac.uk):** Simulación y exploración estructural de moléculas en redes cristalinas.
-7. **[Jmol / JSmol](https://jmol.sourceforge.net/):** Simuladores en el navegador para estudiar estructuras empaquetadas.
-8. **["A periodic table of crystal structures" (Nature Review Materials)](https://www.nature.com):** Un resumen visual muy útil para estructuras complejas.
+1. **["The Discovery of X-ray Diffraction by Crystals" (W.H. Bragg & W.L. Bragg, 1913)](https://royalsocietypublishing.org/doi/10.1098/rspa.1913.0040)**
+   - **Importancia Teórica:** El artículo donde los Bragg formulan por primera vez cómo los planos atómicos dispersan los rayos X de forma coherente. Funda la técnica de difractometría, que permitió ver el interior atómico de los materiales.
+   - **Fondo Matemático:** El planteamiento matemático se basa en la interferencia óptica adaptada a la red periódica. Si $d$ es la distancia entre planos adyacentes de la red, una onda que incide con ángulo rasante $\theta$ viajará una diferencia de trayectoria óptica $\Delta x$ con respecto a la onda que incide en el plano superior:
+     $$ \Delta x = 2 d \sin \theta $$
+     Para que haya interferencia constructiva, el desfase espacial debe ser un múltiplo entero de la longitud de onda $\lambda$:
+     $$ n\lambda = 2d_{hkl} \sin \theta $$
+     La generalización vectorial por von Laue, $\mathbf{k}' - \mathbf{k} = \mathbf{G}_{hkl}$, demuestra la naturaleza de transformada de Fourier intrínseca al experimento, mapeando la densidad real a la red recíproca.
+   - **Implicaciones Físicas:** Demuestra sin lugar a dudas la existencia y la disposición periódica del átomo en un sólido, proporcionando un metrólogo sub-angstrom.
+
+2. **["Classification of Bravais Lattices" (International Tables for Crystallography)](https://it.iucr.org/)**
+   - **Importancia Teórica:** Referencia canónica sobre la teoría de grupos para la geometría espacial de los cristales, uniendo simetrías traslacionales, reflexiones y rotaciones.
+   - **Fondo Matemático:** Un grupo de simetría espacial $G$ está compuesto por isometrías en $\mathbb{R}^3$. Cada operación se describe por la transformación afín $x \mapsto Wx + w$, combinando una matriz ortogonal $W \in O(3)$ (el grupo puntual) y un vector de traslación $w \in \mathbb{R}^3$. La restricción fundamental de que la red es invariante exige que la traza matricial de las rotaciones permitidas debe ser un entero:
+     $$ \text{Tr}(W) = 2\cos \phi + 1 \in \mathbb{Z} $$
+     Lo cual implica que los ángulos de rotación permitidos son limitados a $\phi \in \{0, \frac{\pi}{3}, \frac{\pi}{2}, \frac{2\pi}{3}, \pi\}$, forzando ejes de simetría de orden 1, 2, 3, 4 y 6, y prohibiendo ordenamientos como el pentagonal.
+   - **Implicaciones Físicas:** Proporciona un límite formal a todos los posibles arreglos de átomos en equilibrio térmico, limitándolos a las 14 redes de Bravais.
+
+3. **[Bilbao Crystallographic Server](https://www.cryst.ehu.es/)**: Base de datos monumental de información estructural y herramientas en línea basadas en la representación irreductible de grupos espaciales. Indispensable para investigadores de estructura cristalina y transiciones de fase.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Ashcroft, N. W., & Mermin, N. D. (1976). *Solid State Physics*](https://archive.org). (Capítulos 1-5).
-2. [Kittel, C. (2004). *Introduction to Solid State Physics*](https://archive.org). (Capítulos iniciales sobre redes).
-3. [Hammond, C. (2015). *The Basics of Crystallography and Diffraction*](https://global.oup.com). Oxford University Press.
-4. [Cullity, B. D. (1978). *Elements of X-Ray Diffraction*](https://archive.org). Addison-Wesley.
+1. [Hammond, C. *The Basics of Crystallography and Diffraction*](https://global.oup.com/academic/product/the-basics-of-crystallography-and-diffraction-9780198738671) - Obra magistral de la IUCr.
+2. [Cullity, B. D. *Elements of X-Ray Diffraction*](https://www.pearson.com/en-us/subject-catalog/p/elements-of-x-ray-diffraction/P200000006767) - Enfoque clásico y aplicativo en la ingeniería.

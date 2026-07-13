@@ -205,25 +205,39 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos
+### Cursos Recomendados
 1. [Quantum Hardware y Control (Qutech/TU Delft en edX)](https://www.edx.org/course/quantum-hardware-and-control)
-2. [Quantum Computing Systems (Coursera)](https://www.coursera.org/learn/quantum-computing-systems)
-3. [Building a Quantum Computer (FutureLearn)](https://www.futurelearn.com/courses/building-a-quantum-computer)
-4. [Quantum Error Correction (edX - Delft University)](https://www.edx.org/course/quantum-error-correction)
-5. [Architecture of Quantum Computers (Coursera)](https://www.coursera.org/learn/architecture-quantum-computers)
-6. [Fault-Tolerant Quantum Computing (Coursera)](https://www.coursera.org/learn/fault-tolerant-quantum-computing)
+2. [Architecture of Quantum Computers (Coursera)](https://www.coursera.org/learn/architecture-quantum-computers)
+3. [Fault-Tolerant Quantum Computing (Coursera)](https://www.coursera.org/learn/fault-tolerant-quantum-computing)
 
 ### Artículos y Simulaciones
-1. [Scheme for reducing decoherence in quantum computer memory (P. Shor, 1995)](https://doi.org/10.1103/PhysRevA.52.R2493)
-2. [Surface codes: Towards practical large-scale quantum computation (A. Fowler et al., 2012)](https://arxiv.org/abs/1208.0928)
-3. [Stim (Fast Quantum Error Correction Simulator)](https://github.com/quantumlib/Stim)
-4. [Qiskit Metal (Diseño de hardware cuántico)](https://qiskit.org/metal/)
-5. [Superconducting Qubits: Current State of Play (Kjaergaard et al., 2020)](https://arxiv.org/abs/1905.13641)
-6. [Trapped-Ion Quantum Computing: Progress and Challenges (Bruzewicz et al., 2019)](https://arxiv.org/abs/1904.04178)
-7. [Fault-tolerant quantum computation with constant error rate (Aharonov & Ben-Or, 1997)](https://arxiv.org/abs/quant-ph/9611025)
-8. [Quantum Error Correction for Beginners (Devitt et al., 2013)](https://arxiv.org/abs/0905.2794)
+1. **Fault-tolerant quantum computation with constant error rate (Aharonov & Ben-Or, 1997)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/9611025](https://arxiv.org/abs/quant-ph/9611025)
+   - **Importancia Teórica:** Es la obra cumbre que demuestra el Teorema del Umbral: si la tasa de error físico está por debajo de un umbral $p_c$, las operaciones cuánticas lógicas pueden hacerse con una tasa de error asintóticamente nula.
+   - **Fondo Matemático:** Introduce códigos concatenados, anidando códigos unos dentro de otros. Si cada nivel reduce el error a $\epsilon' \leq c \cdot \epsilon^2$, tras $k$ concatenaciones el error lógico se suprime doblemente exponencialmente como:
+     $$
+     \epsilon_{logic} \approx \frac{(c \cdot p_{phys})^{2^k}}{c}
+     $$
+   - **Implicaciones Físicas:** Demuestra definitivamente que un ordenador cuántico escalable y con tolerancia a fallos es físicamente construible siempre que el hardware rompa la barrera de fidelidad requerida por la arquitectura subyacente.
+
+2. **Superconducting Qubits: Current State of Play (Kjaergaard et al., 2020)**
+   - **Enlace:** [https://arxiv.org/abs/1905.13641](https://arxiv.org/abs/1905.13641)
+   - **Importancia Teórica:** Una exhaustiva revisión que detalla los principios de funcionamiento, ventajas y barreras para la escala de qubits superconductores transmón, el pilar de IBM y Google.
+   - **Fondo Matemático:** El hamiltoniano del qubit (unión de Josephson) es fundamentalmente un oscilador anarmónico LC. La fase superconductora $\phi$ y la carga $n$ (pares de Cooper) actúan como variables conjugadas $[\phi, n] = i$. El término no lineal (la energía de Josephson $E_J$) permite usar los dos niveles de energía más bajos ($0, 1$) para formar el qubit:
+     $$
+     \mathcal{H} = 4 E_C (n - n_g)^2 - E_J \cos(\phi)
+     $$
+   - **Implicaciones Físicas:** Establece el compromiso (trade-off) ingenieril intrínseco en los sistemas de hardware cuántico moderno entre la coherencia térmica (tiempos $T_1$ y $T_2$) y la anarmonicidad que previene fugas fuera del subespacio computacional.
+
+3. **Surface codes: Towards practical large-scale quantum computation (A. Fowler et al., 2012)**
+   - **Enlace:** [https://arxiv.org/abs/1208.0928](https://arxiv.org/abs/1208.0928)
+   - **Importancia Teórica:** Propone la adaptación del código Tórico/Superficie para configuraciones de mallas cuadradas 2D de qubits interactuantes locales, minimizando el cruzamiento perjudicial (crosstalk).
+   - **Fondo Matemático:** Emplea ciclos homológicos para operaciones lógicas. Un error lógico se corresponde con una cadena de Pauli no trivial (inobservada localmente) de peso macroscópico $d$ (distancia del código) que conecta dos fronteras opuestas del arreglo topológico:
+     $$
+     E_L = \bigotimes_{i \in \gamma} Z_i \quad \text{donde} \quad |\gamma| = d
+     $$
+   - **Implicaciones Físicas:** Proporciona un modelo ingenieril extremadamente perdonador ($1\%$ de umbral) adaptado excelentemente a arquitecturas físicas rígidas limitadas dimensionalmente.
 
 ### 📖 Referencias Útiles y Bibliografía
 1. [Quantum Computation and Quantum Information (Nielsen & Chuang)](https://doi.org/10.1017/CBO9780511976667)
 2. [Quantum Error Correction (D. A. Lidar, T. A. Brun)](https://doi.org/10.1017/CBO9781139034807)
-3. [Topological Quantum Computation (Z. Wang)](https://bookstore.ams.org/cbms-112/)

@@ -241,24 +241,39 @@ for i, p in enumerate(probs):
 
 ## 📚 Recursos Específicos
 
-### Cursos
+### Cursos Recomendados
 1. [Introduction to Quantum Circuits (Coursera)](https://www.coursera.org/learn/quantum-circuits)
 2. [Qubits, Quantum Gates, and Quantum Circuits (edX)](https://www.edx.org/course/qubits-and-quantum-circuits)
 3. [Quantum Information Science I, Part 1 (MITx on edX)](https://www.edx.org/course/quantum-information-science-i-part-1)
-4. [Quantum Computing Foundations (IBM/Coursera)](https://www.coursera.org/specializations/quantum-computing-ibm)
-5. [Fundamentals of Quantum Algorithms (University of Colorado Boulder)](https://www.coursera.org/learn/fundamentals-quantum-algorithms)
 
 ### Artículos y Simulaciones
-1. [Quantum Circuits (Qiskit Textbook)](https://qiskit.org/textbook/ch-gates/introduction.html)
-2. [IBM Quantum Composer](https://quantum-computing.ibm.com/composer/)
-3. [Quirk: Drag-and-drop quantum circuit simulator](https://algassert.com/quirk)
-4. [Elementary gates for quantum computation (Barenco et al., 1995)](https://arxiv.org/abs/quant-ph/9503016)
-5. [The Solovay-Kitaev algorithm (Dawson & Nielsen, 2005)](https://arxiv.org/abs/quant-ph/0505030)
-6. [Circuit QED (Blais et al., 2004)](https://arxiv.org/abs/cond-mat/0402216)
-7. [Quantum circuits with mixed states (Aharonov et al., 1998)](https://arxiv.org/abs/quant-ph/9812039)
-8. [Quantum Computational Complexity (Watrous, 2008)](https://arxiv.org/abs/0804.3401)
+1. **Elementary gates for quantum computation (Barenco et al., 1995)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/9503016](https://arxiv.org/abs/quant-ph/9503016)
+   - **Importancia Teórica:** Demuestra la universalidad de las compuertas cuánticas, un hito que equipara conceptualmente los circuitos cuánticos a las redes lógicas booleanas clásicas.
+   - **Fondo Matemático:** Comprueba que cualquier transformación unitaria $U \in U(2^n)$ se puede descomponer en compuertas CNOT más rotaciones locales (SU(2)) en cada qubit individual:
+     $$
+     U \approx \prod_k U^{(2)}_k \quad \text{donde} \quad U^{(2)} \in \text{CNOT} \otimes \text{Rotaciones}
+     $$
+   - **Implicaciones Físicas:** Reduce el complejo desafío de controlar un espacio de Hilbert multipartito altamente entrelazado al diseño tecnológico simplificado de interacciones 1- y 2-qubit.
+
+2. **The Solovay-Kitaev algorithm (Dawson & Nielsen, 2005)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/0505030](https://arxiv.org/abs/quant-ph/0505030)
+   - **Importancia Teórica:** Proveé un método constructivo para sintetizar cualquier compuerta de un qubit a partir de un conjunto finito universal (como Clifford+T) con alta eficiencia.
+   - **Fondo Matemático:** Si un conjunto discreto es denso en SU(2), cualquier unitaria deseada $U$ puede aproximarse con precisión $\epsilon$ utilizando una secuencia de compuertas de longitud poli-logarítmica $\mathcal{O}(\log^c(1/\epsilon))$:
+     $$
+     \lVert U - U_{aprox} \rVert \leq \epsilon
+     $$
+   - **Implicaciones Físicas:** Hizo posible la tolerancia a fallos computacional asegurando que el coste temporal para aproximar compuertas continuas analógicas no escala exponencialmente ante ruido acotado.
+
+3. **Circuit QED: How strong can the coupling between a superconducting qubit and a photon be? (Blais et al., 2004)**
+   - **Enlace:** [https://arxiv.org/abs/cond-mat/0402216](https://arxiv.org/abs/cond-mat/0402216)
+   - **Importancia Teórica:** Sentó las bases para el acoplamiento fuerte en la electrodinámica cuántica de circuitos (cQED), la arquitectura hardware de facto.
+   - **Fondo Matemático:** Extiende el modelo clásico de Jaynes-Cummings para cajas de pares de Cooper en resonadores coplanares:
+     $$
+     H_{JC} = \omega_r a^\dagger a + \frac{\omega_q}{2} \sigma_z + g(a^\dagger \sigma_- + a \sigma_+)
+     $$
+   - **Implicaciones Físicas:** Consolidó el uso de los modos bosónicos de microondas como 'bus cuántico' mediador, permitiendo dispersar interacciones tipo CNOT ultrarrápidas entre transmones distantes en un chip.
 
 ### 📖 Referencias Útiles y Bibliografía
 1. [Quantum Computation and Quantum Information (Nielsen & Chuang)](https://doi.org/10.1017/CBO9780511976667)
 2. [Quantum Computer Science: An Introduction (N. David Mermin)](https://doi.org/10.1017/CBO9780511813870)
-3. [Classical and Quantum Computation (Kitaev, Shen, Vyalyi)](https://bookstore.ams.org/gsm-47)

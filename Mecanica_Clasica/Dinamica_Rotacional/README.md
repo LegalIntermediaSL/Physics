@@ -179,26 +179,29 @@ plt.show()
 
 ## 📚 Recursos Específicos de Dinámica Rotacional
 
-### 🎓 Cursos y Clases Recomendadas (5-7)
-1. **[MIT 8.01 - Torque and Angular Momentum (Walter Lewin)](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-9-rotational-dynamics/)**: Uno de los bloques más famosos de Lewin, con demostraciones legendarias de giroscopios y patinadores.
-2. **[Yale PHYS 200 - Lecture 9: Rotations](https://oyc.yale.edu/physics/phys-200/lecture-9)**: Descripción matricial y vectorial rigurosa de las transformaciones rotacionales.
-3. **[Khan Academy - Torque y Momento Angular](https://es.khanacademy.org/science/physics/torque-angular-momentum)**: Explicaciones muy amigables sobre rotaciones, momentos de inercia y equilibrio estático.
-4. **[Coursera - Advanced Engineering Mechanics (Various)](https://www.coursera.org/learn/advanced-engineering-systems-in-motion-dynamics-of-three-dimensional-3d-motion)**: Ideal para ver aplicaciones de las ecuaciones de Euler a la ingeniería aeroespacial o robótica.
-5. **[edX - Rotational Dynamics (MITx)](https://www.edx.org/course/mechanics-rotational-dynamics)**: Problemas interactivos centrados en la conservación del momento angular y choques rotacionales.
+### 🎓 Cursos y Clases Recomendadas
+1. **[MIT 8.01: Angular Momentum and Torque (Walter Lewin)](https://ocw.mit.edu/courses/8-01-physics-i-classical-mechanics-fall-1999/)**: Famoso por su demostración de la conservación del momento angular usando un taburete giratorio y pesas, además del asombroso comportamiento de los giroscopios.
+2. **[Stanford Classical Mechanics (Theoretical Minimum)](https://theoreticalminimum.com/courses/classical-mechanics/2011/fall)**: Profundiza en el espacio de fases rotacional y la definición rigurosa del momento conjugado para variables angulares.
+3. **[NPTEL: Classical Mechanics (IIT Madras)](https://nptel.ac.in/courses/115106123)**: Sesiones avanzadas dedicadas exclusivamente a resolver las Ecuaciones de Euler y calcular el Tensor de Inercia.
 
-### 📝 Artículos, Simulaciones e Interactivos (8-10)
-1. **Artículo**: [Conservation of Angular Momentum (HyperPhysics)](http://hyperphysics.phy-astr.gsu.edu/hbase/amom.html) - Desglose de fórmulas sobre precesión y momentos.
-2. **Artículo**: [Euler's equations for rigid body dynamics](https://en.wikipedia.org/wiki/Euler%27s_equations_(rigid_body_dynamics)) - Para un enfoque tensorial más avanzado de las rotaciones 3D.
-3. **Simulador**: [PhET - Ladybug Revolution](https://phet.colorado.edu/es/simulations/rotation) - Explora posición, velocidad y aceleración angular con una mariquita en un plato giratorio.
-4. **Simulador**: [PhET - Balancing Act](https://phet.colorado.edu/es/simulations/balancing-act) - Aprende el principio de las palancas y la igualación de torques.
-5. **Video Experimental**: [Veritasium - Bullet Block Experiment](https://www.youtube.com/watch?v=vVQzgrKExF4) - Experimento espectacular que involucra momento angular e inercia en una colisión.
-6. **Artículo**: [Tensor de Inercia (Scholarpedia)](http://www.scholarpedia.org/article/Moment_of_inertia) - Definición profunda de los ejes principales de rotación para objetos asimétricos.
-7. **Video Analítico**: [SmarterEveryDay - Gyroscopic Precession](https://www.youtube.com/watch?v=cquvA_IpEsA) - Explicación clara y visual del contra-intuitivo fenómeno de la precesión de los giroscopios.
-8. **Simulador**: [GeoGebra - Momento de Inercia](https://www.geogebra.org/m/XfN6sZRb) - Herramienta para integrar virtualmente el momento de inercia de perfiles 2D de masa constante.
+### 📝 Artículos, Publicaciones y Teoría Avanzada
+1. **[The Tennis Racket Theorem / Dzhanibekov Effect (Ashbaugh et al., 1991)](https://doi.org/10.1007/BF01049489)**
+   - *Importancia Teórica*: Explicación matemática estricta de una inestabilidad rotacional contra-intuitiva de cuerpos rígidos con tres momentos de inercia distintos $I_1 < I_2 < I_3$.
+   - *Contexto Matemático*: Analizando las Ecuaciones de Euler libres $\mathbf{I}\dot{\vec{\omega}} + \vec{\omega} \times (\mathbf{I}\vec{\omega}) = 0$, un análisis de perturbación lineal en el eje intermedio $\omega_2$ arroja una ecuación diferencial $\ddot{\delta\omega}_1 = \kappa^2 \delta\omega_1$ con $\kappa^2 > 0$. Esto indica que las raíces de los valores propios (eigenvalues) son reales y de signos opuestos ($\lambda = \pm \kappa$), por lo que existe un crecimiento exponencial de cualquier mínima perturbación. 
+   - *Implicaciones*: Provoca un "flip" caótico de $180^\circ$ en la orientación, vital para el control de actitud de naves espaciales y asteroides en rotación.
+2. **[Euler Angles and the Kinematics of Rigid Body Rotation (Euler, 1775)](https://scholarlycommons.pacific.edu/euler-works/478/)**
+   - *Importancia Teórica*: Euler introduce su sistema de tres ángulos $(\phi, \theta, \psi)$ para describir cualquier rotación 3D, parametrizando el grupo de simetría especial ortogonal SO(3).
+   - *Contexto Matemático*: La velocidad angular en el marco del cuerpo se relaciona con las derivadas de los ángulos de Euler mediante transformaciones no ortogonales:
+     $$ \omega_1 = \dot{\phi}\sin\theta\sin\psi + \dot{\theta}\cos\psi $$
+     $$ \omega_2 = \dot{\phi}\sin\theta\cos\psi - \dot{\theta}\sin\psi $$
+     $$ \omega_3 = \dot{\phi}\cos\theta + \dot{\psi} $$
+     Esta matriz sufre singularidades (Gimbal Lock) cuando $\theta = 0, \pi$, motivando en la era moderna el uso de Cuaterniones de Hamilton.
+   - *Implicaciones*: Es la base para la estabilización de los giróscopos de navegación inercial y simulación de la precesión y nutación de trompos.
+3. **[Poinsot's Construction for Torque-Free Rotation (Louis Poinsot, 1834)](https://en.wikipedia.org/wiki/Poinsot%27s_ellipsoid)**
+   - *Importancia Teórica*: Visualización geométrica elegante del movimiento rotacional libre, sin tener que resolver EDOs.
+   - *Contexto Matemático*: Puesto que la energía cinética $T = \frac{1}{2} \vec{\omega}^T \mathbf{I} \vec{\omega}$ y el momento angular $\vec{L} = \mathbf{I}\vec{\omega}$ son constantes, el vector $\vec{\omega}(t)$ debe permanecer sobre la superficie de un elipsoide de inercia y, simultáneamente, sobre el "plano invariable" perpendicular a $\vec{L}$.
+   - *Implicaciones*: La rotación libre se visualiza rodando el elipsoide de inercia (polhode) sobre el plano invariable (herpolhode) sin resbalar, explicando visualmente la precesión libre.
 
 ### 📖 Referencias Útiles y Bibliografía
-- **[Classical Mechanics (Herbert Goldstein)](https://en.wikipedia.org/wiki/Classical_Mechanics_(Goldstein_book))**: Famoso por su detalladísimo estudio matemático sobre la cinemática de los cuerpos rígidos, los ángulos de Euler y el tensor de inercia.
-- **[Classical Dynamics of Particles and Systems (Marion & Thornton)](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Aporta un equilibrio perfecto, tratando el cuerpo rígido usando la formulación newtoniana clásica y matrices.
-- **[Classical Mechanics (John R. Taylor)](https://uscibooks.aip.org/books/classical-mechanics/)**: Incluye un capítulo soberbio sobre dinámica de cuerpos rígidos, rotaciones 3D de la Tierra (efecto Coriolis y péndulo de Foucault).
-- **[Introduction to Classical Mechanics (David Morin)](https://www.cambridge.org/highereducation/books/introduction-to-classical-mechanics/31CB8B93623D3F14E1EE98B223D1DE47)**: Tiene una colección brutal de problemas avanzados y contra-intuitivos de trompos, aros y cilindros rodantes.
-- **[Feynman Lectures on Physics (Vol 1)](https://www.feynmanlectures.caltech.edu/I_toc.html)**: Feynman ilumina los conceptos de rotación, con especial énfasis en la analogía matemática profunda con la traslación.
+- **[Classical Mechanics - H. Goldstein](https://www.pearson.com/en-us/subject-catalog/p/classical-mechanics/P200000003328/9780201657029)**: Los Capítulos 4 y 5 de este libro son la Biblia de la cinemática y dinámica del sólido rígido, explicando la conexión con matrices ortogonales.
+- **[Analytical Mechanics - L. Hand & J. Finch](https://www.cambridge.org/highereducation/books/analytical-mechanics/9780521575720)**: Libro intermedio-avanzado excelente por su trato profundo a tensores de inercia acoplados.

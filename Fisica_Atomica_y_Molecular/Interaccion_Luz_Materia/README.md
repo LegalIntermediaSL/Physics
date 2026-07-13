@@ -225,22 +225,26 @@ plt.tight_layout()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [Light and Matter - MIT OCW](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/)
-2. [Quantum Optics - École Polytechnique (Coursera)](https://www.coursera.org/learn/quantum-optics-1)
-3. [Atomic and Optical Physics I - MIT OCW](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/)
-4. [Atomic and Optical Physics II - MIT OCW](https://ocw.mit.edu/courses/8-422-atomic-and-optical-physics-ii-spring-2013/)
-5. [Lasers and Optics - NPTEL](https://nptel.ac.in/courses/115105105)
+### 🎓 Cursos y Clases Recomendadas
+1. [MIT OCW 8.421 Atomic and Optical Physics I (Wolfgang Ketterle)](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/): Clases en profundidad sobre las interacciones de los átomos con campos de radiación clásicos y cuantizados, las tasas de Einstein y la regla de oro de Fermi.
+2. [Stanford - Quantum Entanglement Part 1 (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Conferencias útiles para comprender la emisión espontánea desde la perspectiva del entrelazamiento átomo-vacío.
+3. [NPTEL Quantum Optics (Prof. Ajoy Ghatak)](https://nptel.ac.in/courses/115102023): Introduce el campo electromagnético cuantizado y el formalismo de los estados coherentes.
 
-### Artículos y Simulaciones
-1. [Einstein, A. (1917). *Zur Quantentheorie der Strahlung*. Phys. Z.](https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.19173560604)
-2. [Jaynes, E. T., & Cummings, F. W. (1963). *Comparison of quantum and semiclassical radiation theories with application to the beam maser*.](https://ieeexplore.ieee.org/document/1443594)
-3. [Mollow, B. R. (1969). *Power Spectrum of Light Scattered by Two-Level Systems*.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.188.1969)
-4. [PhET Simulation: Lasers](https://phet.colorado.edu/en/simulations/lasers)
-5. [PhET Simulation: Molecules and Light](https://phet.colorado.edu/en/simulations/molecules-and-light)
-6. [Allen, L., & Eberly, J. H. (1975). *Optical Resonance and Two-Level Atoms*.](https://store.doverpublications.com/0486655334.html)
-7. [Dicke, R. H. (1954). *Coherence in Spontaneous Radiation Processes*.](https://journals.aps.org/pr/abstract/10.1103/PhysRev.93.99)
-8. [Haroche, S., & Kleppner, D. (1989). *Cavity Quantum Electrodynamics*.](https://physicstoday.scitation.org/doi/10.1063/1.881201)
+### 📝 Artículos Científicos Clave
+1. **Einstein, A. (1916). "Strahlungs-Emission und -Absorption nach der Quantentheorie"**. *Verhandlungen der Deutschen Physikalischen Gesellschaft*, 18, 318-323. [Enlace Abierto - Traducción B.L. van der Waerden](https://einsteinpapers.press.princeton.edu/vol6-trans/232)
+   *Importancia Teórica y Matemática:* Postuló la emisión estimulada y la emisión espontánea basándose puramente en requerimientos termodinámicos, años antes que la mecánica cuántica rigurosa. Relaciona los coeficientes probabilísticos de transición mediante:
+   $$ \frac{A_{21}}{B_{21}} = \frac{8\pi h \nu^3}{c^3}, \quad g_1 B_{12} = g_2 B_{21} $$
+   *Implicaciones Físicas:* Estableció la base para comprender la interacción de conjuntos atómicos con la luz y cimentó el camino que llevaría al desarrollo del máser y el láser cuarenta años después.
+
+2. **Dirac, P. A. M. (1927). "The Quantum Theory of the Emission and Absorption of Radiation"**. *Proc. R. Soc. Lond. A*, 114(767), 243-265. [DOI: 10.1098/rspa.1927.0039](https://doi.org/10.1098/rspa.1927.0039)
+   *Importancia Teórica y Matemática:* Cuantiza el campo electromagnético, tratándolo como un conjunto de osciladores armónicos. Aplica teoría de perturbaciones dependiente del tiempo para calcular la tasa de emisión espontánea, que semiclasicamente era un misterio:
+   $$ w_{2\to 1} = \frac{2\pi}{\hbar} | \langle \psi_1, n_k+1 | \hat{H}' | \psi_2, n_k \rangle |^2 \rho(E) $$
+   *Implicaciones Físicas:* Nace la Electrodinámica Cuántica (QED). Explica que la "emisión espontánea" no ocurre en el vacío clásico absoluto, sino que es estimulada por las inevitables fluctuaciones del vacío cuántico del campo electromagnético.
+
+3. **Jaynes, E. T., & Cummings, F. W. (1963). "Comparison of quantum and semiclassical radiation theories with application to the beam maser"**. *Proc. IEEE*, 51(1), 89-109. [DOI: 10.1109/PROC.1963.1664](https://doi.org/10.1109/PROC.1963.1664)
+   *Importancia Teórica y Matemática:* Desarrolla un modelo exacto de un átomo de dos niveles interactuando fuertemente con un único modo cuantizado de la cavidad electromagnética. El Hamiltoniano de Jaynes-Cummings es:
+   $$ \hat{H} = \hbar \omega_c \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) + \frac{\hbar \omega_a}{2} \hat{\sigma}_z + \hbar g (\hat{a} \hat{\sigma}_+ + \hat{a}^\dagger \hat{\sigma}_-) $$
+   *Implicaciones Físicas:* Reveló el fenómeno de los "colapsos y revivales" de las oscilaciones de Rabi, probando el carácter discreto (fotónico) del campo. Es el modelo teórico más importante en Cavity QED (CQED) e información cuántica moderna.
 
 ### 📖 Referencias Útiles y Bibliografía
 - [Loudon, R. (2000). *The Quantum Theory of Light*. Oxford University Press.](https://global.oup.com/academic/product/the-quantum-theory-of-light-9780198501763)

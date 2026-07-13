@@ -210,25 +210,39 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos
-1. [Quantum Machine Learning (edX - University of Toronto)](https://www.edx.org/course/quantum-machine-learning)
+### Cursos Recomendados
+1. [Quantum Information Science I (MITx on edX)](https://www.edx.org/course/quantum-information-science-i-part-1)
 2. [Introduction to Quantum Computing (Coursera - St. Petersburg State University)](https://www.coursera.org/learn/quantum-computing)
 3. [Qiskit Global Summer School (IBM Quantum)](https://qiskit.org/events/summer-school/)
-4. [Quantum Algorithms (Coursera - University of Colorado Boulder)](https://www.coursera.org/specializations/quantum-algorithms)
-5. [Applied Quantum Computing (edX - Purdue University)](https://www.edx.org/course/applied-quantum-computing)
-6. [Quantum Computing: Algorithms and Software (FutureLearn)](https://www.futurelearn.com/courses/quantum-computing-algorithms)
 
 ### Artículos y Simulaciones
-1. [Qiskit Textbook (Learn Quantum Computation using Qiskit)](https://qiskit.org/textbook/preface.html)
-2. [Pennylane (Simulador de algoritmos cuánticos e IA)](https://pennylane.ai/)
-3. [Polynomial-Time Algorithms for Prime Factorization (P. W. Shor, 1997)](https://arxiv.org/abs/quant-ph/9508027)
-4. [Quantum Computation and Shor's Factoring Algorithm (A. Ekert, R. Jozsa, 1996)](https://arxiv.org/abs/quant-ph/9603011)
-5. [A fast quantum mechanical algorithm for database search (L. K. Grover, 1996)](https://arxiv.org/abs/quant-ph/9605043)
-6. [Quantum algorithm for linear systems of equations (Harrow, Hassidim, Lloyd, 2009)](https://arxiv.org/abs/0811.3171)
-7. [Variational Quantum Eigensolver (Peruzzo et al., 2014)](https://arxiv.org/abs/1304.3061)
-8. [Quantum Approximate Optimization Algorithm (Farhi, Goldstone, Gutmann, 2014)](https://arxiv.org/abs/1411.4028)
+1. **Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer (P. W. Shor, 1997)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/9508027](https://arxiv.org/abs/quant-ph/9508027)
+   - **Importancia Teórica:** Artículo fundacional que demostró la factorización en tiempo polinómico, desafiando la seguridad criptográfica moderna (RSA).
+   - **Fondo Matemático:** Aplica la Transformada de Fourier Cuántica (QFT) para estimar el periodo $r$ de $f(x) = a^x \pmod N$. La QFT mapea la periodicidad:
+     $$
+     \text{QFT} |x\rangle = \frac{1}{\sqrt{q}} \sum_{y=0}^{q-1} e^{2\pi i x y / q} |y\rangle
+     $$
+   - **Implicaciones Físicas:** Probó que el entrelazamiento y la interferencia permiten el cálculo determinista global en el espacio de Hilbert superando exponencialmente el paradigma de la máquina de Turing clásica.
+
+2. **A fast quantum mechanical algorithm for database search (L. K. Grover, 1996)**
+   - **Enlace:** [https://arxiv.org/abs/quant-ph/9605043](https://arxiv.org/abs/quant-ph/9605043)
+   - **Importancia Teórica:** Logra aceleración cuadrática en la búsqueda no estructurada.
+   - **Fondo Matemático:** Iteración del operador de Grover $\mathcal{G} = D O$. El oráculo invierte la fase $O = I - 2|w\rangle\langle w|$, y el operador de difusión efectúa una reflexión sobre la media:
+     $$
+     D = 2|s\rangle\langle s| - I
+     $$
+   - **Implicaciones Físicas:** Demuestra el límite asintótico cuántico $\Omega(\sqrt{N})$ para búsquedas en caja negra, evidenciando cómo la amplitud probabilística se condensa dinámicamente mediante interferencia constructiva.
+
+3. **Quantum algorithm for linear systems of equations (Harrow, Hassidim, Lloyd, 2009)**
+   - **Enlace:** [https://arxiv.org/abs/0811.3171](https://arxiv.org/abs/0811.3171)
+   - **Importancia Teórica:** El algoritmo HHL resuelve sistemas $A\vec{x} = \vec{b}$ en tiempo logarítmico, abriendo paso al aprendizaje automático cuántico.
+   - **Fondo Matemático:** Usa estimación de fase para rotar el estado de un ancilla basado en los autovalores $\lambda_j$ de $A$:
+     $$
+     \sum_j \beta_j |u_j\rangle \left( \sqrt{1 - \frac{C^2}{\lambda_j^2}}|0\rangle + \frac{C}{\lambda_j}|1\rangle \right)
+     $$
+   - **Implicaciones Físicas:** Convierte la inversión matricial en un proceso de evolución unitaria hamiltoniana natural.
 
 ### 📖 Referencias Útiles y Bibliografía
 1. [Quantum Computation and Quantum Information (Nielsen & Chuang)](https://doi.org/10.1017/CBO9780511976667)
 2. [Quantum Computer Science: An Introduction (N. David Mermin)](https://doi.org/10.1017/CBO9780511813870)
-3. [An Introduction to Quantum Computing (Kaye, Laflamme, Mosca)](https://global.oup.com/academic/product/an-introduction-to-quantum-computing-9780198570493)

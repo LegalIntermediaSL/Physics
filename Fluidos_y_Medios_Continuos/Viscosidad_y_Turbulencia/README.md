@@ -164,29 +164,45 @@ plt.grid(True, which="both", ls="--", alpha=0.5)
 plt.show()
 ```
 
-## 📚 Recursos
-### Cursos Específicos
-1. ["Turbulent Flows" - NPTEL](https://nptel.ac.in/courses/112106266)
-2. ["Advanced Fluid Mechanics: Turbulence" - MIT OCW](https://ocw.mit.edu/courses/mechanical-engineering/)
-3. ["Viscous Fluid Flow and Turbulence" - Coursera](https://www.coursera.org/)
-4. ["Computational Fluid Dynamics: Turbulent Models" - edX](https://www.edx.org/)
-5. ["Physics of Fluids" - Coursera](https://www.coursera.org/)
-6. ["Introduction to Turbulence Modeling" - NPTEL](https://nptel.ac.in/)
+## 📚 Recursos Específicos
+
+### Cursos Recomendados
+1. [Boundary Layer Theory (NPTEL)](https://nptel.ac.in/courses/112104118)
+2. [Advanced Fluid Mechanics: Turbulence (MIT OCW)](https://ocw.mit.edu/courses/mechanical-engineering/)
+3. [Viscous Fluid Flow (NPTEL)](https://nptel.ac.in/courses/112105228)
 
 ### Artículos y Simulaciones
-1. [*Transport Phenomena* - Bird, Stewart, Lightfoot (Capítulos de Viscosidad)](https://www.amazon.com/Transport-Phenomena-Revised-2nd-Byron/dp/0470115394)
-2. ["The Local Structure of Turbulence in Incompressible Viscous Fluid" - A.N. Kolmogorov (1941)](https://rspa.royalsocietypublishing.org/content/434/1890/9)
-3. [OpenFOAM: Tutorials on k-epsilon and k-omega models](https://www.openfoam.com/)
-4. [SimScale: Turbulent Pipe Flow Simulation](https://www.simscale.com/docs/content/simwiki/fluiddynamics/turbulence.html)
-5. ["On the Dynamical Theory of Incompressible Viscous Fluids and the Determination of the Criterion" - Osborne Reynolds](https://royalsocietypublishing.org/doi/10.1098/rstl.1895.0004)
-6. [NASA Wind Tunnel Virtual Simulators](https://www.grc.nasa.gov/WWW/K-12/airplane/wtunnel.html)
-7. ["Direct Numerical Simulation of Turbulence" - Annual Review of Fluid Mechanics](https://www.annualreviews.org/journal/fluid)
-8. [Ansys Fluent: Large Eddy Simulation (LES) Guide](https://www.ansys.com/)
-9. ["Navier-Stokes Equations and Turbulence" - Clay Mathematics Institute](https://www.claymath.org/millennium-problems/navier-stokes-equation)
-10. [JHU Turbulence Database (JHTDB) datasets](http://turbulence.pha.jhu.edu/)
+1. **On the Motion of Fluid in a Boundary Layer (Ludwig Prandtl, 1904)**
+   - **Enlace:** [https://en.wikipedia.org/wiki/Boundary_layer](https://en.wikipedia.org/wiki/Boundary_layer)
+   - **Importancia Teórica:** Es considerado el artículo más influyente en la dinámica de fluidos del siglo XX. Resolvió la paradoja de d'Alembert separando el fluido en dos regímenes.
+   - **Fondo Matemático:** Propuso que con un alto número de Reynolds ($Re \gg 1$), las fuerzas viscosas se limitan a una capa límite delgada adyacente a la superficie. Simplifica Navier-Stokes en 2D:
+     $$
+     u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + \nu \frac{\partial^2 u}{\partial y^2}
+     $$
+   - **Implicaciones Físicas:** Explicó de dónde proviene el arrastre (fricción de piel) y la separación del flujo (pérdida de sustentación aerodinámica).
+
+2. **The Local Structure of Turbulence in Incompressible Viscous Fluid for Very Large Reynolds Numbers (A.N. Kolmogorov, 1941)**
+   - **Enlace:** [https://rspa.royalsocietypublishing.org/content/434/1890/9](https://rspa.royalsocietypublishing.org/content/434/1890/9)
+   - **Importancia Teórica:** Formuló la teoría K41. Introdujo las bases universales de la turbulencia isotrópica, proporcionando las primeras predicciones cuantitativas exitosas para el régimen caótico.
+   - **Fondo Matemático:** Postuló por análisis dimensional que, en el rango inercial, las propiedades del flujo dependen únicamente de la tasa de disipación de energía $\varepsilon$. La función de estructura de segundo orden exhibe escalamiento de dos tercios:
+     $$
+     \langle [u(x+r) - u(x)]^2 \rangle \sim \varepsilon^{2/3} r^{2/3}
+     $$
+   - **Implicaciones Físicas:** Demostró un aparente orden subyacente determinista estocástico dentro del régimen turbulento complejo y guio modelos de gran escala para la meteorología (LES).
+
+3. **On the Dynamical Theory of Incompressible Viscous Fluids and the Determination of the Criterion (Osborne Reynolds, 1895)**
+   - **Enlace:** [https://royalsocietypublishing.org/doi/10.1098/rstl.1895.0004](https://royalsocietypublishing.org/doi/10.1098/rstl.1895.0004)
+   - **Importancia Teórica:** Definió cuantitativamente la transición del flujo laminar al turbulento mediante el adimensional Número de Reynolds.
+   - **Fondo Matemático:** El número relaciona las fuerzas inerciales a las viscosas:
+     $$
+     Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}
+     $$
+     También derivó las ecuaciones de Navier-Stokes promediadas por Reynolds (RANS), dividiendo el flujo en media temporal $U$ y fluctuaciones $u'$:
+     $$
+     u(x,t) = U(x) + u'(x,t)
+     $$
+   - **Implicaciones Físicas:** Proporcionó la herramienta unificadora de escala empírica para todos los estudios hidrodinámicos en tuberías y perfiles alares.
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [*Fluid Mechanics* (Vol. 6) - L.D. Landau y E.M. Lifshitz](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
-2. [*Turbulence: The Legacy of A. N. Kolmogorov* - Uriel Frisch](https://www.amazon.com/Turbulence-Legacy-Kolmogorov-Uriel-Frisch/dp/0521457130)
-3. [*Fluid Mechanics* - Pijush K. Kundu y Ira M. Cohen](https://www.amazon.com/Fluid-Mechanics-Pijush-K-Kundu/dp/012405935X)
-4. [*A First Course in Turbulence* - H. Tennekes y J.L. Lumley](https://www.amazon.com/First-Course-Turbulence-MIT-Press/dp/0262200198)
+1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
+2. [Boundary-Layer Theory (Hermann Schlichting)](https://www.amazon.com/Boundary-Layer-Theory-Hermann-Schlichting/dp/3662529176)

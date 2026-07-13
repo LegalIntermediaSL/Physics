@@ -248,26 +248,39 @@ plt.show()
 
 ## 📚 Recursos Específicos
 
-### Cursos Específicos
-1. [MHD Theory - Princeton Plasma Physics Lab (PPPL)](https://www.pppl.gov/)
-2. [Introduction to Magnetohydrodynamics (Coursera)](https://www.coursera.org)
-3. [Astrophysical Fluid Dynamics - Cambridge](https://www.maths.cam.ac.uk/)
-4. [Advanced MHD and Reconnection - JHU](https://www.jhu.edu)
-5. [Computational Magnetohydrodynamics - UChicago](https://www.uchicago.edu)
+### Cursos Online y Material Académico
+1. **[MIT OCW: 22.611J Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/)**
+   Sección robusta dedicada a derivar las ecuaciones MHD fluidas y las ondas magnetosónicas.
+2. **[NPTEL: Fundamentals of Plasmas](https://nptel.ac.in/courses/115/102/115102020/)**
+   Abarca equilibrios MHD, teorema de Alfvén y ondas de plasma fluidas.
 
-### Artículos y Simulaciones
-1. [Alfvén, H. (1942). *Existence of Electromagnetic-Hydrodynamic Waves*. Nature.](https://www.nature.com/articles/150405d0)
-2. [Cowling, T. G. (1933). *The magnetic field of sunspots*. Monthly Notices of the Royal Astronomical Society.](https://doi.org/10.1093/mnras/94.1.39)
-3. [Parker, E. N. (1955). *Hydromagnetic Dynamo Models*. The Astrophysical Journal.](https://doi.org/10.1086/146087)
-4. [Taylor, J. B. (1974). *Relaxation of Toroidal Plasma and Generation of Reverse Magnetic Fields*. Physical Review Letters.](https://doi.org/10.1103/PhysRevLett.33.1139)
-5. [Sweet, P. A. (1958). *The Neutral Point Theory of Solar Flares*.](https://ui.adsabs.harvard.edu/abs/1958IAUS....6..123S/abstract)
-6. [Parker, E. N. (1957). *Sweet's Mechanism for Merging Magnetic Fields in Conducting Fluids*. Journal of Geophysical Research.](https://doi.org/10.1029/JZ062i004p00509)
-7. [Athena++ Astrophysical MHD Code](https://github.com/PrincetonUniversity/athena) - Código C++ para MHD astrofísica.
-8. [PLUTO Code for Computational Astrophysics](http://plutocode.ph.unito.it/) - MHD y relatividad.
-9. [Pencil Code](http://pencil-code.nordita.org/) - Simulación de flujos magnéticos compresibles.
+### Artículos Científicos Clave y su Análisis Teórico
+
+1. **"Existence of Electromagnetic-Hydrodynamic Waves"** - *H. Alfvén (1942), Nature 150, 405*  
+   [Link al artículo original (Nature)](https://www.nature.com/articles/150405d0)
+   
+   **Importancia Teórica y Relevancia:** 
+   El documento que fundó la disciplina de la Magnetohidrodinámica. Hannes Alfvén predijo teóricamente un nuevo tipo de onda transversal que se propaga a lo largo de las líneas de campo magnético, acoplando inextricablemente la dinámica fluida con el electromagnetismo.
+   
+   **Contexto Matemático:** 
+   Combinando las ecuaciones de Maxwell de baja frecuencia con la ecuación de Euler de un fluido incompresible infinitamente conductor, Alfvén linealizó el sistema y encontró que una pequeña perturbación magnética $\mathbf{b}$ y la velocidad del fluido $\mathbf{v}$ satisfacen la ecuación de onda clásica de d'Alembert:
+   $$ \frac{\partial^2 \mathbf{b}}{\partial t^2} = \frac{B_0^2}{\mu_0 \rho} \frac{\partial^2 \mathbf{b}}{\partial z^2} $$
+   Donde la velocidad de propagación de la perturbación (ahora conocida como Velocidad de Alfvén) es:
+   $$ v_A = \frac{B_0}{\sqrt{\mu_0 \rho}} $$
+   Físicamente, demostró que el campo magnético actúa exactamente como cuerdas de un instrumento musical provistas de una tensión magnética ($B_0^2/\mu_0$) sobrecargada por la inercia de masa de las partículas atadas al campo ($\rho$), posibilitando oscilaciones transversales.
+
+2. **"Sweet's Mechanism for Merging Magnetic Fields in Conducting Fluids"** - *E. N. Parker (1957), J. Geophys. Res. 62, 4*  
+   [Link al artículo original (AGU)](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/JZ062i004p00509)
+   
+   **Importancia Teórica y Relevancia:** 
+   La formalización matemática del primer modelo de reconexión magnética (Modelo Sweet-Parker). Buscó explicar la liberación catastrófica de energía magnética en las fulguraciones solares rompiendo el teorema de Alfvén en regiones de alta densidad de corriente.
+   
+   **Contexto Matemático:** 
+   Parker analizó el balance estacionario entre la convección de flujo magnético hacia una hoja de corriente y la disipación resistiva dentro de ella. Usando leyes de conservación de masa incompresible ($v_{in} L \approx v_{out} \delta$) y la ley de Ohm resistiva ($\mathbf{E} + \mathbf{v} \times \mathbf{B} = \eta \mathbf{J}$), derivó la tasa de reconexión adimensional dependiente de la resistividad magnética $\eta$:
+   $$ M_A = \frac{v_{in}}{v_A} \approx \sqrt{\frac{\eta}{L v_A}} = S^{-1/2} $$
+   Donde $S$ es el Número de Lundquist. Este artículo es vital porque, al exponer la dependencia en $S^{-1/2}$, Parker probó que la reconexión colisional es excesivamente lenta en plasmas astrofísicos reales (donde $S \gg 1$), propiciando subsecuentemente más de 60 años de investigación en modelos de reconexión rápida (como colisiones cinéticas e inestabilidades tipo Hall).
 
 ### 📖 Referencias Útiles y Bibliografía
-1. [Biskamp, D. (1993). *Nonlinear Magnetohydrodynamics*. Cambridge University Press.](https://www.cambridge.org/core/books/nonlinear-magnetohydrodynamics/3A4F8A6B0A84B4810756784419E75CB7)
-2. [Davidson, P. A. (2001). *An Introduction to Magnetohydrodynamics*. Cambridge University Press.](https://www.cambridge.org/core/books/an-introduction-to-magnetohydrodynamics/1A334B719E8DF41CDE4B157A42C10214)
-3. [Goedbloed, J. P., & Poedts, S. (2004). *Principles of Magnetohydrodynamics*. Cambridge University Press.](https://www.cambridge.org/core/books/principles-of-magnetohydrodynamics/2A46DB0FBE86D740E7D2D682E55BE795)
-4. [Roberts, P. H. (1967). *An Introduction to Magnetohydrodynamics*. Longmans.](https://www.worldcat.org/title/introduction-to-magnetohydrodynamics/oclc/389025)
+- Biskamp, D. (1993). *Nonlinear Magnetohydrodynamics*. Cambridge University Press.
+- Davidson, P. A. (2001). *An Introduction to Magnetohydrodynamics*. Cambridge University Press.
+- Goedbloed, J. P., & Poedts, S. (2004). *Principles of Magnetohydrodynamics*. Cambridge University Press.
