@@ -8,9 +8,7 @@ Jacob Bekenstein y Stephen Hawking calcularon teóricamente la entropía (y por 
 La entropía máxima que puede ser empaquetada en una región esférica dada, de masa-energía suficiente para colapsar un agujero negro, no es proporcional a su volumen (en $r^3$), sino a su área superficial (en $r^2$):
 
 $$
-
- S_{BH} = \frac{k_B c^3}{4 G \hbar} A = \frac{k_B}{4} \left( \frac{A}{l_p^2} \right) 
-
+S_{BH} = \frac{k_B c^3}{4 G \hbar} A = \frac{k_B}{4} \left( \frac{A}{l_p^2} \right)
 $$
 
 Donde $l_p$ es la Longitud de Planck. Cada "área de Planck" en el horizonte de sucesos contiene 1/4 de bit (o 1 nit) de información matemática pura.

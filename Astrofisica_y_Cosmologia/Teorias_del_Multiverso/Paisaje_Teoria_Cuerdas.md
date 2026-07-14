@@ -23,9 +23,7 @@ En 2003, Shamit Kachru, Renata Kallosh, Andrei Linde, y Sandip Trivedi (KKLT) de
 El cálculo matemático perturbador fue que la cantidad de ciclos y la cantidad de unidades de flujo cuantizadas que pueden envolverse en esos ciclos permitían un número colosal de combinaciones discretas válidas. Ashok Sen, Michael Douglas y otros determinaron estimaciones rigurosas. Si una variedad típica de Calabi-Yau tiene $\sim 500$ ciclos, y puedes tener digamos $\sim 10$ unidades de flujo distintas a través de cada ciclo, el número de formas de configurar matemáticamente el espacio compacto es:
 
 $$
-
- \mathcal{N}_{vacios} \approx \frac{(10)^{500}}{\dots} \sim 10^{500}
-
+\mathcal{N}_{vacios} \approx \frac{(10)^{500}}{\dots} \sim 10^{500}
 $$
 
 Cada una de estas configuraciones discretas estabilizadas (cada "valle" en la inmensa superficie de potencial de 500 dimensiones) corresponde a un universo local tridimensional. Al romperse la supersimetría a diferentes escalas en cada valle vacío, cada universo tiene valores radicalmente distintos de la masa del electrón, diferentes familias de fuerzas gauge, diferentes constantes gravitatorias, y en la enorme mayoría de casos, constantes cosmológicas negativas hiper-violentas.

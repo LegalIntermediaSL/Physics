@@ -7,9 +7,7 @@ En 1998, Norman Margolus y Lev Levitin utilizaron el principio de incertidumbre 
 La tasa de operaciones máxima por segundo que puede ejecutar un sistema de energía (o masa) $E$ es:
 
 $$
-
- \nu_{max} = \frac{2E}{\pi \hbar} 
-
+\nu_{max} = \frac{2E}{\pi \hbar}
 $$
 
 (Dado que $E=mc^2$, un sistema de 1 kilogramo posee una brutal potencia computacional máxima de unos $5.4 \times 10^{50}$ operaciones lógicas por segundo, millones de billones de veces superior al superordenador moderno completo más poderoso).
@@ -18,9 +16,7 @@ $$
 En 1961, Rolf Landauer estableció un nexo inquebrantable físico-computacional, demostrando matemáticamente que manipular información termodinámicamente reversible (compuertas lógicas como TOFFOLI o NOT cuántico) es teóricamente gratuito, pero borrar o asentar información irreductiblemente macroscópica (un borrado lógico destructivo) conlleva obligatoriamente una disipación física de calor hacia el entorno (incremento entrópico del universo):
 
 $$
-
- E \ge k_B T \ln 2 
-
+E \ge k_B T \ln 2
 $$
 
 Si se asume un cosmos holográfico continuo como simulación asimilada, la computadora matriz que ejecuta nuestra realidad termodinámica debería disipar una cantidad inconmensurable de calor residual en la Dimensión Base, acoplando estrechamente el motor informático al flujo de calor universal y limitando su velocidad (Límite de Bremermann y computación en agujeros negros puros).
@@ -31,17 +27,13 @@ En el ensayo seminal *Computational Capacity of the Universe* (2002), Seth Lloyd
 Integrando la densidad de energía total mediante la ecuación de Margolus-Levitin sobre toda la edad temporal, Lloyd computó el máximo de operaciones computacionales físicas ocurridas:
 
 $$
-
- (\text{Número máximo de Operaciones Lógicas Cósmicas}) \approx 10^{120} 
-
+(\text{Número máximo de Operaciones Lógicas Cósmicas}) \approx 10^{120}
 $$
 
 Además, dado el límite de Bekenstein holográfico para nuestro tamaño actual cósmico, determinó la memoria RAM total (bits y entropía cósmica real almacenada) del universo entero en la actualidad es de:
 
 $$
-
- \text{Memoria Máxima Almacenable} \approx 10^{90} \text{ bits}
-
+\text{Memoria Máxima Almacenable} \approx 10^{90} \text{ bits}
 $$
 
 ### "Coarse-Graining" y Simulación Viable

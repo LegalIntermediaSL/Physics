@@ -10,9 +10,7 @@ El Nivel I postula que la realidad física se extiende más allá de nuestro hor
 El universo observable (Volumen de Hubble) tiene un tamaño dictado por la velocidad de la luz y la edad del universo, definido por el radio de Hubble $r_H = c/H_0$, lo que se traduce en un volumen esférico aproximado de:
 
 $$
-
- V_H = \frac{4}{3}\pi \left( \frac{c}{H_0} \right)^3 
-
+V_H = \frac{4}{3}\pi \left( \frac{c}{H_0} \right)^3
 $$
 
 Si el universo real es infinito e isotrópico, la materia en cualquier volumen de Hubble solo puede disponerse en un número **finito** de configuraciones cuánticas. Según el **Límite de Bekenstein**, la cantidad máxima de información (estados distinguibles) que puede contener un volumen es finita y está dictada por su superficie holográfica en áreas de Planck. 

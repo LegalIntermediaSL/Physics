@@ -8,11 +8,11 @@ En la interpretación ortodoxa (Copenhague/Von Neumann), la evolución del estad
 
 * **Proceso 1 (Dinámica Unitaria):** Si el sistema no se observa, evoluciona de manera determinista, reversible, local y lineal según la Ecuación de Schrödinger:
 
-  $$
+  
 
-   |\Psi(t)\rangle = e^{-i \hat{H} t / \hbar} |\Psi(0)\rangle 
-
-  $$
+$$
+|\Psi(t)\rangle = e^{-i \hat{H} t / \hbar} |\Psi(0)\rangle
+$$
 
 * **Proceso 2 (Postulado de Colapso):** Al momento de realizarse una "medición" por un aparato macrosópico (clásico), la evolución unitaria se interrumpe violenta y no-localmente. La función de onda del sistema $|\Psi\rangle = \sum c_i |a_i\rangle$ colapsa aleatoriamente hacia uno de los estados propios del observable $|a_k\rangle$ con probabilidad absoluta $p_k = |c_k|^2$ (Regla de Born).
 
@@ -23,9 +23,7 @@ El absurdo epistemológico de Copenhague es el dualismo: ¿Dónde está exactame
 Supongamos un electrón en una superposición pura de espín vertical:
 
 $$
-
- |\psi\rangle_e = \alpha |\uparrow\rangle + \beta |\downarrow\rangle 
-
+|\psi\rangle_e = \alpha |\uparrow\rangle + \beta |\downarrow\rangle
 $$
 
 Y un aparato de medición (o un humano) inicialmente en un estado neutral: $|M\rangle_{ready}$.
@@ -37,9 +35,7 @@ y $|\downarrow\rangle |M\rangle_{ready} \to |\downarrow\rangle |M\rangle_{\text{
 Por el principio de linealidad de la Ecuación de Schrödinger, el estado combinado (Universo) tras la medición es ineludiblemente:
 
 $$
-
- |\Psi_{universo}\rangle = \alpha \left( |\uparrow\rangle \otimes |M\rangle_{\text{lee arriba}} \right) + \beta \left( |\downarrow\rangle \otimes |M\rangle_{\text{lee abajo}} \right) 
-
+|\Psi_{universo}\rangle = \alpha \left( |\uparrow\rangle \otimes |M\rangle_{\text{lee arriba}} \right) + \beta \left( |\downarrow\rangle \otimes |M\rangle_{\text{lee abajo}} \right)
 $$
 
 **La función de onda no ha colapsado.** Simplemente, el aparato de medición (el observador) ha entrado en un estado entrelazado con el electrón. Desde la perspectiva estricta del sub-estado $|M\rangle_{\text{lee arriba}}$, el electrón está definitivamente hacia arriba. Desde la perspectiva de $|M\rangle_{\text{lee abajo}}$, el electrón está hacia abajo. Everett llamó a esto "Estados Relativos". El universo se ha escindido en dos ramas (dos mundos) igualmente reales.
@@ -53,9 +49,7 @@ La respuesta matemática moderna es la **Decoherencia Ambiental**. El observador
 Si introducimos el ambiente, el estado global evoluciona rápidamente a:
 
 $$
-
- |\Psi_{total}\rangle = \alpha |\uparrow\rangle |M\rangle_{arriba} |E\rangle_{\uparrow} + \beta |\downarrow\rangle |M\rangle_{abajo} |E\rangle_{\downarrow} 
-
+|\Psi_{total}\rangle = \alpha |\uparrow\rangle |M\rangle_{arriba} |E\rangle_{\uparrow} + \beta |\downarrow\rangle |M\rangle_{abajo} |E\rangle_{\downarrow}
 $$
 
 La distinción crucial es que los estados ambientales de un sistema macroscópico son **ortogonales** rápidamente: $\langle E_{\uparrow} | E_{\downarrow} \rangle \to 0$.
@@ -64,15 +58,11 @@ La distinción crucial es que los estados ambientales de un sistema macroscópic
 El observador nunca tiene acceso a medir cada fotón del universo para demostrar la interferencia entre ramas. Matemáticamente, debemos hacer la **traza parcial** sobre los grados de libertad del entorno ($\text{Tr}_E$) para obtener la matriz densidad reducida del sistema (Electrón + Aparato):
 
 $$
-
- \rho_S = \text{Tr}_E \left( |\Psi_{total}\rangle \langle \Psi_{total}| \right) 
-
+\rho_S = \text{Tr}_E \left( |\Psi_{total}\rangle \langle \Psi_{total}| \right)
 $$
 
 $$
-
- \rho_S \approx |\alpha|^2 \left( |\uparrow\rangle |M\rangle_{\uparrow} \right) \left( \langle \uparrow| \langle M|_{\uparrow} \right) + |\beta|^2 \left( |\downarrow\rangle |M\rangle_{\downarrow} \right) \left( \langle \downarrow| \langle M|_{\downarrow} \right) 
-
+\rho_S \approx |\alpha|^2 \left( |\uparrow\rangle |M\rangle_{\uparrow} \right) \left( \langle \uparrow| \langle M|_{\uparrow} \right) + |\beta|^2 \left( |\downarrow\rangle |M\rangle_{\downarrow} \right) \left( \langle \downarrow| \langle M|_{\downarrow} \right)
 $$
 
 ¡Los términos de interferencia fuera de la diagonal (que demostrarían la superposición cuántica macroscópica) han sido aniquilados exponencialmente por la ortogonalidad del ambiente! 

@@ -18,7 +18,9 @@ El interior de una estrella en equilibrio es un plasma caliente donde las fuerza
 
 La condición primordial para la estabilidad estelar es el equilibrio hidrostático. Consideremos un elemento de volumen de masa esférica con densidad $\rho$, área $dA$ y grosor $dr$. La diferencia de presión entre la cara inferior y superior crea una fuerza neta hacia afuera $dP \cdot dA$ que debe equilibrar la gravedad local:
 
-$$ dP = -\frac{G M_r}{r^2} (\rho dr) \implies \frac{dP}{dr} = -\frac{GM_r \rho}{r^2} $$
+$$
+dP = -\frac{G M_r}{r^2} (\rho dr) \implies \frac{dP}{dr} = -\frac{GM_r \rho}{r^2}
+$$
 
 Donde:
 - $P(r)$ es la presión total (presión del gas iónico + presión de radiación fotónica + presión de degeneración, si aplica).
@@ -28,13 +30,17 @@ Donde:
 
 La variación de la masa encerrada al aumentar el radio en $dr$ es simplemente el volumen de la capa esférica multiplicado por la densidad local:
 
-$$ dM_r = 4\pi r^2 \rho dr \implies \frac{dM_r}{dr} = 4\pi r^2 \rho $$
+$$
+dM_r = 4\pi r^2 \rho dr \implies \frac{dM_r}{dr} = 4\pi r^2 \rho
+$$
 
 ### 3. Ecuación de Conservación (o Generación) de Energía
 
 Para que la estrella brille constantemente, la energía que fluye a través de una capa esférica de radio $r$ (luminosidad local $L_r$) debe incrementarse en la cantidad de energía nuclear que se genera en esa capa. Si $\epsilon$ es la tasa de producción de energía por unidad de masa (en W/kg):
 
-$$ dL_r = (4\pi r^2 \rho dr) \epsilon \implies \frac{dL_r}{dr} = 4\pi r^2 \rho \epsilon $$
+$$
+dL_r = (4\pi r^2 \rho dr) \epsilon \implies \frac{dL_r}{dr} = 4\pi r^2 \rho \epsilon
+$$
 
 El valor de $\epsilon$ depende de la densidad y, muy fuertemente, de la temperatura. Por ejemplo, en el Sol (cadena p-p), $\epsilon_{pp} \propto \rho T^4$. En estrellas más masivas (ciclo CNO), $\epsilon_{CNO} \propto \rho T^{17}$.
 
@@ -45,14 +51,18 @@ La energía generada en el núcleo debe viajar a la superficie. El gradiente de 
 **Transporte Radiativo:**
 Si la energía fluye principalmente por difusión de fotones, la opacidad $\kappa$ (resistencia de la materia al paso de la radiación) determina la pendiente de la temperatura:
 
-$$ \frac{dT}{dr} = -\frac{3\kappa \rho L_r}{64\pi \sigma_{SB} r^2 T^3} $$
+$$
+\frac{dT}{dr} = -\frac{3\kappa \rho L_r}{64\pi \sigma_{SB} r^2 T^3}
+$$
 
 Donde $\sigma_{SB}$ es la constante de Stefan-Boltzmann.
 
 **Transporte Convectivo:**
 Si la opacidad es muy alta o la dependencia de $\epsilon$ con la temperatura es muy pronunciada (creando un gradiente térmico muy abrupto), el fluido se vuelve inestable frente a la convección (Criterio de Schwarzschild). Burbujas macroscópicas de plasma caliente ascienden adiabáticamente. El gradiente térmico es entonces dictado por la relación adiabática:
 
-$$ \frac{dT}{dr} = \left( 1 - \frac{1}{\gamma} \right) \frac{T}{P} \frac{dP}{dr} $$
+$$
+\frac{dT}{dr} = \left( 1 - \frac{1}{\gamma} \right) \frac{T}{P} \frac{dP}{dr}
+$$
 
 Donde $\gamma$ es el índice adiabático del gas (5/3 para un gas monoatómico ideal).
 
@@ -71,7 +81,9 @@ graph TD
 
 Para cerrar el sistema de ecuaciones, necesitamos relacionar la presión, la densidad y la temperatura. En la mayoría de las estrellas de secuencia principal (como el Sol), el plasma se comporta como un **gas ideal**, y la radiación también aporta presión:
 
-$$ P = P_{\text{gas}} + P_{\text{rad}} = \frac{\rho k_B T}{\mu m_H} + \frac{1}{3} a T^4 $$
+$$
+P = P_{\text{gas}} + P_{\text{rad}} = \frac{\rho k_B T}{\mu m_H} + \frac{1}{3} a T^4
+$$
 
 Donde $\mu$ es el peso molecular medio, $m_H$ es la masa del átomo de hidrógeno, $k_B$ es la constante de Boltzmann, y $a$ es la constante de densidad de radiación.
 
@@ -87,11 +99,19 @@ Datos del Sol: $M_\odot \approx 2 \times 10^{30} \text{ kg}$, $R_\odot \approx 7
 **Solución paso a paso:**
 1. La energía potencial gravitatoria $U$ de una esfera de masa $M$ y radio $R$ (asumiendo densidad constante como una aproximación burda) viene dada por el teorema del virial:
 
-   $$ U \approx -\frac{3GM^2}{5R} $$
+   
+
+$$
+U \approx -\frac{3GM^2}{5R}
+$$
 
 2. El tiempo de Kelvin-Helmholtz es la cantidad de energía disponible dividida por la tasa a la que se gasta (luminosidad):
 
-   $$ t_{KH} = \frac{|U|}{L_\odot} = \frac{3GM^2}{5R L_\odot} $$
+   
+
+$$
+t_{KH} = \frac{|U|}{L_\odot} = \frac{3GM^2}{5R L_\odot}
+$$
 
 3. Sustituimos los valores numéricos:
    - Numerador: $3 \times (6.674 \times 10^{-11}) \times (2 \times 10^{30})^2$
@@ -100,11 +120,19 @@ Datos del Sol: $M_\odot \approx 2 \times 10^{30} \text{ kg}$, $R_\odot \approx 7
    - $5 \times 7 \times 3.8 \times 10^{34} = 133 \times 10^{34} \text{ Joules/s}$
 4. Calculamos $t_{KH}$ en segundos:
 
-   $$ t_{KH} = \frac{80.088 \times 10^{49}}{133 \times 10^{34}} \approx 0.602 \times 10^{15} \text{ s} = 6.02 \times 10^{14} \text{ s} $$
+   
+
+$$
+t_{KH} = \frac{80.088 \times 10^{49}}{133 \times 10^{34}} \approx 0.602 \times 10^{15} \text{ s} = 6.02 \times 10^{14} \text{ s}
+$$
 
 5. Convertimos a años ($1 \text{ año} \approx 3.15 \times 10^7 \text{ s}$):
 
-   $$ t_{KH} \approx \frac{6.02 \times 10^{14}}{3.15 \times 10^7} \approx 1.9 \times 10^7 \text{ años} = 19 \text{ millones de años} $$
+   
+
+$$
+t_{KH} \approx \frac{6.02 \times 10^{14}}{3.15 \times 10^7} \approx 1.9 \times 10^7 \text{ años} = 19 \text{ millones de años}
+$$
 
 6. **Conclusión:** Lord Kelvin calculó este tiempo a finales del siglo XIX y concluyó que el Sol (y por ende la Tierra) no podía tener más de $\sim 20$ millones de años. Esto contradecía drásticamente la evidencia geológica y biológica (Darwin), que requería cientos de millones de años. La discrepancia solo se resolvió cuando se descubrió la verdadera fuente de energía del Sol: la fusión nuclear, que permite al Sol brillar por unos $10,000$ millones de años.
 
@@ -247,13 +275,19 @@ La física estelar extrema es en 2026 una de las ventanas más fértiles de la a
 
 Para modelar estrellas compactas (enanas blancas, estrellas de neutrones), la gravedad de Newton es insuficiente, y debe emplearse el andamiaje de la Relatividad General exacta. Asumiendo que la estrella es una masa fluida estática y de simetría esférica, la métrica interna puede expresarse como:
 
-$$ ds^2 = -e^{2\Phi(r)} c^2 dt^2 + \left(1 - \frac{2Gm(r)}{rc^2}\right)^{-1} dr^2 + r^2(d\theta^2 + \sin^2\theta d\phi^2) $$
+$$
+ds^2 = -e^{2\Phi(r)} c^2 dt^2 + \left(1 - \frac{2Gm(r)}{rc^2}\right)^{-1} dr^2 + r^2(d\theta^2 + \sin^2\theta d\phi^2)
+$$
 
 Modelando el interior estelar como un fluido perfecto, su tensor de energía-momento viene dado por $T^{\mu\nu} = (\rho c^2 + P)u^\mu u^\nu + P g^{\mu\nu}$. Proyectando la conservación covariante $\nabla_\mu T^{\mu\nu} = 0$ y usando las ecuaciones de campo de Einstein $G_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$, se derivan las famosas **Ecuaciones de Tolman-Oppenheimer-Volkoff (TOV)**, que establecen el balance hidrostático exacto bajo extrema gravedad:
 
-$$ \frac{dP}{dr} = -\frac{G}{r^2} \left( \rho + \frac{P}{c^2} \right) \left( m(r) + \frac{4\pi r^3 P}{c^2} \right) \left( 1 - \frac{2Gm(r)}{rc^2} \right)^{-1} $$
+$$
+\frac{dP}{dr} = -\frac{G}{r^2} \left( \rho + \frac{P}{c^2} \right) \left( m(r) + \frac{4\pi r^3 P}{c^2} \right) \left( 1 - \frac{2Gm(r)}{rc^2} \right)^{-1}
+$$
 
-$$ \frac{dm}{dr} = 4\pi r^2 \rho $$
+$$
+\frac{dm}{dr} = 4\pi r^2 \rho
+$$
 
 La solución de estas ecuaciones íntegro-diferenciales requiere una **Ecuación de Estado** barotrópica (EoS) $P = P(\rho)$. El radio de la estrella $R$ está definido por la condición de frontera $P(R) = 0$. Los términos adicionales de presión y masa en el numerador, junto con el factor relativista en el denominador, amplifican dramáticamente el gradiente de presión requerido para sostener a la estrella en comparación con el caso newtoniano, lo que irremediablemente conduce a un límite máximo teórico de masa antes del colapso ineludible hacia un agujero negro (el Límite de Tolman-Oppenheimer-Volkoff, estimado alrededor de $2.1-2.3 M_\odot$ para estrellas de neutrones según los recientes hallazgos astrofísicos).
 
@@ -272,7 +306,11 @@ La solución de estas ecuaciones íntegro-diferenciales requiere una **Ecuación
    **Importancia Teórica:** Con este majestuoso artículo (por el cual Bethe ganó el Premio Nobel en 1967), se resolvió el eterno misterio de cómo las estrellas como el Sol generan la abrumadora energía necesaria para mantenerse estables y no sucumbir a su propia gravedad durante miles de millones de años, descartando los simples tiempos de Kelvin-Helmholtz.  
    **Fondo Matemático:** En combinación parcial con el trabajo previo de Weizsäcker, Bethe dedujo rigurosamente los índices de reacción dependientes de túnel cuántico para el ciclo carbono-nitrógeno-oxígeno (CNO). En este ciclo catalítico, el carbono-12 finaliza intacto tras forjar un núcleo de helio con altísima dependencia térmica:
 
-   $$ \epsilon_{\text{CNO}} \propto \rho T^{17} $$
+   
+
+$$
+\epsilon_{\text{CNO}} \propto \rho T^{17}
+$$
 
    **Implicaciones Físicas:** Demostró que las estrellas masivas consumen su hidrógeno de forma explosivamente rápida a través del ciclo CNO, mientras que estrellas más livianas como el Sol (o menos) transitan primariamente la serie cadena protón-protón ($\epsilon \propto \rho T^4$), cimentando la teoría de núcleos y vidas estelares divergentes en función de la masa.
 
@@ -281,7 +319,11 @@ La solución de estas ecuaciones íntegro-diferenciales requiere una **Ecuación
    **Importancia Teórica:** El descubrimiento genial de un estudiante paquistaní/indio de 19 años (Subrahmanyan Chandrasekhar) durante un viaje en barco hacia Europa que trastocó violentamente a la comunidad astrofísica mundial del siglo XX (especialmente a A. Eddington).  
    **Fondo Matemático:** Combinó astutamente las leyes de politropas termodinámicas gravitacionales (de Lane-Emden, con índice $n=3$) con la ecuación de estado que deriva de una distribución relativista del gas de electrones fermiónico de Pauli. Así, dedujo matemáticamente que una enana blanca es sostenida exclusivamente por la degeneración electrónica $P \propto \rho^{4/3}$ a densidades super altas y calculó un umbral asintótico:
 
-   $$ M_{\text{Ch}} \approx 1.44 M_\odot $$
+   
+
+$$
+M_{\text{Ch}} \approx 1.44 M_\odot
+$$
 
    **Implicaciones Físicas:** Dictó la fatalidad estelar: una estrella es incapaz de volverse una Enana Blanca estable si el remanente de masa supera este crítico "Límite de Chandrasekhar". Si es mayor, los electrones se asimilan en neutrones, o se aplasta irremediablemente formando agujeros negros, garantizando que el cosmos estuviera plagado de explosiones violentísimas y remanentes hiperdensos, en contraposición directa a la intuición de la época.
 

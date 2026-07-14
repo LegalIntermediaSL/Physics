@@ -22,11 +22,15 @@ A diferencia de las moléculas en un gas, el tiempo entre colisiones físicas di
 
 La evolución de este fluido está regida por la **Ecuación de Boltzmann sin Colisiones** (o ecuación de Vlasov):
 
-$$ \frac{\partial f}{\partial t} + \mathbf{v} \cdot \nabla_{\mathbf{x}} f - \nabla_{\mathbf{x}} \Phi \cdot \nabla_{\mathbf{v}} f = 0 $$
+$$
+\frac{\partial f}{\partial t} + \mathbf{v} \cdot \nabla_{\mathbf{x}} f - \nabla_{\mathbf{x}} \Phi \cdot \nabla_{\mathbf{v}} f = 0
+$$
 
 Donde $\Phi(\mathbf{x}, t)$ es el potencial gravitatorio medio suave generado por todas las estrellas y la materia oscura juntas. Este potencial, a su vez, debe satisfacer la Ecuación de Poisson:
 
-$$ \nabla^2 \Phi = 4\pi G \int f(\mathbf{x}, \mathbf{v}, t) d^3\mathbf{v} = 4\pi G \rho(\mathbf{x}, t) $$
+$$
+\nabla^2 \Phi = 4\pi G \int f(\mathbf{x}, \mathbf{v}, t) d^3\mathbf{v} = 4\pi G \rho(\mathbf{x}, t)
+$$
 
 El acoplamiento de estas dos ecuaciones gobierna la estructura y evolución de los sistemas estelares masivos.
 
@@ -34,11 +38,15 @@ El acoplamiento de estas dos ecuaciones gobierna la estructura y evolución de l
 
 Para un sistema galáctico autogravitante en estado estacionario, el Teorema del Virial relaciona la energía cinética total $K$ con la energía potencial gravitatoria total $U$:
 
-$$ 2K + U = 0 $$
+$$
+2K + U = 0
+$$
 
 Dado que $K = \frac{1}{2} M \langle v^2 \rangle$ (donde $\langle v^2 \rangle$ es la dispersión de velocidades cuadrática media) y $U \approx -\frac{GM^2}{R}$ (donde $R$ es un radio característico), podemos estimar la "masa dinámica" total $M$ de la galaxia midiendo la dispersión de velocidades estelar:
 
-$$ M \approx \frac{R \langle v^2 \rangle}{G} $$
+$$
+M \approx \frac{R \langle v^2 \rangle}{G}
+$$
 
 Al aplicar esto a cúmulos de galaxias (como hizo Fritz Zwicky en 1933) o a galaxias individuales (Vera Rubin en los 70s), se descubrió que la masa dinámica superaba masivamente (de 5 a 50 veces) a la masa luminosa observada.
 
@@ -46,19 +54,27 @@ Al aplicar esto a cúmulos de galaxias (como hizo Fritz Zwicky en 1933) o a gala
 
 En una galaxia espiral, asumimos órbitas circulares para el gas y las estrellas en el disco galáctico. La velocidad de rotación $v_c(r)$ se iguala centrípetamente al campo gravitacional:
 
-$$ \frac{v_c^2(r)}{r} = \frac{d\Phi}{dr} = \frac{G M(r)}{r^2} \implies v_c(r) = \sqrt{\frac{G M(r)}{r}} $$
+$$
+\frac{v_c^2(r)}{r} = \frac{d\Phi}{dr} = \frac{G M(r)}{r^2} \implies v_c(r) = \sqrt{\frac{G M(r)}{r}}
+$$
 
 Donde $M(r)$ es la masa encerrada en la esfera de radio $r$. Si asumimos que la masa está solo en el disco luminoso y el bulto central, $M(r)$ se volvería constante fuera del centro visible ($M(r) \approx M_{\text{tot}}$), por lo que esperaríamos un declive kepleriano en la velocidad:
 
-$$ v_c(r) \propto \frac{1}{\sqrt{r}} $$
+$$
+v_c(r) \propto \frac{1}{\sqrt{r}}
+$$
 
 Sin embargo, las curvas de rotación observadas son característicamente planas ($v_c(r) \approx \text{constante} = V_0$) para radios grandes. Esto requiere que matemáticamente:
 
-$$ M(r) = \frac{V_0^2 r}{G} \implies M(r) \propto r $$
+$$
+M(r) = \frac{V_0^2 r}{G} \implies M(r) \propto r
+$$
 
 Para que la masa aumente linealmente con el radio, debe existir un vasto componente esférico no luminoso, el **halo de materia oscura**, con un perfil de densidad que se asintotiza como la *esfera isoterma singular*:
 
-$$ \rho_{\text{DM}}(r) = \frac{1}{4\pi r^2} \frac{dM(r)}{dr} = \frac{V_0^2}{4\pi G r^2} \propto r^{-2} $$
+$$
+\rho_{\text{DM}}(r) = \frac{1}{4\pi r^2} \frac{dM(r)}{dr} = \frac{V_0^2}{4\pi G r^2} \propto r^{-2}
+$$
 
 Este halo domina el potencial gravitacional en las regiones exteriores, asegurando la estabilidad del disco galáctico visible (evitando inestabilidades de barra que de otro modo lo destruirían rápidamente, según el criterio de Ostriker-Peebles).
 
@@ -77,11 +93,19 @@ Existen relaciones empíricas profundas que vinculan las propiedades dinámicas 
 
 - **Relación de Tully-Fisher (para Espirales):** Relaciona la luminosidad total con la amplitud máxima de la velocidad de rotación plana $V_{\text{max}}$.
 
-  $$ L \propto V_{\text{max}}^\alpha \quad (\text{con } \alpha \approx 3 \text{ a } 4) $$
+  
+
+$$
+L \propto V_{\text{max}}^\alpha \quad (\text{con } \alpha \approx 3 \text{ a } 4)
+$$
 
 - **Relación de Faber-Jackson (para Elípticas):** Relaciona la luminosidad intrínseca con la dispersión de velocidades central $\sigma$.
 
-  $$ L \propto \sigma^4 $$
+  
+
+$$
+L \propto \sigma^4
+$$
 
 Estas leyes son fundamentales como "candelas estándar" secundarias para medir distancias cosmológicas a galaxias lejanas independientes de su desplazamiento al rojo.
 
@@ -98,20 +122,40 @@ Estas leyes son fundamentales como "candelas estándar" secundarias para medir d
    - $G = 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$
 2. La masa viríal estimada se relaciona con la dispersión de la línea de visión unidimensional ($\sigma$) usando un factor geométrico que para sistemas esféricos isótropos suele tomarse como $k \approx 5$ de forma aproximada en el radio medio de la masa:
 
-   $$ M_{dyn} \approx \frac{5 R_e \sigma^2}{G} $$
+   
+
+$$
+M_{dyn} \approx \frac{5 R_e \sigma^2}{G}
+$$
 
    *(Nota: Dependiendo del perfil de densidad exacto, la constante varía entre 3 y 5. Utilizaremos 5 para esta aproximación)*.
 3. Sustituimos valores:
 
-   $$ M_{dyn} = \frac{5 \times (3.086 \times 10^{20}) \times (3 \times 10^5)^2}{6.674 \times 10^{-11}} $$
+   
 
-   $$ M_{dyn} = \frac{15.43 \times 10^{20} \times 9 \times 10^{10}}{6.674 \times 10^{-11}} $$
+$$
+M_{dyn} = \frac{5 \times (3.086 \times 10^{20}) \times (3 \times 10^5)^2}{6.674 \times 10^{-11}}
+$$
 
-   $$ M_{dyn} = \frac{138.87 \times 10^{30}}{6.674 \times 10^{-11}} \approx 20.81 \times 10^{41} \text{ kg} $$
+   
+
+$$
+M_{dyn} = \frac{15.43 \times 10^{20} \times 9 \times 10^{10}}{6.674 \times 10^{-11}}
+$$
+
+   
+
+$$
+M_{dyn} = \frac{138.87 \times 10^{30}}{6.674 \times 10^{-11}} \approx 20.81 \times 10^{41} \text{ kg}
+$$
 
 4. Convertimos a masas solares ($1 M_\odot \approx 1.989 \times 10^{30} \text{ kg}$):
 
-   $$ M_{dyn} \approx \frac{20.81 \times 10^{41}}{1.989 \times 10^{30}} \approx 10.46 \times 10^{11} M_\odot $$
+   
+
+$$
+M_{dyn} \approx \frac{20.81 \times 10^{41}}{1.989 \times 10^{30}} \approx 10.46 \times 10^{11} M_\odot
+$$
 
 5. **Conclusión:** La masa dinámica de la galaxia es superior a 1 billón de masas solares ($> 10^{12} M_\odot$), lo cual supera ampliamente la masa que se estimaría sólo contabilizando el brillo de sus estrellas, confirmando la presencia sustancial de materia oscura en el sistema.
 
@@ -246,13 +290,19 @@ El tratamiento riguroso de una galaxia como un sistema $N$-cuerpos de dimensione
 
 La dinámica del sistema está gobernada acopladamente por la **Ecuación de Vlasov** (o Ecuación de Boltzmann sin colisiones) y la **Ecuación de Poisson** para el potencial gravitacional medio $\Phi$:
 
-$$ \frac{\partial f}{\partial t} + \mathbf{v} \cdot \nabla f - \nabla\Phi \cdot \frac{\partial f}{\partial \mathbf{v}} = 0 $$
+$$
+\frac{\partial f}{\partial t} + \mathbf{v} \cdot \nabla f - \nabla\Phi \cdot \frac{\partial f}{\partial \mathbf{v}} = 0
+$$
 
-$$ \nabla^2\Phi = 4\pi G \rho = 4\pi G \int f(\mathbf{r}, \mathbf{v}, t) \, d^3\mathbf{v} $$
+$$
+\nabla^2\Phi = 4\pi G \rho = 4\pi G \int f(\mathbf{r}, \mathbf{v}, t) \, d^3\mathbf{v}
+$$
 
 Para estudiar soluciones estacionarias (teorema de Jeans), el formalismo más poderoso involucra el uso de la mecánica Hamiltoniana y la formulación en **Variables de Ángulo-Acción** $(\mathbf{\theta}, \mathbf{J})$. Si el potencial admite órbitas integrables regulares, podemos realizar una transformación canónica desde el espacio de fases $(\mathbf{q}, \mathbf{p})$ tal que las acciones $J_i = \frac{1}{2\pi} \oint p_i dq_i$ sean integrales de movimiento ($\dot{J}_i = 0$), y los ángulos fluyan a frecuencias constantes $\dot{\theta}_i = \Omega_i(\mathbf{J})$. En estas coordenadas covariantes, la ecuación de Vlasov estacionaria implica que la función de distribución sólo puede depender del vector de acciones (Teorema de Jeans Fuerte):
 
-$$ f = f(\mathbf{J}) $$
+$$
+f = f(\mathbf{J})
+$$
 
 A partir de esta estructura fundamental de foliación toroidal del espacio de fases estacionario, se puede perturbar la distribución $f = f_0(\mathbf{J}) + \delta f(\mathbf{\theta}, \mathbf{J}, t)$ para estudiar formalmente las inestabilidades dinámicas de disco (como las ondas de densidad espirales de Lin-Shu) o el decaimiento de oscilaciones globales gravitacionales (amortiguamiento de Landau gravitacional), resolviendo integrales de resonancia sofisticadas en el plano de frecuencias orbitales complejas.
 
@@ -271,7 +321,11 @@ A partir de esta estructura fundamental de foliación toroidal del espacio de fa
    **Importancia Teórica:** Un artículo histórico con impacto sísmico en toda la astronomía moderna. Vera Rubin y Ford midieron óptica y cuidadosamente las velocidades radiales espectroscópicas de nubes de gas de Hidrógeno (HII) rotando orbitalmente muy lejos del centro bulbar de la inmensa Galaxia de Andrómeda.  
    **Fondo Matemático:** Observaron que a distancias lejanas ($R$), el comportamiento kepleriano asintótico predecía una caída de velocidad dictada por masa bariónica visible $V_c \propto 1/\sqrt{R}$. Sin embargo, registraron impecablemente que $V_c$ seguía un plato plano constante hasta casi $24\text{ kpc}$:
 
-   $$ \frac{V_c^2}{R} = \frac{GM(R)}{R^2} \implies M(R) \propto R $$
+   
+
+$$
+\frac{V_c^2}{R} = \frac{GM(R)}{R^2} \implies M(R) \propto R
+$$
 
    **Implicaciones Físicas:** Otorgó el veredicto más fuerte e ineludible hasta la fecha para resucitar el hipotético postulado del astrónomo Fritz Zwicky de los años 30s; la masiva y extraña omnipresencia del inmenso Halo no luminoso ("Materia Oscura"), probando concluyentemente que el grueso gravitacional del universo cercano no brilla.
 
@@ -280,7 +334,11 @@ A partir de esta estructura fundamental de foliación toroidal del espacio de fa
    **Importancia Teórica:** El seminal estudio del Formalismo "Press-Schechter", fundando todo modelo estadístico-analítico subyacente que prevé el ensamblaje evolutivo jerárquico estelar cósmico.  
    **Fondo Matemático:** Trata las sobre-densidades aleatorias primordiales cósmicas $\delta(\mathbf{x})$ como un campo de probabilidad puramente Gaussiano, deduciendo que la fracción de volumen colapsado (en halos oscuros dependientes de la masa gravitatoria $M$) decrece de forma exponencial:
 
-   $$ n(M) dM = \sqrt{\frac{2}{\pi}} \frac{\bar{\rho}}{M^2} \left|\frac{d\ln\sigma}{d\ln M}\right| \left(\frac{\delta_c}{\sigma(M)}\right) \exp\left( - \frac{\delta_c^2}{2\sigma^2(M)} \right) dM $$
+   
+
+$$
+n(M) dM = \sqrt{\frac{2}{\pi}} \frac{\bar{\rho}}{M^2} \left|\frac{d\ln\sigma}{d\ln M}\right| \left(\frac{\delta_c}{\sigma(M)}\right) \exp\left( - \frac{\delta_c^2}{2\sigma^2(M)} \right) dM
+$$
 
    **Implicaciones Físicas:** Demuestra deductivamente que nuestro universo forma primero gravitacionalmente las estructuras pequeñas o "enanas" para posteriormente ser engullidas caóticamente armando halos y agrupaciones (Cúmulos) gigantescas y masivas, una evolución estrictamente jerárquica de la morfología cósmica actual.
 
@@ -289,7 +347,11 @@ A partir de esta estructura fundamental de foliación toroidal del espacio de fa
    **Importancia Teórica:** Formuló empíricamente y midió la Relación "Tully-Fisher" a través del perfil y ancho de resonancia macroscópico electromagnético radial en frecuencias de radio emitido por nubes neutrales de $21\text{ cm}$.  
    **Fondo Matemático:** Relacionaron con brutal precisión teórica que el ensanchamiento Doppler medido por velocidad orbital plana (amplitud) se conectaba fuertemente con la Luminosidad Absoluta infrarroja de un sistema galáctico espiral:
 
-   $$ L \propto V_{\text{max}}^\alpha \quad (\text{donde } \alpha \approx 4) $$
+   
+
+$$
+L \propto V_{\text{max}}^\alpha \quad (\text{donde } \alpha \approx 4)
+$$
 
    **Implicaciones Físicas:** Habilitó a toda una nueva generación de astrónomos la habilidad de saltarse el problema de las frágiles estimaciones geométricas distantes: proporcionó una masiva 'candela estándar' dinámica independiente del rojo cósmico, ayudando colosalmente a perfilar por fin la constante absoluta y precisa de la Ecuación de expansión de Hubble actual.
 
