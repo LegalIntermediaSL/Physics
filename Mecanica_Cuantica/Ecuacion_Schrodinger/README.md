@@ -17,43 +17,61 @@ La formulación de la mecánica cuántica no relativista encuentra en la Ecuaci�
 
 A partir de la relación de de Broglie para el momento $p = \hbar k$ y de Planck-Einstein para la energía $E = \hbar \omega$, consideramos una onda plana libre en una dimensión:
 
-$$ \Psi(x,t) = A e^{i(kx - \omega t)} $$
+$$
+\Psi(x,t) = A e^{i(kx - \omega t)}
+$$
 
 Derivando con respecto a la posición $x$:
 
-$$ \frac{\partial \Psi}{\partial x} = ik \Psi \implies \frac{\partial^2 \Psi}{\partial x^2} = -k^2 \Psi $$
+$$
+\frac{\partial \Psi}{\partial x} = ik \Psi \implies \frac{\partial^2 \Psi}{\partial x^2} = -k^2 \Psi
+$$
 
 Multiplicando por $-\frac{\hbar^2}{2m}$ y recordando que la energía cinética clásica es $T = \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m}$, obtenemos:
 
-$$ -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} = \frac{\hbar^2 k^2}{2m}\Psi = T\Psi $$
+$$
+-\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} = \frac{\hbar^2 k^2}{2m}\Psi = T\Psi
+$$
 
 Derivando respecto al tiempo $t$:
 
-$$ \frac{\partial \Psi}{\partial t} = -i\omega \Psi \implies i\hbar \frac{\partial \Psi}{\partial t} = \hbar \omega \Psi = E\Psi $$
+$$
+\frac{\partial \Psi}{\partial t} = -i\omega \Psi \implies i\hbar \frac{\partial \Psi}{\partial t} = \hbar \omega \Psi = E\Psi
+$$
 
 Para una partícula en presencia de un potencial $V(\vec{r},t)$, la energía total es $E = T + V$. Postulando que la relación de operadores energéticos se mantiene, llegamos a la Ecuación de Schrödinger dependiente del tiempo:
 
-$$ i\hbar \frac{\partial}{\partial t} \Psi(\vec{r}, t) = \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}, t) \right) \Psi(\vec{r}, t) = \hat{H} \Psi(\vec{r}, t) $$
+$$
+i\hbar \frac{\partial}{\partial t} \Psi(\vec{r}, t) = \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}, t) \right) \Psi(\vec{r}, t) = \hat{H} \Psi(\vec{r}, t)
+$$
 
 ### Ecuación Independiente del Tiempo y Separación de Variables
 
 Si el potencial no depende explícitamente del tiempo, es decir $V = V(\vec{r})$, podemos proponer una solución separable de la forma $\Psi(\vec{r}, t) = \psi(\vec{r})T(t)$. Sustituyendo en la ecuación original:
 
-$$ i\hbar \psi(\vec{r}) \frac{dT(t)}{dt} = T(t) \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) $$
+$$
+i\hbar \psi(\vec{r}) \frac{dT(t)}{dt} = T(t) \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r})
+$$
 
 Dividiendo entre $\Psi(\vec{r}, t) = \psi(\vec{r})T(t)$:
 
-$$ i\hbar \frac{1}{T(t)} \frac{dT(t)}{dt} = \frac{1}{\psi(\vec{r})} \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) = E $$
+$$
+i\hbar \frac{1}{T(t)} \frac{dT(t)}{dt} = \frac{1}{\psi(\vec{r})} \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) = E
+$$
 
 Dado que el lado izquierdo solo depende del tiempo y el derecho solo de la posición, ambos deben ser iguales a una constante de separación, la cual identificamos físicamente con la energía total del sistema $E$. Esto da lugar a dos ecuaciones:
 
 1. **Evolución Temporal:**
 
-$$ \frac{dT(t)}{dt} = -\frac{iE}{\hbar}T(t) \implies T(t) = e^{-iEt/\hbar} $$
+$$
+\frac{dT(t)}{dt} = -\frac{iE}{\hbar}T(t) \implies T(t) = e^{-iEt/\hbar}
+$$
 
 2. **Ecuación de Schrödinger Independiente del Tiempo (Problema de Autovalores):**
 
-$$ \hat{H}\psi(\vec{r}) = E\psi(\vec{r}) \implies \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) = E \psi(\vec{r}) $$
+$$
+\hat{H}\psi(\vec{r}) = E\psi(\vec{r}) \implies \left( -\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right) \psi(\vec{r}) = E \psi(\vec{r})
+$$
 
 ```mermaid
 graph TD
@@ -72,11 +90,15 @@ Las soluciones físicas $\psi(\vec{r})$ de la ecuación independiente del tiempo
 - **Continuidad:** $\psi(\vec{r})$ y sus derivadas parciales de primer orden $\nabla\psi(\vec{r})$ deben ser continuas en todo el espacio. Solo si el potencial presenta discontinuidades infinitas (e.g., barrera infinita) se relaja la continuidad de la derivada.
 - **Integrabilidad de Cuadrado:** La función de onda debe tender a cero cuando $|\vec{r}| \to \infty$ para asegurar que la probabilidad total sea finita y normalizable:
 
-$$ \int_{\text{todo el espacio}} |\Psi(\vec{r}, t)|^2 d^3r = 1 $$
+$$
+\int_{\text{todo el espacio}} |\Psi(\vec{r}, t)|^2 d^3r = 1
+$$
 
 - **Ortogonalidad:** Dos estados propios (autofunciones) $\psi_m$ y $\psi_n$ correspondientes a distintos autovalores de energía $E_m \neq E_n$ son ortogonales:
 
-$$ \int \psi_m^*(\vec{r}) \psi_n(\vec{r}) d^3r = 0 $$
+$$
+\int \psi_m^*(\vec{r}) \psi_n(\vec{r}) d^3r = 0
+$$
 
 Esta propiedad surge del carácter hermitiano del operador Hamiltoniano $\hat{H}$.
 
@@ -84,9 +106,13 @@ Esta propiedad surge del carácter hermitiano del operador Hamiltoniano $\hat{H}
 
 El puente entre la mecánica cuántica y la clásica se ilustra a través del Teorema de Ehrenfest, que dictamina la evolución temporal de los valores esperados. Para la posición $x$ y el momento $p$:
 
-$$ \frac{d\langle x \rangle}{dt} = \frac{\langle p \rangle}{m} $$
+$$
+\frac{d\langle x \rangle}{dt} = \frac{\langle p \rangle}{m}
+$$
 
-$$ \frac{d\langle p \rangle}{dt} = -\left\langle \frac{\partial V}{\partial x} \right\rangle $$
+$$
+\frac{d\langle p \rangle}{dt} = -\left\langle \frac{\partial V}{\partial x} \right\rangle
+$$
 
 Esto demuestra que los centros de los paquetes de ondas cuánticos siguen, en promedio, trayectorias clásicas regidas por las ecuaciones de Newton, siempre y cuando la dispersión del paquete sea pequeña comparada con la escala de variación del potencial.
 
@@ -98,19 +124,27 @@ Esto demuestra que los centros de los paquetes de ondas cuánticos siguen, en pr
 **Solución paso a paso:**
 1. Escribimos la expresión para la densidad de probabilidad:
 
-$$ \rho(x,t) = |\Psi(x,t)|^2 = \Psi^*(x,t) \Psi(x,t) $$
+$$
+\rho(x,t) = |\Psi(x,t)|^2 = \Psi^*(x,t) \Psi(x,t)
+$$
 
 2. Sustituimos la forma del estado estacionario. Recordemos que el conjugado complejo de $e^{-iEt/\hbar}$ es $e^{+iEt/\hbar}$:
 
-$$ \Psi^*(x,t) = \psi^*(x)e^{+iEt/\hbar} $$
+$$
+\Psi^*(x,t) = \psi^*(x)e^{+iEt/\hbar}
+$$
 
 3. Calculamos el producto:
 
-$$ \rho(x,t) = \left( \psi^*(x)e^{+iEt/\hbar} \right) \left( \psi(x)e^{-iEt/\hbar} \right) $$
+$$
+\rho(x,t) = \left( \psi^*(x)e^{+iEt/\hbar} \right) \left( \psi(x)e^{-iEt/\hbar} \right)
+$$
 
 4. Los términos exponenciales se cancelan ya que sus exponentes suman cero ($e^{0} = 1$):
 
-$$ \rho(x,t) = \psi^*(x)\psi(x) e^{i(E-E)t/\hbar} = |\psi(x)|^2 $$
+$$
+\rho(x,t) = \psi^*(x)\psi(x) e^{i(E-E)t/\hbar} = |\psi(x)|^2
+$$
 
 Dado que $|\psi(x)|^2$ solo depende de la coordenada espacial $x$, la densidad de probabilidad (y todos los valores esperados de operadores que no dependan explícitamente del tiempo) son constantes en el tiempo. ¡Por eso se llaman *estados estacionarios*!
 
@@ -125,7 +159,9 @@ Deriva la ecuación de continuidad para la densidad de probabilidad cuántica a 
 2. Tomamos el conjugado complejo: $-i\hbar \frac{\partial \Psi^*}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi^* + V\Psi^*$ (asumiendo que $V$ es real).
 3. Multiplicamos la primera por $\Psi^*$ y la segunda por $\Psi$, y restamos la segunda de la primera:
 
-$$ i\hbar \left( \Psi^* \frac{\partial \Psi}{\partial t} + \Psi \frac{\partial \Psi^*}{\partial t} \right) = -\frac{\hbar^2}{2m} (\Psi^*\nabla^2\Psi - \Psi\nabla^2\Psi^*) $$
+$$
+i\hbar \left( \Psi^* \frac{\partial \Psi}{\partial t} + \Psi \frac{\partial \Psi^*}{\partial t} \right) = -\frac{\hbar^2}{2m} (\Psi^*\nabla^2\Psi - \Psi\nabla^2\Psi^*)
+$$
 
 4. El lado izquierdo es $i\hbar \frac{\partial}{\partial t}(\Psi^*\Psi) = i\hbar \frac{\partial \rho}{\partial t}$.
 5. El lado derecho se puede reescribir usando la identidad $\nabla \cdot (\Psi^*\nabla\Psi - \Psi\nabla\Psi^*)$.
@@ -137,20 +173,28 @@ Un electrón libre en 1D tiene una función de onda inicial gaussiana $\Psi(x,0)
 **Solución paso a paso:**
 1. Escribimos $\Psi(x,0)$ en el espacio de momentos mediante la transformada de Fourier:
 
-$$ \phi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int \Psi(x,0) e^{-ipx/\hbar} dx = \left(\frac{2a^2}{\pi\hbar^2}\right)^{1/4} e^{-p^2 a^2 / \hbar^2} $$
+$$
+\phi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int \Psi(x,0) e^{-ipx/\hbar} dx = \left(\frac{2a^2}{\pi\hbar^2}\right)^{1/4} e^{-p^2 a^2 / \hbar^2}
+$$
 
 2. La evolución temporal en el espacio de momentos adquiere una fase $e^{-iE_p t/\hbar}$ con $E_p = p^2/2m$:
 
-$$ \phi(p,t) = \phi(p) e^{-i p^2 t / 2m\hbar} $$
+$$
+\phi(p,t) = \phi(p) e^{-i p^2 t / 2m\hbar}
+$$
 
 3. Transformamos de vuelta al espacio de posiciones:
 
-$$ \Psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}} \int \phi(p,t) e^{ipx/\hbar} dp $$
+$$
+\Psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}} \int \phi(p,t) e^{ipx/\hbar} dp
+$$
 
 La integral resultante es gaussiana compleja.
 4. Al calcular la densidad de probabilidad $|\Psi(x,t)|^2$, la nueva varianza se vuelve:
 
-$$ (\Delta x(t))^2 = a^2 + \left(\frac{\hbar t}{2ma}\right)^2 $$
+$$
+(\Delta x(t))^2 = a^2 + \left(\frac{\hbar t}{2ma}\right)^2
+$$
 
 5. El paquete de ondas se dispersa con el tiempo, y el ancho es $\Delta x(t) = a \sqrt{1 + \left(\frac{\hbar t}{2ma^2}\right)^2}$.
 
@@ -245,7 +289,9 @@ En un marco matemáticamente riguroso, el Hamiltoniano $\hat{H} = -\frac{\hbar^2
 
 La generalización topológica de la Ecuación de Schrödinger exige que la función de onda se defina como una sección de un fibrado de líneas complejo $L \to M$ sobre una variedad diferenciable $M$. En presencia de campos electromagnéticos, el momento $\hat{\mathbf{p}}$ se eleva a la derivada covariante con respecto a una conexión $A$ en dicho fibrado, $\nabla_A = d - i\frac{e}{\hbar}A$. El Hamiltoniano invariante de *gauge* se escribe entonces en términos del operador de Laplace-Beltrami:
 
-$$ \hat{H} = -\frac{\hbar^2}{2m} \text{tr}_g (\nabla_A \nabla_A) + V $$
+$$
+\hat{H} = -\frac{\hbar^2}{2m} \text{tr}_g (\nabla_A \nabla_A) + V
+$$
 
 donde la curvatura de la conexión $F = dA$ define el campo magnético. Para ecuaciones dependientes del tiempo, el transporte paralelo de estados a través del espacio de parámetros adiabáticos expone la fase holonómica, manifestándose de forma rigurosa como la Fase Topológica de Berry y cuantizándose a través de las clases de Chern asociadas a la topología del fibrado vectorial, $\frac{1}{2\pi}\int_S F \in \mathbb{Z}$.
 
@@ -259,21 +305,33 @@ donde la curvatura de la conexión $F = dA$ define el campo magnético. Para ecu
 1. **Schrödinger, E. (1926). "An Undulatory Theory of the Mechanics of Atoms and Molecules"**. *Phys. Rev.*, 28, 1049. [DOI: 10.1103/PhysRev.28.1049](https://doi.org/10.1103/PhysRev.28.1049)
    *Importancia Teórica y Matemática:* Presenta la derivación de la ecuación de onda como un problema de valores propios del Hamiltoniano:
 
-   $$ \hat{H}\psi(\vec{r},t) = E\psi(\vec{r},t) \implies \left(-\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r})\right)\psi(\vec{r},t) = i\hbar\frac{\partial}{\partial t}\psi(\vec{r},t) $$
+   
+
+$$
+\hat{H}\psi(\vec{r},t) = E\psi(\vec{r},t) \implies \left(-\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r})\right)\psi(\vec{r},t) = i\hbar\frac{\partial}{\partial t}\psi(\vec{r},t)
+$$
 
    *Implicaciones Físicas:* Fundamentó la mecánica ondulatoria al mostrar que los estados estacionarios son análogos a modos resonantes, suprimiendo las reglas de cuantización empíricas de Bohr en favor de un marco determinista de evolución ondulatoria.
 
 2. **Born, M. (1926). "Zur Quantenmechanik der Stoßvorgänge"**. *Zeitschrift für Physik*, 37, 863-867. [DOI: 10.1007/BF01397477](https://doi.org/10.1007/BF01397477)
    *Importancia Teórica y Matemática:* Introduce la regla de Born, dando el salto del formalismo determinista puro a la predicción estocástica:
 
-   $$ P(\vec{r}, t) = |\psi(\vec{r}, t)|^2 $$
+   
+
+$$
+P(\vec{r}, t) = |\psi(\vec{r}, t)|^2
+$$
 
    *Implicaciones Físicas:* Estableció que las ondas de Schrödinger no son ondas materiales de carga continua (como pensaba Schrödinger), sino amplitudes de probabilidad. Esto resolvió el problema del colapso y preparó el terreno para la interpretación de Copenhague.
 
 3. **Ehrenfest, P. (1927). "Bemerkung über die angenäherte Gültigkeit der klassischen Mechanik innerhalb der Quantenmechanik"**. *Z. Phys.*, 45, 455-457. [DOI: 10.1007/BF01329203](https://doi.org/10.1007/BF01329203)
    *Importancia Teórica y Matemática:* Demuestra matemáticamente que el valor esperado de operadores recupera la mecánica clásica:
 
-   $$ m\frac{d^2\langle \vec{r} \rangle}{dt^2} = \langle -\nabla V(\vec{r}) \rangle $$
+   
+
+$$
+m\frac{d^2\langle \vec{r} \rangle}{dt^2} = \langle -\nabla V(\vec{r}) \rangle
+$$
 
    *Implicaciones Físicas:* Formula el Teorema de Ehrenfest. Garantiza el principio de correspondencia, demostrando que los centros de paquetes de ondas suficientemente localizados siguen trayectorias newtonianas clásicas.
 

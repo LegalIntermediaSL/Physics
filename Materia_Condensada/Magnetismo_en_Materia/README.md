@@ -14,11 +14,15 @@ El magnetismo macroscópico es fundamentalmente un fenómeno cuántico; la mecá
 
 Para un átomo aislado en un campo magnético uniforme $\mathbf{B} = \nabla \times \mathbf{A}$, el Hamiltoniano cuántico del sistema multi-electrónico acopla el espín $\mathbf{S}_i$ y la cinemática:
 
-$$ \mathcal{H} = \sum_i \left( \frac{(\mathbf{p}_i + e\mathbf{A}_i)^2}{2m_e} + V_i \right) + g \mu_B \mathbf{B} \cdot \mathbf{S}_i $$
+$$
+\mathcal{H} = \sum_i \left( \frac{(\mathbf{p}_i + e\mathbf{A}_i)^2}{2m_e} + V_i \right) + g \mu_B \mathbf{B} \cdot \mathbf{S}_i
+$$
 
 donde $\mu_B = e\hbar / 2m_e$ es el Magnetón de Bohr. Expandiendo el término cuadrático cinético y eligiendo el calibre simétrico $\mathbf{A} = \frac{1}{2} \mathbf{B} \times \mathbf{r}$:
 
-$$ \mathcal{H} = \mathcal{H}_0 + \mu_B (\mathbf{L} + g\mathbf{S}) \cdot \mathbf{B} + \frac{e^2}{8m_e} \sum_i (\mathbf{B} \times \mathbf{r}_i)^2 $$
+$$
+\mathcal{H} = \mathcal{H}_0 + \mu_B (\mathbf{L} + g\mathbf{S}) \cdot \mathbf{B} + \frac{e^2}{8m_e} \sum_i (\mathbf{B} \times \mathbf{r}_i)^2
+$$
 
 Aquí, $\mathbf{L} = \sum_i \mathbf{l}_i$ es el momento angular orbital total y $\mathbf{S}$ el espín total.
 El comportamiento material se dicta aplicando teoría de perturbaciones sobre el nivel base atómico $|0\rangle$:
@@ -33,13 +37,17 @@ Para entender el ferromagnetismo en metales de transición (Fe, Co, Ni), la mec�
 
 Werner Heisenberg y Paul Dirac demostraron que esta interacción para dos electrones equivale a un Hamiltoniano de espín efectivo:
 
-$$ \mathcal{H}_{Heis} = -2 J \mathbf{S}_1 \cdot \mathbf{S}_2 $$
+$$
+\mathcal{H}_{Heis} = -2 J \mathbf{S}_1 \cdot \mathbf{S}_2
+$$
 
 Si la integral de intercambio $J > 0$ (como ocurre debido a efectos de apantallamiento en las bandas d-orbitales del Hierro), la energía se minimiza cuando los espines son colineales (Ferromagnetismo). 
 
 Extendiendo este modelo a una red cristalina completa sobre pares de vecinos más cercanos $\langle i,j \rangle$:
 
-$$ \mathcal{H} = - \sum_{\langle i,j \rangle} J_{ij} \mathbf{S}_i \cdot \mathbf{S}_j - g \mu_B \mathbf{B} \cdot \sum_i \mathbf{S}_i $$
+$$
+\mathcal{H} = - \sum_{\langle i,j \rangle} J_{ij} \mathbf{S}_i \cdot \mathbf{S}_j - g \mu_B \mathbf{B} \cdot \sum_i \mathbf{S}_i
+$$
 
 ### 3. Aproximación de Campo Medio (Teoría de Weiss)
 
@@ -47,23 +55,31 @@ Resolver el modelo de Heisenberg exactamente en 3D es matemáticamente inabarcab
 
 El espín individual interactúa con un campo magnético efectivo local:
 
-$$ \mathbf{B}_{eff} = \mathbf{B}_{ext} + \lambda \mathbf{M} $$
+$$
+\mathbf{B}_{eff} = \mathbf{B}_{ext} + \lambda \mathbf{M}
+$$
 
 donde $\lambda$ es la constante de campo molecular de Weiss, parametrizando la fuerza del intercambio $J$.
 
 Bajo este campo promedio, el comportamiento estadístico vuelve a ser idéntico al de un sistema paramagnético puro de espines independientes. Para iones con momento angular $\mathbf{J}$, la magnetización obedece la función de Brillouin $B_J(x)$:
 
-$$ M(T, B) = M_{sat} B_J \left( \frac{g \mu_B J B_{eff}}{k_B T} \right) = M_{sat} B_J \left( \frac{g \mu_B J (B_{ext} + \lambda M)}{k_B T} \right) $$
+$$
+M(T, B) = M_{sat} B_J \left( \frac{g \mu_B J B_{eff}}{k_B T} \right) = M_{sat} B_J \left( \frac{g \mu_B J (B_{ext} + \lambda M)}{k_B T} \right)
+$$
 
 Esta es una **ecuación de estado trascendental autorreferente**. Para $\mathbf{B}_{ext} = 0$, la única forma de que exista magnetización espontánea $M \neq 0$ es que la pendiente de la función termodinámica en el origen supere a la inversa de la función linear, lo que determina exactamente una transición de fase de segundo orden en la **Temperatura de Curie ($T_C$)**:
 
-$$ T_C = \frac{C \lambda}{\mu_0} = \frac{z J S(S+1)}{3 k_B} $$
+$$
+T_C = \frac{C \lambda}{\mu_0} = \frac{z J S(S+1)}{3 k_B}
+$$
 
 donde $z$ es el número de coordinación.
 
 Para $T > T_C$, la magnetización espontánea es destruida por el desorden térmico y el sistema se vuelve paramagnético, con una susceptibilidad gobernada por la Ley de Curie-Weiss divergente:
 
-$$ \chi = \frac{C}{T - T_C} $$
+$$
+\chi = \frac{C}{T - T_C}
+$$
 
 ### Diagrama: Transición Ferromagnética
 
@@ -97,34 +113,66 @@ graph TD
    La energía Zeeman del acoplamiento es $E = -\boldsymbol{\mu} \cdot \mathbf{B} = -\mu_z B$.
    Por lo tanto, los dos niveles de energía posibles (el espín paralelo y el antiparalelo al campo) son:
 
-   $$ E_\downarrow = +\mu_B B \quad \text{(antiparalelo, mayor energía)} $$
+   
 
-   $$ E_\uparrow = -\mu_B B \quad \text{(paralelo, menor energía)} $$
+$$
+E_\downarrow = +\mu_B B \quad \text{(antiparalelo, mayor energía)}
+$$
+
+   
+
+$$
+E_\uparrow = -\mu_B B \quad \text{(paralelo, menor energía)}
+$$
 
 2. **Estadística de Maxwell-Boltzmann:**
    A temperatura termodinámica $T$, la probabilidad de encontrar al ion en un estado particular $i$ está gobernada por el factor de Boltzmann $e^{-E_i/k_B T}$.
    Para asegurar que las probabilidades sumen 1, normalizamos dividiendo por la función de partición canónica $Z$:
 
-   $$ Z = \sum_i e^{-E_i/k_B T} = e^{+\mu_B B / k_B T} + e^{-\mu_B B / k_B T} = 2 \cosh\left(\frac{\mu_B B}{k_B T}\right) $$
+   
+
+$$
+Z = \sum_i e^{-E_i/k_B T} = e^{+\mu_B B / k_B T} + e^{-\mu_B B / k_B T} = 2 \cosh\left(\frac{\mu_B B}{k_B T}\right)
+$$
 
    Las probabilidades de ocupación son:
 
-   $$ P_\uparrow = \frac{1}{Z} e^{\mu_B B / k_B T} $$
+   
 
-   $$ P_\downarrow = \frac{1}{Z} e^{-\mu_B B / k_B T} $$
+$$
+P_\uparrow = \frac{1}{Z} e^{\mu_B B / k_B T}
+$$
+
+   
+
+$$
+P_\downarrow = \frac{1}{Z} e^{-\mu_B B / k_B T}
+$$
 
 3. **Momento Magnético Térmico Promedio:**
    El valor esperado estocástico de la componente z del momento de un ion único es la media ponderada térmica:
 
-   $$ \langle \mu_z \rangle = (+ \mu_B) P_\uparrow + (- \mu_B) P_\downarrow $$
+   
+
+$$
+\langle \mu_z \rangle = (+ \mu_B) P_\uparrow + (- \mu_B) P_\downarrow
+$$
 
    Sustituyendo y factorizando $\mu_B$:
 
-   $$ \langle \mu_z \rangle = \mu_B \frac{e^{\mu_B B / k_B T} - e^{-\mu_B B / k_B T}}{e^{\mu_B B / k_B T} + e^{-\mu_B B / k_B T}} $$
+   
+
+$$
+\langle \mu_z \rangle = \mu_B \frac{e^{\mu_B B / k_B T} - e^{-\mu_B B / k_B T}}{e^{\mu_B B / k_B T} + e^{-\mu_B B / k_B T}}
+$$
 
    Reconociendo la definición matemática de la tangente hiperbólica:
 
-   $$ \langle \mu_z \rangle = \mu_B \tanh\left(\frac{\mu_B B}{k_B T}\right) $$
+   
+
+$$
+\langle \mu_z \rangle = \mu_B \tanh\left(\frac{\mu_B B}{k_B T}\right)
+$$
 
    A campos muy altos o temperaturas cercanas al cero absoluto, el argumento diverge y $\tanh \to 1$, produciendo la saturación magnética ($\mu_z = \mu_B$).
 
@@ -132,20 +180,34 @@ graph TD
    Para parámetros de laboratorio normales (campos débiles, temperatura ambiente), la energía térmica domina la alienación magnética: $k_B T \gg \mu_B B$.
    En el límite de argumentos pequeños $x \ll 1$, desarrollamos la función hiperbólica en su serie de Taylor: $\tanh(x) \approx x$.
 
-   $$ \langle \mu_z \rangle \approx \mu_B \left( \frac{\mu_B B}{k_B T} \right) = \frac{\mu_B^2 B}{k_B T} $$
+   
+
+$$
+\langle \mu_z \rangle \approx \mu_B \left( \frac{\mu_B B}{k_B T} \right) = \frac{\mu_B^2 B}{k_B T}
+$$
 
 5. **Magnetización Macroscópica y Susceptibilidad:**
    Para un gas ideal con una densidad de volumen de $N$ iones independientes, la Magnetización $M$ (momento por unidad de volumen) es una simple sumatoria escalar:
 
-   $$ M = N \langle \mu_z \rangle \approx \frac{N \mu_B^2}{k_B T} B $$
+   
+
+$$
+M = N \langle \mu_z \rangle \approx \frac{N \mu_B^2}{k_B T} B
+$$
 
    Definimos la susceptibilidad magnética como el ratio linear de respuesta al campo en el vacío $H = B/\mu_0$:
 
-   $$ \chi = \frac{M}{H} = \mu_0 \frac{M}{B} = \frac{\mu_0 N \mu_B^2}{k_B T} $$
+   
+
+$$
+\chi = \frac{M}{H} = \mu_0 \frac{M}{B} = \frac{\mu_0 N \mu_B^2}{k_B T}
+$$
 
 **Conclusión Matemática:** El coeficiente de proporcionalidad es estrictamente dependiente de la inversa de la temperatura absoluta $T$. Hemos deducido la icónica **Ley de Curie paramagnética**:
 
-$$ \chi = \frac{C}{T} \quad \text{donde la constante de Curie es} \quad C = \frac{\mu_0 N \mu_B^2}{k_B} $$
+$$
+\chi = \frac{C}{T} \quad \text{donde la constante de Curie es} \quad C = \frac{\mu_0 N \mu_B^2}{k_B}
+$$
 
 ## 📝 Guía de Ejercicios Resueltos
 
@@ -157,21 +219,29 @@ Consideramos $N$ momentos magnéticos $\vec{\mu}$ en un campo magnético externo
 La probabilidad de encontrar un dipolo orientado en un ángulo $\theta$ es proporcional a $e^{-E / k_B T}$.
 La magnetización promedio a lo largo de $B$ es:
 
-$$ M = N \mu \langle \cos\theta \rangle = N \mu \frac{\int_0^\pi \cos\theta e^{\mu B \cos\theta / k_B T} 2\pi \sin\theta d\theta}{\int_0^\pi e^{\mu B \cos\theta / k_B T} 2\pi \sin\theta d\theta} $$
+$$
+M = N \mu \langle \cos\theta \rangle = N \mu \frac{\int_0^\pi \cos\theta e^{\mu B \cos\theta / k_B T} 2\pi \sin\theta d\theta}{\int_0^\pi e^{\mu B \cos\theta / k_B T} 2\pi \sin\theta d\theta}
+$$
 
 Haciendo el cambio de variable $x = \cos\theta$ y definiendo $\alpha = \mu B / k_B T$:
 
-$$ \langle \cos\theta \rangle = \frac{\int_{-1}^1 x e^{\alpha x} dx}{\int_{-1}^1 e^{\alpha x} dx} = \coth\alpha - \frac{1}{\alpha} = L(\alpha) $$
+$$
+\langle \cos\theta \rangle = \frac{\int_{-1}^1 x e^{\alpha x} dx}{\int_{-1}^1 e^{\alpha x} dx} = \coth\alpha - \frac{1}{\alpha} = L(\alpha)
+$$
 
 Donde $L(\alpha)$ es la función de Langevin.
 Para altas temperaturas o campos débiles, $\alpha \ll 1$. La expansión de Taylor de $L(\alpha)$ en el límite $\alpha \to 0$ es $L(\alpha) \approx \alpha/3$.
 Entonces la magnetización es:
 
-$$ M = N \mu \left( \frac{\mu B}{3 k_B T} \right) = \frac{N \mu^2}{3 k_B T} B $$
+$$
+M = N \mu \left( \frac{\mu B}{3 k_B T} \right) = \frac{N \mu^2}{3 k_B T} B
+$$
 
 Por lo tanto, la susceptibilidad paramagnética $\chi \approx \mu_0 M / B$ es:
 
-$$ \chi = \frac{\mu_0 N \mu^2}{3 k_B T} \equiv \frac{C}{T} $$
+$$
+\chi = \frac{\mu_0 N \mu^2}{3 k_B T} \equiv \frac{C}{T}
+$$
 
 Esto es idéntico a la Ley de Curie experimental, donde la constante $C$ es deducida formalmente.
 
@@ -189,11 +259,15 @@ Para que la función total sea antisimétrica:
 - Si $\phi$ es antisimétrica, el estado de espín $\chi$ debe ser un triplete (simétrico, espín total $S=1$).
 El valor esperado de la energía electrostática repulsiva (Coulomb) para estos estados difiere. Calculamos la diferencia energética $\Delta E = E_{singulete} - E_{triplete} = 2 J$, donde $J$ es la **integral de intercambio**:
 
-$$ J = \int \int u^*(\mathbf{r}_1) v^*(\mathbf{r}_2) \frac{e^2}{4\pi\epsilon_0|\mathbf{r}_1 - \mathbf{r}_2|} v(\mathbf{r}_1) u(\mathbf{r}_2) d^3r_1 d^3r_2 $$
+$$
+J = \int \int u^*(\mathbf{r}_1) v^*(\mathbf{r}_2) \frac{e^2}{4\pi\epsilon_0|\mathbf{r}_1 - \mathbf{r}_2|} v(\mathbf{r}_1) u(\mathbf{r}_2) d^3r_1 d^3r_2
+$$
 
 Como el estado cuántico de espín $\mathbf{S}_1 \cdot \mathbf{S}_2$ toma el valor $-3/4$ para el singulete y $+1/4$ para el triplete, podemos modelar de manera efectiva la energía del sistema parametrizando el espín como un operador:
 
-$$ \hat{H}_{Heisenberg} = -2J \, \mathbf{S}_1 \cdot \mathbf{S}_2 $$
+$$
+\hat{H}_{Heisenberg} = -2J \, \mathbf{S}_1 \cdot \mathbf{S}_2
+$$
 
 Si $J > 0$ (el estado triplete $S=1$ tiene menos energía repulsiva), los espines preferirán estar paralelos para minimizar la energía total. Este alineamiento espontáneo dictado puramente por la electrostática cuántica es el origen del Ferromagnetismo.
 
@@ -207,16 +281,22 @@ La densidad de estados es dividida por dos para cada dirección de espín: $g_{\
 Para mantener el mismo nivel de Fermi $E_F$ común, algunos electrones giran su espín para reequilibrar la energía.
 El número de electrones con espín a favor del campo excedente respecto a los de en contra es:
 
-$$ \Delta N = \int_{E_F - \mu_B B}^{E_F} \frac{1}{2} g(E) dE \approx \frac{1}{2} g(E_F) (\mu_B B) $$
+$$
+\Delta N = \int_{E_F - \mu_B B}^{E_F} \frac{1}{2} g(E) dE \approx \frac{1}{2} g(E_F) (\mu_B B)
+$$
 
 Este exceso de población de espines paralelos proporciona una magnetización neta al material:
 
-$$ M = \mu_B \times (N_\uparrow - N_\downarrow) = \mu_B \times (2 \Delta N) = \mu_B^2 g(E_F) B $$
+$$
+M = \mu_B \times (N_\uparrow - N_\downarrow) = \mu_B \times (2 \Delta N) = \mu_B^2 g(E_F) B
+$$
 
 Donde $g(E_F)$ es la densidad total de estados al nivel de Fermi.
 La susceptibilidad de Pauli es entonces:
 
-$$ \chi_{Pauli} = \mu_0 \frac{M}{B} = \mu_0 \mu_B^2 g(E_F) $$
+$$
+\chi_{Pauli} = \mu_0 \frac{M}{B} = \mu_0 \mu_B^2 g(E_F)
+$$
 
 Como $E_F$ y $g(E_F)$ dependen muy débilmente de la temperatura por debajo de la temperatura de Fermi (decenas de miles de Kelvin), la susceptibilidad paramagnética de Pauli en metales es casi constante, justificando este comportamiento anómalo.
 
@@ -271,14 +351,18 @@ El estudio de sistemas de espín cuánticos en dimensiones reducidas requiere t�
 **Representaciones de Grupo y Formalismo de Partones (Teoría Gauge Emergente):**
 Para tratar la frustración extrema en Líquidos de Espín Cuánticos (como en el modelo de Kitaev o Kagome), se suele factorizar el operador de espín cuántico usando fermiones de Abrikosov (partones):
 
-$$ \mathbf{S}_i = \frac{1}{2} \sum_{\alpha, \beta} f_{i\alpha}^\dagger \boldsymbol{\sigma}_{\alpha\beta} f_{i\beta} $$
+$$
+\mathbf{S}_i = \frac{1}{2} \sum_{\alpha, \beta} f_{i\alpha}^\dagger \boldsymbol{\sigma}_{\alpha\beta} f_{i\beta}
+$$
 
 Sujeto a la constricción local de que solo haya un fermión por sitio: $\sum_\alpha f_{i\alpha}^\dagger f_{i\alpha} = 1$.
 Esto introduce una redundancia gauge local $U(1)$ o $SU(2)$. La acción de baja energía del sistema se describe mediante una Teoría Cuántica de Campos de Gauge fuertemente acoplada a la materia (los fermiones fraccionalizados o spinones), que puede dar lugar a fases confinadas o deconfinadas (transiciones de fase cuánticas deconfinadas, DQCP).
 
 La topología del skyrmion se caracteriza por la carga topológica $Q \in \mathbb{Z}$ del campo de espín $\mathbf{n}(x,y)$, un mapeo de $\mathbb{R}^2 \cup \{\infty\} \cong S^2 \to S^2$:
 
-$$ Q = \frac{1}{4\pi} \int dx dy \, \mathbf{n} \cdot \left( \partial_x \mathbf{n} \times \partial_y \mathbf{n} \right) $$
+$$
+Q = \frac{1}{4\pi} \int dx dy \, \mathbf{n} \cdot \left( \partial_x \mathbf{n} \times \partial_y \mathbf{n} \right)
+$$
 
 ## 📚 Recursos Específicos
 
@@ -292,11 +376,19 @@ $$ Q = \frac{1}{4\pi} \int dx dy \, \mathbf{n} \cdot \left( \partial_x \mathbf{n
    - **Importancia Teórica:** Este artículo ganador del Premio Nobel de Física marcó el nacimiento de la espintrónica (electrónica basada en el espín). Demostró el efecto de Magnetorresistencia Gigante (GMR) en superredes multicapas.
    - **Fondo Matemático:** La GMR se explica a través de la dispersión de electrones dependiente del espín, descrita por el modelo de dos corrientes de Mott. Las conductividades para espines "up" ($\uparrow$) y "down" ($\downarrow$) son desiguales en los metales ferromagnéticos. Para la configuración de magnetizaciones paralelas (P) y antiparalelas (AP) entre capas adyacentes de Fe separadas por un espaciador no magnético de Cr, las resistividades netas toman la forma:
 
-     $$ \rho_{P} \approx \frac{\rho_\uparrow \rho_\downarrow}{\rho_\uparrow + \rho_\downarrow}, \quad \rho_{AP} \approx \frac{\rho_\uparrow + \rho_\downarrow}{4} $$
+     
+
+$$
+\rho_{P} \approx \frac{\rho_\uparrow \rho_\downarrow}{\rho_\uparrow + \rho_\downarrow}, \quad \rho_{AP} \approx \frac{\rho_\uparrow + \rho_\downarrow}{4}
+$$
 
      El ratio de magnetorresistencia se define clásicamente como:
 
-     $$ \frac{\Delta \rho}{\rho} = \frac{\rho_{AP} - \rho_{P}}{\rho_{P}} = \frac{(\rho_\uparrow - \rho_\downarrow)^2}{4\rho_\uparrow \rho_\downarrow} $$
+     
+
+$$
+\frac{\Delta \rho}{\rho} = \frac{\rho_{AP} - \rho_{P}}{\rho_{P}} = \frac{(\rho_\uparrow - \rho_\downarrow)^2}{4\rho_\uparrow \rho_\downarrow}
+$$
 
      Lo cual resulta en un cambio masivo en la resistencia eléctrica bajo un campo magnético externo al alterar el alineamiento de las capas.
    - **Implicaciones Físicas:** Las válvulas de espín derivadas de este efecto permitieron el dramático incremento de la densidad de almacenamiento de información en discos duros, sentando las bases tecnológicas de la era de la información masiva.
@@ -305,11 +397,19 @@ $$ Q = \frac{1}{4\pi} \int dx dy \, \mathbf{n} \cdot \left( \partial_x \mathbf{n
    - **Importancia Teórica:** Fundamentó el modelo de Heisenberg-Dirac mediante el formalismo generalizado de la mecánica cuántica de múltiples cuerpos, justificando rigurosamente que las interacciones de los espines atómicos provienen exclusivamente del Principio de Pauli.
    - **Fondo Matemático:** Demuestra que al proyectar el Hamiltoniano repulsivo de Coulomb sobre el subespacio de funciones de onda totalmente antisimétricas, la energía de intercambio puede representarse usando el operador permutación $P_{ij}$. Con la relación matricial $P_{ij} = \frac{1}{2} \left(1 + \frac{4}{\hbar^2} \mathbf{S}_i \cdot \mathbf{S}_j \right)$, el Hamiltoniano de interacción se reescribe como una interacción de acoplamiento de espines de Heisenberg:
 
-     $$ \mathcal{H}_{\text{eff}} = E_0 - \sum_{i<j} J_{ij} \, \mathbf{S}_i \cdot \mathbf{S}_j $$
+     
+
+$$
+\mathcal{H}_{\text{eff}} = E_0 - \sum_{i<j} J_{ij} \, \mathbf{S}_i \cdot \mathbf{S}_j
+$$
 
      donde $J_{ij}$ es la integral de intercambio repulsiva electrostática:
 
-     $$ J_{ij} = \int \int \phi_i^*(\mathbf{r}_1) \phi_j^*(\mathbf{r}_2) \frac{e^2}{4\pi\epsilon_0|\mathbf{r}_1 - \mathbf{r}_2|} \phi_i(\mathbf{r}_2) \phi_j(\mathbf{r}_1) d^3r_1 d^3r_2 $$
+     
+
+$$
+J_{ij} = \int \int \phi_i^*(\mathbf{r}_1) \phi_j^*(\mathbf{r}_2) \frac{e^2}{4\pi\epsilon_0|\mathbf{r}_1 - \mathbf{r}_2|} \phi_i(\mathbf{r}_2) \phi_j(\mathbf{r}_1) d^3r_1 d^3r_2
+$$
 
    - **Implicaciones Físicas:** Concluye que, paradójicamente, el fuerte alineamiento magnético (ferromagnetismo) que se observa a escalas macroscópicas no proviene de dipolos magnéticos interactuando, sino de fuerzas eléctricas monumentales disfrazadas matemáticamente de interacciones magnéticas efectivas por la antisimetría fermiónica.
 

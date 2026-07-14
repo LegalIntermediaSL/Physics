@@ -33,7 +33,9 @@ La Ley Cero postula la existencia de una relación de equivalencia entre sistema
 
 Esta transitividad permite definir una clase de equivalencia. Todos los sistemas en equilibrio térmico mutuo comparten una propiedad intrínseca, que llamamos **temperatura** empírica $\theta$. Matemáticamente, el estado de un sistema viene descrito por ciertas variables (por ejemplo, presión $P$ y volumen $V$). La condición de equilibrio entre los sistemas $A$ y $C$ implica una restricción funcional:
 
-$$ F_1(P_A, V_A, P_C, V_C) = 0 $$
+$$
+F_1(P_A, V_A, P_C, V_C) = 0
+$$
 
 Que puede reescribirse como $\theta_A(P_A, V_A) = \theta_C(P_C, V_C)$. Así, la Ley Cero fundamenta la termometría, garantizando que un termómetro (el sistema $C$) puede utilizarse para comparar empíricamente la temperatura de otros sistemas.
 
@@ -45,7 +47,9 @@ La Primera Ley es una generalización del principio de conservación de la energ
 
 En términos diferenciales, para una transformación infinitesimal, se tiene:
 
-$$ dU = \delta Q + \delta W $$
+$$
+dU = \delta Q + \delta W
+$$
 
 Aquí, usamos la notación clásica donde $dU$ es una diferencial exacta (dado que $U$ es una función de estado), mientras que $\delta Q$ y $\delta W$ son diferenciales inexactas (dependen de la trayectoria del proceso en el espacio de fases). 
 
@@ -54,19 +58,27 @@ Aquí, usamos la notación clásica donde $dU$ es una diferencial exacta (dado q
 #### Trabajo Reversible y Fuerzas Generalizadas
 Para un proceso reversible, el trabajo $\delta W$ puede expresarse como el producto de una variable intensiva (fuerza generalizada $Y_i$) y el cambio en su variable extensiva conjugada $dX_i$:
 
-$$ \delta W_{\text{rev}} = \sum_i Y_i \, dX_i $$
+$$
+\delta W_{\text{rev}} = \sum_i Y_i \, dX_i
+$$
 
 Para un sistema P-V simple (gas fluido), la fuerza es $-P$ (presión) y el desplazamiento es $dV$ (volumen), por lo que:
 
-$$ \delta W_{\text{rev}} = -P \, dV $$
+$$
+\delta W_{\text{rev}} = -P \, dV
+$$
 
 Si consideramos trabajo químico (potencial químico $\mu$, número de partículas $N$) y trabajo magnético (campo $B$, magnetización $M$), la Primera Ley para un proceso reversible se expande a:
 
-$$ dU = \delta Q_{\text{rev}} - P \, dV + \sum_j \mu_j \, dN_j + B \, dM + \dots $$
+$$
+dU = \delta Q_{\text{rev}} - P \, dV + \sum_j \mu_j \, dN_j + B \, dM + \dots
+$$
 
 **Propiedad cíclica:** Puesto que $U$ es una función de estado, su integral a través de cualquier trayectoria cerrada en el espacio de fases es estrictamente nula:
 
-$$ \oint dU = \oint (\delta Q + \delta W) = 0 \implies W_{\text{ciclo}} = -Q_{\text{ciclo}} $$
+$$
+\oint dU = \oint (\delta Q + \delta W) = 0 \implies W_{\text{ciclo}} = -Q_{\text{ciclo}}
+$$
 
 ### 3. Segunda Ley de la Termodinámica: Entropía y la Flecha del Tiempo
 
@@ -78,28 +90,40 @@ La Primera Ley asegura el balance energético, pero no establece ninguna direcci
 
 Estos enunciados son matemáticamente equivalentes y se relacionan directamente con el Teorema de Carnot, que estipula que el rendimiento térmico máximo $\eta$ de un motor operando entre dos focos a temperaturas $T_H$ y $T_C$ es:
 
-$$ \eta \le \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H} $$
+$$
+\eta \le \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}
+$$
 
 #### La Desigualdad de Clausius y la Formulación Matemática
 La fundamentación matemática de la Segunda Ley proviene de la desigualdad de Clausius, que rige cualquier proceso cíclico cerrado:
 
-$$ \oint \frac{\delta Q}{T} \le 0 $$
+$$
+\oint \frac{\delta Q}{T} \le 0
+$$
 
 La igualdad se cumple de forma exclusiva para ciclos completamente reversibles. Para una trayectoria reversible abierta del estado $A$ al estado $B$, la integral $\int_A^B \frac{\delta Q_{\text{rev}}}{T}$ es independiente de la trayectoria. Esto nos permite definir el diferencial exacto de la entropía $S$:
 
-$$ dS = \frac{\delta Q_{\text{rev}}}{T} $$
+$$
+dS = \frac{\delta Q_{\text{rev}}}{T}
+$$
 
 Si aplicamos la Primera Ley a un sistema P-V simple reversible, obtenemos la **Ecuación Fundamental de la Termodinámica**:
 
-$$ dU = T \, dS - P \, dV $$
+$$
+dU = T \, dS - P \, dV
+$$
 
 Para un proceso **irreversible** entre dos estados infinitesimalmente próximos, la Segunda Ley impone que la producción de entropía en el universo es siempre positiva. Matemáticamente:
 
-$$ dS > \frac{\delta Q_{\text{irrev}}}{T} $$
+$$
+dS > \frac{\delta Q_{\text{irrev}}}{T}
+$$
 
 Para un sistema absolutamente aislado ($\delta Q = 0$), el cambio de entropía debe ser monotónicamente creciente:
 
-$$ \Delta S_{\text{aislado}} \ge 0 $$
+$$
+\Delta S_{\text{aislado}} \ge 0
+$$
 
 ### 4. Tercera Ley de la Termodinámica: El Cero Absoluto
 
@@ -109,7 +133,9 @@ Propuesta inicialmente por Walther Nernst como el "Teorema del Calor de Nernst" 
 
 Matemáticamente, la tercera ley establece que:
 
-$$ \lim_{T \to 0} S(T, X_i) = S_0 $$
+$$
+\lim_{T \to 0} S(T, X_i) = S_0
+$$
 
 Y para un estado macroscópico que posee un único microestado cuántico fundamental no degenerado ($\Omega = 1$ en la interpretación de Boltzmann $S = k_B \ln \Omega$), $S_0 = 0$.
 
@@ -117,7 +143,11 @@ Y para un estado macroscópico que posee un único microestado cuántico fundame
 1. **Capacidades Caloríficas en el límite $T \to 0$:**
    Puesto que $S(T) = \int_0^T \frac{C_V(T')}{T'} dT'$, para que la integral converja en el límite inferior, es matemáticamente necesario que las capacidades caloríficas tiendan a cero conforme la temperatura tiende a cero:
 
-   $$ \lim_{T \to 0} C_V = 0 \quad \text{y} \quad \lim_{T \to 0} C_P = 0 $$
+   
+
+$$
+\lim_{T \to 0} C_V = 0 \quad \text{y} \quad \lim_{T \to 0} C_P = 0
+$$
 
 2. **Inaccesibilidad del Cero Absoluto:**
    Otra formulación equivalente de la Tercera Ley es el **Principio de Inaccesibilidad**: *Es imposible reducir la temperatura de cualquier sistema al cero absoluto mediante un número finito de operaciones físicas.* Cada paso de enfriamiento adiabático en un proceso en cascada será progresivamente menos eficiente, convergiendo asintóticamente pero sin llegar jamás a alcanzar $0\text{ K}$.
@@ -130,21 +160,37 @@ Y para un estado macroscópico que posee un único microestado cuántico fundame
 **Solución paso a paso:**
 1. **Energía Interna:** Para un gas ideal, la energía interna depende únicamente de la temperatura. Puesto que el proceso es isotérmico ($\Delta T = 0$):
 
-   $$ \Delta U = 0 $$
+   
+
+$$
+\Delta U = 0
+$$
 
 2. **Trabajo Realizado ($W$):**
    El trabajo viene dado por la integral de presión respecto al volumen:
 
-   $$ W = \int_{V_1}^{V_2} P \, dV $$
+   
+
+$$
+W = \int_{V_1}^{V_2} P \, dV
+$$
 
    Usando la ecuación de los gases ideales $P = \frac{nRT}{V}$:
 
-   $$ W = \int_{V_1}^{V_2} \frac{nRT}{V} dV = nRT \ln\left(\frac{V_2}{V_1}\right) $$
+   
+
+$$
+W = \int_{V_1}^{V_2} \frac{nRT}{V} dV = nRT \ln\left(\frac{V_2}{V_1}\right)
+$$
 
 3. **Calor Intercambiado ($Q$):**
    De la Primera Ley, $\Delta U = Q - W$. Puesto que $\Delta U = 0$:
 
-   $$ Q = W = nRT \ln\left(\frac{V_2}{V_1}\right) $$
+   
+
+$$
+Q = W = nRT \ln\left(\frac{V_2}{V_1}\right)
+$$
 
    Si $V_2 > V_1$, $W > 0$ y $Q > 0$, lo que significa que el gas absorbe calor para expandirse manteniendo su temperatura.
 
@@ -164,7 +210,9 @@ Un gas ideal diatómico ($C_V = \frac{5}{2}R$) se somete a un ciclo de Otto idea
 7. Expansión adiabática ($3 \to 4$): $T_3 V_2^{\gamma-1} = T_4 V_1^{\gamma-1} \implies T_3 = T_4 \left(\frac{V_1}{V_2}\right)^{\gamma-1} = T_4 r^{\gamma-1}$.
 8. Sustituyendo $T_2$ y $T_3$ en la ecuación del rendimiento:
 
-$$ \eta = 1 - \frac{T_4 - T_1}{T_4 r^{\gamma-1} - T_1 r^{\gamma-1}} = 1 - \frac{T_4 - T_1}{r^{\gamma-1}(T_4 - T_1)} = 1 - \frac{1}{r^{\gamma-1}} $$
+$$
+\eta = 1 - \frac{T_4 - T_1}{T_4 r^{\gamma-1} - T_1 r^{\gamma-1}} = 1 - \frac{T_4 - T_1}{r^{\gamma-1}(T_4 - T_1)} = 1 - \frac{1}{r^{\gamma-1}}
+$$
 
 Este resultado demuestra que el rendimiento sólo depende de la relación de compresión geométrica y del tipo de gas.
 
@@ -175,21 +223,31 @@ Deriva la relación de Maxwell correspondiente al potencial termodinámico de la
 2. Tomamos el diferencial exacto: $dG = dU - TdS - SdT + PdV + VdP$.
 3. Usando la Ecuación Fundamental $dU = TdS - PdV$, sustituimos:
 
-$$ dG = (TdS - PdV) - TdS - SdT + PdV + VdP = -SdT + VdP $$
+$$
+dG = (TdS - PdV) - TdS - SdT + PdV + VdP = -SdT + VdP
+$$
 
 4. Como $dG$ es un diferencial exacto de dos variables independientes $T$ y $P$, podemos identificar las derivadas parciales de $G$:
 
-$$ \left( \frac{\partial G}{\partial T} \right)_P = -S \quad \text{y} \quad \left( \frac{\partial G}{\partial P} \right)_T = V $$
+$$
+\left( \frac{\partial G}{\partial T} \right)_P = -S \quad \text{y} \quad \left( \frac{\partial G}{\partial P} \right)_T = V
+$$
 
 5. Por el teorema de Clairaut-Schwarz de las derivadas parciales cruzadas, el orden de diferenciación no altera el resultado:
 
-$$ \frac{\partial^2 G}{\partial P \partial T} = \frac{\partial^2 G}{\partial T \partial P} $$
+$$
+\frac{\partial^2 G}{\partial P \partial T} = \frac{\partial^2 G}{\partial T \partial P}
+$$
 
 6. Aplicando esto a las primeras derivadas:
 
-$$ \left( \frac{\partial}{\partial P} \left( \frac{\partial G}{\partial T} \right)_P \right)_T = \left( \frac{\partial}{\partial T} \left( \frac{\partial G}{\partial P} \right)_T \right)_P $$
+$$
+\left( \frac{\partial}{\partial P} \left( \frac{\partial G}{\partial T} \right)_P \right)_T = \left( \frac{\partial}{\partial T} \left( \frac{\partial G}{\partial P} \right)_T \right)_P
+$$
 
-$$ -\left( \frac{\partial S}{\partial P} \right)_T = \left( \frac{\partial V}{\partial T} \right)_P $$
+$$
+-\left( \frac{\partial S}{\partial P} \right)_T = \left( \frac{\partial V}{\partial T} \right)_P
+$$
 
 Esta importante relación de Maxwell nos permite calcular la variación de la entropía con la presión midiendo el coeficiente de dilatación térmica volumétrica.
 
@@ -205,7 +263,9 @@ Un recipiente aislado térmicamente está dividido en dos compartimentos de vol�
 7. Del mismo modo, $\frac{V}{V_2} = \frac{1}{x_2}$.
 8. Sumando los cambios de entropía para obtener el total:
 
-$$ \Delta S_{\text{mix}} = \Delta S_A + \Delta S_B = -n_1 R \ln x_1 - n_2 R \ln x_2 $$
+$$
+\Delta S_{\text{mix}} = \Delta S_A + \Delta S_B = -n_1 R \ln x_1 - n_2 R \ln x_2
+$$
 
 Si introducimos el número total de moles $n = n_1 + n_2$, queda $\Delta S_{\text{mix}} = -nR(x_1 \ln x_1 + x_2 \ln x_2)$. Dado que $x_i < 1$, el logaritmo es negativo y $\Delta S > 0$, acorde a la Segunda Ley.
 
@@ -279,16 +339,22 @@ En la actual investigación (2026), el estudio de las leyes de la termodinámica
 
 Desde un punto de vista matemático riguroso, la termodinámica del equilibrio puede formularse elegantemente mediante la **Geometría de Contacto**. El espacio de estados termodinámicos se modela como una variedad de contacto $(2n+1)$-dimensional $\mathcal{P}$. Las variables termodinámicas intensivas y extensivas forman coordenadas conjugadas. La primera ley de la termodinámica se expresa requiriendo que los estados físicos residan en subvariedades de Legendre de $\mathcal{P}$, en las cuales se anula la forma de contacto fundamental:
 
-$$ \theta = dU - T dS + p dV - \sum_i \mu_i dN_i = 0 $$
+$$
+\theta = dU - T dS + p dV - \sum_i \mu_i dN_i = 0
+$$
 
 En la **Termodinámica Estocástica**, la evolución de sistemas lejos del equilibrio se describe a nivel de trayectorias usando ecuaciones diferenciales estocásticas (formalismo de Langevin) o su equivalente probabilístico, la ecuación de Fokker-Planck. La entropía se promueve a una variable estocástica fluctuante a lo largo de una trayectoria $\vec{x}(t)$ en el espacio de fases. 
 Usando cálculo estocástico (convención de Stratonovich), el calor disipado en un entorno a temperatura $T$ a lo largo de una trayectoria aleatoria de duración $\tau$ se asocia a la reversibilidad temporal de las probabilidades de trayectoria $\mathbb{P}$. El Teorema de Fluctación de Crooks establece que la asimetría en las distribuciones de trabajo $P(W)$ entre un proceso "forward" (F) y su proceso "reverse" (R) satisface:
 
-$$ \frac{P_F(W)}{P_R(-W)} = e^{\beta(W - \Delta F)} $$
+$$
+\frac{P_F(W)}{P_R(-W)} = e^{\beta(W - \Delta F)}
+$$
 
 donde $\beta = 1/k_B T$ y $\Delta F$ es el cambio de energía libre. Integrando esta relación, emerge la célebre **Igualdad de Jarzynski**, que relaciona exponencialmente promedios fuera del equilibrio con diferencias de energía libre de equilibrio:
 
-$$ \langle e^{-\beta W} \rangle = e^{-\beta \Delta F} $$
+$$
+\langle e^{-\beta W} \rangle = e^{-\beta \Delta F}
+$$
 
 Este formalismo prueba que la Segunda Ley de la Termodinámica ($\langle W \rangle \ge \Delta F$) es una consecuencia estadística macroscópica de una simetría microscópica exacta de las fluctuaciones.
 
@@ -307,7 +373,11 @@ Este formalismo prueba que la Segunda Ley de la Termodinámica ($\langle W \rang
    **Importancia Teórica:** Este tratado sentó las bases fundacionales de toda la termodinámica moderna. Carnot, investigando la eficiencia de las máquinas de vapor de su época, concluyó que la eficiencia dependía únicamente de las temperaturas de los depósitos, y no del fluido de trabajo (vapor, aire, etc.).  
    **Fondo Matemático:** Idealiza un ciclo termodinámico cerrado reversible consistente en dos transformaciones isotérmicas y dos adiabáticas. Concluye que la eficiencia máxima posible (Rendimiento de Carnot) es:
 
-   $$ \eta_{\text{max}} = 1 - \frac{T_C}{T_H} $$
+   
+
+$$
+\eta_{\text{max}} = 1 - \frac{T_C}{T_H}
+$$
 
    **Implicaciones Físicas:** Demuestra por primera vez que siempre hay un límite absoluto en la cantidad de calor que puede transformarse en trabajo mecánico, un postulado empírico de la irreversibilidad natural (Segunda Ley).
 
@@ -316,7 +386,11 @@ Este formalismo prueba que la Segunda Ley de la Termodinámica ($\langle W \rang
    **Importancia Teórica:** Clausius unificó los trabajos de Carnot y Joule (quien demostró la equivalencia mecánica del calor). Formaliza matemáticamente la Primera y Segunda Ley de la termodinámica. Quince años después, acuñaría la palabra "Entropía".  
    **Fondo Matemático:** En este y trabajos posteriores, formula la desigualdad cíclica ineludible para las máquinas reales:
 
-   $$ \oint \frac{\delta Q}{T} \le 0 $$
+   
+
+$$
+\oint \frac{\delta Q}{T} \le 0
+$$
 
    y define la función de estado Entropía $S$ mediante su diferencial exacta para un proceso reversible $dS = \delta Q_{\text{rev}}/T$.  
    **Implicaciones Físicas:** Enuncia implacablemente que "el calor no puede fluir espontáneamente de un cuerpo frío a uno caliente", y que "la energía del universo es constante, pero su entropía tiende a un máximo".
@@ -326,7 +400,11 @@ Este formalismo prueba que la Segunda Ley de la Termodinámica ($\langle W \rang
    **Importancia Teórica:** Concluye el conjunto de postulados termodinámicos macroscópicos. Nernst dedujo que a medida que la temperatura se aproxima al cero absoluto, el cambio en entropía para cualquier proceso isotérmico reversible tiende a cero.  
    **Fondo Matemático:** Si consideramos una transformación entre estados $A$ y $B$, el límite impone que:
 
-   $$ \lim_{T \to 0} \Delta S_{A \to B} = \lim_{T \to 0} \left( S_B(T) - S_A(T) \right) = 0 $$
+   
+
+$$
+\lim_{T \to 0} \Delta S_{A \to B} = \lim_{T \to 0} \left( S_B(T) - S_A(T) \right) = 0
+$$
 
    Posteriormente, Planck fortaleció este postulado asumiendo que para sistemas puros cristalinos, $S(0) = 0$.  
    **Implicaciones Físicas:** Prueba teóricamente la inaccesibilidad asintótica del cero absoluto (es físicamente imposible alcanzar $0\text{ K}$ mediante un número finito de pasos termodinámicos).

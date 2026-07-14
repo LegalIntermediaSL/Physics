@@ -20,63 +20,99 @@ Para dos sistemas de referencia inerciales $S$ y $S'$, donde $S'$ se mueve con v
 
 Consideremos un pulso de luz emitido desde el origen $O$ (y $O'$) en $t = t' = 0$. La ecuación del frente de onda esférico en $S$ es:
 
-$$ x^2 + y^2 + z^2 = c^2 t^2 $$
+$$
+x^2 + y^2 + z^2 = c^2 t^2
+$$
 
 Y en el sistema $S'$ debe ser simultáneamente:
 
-$$ (x')^2 + (y')^2 + (z')^2 = c^2 (t')^2 $$
+$$
+(x')^2 + (y')^2 + (z')^2 = c^2 (t')^2
+$$
 
 Asumiendo linealidad y homogeneidad del espacio, y sabiendo que $y' = y$, $z' = z$, buscamos coeficientes $\gamma$ tales que:
 
-$$ x' = \gamma (x - vt) $$
+$$
+x' = \gamma (x - vt)
+$$
 
-$$ x = \gamma (x' + vt') $$
+$$
+x = \gamma (x' + vt')
+$$
 
 Sustituyendo $x'$ en la segunda ecuación, obtenemos $t'$ en función de $x$ y $t$:
 
-$$ x = \gamma (\gamma(x - vt) + vt') \implies vt' = \frac{x}{\gamma} - \gamma x + \gamma v t $$
+$$
+x = \gamma (\gamma(x - vt) + vt') \implies vt' = \frac{x}{\gamma} - \gamma x + \gamma v t
+$$
 
-$$ t' = \gamma \left( t - \frac{x}{v} \left(1 - \frac{1}{\gamma^2}\right) \right) $$
+$$
+t' = \gamma \left( t - \frac{x}{v} \left(1 - \frac{1}{\gamma^2}\right) \right)
+$$
 
 Para un rayo de luz moviéndose a lo largo del eje $x$, $x = ct$ y $x' = ct'$. Sustituyendo estas condiciones:
 
-$$ ct' = \gamma (c - v) t $$
+$$
+ct' = \gamma (c - v) t
+$$
 
-$$ t' = \gamma t \left( 1 - \frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) \right) $$
+$$
+t' = \gamma t \left( 1 - \frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) \right)
+$$
 
 Igualando los factores de $t$ a la izquierda y derecha para el caso luminoso ($ct' = x'$):
 
-$$ c \gamma \left( 1 - \frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) \right) = \gamma(c - v) $$
+$$
+c \gamma \left( 1 - \frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) \right) = \gamma(c - v)
+$$
 
 Resolviendo esta ecuación para $\gamma$, descubrimos que:
 
-$$ 1 - \frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) = 1 - \frac{v}{c} $$
+$$
+1 - \frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) = 1 - \frac{v}{c}
+$$
 
-$$ \frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) = \frac{v}{c} \implies 1 - \frac{1}{\gamma^2} = \frac{v^2}{c^2} \implies \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} $$
+$$
+\frac{c}{v} \left(1 - \frac{1}{\gamma^2}\right) = \frac{v}{c} \implies 1 - \frac{1}{\gamma^2} = \frac{v^2}{c^2} \implies \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+$$
 
 Esto define el **Factor de Lorentz** $\gamma$. Las ecuaciones completas de transformación de Lorentz son:
 
-$$ x' = \gamma (x - vt) $$
+$$
+x' = \gamma (x - vt)
+$$
 
-$$ y' = y $$
+$$
+y' = y
+$$
 
-$$ z' = z $$
+$$
+z' = z
+$$
 
-$$ t' = \gamma \left(t - \frac{vx}{c^2}\right) $$
+$$
+t' = \gamma \left(t - \frac{vx}{c^2}\right)
+$$
 
 ### 2. Espacio-Tiempo de Minkowski y Cuadrivectores
 
 En RE, eventos físicos se representan en una variedad de cuatro dimensiones (una temporal, tres espaciales) conocida como **Espacio-Tiempo de Minkowski**. El vector de posición en este espacio se denomina *cuadrivector contravariante* de coordenadas:
 
-$$ x^\mu = (x^0, x^1, x^2, x^3) = (ct, x, y, z) $$
+$$
+x^\mu = (x^0, x^1, x^2, x^3) = (ct, x, y, z)
+$$
 
 Para que las leyes físicas sean invariantes bajo transformaciones de Lorentz, se expresan en términos tensoriales. La métrica del espacio de Minkowski $\eta_{\mu\nu}$ viene dada por la matriz diagonal (con firma $+---$):
 
-$$ \eta_{\mu\nu} = \text{diag}(1, -1, -1, -1) $$
+$$
+\eta_{\mu\nu} = \text{diag}(1, -1, -1, -1)
+$$
 
 El intervalo espacio-temporal, o **elemento de línea**, se define rigurosamente usando la convención de suma de Einstein como:
 
-$$ ds^2 = \eta_{\mu\nu} dx^\mu dx^\nu = c^2 dt^2 - dx^2 - dy^2 - dz^2 $$
+$$
+ds^2 = \eta_{\mu\nu} dx^\mu dx^\nu = c^2 dt^2 - dx^2 - dy^2 - dz^2
+$$
 
 Este escalar es un invariante de Lorentz, lo que significa que su valor es el mismo para cualquier observador inercial ($ds^2 = (ds')^2$).
 
@@ -96,18 +132,24 @@ A partir de las transformaciones de Lorentz, derivamos directamente los fenómen
 
 **Dilatación del Tiempo:** Consideremos un reloj en el origen de $S'$, marcando tiempos propios $\tau = t'$. Para este reloj, $x' = 0$ siempre. Desde $S$, medimos dos "tics" consecutivos. Sabemos que $t = \gamma(t' + \frac{vx'}{c^2})$. Como $\Delta x' = 0$:
 
-$$ \Delta t = \gamma \Delta t' = \gamma \Delta \tau $$
+$$
+\Delta t = \gamma \Delta t' = \gamma \Delta \tau
+$$
 
 Dado que $\gamma \ge 1$, $\Delta t \ge \Delta \tau$. El tiempo en $S$ transcurre más rápido, es decir, *los relojes en movimiento funcionan más lentamente*.
 
 **Contracción de la Longitud:** Consideremos una varilla en reposo en $S'$, con extremos en $x'_1$ y $x'_2$. Su longitud propia es $L_0 = x'_2 - x'_1$. Desde el sistema $S$, queremos medir su longitud $L = x_2 - x_1$. Para que la medición sea válida, debe ser *simultánea* en $S$ ($\Delta t = 0$).
 Usando $x' = \gamma(x - vt)$, evaluamos en los extremos:
 
-$$ x'_2 - x'_1 = \gamma (x_2 - vt_2) - \gamma (x_1 - vt_1) $$
+$$
+x'_2 - x'_1 = \gamma (x_2 - vt_2) - \gamma (x_1 - vt_1)
+$$
 
 Como medimos simultáneamente en $S$ ($t_1 = t_2$):
 
-$$ L_0 = \gamma (x_2 - x_1) = \gamma L \implies L = \frac{L_0}{\gamma} $$
+$$
+L_0 = \gamma (x_2 - x_1) = \gamma L \implies L = \frac{L_0}{\gamma}
+$$
 
 Los objetos se acortan en la dirección del movimiento relativista respecto al observador inercial.
 
@@ -115,27 +157,39 @@ Los objetos se acortan en la dirección del movimiento relativista respecto al o
 
 El momento lineal clásico $\mathbf{p} = m\mathbf{v}$ no es un invariante ni se conserva bajo transformaciones de Lorentz. Para arreglar esto, definimos el **Cuadrimomento** $p^\mu$, multiplicando la masa invariante (o masa en reposo) $m_0$ por la cuadrivelocidad $u^\mu = \frac{dx^\mu}{d\tau}$:
 
-$$ p^\mu = m_0 u^\mu = m_0 \frac{dx^\mu}{dt}\frac{dt}{d\tau} = m_0 \gamma (c, \mathbf{v}) = (\gamma m_0 c, \gamma m_0 \mathbf{v}) $$
+$$
+p^\mu = m_0 u^\mu = m_0 \frac{dx^\mu}{dt}\frac{dt}{d\tau} = m_0 \gamma (c, \mathbf{v}) = (\gamma m_0 c, \gamma m_0 \mathbf{v})
+$$
 
 La componente espacial es el momento relativista:
 
-$$ \mathbf{p} = \gamma m_0 \mathbf{v} $$
+$$
+\mathbf{p} = \gamma m_0 \mathbf{v}
+$$
 
 La componente temporal está relacionada con la energía relativista total del objeto $E = \gamma m_0 c^2$. Por tanto:
 
-$$ p^\mu = \left(\frac{E}{c}, \mathbf{p}\right) $$
+$$
+p^\mu = \left(\frac{E}{c}, \mathbf{p}\right)
+$$
 
 Para encontrar la famosa relación invariante, evaluamos la norma escalar del cuadrimomento:
 
-$$ p^\mu p_\mu = \eta_{\mu\nu} p^\mu p^\nu = \left(\frac{E}{c}\right)^2 - \mathbf{p}^2 $$
+$$
+p^\mu p_\mu = \eta_{\mu\nu} p^\mu p^\nu = \left(\frac{E}{c}\right)^2 - \mathbf{p}^2
+$$
 
 Al mismo tiempo, $p^\mu p_\mu = (m_0 c \gamma)^2 - (\gamma m_0 v)^2 = m_0^2 c^2 \gamma^2 \left(1 - \frac{v^2}{c^2}\right) = m_0^2 c^2$. Igualando ambas expresiones:
 
-$$ \left(\frac{E}{c}\right)^2 - \mathbf{p}^2 = m_0^2 c^2 \implies E^2 = (\mathbf{p}c)^2 + (m_0 c^2)^2 $$
+$$
+\left(\frac{E}{c}\right)^2 - \mathbf{p}^2 = m_0^2 c^2 \implies E^2 = (\mathbf{p}c)^2 + (m_0 c^2)^2
+$$
 
 Esta es la relación de dispersión relativista, fundamental para entender las colisiones de alta energía y la física de partículas. Si un objeto está en reposo ($\mathbf{p} = 0$), se simplifica a la ecuación de equivalencia masa-energía de Einstein:
 
-$$ E = m_0 c^2 $$
+$$
+E = m_0 c^2
+$$
 
 Y para fotones (masa invariante $m_0 = 0$), su energía está dada puramente por el momento $E = pc$.
 
@@ -148,30 +202,58 @@ Y para fotones (masa invariante $m_0 = 0$), su energía está dada puramente por
 **Solución paso a paso:**
 1. Calculamos el factor de Lorentz $\gamma$:
 
-   $$ \gamma = \frac{1}{\sqrt{1 - 0.99^2}} \approx \frac{1}{\sqrt{1 - 0.9801}} = \frac{1}{\sqrt{0.0199}} \approx 7.0888 $$
+   
+
+$$
+\gamma = \frac{1}{\sqrt{1 - 0.99^2}} \approx \frac{1}{\sqrt{1 - 0.9801}} = \frac{1}{\sqrt{0.0199}} \approx 7.0888
+$$
 
 2. La energía total del pión $E_{\pi}$ usando la relación masa-energía:
 
-   $$ E_{\pi} = \gamma m_{\pi} c^2 = 7.0888 \times 135 \text{ MeV} \approx 956.99 \text{ MeV} $$
+   
+
+$$
+E_{\pi} = \gamma m_{\pi} c^2 = 7.0888 \times 135 \text{ MeV} \approx 956.99 \text{ MeV}
+$$
 
 3. El momento del pión $p_{\pi}$:
 
-   $$ p_{\pi} = \gamma m_{\pi} v = 7.0888 \times 135 \text{ MeV}/c^2 \times 0.99c \approx 947.42 \text{ MeV}/c $$
+   
+
+$$
+p_{\pi} = \gamma m_{\pi} v = 7.0888 \times 135 \text{ MeV}/c^2 \times 0.99c \approx 947.42 \text{ MeV}/c
+$$
 
 4. En el decaimiento de dos cuerpos $\pi^0 \rightarrow \gamma + \gamma$, el momento máximo para un fotón en el sistema del laboratorio ocurre cuando se emite exactamente hacia adelante (colineal). Por la conservación del cuadrimomento, la energía y el momento del fotón hacia adelante ($E_1, p_1$) y el fotón hacia atrás ($E_2, p_2$) deben sumar los del pión:
 
-   $$ E_{\pi} = E_1 + E_2 $$
+   
 
-   $$ p_{\pi} = p_1 - p_2 $$
+$$
+E_{\pi} = E_1 + E_2
+$$
+
+   
+
+$$
+p_{\pi} = p_1 - p_2
+$$
 
    Dado que los fotones carecen de masa, $E_1 = p_1 c$ y $E_2 = p_2 c$.
    Sumando las dos primeras ecuaciones escaladas:
 
-   $$ E_{\pi} + p_{\pi}c = E_1 + E_2 + E_1 - E_2 = 2E_1 = 2p_1 c $$
+   
+
+$$
+E_{\pi} + p_{\pi}c = E_1 + E_2 + E_1 - E_2 = 2E_1 = 2p_1 c
+$$
 
    Despejando $p_1$:
 
-   $$ p_1 = \frac{E_{\pi} + p_{\pi}c}{2c} = \frac{956.99 \text{ MeV} + 947.42 \text{ MeV}}{2c} = \frac{1904.41}{2} \text{ MeV}/c \approx 952.2 \text{ MeV}/c $$
+   
+
+$$
+p_1 = \frac{E_{\pi} + p_{\pi}c}{2c} = \frac{956.99 \text{ MeV} + 947.42 \text{ MeV}}{2c} = \frac{1904.41}{2} \text{ MeV}/c \approx 952.2 \text{ MeV}/c
+$$
 
 5. **Conclusión:** La energía del pión en vuelo es masivamente mayor que su masa en reposo, y el decaimiento transmite un impulso enorme en dirección frontal, ejemplificando el "boost" de Lorentz que se aprovecha en los aceleradores de partículas.
 
@@ -294,15 +376,23 @@ A un nivel avanzado, la Relatividad Especial se formula en el lenguaje de la teo
 
 El álgebra de Lie asociada, $\mathfrak{iso}(1,3)$, está generada por los momentos $P_\mu$ (generadores de traslaciones) y los generadores de Lorentz $M_{\mu\nu}$ (rotaciones y boosts), que satisfacen el álgebra:
 
-$$ [P_\mu, P_\nu] = 0 $$
+$$
+[P_\mu, P_\nu] = 0
+$$
 
-$$ [M_{\mu\nu}, P_\rho] = -i(\eta_{\mu\rho}P_\nu - \eta_{\nu\rho}P_\mu) $$
+$$
+[M_{\mu\nu}, P_\rho] = -i(\eta_{\mu\rho}P_\nu - \eta_{\nu\rho}P_\mu)
+$$
 
-$$ [M_{\mu\nu}, M_{\rho\sigma}] = -i(\eta_{\mu\rho}M_{\nu\sigma} - \eta_{\mu\sigma}M_{\nu\rho} - \eta_{\nu\rho}M_{\mu\sigma} + \eta_{\nu\sigma}M_{\mu\rho}) $$
+$$
+[M_{\mu\nu}, M_{\rho\sigma}] = -i(\eta_{\mu\rho}M_{\nu\sigma} - \eta_{\mu\sigma}M_{\nu\rho} - \eta_{\nu\rho}M_{\mu\sigma} + \eta_{\nu\sigma}M_{\mu\rho})
+$$
 
 Para incluir fermiones en la teoría, es necesario recurrir a las representaciones del grupo recubridor universal del grupo de Lorentz, $\text{SL}(2,\mathbb{C})$. Un espinor de Weyl de quiralidad izquierda se transforma bajo una representación irreducible $(1/2, 0)$, mientras que uno de quiralidad derecha bajo $(0, 1/2)$. La ecuación de Dirac surge naturalmente al requerir invariancia bajo el grupo de Poincaré completo combinando estas representaciones en un espinor de Dirac (bispinor) $\psi$, donde la acción de los generadores se construye usando el álgebra de Clifford de las matrices gamma $\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}\mathbb{I}_4$. La acción de la teoría, acoplada al campo electromagnético $A_\mu$, se expresa mediante la derivada covariante de gauge:
 
-$$ \mathcal{S} = \int d^4x \, \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu} $$
+$$
+\mathcal{S} = \int d^4x \, \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+$$
 
 donde $D_\mu = \partial_\mu + iqA_\mu$ y $F_{\mu\nu}$ es el tensor de curvatura asociado a la conexión del fibrado principal $\text{U}(1)$.
 
@@ -321,7 +411,11 @@ donde $D_\mu = \partial_\mu + iqA_\mu$ y $F_{\mu\nu}$ es el tensor de curvatura 
    **Importancia Teórica:** Este es el artículo fundacional de la Relatividad Especial. Einstein resuelve la asimetría en la inducción electromagnética de Maxwell y descarta la necesidad del éter luminífero.  
    **Fondo Matemático:** Establece empíricamente los dos postulados. A partir de ellos, deduce las transformaciones de Lorentz para el espacio y el tiempo, demostrando que la simultaneidad es relativa:
 
-   $$ t' = \frac{t - vx/c^2}{\sqrt{1 - v^2/c^2}} $$
+   
+
+$$
+t' = \frac{t - vx/c^2}{\sqrt{1 - v^2/c^2}}
+$$
 
    **Implicaciones Físicas:** Cambió irrevocablemente nuestra comprensión del tiempo absoluto newtoniano, demostrando que la medida del tiempo y la longitud dependen del estado de movimiento del observador.
 
@@ -330,7 +424,11 @@ donde $D_\mu = \partial_\mu + iqA_\mu$ y $F_{\mu\nu}$ es el tensor de curvatura 
    **Importancia Teórica:** Introdujo la interpretación geométrica de la relatividad especial, unificando el espacio tridimensional y el tiempo unidimensional en un continuo cuatridimensional (el Espacio-Tiempo de Minkowski).  
    **Fondo Matemático:** Define la métrica invariante $ds^2$, demostrando que la distancia espacio-temporal entre dos eventos es absoluta para cualquier observador inercial:
 
-   $$ ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2 = \eta_{\mu\nu} dx^\mu dx^\nu $$
+   
+
+$$
+ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2 = \eta_{\mu\nu} dx^\mu dx^\nu
+$$
 
    **Implicaciones Físicas:** Sentó el formalismo matemático de cuadrivectores (como el cuadrimomento $p^\mu$) necesario para que, años más tarde, Einstein pudiera desarrollar la Relatividad General mediante geometría diferencial.
 
@@ -339,7 +437,11 @@ donde $D_\mu = \partial_\mu + iqA_\mu$ y $F_{\mu\nu}$ es el tensor de curvatura 
    **Importancia Teórica:** Publicado meses después de su artículo principal, deduce la ecuación más famosa de la física, relacionando la masa inercial con la energía en reposo.  
    **Fondo Matemático:** Analiza la emisión de dos pulsos de luz en direcciones opuestas desde un cuerpo en reposo y visto desde un sistema en movimiento. El balance del cambio de energía cinética requiere que la masa del cuerpo disminuya en $\Delta m = E/c^2$, generalizado como:
 
-   $$ E_0 = m_0 c^2 $$
+   
+
+$$
+E_0 = m_0 c^2
+$$
 
    **Implicaciones Físicas:** Demuestra que masa y energía son manifestaciones de la misma entidad física, lo cual es la base de la fisión y fusión nuclear.
 

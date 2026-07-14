@@ -18,11 +18,15 @@ El Teorema de Chasles establece que el movimiento general de un cuerpo rígido p
 
 Dado el vector de velocidad angular instantánea $\vec{\omega}(t)$, el campo de velocidades para cualquier punto $\vec{r}_i$ del sólido con respecto al centro de rotación es:
 
-$$ \vec{v}_i = \vec{\omega} \times \vec{r}_i $$
+$$
+\vec{v}_i = \vec{\omega} \times \vec{r}_i
+$$
 
 La derivada temporal de este vector provee la aceleración, donde el uso del operador $\left(\frac{d}{dt}\right)_{inercial} = \left(\frac{d}{dt}\right)_{rot} + \vec{\omega} \times$ produce de inmediato:
 
-$$ \vec{a}_i = \dot{\vec{\omega}} \times \vec{r}_i + \vec{\omega} \times (\vec{\omega} \times \vec{r}_i) = \vec{\alpha} \times \vec{r}_i + \vec{\omega} \times \vec{v}_i $$
+$$
+\vec{a}_i = \dot{\vec{\omega}} \times \vec{r}_i + \vec{\omega} \times (\vec{\omega} \times \vec{r}_i) = \vec{\alpha} \times \vec{r}_i + \vec{\omega} \times \vec{v}_i
+$$
 
 Aquí, $\vec{\alpha}$ es la aceleración angular, el primer término es la componente tangencial y el segundo término representa la aceleración normal (centrípeta) hacia el eje instantáneo de rotación.
 
@@ -31,19 +35,19 @@ Aquí, $\vec{\alpha}$ es la aceleración angular, el primer término es la compo
 Mientras que la masa inercial es un escalar isotrópico para sistemas traslacionales, el "equivalente" rotacional presenta asimetrías extremas dependientes de la dirección.
 Para el momento angular total $\vec{L} = \sum (\vec{r}_i \times m_i \vec{v}_i)$, sustituyendo $\vec{v}_i = \vec{\omega} \times \vec{r}_i$ y aplicando la identidad del doble producto cruz $\vec{A} \times (\vec{B} \times \vec{C}) = \vec{B}(\vec{A}\cdot\vec{C}) - \vec{C}(\vec{A}\cdot\vec{B})$:
 
-$$ \vec{L} = \sum m_i \left[ r_i^2 \vec{\omega} - \vec{r}_i (\vec{r}_i \cdot \vec{\omega}) \right] $$
+$$
+\vec{L} = \sum m_i \left[ r_i^2 \vec{\omega} - \vec{r}_i (\vec{r}_i \cdot \vec{\omega}) \right]
+$$
 
 Esta transformación lineal desde $\vec{\omega}$ hasta $\vec{L}$ define el Tensor de Inercia $\mathbf{I}$, tal que $\vec{L} = \mathbf{I} \vec{\omega}$. En notación matricial sobre una base Cartesiana:
 
 $$
-
 \mathbf{I} = \begin{pmatrix} 
 I_{xx} & I_{xy} & I_{xz} \\
 I_{yx} & I_{yy} & I_{yz} \\
 I_{zx} & I_{zy} & I_{zz}
 \end{pmatrix}
 = \int \rho(\vec{r}) \begin{pmatrix} y^2+z^2 & -xy & -xz \\ -yx & x^2+z^2 & -yz \\ -zx & -zy & x^2+y^2 \end{pmatrix} dV
-
 $$
 
 Los términos de la diagonal son los **momentos de inercia**, mientras que los elementos extra-diagonales son los **productos de inercia**. 
@@ -61,15 +65,23 @@ graph LR
 
 Al analizar el momento angular en el marco fijo al cuerpo (un marco rotatorio no inercial), la conservación de Newton para torque neto $\vec{\tau}_{neto} = \left(\frac{d\vec{L}}{dt}\right)_{inercial}$ se transforma a:
 
-$$ \vec{\tau}_{neto} = \left(\frac{d\vec{L}}{dt}\right)_{cuerpo} + \vec{\omega} \times \vec{L} $$
+$$
+\vec{\tau}_{neto} = \left(\frac{d\vec{L}}{dt}\right)_{cuerpo} + \vec{\omega} \times \vec{L}
+$$
 
 Alineando el sistema de coordenadas con los ejes principales del cuerpo, $\mathbf{I}$ se vuelve diagonal ($I_1, I_2, I_3$), y $\vec{L} = (I_1\omega_1, I_2\omega_2, I_3\omega_3)^T$. La sustitución directa arroja el sistema desacoplado de las **Ecuaciones de Euler para el Sólido Rígido**:
 
-$$ \tau_1 = I_1 \dot{\omega}_1 + (I_3 - I_2)\omega_2 \omega_3 $$
+$$
+\tau_1 = I_1 \dot{\omega}_1 + (I_3 - I_2)\omega_2 \omega_3
+$$
 
-$$ \tau_2 = I_2 \dot{\omega}_2 + (I_1 - I_3)\omega_3 \omega_1 $$
+$$
+\tau_2 = I_2 \dot{\omega}_2 + (I_1 - I_3)\omega_3 \omega_1
+$$
 
-$$ \tau_3 = I_3 \dot{\omega}_3 + (I_2 - I_1)\omega_1 \omega_2 $$
+$$
+\tau_3 = I_3 \dot{\omega}_3 + (I_2 - I_1)\omega_1 \omega_2
+$$
 
 Estas EDOs altamente no lineales son fundamentales en la girodinámica y explican por qué objetos girando en su eje de inercia intermedio son inestables (Teorema de la Raqueta de Tenis o Efecto Dzhanibekov).
 
@@ -77,13 +89,17 @@ Estas EDOs altamente no lineales son fundamentales en la girodinámica y explica
 
 Si se conoce el momento de inercia respecto a un eje que pasa por el Centro de Masa ($I_{cm}$), el momento de inercia respecto a cualquier eje paralelo situado a una distancia perpendicular $d$ se determina escalarmente como:
 
-$$ I_{nuevo} = I_{cm} + M d^2 $$
+$$
+I_{nuevo} = I_{cm} + M d^2
+$$
 
 Esto aplica igualmente al tensor métrico entero usando matrices de desplazamiento.
 
 La **Energía Cinética Total** del sólido rígido se desacopla elegantemente mediante los teoremas de König en una fracción puramente traslacional y otra rotacional referida al centro de masa:
 
-$$ K = \frac{1}{2} M \vec{v}_{cm}^2 + \frac{1}{2} \vec{\omega}^T \mathbf{I}_{cm} \vec{\omega} $$
+$$
+K = \frac{1}{2} M \vec{v}_{cm}^2 + \frac{1}{2} \vec{\omega}^T \mathbf{I}_{cm} \vec{\omega}
+$$
 
 Para rotación simple alrededor de un eje principal: $K = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$.
 
@@ -96,14 +112,26 @@ Imagina que soltamos simultáneamente un aro hueco ($I = MR^2$), un cilindro mac
 1. Conservación de energía para todos. $U_i = Mgh$, $K_i = 0$.
 2. Al pie de la rampa, la energía cinética es traslacional más rotacional:
 
-   $$ E_f = \frac{1}{2} M v^2 + \frac{1}{2} I \omega^2 = Mgh $$
+   
+
+$$
+E_f = \frac{1}{2} M v^2 + \frac{1}{2} I \omega^2 = Mgh
+$$
 
 3. Como ruedan sin deslizar, $v = \omega R \implies \omega = v/R$.
 4. Sustituyendo $I = c MR^2$ (donde $c=1$ aro, $c=1/2$ cilindro, $c=2/5$ esfera):
 
-   $$ \frac{1}{2} M v^2 + \frac{1}{2} (c MR^2) \left(\frac{v^2}{R^2}\right) = Mgh $$
+   
 
-   $$ \frac{1}{2} v^2 (1 + c) = gh \implies \mathbf{v = \sqrt{\frac{2gh}{1 + c}}} $$
+$$
+\frac{1}{2} M v^2 + \frac{1}{2} (c MR^2) \left(\frac{v^2}{R^2}\right) = Mgh
+$$
+
+   
+
+$$
+\frac{1}{2} v^2 (1 + c) = gh \implies \mathbf{v = \sqrt{\frac{2gh}{1 + c}}}
+$$
 
 5. Como $v$ es mayor para el coeficiente $c$ más pequeño, el objeto con la masa más concentrada en el centro ganará. 
    **Ganador**: La esfera ($c=0.4$). **Perdedor**: El aro ($c=1$).
@@ -213,7 +241,9 @@ Considerando que el espacio de configuración es el Grupo Ortogonal Especial $SO
 
 La Ecuación de Euler intrínseca es:
 
-$$ \dot{\Pi} = \Pi \times \Omega = \text{ad}^*_\Omega \Pi $$
+$$
+\dot{\Pi} = \Pi \times \Omega = \text{ad}^*_\Omega \Pi
+$$
 
 donde $\Omega = \mathbb{I}^{-1}(\Pi) \in \mathfrak{so}(3)$ es la velocidad angular, $\mathbb{I}$ es el tensor de inercia interpretado como un mapeo simétrico y positivo definido $\mathbb{I}: \mathfrak{so}(3) \to \mathfrak{so}(3)^*$, y $\text{ad}^*$ denota la acción coadjunta. Las órbitas donde ocurre este flujo se identifican geométricamente como esferas $S^2$, lo cual muestra que el caos requiere acoplamientos adicionales en sistemas de dinámica rotacional clásica.
 
@@ -233,11 +263,23 @@ donde $\Omega = \mathbb{I}^{-1}(\Pi) \in \mathfrak{so}(3)$ es la velocidad angul
    - *Importancia Teórica*: Euler introduce su sistema de tres ángulos $(\phi, \theta, \psi)$ para describir cualquier rotación 3D, parametrizando el grupo de simetría especial ortogonal SO(3).
    - *Contexto Matemático*: La velocidad angular en el marco del cuerpo se relaciona con las derivadas de los ángulos de Euler mediante transformaciones no ortogonales:
 
-     $$ \omega_1 = \dot{\phi}\sin\theta\sin\psi + \dot{\theta}\cos\psi $$
+     
 
-     $$ \omega_2 = \dot{\phi}\sin\theta\cos\psi - \dot{\theta}\sin\psi $$
+$$
+\omega_1 = \dot{\phi}\sin\theta\sin\psi + \dot{\theta}\cos\psi
+$$
 
-     $$ \omega_3 = \dot{\phi}\cos\theta + \dot{\psi} $$
+     
+
+$$
+\omega_2 = \dot{\phi}\sin\theta\cos\psi - \dot{\theta}\sin\psi
+$$
+
+     
+
+$$
+\omega_3 = \dot{\phi}\cos\theta + \dot{\psi}
+$$
 
      Esta matriz sufre singularidades (Gimbal Lock) cuando $\theta = 0, \pi$, motivando en la era moderna el uso de Cuaterniones de Hamilton.
    - *Implicaciones*: Es la base para la estabilización de los giróscopos de navegación inercial y simulación de la precesión y nutación de trompos.

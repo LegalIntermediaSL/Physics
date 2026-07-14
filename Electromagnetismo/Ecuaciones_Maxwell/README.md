@@ -21,51 +21,73 @@ Las cuatro ecuaciones de Maxwell acopladas en un medio con densidad de carga $\r
 
 La ley (2) garantiza que $\vec{B}$ puede expresarse como el rotacional de un potencial vector magnético $\vec{A}$:
 
-$$ \vec{B} = \nabla \times \vec{A} $$
+$$
+\vec{B} = \nabla \times \vec{A}
+$$
 
 Sustituyendo esto en (3):
 
-$$ \nabla \times \left( \vec{E} + \frac{\partial \vec{A}}{\partial t} \right) = 0 $$
+$$
+\nabla \times \left( \vec{E} + \frac{\partial \vec{A}}{\partial t} \right) = 0
+$$
 
 Dado que el rotacional es nulo, el término entre paréntesis debe ser el gradiente de un potencial escalar $-V$:
 
-$$ \vec{E} = -\nabla V - \frac{\partial \vec{A}}{\partial t} $$
+$$
+\vec{E} = -\nabla V - \frac{\partial \vec{A}}{\partial t}
+$$
 
 Sustituyendo estos potenciales en (1) y (4), obtenemos un par de ecuaciones acopladas de segundo orden. Podemos desacoplarlas imponiendo un *Gauge* o calibre. En el **Gauge de Lorenz** ($\nabla \cdot \vec{A} + \mu_0 \varepsilon_0 \frac{\partial V}{\partial t} = 0$), las ecuaciones se simplifican a ecuaciones de onda no homogéneas (ecuaciones de d'Alembert):
 
-$$ \Box^2 V = \nabla^2 V - \frac{1}{c^2} \frac{\partial^2 V}{\partial t^2} = -\frac{\rho}{\varepsilon_0} $$
+$$
+\Box^2 V = \nabla^2 V - \frac{1}{c^2} \frac{\partial^2 V}{\partial t^2} = -\frac{\rho}{\varepsilon_0}
+$$
 
-$$ \Box^2 \vec{A} = \nabla^2 \vec{A} - \frac{1}{c^2} \frac{\partial^2 \vec{A}}{\partial t^2} = -\mu_0 \vec{J} $$
+$$
+\Box^2 \vec{A} = \nabla^2 \vec{A} - \frac{1}{c^2} \frac{\partial^2 \vec{A}}{\partial t^2} = -\mu_0 \vec{J}
+$$
 
 donde $c = 1/\sqrt{\mu_0 \varepsilon_0}$. Sus soluciones son los potenciales retardados, demostrando que los cambios en las fuentes se propagan a la velocidad $c$.
 
 ### 2. Teorema de Poynting y Conservación de Energía
 Para derivar el balance energético, partimos de la fuerza de Lorentz ejercida sobre portadores en un volumen $V$:
 
-$$ \frac{dW_{mec}}{dt} = \int_V \vec{J} \cdot \vec{E} \, dV $$
+$$
+\frac{dW_{mec}}{dt} = \int_V \vec{J} \cdot \vec{E} \, dV
+$$
 
 Utilizando la Ley de Ampère-Maxwell para despejar $\vec{J}$:
 
-$$ \vec{J} = \frac{1}{\mu_0} \nabla \times \vec{B} - \varepsilon_0 \frac{\partial \vec{E}}{\partial t} $$
+$$
+\vec{J} = \frac{1}{\mu_0} \nabla \times \vec{B} - \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+$$
 
 Por lo tanto:
 
-$$ \vec{J} \cdot \vec{E} = \frac{1}{\mu_0} \vec{E} \cdot (\nabla \times \vec{B}) - \varepsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} $$
+$$
+\vec{J} \cdot \vec{E} = \frac{1}{\mu_0} \vec{E} \cdot (\nabla \times \vec{B}) - \varepsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t}
+$$
 
 Aplicando la identidad vectorial $\nabla \cdot (\vec{E} \times \vec{B}) = \vec{B} \cdot (\nabla \times \vec{E}) - \vec{E} \cdot (\nabla \times \vec{B})$ y la Ley de Faraday ($\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$), tenemos:
 
-$$ \vec{J} \cdot \vec{E} = -\nabla \cdot \left( \frac{\vec{E} \times \vec{B}}{\mu_0} \right) - \left[ \varepsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} + \frac{1}{\mu_0} \vec{B} \cdot \frac{\partial \vec{B}}{\partial t} \right] $$
+$$
+\vec{J} \cdot \vec{E} = -\nabla \cdot \left( \frac{\vec{E} \times \vec{B}}{\mu_0} \right) - \left[ \varepsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} + \frac{1}{\mu_0} \vec{B} \cdot \frac{\partial \vec{B}}{\partial t} \right]
+$$
 
 Esto se puede reescribir como la **Ecuación del Teorema de Poynting**:
 
-$$ \frac{\partial u}{\partial t} + \nabla \cdot \vec{S} = -\vec{J} \cdot \vec{E} $$
+$$
+\frac{\partial u}{\partial t} + \nabla \cdot \vec{S} = -\vec{J} \cdot \vec{E}
+$$
 
 donde $\vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B})$ es el vector de Poynting (flujo de energía electromagnética por unidad de área), y $u = \frac{1}{2} \left( \varepsilon_0 |\vec{E}|^2 + \frac{1}{\mu_0} |\vec{B}|^2 \right)$ es la densidad de energía electromagnética.
 
 ### 3. Propagación en Medios Materiales y Condiciones de Frontera
 Cuando la luz o cualquier campo electromagnético atraviesa materia macroscópica polarizable y magnetizable, introducimos los vectores Desplazamiento Eléctrico $\vec{D}$ y Campo Magnético Auxiliar $\vec{H}$:
 
-$$ \vec{D} = \varepsilon_0 \vec{E} + \vec{P} \quad , \quad \vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M} $$
+$$
+\vec{D} = \varepsilon_0 \vec{E} + \vec{P} \quad , \quad \vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M}
+$$
 
 Las ecuaciones de Maxwell en medios materiales se convierten en:
 1. $\nabla \cdot \vec{D} = \rho_f$
@@ -92,22 +114,36 @@ graph LR
 ### 4. Tensor Electromagnético y Covariancia Relativista
 La unificación definitiva del electromagnetismo se logra a través de la Relatividad Especial. Los campos eléctricos y magnéticos no son entes separados, sino componentes de un único tensor asimétrico de rango 2, el tensor de Faraday $F^{\mu\nu}$:
 
-$$ F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu = \begin{pmatrix} 0 & -E_x/c & -E_y/c & -E_z/c \\ E_x/c & 0 & -B_z & B_y \\ E_y/c & B_z & 0 & -B_x \\ E_z/c & -B_y & B_x & 0 \end{pmatrix} $$
+$$
+F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu = \begin{pmatrix} 0 & -E_x/c & -E_y/c & -E_z/c \\ E_x/c & 0 & -B_z & B_y \\ E_y/c & B_z & 0 & -B_x \\ E_z/c & -B_y & B_x & 0 \end{pmatrix}
+$$
 
 donde $A^\mu = (V/c, \vec{A})$ es el cuadripotencial.
 Las cuatro ecuaciones de Maxwell se reducen gloriosamente a tan solo dos ecuaciones covariantes tensoriales:
 1. Ecuaciones inhomogéneas (Gauss y Ampère-Maxwell):
 
-   $$ \partial_\mu F^{\mu\nu} = \mu_0 J^\nu $$
+   
+
+$$
+\partial_\mu F^{\mu\nu} = \mu_0 J^\nu
+$$
 
    donde $J^\nu = (c\rho, \vec{J})$ es la cuadricorriente.
 2. Ecuaciones homogéneas (Gauss Magnética y Faraday), representadas por la identidad de Bianchi:
 
-   $$ \partial_\lambda F_{\mu\nu} + \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} = 0 $$
+   
+
+$$
+\partial_\lambda F_{\mu\nu} + \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} = 0
+$$
 
    o alternativamente, usando el tensor dual $\tilde{F}^{\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\alpha\beta} F_{\alpha\beta}$:
 
-   $$ \partial_\mu \tilde{F}^{\mu\nu} = 0 $$
+   
+
+$$
+\partial_\mu \tilde{F}^{\mu\nu} = 0
+$$
 
 ---
 
@@ -119,25 +155,45 @@ Las cuatro ecuaciones de Maxwell se reducen gloriosamente a tan solo dos ecuacio
 2. **Calcular el rotacional de $\vec{E}$:**
    Como $\vec{E}$ solo tiene componente $x$ y solo depende de $z$ y $t$:
 
-   $$ \nabla \times \vec{E} = \left| \begin{matrix} \hat{i} & \hat{j} & \hat{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ E_x & 0 & 0 \end{matrix} \right| = \frac{\partial E_x}{\partial z} \hat{j} $$
+   
+
+$$
+\nabla \times \vec{E} = \left| \begin{matrix} \hat{i} & \hat{j} & \hat{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ E_x & 0 & 0 \end{matrix} \right| = \frac{\partial E_x}{\partial z} \hat{j}
+$$
 
    Derivando $E_x(z,t) = E_0 \cos(kz - \omega t)$ respecto a $z$:
 
-   $$ \frac{\partial E_x}{\partial z} = -k E_0 \sin(kz - \omega t) $$
+   
+
+$$
+\frac{\partial E_x}{\partial z} = -k E_0 \sin(kz - \omega t)
+$$
 
    Por tanto, $\nabla \times \vec{E} = -k E_0 \sin(kz - \omega t) \hat{j}$.
 3. **Igualar y resolver para $\vec{B}$:**
 
-   $$ -\frac{\partial \vec{B}}{\partial t} = -k E_0 \sin(kz - \omega t) \hat{j} \implies \frac{\partial \vec{B}}{\partial t} = k E_0 \sin(kz - \omega t) \hat{j} $$
+   
+
+$$
+-\frac{\partial \vec{B}}{\partial t} = -k E_0 \sin(kz - \omega t) \hat{j} \implies \frac{\partial \vec{B}}{\partial t} = k E_0 \sin(kz - \omega t) \hat{j}
+$$
 
    Integrando con respecto al tiempo:
 
-   $$ \vec{B}(z,t) = \int k E_0 \sin(kz - \omega t) dt \, \hat{j} = \frac{k}{\omega} E_0 \cos(kz - \omega t) \hat{j} $$
+   
+
+$$
+\vec{B}(z,t) = \int k E_0 \sin(kz - \omega t) dt \, \hat{j} = \frac{k}{\omega} E_0 \cos(kz - \omega t) \hat{j}
+$$
 
 4. **Relación entre $E_0$ y $B_0$:**
    Sabiendo que $c = \frac{\omega}{k}$, el campo magnético resulta:
 
-   $$ \vec{B}(z,t) = \frac{E_0}{c} \cos(kz - \omega t) \hat{j} $$
+   
+
+$$
+\vec{B}(z,t) = \frac{E_0}{c} \cos(kz - \omega t) \hat{j}
+$$
 
    Note que $\vec{E}$ y $\vec{B}$ oscilan en fase y son ortogonales entre sí y ortogonales a la dirección de propagación.
 
@@ -254,13 +310,19 @@ Las ecuaciones de Maxwell adquieren una forma supremamente elegante e invariante
 
 Definiendo el cuadripotencial como una 1-forma $A = A_\mu dx^\mu$, el tensor de campo electromagnético es exactamente su derivada exterior, una 2-forma exacta conocida como la 2-forma de Faraday:
 
-$$ F = dA = \frac{1}{2} F_{\mu\nu} dx^\mu \wedge dx^\nu $$
+$$
+F = dA = \frac{1}{2} F_{\mu\nu} dx^\mu \wedge dx^\nu
+$$
 
 En el lenguaje de las formas diferenciales y utilizando el operador estrella de Hodge $\star$, las cuatro complejas ecuaciones vectoriales de Maxwell se reducen a dos identidades geométricas de sobrecogedora belleza matemática:
 
-$$ dF = 0 $$
+$$
+dF = 0
+$$
 
-$$ d\star F = \mu_0 \star J $$
+$$
+d\star F = \mu_0 \star J
+$$
 
 donde $J$ es la 1-forma cuadricorriente. La primera ecuación ($d^2A = 0$) es la Identidad de Bianchi que engloba la Ley de Faraday y la ausencia de monopolos magnéticos. La segunda incorpora las fuentes: la Ley de Gauss y la Ley de Ampère-Maxwell. Este formalismo no solo hace transparente la invarianza de Lorentz del electromagnetismo, sino que lo categoriza formalmente como una Teoría de Gauge Abeliana con grupo de simetría local $U(1)$, sembrando la semilla para el Modelo Estándar de la física de partículas elementales.
 

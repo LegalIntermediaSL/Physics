@@ -36,20 +36,26 @@ El diseño y comprensión de detectores y aceleradores modernos se asientan sobr
 #### 1.1 Ecuación de Movimiento Relativista
 Una partícula de carga $q$ moviéndose en un campo eléctrico $\mathbf{E}$ y campo magnético $\mathbf{B}$ experimenta la fuerza de Lorentz:
 
-$$ \mathbf{F} = \frac{d\mathbf{p}}{dt} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B}) $$
+$$
+\mathbf{F} = \frac{d\mathbf{p}}{dt} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})
+$$
 
 donde el momento relativista es $\mathbf{p} = \gamma m \mathbf{v}$, con $\gamma = \left(1 - \frac{v^2}{c^2}\right)^{-1/2}$.
 
 En un sincrotrón ideal de radio $R$, el campo magnético $B$ debe incrementarse sincrónicamente con el momento $p$ para mantener una órbita circular:
 
-$$ p = q B R $$
+$$
+p = q B R
+$$
 
 Si se aumenta la energía de la partícula impartida por cavidades de radiofrecuencia (RF), el campo magnético $B(t)$ debe escalarse linealmente con el momento.
 
 #### 1.2 Potencia Radiada (Radiación Sincrotrón)
 Una de las mayores limitaciones en aceleradores circulares de electrones y, a energías ultra-relativistas, de protones, es la emisión de radiación sincrotrón por la aceleración transversal. Utilizando la generalización relativista de la fórmula de Larmor, la potencia radiada por una partícula en trayectoria circular es:
 
-$$ P = \frac{e^2 c}{6 \pi \epsilon_0} \frac{\gamma^4}{R^2} = \frac{e^2 c}{6 \pi \epsilon_0} \frac{E^4}{(mc^2)^4 R^2} $$
+$$
+P = \frac{e^2 c}{6 \pi \epsilon_0} \frac{\gamma^4}{R^2} = \frac{e^2 c}{6 \pi \epsilon_0} \frac{E^4}{(mc^2)^4 R^2}
+$$
 
 **Prueba paso a paso (simplificada):**
 1. La fórmula de Larmor no relativista es $P = \frac{e^2 a^2}{6 \pi \epsilon_0 c^3}$.
@@ -58,7 +64,9 @@ $$ P = \frac{e^2 c}{6 \pi \epsilon_0} \frac{\gamma^4}{R^2} = \frac{e^2 c}{6 \pi 
 4. En un movimiento circular, la aceleración transversal es perpendicular a la velocidad, por lo que $A^\mu A_\mu = -\gamma^4 a^2$.
 5. Sustituyendo $a = \frac{v^2}{R} \approx \frac{c^2}{R}$ para el caso ultra-relativista, y teniendo en cuenta los factores de corrección temporal, la pérdida de energía por vuelta es $\Delta E = \oint P dt = P \frac{2\pi R}{v}$. Obteniendo:
 
-$$ \Delta E \approx \frac{e^2}{3 \epsilon_0} \frac{\gamma^4}{R} $$
+$$
+\Delta E \approx \frac{e^2}{3 \epsilon_0} \frac{\gamma^4}{R}
+$$
 
 La fuerte dependencia en $\gamma^4$ explica por qué el LHC ($m_p \sim 1 \text{ GeV/c}^2$) pierde poca energía por vuelta comparado con el LEP ($m_e \sim 0.511 \text{ MeV/c}^2$), de radio similar.
 
@@ -69,7 +77,9 @@ Los detectores extraen información midiendo la transferencia de energía de la 
 #### 2.1 Pérdida de Energía por Ionización (Fórmula de Bethe-Bloch)
 Para partículas cargadas pesadas (ej. muones, protones, partículas alfa), la pérdida de energía dominante ocurre por interacciones inelásticas con los electrones atómicos. El poder de frenado viene dado por la fórmula cuántico-mecánica de Bethe-Bloch:
 
-$$ -\left\langle \frac{dE}{dx} \right\rangle = K z^2 \frac{Z}{A} \frac{1}{\beta^2} \left[ \frac{1}{2} \ln \left( \frac{2 m_e c^2 \beta^2 \gamma^2 T_{\text{max}}}{I^2} \right) - \beta^2 - \frac{\delta(\beta \gamma)}{2} \right] $$
+$$
+-\left\langle \frac{dE}{dx} \right\rangle = K z^2 \frac{Z}{A} \frac{1}{\beta^2} \left[ \frac{1}{2} \ln \left( \frac{2 m_e c^2 \beta^2 \gamma^2 T_{\text{max}}}{I^2} \right) - \beta^2 - \frac{\delta(\beta \gamma)}{2} \right]
+$$
 
 Donde:
 * $K = 4\pi N_A r_e^2 m_e c^2$.
@@ -79,14 +89,18 @@ Donde:
 * $I$: Potencial medio de excitación del material.
 * $T_{\text{max}}$: Transferencia máxima de energía cinética al electrón en una única colisión:
 
-$$ T_{\text{max}} = \frac{2 m_e c^2 \beta^2 \gamma^2}{1 + 2\gamma m_e/M + (m_e/M)^2} $$
+$$
+T_{\text{max}} = \frac{2 m_e c^2 \beta^2 \gamma^2}{1 + 2\gamma m_e/M + (m_e/M)^2}
+$$
 
 * $\delta(\beta \gamma)$: Corrección por el efecto de densidad, crucial para velocidades ultra-relativistas debido a la polarización del medio que reduce el campo electromagnético a largas distancias.
 
 #### 2.2 Radiación de Frenado (Bremsstrahlung)
 Para los electrones, debido a su baja masa, la pérdida por ionización se ve superada a altas energías por el *Bremsstrahlung* en el campo eléctrico de los núcleos atómicos.
 
-$$ -\left(\frac{dE}{dx}\right)_{\text{rad}} = \frac{E}{X_0} $$
+$$
+-\left(\frac{dE}{dx}\right)_{\text{rad}} = \frac{E}{X_0}
+$$
 
 Donde $X_0$ es la longitud de radiación. La energía del electrón decrece exponencialmente $E(x) = E_0 e^{-x/X_0}$. La energía crítica $E_c$ ocurre cuando la pérdida por ionización se iguala al *Bremsstrahlung*. Para sólidos, $E_c \approx \frac{610 \text{ MeV}}{Z+1.24}$.
 
@@ -94,11 +108,15 @@ Donde $X_0$ es la longitud de radiación. La energía del electrón decrece expo
 Emitida cuando una partícula cargada viaja a través de un medio dieléctrico a una velocidad superior a la velocidad de la luz en ese medio: $v > \frac{c}{n}$.
 Se emite en un cono con un ángulo de apertura característico $\theta_c$:
 
-$$ \cos \theta_c = \frac{1}{n \beta} $$
+$$
+\cos \theta_c = \frac{1}{n \beta}
+$$
 
 El número de fotones emitidos por unidad de longitud y longitud de onda viene dado por la fórmula de Frank-Tamm:
 
-$$ \frac{d^2N}{dx d\lambda} = \frac{2\pi \alpha z^2}{\lambda^2} \left( 1 - \frac{1}{\beta^2 n^2(\lambda)} \right) $$
+$$
+\frac{d^2N}{dx d\lambda} = \frac{2\pi \alpha z^2}{\lambda^2} \left( 1 - \frac{1}{\beta^2 n^2(\lambda)} \right)
+$$
 
 ```mermaid
 graph LR
@@ -113,11 +131,15 @@ graph LR
 
 En experimentos de colisionadores, el rendimiento analítico está directamente dictado por la **Luminosidad ($L$)**. Para un proceso con sección eficaz de interacción $\sigma$, la tasa de eventos observados es:
 
-$$ \frac{dN}{dt} = L \sigma $$
+$$
+\frac{dN}{dt} = L \sigma
+$$
 
 Para dos haces colisionantes formados por paquetes (*bunches*) gaussianos de $N_1$ y $N_2$ partículas con una frecuencia de colisión $f$, e ignorando por un momento factores de cruce complejos:
 
-$$ L = \frac{f N_1 N_2}{4 \pi \sigma_x \sigma_y} $$
+$$
+L = \frac{f N_1 N_2}{4 \pi \sigma_x \sigma_y}
+$$
 
 donde $\sigma_x, \sigma_y$ son las dispersiones transversales efectivas (desviaciones estándar de la forma gaussiana del haz) en el punto de interacción.
 
@@ -131,23 +153,43 @@ Determine el núcleo más estable contra decaimiento beta para una familia isob�
 **Solución paso a paso:**
 1. La masa atómica de un núcleo isobárico es aproximadamente una parábola en función de $Z$:
 
-   $$ M(A,Z) \approx \alpha Z^2 + \beta Z + \gamma $$
+   
+
+$$
+M(A,Z) \approx \alpha Z^2 + \beta Z + \gamma
+$$
 
 2. Los términos relevantes de la fórmula de Bethe-Weizsäcker que dependen de $Z$ son el término de Coulomb y el de asimetría:
 
-   $$ E_C = a_c \frac{Z(Z-1)}{A^{1/3}} \approx a_c \frac{Z^2}{A^{1/3}}, \quad E_A = a_a \frac{(A-2Z)^2}{A} $$
+   
+
+$$
+E_C = a_c \frac{Z(Z-1)}{A^{1/3}} \approx a_c \frac{Z^2}{A^{1/3}}, \quad E_A = a_a \frac{(A-2Z)^2}{A}
+$$
 
 3. Maximizando la energía de ligadura con respecto a $Z$ (o minimizando la masa):
 
-   $$ \frac{\partial E_B}{\partial Z} = -2 a_c \frac{Z}{A^{1/3}} + 4 a_a \frac{A-2Z}{A} = 0 $$
+   
+
+$$
+\frac{\partial E_B}{\partial Z} = -2 a_c \frac{Z}{A^{1/3}} + 4 a_a \frac{A-2Z}{A} = 0
+$$
 
 4. Despejando $Z$ para el isóbaro más estable ($Z_{min}$):
 
-   $$ Z_{min} = \frac{A}{2 + \frac{a_c}{2 a_a} A^{2/3}} $$
+   
+
+$$
+Z_{min} = \frac{A}{2 + \frac{a_c}{2 a_a} A^{2/3}}
+$$
 
 5. Utilizando valores típicos $a_c = 0.71$ MeV y $a_a = 23.2$ MeV para $A = 125$:
 
-   $$ Z_{min} = \frac{125}{2 + \frac{0.71}{46.4} (125)^{2/3}} = \frac{125}{2 + 0.0153 \times 25} = \frac{125}{2.3825} \approx 52.4 $$
+   
+
+$$
+Z_{min} = \frac{125}{2 + \frac{0.71}{46.4} (125)^{2/3}} = \frac{125}{2 + 0.0153 \times 25} = \frac{125}{2.3825} \approx 52.4
+$$
 
 6. El número atómico entero más cercano es $Z = 52$, que corresponde al Telurio ($^{125}\text{Te}$).
 
@@ -160,11 +202,19 @@ Un pion neutro ($\pi^0$) en reposo decae en dos fotones ($\pi^0 \to \gamma + \ga
 3. Usamos la transformación de Lorentz para la energía del fotón: $E = \gamma E' (1 + \beta \cos\theta')$, donde $\theta'$ es el ángulo de emisión en el sistema CM relativo a la velocidad del pion.
 4. La energía máxima ocurre cuando el fotón se emite hacia adelante ($\theta'=0$):
 
-   $$ E_{max} = \gamma \frac{m_\pi c^2}{2} (1 + \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 + 0.8) = 112.5 \times 1.8 = 202.5 \text{ MeV} $$
+   
+
+$$
+E_{max} = \gamma \frac{m_\pi c^2}{2} (1 + \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 + 0.8) = 112.5 \times 1.8 = 202.5 \text{ MeV}
+$$
 
 5. La energía mínima ocurre cuando el fotón se emite hacia atrás ($\theta'=\pi$):
 
-   $$ E_{min} = \gamma \frac{m_\pi c^2}{2} (1 - \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 - 0.8) = 112.5 \times 0.2 = 22.5 \text{ MeV} $$
+   
+
+$$
+E_{min} = \gamma \frac{m_\pi c^2}{2} (1 - \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 - 0.8) = 112.5 \times 0.2 = 22.5 \text{ MeV}
+$$
 
 6. Verificación: $E_{max} + E_{min} = 225 \text{ MeV}$, que es precisamente la energía total del pion en el sistema de laboratorio ($E = \gamma m_\pi c^2$).
 
@@ -175,21 +225,37 @@ A partir de la Regla de Oro de Fermi y la aproximación de Born, derive la secci
 1. El potencial de Coulomb es $V(r) = \frac{z Z e^2}{4\pi\epsilon_0 r}$.
 2. En la primera aproximación de Born, la amplitud de dispersión es proporcional a la transformada de Fourier del potencial:
 
-   $$ f(\theta) = -\frac{m}{2\pi\hbar^2} \int V(r) e^{i \vec{q} \cdot \vec{r}} d^3r $$
+   
+
+$$
+f(\theta) = -\frac{m}{2\pi\hbar^2} \int V(r) e^{i \vec{q} \cdot \vec{r}} d^3r
+$$
 
    donde $\vec{q} = \vec{k}_f - \vec{k}_i$ es la transferencia de momento.
 3. Para asegurar convergencia, se utiliza un potencial apantallado $V(r) e^{-\mu r}$ y luego se toma $\mu \to 0$. La integral resulta en:
 
-   $$ \int \frac{e^{-\mu r}}{r} e^{i \vec{q} \cdot \vec{r}} d^3r = \frac{4\pi}{q^2 + \mu^2} \xrightarrow{\mu \to 0} \frac{4\pi}{q^2} $$
+   
+
+$$
+\int \frac{e^{-\mu r}}{r} e^{i \vec{q} \cdot \vec{r}} d^3r = \frac{4\pi}{q^2 + \mu^2} \xrightarrow{\mu \to 0} \frac{4\pi}{q^2}
+$$
 
 4. La magnitud de la transferencia de momento, considerando dispersión elástica ($|\vec{k}_i| = |\vec{k}_f| = k$), es $q = 2k \sin(\theta/2)$.
 5. Sustituyendo todo, la amplitud es:
 
-   $$ f(\theta) = -\frac{m z Z e^2}{2\pi\hbar^2 4\pi\epsilon_0} \frac{4\pi}{(2k \sin(\theta/2))^2} = -\frac{z Z e^2}{16\pi\epsilon_0 E \sin^2(\theta/2)} $$
+   
+
+$$
+f(\theta) = -\frac{m z Z e^2}{2\pi\hbar^2 4\pi\epsilon_0} \frac{4\pi}{(2k \sin(\theta/2))^2} = -\frac{z Z e^2}{16\pi\epsilon_0 E \sin^2(\theta/2)}
+$$
 
 6. La sección diferencial es $\frac{d\sigma}{d\Omega} = |f(\theta)|^2$:
 
-   $$ \frac{d\sigma}{d\Omega} = \left( \frac{z Z e^2}{16\pi\epsilon_0 E} \right)^2 \frac{1}{\sin^4(\theta/2)} $$
+   
+
+$$
+\frac{d\sigma}{d\Omega} = \left( \frac{z Z e^2}{16\pi\epsilon_0 E} \right)^2 \frac{1}{\sin^4(\theta/2)}
+$$
 
    que coincide exactamente con el resultado clásico de Rutherford.
 
@@ -271,11 +337,19 @@ plt.show()
    **Contexto Matemático:** 
    La rigidez magnética del haz (magnetic rigidity), $B\rho$, define la relación entre el campo magnético $B$ y el radio de curvatura $\rho$ para una partícula de momento $p$ y carga $q$:
 
-   $$ B\rho = \frac{p}{q} $$
+   
+
+$$
+B\rho = \frac{p}{q}
+$$
 
    A velocidades ultra-relativistas, el momento se aproxima a $p \approx E/c$. En el LHC, para alcanzar una energía de colisión $E = 7 \text{ TeV}$ por haz, y con un radio en los arcos de $\rho \approx 2800 \text{ m}$, el campo magnético necesario es:
 
-   $$ B = \frac{7 \times 10^{12} \text{ eV}}{c \cdot 2800 \text{ m} \cdot e} \approx 8.33 \text{ T} $$
+   
+
+$$
+B = \frac{7 \times 10^{12} \text{ eV}}{c \cdot 2800 \text{ m} \cdot e} \approx 8.33 \text{ T}
+$$
 
    El artículo documenta teórica y experimentalmente cómo esta inmensa exigencia se alcanza operando cables de aleación Niobio-Titanio a temperaturas de superfluido ($1.9 \text{ K}$).
 
@@ -288,7 +362,11 @@ plt.show()
    **Contexto Matemático:** 
    La resolución del momento transversal, $\Delta p_T / p_T$, para una traza en un campo magnético homogéneo mide la precisión intrínseca del espectrómetro de trazas. Viene dada fenomenológicamente por:
 
-   $$ \frac{\Delta p_T}{p_T} = \frac{p_T \sigma_x}{0.3 B L^2} \sqrt{\frac{720}{N+4}} $$
+   
+
+$$
+\frac{\Delta p_T}{p_T} = \frac{p_T \sigma_x}{0.3 B L^2} \sqrt{\frac{720}{N+4}}
+$$
 
    donde $\sigma_x$ es la resolución espacial inherente al sensor (típicamente micrómetros), $L$ es la longitud efectiva de la trayectoria transversal dentro del campo magnético $B$, y $N$ es el número de puntos discretos medidos a lo largo de la traza. El artículo demuestra que maximizar $L$ (construyendo detectores inmensos como ATLAS) e incrementar $B$ son los métodos más críticos para minimizar la incertidumbre estadística y sistemática en colisiones de momentos extremadamente altos.
 

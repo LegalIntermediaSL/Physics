@@ -14,28 +14,38 @@ El magnetismo, a diferencia de la electrostática donde rigen las fuerzas conser
 ### 1. El Potencial Vector Magnético $\vec{A}$
 Debido a la inexistencia de los monopolos magnéticos, impuesta por la ley de divergencia nula $\nabla \cdot \vec{B} = 0$, el Teorema de Helmholtz dictamina que el campo magnético $\vec{B}$ debe ser puramente rotacional. Esto nos permite definir un Potencial Vector $\vec{A}$ tal que:
 
-$$ \vec{B} = \nabla \times \vec{A} $$
+$$
+\vec{B} = \nabla \times \vec{A}
+$$
 
 Esta definición no es única; $\vec{A}$ exhibe invarianza de *gauge* local. Si transformamos $\vec{A}' = \vec{A} + \nabla \Lambda$, para cualquier campo escalar $\Lambda$, el campo magnético $\vec{B}$ resultante no cambia ($\nabla \times \nabla \Lambda = \vec{0}$). Para la magnetostática, elegimos el *Gauge de Coulomb* ($\nabla \cdot \vec{A} = 0$).
 
 Bajo este *gauge*, aplicando la forma diferencial de la Ley de Ampère ($\nabla \times \vec{B} = \mu_0 \vec{J}$):
 
-$$ \nabla \times (\nabla \times \vec{A}) = \nabla (\nabla \cdot \vec{A}) - \nabla^2 \vec{A} = \mu_0 \vec{J} \implies \nabla^2 \vec{A} = -\mu_0 \vec{J} $$
+$$
+\nabla \times (\nabla \times \vec{A}) = \nabla (\nabla \cdot \vec{A}) - \nabla^2 \vec{A} = \mu_0 \vec{J} \implies \nabla^2 \vec{A} = -\mu_0 \vec{J}
+$$
 
 Obtenemos así tres ecuaciones de Poisson escalares, una para cada coordenada del potencial vector. Su solución formal, análoga al potencial eléctrico, en todo el espacio es:
 
-$$ \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi} \int \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|} d\tau' $$
+$$
+\vec{A}(\vec{r}) = \frac{\mu_0}{4\pi} \int \frac{\vec{J}(\vec{r}')}{|\vec{r} - \vec{r}'|} d\tau'
+$$
 
 Aplicando el operador rotacional $\nabla \times$ a esta expresión obtenemos la famosa **Ley de Biot-Savart**.
 
 ### 2. Fuerza de Lorentz y Trabajo Magnético
 La interacción electrodinámica está gobernada por la fuerza de Lorentz, la cual para una partícula puntual de carga $q$ viajando a velocidad $\vec{v}$ es:
 
-$$ \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) $$
+$$
+\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
+$$
 
 Un corolario profundamente importante surge de examinar el trabajo mecánico realizado *puramente* por el campo magnético sobre la carga:
 
-$$ dW_m = \vec{F}_m \cdot d\vec{l} = (q(\vec{v} \times \vec{B})) \cdot (\vec{v} \, dt) = q((\vec{v} \times \vec{B}) \cdot \vec{v}) \, dt = 0 $$
+$$
+dW_m = \vec{F}_m \cdot d\vec{l} = (q(\vec{v} \times \vec{B})) \cdot (\vec{v} \, dt) = q((\vec{v} \times \vec{B}) \cdot \vec{v}) \, dt = 0
+$$
 
 Dado que el producto vectorial $\vec{v} \times \vec{B}$ es ortogonal a $\vec{v}$, el trabajo es siempre nulo. **Las fuerzas magnéticas macroscópicas no pueden realizar trabajo sobre cargas libres**; solo pueden alterar la dirección de su momento, forzándolas a ejecutar órbitas ciclotrónicas sin cambiar su energía cinética.
 
@@ -43,15 +53,21 @@ Dado que el producto vectorial $\vec{v} \times \vec{B}$ es ortogonal a $\vec{v}$
 Al igual que en electrostática, podemos calcular el campo magnético lejano ($|\vec{r}| \gg |\vec{r}'|$) producido por una distribución localizada de corrientes. Expandiendo en serie el término de distancia $1/|\vec{r}-\vec{r}'|$ en la integral de $\vec{A}(\vec{r})$ obtenemos el **desarrollo multipolar magnético**.
 A diferencia del potencial eléctrico, el término "monopolar" (inverso de $r$) en magnetismo se anula completamente, porque la corriente neta estática debe ser cero. El término dominante a grandes distancias es siempre el **Término Dipolar**:
 
-$$ \vec{A}_{\text{dip}}(\vec{r}) = \frac{\mu_0}{4\pi} \frac{\vec{m} \times \hat{r}}{r^2} $$
+$$
+\vec{A}_{\text{dip}}(\vec{r}) = \frac{\mu_0}{4\pi} \frac{\vec{m} \times \hat{r}}{r^2}
+$$
 
 donde $\vec{m}$ es el **momento dipolar magnético**, que para una espira de área vectorial plana $\vec{a}$ y corriente constante $I$ resulta en:
 
-$$ \vec{m} = I \int d\vec{a} = I\vec{a} $$
+$$
+\vec{m} = I \int d\vec{a} = I\vec{a}
+$$
 
 El campo magnético resultante adopta la topología clásica del "imán de barra":
 
-$$ \vec{B}_{\text{dip}}(\vec{r}) = \frac{\mu_0}{4\pi r^3} \left[ 3(\vec{m} \cdot \hat{r})\hat{r} - \vec{m} \right] $$
+$$
+\vec{B}_{\text{dip}}(\vec{r}) = \frac{\mu_0}{4\pi r^3} \left[ 3(\vec{m} \cdot \hat{r})\hat{r} - \vec{m} \right]
+$$
 
 ### 4. Origen Relativista del Campo Magnético
 A nivel profundo, el campo magnético no existe de manera independiente. Si consideramos un hilo recto e infinito con densidad de carga $\lambda_0$ neta igual a cero (los portadores positivos están fijos y los negativos se mueven a velocidad $\vec{u}$), un observador en reposo experimenta una fuerza sobre una carga de prueba $q$ en movimiento (fuerza magnética). 
@@ -77,11 +93,15 @@ Cuando un campo externo $\vec{B}_{\text{ext}}$ afecta a la materia, induce aline
 Esta magnetización induce densidades de corriente de magnetización volumétrica $\vec{J}_b = \nabla \times \vec{M}$ y superficial $\vec{K}_b = \vec{M} \times \hat{n}$. 
 La forma macroscópica de las ecuaciones incorpora estas corrientes, dando origen al "Campo Auxiliar Magnético" $\vec{H}$:
 
-$$ \vec{H} \equiv \frac{\vec{B}}{\mu_0} - \vec{M} $$
+$$
+\vec{H} \equiv \frac{\vec{B}}{\mu_0} - \vec{M}
+$$
 
 Lo que nos brinda la Ley de Ampère Macroscópica para tratar solo con las corrientes libres $\vec{J}_f$ inyectadas en circuitos:
 
-$$ \nabla \times \vec{H} = \vec{J}_f \implies \oint \vec{H} \cdot d\vec{l} = I_{f_{\text{encerrada}}} $$
+$$
+\nabla \times \vec{H} = \vec{J}_f \implies \oint \vec{H} \cdot d\vec{l} = I_{f_{\text{encerrada}}}
+$$
 
 Para medios isotrópicos y lineales, la relación se cierra con la permeabilidad magnética $\mu$: $\vec{B} = \mu \vec{H} = \mu_0(1 + \chi_m)\vec{H}$, donde $\chi_m$ es la susceptibilidad magnética del medio.
 
@@ -96,16 +116,28 @@ Para medios isotrópicos y lineales, la relación se cierra con la permeabilidad
    Seleccionamos un bucle amperiano circular de radio $r$ centrado en el hilo. Por simetría, la magnitud de $\vec{B}$ es constante a lo largo de este bucle, y el vector $\vec{B}$ es tangente a la curva en cada punto.
 3. **Calcular la circulación:**
 
-   $$ \oint \vec{B} \cdot d\vec{l} = B \oint dl = B (2\pi r) $$
+   
+
+$$
+\oint \vec{B} \cdot d\vec{l} = B \oint dl = B (2\pi r)
+$$
 
 4. **Relacionar con la corriente:**
    La corriente encerrada por el bucle es $I$. Por lo tanto:
 
-   $$ B (2\pi r) = \mu_0 I $$
+   
+
+$$
+B (2\pi r) = \mu_0 I
+$$
 
 5. **Resultado final:**
 
-   $$ B = \frac{\mu_0 I}{2\pi r} $$
+   
+
+$$
+B = \frac{\mu_0 I}{2\pi r}
+$$
 
    La dirección se obtiene usando la regla de la mano derecha.
 
@@ -214,7 +246,9 @@ El tratamiento riguroso del magnetismo y de los potenciales magnéticos en varie
 
 De forma más avanzada, el campo magnético clásico es la curvatura de un fibrado principal $U(1)$ sobre el espaciotiempo. La existencia postulada de un monopolo magnético (de carga $g$) propuesto por Dirac implica que el fibrado magnético debe poseer una estructura topológica no trivial alrededor del polo. El cálculo del invariante de la primera clase de Chern para la esfera que rodea el monopolo, a través de la integración de la curvatura $\Omega = \frac{e}{\hbar} F$:
 
-$$ c_1 = \frac{1}{2\pi} \int_{S^2} \Omega = \frac{e}{\hbar c} \int_{S^2} \frac{g}{r^2} r^2 d\Omega = \frac{4\pi e g}{h c} = n \in \mathbb{Z} $$
+$$
+c_1 = \frac{1}{2\pi} \int_{S^2} \Omega = \frac{e}{\hbar c} \int_{S^2} \frac{g}{r^2} r^2 d\Omega = \frac{4\pi e g}{h c} = n \in \mathbb{Z}
+$$
 
 Esta condición puramente topológica ($c_1 \in \mathbb{Z}$) demuestra magistralmente la **Condición de Cuantización de Dirac**: si existe tan siquiera un solo monopolo magnético en todo el Universo, la carga eléctrica de toda la materia está obligada a estar cuantizada (como observamos de hecho en la naturaleza, en múltiplos de $e$), una de las deducciones matemáticas más profundas de la física teórica clásica de campos.
 
@@ -247,7 +281,11 @@ Esta condición puramente topológica ($c_1 \in \mathbb{Z}$) demuestra magistral
    - *Importancia Teórica*: Demostración física de que el magnetismo, en regímenes acoplados topológicos macroscópicos fríos oscuros puros BCS en tubos fríos cerrados amorfos de superconductividad ininterrumpida estática, exhibe naturaleza cuantizada y discontinua abstracta fraccionada y formal discontinua discreta en peldaños y paquetes (Quantum Fluxes / Fluxones), delatando la emergencia acoplada coherente de variables conjuntas formales pares de Cooper a nivel universal e interestelar.
    - *Contexto Matemático*: Un anillo conductor puro $R = 0$ acoplado no disipativo que atrapa flujo retentivo remanente al enfriarse al cero debe poseer en su interior funcional rotacional una integral limitante del campo potencial subyacente magnético y un momento cruzado escalar que equivalga formal y cíclicamente a un factor del ángulo subatómico complejo integral exacto perimetral nulo cerrado analítico abstracto:
 
-     $$ \Phi_B = \oint \vec{A} \cdot d\vec{l} = n \left(\frac{h}{2e}\right) = n \, \Phi_0 $$
+     
+
+$$
+\Phi_B = \oint \vec{A} \cdot d\vec{l} = n \left(\frac{h}{2e}\right) = n \, \Phi_0
+$$
 
    - *Implicaciones*: Este "quantum magnético universal" $\Phi_0 = 2.067 \times 10^{-15} \text{ Wb}$ se halla y existe puro diseminado en infinitas áreas de física computacional de vórtices y estados excitados condensados magnéticos (SQUIDs detectando nano-corrientes del córtex neuronal médico), así como detectando singularidades exóticas, y depara formalizando abstracciones matemáticas cuánticas y magnéticas de entrelazamientos.
 

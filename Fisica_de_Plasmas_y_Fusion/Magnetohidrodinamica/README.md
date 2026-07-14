@@ -16,26 +16,42 @@ El modelo ideal asume que el plasma no tiene resistividad ($\eta = 0$), viscosid
 
 1. **Ecuación de Continuidad de Masa:**
 
-   $$ \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0 $$
+   
+
+$$
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0
+$$
 
    donde $\rho$ es la densidad de masa fluida y $\mathbf{v}$ la velocidad fluida centro de masa.
 
 2. **Ecuación de Momento (Navier-Stokes con fuerza de Lorentz):**
 
-   $$ \rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} \right) = -\nabla p + \mathbf{J} \times \mathbf{B} $$
+   
+
+$$
+\rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} \right) = -\nabla p + \mathbf{J} \times \mathbf{B}
+$$
 
    donde $p$ es la presión térmica, $\mathbf{J}$ es la densidad de corriente y $\mathbf{B}$ el campo magnético.
 
 3. **Ecuación de Estado (Termodinámica adiabática):**
 
-   $$ \frac{d}{dt} \left( \frac{p}{\rho^\gamma} \right) = 0 $$
+   
+
+$$
+\frac{d}{dt} \left( \frac{p}{\rho^\gamma} \right) = 0
+$$
 
    con $\gamma = 5/3$ para un gas monoatómico 3D.
 
 4. **Ley de Ohm Ideal:**
    En el referencial que se mueve con la velocidad del fluido $\mathbf{v}$, el campo eléctrico efectivo $\mathbf{E}'$ es nulo debido a la conductividad infinita ($\mathbf{J} = \sigma \mathbf{E}' \to \infty \implies \mathbf{E}' = 0$). Transformando al referencial de laboratorio:
 
-   $$ \mathbf{E} + \mathbf{v} \times \mathbf{B} = 0 $$
+   
+
+$$
+\mathbf{E} + \mathbf{v} \times \mathbf{B} = 0
+$$
 
 5. **Ecuaciones de Maxwell de baja frecuencia:**
    - Ley de Faraday: $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$
@@ -46,28 +62,38 @@ El modelo ideal asume que el plasma no tiene resistividad ($\eta = 0$), viscosid
 
 Sustituyendo la Ley de Ampère en la fuerza de Lorentz, expresamos la fuerza magnética íntegramente en términos del campo magnético:
 
-$$ \mathbf{F}_{mag} = \mathbf{J} \times \mathbf{B} = \frac{1}{\mu_0} (\nabla \times \mathbf{B}) \times \mathbf{B} $$
+$$
+\mathbf{F}_{mag} = \mathbf{J} \times \mathbf{B} = \frac{1}{\mu_0} (\nabla \times \mathbf{B}) \times \mathbf{B}
+$$
 
 Utilizando la identidad vectorial $(\nabla \times \mathbf{B}) \times \mathbf{B} = (\mathbf{B} \cdot \nabla)\mathbf{B} - \frac{1}{2} \nabla B^2$:
 
-$$ \mathbf{J} \times \mathbf{B} = -\nabla\left(\frac{B^2}{2\mu_0}\right) + \frac{1}{\mu_0}(\mathbf{B} \cdot \nabla)\mathbf{B} $$
+$$
+\mathbf{J} \times \mathbf{B} = -\nabla\left(\frac{B^2}{2\mu_0}\right) + \frac{1}{\mu_0}(\mathbf{B} \cdot \nabla)\mathbf{B}
+$$
 
 El primer término representa el gradiente de la **Presión Magnética** ($p_{mag} = \frac{B^2}{2\mu_0}$). El campo magnético ejerce una presión isotrópica sobre el plasma.
 El segundo término representa la **Tensión Magnética**. Las líneas de campo actúan como cuerdas elásticas con tensión $\frac{B^2}{\mu_0}$, que intentan acortarse a lo largo de su propia dirección, enderezándose.
 
 La ecuación de momento fluido puede reescribirse usando el tensor de esfuerzos de Maxwell modificado $\mathbb{T}$:
 
-$$ \rho \frac{d\mathbf{v}}{dt} = -\nabla \left( p + \frac{B^2}{2\mu_0} \right) + \nabla \cdot \left( \frac{\mathbf{B}\mathbf{B}}{\mu_0} \right) $$
+$$
+\rho \frac{d\mathbf{v}}{dt} = -\nabla \left( p + \frac{B^2}{2\mu_0} \right) + \nabla \cdot \left( \frac{\mathbf{B}\mathbf{B}}{\mu_0} \right)
+$$
 
 ### 3. Teorema de Alfvén: Congelamiento de Flujo
 
 Tomando el rotacional a la Ley de Ohm Ideal e insertando la Ley de Faraday, obtenemos la **Ecuación de Inducción Magnética**:
 
-$$ \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{v} \times \mathbf{B}) $$
+$$
+\frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{v} \times \mathbf{B})
+$$
 
 Esta ecuación tiene una interpretación geométrica profunda: el flujo magnético $\Phi_B = \int \mathbf{B} \cdot d\mathbf{S}$ a través de cualquier contorno fluido cerrado (una "goma" atada a las partículas del fluido) es constante en el tiempo. 
 
-$$ \frac{d\Phi_B}{dt} = \int \left( \frac{\partial \mathbf{B}}{\partial t} - \nabla \times (\mathbf{v} \times \mathbf{B}) \right) \cdot d\mathbf{S} = 0 $$
+$$
+\frac{d\Phi_B}{dt} = \int \left( \frac{\partial \mathbf{B}}{\partial t} - \nabla \times (\mathbf{v} \times \mathbf{B}) \right) \cdot d\mathbf{S} = 0
+$$
 
 Este es el **Teorema de Alfvén**. Significa que la topología del campo magnético es inmutable en MHD ideal. Las líneas de campo están "congeladas" en el plasma y se arrastran con el flujo. Si dos líneas de campo no se cruzan en $t=0$, nunca se cruzarán.
 
@@ -118,36 +144,78 @@ Calcule la velocidad del sonido, la velocidad de Alfvén y determine la velocida
 
 2. **Cálculo de la densidad de masa ($\rho$) y la presión térmica ($p$):**
 
-   $$ \rho \approx n m_p = (10^8)(1.67 \times 10^{-27}) = 1.67 \times 10^{-19} \, \text{kg/m}^3 $$
+   
 
-   $$ p = 2 n k_B T $$ 
+$$
+\rho \approx n m_p = (10^8)(1.67 \times 10^{-27}) = 1.67 \times 10^{-19} \, \text{kg/m}^3
+$$
+
+   
+
+$$
+p = 2 n k_B T
+$$
+
+ 
 
    (El factor 2 asume contribución de electrones e iones en un plasma totalmente ionizado)
 
-   $$ p = 2 (10^8) (1.38 \times 10^{-23}) (10^4) = 2.76 \times 10^{-11} \, \text{Pa} $$
+   
+
+$$
+p = 2 (10^8) (1.38 \times 10^{-23}) (10^4) = 2.76 \times 10^{-11} \, \text{Pa}
+$$
 
 3. **Cálculo de la Velocidad del Sonido ($v_s$):**
 
-   $$ v_s = \sqrt{\frac{\gamma p}{\rho}} = \sqrt{\frac{(5/3)(2.76 \times 10^{-11})}{1.67 \times 10^{-19}}} $$
+   
 
-   $$ v_s = \sqrt{\frac{4.6 \times 10^{-11}}{1.67 \times 10^{-19}}} = \sqrt{2.75 \times 10^8} \approx 16580 \, \text{m/s} = 16.58 \, \text{km/s} $$
+$$
+v_s = \sqrt{\frac{\gamma p}{\rho}} = \sqrt{\frac{(5/3)(2.76 \times 10^{-11})}{1.67 \times 10^{-19}}}
+$$
+
+   
+
+$$
+v_s = \sqrt{\frac{4.6 \times 10^{-11}}{1.67 \times 10^{-19}}} = \sqrt{2.75 \times 10^8} \approx 16580 \, \text{m/s} = 16.58 \, \text{km/s}
+$$
 
 4. **Cálculo de la Velocidad de Alfvén ($v_A$):**
 
-   $$ v_A = \frac{B_0}{\sqrt{\mu_0 \rho}} $$
+   
 
-   $$ \mu_0 \rho = (4\pi \times 10^{-7}) (1.67 \times 10^{-19}) = 2.098 \times 10^{-25} \, \text{kg/m}^4 $$
+$$
+v_A = \frac{B_0}{\sqrt{\mu_0 \rho}}
+$$
 
-   $$ v_A = \frac{3 \times 10^{-10}}{\sqrt{2.098 \times 10^{-25}}} = \frac{3 \times 10^{-10}}{4.58 \times 10^{-13}} \approx 655000 \, \text{m/s} = 655 \, \text{km/s} $$
+   
+
+$$
+\mu_0 \rho = (4\pi \times 10^{-7}) (1.67 \times 10^{-19}) = 2.098 \times 10^{-25} \, \text{kg/m}^4
+$$
+
+   
+
+$$
+v_A = \frac{3 \times 10^{-10}}{\sqrt{2.098 \times 10^{-25}}} = \frac{3 \times 10^{-10}}{4.58 \times 10^{-13}} \approx 655000 \, \text{m/s} = 655 \, \text{km/s}
+$$
 
 5. **Velocidad de la Onda Magnetosónica Rápida Perpendicular ($v_f$):**
    Para propagación perpendicular ($\mathbf{k} \perp \mathbf{B}_0$), la velocidad de fase al cuadrado es la suma de los cuadrados:
 
-   $$ v_f = \sqrt{v_s^2 + v_A^2} $$
+   
+
+$$
+v_f = \sqrt{v_s^2 + v_A^2}
+$$
 
    Como $v_A \gg v_s$ (el plasma está dominado por la presión magnética, $\beta \ll 1$), podemos predecir que será cercana a $v_A$:
 
-   $$ v_f = \sqrt{(1.658 \times 10^4)^2 + (6.55 \times 10^5)^2} = \sqrt{2.75 \times 10^8 + 4.29 \times 10^{11}} \approx \sqrt{4.29 \times 10^{11}} \approx 655 \, \text{km/s} $$
+   
+
+$$
+v_f = \sqrt{(1.658 \times 10^4)^2 + (6.55 \times 10^5)^2} = \sqrt{2.75 \times 10^8 + 4.29 \times 10^{11}} \approx \sqrt{4.29 \times 10^{11}} \approx 655 \, \text{km/s}
+$$
 
 **Conclusión:** En el medio interestelar tenue con un campo magnético de $3\,\mu\text{G}$, las ondas compresionales magnéticas viajan a inmensas velocidades supersónicas, con la dinámica dictada puramente por la tensión magnética del campo galáctico ($v_f \approx v_A = 655 \, \text{km/s}$).
 
@@ -161,30 +229,42 @@ Consideremos una capa de corriente plana de longitud $2L$ y grosor $2\delta$ ($\
 1. Conservación de masa en estado estacionario (fluido incompresible):
 El flujo que entra transversalmente debe igualar al que sale longitudinalmente:
 
-$$ v_{in} L \approx v_{out} \delta $$
+$$
+v_{in} L \approx v_{out} \delta
+$$
 
 2. Aceleración magnética longitudinal:
 El plasma es eyectado a lo largo de la capa por la fuerza de tensión magnética. La velocidad de salida es el límite de la velocidad de Alfvén basada en el campo magnético entrante $B_{in}$:
 
-$$ v_{out} \approx v_A = \frac{B_{in}}{\sqrt{\mu_0 \rho}} $$
+$$
+v_{out} \approx v_A = \frac{B_{in}}{\sqrt{\mu_0 \rho}}
+$$
 
 3. Ley de inducción y difusión electromagnética:
 En la región de reconexión constante, el flujo convectivo de las líneas entrantes está equilibrado por la difusión resistiva a través de la capa estrecha:
 
-$$ v_{in} B_{in} \approx \eta \mu_0 J $$
+$$
+v_{in} B_{in} \approx \eta \mu_0 J
+$$
 
 Por la ley de Ampère $J \approx B_{in} / (\mu_0 \delta)$, entonces:
 
-$$ v_{in} \approx \frac{\eta}{\delta} $$
+$$
+v_{in} \approx \frac{\eta}{\delta}
+$$
 
 4. Resolviendo el sistema:
 Sustituyendo $\delta$ de la ecuación de masa $\delta \approx L (v_{in} / v_A)$ en la ecuación de difusión:
 
-$$ v_{in} \approx \frac{\eta}{L (v_{in}/v_A)} \implies v_{in}^2 \approx \frac{\eta v_A}{L} $$
+$$
+v_{in} \approx \frac{\eta}{L (v_{in}/v_A)} \implies v_{in}^2 \approx \frac{\eta v_A}{L}
+$$
 
 Dividiendo por $v_A^2$:
 
-$$ \left( \frac{v_{in}}{v_A} \right)^2 \approx \frac{\eta}{L v_A} = \frac{1}{S} \implies M_A = \frac{v_{in}}{v_A} \approx S^{-1/2} $$
+$$
+\left( \frac{v_{in}}{v_A} \right)^2 \approx \frac{\eta}{L v_A} = \frac{1}{S} \implies M_A = \frac{v_{in}}{v_A} \approx S^{-1/2}
+$$
 
 El parámetro adimensional $M_A$ es la tasa de reconexión magnética, escalando como el inverso de la raíz cuadrada del número de Lundquist $S$. En plasmas astrofísicos reales, $S$ es gigantesco ($\sim 10^{12}$), produciendo reconexiones extremadamente lentas que no logran explicar las fulguraciones solares explosivas; este es el defecto capital de Sweet-Parker resuelto posteriormente por modelos de reconexión rápida (ej. Petschek o turbulenta).
 
@@ -194,23 +274,35 @@ Un cilindro de plasma infinito conduce una corriente axial total $I_0$ con un pe
 **Solución paso a paso:**
 En un sistema Z-pinch, la ecuación de equilibrio radial MHD asume dependencia nula en $\theta$ y $z$, dejando solo la componente radial de la fuerza:
 
-$$ \frac{dp}{dr} = (\mathbf{J} \times \mathbf{B})_r = -J_z B_\theta $$
+$$
+\frac{dp}{dr} = (\mathbf{J} \times \mathbf{B})_r = -J_z B_\theta
+$$
 
 Primero calculamos el campo magnético mediante Ampère en $r \le a$:
 
-$$ \oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_{encl} \implies 2\pi r B_\theta(r) = \mu_0 (J_z \pi r^2) $$
+$$
+\oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_{encl} \implies 2\pi r B_\theta(r) = \mu_0 (J_z \pi r^2)
+$$
 
-$$ B_\theta(r) = \frac{\mu_0 J_z r}{2} = \frac{\mu_0 I_0 r}{2\pi a^2} $$
+$$
+B_\theta(r) = \frac{\mu_0 J_z r}{2} = \frac{\mu_0 I_0 r}{2\pi a^2}
+$$
 
 Sustituyendo en la ecuación de fuerza:
 
-$$ \frac{dp}{dr} = - \left( \frac{I_0}{\pi a^2} \right) \left( \frac{\mu_0 I_0 r}{2\pi a^2} \right) = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} r $$
+$$
+\frac{dp}{dr} = - \left( \frac{I_0}{\pi a^2} \right) \left( \frac{\mu_0 I_0 r}{2\pi a^2} \right) = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} r
+$$
 
 Integramos desde el borde $r=a$ donde la presión es nula hasta un radio $r$:
 
-$$ \int_{0}^{p(r)} dp' = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} \int_{a}^{r} r' dr' $$
+$$
+\int_{0}^{p(r)} dp' = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} \int_{a}^{r} r' dr'
+$$
 
-$$ p(r) = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} \left[ \frac{r^2}{2} - \frac{a^2}{2} \right] = \frac{\mu_0 I_0^2}{4\pi^2 a^4} (a^2 - r^2) $$
+$$
+p(r) = - \frac{\mu_0 I_0^2}{2\pi^2 a^4} \left[ \frac{r^2}{2} - \frac{a^2}{2} \right] = \frac{\mu_0 I_0^2}{4\pi^2 a^4} (a^2 - r^2)
+$$
 
 El perfil de presión exhibe un máximo en el centro del cordón del plasma, dictado completamente por la fuerza autoconstrictiva de su propia corriente inducida magnéticamente (efecto Pinch). 
 
@@ -220,24 +312,34 @@ Demuestre de la ecuación MHD ideal linealizada que para ondas puras de Alfvén 
 **Solución paso a paso:**
 Para una perturbación de onda plana $\mathbf{v}_1 = \mathbf{v}_0 e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}$ con un campo magnético estático uniforme $\mathbf{B}_0 \parallel \mathbf{k}$, la ecuación lineal de inducción es:
 
-$$ \frac{\partial \mathbf{B}_1}{\partial t} = \nabla \times (\mathbf{v}_1 \times \mathbf{B}_0) $$
+$$
+\frac{\partial \mathbf{B}_1}{\partial t} = \nabla \times (\mathbf{v}_1 \times \mathbf{B}_0)
+$$
 
 En espacio de Fourier ($\partial_t \to -i\omega$, $\nabla \to i\mathbf{k}$):
 
-$$ -i\omega \mathbf{B}_1 = i\mathbf{k} \times (\mathbf{v}_1 \times \mathbf{B}_0) $$
+$$
+-i\omega \mathbf{B}_1 = i\mathbf{k} \times (\mathbf{v}_1 \times \mathbf{B}_0)
+$$
 
 Usando la identidad vectorial del doble producto cruz $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = \mathbf{B}(\mathbf{A} \cdot \mathbf{C}) - \mathbf{C}(\mathbf{A} \cdot \mathbf{B})$:
 
-$$ -i\omega \mathbf{B}_1 = i [ \mathbf{v}_1(\mathbf{k} \cdot \mathbf{B}_0) - \mathbf{B}_0(\mathbf{k} \cdot \mathbf{v}_1) ] $$
+$$
+-i\omega \mathbf{B}_1 = i [ \mathbf{v}_1(\mathbf{k} \cdot \mathbf{B}_0) - \mathbf{B}_0(\mathbf{k} \cdot \mathbf{v}_1) ]
+$$
 
 Dado que el modo de Alfvén es puramente de corte y transversal, la perturbación de velocidad $\mathbf{v}_1$ es perpendicular a la dirección de propagación ($\mathbf{k} \cdot \mathbf{v}_1 = 0$). Además, $\mathbf{k}$ es paralelo a $\mathbf{B}_0$, de modo que $\mathbf{k} \cdot \mathbf{B}_0 = k B_0$.
 Sustituyendo esto:
 
-$$ -\omega \mathbf{B}_1 = (k B_0) \mathbf{v}_1 $$
+$$
+-\omega \mathbf{B}_1 = (k B_0) \mathbf{v}_1
+$$
 
 Dado que para Alfvén puros la relación de dispersión es $\omega = k v_A = k \frac{B_0}{\sqrt{\mu_0 \rho}}$, reemplazamos:
 
-$$ - (k v_A) \mathbf{B}_1 = k B_0 \mathbf{v}_1 \implies \mathbf{v}_1 = - \frac{v_A}{B_0} \mathbf{B}_1 $$
+$$
+- (k v_A) \mathbf{B}_1 = k B_0 \mathbf{v}_1 \implies \mathbf{v}_1 = - \frac{v_A}{B_0} \mathbf{B}_1
+$$
 
 Esto revela que la fluctuación vectorial del campo magnético y la velocidad de los elementos fluidos son estrictamente proporcionales y en contrafase a nivel local. Las partículas fluidas arrastran la línea del campo perpendicularmente en sincronía perfecta sin deslizarse lateralmente, validando el postulado del Teorema de Alfvén dentro del límite macroscópico oscilatorio.
 
@@ -313,18 +415,24 @@ El marco de la MHD trasciende el análisis vectorial ordinario para adentrarse e
 La conservación de la helicidad magnética $H_M = \int \mathbf{A} \cdot \mathbf{B} \, d^3x$ (donde $\mathbf{B} = \nabla \times \mathbf{A}$) representa el número de entrelazamientos o "nudos" (linkages) de las líneas de flujo de campo magnético.
 De acuerdo con la hipótesis de relajación de Taylor (MHD de Taylor), un plasma altamente turbulento que conserve la helicidad disipará su energía magnética buscando el estado de energía mínima (Beltrami flow), conduciendo a una configuración "libre de fuerza" (Force-Free):
 
-$$ \nabla \times \mathbf{B} = \lambda \mathbf{B} $$
+$$
+\nabla \times \mathbf{B} = \lambda \mathbf{B}
+$$
 
 donde $\lambda$ es un autovalor constante sobre el dominio.
 
 **Inestabilidades de MHD Ideal (Análisis Espectral de Autovalores):**
 La estabilidad en MHD ideal reduce a analizar el operador autoadjunto de fuerzas de volumen (operador de desplazamiento de Bernstein $\mathbf{F}(\boldsymbol{\xi})$) obtenido por una perturbación lineal lagrangiana $\boldsymbol{\xi}(\mathbf{r})$:
 
-$$ \rho \omega^2 \boldsymbol{\xi} = \mathbf{F}(\boldsymbol{\xi}) $$
+$$
+\rho \omega^2 \boldsymbol{\xi} = \mathbf{F}(\boldsymbol{\xi})
+$$
 
 El principio de energía de la MHD ($\delta W$) permite demostrar la estabilidad (o no) basándose únicamente en la forma variacional:
 
-$$ \delta W = -\frac{1}{2} \int \boldsymbol{\xi}^* \cdot \mathbf{F}(\boldsymbol{\xi}) d^3r > 0 $$
+$$
+\delta W = -\frac{1}{2} \int \boldsymbol{\xi}^* \cdot \mathbf{F}(\boldsymbol{\xi}) d^3r > 0
+$$
 
 Este formalismo variacional (teorema extendido de Newcomb) es la base para diseñar perfiles de confinamiento magnético seguros contra grandes erupciones macroscópicas.
 
@@ -347,11 +455,19 @@ Este formalismo variacional (teorema extendido de Newcomb) es la base para dise�
    **Contexto Matemático:** 
    Combinando las ecuaciones de Maxwell de baja frecuencia con la ecuación de Euler de un fluido incompresible infinitamente conductor, Alfvén linealizó el sistema y encontró que una pequeña perturbación magnética $\mathbf{b}$ y la velocidad del fluido $\mathbf{v}$ satisfacen la ecuación de onda clásica de d'Alembert:
 
-   $$ \frac{\partial^2 \mathbf{b}}{\partial t^2} = \frac{B_0^2}{\mu_0 \rho} \frac{\partial^2 \mathbf{b}}{\partial z^2} $$
+   
+
+$$
+\frac{\partial^2 \mathbf{b}}{\partial t^2} = \frac{B_0^2}{\mu_0 \rho} \frac{\partial^2 \mathbf{b}}{\partial z^2}
+$$
 
    Donde la velocidad de propagación de la perturbación (ahora conocida como Velocidad de Alfvén) es:
 
-   $$ v_A = \frac{B_0}{\sqrt{\mu_0 \rho}} $$
+   
+
+$$
+v_A = \frac{B_0}{\sqrt{\mu_0 \rho}}
+$$
 
    Físicamente, demostró que el campo magnético actúa exactamente como cuerdas de un instrumento musical provistas de una tensión magnética ($B_0^2/\mu_0$) sobrecargada por la inercia de masa de las partículas atadas al campo ($\rho$), posibilitando oscilaciones transversales.
 
@@ -364,7 +480,11 @@ Este formalismo variacional (teorema extendido de Newcomb) es la base para dise�
    **Contexto Matemático:** 
    Parker analizó el balance estacionario entre la convección de flujo magnético hacia una hoja de corriente y la disipación resistiva dentro de ella. Usando leyes de conservación de masa incompresible ($v_{in} L \approx v_{out} \delta$) y la ley de Ohm resistiva ($\mathbf{E} + \mathbf{v} \times \mathbf{B} = \eta \mathbf{J}$), derivó la tasa de reconexión adimensional dependiente de la resistividad magnética $\eta$:
 
-   $$ M_A = \frac{v_{in}}{v_A} \approx \sqrt{\frac{\eta}{L v_A}} = S^{-1/2} $$
+   
+
+$$
+M_A = \frac{v_{in}}{v_A} \approx \sqrt{\frac{\eta}{L v_A}} = S^{-1/2}
+$$
 
    Donde $S$ es el Número de Lundquist. Este artículo es vital porque, al exponer la dependencia en $S^{-1/2}$, Parker probó que la reconexión colisional es excesivamente lenta en plasmas astrofísicos reales (donde $S \gg 1$), propiciando subsecuentemente más de 60 años de investigación en modelos de reconexión rápida (como colisiones cinéticas e inestabilidades tipo Hall).
 

@@ -42,7 +42,9 @@ La propiedad de autoadjunto asegura que $\hat{A} = \hat{A}^\dagger$, lo cual tie
 
 **Postulado de la Medición (Colapso):** Al medir el observable $\hat{A}$ en el estado $|\psi\rangle$, la probabilidad de obtener el valor $a_n$ es:
 
-$$ P(a_n) = |c_n|^2 = |\langle a_n | \psi \rangle|^2 $$
+$$
+P(a_n) = |c_n|^2 = |\langle a_n | \psi \rangle|^2
+$$
 
 Y tras la medición, el estado "colapsa" abruptamente al autoestado correspondiente $|a_n\rangle$.
 
@@ -50,7 +52,9 @@ Y tras la medición, el estado "colapsa" abruptamente al autoestado correspondie
 
 Dos operadores $\hat{A}$ y $\hat{B}$ pueden o no conmutar. Definimos el conmutador como:
 
-$$ [\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A} $$
+$$
+[\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}
+$$
 
 **Teorema de operadores simultáneos:** Dos observables $\hat{A}$ y $\hat{B}$ admiten una base común de autovectores (son simultáneamente diagonalizables) si y solo si su conmutador es nulo ($[\hat{A}, \hat{B}] = 0$). Físicamente, esto implica que se pueden medir simultáneamente sin incertidumbre recíproca.
 
@@ -60,25 +64,37 @@ Para dos observables que no conmutan, existe una restricción fundamental. Defin
 
 Consideremos un estado auxiliar:
 
-$$ |f\rangle = \left(\Delta\hat{A} + i\lambda \Delta\hat{B}\right)|\psi\rangle $$
+$$
+|f\rangle = \left(\Delta\hat{A} + i\lambda \Delta\hat{B}\right)|\psi\rangle
+$$
 
 Para cualquier $\lambda$ real, la norma de $|f\rangle$ debe ser no negativa $\langle f | f \rangle \ge 0$:
 
-$$ \langle \psi | (\Delta\hat{A} - i\lambda \Delta\hat{B})(\Delta\hat{A} + i\lambda \Delta\hat{B}) | \psi \rangle \ge 0 $$
+$$
+\langle \psi | (\Delta\hat{A} - i\lambda \Delta\hat{B})(\Delta\hat{A} + i\lambda \Delta\hat{B}) | \psi \rangle \ge 0
+$$
 
 Desarrollando los términos:
 
-$$ \langle (\Delta\hat{A})^2 \rangle + \lambda^2 \langle (\Delta\hat{B})^2 \rangle + i\lambda \langle [\Delta\hat{A}, \Delta\hat{B}] \rangle \ge 0 $$
+$$
+\langle (\Delta\hat{A})^2 \rangle + \lambda^2 \langle (\Delta\hat{B})^2 \rangle + i\lambda \langle [\Delta\hat{A}, \Delta\hat{B}] \rangle \ge 0
+$$
 
-$$ (\sigma_A)^2 + \lambda^2 (\sigma_B)^2 + i\lambda \langle [\hat{A}, \hat{B}] \rangle \ge 0 $$
+$$
+(\sigma_A)^2 + \lambda^2 (\sigma_B)^2 + i\lambda \langle [\hat{A}, \hat{B}] \rangle \ge 0
+$$
 
 Notemos que el valor esperado del conmutador de operadores hermitianos es imaginario puro, por lo que $i\langle [\hat{A}, \hat{B}] \rangle$ es real. Para que esta ecuación cuadrática en $\lambda$ sea siempre positiva, su discriminante debe ser menor o igual a cero:
 
-$$ \left(i\langle [\hat{A}, \hat{B}] \rangle\right)^2 - 4(\sigma_A)^2(\sigma_B)^2 \le 0 $$
+$$
+\left(i\langle [\hat{A}, \hat{B}] \rangle\right)^2 - 4(\sigma_A)^2(\sigma_B)^2 \le 0
+$$
 
 Lo que nos lleva al **Principio de Incertidumbre de Robertson-Schrödinger**:
 
-$$ \sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right| $$
+$$
+\sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right|
+$$
 
 ---
 
@@ -88,26 +104,36 @@ $$ \sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \
 **Solución paso a paso:**
 1. Partimos del Principio de Incertidumbre Generalizado para dos observables arbitrarios $\hat{A}$ y $\hat{B}$:
 
-$$ \sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right| $$
+$$
+\sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right|
+$$
 
 2. Sustituimos $\hat{A} = \hat{x}$ (operador posición) y $\hat{B} = \hat{p}$ (operador momento). 
 En la base de coordenadas, $\hat{x} = x$ y $\hat{p} = -i\hbar \frac{\partial}{\partial x}$.
 3. Evaluamos la relación de conmutación $[\hat{x}, \hat{p}]$. Aplicada a una función de prueba $\psi(x)$:
 
-$$ [\hat{x}, \hat{p}]\psi = (\hat{x}\hat{p} - \hat{p}\hat{x})\psi = x \left(-i\hbar \frac{\partial \psi}{\partial x}\right) - \left(-i\hbar \frac{\partial}{\partial x}(x\psi)\right) $$
+$$
+[\hat{x}, \hat{p}]\psi = (\hat{x}\hat{p} - \hat{p}\hat{x})\psi = x \left(-i\hbar \frac{\partial \psi}{\partial x}\right) - \left(-i\hbar \frac{\partial}{\partial x}(x\psi)\right)
+$$
 
 Aplicando la regla del producto en el segundo término:
 
-$$ = -i\hbar x \frac{\partial \psi}{\partial x} + i\hbar \left( \psi + x\frac{\partial \psi}{\partial x} \right) = i\hbar \psi $$
+$$
+= -i\hbar x \frac{\partial \psi}{\partial x} + i\hbar \left( \psi + x\frac{\partial \psi}{\partial x} \right) = i\hbar \psi
+$$
 
 Por lo tanto, operativamente: $[\hat{x}, \hat{p}] = i\hbar$.
 4. Sustituimos este conmutador en la desigualdad general:
 
-$$ \sigma_x \sigma_p \ge \frac{1}{2} \left| \langle i\hbar \rangle \right| $$
+$$
+\sigma_x \sigma_p \ge \frac{1}{2} \left| \langle i\hbar \rangle \right|
+$$
 
 5. Como el valor esperado de una constante es la constante misma, $\langle i\hbar \rangle = i\hbar$, y su módulo es $|i\hbar| = \hbar$.
 
-$$ \sigma_x \sigma_p \ge \frac{\hbar}{2} $$
+$$
+\sigma_x \sigma_p \ge \frac{\hbar}{2}
+$$
 
 ¡Queda demostrado el famoso principio de incertidumbre!
 
@@ -120,16 +146,22 @@ Demuestra que el operador $\hat{T}(a) = \exp(-i\hat{p}a/\hbar)$ actúa como un o
 **Solución paso a paso:**
 1. Escribimos la acción del operador sobre una función $\psi(x)$ usando su expansión en serie de Taylor:
 
-$$ \hat{T}(a) = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{-ia}{\hbar} \right)^n \hat{p}^n $$
+$$
+\hat{T}(a) = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{-ia}{\hbar} \right)^n \hat{p}^n
+$$
 
 2. En la base de posiciones, el operador momento es $\hat{p} = -i\hbar \frac{\partial}{\partial x}$.
 3. Sustituyendo $\hat{p}$ en la serie:
 
-$$ \hat{T}(a) = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{-ia}{\hbar} \right)^n \left(-i\hbar \frac{\partial}{\partial x}\right)^n = \sum_{n=0}^{\infty} \frac{(-a)^n}{n!} \frac{\partial^n}{\partial x^n} $$
+$$
+\hat{T}(a) = \sum_{n=0}^{\infty} \frac{1}{n!} \left( \frac{-ia}{\hbar} \right)^n \left(-i\hbar \frac{\partial}{\partial x}\right)^n = \sum_{n=0}^{\infty} \frac{(-a)^n}{n!} \frac{\partial^n}{\partial x^n}
+$$
 
 4. Aplicamos el operador a la función de onda $\psi(x)$:
 
-$$ \hat{T}(a)\psi(x) = \sum_{n=0}^{\infty} \frac{(-a)^n}{n!} \frac{\partial^n \psi}{\partial x^n} $$
+$$
+\hat{T}(a)\psi(x) = \sum_{n=0}^{\infty} \frac{(-a)^n}{n!} \frac{\partial^n \psi}{\partial x^n}
+$$
 
 5. Esta es exactamente la serie de Taylor para $\psi(x - a)$. Por lo tanto, $\hat{T}(a)\psi(x) = \psi(x - a)$, demostrando que es el generador de las traslaciones espaciales.
 
@@ -140,14 +172,20 @@ Dados los operadores de momento angular $\hat{L}_i = \epsilon_{ijk} \hat{x}_j \h
 2. Calculamos el conmutador: $[\hat{L}_x, \hat{L}_y] = [\hat{y}\hat{p}_z - \hat{z}\hat{p}_y, \hat{z}\hat{p}_x - \hat{x}\hat{p}_z]$.
 3. Usando la linealidad del conmutador:
 
-$$ [\hat{L}_x, \hat{L}_y] = [\hat{y}\hat{p}_z, \hat{z}\hat{p}_x] - [\hat{y}\hat{p}_z, \hat{x}\hat{p}_z] - [\hat{z}\hat{p}_y, \hat{z}\hat{p}_x] + [\hat{z}\hat{p}_y, \hat{x}\hat{p}_z] $$
+$$
+[\hat{L}_x, \hat{L}_y] = [\hat{y}\hat{p}_z, \hat{z}\hat{p}_x] - [\hat{y}\hat{p}_z, \hat{x}\hat{p}_z] - [\hat{z}\hat{p}_y, \hat{z}\hat{p}_x] + [\hat{z}\hat{p}_y, \hat{x}\hat{p}_z]
+$$
 
 4. Como operadores de diferentes ejes conmutan, los términos centrales se anulan: $[\hat{y}\hat{p}_z, \hat{x}\hat{p}_z] = 0$ y $[\hat{z}\hat{p}_y, \hat{z}\hat{p}_x] = 0$.
 5. Los términos no nulos son:
 
-$$ [\hat{y}\hat{p}_z, \hat{z}\hat{p}_x] = \hat{y}\hat{p}_x [\hat{p}_z, \hat{z}] = \hat{y}\hat{p}_x (-i\hbar) $$
+$$
+[\hat{y}\hat{p}_z, \hat{z}\hat{p}_x] = \hat{y}\hat{p}_x [\hat{p}_z, \hat{z}] = \hat{y}\hat{p}_x (-i\hbar)
+$$
 
-$$ [\hat{z}\hat{p}_y, \hat{x}\hat{p}_z] = \hat{p}_y\hat{x} [\hat{z}, \hat{p}_z] = \hat{p}_y\hat{x} (i\hbar) $$
+$$
+[\hat{z}\hat{p}_y, \hat{x}\hat{p}_z] = \hat{p}_y\hat{x} [\hat{z}, \hat{p}_z] = \hat{p}_y\hat{x} (i\hbar)
+$$
 
 6. Sumamos: $[\hat{L}_x, \hat{L}_y] = -i\hbar \hat{y}\hat{p}_x + i\hbar \hat{x}\hat{p}_y = i\hbar (\hat{x}\hat{p}_y - \hat{y}\hat{p}_x) = i\hbar \hat{L}_z$.
 
@@ -158,16 +196,22 @@ Considera un ensamble estadístico de espines 1/2 donde el $75\%$ está en el es
 2. Sustituyendo las probabilidades: $\hat{\rho} = 0.75 |\uparrow_z\rangle\langle\uparrow_z| + 0.25 |\downarrow_z\rangle\langle\downarrow_z|$.
 3. En la base $\{|\uparrow_z\rangle, |\downarrow_z\rangle\}$, esto se representa matricialmente como:
 
-$$ \rho = \begin{pmatrix} 0.75 & 0 \\ 0 & 0.25 \end{pmatrix} $$
+$$
+\rho = \begin{pmatrix} 0.75 & 0 \\ 0 & 0.25 \end{pmatrix}
+$$
 
 4. El operador $\hat{S}_x$ está dado por la matriz de Pauli $\sigma_x$:
 
-$$ \hat{S}_x = \frac{\hbar}{2} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} $$
+$$
+\hat{S}_x = \frac{\hbar}{2} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+$$
 
 5. El valor esperado se calcula como $\langle \hat{S}_x \rangle = \operatorname{Tr}(\hat{\rho} \hat{S}_x)$.
 6. Multiplicando las matrices:
 
-$$ \hat{\rho} \hat{S}_x = \begin{pmatrix} 0.75 & 0 \\ 0 & 0.25 \end{pmatrix} \frac{\hbar}{2} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix} 0 & 0.75 \\ 0.25 & 0 \end{pmatrix} $$
+$$
+\hat{\rho} \hat{S}_x = \begin{pmatrix} 0.75 & 0 \\ 0 & 0.25 \end{pmatrix} \frac{\hbar}{2} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix} 0 & 0.75 \\ 0.25 & 0 \end{pmatrix}
+$$
 
 7. La traza de esta matriz es $0+0=0$. Por lo tanto, $\langle \hat{S}_x \rangle = 0$.
 
@@ -242,11 +286,15 @@ El estudio avanzado de los observables cuánticos abandona la ingenuidad del ál
 
 Para sistemas con infinitos grados de libertad (como en Teoría Cuántica de Campos), el Teorema de Stone-von Neumann falla, produciendo representaciones unitariamente inequivalentes de las relaciones de conmutación canónicas. La recuperación del Espacio de Hilbert se logra estrictamente a través de la **Construcción Gelfand-Naimark-Segal (GNS)**. Dado un estado $\omega$, la construcción GNS genera una representación $\pi_\omega(\mathfrak{A})$ como operadores acotados en un espacio de Hilbert $\mathcal{H}_\omega$, junto con un vector cíclico $|\Omega\rangle$ tal que:
 
-$$ \omega(\hat{A}) = \langle \Omega | \pi_\omega(\hat{A}) | \Omega \rangle \quad \forall \hat{A} \in \mathfrak{A} $$
+$$
+\omega(\hat{A}) = \langle \Omega | \pi_\omega(\hat{A}) | \Omega \rangle \quad \forall \hat{A} \in \mathfrak{A}
+$$
 
 Para incluir rigurosamente autofunciones no normalizables (como las ondas planas $|p\rangle$ o estados de posición $|x\rangle$), se extiende el espacio de Hilbert $\mathcal{H}$ a un **Espacio de Hilbert Equipado (Rigged Hilbert Space o Tripleta de Gelfand)**:
 
-$$ \Phi \subset \mathcal{H} \subset \Phi^\times $$
+$$
+\Phi \subset \mathcal{H} \subset \Phi^\times
+$$
 
 donde $\Phi$ es un espacio nuclear denso de funciones de prueba (típicamente el espacio de Schwartz $\mathcal{S}(\mathbb{R}^n)$) y $\Phi^\times$ es el espacio de distribuciones temperadas. El Teorema Espectral de Gelfand-Maurin garantiza la existencia de un espectro continuo completo para operadores autoadjuntos extendidos sobre $\Phi^\times$, proveyendo el andamiaje riguroso para la notación de Dirac introducida empíricamente hace un siglo.
 
@@ -260,21 +308,33 @@ donde $\Phi$ es un espacio nuclear denso de funciones de prueba (típicamente el
 1. **Dirac, P. A. M. (1939). "A new notation for quantum mechanics"**. *Mathematical Proceedings of the Cambridge Philosophical Society*, 35(3), 416-418. [DOI: 10.1017/S030500410002118X](https://doi.org/10.1017/S030500410002118X)
    *Importancia Teórica y Matemática:* Introduce formalmente la notación *Bra-Ket* para representar vectores en el espacio de Hilbert y su dual. Define los productos internos y externos algebraicamente:
 
-   $$ \langle \phi | \psi \rangle \in \mathbb{C}, \quad |\psi\rangle \langle \phi | = \hat{O} $$
+   
+
+$$
+\langle \phi | \psi \rangle \in \mathbb{C}, \quad |\psi\rangle \langle \phi | = \hat{O}
+$$
 
    *Implicaciones Físicas:* Simplificó drásticamente la manipulación de operadores y demostró la invarianza de la mecánica cuántica ante cambios de base, unificando la mecánica matricial y ondulatoria.
 
 2. **von Neumann, J. (1927). "Mathematische Begründung der Quantenmechanik"**. *Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen*, 1927, 1-57. [Link GDZ](https://gdz.sub.uni-goettingen.de/id/PPN252457811_1927)
    *Importancia Teórica y Matemática:* Establece el marco riguroso de la teoría cuántica usando espacios de Hilbert de dimensión infinita. Formula el teorema espectral para operadores autoadjuntos:
 
-   $$ \hat{A} = \int \lambda \, dE(\lambda) $$
+   
+
+$$
+\hat{A} = \int \lambda \, dE(\lambda)
+$$
 
    *Implicaciones Físicas:* Puso la mecánica cuántica sobre bases matemáticas inexpugnables, definiendo precisamente qué constituye un "observable" (operador hermitiano acotado o no acotado denso) y un estado físico (operador de densidad).
 
 3. **Robertson, H. P. (1929). "The Uncertainty Principle"**. *Phys. Rev.*, 34, 163-164. [DOI: 10.1103/PhysRev.34.163](https://doi.org/10.1103/PhysRev.34.163)
    *Importancia Teórica y Matemática:* Derivación general del principio de incertidumbre a partir de las relaciones de conmutación empleando la desigualdad de Cauchy-Schwarz en espacios de Hilbert:
 
-   $$ \sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right| $$
+   
+
+$$
+\sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right|
+$$
 
    *Implicaciones Físicas:* Demuestra que la incertidumbre de Heisenberg no es un artefacto de los instrumentos de medición ni exclusivo de posición/momento, sino una propiedad fundamental del álgebra no conmutativa de cualquier par de observables incompatibles.
 

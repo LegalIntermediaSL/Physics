@@ -16,63 +16,93 @@ Consideremos un plasma en equilibrio termodinámico a temperatura $T$. Introduci
 
 La ecuación de Poisson relaciona el potencial $\phi(\mathbf{r})$ con la densidad de carga total $\rho(\mathbf{r})$:
 
-$$ \nabla^2 \phi(\mathbf{r}) = -\frac{\rho(\mathbf{r})}{\epsilon_0} $$
+$$
+\nabla^2 \phi(\mathbf{r}) = -\frac{\rho(\mathbf{r})}{\epsilon_0}
+$$
 
 La densidad de carga total incluye la carga de prueba y las densidades perturbadas de iones ($n_i$) y electrones ($n_e$):
 
-$$ \rho(\mathbf{r}) = q \delta(\mathbf{r}) + e [Z n_i(\mathbf{r}) - n_e(\mathbf{r})] $$
+$$
+\rho(\mathbf{r}) = q \delta(\mathbf{r}) + e [Z n_i(\mathbf{r}) - n_e(\mathbf{r})]
+$$
 
 donde $Z$ es el estado de carga de los iones. En ausencia de la carga de prueba, el plasma es cuasineutro: $Z n_{i0} = n_{e0} \equiv n_0$.
 
 Asumimos que el plasma obedece la estadística de Maxwell-Boltzmann. Las densidades de partículas en presencia del potencial $\phi(\mathbf{r})$ están dadas por:
 
-$$ n_e(\mathbf{r}) = n_{e0} \exp\left( \frac{e \phi(\mathbf{r})}{k_B T_e} \right) $$
+$$
+n_e(\mathbf{r}) = n_{e0} \exp\left( \frac{e \phi(\mathbf{r})}{k_B T_e} \right)
+$$
 
-$$ n_i(\mathbf{r}) = n_{i0} \exp\left( -\frac{Z e \phi(\mathbf{r})}{k_B T_i} \right) $$
+$$
+n_i(\mathbf{r}) = n_{i0} \exp\left( -\frac{Z e \phi(\mathbf{r})}{k_B T_i} \right)
+$$
 
 Sustituyendo estas densidades en la ecuación de Poisson obtenemos la **Ecuación de Poisson-Boltzmann**:
 
-$$ \nabla^2 \phi(\mathbf{r}) = -\frac{q}{\epsilon_0} \delta(\mathbf{r}) - \frac{e}{\epsilon_0} \left[ Z n_{i0} \exp\left( -\frac{Z e \phi}{k_B T_i} \right) - n_{e0} \exp\left( \frac{e \phi}{k_B T_e} \right) \right] $$
+$$
+\nabla^2 \phi(\mathbf{r}) = -\frac{q}{\epsilon_0} \delta(\mathbf{r}) - \frac{e}{\epsilon_0} \left[ Z n_{i0} \exp\left( -\frac{Z e \phi}{k_B T_i} \right) - n_{e0} \exp\left( \frac{e \phi}{k_B T_e} \right) \right]
+$$
 
 Esta ecuación es fuertemente no lineal. Procedemos linealizando la ecuación, asumiendo que la energía potencial electrostática es mucho menor que la energía térmica: $|e \phi| \ll k_B T$. Desarrollamos las exponenciales en serie de Taylor ($e^x \approx 1 + x$):
 
-$$ \exp\left( \frac{e \phi}{k_B T_e} \right) \approx 1 + \frac{e \phi}{k_B T_e} $$
+$$
+\exp\left( \frac{e \phi}{k_B T_e} \right) \approx 1 + \frac{e \phi}{k_B T_e}
+$$
 
-$$ \exp\left( -\frac{Z e \phi}{k_B T_i} \right) \approx 1 - \frac{Z e \phi}{k_B T_i} $$
+$$
+\exp\left( -\frac{Z e \phi}{k_B T_i} \right) \approx 1 - \frac{Z e \phi}{k_B T_i}
+$$
 
 Sustituyendo las expansiones linealizadas en el término de densidad de carga:
 
-$$ \rho_{plasma} = e \left[ Z n_{i0} \left( 1 - \frac{Z e \phi}{k_B T_i} \right) - n_{e0} \left( 1 + \frac{e \phi}{k_B T_e} \right) \right] $$
+$$
+\rho_{plasma} = e \left[ Z n_{i0} \left( 1 - \frac{Z e \phi}{k_B T_i} \right) - n_{e0} \left( 1 + \frac{e \phi}{k_B T_e} \right) \right]
+$$
 
 Usando la condición de cuasineutralidad $Z n_{i0} = n_{e0} = n_0$, los términos constantes se cancelan:
 
-$$ \rho_{plasma} = -n_0 e^2 \left( \frac{Z}{k_B T_i} + \frac{1}{k_B T_e} \right) \phi(\mathbf{r}) $$
+$$
+\rho_{plasma} = -n_0 e^2 \left( \frac{Z}{k_B T_i} + \frac{1}{k_B T_e} \right) \phi(\mathbf{r})
+$$
 
 La ecuación de Poisson linealizada se convierte en la ecuación diferencial de Helmholtz modificada:
 
-$$ \nabla^2 \phi - \frac{1}{\lambda_D^2} \phi = -\frac{q}{\epsilon_0} \delta(\mathbf{r}) $$
+$$
+\nabla^2 \phi - \frac{1}{\lambda_D^2} \phi = -\frac{q}{\epsilon_0} \delta(\mathbf{r})
+$$
 
 donde hemos definido la **Longitud de Debye efectiva** $\lambda_D$ mediante:
 
-$$ \frac{1}{\lambda_D^2} = \frac{n_0 e^2}{\epsilon_0 k_B T_e} + \frac{Z n_0 e^2}{\epsilon_0 k_B T_i} = \frac{1}{\lambda_{De}^2} + \frac{1}{\lambda_{Di}^2} $$
+$$
+\frac{1}{\lambda_D^2} = \frac{n_0 e^2}{\epsilon_0 k_B T_e} + \frac{Z n_0 e^2}{\epsilon_0 k_B T_i} = \frac{1}{\lambda_{De}^2} + \frac{1}{\lambda_{Di}^2}
+$$
 
 En muchos plasmas de laboratorio, los electrones son mucho más calientes que los iones ($T_e \gg T_i$) o los iones son demasiado pesados para responder en la escala temporal de interés, por lo que a menudo se usa la longitud de Debye electrónica:
 
-$$ \lambda_D \approx \lambda_{De} = \sqrt{\frac{\epsilon_0 k_B T_e}{n_e e^2}} $$
+$$
+\lambda_D \approx \lambda_{De} = \sqrt{\frac{\epsilon_0 k_B T_e}{n_e e^2}}
+$$
 
 Para resolver la ecuación, debido a la simetría esférica, escribimos el laplaciano en coordenadas esféricas:
 
-$$ \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial \phi}{\partial r} \right) - \frac{1}{\lambda_D^2} \phi = 0 \quad (\text{para } r \neq 0) $$
+$$
+\frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial \phi}{\partial r} \right) - \frac{1}{\lambda_D^2} \phi = 0 \quad (\text{para } r \neq 0)
+$$
 
 Haciendo el cambio de variable $u(r) = r \phi(r)$, la ecuación se simplifica a:
 
-$$ \frac{d^2 u}{dr^2} - \frac{1}{\lambda_D^2} u = 0 $$
+$$
+\frac{d^2 u}{dr^2} - \frac{1}{\lambda_D^2} u = 0
+$$
 
 Las soluciones son de la forma $u(r) = A e^{-r/\lambda_D} + B e^{r/\lambda_D}$. Como el potencial debe anularse en el infinito ($r \to \infty$), establecemos $B = 0$. Por lo tanto, $\phi(r) = \frac{A}{r} e^{-r/\lambda_D}$. Para determinar $A$, observamos que cuando $r \to 0$, el potencial debe coincidir con el potencial de Coulomb de la carga de prueba desnuda: $\phi(r \to 0) = \frac{q}{4\pi\epsilon_0 r}$. Esto fija $A = \frac{q}{4\pi\epsilon_0}$.
 
 La solución completa es el **Potencial de Debye-Hückel (o Yukawa)**:
 
-$$ \phi(r) = \frac{q}{4\pi\epsilon_0 r} \exp\left(-\frac{r}{\lambda_D}\right) $$
+$$
+\phi(r) = \frac{q}{4\pi\epsilon_0 r} \exp\left(-\frac{r}{\lambda_D}\right)
+$$
 
 Esta demostración muestra formalmente que el campo de cualquier carga se apantalla exponencialmente a distancias del orden de $\lambda_D$, justificando la cuasineutralidad en escalas $L \gg \lambda_D$.
 
@@ -82,15 +112,21 @@ Para entender la respuesta dinámica más rápida del plasma, consideraremos a l
 
 **Ecuación de continuidad:**
 
-$$ \frac{\partial n_e}{\partial t} + \frac{\partial}{\partial x}(n_e v_e) = 0 $$
+$$
+\frac{\partial n_e}{\partial t} + \frac{\partial}{\partial x}(n_e v_e) = 0
+$$
 
 **Ecuación de momento (Navier-Stokes sin presión):**
 
-$$ m_e \left( \frac{\partial v_e}{\partial t} + v_e \frac{\partial v_e}{\partial x} \right) = -e E $$
+$$
+m_e \left( \frac{\partial v_e}{\partial t} + v_e \frac{\partial v_e}{\partial x} \right) = -e E
+$$
 
 **Ecuación de Poisson:**
 
-$$ \frac{\partial E}{\partial x} = \frac{e(n_0 - n_e)}{\epsilon_0} $$
+$$
+\frac{\partial E}{\partial x} = \frac{e(n_0 - n_e)}{\epsilon_0}
+$$
 
 Realizamos un **Análisis de Perturbaciones Lineales**. Expresamos las cantidades como una componente estática de equilibrio más una pequeña perturbación:
 - $n_e(x,t) = n_0 + n_1(x,t)$
@@ -101,35 +137,53 @@ Sustituyendo en el sistema fluido y despreciando los términos de segundo orden 
 
 1. **Continuidad linealizada:**
 
-$$ \frac{\partial n_1}{\partial t} + n_0 \frac{\partial v_1}{\partial x} = 0 $$
+$$
+\frac{\partial n_1}{\partial t} + n_0 \frac{\partial v_1}{\partial x} = 0
+$$
 
 2. **Momento linealizado:**
 
-$$ m_e \frac{\partial v_1}{\partial t} = -e E_1 $$
+$$
+m_e \frac{\partial v_1}{\partial t} = -e E_1
+$$
 
 3. **Poisson linealizada:**
 
-$$ \frac{\partial E_1}{\partial x} = -\frac{e n_1}{\epsilon_0} $$
+$$
+\frac{\partial E_1}{\partial x} = -\frac{e n_1}{\epsilon_0}
+$$
 
 Para derivar la ecuación de onda, tomamos la derivada temporal de la ecuación de continuidad:
 
-$$ \frac{\partial^2 n_1}{\partial t^2} + n_0 \frac{\partial}{\partial x} \left( \frac{\partial v_1}{\partial t} \right) = 0 $$
+$$
+\frac{\partial^2 n_1}{\partial t^2} + n_0 \frac{\partial}{\partial x} \left( \frac{\partial v_1}{\partial t} \right) = 0
+$$
 
 Sustituimos $\frac{\partial v_1}{\partial t}$ de la ecuación de momento:
 
-$$ \frac{\partial^2 n_1}{\partial t^2} + n_0 \frac{\partial}{\partial x} \left( -\frac{e E_1}{m_e} \right) = 0 $$
+$$
+\frac{\partial^2 n_1}{\partial t^2} + n_0 \frac{\partial}{\partial x} \left( -\frac{e E_1}{m_e} \right) = 0
+$$
 
-$$ \frac{\partial^2 n_1}{\partial t^2} - \frac{n_0 e}{m_e} \frac{\partial E_1}{\partial x} = 0 $$
+$$
+\frac{\partial^2 n_1}{\partial t^2} - \frac{n_0 e}{m_e} \frac{\partial E_1}{\partial x} = 0
+$$
 
 Finalmente, usamos la ecuación de Poisson para reemplazar $\frac{\partial E_1}{\partial x}$:
 
-$$ \frac{\partial^2 n_1}{\partial t^2} - \frac{n_0 e}{m_e} \left( -\frac{e n_1}{\epsilon_0} \right) = 0 $$
+$$
+\frac{\partial^2 n_1}{\partial t^2} - \frac{n_0 e}{m_e} \left( -\frac{e n_1}{\epsilon_0} \right) = 0
+$$
 
-$$ \frac{\partial^2 n_1}{\partial t^2} + \left( \frac{n_0 e^2}{m_e \epsilon_0} \right) n_1 = 0 $$
+$$
+\frac{\partial^2 n_1}{\partial t^2} + \left( \frac{n_0 e^2}{m_e \epsilon_0} \right) n_1 = 0
+$$
 
 Esta es la ecuación diferencial de un oscilador armónico simple. La frecuencia natural de esta oscilación es la **Frecuencia de Plasma Electrónica**:
 
-$$ \omega_{pe} = \sqrt{\frac{n_0 e^2}{m_e \epsilon_0}} $$
+$$
+\omega_{pe} = \sqrt{\frac{n_0 e^2}{m_e \epsilon_0}}
+$$
 
 ### Diagrama de Regímenes del Plasma
 
@@ -152,13 +206,17 @@ graph TD
 
 El parámetro de plasma $\Lambda$ define el número de partículas en una esfera de Debye. Si asumimos la esfera de radio $\lambda_D$:
 
-$$ N_D = \frac{4\pi}{3} n_0 \lambda_D^3 $$
+$$
+N_D = \frac{4\pi}{3} n_0 \lambda_D^3
+$$
 
 Para que el modelo estadístico continuo tenga sentido y para que el apantallamiento colectivo sea el efecto dominante por encima de las interacciones estocásticas partícula-partícula (colisiones), necesitamos $N_D \gg 1$. 
 
 El parámetro de acoplamiento $\Gamma$ relaciona la energía potencial de Coulomb media entre vecinos más cercanos (distancia $a \approx n^{-1/3}$) y la energía térmica:
 
-$$ \Gamma = \frac{e^2}{4\pi\epsilon_0 a k_B T} $$
+$$
+\Gamma = \frac{e^2}{4\pi\epsilon_0 a k_B T}
+$$
 
 Se puede demostrar fácilmente que $\Gamma \propto \Lambda^{-2/3}$. Por lo tanto, la condición de plasma ideal $\Lambda \gg 1$ es equivalente a la condición de plasma débilmente acoplado $\Gamma \ll 1$.
 
@@ -176,22 +234,43 @@ Se puede demostrar fácilmente que $\Gamma \propto \Lambda^{-2/3}$. Por lo tanto
 
 2. **Cálculo de la Longitud de Debye ($\lambda_D$):**
 
-   $$ \lambda_D = 7430 \sqrt{\frac{10000}{10^{20}}} = 7430 \sqrt{10^{-16}} = 7430 \times 10^{-8} = 7.43 \times 10^{-5} \, \text{m} = 74.3 \, \mu\text{m} $$
+   
+
+$$
+\lambda_D = 7430 \sqrt{\frac{10000}{10^{20}}} = 7430 \sqrt{10^{-16}} = 7430 \times 10^{-8} = 7.43 \times 10^{-5} \, \text{m} = 74.3 \, \mu\text{m}
+$$
 
    *(Para las dimensiones típicas de un Tokamak, $L \sim 2 \, \text{m}$, es claro que $L \gg \lambda_D$)*
 
 3. **Cálculo de la Frecuencia de Plasma ($\omega_{pe}$):**
    Fórmula práctica: $f_{pe} \approx 8.98 \sqrt{n_e}$ Hz.
 
-   $$ f_{pe} = 8.98 \sqrt{10^{20}} = 8.98 \times 10^{10} \, \text{Hz} = 89.8 \, \text{GHz} $$
+   
 
-   $$ \omega_{pe} = 2\pi f_{pe} = 5.64 \times 10^{11} \, \text{rad/s} $$
+$$
+f_{pe} = 8.98 \sqrt{10^{20}} = 8.98 \times 10^{10} \, \text{Hz} = 89.8 \, \text{GHz}
+$$
+
+   
+
+$$
+\omega_{pe} = 2\pi f_{pe} = 5.64 \times 10^{11} \, \text{rad/s}
+$$
 
 4. **Verificación del Parámetro de Plasma ($\Lambda$):**
 
-   $$ \Lambda = N_D = \frac{4\pi}{3} n_e \lambda_D^3 $$
+   
 
-   $$ \Lambda = \frac{4\pi}{3} (10^{20}) (7.43 \times 10^{-5})^3 = 4.19 \times 10^{20} \times (4.1 \times 10^{-13}) \approx 1.72 \times 10^8 $$
+$$
+\Lambda = N_D = \frac{4\pi}{3} n_e \lambda_D^3
+$$
+
+   
+
+$$
+\Lambda = \frac{4\pi}{3} (10^{20}) (7.43 \times 10^{-5})^3 = 4.19 \times 10^{20} \times (4.1 \times 10^{-13}) \approx 1.72 \times 10^8
+$$
+
    
 **Conclusión:** Dado que $\Lambda \approx 1.7 \times 10^8 \gg 1$, el plasma del Tokamak está extremadamente bien descrito por la teoría de plasmas ideales. Las colisiones binarias de corto alcance son poco frecuentes frente a las interacciones colectivas.
 
@@ -203,19 +282,27 @@ Considere un plasma no colisional compuesto por electrones (densidad $n_e$, temp
 **Solución paso a paso:**
 Usando la ecuación de Poisson linealizada para pequeños potenciales $|e\phi| \ll k_B T$:
 
-$$ \nabla^2 \phi = -\frac{e}{\epsilon_0} (Z_1 n_1 + Z_2 n_2 - n_e) $$
+$$
+\nabla^2 \phi = -\frac{e}{\epsilon_0} (Z_1 n_1 + Z_2 n_2 - n_e)
+$$
 
 Asumiendo distribuciones de Boltzmann para cada especie en equilibrio termodinámico local:
 
-$$ n_j(\phi) \approx n_{j0} \left( 1 - \frac{q_j \phi}{k_B T_j} \right) $$
+$$
+n_j(\phi) \approx n_{j0} \left( 1 - \frac{q_j \phi}{k_B T_j} \right)
+$$
 
 Sustituyendo en la ecuación de Poisson y usando la condición de cuasineutralidad macroscópica $Z_1 n_{10} + Z_2 n_{20} = n_{e0}$:
 
-$$ \nabla^2 \phi = \frac{e^2}{\epsilon_0} \left( \frac{n_{e0}}{k_B T_e} + \frac{Z_1^2 n_{10}}{k_B T_1} + \frac{Z_2^2 n_{20}}{k_B T_2} \right) \phi \equiv \frac{1}{\lambda_D^2} \phi $$
+$$
+\nabla^2 \phi = \frac{e^2}{\epsilon_0} \left( \frac{n_{e0}}{k_B T_e} + \frac{Z_1^2 n_{10}}{k_B T_1} + \frac{Z_2^2 n_{20}}{k_B T_2} \right) \phi \equiv \frac{1}{\lambda_D^2} \phi
+$$
 
 Por lo tanto, la longitud de Debye efectiva es:
 
-$$ \lambda_D = \left( \frac{e^2 n_{e0}}{\epsilon_0 k_B T_e} + \frac{e^2 Z_1^2 n_{10}}{\epsilon_0 k_B T_1} + \frac{e^2 Z_2^2 n_{20}}{\epsilon_0 k_B T_2} \right)^{-1/2} $$
+$$
+\lambda_D = \left( \frac{e^2 n_{e0}}{\epsilon_0 k_B T_e} + \frac{e^2 Z_1^2 n_{10}}{\epsilon_0 k_B T_1} + \frac{e^2 Z_2^2 n_{20}}{\epsilon_0 k_B T_2} \right)^{-1/2}
+$$
 
 ### Problema 2: Frecuencia de Plasma Electrónica con Presión Térmica
 Derive la relación de dispersión para ondas electrostáticas electrónicas considerando la presión térmica (ondas de Langmuir). Asuma propagación 1D y un proceso adiabático.
@@ -223,23 +310,33 @@ Derive la relación de dispersión para ondas electrostáticas electrónicas con
 **Solución paso a paso:**
 Ecuación de momento linealizada para el fluido electrónico:
 
-$$ m_e n_0 \frac{\partial v_{e1}}{\partial t} = -e n_0 E_1 - \frac{\partial p_{e1}}{\partial x} $$
+$$
+m_e n_0 \frac{\partial v_{e1}}{\partial t} = -e n_0 E_1 - \frac{\partial p_{e1}}{\partial x}
+$$
 
 Proceso adiabático en 1D (con índice adiabático $\gamma = 3$):
 
-$$ p_{e1} = 3 k_B T_e n_{e1} $$
+$$
+p_{e1} = 3 k_B T_e n_{e1}
+$$
 
 Combinando con la ecuación de continuidad $\frac{\partial n_{e1}}{\partial t} + n_0 \frac{\partial v_{e1}}{\partial x} = 0$ y la Ley de Gauss $\frac{\partial E_1}{\partial x} = -\frac{e n_{e1}}{\epsilon_0}$, y asumiendo perturbaciones en forma de onda plana $\sim e^{i(kx - \omega t)}$:
 
-$$ -i\omega v_{e1} = -\frac{e}{m_e} E_1 - \frac{3 k_B T_e}{m_e n_0} (ik n_{e1}) $$
+$$
+-i\omega v_{e1} = -\frac{e}{m_e} E_1 - \frac{3 k_B T_e}{m_e n_0} (ik n_{e1})
+$$
 
 Sustituyendo $v_{e1} = \frac{\omega}{k n_0} n_{e1}$ (de continuidad) y $E_1 = -\frac{i e}{\epsilon_0 k} n_{e1}$ (de Gauss):
 
-$$ -i\omega \left( \frac{\omega}{k n_0} n_{e1} \right) = -\frac{e}{m_e} \left( -\frac{i e}{\epsilon_0 k} n_{e1} \right) - i k \frac{3 k_B T_e}{m_e n_0} n_{e1} $$
+$$
+-i\omega \left( \frac{\omega}{k n_0} n_{e1} \right) = -\frac{e}{m_e} \left( -\frac{i e}{\epsilon_0 k} n_{e1} \right) - i k \frac{3 k_B T_e}{m_e n_0} n_{e1}
+$$
 
 Multiplicando por $i k n_0$:
 
-$$ \omega^2 = \frac{n_0 e^2}{m_e \epsilon_0} + \frac{3 k_B T_e}{m_e} k^2 = \omega_{pe}^2 + 3 v_{th,e}^2 k^2 $$
+$$
+\omega^2 = \frac{n_0 e^2}{m_e \epsilon_0} + \frac{3 k_B T_e}{m_e} k^2 = \omega_{pe}^2 + 3 v_{th,e}^2 k^2
+$$
 
 Esta es la conocida relación de dispersión de Bohm-Gross para ondas de plasma.
 
@@ -249,17 +346,25 @@ Calcule el parámetro de acoplamiento $\Gamma$ para el centro del Sol, donde la 
 **Solución paso a paso:**
 El parámetro de acoplamiento $\Gamma$ es la razón entre la energía potencial de Coulomb media entre partículas vecinas y la energía térmica:
 
-$$ \Gamma = \frac{e^2}{4\pi\epsilon_0 a k_B T} $$
+$$
+\Gamma = \frac{e^2}{4\pi\epsilon_0 a k_B T}
+$$
 
 Donde $a$ es el radio de Wigner-Seitz, dado por $a = \left( \frac{3}{4\pi n_e} \right)^{1/3}$.
 
-$$ a = \left( \frac{3}{4\pi (6 \times 10^{31})} \right)^{1/3} \approx 1.58 \times 10^{-11} \text{ m} $$
+$$
+a = \left( \frac{3}{4\pi (6 \times 10^{31})} \right)^{1/3} \approx 1.58 \times 10^{-11} \text{ m}
+$$
 
 Calculamos $\Gamma$ sustituyendo los valores:
 
-$$ \Gamma = \frac{(1.6 \times 10^{-19})^2}{4\pi (8.85 \times 10^{-12}) (1.58 \times 10^{-11}) (1.38 \times 10^{-23}) (1.5 \times 10^7)} $$
+$$
+\Gamma = \frac{(1.6 \times 10^{-19})^2}{4\pi (8.85 \times 10^{-12}) (1.58 \times 10^{-11}) (1.38 \times 10^{-23}) (1.5 \times 10^7)}
+$$
 
-$$ \Gamma \approx \frac{2.56 \times 10^{-38}}{3.63 \times 10^{-37}} \approx 0.07 $$
+$$
+\Gamma \approx \frac{2.56 \times 10^{-38}}{3.63 \times 10^{-37}} \approx 0.07
+$$
 
 Dado que $\Gamma \ll 1$, el plasma en el centro del Sol, a pesar de su altísima densidad que lo hace un fluido denso, se comporta como un gas de plasma ideal (débilmente acoplado) debido a su extrema temperatura termonuclear.
 
@@ -322,7 +427,9 @@ El tratamiento riguroso de la dinámica estocástica de $10^{23}$ partículas en
 A nivel fundamental, la micro-densidad de distribución exacta de $N$ partículas en el espacio de fases se escribe como $F(\mathbf{r}, \mathbf{p}, t) = \sum_{i=1}^N \delta(\mathbf{r} - \mathbf{r}_i(t)) \delta(\mathbf{p} - \mathbf{p}_i(t))$. La evolución exacta está dada por la ecuación de Klimontovich estocástica. 
 Promediando sobre ensambles estadísticos ($f = \langle F \rangle$), se obtiene la jerarquía BBGKY. Al romper el término de correlación de 2 cuerpos $g_{12}$, se deriva la ecuación de Balescu-Lenard, que es una ecuación generalizada de Fokker-Planck para plasmas considerando un dieléctrico de apantallamiento dinámico:
 
-$$ \frac{\partial f_a}{\partial t} = \sum_b \frac{\partial}{\partial \mathbf{p}} \cdot \int d^3p' \, \mathbb{Q}_{ab}(\mathbf{p}, \mathbf{p}') \cdot \left( \frac{\partial f_a}{\partial \mathbf{p}} f_b(\mathbf{p}') - \frac{\partial f_b}{\partial \mathbf{p}'} f_a(\mathbf{p}) \right) $$
+$$
+\frac{\partial f_a}{\partial t} = \sum_b \frac{\partial}{\partial \mathbf{p}} \cdot \int d^3p' \, \mathbb{Q}_{ab}(\mathbf{p}, \mathbf{p}') \cdot \left( \frac{\partial f_a}{\partial \mathbf{p}} f_b(\mathbf{p}') - \frac{\partial f_b}{\partial \mathbf{p}'} f_a(\mathbf{p}) \right)
+$$
 
 donde el tensor de colisión $\mathbb{Q}_{ab}$ incorpora la constante dieléctrica longitudinal del plasma $\epsilon(\mathbf{k}, \mathbf{k}\cdot\mathbf{v})$, lo que resuelve matemáticamente la divergencia de colisiones de largo alcance característica del límite de Coulomb en los plasmas ideales.
 
@@ -345,7 +452,11 @@ donde el tensor de colisión $\mathbb{Q}_{ab}$ incorpora la constante dieléctri
    **Contexto Matemático:** 
    Langmuir observó perturbaciones que no podían explicarse por colisiones binarias. Al derivar la fuerza restauradora electrostática creada por un desplazamiento macroscópico local de electrones respecto a un fondo de iones (fuerza de Poisson), descubrió un movimiento armónico simple. La frecuencia natural encontrada es la ahora célebre frecuencia de plasma electrónica:
 
-   $$ \omega_{pe} = \sqrt{ \frac{n_e e^2}{m_e \epsilon_0} } $$
+   
+
+$$
+\omega_{pe} = \sqrt{ \frac{n_e e^2}{m_e \epsilon_0} }
+$$
 
    Este parámetro define la escala de tiempo fundamental ($\tau_p \sim \omega_{pe}^{-1}$) en la cual el plasma responde para apantallar perturbaciones eléctricas y restaurar la cuasineutralidad, actuando como la frontera teórica que separa el comportamiento de un gas neutro del de un plasma colectivo.
 
@@ -358,7 +469,11 @@ donde el tensor de colisión $\mathbb{Q}_{ab}$ incorpora la constante dieléctri
    **Contexto Matemático:** 
    Usando métodos de integración en el plano complejo, Landau sorteó la singularidad $v = \omega/k$ de la ecuación de Vlasov linealizada usando el famoso Contorno de Landau. La respuesta dieléctrica longitudinal revela un decaimiento con una tasa de amortiguamiento $\gamma$:
 
-   $$ \gamma \approx -\omega_{pe} \sqrt{\frac{\pi}{8}} \frac{1}{(k \lambda_D)^3} \exp\left( -\frac{1}{2(k \lambda_D)^2} - \frac{3}{2} \right) $$
+   
+
+$$
+\gamma \approx -\omega_{pe} \sqrt{\frac{\pi}{8}} \frac{1}{(k \lambda_D)^3} \exp\left( -\frac{1}{2(k \lambda_D)^2} - \frac{3}{2} \right)
+$$
 
    Físicamente, esto implica un intercambio de energía onda-partícula sin fricción. Las partículas resonantes que viajan ligeramente más lento que la onda (con velocidad $v \lesssim v_{phase}$) absorben energía, 'surfeando' el gradiente de potencial de la onda y amortiguando la amplitud macroscópica del campo eléctrico.
 

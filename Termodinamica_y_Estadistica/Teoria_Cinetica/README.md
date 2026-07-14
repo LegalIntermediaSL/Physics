@@ -38,29 +38,41 @@ Consideremos geométricamente un gas encerrado en una caja rectangular rígida d
 La velocidad inicial de la molécula posee un vector tridimensional $\vec{v} = v_x \hat{i} + v_y \hat{j} + v_z \hat{k}$. Al impactar frontalmente de manera elástica con el plano $YZ$, solo su componente de velocidad normal se invierte, convirtiéndose en $-v_x$.
 La transferencia o cambio de momento lineal de la molécula es:
 
-$$ \Delta p_x = m(-v_x) - m(v_x) = -2mv_x $$
+$$
+\Delta p_x = m(-v_x) - m(v_x) = -2mv_x
+$$
 
 Por la Tercera Ley de Newton, el momento exacto transferido a la pared durante cada colisión microscópica es $+2mv_x$.
 Para que esta misma molécula colisione nuevamente con la misma pared de $X$, debe viajar hasta la pared opuesta y regresar, una distancia cinemática de $2L_x$. El tiempo que toma en completar este periplo $x$ de ida y vuelta es:
 
-$$ \Delta t = \frac{2L_x}{v_x} $$
+$$
+\Delta t = \frac{2L_x}{v_x}
+$$
 
 Aplicando el Teorema del Impulso, la fuerza impulsiva promediada ejercida por una sola partícula, $F_{1x}$, resulta de dividir la transferencia de momento por el tiempo del ciclo entre colisiones:
 
-$$ \langle F_{1x} \rangle = \frac{\Delta p_{\text{pared}}}{\Delta t} = \frac{2mv_x}{2L_x / v_x} = \frac{mv_x^2}{L_x} $$
+$$
+\langle F_{1x} \rangle = \frac{\Delta p_{\text{pared}}}{\Delta t} = \frac{2mv_x}{2L_x / v_x} = \frac{mv_x^2}{L_x}
+$$
 
 Ahora, superponemos linealmente la fuerza ejercida de forma independiente por el total de las $N$ moléculas en el gas:
 
-$$ \langle F_x^{\text{tot}} \rangle = \frac{m}{L_x} \sum_{i=1}^{N} v_{ix}^2 = \frac{m N}{L_x} \langle v_x^2 \rangle $$
+$$
+\langle F_x^{\text{tot}} \rangle = \frac{m}{L_x} \sum_{i=1}^{N} v_{ix}^2 = \frac{m N}{L_x} \langle v_x^2 \rangle
+$$
 
 Donde $\langle v_x^2 \rangle$ corresponde al promedio del cuadrado de las velocidades a lo largo del eje $X$ en el sistema.
 Macroscópicamente, definimos la variable conjugada presión, $P$, como la magnitud intensiva de la fuerza por unidad de área perpendicular ejercida sobre los márgenes del contorno $A$:
 
-$$ P = \frac{\langle F_x^{\text{tot}} \rangle}{A} = \frac{m N \langle v_x^2 \rangle}{L_x \cdot A} = \frac{N m \langle v_x^2 \rangle}{V} $$
+$$
+P = \frac{\langle F_x^{\text{tot}} \rangle}{A} = \frac{m N \langle v_x^2 \rangle}{L_x \cdot A} = \frac{N m \langle v_x^2 \rangle}{V}
+$$
 
 Dada la isotropía espacial del "caos molecular", las velocidades en promedio satisfacen que $\langle v_x^2 \rangle = \langle v_y^2 \rangle = \langle v_z^2 \rangle$. Y puesto que el módulo al cuadrado del vector velocidad es $v^2 = v_x^2 + v_y^2 + v_z^2$, la media requiere que $\langle v^2 \rangle = 3\langle v_x^2 \rangle$.  Sustituyendo esta asimetría esférica de regreso en nuestra derivación de la presión, obtenemos la **Ecuación Maestra de la Teoría Cinética**:
 
-$$ P = \frac{1}{3} \frac{N m \langle v^2 \rangle}{V} $$
+$$
+P = \frac{1}{3} \frac{N m \langle v^2 \rangle}{V}
+$$
 
 Aquí resalta vívidamente la interconexión dimensional de la presión con la densidad molecular del sistema y el término microscópico inercial-cinético.
 
@@ -69,21 +81,29 @@ Aquí resalta vívidamente la interconexión dimensional de la presión con la d
 La ecuación fundamental del gas ideal, derivada macroscópicamente mediante síntesis empírica por Boyle, Charles y Gay-Lussac, dicta que $PV = N k_B T$, donde $T$ es la temperatura termodinámica absoluta y $k_B$ la constante de Boltzmann.
 Asimilando esta igualdad a nuestra Ecuación Maestra reordenada:
 
-$$ P V = \frac{1}{3} N m \langle v^2 \rangle $$
+$$
+P V = \frac{1}{3} N m \langle v^2 \rangle
+$$
 
 Encontramos de inmediato la simetría térmica de los gases:
 
-$$ N k_B T = \frac{1}{3} N m \langle v^2 \rangle $$
+$$
+N k_B T = \frac{1}{3} N m \langle v^2 \rangle
+$$
 
 Dividiendo por $N$ e introduciendo el factor de 2 para revelar la forma de la energía cinética traslacional $\langle E_K \rangle = \frac{1}{2}m\langle v^2 \rangle$:
 
-$$ \frac{1}{2} m \langle v^2 \rangle = \frac{3}{2} k_B T $$
+$$
+\frac{1}{2} m \langle v^2 \rangle = \frac{3}{2} k_B T
+$$
 
 Este resultado revolucionario provee de sentido ontológico a la magnitud de la "temperatura": **La temperatura no es más que el indicador macroscópico observable del nivel promedio de energía cinética de traslación aleatoria de las moléculas que constituyen el sistema**.
 
 Desde aquí, definimos además la importante métrica de velocidad cuadrática media $v_{\text{rms}}$:
 
-$$ v_{\text{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{3 k_B T}{m}} = \sqrt{\frac{3 R T}{M}} $$
+$$
+v_{\text{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{3 k_B T}{m}} = \sqrt{\frac{3 R T}{M}}
+$$
 
 donde $M$ es la masa molar del gas y $R = N_A k_B$ es la constante de los gases universales.
 
@@ -96,11 +116,15 @@ James Clerk Maxwell y Ludwig Boltzmann generalizaron este corolario analítico a
 
 Así, si una molécula gaseosa polinuclear consta de un total de $f$ grados de libertad efectivamente accesibles (no congelados termodinámicamente a nivel cuántico) en un instante dado, la energía interna macroscópica de una muestra con un número $N$ de tales moléculas valdrá:
 
-$$ U = N \cdot \frac{f}{2} k_B T $$
+$$
+U = N \cdot \frac{f}{2} k_B T
+$$
 
 Esta ecuación permite calcular de forma inmediata una predicción empírica crucial sobre el comportamiento macroscópico del gas: la capacidad calorífica isocórica molar $C_V$, definida como la derivada termodinámica parcial $\left(\frac{\partial U}{\partial T}\right)_V$. Para 1 mol ($N = N_A$):
 
-$$ C_V = \frac{f}{2} R $$
+$$
+C_V = \frac{f}{2} R
+$$
 
 Lo que asienta valores predecibles: para un gas atómico monoatómico ($f=3$, $C_V = \frac{3}{2} R$), y para un gas diatómico con excitación rotacional simple ($f=5$, $C_V = \frac{5}{2} R$).
 
@@ -108,7 +132,9 @@ Lo que asienta valores predecibles: para un gas atómico monoatómico ($f=3$, $C
 
 Aunque las moléculas poseen un $v_{\text{rms}}$ característico, el gas contiene un mar agitado de partículas volando con velocidades dispares a causa de las incesantes colisiones recíprocas termalizadoras. La caracterización estadística es abordada por la función de densidad de probabilidad $f(v)$ que especifica el porcentaje estocástico de las moléculas cuya velocidad reside infinitesimalmente entre $v$ y $v+dv$. Derivada considerando condiciones isométricas y de probabilidad separada en las componentes espaciales de la velocidad, Maxwell generó su icónica ley:
 
-$$ f(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2k_B T}\right) $$
+$$
+f(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2k_B T}\right)
+$$
 
 La distribución es asimétrica y refleja una curva de "campana" modificada (sesgada positivamente por el factor $v^2$ originado del elemento diferencial esférico de fases). Esta ecuación domina de forma ubicua y magistral los fundamentos del equilibrio termodinámico de fluidos desde presiones bajas hasta su aproximación relativista.
 
@@ -124,14 +150,26 @@ La distribución es asimétrica y refleja una curva de "campana" modificada (ses
 3. **Aplicar la fórmula de $v_{\text{rms}}$:**
    Por definición, $v_{\text{rms}} = \sqrt{\langle v^2 \rangle}$. De la teoría cinética:
 
-   $$ \langle v^2 \rangle = \frac{3 k_B T}{m} = \frac{3 R T}{M} $$
+   
+
+$$
+\langle v^2 \rangle = \frac{3 k_B T}{m} = \frac{3 R T}{M}
+$$
 
 4. **Sustituir los valores:**
    Usamos $R \approx 8.314\text{ J/(mol}\cdot\text{K)}$:
 
-   $$ v_{\text{rms}} = \sqrt{\frac{3 \times 8.314 \times 300}{0.032}} $$
+   
 
-   $$ v_{\text{rms}} = \sqrt{233831.25} \approx 483.5\text{ m/s} $$
+$$
+v_{\text{rms}} = \sqrt{\frac{3 \times 8.314 \times 300}{0.032}}
+$$
+
+   
+
+$$
+v_{\text{rms}} = \sqrt{233831.25} \approx 483.5\text{ m/s}
+$$
 
    A temperatura ambiente, ¡las moléculas de oxígeno viajan a casi $500\text{ m/s}$ (más de $1700\text{ km/h}$)!
 
@@ -147,11 +185,15 @@ Deriva la fórmula para el camino libre medio $\lambda$ de un gas ideal compuest
 3. El número de colisiones sufridas equivale al número de partículas diana en ese volumen: $Z = n V_c = n \sigma \langle v \rangle \Delta t$.
 4. El camino libre medio se define como la distancia total recorrida dividida por el número de colisiones:
 
-$$ \lambda = \frac{\langle v \rangle \Delta t}{Z} = \frac{\langle v \rangle \Delta t}{n \sigma \langle v \rangle \Delta t} = \frac{1}{n \sigma} $$
+$$
+\lambda = \frac{\langle v \rangle \Delta t}{Z} = \frac{\langle v \rangle \Delta t}{n \sigma \langle v \rangle \Delta t} = \frac{1}{n \sigma}
+$$
 
 5. Una derivación más rigurosa usando la distribución de Maxwell-Boltzmann de velocidades relativas entre partículas $\langle v_{\text{rel}} \rangle = \sqrt{2} \langle v \rangle$, nos da:
 
-$$ Z = n \sigma \sqrt{2} \langle v \rangle \Delta t \implies \lambda = \frac{1}{\sqrt{2} n \pi d^2} $$
+$$
+Z = n \sigma \sqrt{2} \langle v \rangle \Delta t \implies \lambda = \frac{1}{\sqrt{2} n \pi d^2}
+$$
 
 Esta fórmula predice que el camino libre de los gases decrece al aumentar la presión.
 
@@ -163,12 +205,16 @@ A partir de la distribución de velocidades de Maxwell-Boltzmann, calcula el flu
 3. Por tanto, el flujo es $d\Phi = \frac{dN}{dA dt} = n v_x$.
 4. Debemos integrar este flujo microscópico sobre todas las partículas promediadas por la distribución de probabilidad unidimensional $f(v_x)$:
 
-$$ \Phi = n \int_0^\infty v_x f(v_x) dv_x $$
+$$
+\Phi = n \int_0^\infty v_x f(v_x) dv_x
+$$
 
 5. La distribución gaussiana unidimensional es $f(v_x) = \left(\frac{m}{2\pi k_B T}\right)^{1/2} e^{-mv_x^2 / 2k_B T}$.
 6. Resolviendo la integral estándar:
 
-$$ \int_0^\infty v_x e^{-mv_x^2 / 2k_B T} dv_x = \frac{k_B T}{m} $$
+$$
+\int_0^\infty v_x e^{-mv_x^2 / 2k_B T} dv_x = \frac{k_B T}{m}
+$$
 
 7. Resulta $\Phi = n \left(\frac{m}{2\pi k_B T}\right)^{1/2} \frac{k_B T}{m} = n \sqrt{\frac{k_B T}{2\pi m}}$.
 8. Sabiendo que la velocidad media escalar 3D es $\langle v \rangle = \sqrt{\frac{8 k_B T}{\pi m}}$, observamos que $\sqrt{\frac{k_B T}{2\pi m}} = \frac{1}{4} \langle v \rangle$.
@@ -180,7 +226,9 @@ Encuentra la velocidad más probable $v_p$ y verifica que $v_p < \langle v \rang
 **Solución paso a paso:**
 1. La velocidad más probable $v_p$ es el máximo de la función de densidad de probabilidad. Encontramos esto derivando y haciendo cero:
 
-$$ \frac{df}{dv} \propto \frac{d}{dv} (v^2 e^{-av^2}) = 2v e^{-av^2} - 2av^3 e^{-av^2} = 0 $$
+$$
+\frac{df}{dv} \propto \frac{d}{dv} (v^2 e^{-av^2}) = 2v e^{-av^2} - 2av^3 e^{-av^2} = 0
+$$
 
 Donde $a = \frac{m}{2k_B T}$.
 2. Dividiendo por $2v e^{-av^2}$, obtenemos $1 - av^2 = 0 \implies v_p = \frac{1}{\sqrt{a}} = \sqrt{\frac{2k_B T}{m}}$.
@@ -248,15 +296,21 @@ El estudio avanzado de los gases fuera del equilibrio arranca desde la jerarquí
 
 La función de distribución invariante relativista $f(x, p)$ está restringida a la capa de masa $p^\mu p_\mu = m^2$ y satisface la Ecuación de Boltzmann Covariante:
 
-$$ p^\mu \partial_\mu f(x, p) + \Gamma^\mu_{\alpha\beta} p^\alpha p^\beta \frac{\partial f}{\partial p^\mu} = C[f] $$
+$$
+p^\mu \partial_\mu f(x, p) + \Gamma^\mu_{\alpha\beta} p^\alpha p^\beta \frac{\partial f}{\partial p^\mu} = C[f]
+$$
 
 donde $\Gamma^\mu_{\alpha\beta}$ son los símbolos de Christoffel que codifican los efectos de la curvatura del espacio-tiempo (o fuerzas externas), y $C[f]$ es el término de colisión que encierra las interacciones.
 
 El tensor de energía-momento $T^{\mu\nu}$ y el vector de corriente $N^\mu$ se obtienen tomando momentos distribucionales respecto a $p^\mu$:
 
-$$ N^\mu = \int \frac{d^3p}{(2\pi)^3 p^0} \, p^\mu f(x, p) $$
+$$
+N^\mu = \int \frac{d^3p}{(2\pi)^3 p^0} \, p^\mu f(x, p)
+$$
 
-$$ T^{\mu\nu} = \int \frac{d^3p}{(2\pi)^3 p^0} \, p^\mu p^\nu f(x, p) $$
+$$
+T^{\mu\nu} = \int \frac{d^3p}{(2\pi)^3 p^0} \, p^\mu p^\nu f(x, p)
+$$
 
 Para deducir las ecuaciones de la hidrodinámica, se utiliza el **Método de Chapman-Enskog** o la expansión de Grad. Expandiendo la función de distribución alrededor del equilibrio local $f = f^{(0)} + \delta f$, donde $f^{(0)}(x,p) = [ \exp((p_\mu u^\mu - \mu)/T) \pm 1 ]^{-1}$ (estadística de Fermi-Dirac o Bose-Einstein con cuadrivelocidad del fluido $u^\mu$), los momentos del término $\delta f$ permiten derivar matemáticamente coeficientes de transporte como la viscosidad de cizalla $\eta$ y la conductividad térmica $\kappa$. El límite de la relajación de las funciones de Green fuera del equilibrio de Keldysh proporciona las definiciones microscópicas exactas de estos coeficientes mediante las **Fórmulas de Kubo**, ligando rigurosamente las fluctuaciones termales a la disipación irreversible macroscópica.
 
@@ -275,7 +329,11 @@ Para deducir las ecuaciones de la hidrodinámica, se utiliza el **Método de Cha
    **Importancia Teórica:** El salto monumental donde Maxwell asume, antes que nadie, que las partículas en un gas en equilibrio no viajan a una velocidad única $v_{rms}$, sino que exhiben una distribución aleatoria de velocidades gobernada por la mecánica probabilística y el caos molecular (ausencia de memoria de choques previos).  
    **Fondo Matemático:** Separando componentes isótropas, Maxwell demostró geométricamente que la única función de densidad de probabilidad independiente $f(v_x, v_y, v_z) = f(v_x)f(v_y)f(v_z)$ que respeta la simetría esférica $v^2$ es una gaussiana. La densidad de probabilidad respecto al módulo de velocidad $v$ es:
 
-   $$ f(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2k_B T}\right) $$
+   
+
+$$
+f(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2k_B T}\right)
+$$
 
    **Implicaciones Físicas:** Predijo asombrosamente fenómenos de transporte gaseoso; entre ellos, que la viscosidad interna de un gas ideal puro (a diferencia de un fluido denso) es absolutamente *independiente de su presión* macroscópica.
 
@@ -284,11 +342,19 @@ Para deducir las ecuaciones de la hidrodinámica, se utiliza el **Método de Cha
    **Importancia Teórica:** Este es uno de los famosos artículos del "Año Milagroso" (Annus Mirabilis) de Einstein. Resolvió el misterio del *Movimiento Browniano* (el movimiento estocástico en zigzag de un grano de polen microscópico en agua) y proporcionó la prueba experimental empírica decisiva de la existencia atómica que silenció a los físicos antiatomistas (como Ernst Mach).  
    **Fondo Matemático:** Combinando la teoría cinética clásica y principios estocásticos con la hidrodinámica (viscosidad $\eta$), Einstein derivó el coeficiente de difusión termodinámico libre $D$:
 
-   $$ D = \frac{k_B T}{6\pi \eta a} $$
+   
+
+$$
+D = \frac{k_B T}{6\pi \eta a}
+$$
 
    y vinculó el desplazamiento cuadrático medio con el tiempo de evolución aleatoria, revelando que su varianza crece de modo difusivo y no balístico:
 
-   $$ \langle x^2 \rangle = 2 D t $$
+   
+
+$$
+\langle x^2 \rangle = 2 D t
+$$
 
    **Implicaciones Físicas:** Permitía el cálculo del número de Avogadro $N_A$ midiendo con un microscopio el recorrido browniano de esferitas, y validaba irrevocablemente la realidad de las colisiones moleculares caóticas.
 
@@ -297,7 +363,11 @@ Para deducir las ecuaciones de la hidrodinámica, se utiliza el **Método de Cha
    **Importancia Teórica:** Después de Maxwell, Boltzmann expande la teoría analizando cómo el equilibrio termodinámico macroscópico del gas ideal emerge como el estado macroestadístico más matemáticamente probable de entre todos sus ensambles.  
    **Fondo Matemático:** Analiza las permutaciones combinatorias logarítmicas de las distribuciones cinéticas, llevando a la ecuación que fundó el puente final micro-macro:
 
-   $$ S = k_B \ln \Omega $$
+   
+
+$$
+S = k_B \ln \Omega
+$$
 
    **Implicaciones Físicas:** La teoría de los gases ideales dejó de ser solo un modelo mecánico y se convirtió en la base conceptual ineludible de la termodinámica fundamental y la flecha asimétrica cosmológica del tiempo.
 

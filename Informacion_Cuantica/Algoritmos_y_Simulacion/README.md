@@ -11,9 +11,7 @@ Los algoritmos cuánticos y la simulación se basan en una estructura matemátic
 La Transformada de Fourier Cuántica es el análogo cuántico de la transformada de Fourier discreta (DFT). Dada una base computacional ortonormal $|0\rangle, |1\rangle, \dots, |N-1\rangle$, donde $N = 2^n$ (con $n$ el número de qubits), la QFT se define mediante la siguiente transformación lineal:
 
 $$
-
 \text{QFT} |j\rangle = \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2\pi i j k / N} |k\rangle
-
 $$
 
 Para entender la estructura en términos de qubits, podemos escribir $j$ y $k$ en representación binaria:
@@ -23,33 +21,25 @@ $k = k_1 k_2 \dots k_n = k_1 2^{n-1} + k_2 2^{n-2} + \dots + k_n 2^0$
 La acción sobre el estado base se puede reescribir como un producto tensorial. Observando que la fase $e^{2\pi i j k / 2^n}$ se puede separar:
 
 $$
-
 \frac{k}{2^n} = \sum_{l=1}^n k_l 2^{-l}
-
 $$
 
 Por lo tanto:
 
 $$
-
 \text{QFT} |j\rangle = \frac{1}{\sqrt{2^n}} \bigotimes_{l=1}^n \left( |0\rangle + e^{2\pi i j 2^{-l}} |1\rangle \right)
-
 $$
 
 Desarrollando los términos exponenciales $j 2^{-l}$, notamos que la parte entera no contribuye a la fase (puesto que $e^{2\pi i m} = 1$ para $m \in \mathbb{Z}$). Al introducir la notación de fracción binaria $0.j_l j_{l+1} \dots j_n = \sum_{m=l}^n j_m 2^{-(m-l+1)}$, obtenemos la forma factorizada de la QFT:
 
 $$
-
 \text{QFT} |j_1 j_2 \dots j_n\rangle = \frac{1}{\sqrt{2^n}} \left( |0\rangle + e^{2\pi i 0.j_n} |1\rangle \right) \otimes \left( |0\rangle + e^{2\pi i 0.j_{n-1} j_n} |1\rangle \right) \otimes \dots \otimes \left( |0\rangle + e^{2\pi i 0.j_1 j_2 \dots j_n} |1\rangle \right)
-
 $$
 
 Este desarrollo muestra que el circuito cuántico correspondiente requiere únicamente compuertas de Hadamard ($H$) y rotaciones de fase condicionales ($R_k$):
 
 $$
-
 R_k = \begin{pmatrix} 1 & 0 \\ 0 & e^{2\pi i / 2^k} \end{pmatrix}
-
 $$
 
 El número de compuertas requeridas escala como $\mathcal{O}(n^2)$, proporcionando una ventaja exponencial frente al análogo clásico (la Fast Fourier Transform), que requiere $\mathcal{O}(n 2^n)$ operaciones.
@@ -61,33 +51,25 @@ La simulación cuántica busca reproducir la dinámica de un sistema cuántico g
 Para implementar $U(t)$ en un ordenador cuántico universal, utilizamos la fórmula de Lie-Trotter-Suzuki:
 
 $$
-
 e^{-i(A+B)t} = \lim_{n \to \infty} \left( e^{-i A t/n} e^{-i B t/n} \right)^n
-
 $$
 
 Para un paso de tiempo finito $\Delta t = t/r$, podemos aproximar la evolución completa dividiendo el tiempo total $t$ en $r$ intervalos o "pasos de Trotter". La aproximación de primer orden es:
 
 $$
-
 U(t) = e^{-i \sum_j H_j t} \approx \left( \prod_{j=1}^m e^{-i H_j \Delta t} \right)^r + \mathcal{O}(m^2 \Delta t^2)
-
 $$
 
 Donde el término de error $\mathcal{O}(m^2 \Delta t^2)$ surge de los conmutadores no nulos entre los sub-hamiltonianos. El límite de error riguroso (según la expansión de Baker-Campbell-Hausdorff) para la descomposición de primer orden es:
 
 $$
-
 \| e^{-i(A+B)t} - (e^{-i A t/r} e^{-i B t/r})^r \| \leq \frac{t^2}{2r} \| [A,B] \|
-
 $$
 
 Para mejorar la precisión, se recurre a aproximaciones de orden superior, como la fórmula de Trotter-Suzuki de segundo orden:
 
 $$
-
 S_2(t) = \prod_{j=1}^m e^{-i H_j \Delta t / 2} \prod_{j=m}^1 e^{-i H_j \Delta t / 2}
-
 $$
 
 cuyo error se reduce a $\mathcal{O}(\Delta t^3)$. De esta manera, al segmentar la simulación temporal en circuitos cuánticos elementales, logramos resolver dinámicas extremadamente complejas, que clásicamente sufrirían del crecimiento exponencial del espacio de Hilbert.
@@ -115,9 +97,7 @@ graph TD
 En VQE, el ordenador cuántico evalúa eficientemente el valor esperado de la energía $\langle \psi(\theta) | H | \psi(\theta) \rangle$, mientras que un optimizador clásico ajusta $\theta$ para minimizarla, en virtud del principio variacional de Rayleigh-Ritz:
 
 $$
-
 E_0 \leq \frac{\langle \psi | H | \psi \rangle}{\langle \psi | \psi \rangle}
-
 $$
 
 Este método evita los largos circuitos de fase necesarios en el Algoritmo de Estimación de Fase Cuántica (QPE), convirtiéndose en la principal herramienta de simulación cuántica hoy en día.
@@ -134,11 +114,19 @@ Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqr
 4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
 5. Calculamos cada término:
 
-   $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+   
+
+$$
+\langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}}
+$$
 
 6. Sumando los términos, el valor de expectación es:
 
-   $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+   
+
+$$
+\langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2}
+$$
 
 7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
 
@@ -160,7 +148,11 @@ Construya el circuito y derive la acción de la QFT sobre un estado de base comp
 1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
 2. Para 3 qubits, se puede reescribir como un producto tensorial:
 
-   $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+   
+
+$$
+\frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)
+$$
 
 3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
 4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
@@ -227,11 +219,15 @@ Considerando la simulación cuántica de campos bosónicos, el espacio de fases 
 
 Para simulaciones moleculares de muchos cuerpos, la geometría del Ansatz (el espacio paramétrico $\mathcal{M}$ explorado por un circuito de la forma $|\psi(\vec{\theta})\rangle$) se equipa con la **Métrica de Fubini-Study**, que provee una estructura de variedad de Kähler al espacio de rayos proyectivos $\mathbb{CP}^{2^n-1}$. La métrica empírica es el Tensor de Información Cuántica (QGT) y su parte real es el Tensor Métrico Cuántico (QMT):
 
-$$ g_{\mu \nu}(\vec{\theta}) = \text{Re}\left( \langle \partial_\mu \psi(\vec{\theta}) | \partial_\nu \psi(\vec{\theta}) \rangle - \langle \partial_\mu \psi(\vec{\theta}) | \psi(\vec{\theta}) \rangle \langle \psi(\vec{\theta}) | \partial_\nu \psi(\vec{\theta}) \rangle \right) $$
+$$
+g_{\mu \nu}(\vec{\theta}) = \text{Re}\left( \langle \partial_\mu \psi(\vec{\theta}) | \partial_\nu \psi(\vec{\theta}) \rangle - \langle \partial_\mu \psi(\vec{\theta}) | \psi(\vec{\theta}) \rangle \langle \psi(\vec{\theta}) | \partial_\nu \psi(\vec{\theta}) \rangle \right)
+$$
 
 Para que el VQE escape de la trampa topológica de los mínimos locales, la optimización geométrica requiere la ecuación de flujo del Descenso Gradiente Cuántico Natural:
 
-$$ \dot{\theta}^\mu = - \eta \sum_\nu g^{\mu \nu}(\vec{\theta}) \frac{\partial E(\vec{\theta})}{\partial \theta^\nu} $$
+$$
+\dot{\theta}^\mu = - \eta \sum_\nu g^{\mu \nu}(\vec{\theta}) \frac{\partial E(\vec{\theta})}{\partial \theta^\nu}
+$$
 
 En 2026, la teoría del transporte óptimo en variedades singulares se emplea para demostrar rigurosamente que ciertas parametrizaciones dinámicas del álgebra de Lie limitan las holonomías adiabáticas no deseadas, posibilitando la simulación hamiltoniana tolerante al ruido topológico.
 
@@ -254,11 +250,11 @@ En 2026, la teoría del transporte óptimo en variedades singulares se emplea pa
    - **Importancia Teórica:** Formaliza la intuición de Feynman, probando matemáticamente que un simulador cuántico universal puede operar eficientemente simulando sistemas locales.
    - **Fondo Matemático:** Emplea la expansión de Suzuki-Trotter para dividir el Hamiltoniano total $H = \sum_j H_j$ en pasos manejables, limitando el error de los conmutadores no nulos:
 
-     $$
+     
 
-     e^{-i H t} \approx \left( \prod_j e^{-i H_j \Delta t} \right)^{t/\Delta t}
-
-     $$
+$$
+e^{-i H t} \approx \left( \prod_j e^{-i H_j \Delta t} \right)^{t/\Delta t}
+$$
 
    - **Implicaciones Físicas:** Garantiza la viabilidad de la simulación molecular dinámica, reduciendo la barrera teórica de la simulación de materiales exóticos.
 
@@ -267,11 +263,11 @@ En 2026, la teoría del transporte óptimo en variedades singulares se emplea pa
    - **Importancia Teórica:** Introduce el Variational Quantum Eigensolver (VQE), un algoritmo híbrido cuántico-clásico, resiliente al ruido y pilar de los algoritmos NISQ actuales.
    - **Fondo Matemático:** Usa el principio variacional de Rayleigh-Ritz:
 
-     $$
+     
 
-     E_0 \leq \frac{\langle \psi(\vec{\theta}) | H | \psi(\vec{\theta}) \rangle}{\langle \psi(\vec{\theta}) | \psi(\vec{\theta}) \rangle}
-
-     $$
+$$
+E_0 \leq \frac{\langle \psi(\vec{\theta}) | H | \psi(\vec{\theta}) \rangle}{\langle \psi(\vec{\theta}) | \psi(\vec{\theta}) \rangle}
+$$
 
      donde $|\psi(\vec{\theta})\rangle$ es un ansatz parametrizado, y la CPU clásica optimiza $\vec{\theta}$ mediante gradiente descendente estocástico.
    - **Implicaciones Físicas:** Hizo realizable la química cuántica de moléculas pequeñas con el hardware ruidoso de la era contemporánea.

@@ -17,15 +17,28 @@ Consideremos una variedad euclidiana $\mathbb{R}^3$ dotada de una base ortonorma
 
 - **Vector Posición ($\vec{r}(t)$)**: Define la localización instantánea del móvil.
 
-  $$ \vec{r}(t) = \sum_{i=1}^3 x_i(t) \hat{e}_i = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} $$
+  
+
+$$
+\vec{r}(t) = \sum_{i=1}^3 x_i(t) \hat{e}_i = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k}
+$$
+
   
 - **Cinemática Diferencial**: Definiendo el desplazamiento diferencial $d\vec{r}$, se obtiene la velocidad instantánea como el límite del cociente de diferencias:
 
-  $$ \vec{v}(t) = \lim_{\Delta t \to 0} \frac{\vec{r}(t+\Delta t) - \vec{r}(t)}{\Delta t} = \frac{d\vec{r}}{dt} = \dot{\vec{r}}(t) $$
+  
+
+$$
+\vec{v}(t) = \lim_{\Delta t \to 0} \frac{\vec{r}(t+\Delta t) - \vec{r}(t)}{\Delta t} = \frac{d\vec{r}}{dt} = \dot{\vec{r}}(t)
+$$
 
   La aceleración instantánea es la derivada de la velocidad:
 
-  $$ \vec{a}(t) = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2} = \ddot{\vec{r}}(t) $$
+  
+
+$$
+\vec{a}(t) = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2} = \ddot{\vec{r}}(t)
+$$
 
 ### 2. Geometría Diferencial de Curvas y Triedro de Frenet-Serret
 
@@ -33,25 +46,41 @@ Para una trayectoria suave parametrizada por la longitud de arco $s(t) = \int_{t
 
 1. **Vector Tangente Unitario ($\hat{T}$)**:
 
-   $$ \hat{T} = \frac{d\vec{r}}{ds} = \frac{d\vec{r}/dt}{ds/dt} = \frac{\vec{v}}{|\vec{v}|} $$
+   
+
+$$
+\hat{T} = \frac{d\vec{r}}{ds} = \frac{d\vec{r}/dt}{ds/dt} = \frac{\vec{v}}{|\vec{v}|}
+$$
 
 2. **Vector Normal Principal ($\hat{N}$)**: Mide la tasa de cambio direccional de $\hat{T}$.
 
-   $$ \frac{d\hat{T}}{ds} = \kappa \hat{N} $$
+   
+
+$$
+\frac{d\hat{T}}{ds} = \kappa \hat{N}
+$$
 
    donde $\kappa = 1/\rho$ es la curvatura y $\rho$ es el radio de curvatura local.
 3. **Vector Binormal ($\hat{B}$)**:
 
-   $$ \hat{B} = \hat{T} \times \hat{N} $$
+   
+
+$$
+\hat{B} = \hat{T} \times \hat{N}
+$$
 
 **Descomposición Intrínseca de la Aceleración**:
 Usando la regla de la cadena para la velocidad $\vec{v}(t) = v(t) \hat{T}(t)$ (donde $v = ds/dt$), derivamos para hallar la aceleración:
 
-$$ \vec{a}(t) = \frac{d}{dt}(v \hat{T}) = \dot{v} \hat{T} + v \frac{d\hat{T}}{dt} $$
+$$
+\vec{a}(t) = \frac{d}{dt}(v \hat{T}) = \dot{v} \hat{T} + v \frac{d\hat{T}}{dt}
+$$
 
 Aplicando $\frac{d\hat{T}}{dt} = \frac{d\hat{T}}{ds} \frac{ds}{dt} = (\kappa \hat{N}) v = \frac{v}{\rho} \hat{N}$:
 
-$$ \vec{a}(t) = a_t \hat{T} + a_n \hat{N} = \ddot{s} \hat{T} + \frac{v^2}{\rho} \hat{N} $$
+$$
+\vec{a}(t) = a_t \hat{T} + a_n \hat{N} = \ddot{s} \hat{T} + \frac{v^2}{\rho} \hat{N}
+$$
 
 Esto demuestra rigurosamente que la aceleración tiene una componente tangencial que altera la celeridad y una componente normal (centrípeta) responsable de cambiar la dirección del movimiento, sin que exista componente en la dirección binormal.
 
@@ -68,21 +97,31 @@ graph TD
 
 Dado un campo de aceleraciones $\vec{a}(t)$, las soluciones analíticas para $\vec{v}(t)$ y $\vec{r}(t)$ requieren dos condiciones de frontera o iniciales, $\vec{r}(t_0) = \vec{r}_0$ y $\vec{v}(t_0) = \vec{v}_0$:
 
-$$ \vec{v}(t) = \vec{v}_0 + \int_{t_0}^t \vec{a}(\tau) d\tau $$
+$$
+\vec{v}(t) = \vec{v}_0 + \int_{t_0}^t \vec{a}(\tau) d\tau
+$$
 
-$$ \vec{r}(t) = \vec{r}_0 + \int_{t_0}^t \vec{v}(\tau) d\tau $$
+$$
+\vec{r}(t) = \vec{r}_0 + \int_{t_0}^t \vec{v}(\tau) d\tau
+$$
 
 **Caso de Aceleración Constante ($\vec{a}(t) = \vec{a}_0$)**:
 Sustituyendo e integrando formalmente:
 
-$$ \vec{v}(t) = \vec{v}_0 + \vec{a}_0(t - t_0) $$
+$$
+\vec{v}(t) = \vec{v}_0 + \vec{a}_0(t - t_0)
+$$
 
-$$ \vec{r}(t) = \vec{r}_0 + \vec{v}_0(t - t_0) + \frac{1}{2}\vec{a}_0(t - t_0)^2 $$
+$$
+\vec{r}(t) = \vec{r}_0 + \vec{v}_0(t - t_0) + \frac{1}{2}\vec{a}_0(t - t_0)^2
+$$
 
 **Ecuación de Torricelli (Relación Integral Generalizada)**:
 Para movimiento unidimensional dependiente de la posición, sea $a = a(x)$. Usando la regla de la cadena $a(x) = \frac{dv}{dt} = v \frac{dv}{dx}$:
 
-$$ \int_{v_0}^{v} v' dv' = \int_{x_0}^{x} a(x') dx' \implies \frac{1}{2}v^2 - \frac{1}{2}v_0^2 = \int_{x_0}^{x} a(x') dx' $$
+$$
+\int_{v_0}^{v} v' dv' = \int_{x_0}^{x} a(x') dx' \implies \frac{1}{2}v^2 - \frac{1}{2}v_0^2 = \int_{x_0}^{x} a(x') dx'
+$$
 
 Si $a$ es constante, recuperamos $v^2 = v_0^2 + 2a(x - x_0)$.
 
@@ -93,21 +132,31 @@ A menudo, las simetrías físicas dictan el uso de bases locales ortonormales en
 **Coordenadas Polares 2D $(r, \theta)$**:
 La base de vectores unitarios rota con el tiempo:
 
-$$ \hat{e}_r = \cos\theta \hat{i} + \sin\theta \hat{j} $$
+$$
+\hat{e}_r = \cos\theta \hat{i} + \sin\theta \hat{j}
+$$
 
-$$ \hat{e}_\theta = -\sin\theta \hat{i} + \cos\theta \hat{j} $$
+$$
+\hat{e}_\theta = -\sin\theta \hat{i} + \cos\theta \hat{j}
+$$
 
 Las derivadas de los vectores unitarios con respecto al tiempo revelan dependencias de $\dot{\theta}$:
 
-$$ \dot{\hat{e}}_r = \dot{\theta}\hat{e}_\theta, \quad \dot{\hat{e}}_\theta = -\dot{\theta}\hat{e}_r $$
+$$
+\dot{\hat{e}}_r = \dot{\theta}\hat{e}_\theta, \quad \dot{\hat{e}}_\theta = -\dot{\theta}\hat{e}_r
+$$
 
 El vector posición es $\vec{r} = r \hat{e}_r$. La velocidad se deriva usando la regla del producto:
 
-$$ \vec{v} = \dot{r} \hat{e}_r + r \dot{\hat{e}}_r = \dot{r} \hat{e}_r + r \dot{\theta} \hat{e}_\theta $$
+$$
+\vec{v} = \dot{r} \hat{e}_r + r \dot{\hat{e}}_r = \dot{r} \hat{e}_r + r \dot{\theta} \hat{e}_\theta
+$$
 
 Derivando de nuevo para la aceleración:
 
-$$ \vec{a} = \frac{d}{dt}(\dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_\theta) = (\ddot{r} - r\dot{\theta}^2)\hat{e}_r + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\hat{e}_\theta $$
+$$
+\vec{a} = \frac{d}{dt}(\dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_\theta) = (\ddot{r} - r\dot{\theta}^2)\hat{e}_r + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\hat{e}_\theta
+$$
 
 - El término $-r\dot{\theta}^2$ representa la aceleración centrípeta.
 - El término $2\dot{r}\dot{\theta}$ es la **aceleración de Coriolis**, vital en marcos de referencia rotatorios y sistemas que cambian su radio de curvatura.
@@ -117,11 +166,15 @@ $$ \vec{a} = \frac{d}{dt}(\dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_\theta) = (\dd
 La linealidad del operador derivada permite desacoplar la cinemática en direcciones ortogonales. Para el movimiento de proyectiles en un campo gravitacional uniforme $\vec{g} = -g \hat{k}$:
 La ecuación diferencial rectora $\ddot{\vec{r}} = -g \hat{k}$ implica:
 
-$$ \ddot{x} = 0, \quad \ddot{y} = 0, \quad \ddot{z} = -g $$
+$$
+\ddot{x} = 0, \quad \ddot{y} = 0, \quad \ddot{z} = -g
+$$
 
 Lo que produce el conjunto clásico desacoplado:
 
-$$ \begin{cases} x(t) = x_0 + v_{x0}t \\ y(t) = y_0 + v_{y0}t \\ z(t) = z_0 + v_{z0}t - \frac{1}{2}gt^2 \end{cases} $$
+$$
+\begin{cases} x(t) = x_0 + v_{x0}t \\ y(t) = y_0 + v_{y0}t \\ z(t) = z_0 + v_{z0}t - \frac{1}{2}gt^2 \end{cases}
+$$
 
 Eliminando el parámetro temporal $t$, se obtiene la ecuación de la trayectoria parabólica en el plano de movimiento.
 
@@ -135,15 +188,27 @@ Un cañón dispara un proyectil con velocidad $v_0$ a un ángulo $\theta$. ¿Cu�
    Usando $v_y = v_0 \sin\theta - gt = 0 \implies t_{subida} = \frac{v_0 \sin\theta}{g}$.
    Sustituyendo en $y(t)$:
 
-   $$ H = (v_0 \sin\theta)\left(\frac{v_0 \sin\theta}{g}\right) - \frac{1}{2}g\left(\frac{v_0 \sin\theta}{g}\right)^2 = \mathbf{\frac{v_0^2 \sin^2\theta}{2g}} $$
+   
+
+$$
+H = (v_0 \sin\theta)\left(\frac{v_0 \sin\theta}{g}\right) - \frac{1}{2}g\left(\frac{v_0 \sin\theta}{g}\right)^2 = \mathbf{\frac{v_0^2 \sin^2\theta}{2g}}
+$$
 
 2. **Alcance Máximo ($R$)**: El proyectil cae al suelo cuando $y=0$ (en $t = 2 t_{subida}$ por simetría).
 
-   $$ t_{total} = \frac{2v_0 \sin\theta}{g} $$
+   
+
+$$
+t_{total} = \frac{2v_0 \sin\theta}{g}
+$$
 
    Sustituyendo en $x(t)$:
 
-   $$ R = (v_0 \cos\theta)\left(\frac{2v_0 \sin\theta}{g}\right) = \frac{v_0^2 (2 \sin\theta \cos\theta)}{g} = \mathbf{\frac{v_0^2 \sin(2\theta)}{g}} $$
+   
+
+$$
+R = (v_0 \cos\theta)\left(\frac{2v_0 \sin\theta}{g}\right) = \frac{v_0^2 (2 \sin\theta \cos\theta)}{g} = \mathbf{\frac{v_0^2 \sin(2\theta)}{g}}
+$$
 
    *(De aquí se deduce que el alcance máximo ocurre a $\theta = 45^\circ$)*.
 
@@ -260,7 +325,9 @@ En una formulación matemáticamente rigurosa, la cinemática de cuerpos rígido
 
 La configuración espacial de un cuerpo rígido pertenece a la variedad diferenciable $SE(3) = \mathbb{R}^3 \ltimes SO(3)$. La cinemática puede formularse elegantemente mediante la cinemática de curvas en grupos de Lie. Si $g(t) \in SE(3)$ es la trayectoria, la "velocidad" se define en el álgebra de Lie $\mathfrak{se}(3)$ usando la derivada logarítmica:
 
-$$ \hat{V}^b = g^{-1} \dot{g} = \begin{pmatrix} \hat{\omega} & v \\ 0 & 0 \end{pmatrix} \in \mathfrak{se}(3) $$
+$$
+\hat{V}^b = g^{-1} \dot{g} = \begin{pmatrix} \hat{\omega} & v \\ 0 & 0 \end{pmatrix} \in \mathfrak{se}(3)
+$$
 
 donde $\hat{\omega} \in \mathfrak{so}(3)$ es la matriz antisimétrica asociada al vector de velocidad angular $\omega \in \mathbb{R}^3$, y $v \in \mathbb{R}^3$ es la velocidad de traslación. La derivada temporal de objetos vectoriales adscritos a este marco rotatorio general (como los momentos) es tratada intrínsecamente usando el corchete de Lie o el operador adjunto de la cinemática (derivada covariante).
 

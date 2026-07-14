@@ -10,27 +10,39 @@ El confinamiento de plasmas busca atrapar un plasma incandescente contrarrestand
 
 Para un plasma ideal en equilibrio estacionario bajo confinamiento magnético, la ecuación de momento de la magnetohidrodinámica establece que la presión térmica del plasma $\nabla p$ debe estar exactamente balanceada por la fuerza de Lorentz generada por las corrientes internas $\mathbf{J}$ y el campo magnético $\mathbf{B}$:
 
-$$ \nabla p = \mathbf{J} \times \mathbf{B} $$
+$$
+\nabla p = \mathbf{J} \times \mathbf{B}
+$$
 
 Multiplicando escalarmente esta ecuación por $\mathbf{B}$ y por $\mathbf{J}$, descubrimos dos propiedades fundamentales del equilibrio magnético toroidal:
 
-$$ \mathbf{B} \cdot \nabla p = 0 $$
+$$
+\mathbf{B} \cdot \nabla p = 0
+$$
 
-$$ \mathbf{J} \cdot \nabla p = 0 $$
+$$
+\mathbf{J} \cdot \nabla p = 0
+$$
 
 Estas identidades demuestran que tanto las líneas de campo magnético como las líneas de corriente yacen enteramente sobre superficies de presión constante ($p = \text{cte}$). En configuraciones toroidales como el Tokamak, estas se denominan **superficies magnéticas**. Para evitar que el campo intercepte la pared, el plasma debe poseer una estructura topológica de toros anidados.
 
 Sustituyendo la ley de Ampère estática $\mathbf{J} = \frac{1}{\mu_0} \nabla \times \mathbf{B}$ en la ecuación de equilibrio:
 
-$$ \nabla p = \frac{1}{\mu_0} (\nabla \times \mathbf{B}) \times \mathbf{B} = -\nabla\left( \frac{B^2}{2\mu_0} \right) + \frac{(\mathbf{B} \cdot \nabla)\mathbf{B}}{\mu_0} $$
+$$
+\nabla p = \frac{1}{\mu_0} (\nabla \times \mathbf{B}) \times \mathbf{B} = -\nabla\left( \frac{B^2}{2\mu_0} \right) + \frac{(\mathbf{B} \cdot \nabla)\mathbf{B}}{\mu_0}
+$$
 
 Si el campo magnético es rectilíneo, el término de tensión magnética $(\mathbf{B} \cdot \nabla)\mathbf{B}$ se anula. En tal caso, integrando espacialmente obtenemos el equilibrio de presión:
 
-$$ p + \frac{B^2}{2\mu_0} = \text{constante} $$
+$$
+p + \frac{B^2}{2\mu_0} = \text{constante}
+$$
 
 Este resultado define a **$\beta$ (beta de plasma)**, una figura de mérito crucial para la viabilidad económica de un reactor, que representa la relación entre la presión del plasma y la presión del campo magnético confinante:
 
-$$ \beta = \frac{p}{B^2 / (2\mu_0)} = \frac{2\mu_0 n k_B T}{B^2} $$
+$$
+\beta = \frac{p}{B^2 / (2\mu_0)} = \frac{2\mu_0 n k_B T}{B^2}
+$$
 
 El límite empírico para la estabilidad en un Tokamak está dado por el límite de Troyon: $\beta_{max} \propto I_p / (a B_0)$, donde $I_p$ es la corriente del plasma y $a$ es el radio menor.
 
@@ -38,7 +50,9 @@ El límite empírico para la estabilidad en un Tokamak está dado por el límite
 
 Para una configuración toroidal axisimétrica (independiente del ángulo toroidal $\phi$), como la de un Tokamak, el campo magnético se descompone en sus componentes poloidal (generado por corrientes en el plasma) y toroidal (generado por bobinas externas). El flujo poloidal $\psi$ funciona como coordenada superficial. La ecuación de equilibrio $\nabla p = \mathbf{J} \times \mathbf{B}$ se reduce a la famosa **Ecuación de Grad-Shafranov**:
 
-$$ R \frac{\partial}{\partial R} \left( \frac{1}{R} \frac{\partial \psi}{\partial R} \right) + \frac{\partial^2 \psi}{\partial Z^2} = -\mu_0 R^2 p'(\psi) - \mu_0^2 F(\psi) F'(\psi) $$
+$$
+R \frac{\partial}{\partial R} \left( \frac{1}{R} \frac{\partial \psi}{\partial R} \right) + \frac{\partial^2 \psi}{\partial Z^2} = -\mu_0 R^2 p'(\psi) - \mu_0^2 F(\psi) F'(\psi)
+$$
 
 Donde:
 - $(R, \phi, Z)$ son las coordenadas cilíndricas.
@@ -52,7 +66,9 @@ Esta es una ecuación diferencial elíptica y altamente no lineal (ya que $p$ y 
 
 El factor de seguridad $q$ en una superficie magnética describe el número de vueltas toroidales que completa una línea de campo por cada vuelta poloidal. Para una geometría toroidal de aproximación cilíndrica (radio mayor $R$, radio menor $r$):
 
-$$ q(r) = \frac{r B_\phi}{R B_\theta} $$
+$$
+q(r) = \frac{r B_\phi}{R B_\theta}
+$$
 
 El perfil de $q(r)$ es esencial. Si el perfil cruza un valor racional (ej. $q=1, 2, 3/2$), las líneas de campo se cierran sobre sí mismas, lo que excita inestabilidades destructivas MHD (modos *kink*, islas magnéticas o *tearing modes*). Mantener $q > 1$ en todo el plasma es el criterio de Kruskal-Shafranov para suprimir el modo kink ideal.
 
@@ -83,11 +99,15 @@ graph TD
 El tiempo de confinamiento de energía $\tau_E$ está determinado por la difusión de partículas y calor perpendicular al campo magnético.
 El **Transporte Clásico** se basa en paseos aleatorios causados por colisiones de Coulomb. El paso del paseo aleatorio es el radio de Larmor (giroradio) $\rho_L = mv_\perp / (qB)$. El coeficiente de difusión clásico escala como:
 
-$$ D_{cl} \approx \frac{\rho_L^2}{\tau_{col}} \propto \frac{1}{B^2} $$
+$$
+D_{cl} \approx \frac{\rho_L^2}{\tau_{col}} \propto \frac{1}{B^2}
+$$
 
 Sin embargo, en una geometría toroidal, el campo magnético es más fuerte en la parte interna del toro ($B \propto 1/R$). Esta inhomogeneidad atrapa partículas en órbitas en forma de "plátano" (banana orbits). Las excursiones de estas partículas atrapadas no son $\rho_L$, sino el ancho de la órbita de banana, que es mucho mayor. Esto da lugar al **Transporte Neoclásico**, donde:
 
-$$ D_{neo} \approx q^2 \left(\frac{R}{r}\right)^{3/2} D_{cl} $$
+$$
+D_{neo} \approx q^2 \left(\frac{R}{r}\right)^{3/2} D_{cl}
+$$
 
 En la realidad, el transporte en Tokamaks suele ser **Anómalo**, dominado por turbulencia a pequeña escala impulsada por gradientes, que produce pérdidas entre 10 y 100 veces mayores que las predicciones neoclásicas.
 
@@ -103,26 +123,54 @@ En la realidad, el transporte en Tokamaks suele ser **Anómalo**, dominado por t
 1. **Cálculo del campo poloidal en el borde ($B_\theta(a)$):**
    Utilizando la ley de Ampère en la superficie límite del plasma (radio $a$):
 
-   $$ \oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_p $$
+   
 
-   $$ 2\pi a B_\theta(a) = \mu_0 I_p $$
+$$
+\oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_p
+$$
 
-   $$ B_\theta(a) = \frac{\mu_0 I_p}{2\pi a} $$
+   
+
+$$
+2\pi a B_\theta(a) = \mu_0 I_p
+$$
+
+   
+
+$$
+B_\theta(a) = \frac{\mu_0 I_p}{2\pi a}
+$$
 
    Usando $\mu_0 = 4\pi \times 10^{-7} \, \text{T}\cdot\text{m/A}$:
 
-   $$ B_\theta(a) = \frac{(4\pi \times 10^{-7}) (3.2 \times 10^6)}{2\pi (1.25)} = \frac{2 \times 10^{-7} \times 3.2 \times 10^6}{1.25} $$
+   
 
-   $$ B_\theta(a) = \frac{0.64}{1.25} = 0.512 \, \text{T} $$
+$$
+B_\theta(a) = \frac{(4\pi \times 10^{-7}) (3.2 \times 10^6)}{2\pi (1.25)} = \frac{2 \times 10^{-7} \times 3.2 \times 10^6}{1.25}
+$$
+
+   
+
+$$
+B_\theta(a) = \frac{0.64}{1.25} = 0.512 \, \text{T}
+$$
 
 2. **Cálculo del factor de seguridad en el borde ($q_a$):**
    La aproximación cilíndrica (gran relación de aspecto) para $q$ evaluada en el radio $a$ es:
 
-   $$ q_a \approx \frac{a B_\phi(R)}{R B_\theta(a)} $$
+   
+
+$$
+q_a \approx \frac{a B_\phi(R)}{R B_\theta(a)}
+$$
 
    Asumiendo que el campo toroidal en $R$ es $B_0 = 3.45 \, \text{T}$:
 
-   $$ q_a = \frac{1.25 \times 3.45}{2.96 \times 0.512} = \frac{4.3125}{1.5155} \approx 2.84 $$
+   
+
+$$
+q_a = \frac{1.25 \times 3.45}{2.96 \times 0.512} = \frac{4.3125}{1.5155} \approx 2.84
+$$
 
 3. **Verificación de Estabilidad de Kruskal-Shafranov:**
    El criterio de estabilidad exige que $q > 1$ (típicamente $q_a > 2$ a $3$ para asegurar estabilidad global frente a interrupciones kink externas).
@@ -140,12 +188,16 @@ En una geometría toroidal, un anillo de plasma experimenta una fuerza neta haci
 3. La tensión del campo magnético toroidal, que intenta enderezar las líneas de campo.
 La fuerza de expansión por unidad de longitud del toro es aproximadamente:
 
-$$ F_R \approx \frac{\mu_0 I_p^2}{2} \left( \ln\frac{8R}{a} - \frac{3}{2} + \beta_p \right) $$
+$$
+F_R \approx \frac{\mu_0 I_p^2}{2} \left( \ln\frac{8R}{a} - \frac{3}{2} + \beta_p \right)
+$$
 
 donde $I_p$ es la corriente del plasma, $a$ el radio menor, y $\beta_p$ la beta poloidal.
 Para compensar esta fuerza centrífuga efectiva y mantener el equilibrio, se requiere aplicar un campo magnético vertical externo $B_v$ mediante bobinas poloidales externas. La fuerza de Lorentz restauradora es $F_L = I_p \times B_v \times 2\pi R$. Igualando, obtenemos el campo vertical necesario:
 
-$$ B_v = \frac{\mu_0 I_p}{4\pi R} \left( \ln\frac{8R}{a} - \frac{3}{2} + \beta_p + \frac{l_i}{2} \right) $$
+$$
+B_v = \frac{\mu_0 I_p}{4\pi R} \left( \ln\frac{8R}{a} - \frac{3}{2} + \beta_p + \frac{l_i}{2} \right)
+$$
 
 Esto estabiliza el eje magnético y previene el desplazamiento de Shafranov contra la pared exterior.
 
@@ -155,17 +207,27 @@ Calcule el perfil del factor de seguridad $q(r)$ en la aproximación cilíndrica
 **Solución paso a paso:**
 El campo magnético poloidal $B_\theta(r)$ se obtiene mediante la ley de Ampère:
 
-$$ \oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 \int \mathbf{J} \cdot d\mathbf{A} $$
+$$
+\oint \mathbf{B} \cdot d\mathbf{l} = \mu_0 \int \mathbf{J} \cdot d\mathbf{A}
+$$
 
-$$ 2\pi r B_\theta(r) = \mu_0 \int_0^r J_0 \left( 1 - \frac{r'^2}{a^2} \right) 2\pi r' dr' $$
+$$
+2\pi r B_\theta(r) = \mu_0 \int_0^r J_0 \left( 1 - \frac{r'^2}{a^2} \right) 2\pi r' dr'
+$$
 
-$$ r B_\theta(r) = \mu_0 J_0 \left[ \frac{r'^2}{2} - \frac{r'^4}{4a^2} \right]_0^r = \mu_0 J_0 \left( \frac{r^2}{2} - \frac{r^4}{4a^2} \right) $$
+$$
+r B_\theta(r) = \mu_0 J_0 \left[ \frac{r'^2}{2} - \frac{r'^4}{4a^2} \right]_0^r = \mu_0 J_0 \left( \frac{r^2}{2} - \frac{r^4}{4a^2} \right)
+$$
 
-$$ B_\theta(r) = \frac{\mu_0 J_0 r}{2} \left( 1 - \frac{r^2}{2a^2} \right) $$
+$$
+B_\theta(r) = \frac{\mu_0 J_0 r}{2} \left( 1 - \frac{r^2}{2a^2} \right)
+$$
 
 El factor de seguridad en aproximación cilíndrica es $q(r) = \frac{r B_\phi}{R B_\theta(r)}$. Sustituyendo $B_\theta(r)$:
 
-$$ q(r) = \frac{r B_\phi}{R \frac{\mu_0 J_0 r}{2} \left( 1 - \frac{r^2}{2a^2} \right)} = \frac{2 B_\phi}{\mu_0 R J_0 \left( 1 - \frac{r^2}{2a^2} \right)} $$
+$$
+q(r) = \frac{r B_\phi}{R \frac{\mu_0 J_0 r}{2} \left( 1 - \frac{r^2}{2a^2} \right)} = \frac{2 B_\phi}{\mu_0 R J_0 \left( 1 - \frac{r^2}{2a^2} \right)}
+$$
 
 Para $r=0$ (en el eje magnético): $q(0) = \frac{2 B_\phi}{\mu_0 R J_0}$.
 Para $r=a$ (en el borde): $q(a) = \frac{2 B_\phi}{\mu_0 R J_0 (1/2)} = 2 q(0)$.
@@ -178,9 +240,13 @@ Modifique la deducción del criterio de Lawson para incluir una fracción de imp
 La presencia de impurezas incrementa la densidad de electrones por cuasineutralidad: $n_e = n_i + Z n_C = n_i (1 + Z f_C)$.
 La potencia de radiación de Bremsstrahlung escala con $Z_{eff}$, la carga efectiva del plasma:
 
-$$ P_{br} \propto n_e \sum (n_k Z_k^2) = n_e n_i (1 + Z^2 f_C) $$
+$$
+P_{br} \propto n_e \sum (n_k Z_k^2) = n_e n_i (1 + Z^2 f_C)
+$$
 
-$$ Z_{eff} = \frac{\sum n_k Z_k^2}{n_e} = \frac{n_i + n_C Z^2}{n_i + n_C Z} = \frac{1 + f_C Z^2}{1 + f_C Z} $$
+$$
+Z_{eff} = \frac{\sum n_k Z_k^2}{n_e} = \frac{n_i + n_C Z^2}{n_i + n_C Z} = \frac{1 + f_C Z^2}{1 + f_C Z}
+$$
 
 La potencia radiativa aumenta fuertemente: $P_{br}' = P_{br} (1 + Z f_C)(1 + Z^2 f_C)$.
 El calentamiento alfa sigue siendo proporcional a la densidad de combustible, $P_\alpha \propto n_D n_T = n_i^2/4$.
@@ -255,7 +321,9 @@ El confinamiento magnético se basa en la topología de la superficie toriodal y
 Las líneas de campo magnético en un toroide cerrado (tokamak o stellarator) son descritas como las trayectorias de un sistema hamiltoniano con grado de libertad 1.5. El "tiempo" hamiltoniano es la coordenada toroidal $\phi$.
 La existencia de superficies de flujo anidadas perfectas está garantizada por el teorema KAM, siempre y cuando la perturbación de la simetría original sea pequeña y el perfil del factor de seguridad $q$ sea fuertemente cizallado (irracional e inconmensurable):
 
-$$ \left| m - nq(\psi) \right| > \frac{C}{m^\tau} $$
+$$
+\left| m - nq(\psi) \right| > \frac{C}{m^\tau}
+$$
 
 Si el solapamiento de resonancias magnéticas excede el criterio de Chirikov, las superficies invariantes colapsan formando islas magnéticas y regiones caóticas o estocásticas, lo que destruye el confinamiento radial y permite que la difusividad de calor aumente órdenes de magnitud (caos cuántico y clásico).
 Para mapear la estructura topológica, se utilizan las coordenadas de flujo de Boozer $(\psi, \theta_B, \phi_B)$ donde el campo métrico garantiza que las líneas de campo son perfectamente rectilíneas métricamente en ese espacio abstracto tridimensional curvilíneo.
@@ -279,7 +347,11 @@ Para mapear la estructura topológica, se utilizan las coordenadas de flujo de B
    **Contexto Matemático:** 
    Lawson analizó el balance de potencia global de un volumen de plasma a temperatura extrema. Consideró la potencia producida por la reacción $\langle \sigma v \rangle$ y descontó implacablemente las pérdidas inexorables por radiación de Bremsstrahlung térmica ($P_{br} \propto Z_{eff} n_e^2 T^{1/2}$) y conducción difusiva ($\propto n k_B T / \tau_E$). El equilibrio en estado estacionario para una reacción D-T impuso que el triple producto debe superar una curva crítica paramétrica en función de la temperatura $T$:
 
-   $$ n_e \tau_E \ge \frac{12 k_B T}{\langle \sigma v \rangle E_{\text{fus}} - C_{br} T^{1/2}} $$
+   
+
+$$
+n_e \tau_E \ge \frac{12 k_B T}{\langle \sigma v \rangle E_{\text{fus}} - C_{br} T^{1/2}}
+$$
 
    Para alcanzar la temperatura óptima de D-T ($\sim 15 \, \text{keV}$), dedujo que el producto de la densidad iónica por el tiempo de confinamiento energético debe satisfacer estrictamente $n \tau_E \ge 10^{20} \, \text{s m}^{-3}$. Este umbral matemático gobierna el dimensionamiento colosal de reactores como ITER (enfocado en gran $\tau_E$ y baja $n$) y láseres como NIF (enfocados en minúsculo $\tau_E$ y asombrosa $n$ de compresión).
 
@@ -292,7 +364,11 @@ Para mapear la estructura topológica, se utilizan las coordenadas de flujo de B
    **Contexto Matemático:** 
    El análisis expone la inestabilidad de las líneas puramente toroidales o poloidales y justifica la necesidad imperativa de un "shear" (cizallamiento) magnético y de un factor de seguridad de Kruskal-Shafranov superior a 1 en todo el plasma para apaciguar las inestabilidades magnetohidrodinámicas (MHD) a gran escala. El confinamiento estable en un sistema de revolución axisimétrico se garantiza topológicamente enrollando helicoidalmente el campo, de forma que la trayectoria en la superficie magnética obedece:
 
-   $$ q(r) = \frac{r B_\phi}{R B_\theta} > 1 $$
+   
+
+$$
+q(r) = \frac{r B_\phi}{R B_\theta} > 1
+$$
 
    Donde el factor de seguridad $q$ debe exceder holgadamente la unidad en el borde del plasma ($q_a \approx 3$). El artículo también discute pioneramente las desviaciones del transporte de partículas de las predicciones clásicas cilíndricas (difusión de Coulomb) debido a partículas atrapadas ("banana orbits"), inaugurando empíricamente la era de la teoría de transporte neoclásico y turbulento para toros simétricos.
 

@@ -10,23 +10,33 @@ La dinámica de fluidos viscosos reales y la teoría de la capa límite (introdu
 
 Para un fluido Newtoniano isotrópico incompresible, el tensor de esfuerzos de Cauchy se descompone en un término de presión termodinámica isotrópica y un tensor de esfuerzo viscoso $\boldsymbol{\tau}$:
 
-$$ \sigma_{ij} = -p \delta_{ij} + \tau_{ij} $$
+$$
+\sigma_{ij} = -p \delta_{ij} + \tau_{ij}
+$$
 
-$$ \tau_{ij} = \mu \left( \frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} \right) $$
+$$
+\tau_{ij} = \mu \left( \frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} \right)
+$$
 
 donde $\mu$ es la viscosidad dinámica (reflejando fricción microscópica). Insertando esto en la ecuación de momento lineal (balance de fuerzas) se obtiene la Ecuación de Navier-Stokes:
 
-$$ \rho \left( \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla) \vec{v} \right) = -\nabla p + \mu \nabla^2 \vec{v} + \rho \vec{g} $$
+$$
+\rho \left( \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla) \vec{v} \right) = -\nabla p + \mu \nabla^2 \vec{v} + \rho \vec{g}
+$$
 
 ### 2. Adimensionalización y Número de Reynolds
 
 Consideremos un flujo con velocidad característica $U_0$ y longitud característica $L_0$. Definiendo variables adimensionales (marcadas con asterisco):
 
-$$ \vec{x}^* = \frac{\vec{x}}{L_0}, \quad \vec{v}^* = \frac{\vec{v}}{U_0}, \quad t^* = \frac{t U_0}{L_0}, \quad p^* = \frac{p - p_0}{\rho U_0^2} $$
+$$
+\vec{x}^* = \frac{\vec{x}}{L_0}, \quad \vec{v}^* = \frac{\vec{v}}{U_0}, \quad t^* = \frac{t U_0}{L_0}, \quad p^* = \frac{p - p_0}{\rho U_0^2}
+$$
 
 Sustituyendo en Navier-Stokes (ignorando la gravedad) obtenemos:
 
-$$ \frac{\partial \vec{v}^*}{\partial t^*} + (\vec{v}^* \cdot \nabla^*) \vec{v}^* = -\nabla^* p^* + \frac{1}{Re} \nabla^{*2} \vec{v}^* $$
+$$
+\frac{\partial \vec{v}^*}{\partial t^*} + (\vec{v}^* \cdot \nabla^*) \vec{v}^* = -\nabla^* p^* + \frac{1}{Re} \nabla^{*2} \vec{v}^*
+$$
 
 donde $Re = \frac{\rho U_0 L_0}{\mu}$ es el **Número de Reynolds**. Representa la relación estricta entre las fuerzas inerciales ($\rho U_0^2 / L_0$) y las fuerzas viscosas ($\mu U_0 / L_0^2$).
 
@@ -41,15 +51,21 @@ Prandtl postuló que el campo de flujo se divide asintóticamente en dos regione
 Sea el flujo bidimensional estacionario sobre una placa plana. Asumiendo que el espesor de la capa $\delta \ll L$, el análisis de orden de magnitud simplifica las ecuaciones de Navier-Stokes a las **Ecuaciones de Capa Límite de Prandtl**:
 **Continuidad:**
 
-$$ \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0 $$
+$$
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0
+$$
 
 **Momento en $x$:**
 
-$$ u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{1}{\rho}\frac{dp}{dx} + \nu \frac{\partial^2 u}{\partial y^2} $$
+$$
+u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{1}{\rho}\frac{dp}{dx} + \nu \frac{\partial^2 u}{\partial y^2}
+$$
 
 **Momento en $y$:**
 
-$$ \frac{\partial p}{\partial y} \approx 0 \implies p = p(x) $$
+$$
+\frac{\partial p}{\partial y} \approx 0 \implies p = p(x)
+$$
 
 El campo de presiones de la capa límite está enteramente impuesto por el flujo libre no viscoso exterior según la ecuación de Euler $dp/dx = -\rho U(dU/dx)$.
 
@@ -57,21 +73,31 @@ El campo de presiones de la capa límite está enteramente impuesto por el flujo
 
 Para una placa plana con $U = \text{cte}$ y $dp/dx = 0$, H. Blasius introdujo una variable de similitud:
 
-$$ \eta = y \sqrt{\frac{U}{\nu x}} $$
+$$
+\eta = y \sqrt{\frac{U}{\nu x}}
+$$
 
 y definió una función de corriente $\psi = \sqrt{\nu U x} f(\eta)$ para satisfacer continuidad. Sustituyendo en la ecuación de momento se obtiene la ecuación diferencial ordinaria no lineal de tercer orden (Ecuación de Blasius):
 
-$$ 2 f''' + f f'' = 0 $$
+$$
+2 f''' + f f'' = 0
+$$
 
 con condiciones de frontera:
 
-$$ f(0) = f'(0) = 0 \quad \text{(Pared)} $$
+$$
+f(0) = f'(0) = 0 \quad \text{(Pared)}
+$$
 
-$$ f'(\eta \to \infty) = 1 \quad \text{(Corriente Libre)} $$
+$$
+f'(\eta \to \infty) = 1 \quad \text{(Corriente Libre)}
+$$
 
 La solución numérica demuestra que la velocidad $u$ alcanza el $99\%$ de $U$ cuando $\eta \approx 4.91$. Por tanto, el espesor de la capa límite laminar crece con la raíz cuadrada de la distancia:
 
-$$ \delta(x) = \frac{4.91 x}{\sqrt{Re_x}} $$
+$$
+\delta(x) = \frac{4.91 x}{\sqrt{Re_x}}
+$$
 
 El esfuerzo cortante en la pared local es $\tau_w = 0.332 \rho U^2 / \sqrt{Re_x}$, lo que permite cuantificar analíticamente la fricción y fuerza de arrastre por primera vez en la historia de la aerodinámica.
 
@@ -185,7 +211,9 @@ La reducción del "arrastre" (drag) es el Santo Grial ingenieril del 2026 para l
 
 El tratamiento riguroso de fluidos viscosos y la turbulencia requiere el **Análisis Funcional y la Teoría de Sistemas Dinámicos en Espacios de Banach**. En lugar de vectores clásicos, la velocidad $\mathbf{v}(\mathbf{x},t)$ se considera un punto en un espacio de Hilbert-Sobolev incompresible $V \subset H^1_0(\Omega)^3$. La ecuación de Navier-Stokes asume la forma de un sistema dinámico abstracto evolutivo:
 
-$$ \frac{d\mathbf{u}}{dt} + \nu A\mathbf{u} + B(\mathbf{u}, \mathbf{u}) = \mathbf{f} $$
+$$
+\frac{d\mathbf{u}}{dt} + \nu A\mathbf{u} + B(\mathbf{u}, \mathbf{u}) = \mathbf{f}
+$$
 
 donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbulencia plenamente desarrollada, se asume la existencia de un Atractor Global $\mathcal{A}$ compacto de dimensión Hausdorff finita a pesar de que el espacio de fase es de dimensión infinita. Entender la medida invariante ergódica de Hopf $\mu$ sobre este atractor, $\int f(\mathbf{u}(t)) dt \to \int_{\mathcal{A}} f d\mu$, es crucial para justificar matemáticamente la teoría estadística de turbulencia K41.
 
@@ -202,11 +230,11 @@ donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbu
    - **Importancia Teórica:** Es considerado el artículo más influyente en la dinámica de fluidos del siglo XX. Resolvió la paradoja de d'Alembert separando el fluido en dos regímenes.
    - **Fondo Matemático:** Propuso que con un alto número de Reynolds ($Re \gg 1$), las fuerzas viscosas se limitan a una capa límite delgada adyacente a la superficie. Simplifica Navier-Stokes en 2D:
 
-     $$
+     
 
-     u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + \nu \frac{\partial^2 u}{\partial y^2}
-
-     $$
+$$
+u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + \nu \frac{\partial^2 u}{\partial y^2}
+$$
 
    - **Implicaciones Físicas:** Explicó de dónde proviene el arrastre (fricción de piel) y la separación del flujo (pérdida de sustentación aerodinámica).
 
@@ -215,11 +243,11 @@ donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbu
    - **Importancia Teórica:** Formuló la teoría K41. Introdujo las bases universales de la turbulencia isotrópica, proporcionando las primeras predicciones cuantitativas exitosas para el régimen caótico.
    - **Fondo Matemático:** Postuló por análisis dimensional que, en el rango inercial, las propiedades del flujo dependen únicamente de la tasa de disipación de energía $\varepsilon$. La función de estructura de segundo orden exhibe escalamiento de dos tercios:
 
-     $$
+     
 
-     \langle [u(x+r) - u(x)]^2 \rangle \sim \varepsilon^{2/3} r^{2/3}
-
-     $$
+$$
+\langle [u(x+r) - u(x)]^2 \rangle \sim \varepsilon^{2/3} r^{2/3}
+$$
 
    - **Implicaciones Físicas:** Demostró un aparente orden subyacente determinista estocástico dentro del régimen turbulento complejo y guio modelos de gran escala para la meteorología (LES).
 
@@ -228,19 +256,19 @@ donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbu
    - **Importancia Teórica:** Definió cuantitativamente la transición del flujo laminar al turbulento mediante el adimensional Número de Reynolds.
    - **Fondo Matemático:** El número relaciona las fuerzas inerciales a las viscosas:
 
-     $$
+     
 
-     Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}
-
-     $$
+$$
+Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}
+$$
 
      También derivó las ecuaciones de Navier-Stokes promediadas por Reynolds (RANS), dividiendo el flujo en media temporal $U$ y fluctuaciones $u'$:
 
-     $$
+     
 
-     u(x,t) = U(x) + u'(x,t)
-
-     $$
+$$
+u(x,t) = U(x) + u'(x,t)
+$$
 
    - **Implicaciones Físicas:** Proporcionó la herramienta unificadora de escala empírica para todos los estudios hidrodinámicos en tuberías y perfiles alares.
 

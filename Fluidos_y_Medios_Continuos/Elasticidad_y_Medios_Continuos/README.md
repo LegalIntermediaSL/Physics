@@ -11,17 +11,23 @@ La Mecánica de Medios Continuos es un marco general que modela la cinemática y
 Consideremos un cuerpo $\mathcal{B}$ en una configuración de referencia (no deformada) con coordenadas materiales (Lagrangianas) $\vec{X}$. En un tiempo $t$, el cuerpo adquiere una configuración actual (deformada) descrita por las coordenadas espaciales (Eulerianas) $\vec{x} = \boldsymbol{\chi}(\vec{X}, t)$. 
 El **Gradiente de Deformación** es el tensor de segundo orden fundamental en cinemática continua:
 
-$$ \mathbf{F} = \frac{\partial \vec{x}}{\partial \vec{X}} \implies F_{iK} = \frac{\partial x_i}{\partial X_K} $$
+$$
+\mathbf{F} = \frac{\partial \vec{x}}{\partial \vec{X}} \implies F_{iK} = \frac{\partial x_i}{\partial X_K}
+$$
 
 El determinante $J = \det(\mathbf{F})$ mide el cambio de volumen relativo ($dV = J dV_0$). Para que el material no se interpenetre, se requiere axiomáticamente $J > 0$.
 
 Como $\mathbf{F}$ incluye tanto la deformación geométrica local como las rotaciones de cuerpo rígido, filtramos la rotación multiplicando $\mathbf{F}$ por su transpuesta para definir el **Tensor de Deformación de Cauchy-Green Derecho**:
 
-$$ \mathbf{C} = \mathbf{F}^T \mathbf{F} $$
+$$
+\mathbf{C} = \mathbf{F}^T \mathbf{F}
+$$
 
 Si el cuerpo experimenta solo un desplazamiento de cuerpo rígido, $\mathbf{C} = \mathbf{I}$ (la matriz identidad). El tensor de deformación finita de Green-Lagrange se define entonces como:
 
-$$ \mathbf{E} = \frac{1}{2} (\mathbf{C} - \mathbf{I}) = \frac{1}{2} (\mathbf{F}^T \mathbf{F} - \mathbf{I}) $$
+$$
+\mathbf{E} = \frac{1}{2} (\mathbf{C} - \mathbf{I}) = \frac{1}{2} (\mathbf{F}^T \mathbf{F} - \mathbf{I})
+$$
 
 Este tensor, a diferencia de la deformación infinitesimal $\boldsymbol{\epsilon}$, es rigurosamente válido para desplazamientos y rotaciones arbitrariamente grandes (ej. modelado de elastómeros, gomas o tejidos biológicos).
 
@@ -39,28 +45,38 @@ Las leyes físicas inviolables de conservación se expresan matemáticamente usa
 **Balance de Masa (Continuidad):**
 En forma local Euleriana:
 
-$$ \dot{\rho} + \rho \nabla \cdot \vec{v} = 0 $$
+$$
+\dot{\rho} + \rho \nabla \cdot \vec{v} = 0
+$$
 
 En forma Lagrangiana:
 
-$$ \rho_0 = \rho J $$
+$$
+\rho_0 = \rho J
+$$
 
 **Balance de Cantidad de Movimiento (Ecuación de Movimiento de Cauchy):**
 Esta es la versión continua de $\vec{F} = m\vec{a}$:
 
-$$ \nabla \cdot \boldsymbol{\sigma} + \rho \vec{b} = \rho \frac{D\vec{v}}{Dt} $$
+$$
+\nabla \cdot \boldsymbol{\sigma} + \rho \vec{b} = \rho \frac{D\vec{v}}{Dt}
+$$
 
 donde $\vec{b}$ son fuerzas de cuerpo (e.g. gravedad). 
 
 **Balance de Momento Angular:**
 Conduce a la conclusión de que, en ausencia de pares de volumen o microestructura interna acoplada (medios no-polares o clásicos), el tensor de Cauchy es simétrico:
 
-$$ \boldsymbol{\sigma} = \boldsymbol{\sigma}^T $$
+$$
+\boldsymbol{\sigma} = \boldsymbol{\sigma}^T
+$$
 
 **Principios Termodinámicos y Desigualdad de Clausius-Duhem:**
 Para formular modelos constitutivos (relación entre esfuerzo y deformación), se debe garantizar que el proceso no viole la Segunda Ley de la Termodinámica, que exige que la producción interna de entropía sea siempre no negativa. En un proceso isotérmico para un material elástico (que no disipa energía), esto restringe a que exista una Función de Densidad de Energía de Deformación (Hiperelasticidad) $\Psi(\mathbf{F})$ tal que el esfuerzo derive de ella:
 
-$$ \mathbf{P} = \frac{\partial \Psi}{\partial \mathbf{F}} $$
+$$
+\mathbf{P} = \frac{\partial \Psi}{\partial \mathbf{F}}
+$$
 
 ```mermaid
 graph TD
@@ -191,7 +207,9 @@ En 2026, la mecánica de medios continuos ha dado a luz al concepto de **Elastic
 El estudio de un medio continuo con defectos intrínsecos (dislocaciones, disclinaciones) abandona la geometría Euclidiana para utilizar **Geometría de Riemann-Cartan**. El cuerpo elástico se modela como una variedad con una métrica elástica y una conexión afin que posee **Torsión** $T^a_{\bc}$ y **Curvatura** $R^a_{\bcd}$.
 Si denotamos el corepere de la estructura reticular por 1-formas $e^a$, las ecuaciones de la teoría geométrica de dislocaciones relacionan la densidad de dislocaciones $\alpha$ directamente con el tensor de Torsión:
 
-$$ \alpha = de + \Gamma \wedge e = T $$
+$$
+\alpha = de + \Gamma \wedge e = T
+$$
 
 La densidad de energía elástica de deformación $W$ depende de la métrica efectiva dependiente de $e$. Al variar esta acción respecto a la estructura $e$ y a la métrica, las tensiones elásticas (el tensor momento-energía del medio continuo) se derivan elegantemente del principio de gauge, conectando la teoría de plasticidad macroscópica de metales y polímeros estelares directamente con las teorías de calibre (Gauge Theory) empleadas en la teoría de cuerdas y gravedad.
 
@@ -208,11 +226,11 @@ La densidad de energía elástica de deformación $W$ depende de la métrica efe
    - **Importancia Teórica:** Establece la Ley de Hooke, "ut tensio, sic vis", marcando el inicio de la elasticidad lineal para sólidos deformables.
    - **Fondo Matemático:** En mecánica del medio continuo, esta ley se generaliza mediante el tensor constitutivo de elasticidad de cuarto orden $C_{ijkl}$ que relaciona el tensor de esfuerzos de Cauchy $\sigma_{ij}$ y el tensor de deformación infinitesimal $\varepsilon_{kl}$:
 
-     $$
+     
 
-     \sigma_{ij} = \sum_{k,l} C_{ijkl} \varepsilon_{kl}
-
-     $$
+$$
+\sigma_{ij} = \sum_{k,l} C_{ijkl} \varepsilon_{kl}
+$$
 
    - **Implicaciones Físicas:** Es la aproximación lineal fundamental a cualquier pozo de potencial interatómico cerca del equilibrio, sustentando la resistencia de materiales.
 
@@ -221,11 +239,11 @@ La densidad de energía elástica de deformación $W$ depende de la métrica efe
    - **Importancia Teórica:** Cauchy introdujo el concepto de tensión (stress) y deformación, formulando rigurosamente la mecánica de cuerpos deformables.
    - **Fondo Matemático:** Establece el teorema del tetraedro de Cauchy, que demuestra que el vector tensión $\mathbf{T}^{(\mathbf{n})}$ en una superficie normal $\mathbf{n}$ es una transformación lineal del tensor de tensiones $\boldsymbol{\sigma}$:
 
-     $$
+     
 
-     \mathbf{T}^{(\mathbf{n})} = \boldsymbol{\sigma} \cdot \mathbf{n} \quad \text{o en índices:} \quad T_i = \sum_j \sigma_{ij} n_j
-
-     $$
+$$
+\mathbf{T}^{(\mathbf{n})} = \boldsymbol{\sigma} \cdot \mathbf{n} \quad \text{o en índices:} \quad T_i = \sum_j \sigma_{ij} n_j
+$$
 
    - **Implicaciones Físicas:** Cambió la perspectiva global de cuerpos a medios continuos locales, vital para derivar las ecuaciones de equilibrio mecánico.
 
@@ -234,11 +252,11 @@ La densidad de energía elástica de deformación $W$ depende de la métrica efe
    - **Importancia Teórica:** Fundamenta el tratamiento de materiales hiperelásticos y grandes deformaciones donde la aproximación lineal (Hooke) fracasa espectacularmente (ej. cauchos y polímeros).
    - **Fondo Matemático:** Utiliza la función de densidad de energía de deformación $W$. El tensor nominal de tensiones de Piola-Kirchhoff $\mathbf{P}$ se deriva respecto al gradiente de deformación $\mathbf{F}$:
 
-     $$
+     
 
-     \mathbf{P} = \frac{\partial W}{\partial \mathbf{F}}
-
-     $$
+$$
+\mathbf{P} = \frac{\partial W}{\partial \mathbf{F}}
+$$
 
    - **Implicaciones Físicas:** Permite predecir comportamientos complejos isotrópicos incompresibles en elastómeros modernos sometidos a estrés masivo en ingeniería y biomecánica.
 

@@ -10,13 +10,17 @@ El modelo del electrón libre fue propuesto inicialmente por Paul Drude (1900) y
 
 El movimiento de un electrón en un cristal está gobernado por la ecuación de Schrödinger para una partícula en un potencial iónico periódico $U(\mathbf{r}) = U(\mathbf{r} + \mathbf{R})$, donde $\mathbf{R}$ es cualquier vector de la red de Bravais.
 
-$$ \left[ -\frac{\hbar^2}{2m_e} \nabla^2 + U(\mathbf{r}) \right] \psi(\mathbf{r}) = E \psi(\mathbf{r}) $$
+$$
+\left[ -\frac{\hbar^2}{2m_e} \nabla^2 + U(\mathbf{r}) \right] \psi(\mathbf{r}) = E \psi(\mathbf{r})
+$$
 
 ### 1. El Teorema de Bloch
 
 La periodicidad del Hamiltoniano requiere que las funciones de onda electrónicas, conocidas como **Funciones de Bloch**, tengan la forma de una onda plana envolvente modulada por una función que comparte exactamente la misma periodicidad de la red cristalina:
 
-$$ \psi_{n\mathbf{k}}(\mathbf{r}) = e^{i\mathbf{k}\cdot\mathbf{r}} u_{n\mathbf{k}}(\mathbf{r}) $$
+$$
+\psi_{n\mathbf{k}}(\mathbf{r}) = e^{i\mathbf{k}\cdot\mathbf{r}} u_{n\mathbf{k}}(\mathbf{r})
+$$
 
 donde $u_{n\mathbf{k}}(\mathbf{r} + \mathbf{R}) = u_{n\mathbf{k}}(\mathbf{r})$.
 El índice $n$ es el **índice de banda** (que etiqueta bandas discretas para un mismo $\mathbf{k}$) y $\mathbf{k}$ es el **vector de onda cristalino** o cuasi-momento, que está restringido a la **Primera Zona de Brillouin** en el espacio recíproco. 
@@ -27,11 +31,15 @@ La consecuencia más notable de este teorema es que un electrón en un estado de
 
 Si expandimos el potencial periódico y la función de onda en series de Fourier sobre los vectores de la red recíproca $\mathbf{G}$:
 
-$$ U(\mathbf{r}) = \sum_{\mathbf{G}} U_{\mathbf{G}} e^{i\mathbf{G}\cdot\mathbf{r}} \quad \text{y} \quad \psi_{\mathbf{k}}(\mathbf{r}) = \sum_{\mathbf{G}'} C_{\mathbf{k}-\mathbf{G}'} e^{i(\mathbf{k}-\mathbf{G}')\cdot\mathbf{r}} $$
+$$
+U(\mathbf{r}) = \sum_{\mathbf{G}} U_{\mathbf{G}} e^{i\mathbf{G}\cdot\mathbf{r}} \quad \text{y} \quad \psi_{\mathbf{k}}(\mathbf{r}) = \sum_{\mathbf{G}'} C_{\mathbf{k}-\mathbf{G}'} e^{i(\mathbf{k}-\mathbf{G}')\cdot\mathbf{r}}
+$$
 
 Sustituyendo esto en la ecuación de Schrödinger, obtenemos la **Ecuación Central** (un sistema de ecuaciones algebraicas acopladas):
 
-$$ \left( \frac{\hbar^2}{2m} |\mathbf{k} - \mathbf{G}|^2 - E \right) C_{\mathbf{k}-\mathbf{G}} + \sum_{\mathbf{G}'} U_{\mathbf{G}'-\mathbf{G}} C_{\mathbf{k}-\mathbf{G}'} = 0 $$
+$$
+\left( \frac{\hbar^2}{2m} |\mathbf{k} - \mathbf{G}|^2 - E \right) C_{\mathbf{k}-\mathbf{G}} + \sum_{\mathbf{G}'} U_{\mathbf{G}'-\mathbf{G}} C_{\mathbf{k}-\mathbf{G}'} = 0
+$$
 
 En un metal alcalino simple, $U_{\mathbf{G}}$ es pequeño. Lejos de las fronteras de Brillouin, $E(\mathbf{k}) \approx \hbar^2 k^2/2m$. Sin embargo, cuando $|\mathbf{k}| \approx |\mathbf{k} - \mathbf{G}|$ (la condición de Bragg), el electrón se acopla fuertemente a las ondas reflejadas. Esto genera la formación de ondas estacionarias tipo seno y coseno. Como estas ondas acumulan carga electrónica en diferentes posiciones relativas a los iones (en los iones atractivos o en los intersticios), sus energías difieren, abriendo una **Brecha de Energía (Bandgap $E_g$)** de magnitud $2|U_\mathbf{G}|$.
 
@@ -40,11 +48,15 @@ En un metal alcalino simple, $U_{\mathbf{G}}$ es pequeño. Lejos de las frontera
 Mientras que el teorema de Bloch asume electrones casi libres, el modelo de *Tight-Binding* asume electrones fuertemente ligados a los átomos individuales (como los electrones $d$ en metales de transición). 
 Se propone como solución una combinación lineal de orbitales atómicos (LCAO) localizados $\phi(\mathbf{r})$:
 
-$$ \psi_{\mathbf{k}}(\mathbf{r}) = \frac{1}{\sqrt{N}} \sum_{\mathbf{R}} e^{i\mathbf{k}\cdot\mathbf{R}} \phi(\mathbf{r} - \mathbf{R}) $$
+$$
+\psi_{\mathbf{k}}(\mathbf{r}) = \frac{1}{\sqrt{N}} \sum_{\mathbf{R}} e^{i\mathbf{k}\cdot\mathbf{R}} \phi(\mathbf{r} - \mathbf{R})
+$$
 
 Asumiendo que sólo hay saltos (hopping) permitidos entre átomos vecinos más cercanos con una integral de transferencia $t = - \langle \phi_i | H | \phi_{i+1} \rangle$, la energía de la banda de una red cúbica simple de constante $a$ resulta en:
 
-$$ E(\mathbf{k}) = E_0 - 2t (\cos(k_x a) + \cos(k_y a) + \cos(k_z a)) $$
+$$
+E(\mathbf{k}) = E_0 - 2t (\cos(k_x a) + \cos(k_y a) + \cos(k_z a))
+$$
 
 El ancho total de esta banda es proporcional al solapamiento orbital ($W = 12t$). Cuanto más cerca estén los átomos, mayor será la transferencia $t$ y más ancha será la banda.
 
@@ -76,28 +88,49 @@ graph TD
 1. **Dinámica del Paquete de Ondas:**
    La velocidad de grupo (velocidad clásica) de un paquete de electrones centrado en $\mathbf{k}$ es:
 
-   $$ \mathbf{v}_g = \frac{1}{\hbar} \nabla_{\mathbf{k}} E(\mathbf{k}) $$
+   
+
+$$
+\mathbf{v}_g = \frac{1}{\hbar} \nabla_{\mathbf{k}} E(\mathbf{k})
+$$
+
    
 2. **Aceleración y Teorema de Bloch Semi-clásico:**
    Si aplicamos un campo eléctrico externo $\mathbf{F} = -e\mathbf{E}$, el trabajo realizado sobre el electrón es $dW = \mathbf{F} \cdot \mathbf{v}_g dt$. 
    Puesto que $dW = dE = \nabla_{\mathbf{k}} E \cdot d\mathbf{k}$, obtenemos:
 
-   $$ \nabla_{\mathbf{k}} E \cdot d\mathbf{k} = \mathbf{F} \cdot \left( \frac{1}{\hbar} \nabla_{\mathbf{k}} E \right) dt $$
+   
+
+$$
+\nabla_{\mathbf{k}} E \cdot d\mathbf{k} = \mathbf{F} \cdot \left( \frac{1}{\hbar} \nabla_{\mathbf{k}} E \right) dt
+$$
 
    Resultando en la ecuación de movimiento semi-clásica: $\hbar \frac{d\mathbf{k}}{dt} = \mathbf{F}$.
 
 3. **Obtención de la Masa Efectiva:**
    Derivamos la velocidad de grupo respecto al tiempo para encontrar la aceleración clásica $\mathbf{a}$:
 
-   $$ \mathbf{a} = \frac{d\mathbf{v}_g}{dt} = \frac{1}{\hbar} \frac{d}{dt} (\nabla_{\mathbf{k}} E) = \frac{1}{\hbar} \sum_j \frac{\partial^2 E}{\partial k_i \partial k_j} \frac{dk_j}{dt} $$
+   
+
+$$
+\mathbf{a} = \frac{d\mathbf{v}_g}{dt} = \frac{1}{\hbar} \frac{d}{dt} (\nabla_{\mathbf{k}} E) = \frac{1}{\hbar} \sum_j \frac{\partial^2 E}{\partial k_i \partial k_j} \frac{dk_j}{dt}
+$$
 
    Sustituyendo $\frac{dk_j}{dt} = \frac{F_j}{\hbar}$:
 
-   $$ a_i = \sum_j \left( \frac{1}{\hbar^2} \frac{\partial^2 E}{\partial k_i \partial k_j} \right) F_j $$
+   
+
+$$
+a_i = \sum_j \left( \frac{1}{\hbar^2} \frac{\partial^2 E}{\partial k_i \partial k_j} \right) F_j
+$$
 
    Comparando esto con la segunda ley de Newton $a_i = \sum_j (m^{-1})_{ij} F_j$, identificamos el **tensor de masa efectiva**:
 
-   $$ \left( \frac{1}{m^*} \right)_{ij} = \frac{1}{\hbar^2} \frac{\partial^2 E}{\partial k_i \partial k_j} $$
+   
+
+$$
+\left( \frac{1}{m^*} \right)_{ij} = \frac{1}{\hbar^2} \frac{\partial^2 E}{\partial k_i \partial k_j}
+$$
 
 4. **Aplicación a una Banda de Tight-Binding 1D:**
    Dada la dispersión $E(k) = E_0 - 2t \cos(ka)$.
@@ -118,26 +151,38 @@ Considere una cadena unidimensional de átomos idénticos separados por una dist
 **Solución paso a paso:**
 En el método tight-binding, la función de onda de Bloch se aproxima como una combinación lineal de orbitales atómicos $\phi(x)$ localizados en cada sitio de la red $x_n = na$:
 
-$$ \psi_k(x) = \frac{1}{\sqrt{N}} \sum_{n} e^{ikna} \phi(x - na) $$
+$$
+\psi_k(x) = \frac{1}{\sqrt{N}} \sum_{n} e^{ikna} \phi(x - na)
+$$
 
 Insertamos esto en la ecuación de Schrödinger $\hat{H}\psi_k = E(k)\psi_k$ y multiplicamos por $\phi^*(x)$ e integramos en todo el espacio:
 
-$$ \sum_{n} e^{ikna} \int \phi^*(x) \hat{H} \phi(x - na) dx = E(k) \sum_{n} e^{ikna} \int \phi^*(x) \phi(x - na) dx $$
+$$
+\sum_{n} e^{ikna} \int \phi^*(x) \hat{H} \phi(x - na) dx = E(k) \sum_{n} e^{ikna} \int \phi^*(x) \phi(x - na) dx
+$$
 
 Consideramos la aproximación de orbitales ortogonales in situ, de forma que el lado derecho resulta aproximadamente $E(k) e^0 = E(k)$.
 En el lado izquierdo, los elementos de matriz de $\hat{H}$ (energía de salto) son:
 
-$$ \int \phi^*(x) \hat{H} \phi(x) dx \approx E_0 \quad (n=0) $$
+$$
+\int \phi^*(x) \hat{H} \phi(x) dx \approx E_0 \quad (n=0)
+$$
 
-$$ \int \phi^*(x) \hat{H} \phi(x \pm a) dx \approx -t \quad (n=\pm 1) $$
+$$
+\int \phi^*(x) \hat{H} \phi(x \pm a) dx \approx -t \quad (n=\pm 1)
+$$
 
 Todos los términos de orden mayor ($|n| \ge 2$) se desprecian. Sustituyendo en la suma:
 
-$$ E_0 e^{i k (0)} - t e^{i k a} - t e^{-i k a} = E(k) $$
+$$
+E_0 e^{i k (0)} - t e^{i k a} - t e^{-i k a} = E(k)
+$$
 
 Usando la relación de Euler $e^{ix} + e^{-ix} = 2\cos(x)$:
 
-$$ E(k) = E_0 - 2t \cos(ka) $$
+$$
+E(k) = E_0 - 2t \cos(ka)
+$$
 
 Esta es la dispersión de la banda. La banda tiene una anchura total $4t$, centrada en $E_0$.
 
@@ -147,29 +192,45 @@ Usando el resultado del modelo de Tight-Binding 1D del ejercicio anterior, encue
 **Solución paso a paso:**
 La definición semiclásica de la masa efectiva de transporte está relacionada con la curvatura de la banda energética en el espacio recíproco:
 
-$$ \frac{1}{m^*} = \frac{1}{\hbar^2} \frac{d^2E}{dk^2} $$
+$$
+\frac{1}{m^*} = \frac{1}{\hbar^2} \frac{d^2E}{dk^2}
+$$
 
 Utilizamos la relación de dispersión obtenida $E(k) = E_0 - 2t \cos(ka)$.
 Derivamos dos veces respecto al vector de onda $k$:
 
-$$ \frac{dE}{dk} = 2t a \sin(ka) $$
+$$
+\frac{dE}{dk} = 2t a \sin(ka)
+$$
 
-$$ \frac{d^2E}{dk^2} = 2t a^2 \cos(ka) $$
+$$
+\frac{d^2E}{dk^2} = 2t a^2 \cos(ka)
+$$
 
 Por lo tanto, la masa efectiva en función de $k$ es:
 
-$$ m^*(k) = \frac{\hbar^2}{2t a^2 \cos(ka)} $$
+$$
+m^*(k) = \frac{\hbar^2}{2t a^2 \cos(ka)}
+$$
 
 1. **Cerca del fondo de la banda ($k \approx 0$):**
    Evaluamos en $k=0$, donde $\cos(0) = 1$.
 
-   $$ m^*_{fondo} = \frac{\hbar^2}{2t a^2} > 0 $$
+   
+
+$$
+m^*_{fondo} = \frac{\hbar^2}{2t a^2} > 0
+$$
 
    El electrón se comporta como una partícula clásica con masa positiva constante.
 2. **Cerca del tope de la banda ($k \approx \pm \pi/a$ en el borde de zona):**
    Evaluamos en $k = \pm \pi/a$, donde $\cos(\pm \pi) = -1$.
 
-   $$ m^*_{tope} = -\frac{\hbar^2}{2t a^2} < 0 $$
+   
+
+$$
+m^*_{tope} = -\frac{\hbar^2}{2t a^2} < 0
+$$
 
    La masa efectiva es negativa. Físicamente, un estado vacío cerca del tope (un "hueco") responderá a los campos electromagnéticos matemáticamente equivalente a poseer carga positiva y masa efectiva positiva $|m^*|$.
 
@@ -182,7 +243,9 @@ La ecuación de Schrödinger rinde soluciones oscilatorias tipo senos o cosenos 
 Al aplicar condiciones de continuidad de $\psi$ y $\psi'$ en las interfaces, el determinante del sistema lineal de coeficientes debe anularse para poseer soluciones no triviales.
 Tras el límite idealizado de un potencial tipo delta de Dirac (barreras infinitamente estrechas pero altas), se llega a la condición trascendental restrictiva:
 
-$$ P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(ka) $$
+$$
+P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(ka)
+$$
 
 donde $\alpha = \sqrt{2mE}/\hbar$ y $P \propto V_0$ mide la "fuerza" de los átomos.
 El lado derecho, $\cos(ka)$, representa la red cristalina y su valor **está matemáticamente restringido al intervalo $[-1, 1]$** puesto que $k$ debe ser un número real para estados propagantes.
@@ -236,11 +299,15 @@ Los Hamiltonianos hermíticos se categorizan en las clases de simetría de Carta
 
 Para un punto de Weyl centrado en $\mathbf{k}_0$ (en un semimetal de Weyl), el Hamiltoniano de baja energía toma la forma de Dirac:
 
-$$ H(\mathbf{k}) = \pm v_F \, \boldsymbol{\sigma} \cdot (\mathbf{k} - \mathbf{k}_0) $$
+$$
+H(\mathbf{k}) = \pm v_F \, \boldsymbol{\sigma} \cdot (\mathbf{k} - \mathbf{k}_0)
+$$
 
 La curvatura de Berry $\mathbf{\Omega}(\mathbf{k})$ de un punto de Weyl divergen monopolos magnéticos en el espacio de momentos, cumpliendo:
 
-$$ \nabla_{\mathbf{k}} \cdot \mathbf{\Omega}(\mathbf{k}) = \pm 2\pi \delta^{(3)}(\mathbf{k} - \mathbf{k}_0) $$
+$$
+\nabla_{\mathbf{k}} \cdot \mathbf{\Omega}(\mathbf{k}) = \pm 2\pi \delta^{(3)}(\mathbf{k} - \mathbf{k}_0)
+$$
 
 Lo cual es el equivalente a la cuantización de carga de Dirac y origina el Invariante de Chern (carga topológica).
 
@@ -256,11 +323,19 @@ Lo cual es el equivalente a la cuantización de carga de Dirac y origina el Inva
    - **Importancia Teórica:** Consolida el marco de seudopotenciales, explicando por qué los electrones en muchos metales actúan asombrosamente como si fueran libres, a pesar del inmenso potencial electrostático atómico.
    - **Fondo Matemático:** Introduce el método OPW (Orthogonalized Plane Waves). La función de onda de valencia $|\psi_v\rangle$ se construye ortogonalizando una onda plana $|\mathbf{k}\rangle$ contra los estados de los electrones del núcleo (core) $|c\rangle$:
 
-     $$ |\psi_v\rangle = |\mathbf{k}\rangle - \sum_c |c\rangle \langle c | \mathbf{k} \rangle $$
+     
+
+$$
+|\psi_v\rangle = |\mathbf{k}\rangle - \sum_c |c\rangle \langle c | \mathbf{k} \rangle
+$$
 
      Cuando se inserta en la ecuación de Schrödinger, el término ortogonalizado se agrupa con el potencial atómico real $V(\mathbf{r})$ formando un *seudopotencial* $W$:
 
-     $$ W |\mathbf{k}\rangle = \left( V + \sum_c (E - E_c)|c\rangle\langle c| \right) |\mathbf{k}\rangle $$
+     
+
+$$
+W |\mathbf{k}\rangle = \left( V + \sum_c (E - E_c)|c\rangle\langle c| \right) |\mathbf{k}\rangle
+$$
 
      Dado que $E > E_c$, el segundo término actúa como una *repulsión efectiva* (derivada de la ortogonalidad cuántica impuesta por el Principio de Pauli), que cancela casi exactamente la fuerte atracción nuclear $V(\mathbf{r})$.
    - **Implicaciones Físicas:** Esta cancelación es la razón física de que el modelo de "electrón libre" de Sommerfeld funcione tan absurdamente bien para metales como el sodio o aluminio. Justificó el uso de modelos perturbativos.
@@ -269,11 +344,19 @@ Lo cual es el equivalente a la cuantización de carga de Dirac y origina el Inva
    - **Importancia Teórica:** La primera realización experimental de un aislante topológico 2D, donde la inversión de bandas mediada por acoplamiento espín-órbita crea estados de borde unidimensionales sin disipación.
    - **Fondo Matemático:** El sistema se describe mediante un modelo continuo tipo Dirac (Hamiltoniano BHZ). En la base de los estados con momento angular total $(|E1+\rangle, |H1+\rangle, |E1-\rangle, |H1-\rangle)$, el Hamiltoniano efectivo $4\times4$ en el espacio $\mathbf{k} = (k_x, k_y)$ es:
 
-     $$ H(\mathbf{k}) = \begin{pmatrix} h(\mathbf{k}) & 0 \\ 0 & h^*(-\mathbf{k}) \end{pmatrix} $$
+     
+
+$$
+H(\mathbf{k}) = \begin{pmatrix} h(\mathbf{k}) & 0 \\ 0 & h^*(-\mathbf{k}) \end{pmatrix}
+$$
 
      donde el bloque $2\times2$ para el espín efectivo "arriba" es:
 
-     $$ h(\mathbf{k}) = \epsilon(\mathbf{k})\mathbb{I} + \mathbf{d}(\mathbf{k}) \cdot \boldsymbol{\sigma} $$
+     
+
+$$
+h(\mathbf{k}) = \epsilon(\mathbf{k})\mathbb{I} + \mathbf{d}(\mathbf{k}) \cdot \boldsymbol{\sigma}
+$$
 
      con $d_z(\mathbf{k}) = M - B(k_x^2 + k_y^2)$ y $d_x + i d_y = A(k_x + i k_y)$. El parámetro crítico es la "masa de Dirac" $M$ dictada por el grosor del pozo cuántico (HgTe).
    - **Implicaciones Físicas:** Al variar el grosor del pozo cuántico de HgTe, $M$ cambia de signo (inversión de banda topológica), protegiendo canales de conducción de espín polarizado en los bordes macroscópicos del material que están teóricamente exentos de retrodispersión no magnética.

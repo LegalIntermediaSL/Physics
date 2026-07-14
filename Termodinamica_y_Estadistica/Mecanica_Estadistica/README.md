@@ -30,18 +30,24 @@ En un sistema físico aislado con energía constante $E$, volumen $V$, y número
 El **Postulado Fundamental** establece que: *En equilibrio térmico, un sistema macroscópico aislado tiene igual probabilidad de encontrarse en cualquiera de sus microestados accesibles que satisfacen las restricciones macroscópicas.*
 Si el número total de tales microestados permitidos es $\Omega(N,V,E)$, la probabilidad de encontrar el sistema en el microestado $i$ es:
 
-$$ P_i = \begin{cases} \frac{1}{\Omega} & \text{si } E_i = E \\ 0 & \text{si } E_i \neq E \end{cases} $$
+$$
+P_i = \begin{cases} \frac{1}{\Omega} & \text{si } E_i = E \\ 0 & \text{si } E_i \neq E \end{cases}
+$$
 
 ### 2. Ensamble Microcanónico: Conexión con la Entropía
 
 El ensamble microcanónico modeliza sistemas estrictamente aislados. El punto de anclaje con la termodinámica viene proporcionado por la famosa ecuación de Boltzmann para la entropía $S$:
 
-$$ S(N,V,E) = k_B \ln \Omega(N,V,E) $$
+$$
+S(N,V,E) = k_B \ln \Omega(N,V,E)
+$$
 
 donde $k_B \approx 1.3806 \times 10^{-23} \text{ J/K}$ es la constante de Boltzmann. La entropía, como medida macroscópica, cuantifica en esencia nuestro "desconocimiento" del microestado específico del sistema.
 Desde la definición diferencial de la termodinámica, recordamos que $dU = TdS - PdV + \mu dN$. Puesto que aquí la energía interna $U \equiv E$, derivamos las identidades fundamentales inversas:
 
-$$ \frac{1}{T} = \left( \frac{\partial S}{\partial E} \right)_{N,V} \quad , \quad \frac{P}{T} = \left( \frac{\partial S}{\partial V} \right)_{N,E} \quad , \quad \frac{\mu}{T} = -\left( \frac{\partial S}{\partial N} \right)_{V,E} $$
+$$
+\frac{1}{T} = \left( \frac{\partial S}{\partial E} \right)_{N,V} \quad , \quad \frac{P}{T} = \left( \frac{\partial S}{\partial V} \right)_{N,E} \quad , \quad \frac{\mu}{T} = -\left( \frac{\partial S}{\partial N} \right)_{V,E}
+$$
 
 Esto demuestra cómo los gradientes de $\Omega$ dictan las temperaturas, presiones y potenciales químicos del sistema.
 
@@ -51,15 +57,21 @@ El ensamble microcanónico es matemáticamente engorroso debido a la restricció
 
 Para derivar la probabilidad de un microestado $r$ con energía $E_r$, consideramos el sistema total (Sistema + Baño) como aislado y microcanónico. Por una expansión de Taylor de la entropía del baño térmico alrededor de su energía principal, se demuestra que la probabilidad del microestado decae exponencialmente con su energía:
 
-$$ P_r = \frac{e^{-\beta E_r}}{Z} $$
+$$
+P_r = \frac{e^{-\beta E_r}}{Z}
+$$
 
 donde $\beta = \frac{1}{k_B T}$. El denominador es la constante de normalización, o **función de partición canónica** $Z(N,V,T)$:
 
-$$ Z = \sum_{r} e^{-\beta E_r} \quad (\text{sistemas discretos}) \quad \text{o} \quad Z = \frac{1}{N!h^{3N}} \int \int e^{-\beta \mathcal{H}(\mathbf{q},\mathbf{p})} \, d^{3N}q \, d^{3N}p \quad (\text{sistemas continuos clásicos}) $$
+$$
+Z = \sum_{r} e^{-\beta E_r} \quad (\text{sistemas discretos}) \quad \text{o} \quad Z = \frac{1}{N!h^{3N}} \int \int e^{-\beta \mathcal{H}(\mathbf{q},\mathbf{p})} \, d^{3N}q \, d^{3N}p \quad (\text{sistemas continuos clásicos})
+$$
 
 La función $Z$ es el puente hacia la termodinámica. Genera directamente la **Energía Libre de Helmholtz** $F$:
 
-$$ F(N,V,T) = -k_B T \ln Z $$
+$$
+F(N,V,T) = -k_B T \ln Z
+$$
 
 Del diferencial exacto $dF = -SdT - PdV + \mu dN$, podemos calcular variables medias:
 * Energía Interna Media: $\langle E \rangle = -\left( \frac{\partial \ln Z}{\partial \beta} \right)_{V,N}$
@@ -70,15 +82,21 @@ Del diferencial exacto $dF = -SdT - PdV + \mu dN$, podemos calcular variables me
 Si el sistema puede intercambiar no solo energía, sino también partículas, con un reservorio que mantiene $T$ y $\mu$ constantes, usamos el **Ensamble Gran Canónico**. 
 La probabilidad de un microestado con energía $E_r$ y número de partículas $N_r$ es:
 
-$$ P_{r} = \frac{e^{-\beta (E_r - \mu N_r)}}{\mathcal{Z}} $$
+$$
+P_{r} = \frac{e^{-\beta (E_r - \mu N_r)}}{\mathcal{Z}}
+$$
 
 La función de **Gran Partición** $\mathcal{Z}$ es:
 
-$$ \mathcal{Z}(T, V, \mu) = \sum_{N=0}^{\infty} \sum_{r} e^{-\beta (E_{r,N} - \mu N)} = \sum_{N=0}^{\infty} e^{\beta \mu N} Z(N, V, T) $$
+$$
+\mathcal{Z}(T, V, \mu) = \sum_{N=0}^{\infty} \sum_{r} e^{-\beta (E_{r,N} - \mu N)} = \sum_{N=0}^{\infty} e^{\beta \mu N} Z(N, V, T)
+$$
 
 El potencial termodinámico asociado es el Gran Potencial $\Phi$:
 
-$$ \Phi(T, V, \mu) = -k_B T \ln \mathcal{Z} $$
+$$
+\Phi(T, V, \mu) = -k_B T \ln \mathcal{Z}
+$$
 
 Donde $\Phi = -PV$. Las fluctuaciones del número de partículas se relacionan de igual modo con la compresibilidad isoterma del material.
 
@@ -91,7 +109,11 @@ Los sistemas cuánticos con muchas partículas se analizan mediante números de 
   La gran función de partición factoriza por estado: $\mathcal{Z}_k = \sum_{n_k=0}^{1} e^{-\beta(\epsilon_k - \mu)n_k} = 1 + e^{-\beta(\epsilon_k - \mu)}$.
   El número de ocupación media resulta:
 
-  $$ \langle n_k \rangle_{FD} = \frac{1}{e^{\beta(\epsilon_k - \mu)} + 1} $$
+  
+
+$$
+\langle n_k \rangle_{FD} = \frac{1}{e^{\beta(\epsilon_k - \mu)} + 1}
+$$
 
   Esto explica la presión de degeneración que sostiene a enanas blancas y estrellas de neutrones contra el colapso gravitatorio.
 
@@ -99,7 +121,11 @@ Los sistemas cuánticos con muchas partículas se analizan mediante números de 
   Aquí, $\mathcal{Z}_k = \sum_{n_k=0}^{\infty} e^{-\beta(\epsilon_k - \mu)n_k} = \frac{1}{1 - e^{-\beta(\epsilon_k - \mu)}}$ (requiriendo rigurosamente que $\mu < \epsilon_0$).
   El número de ocupación media resulta:
 
-  $$ \langle n_k \rangle_{BE} = \frac{1}{e^{\beta(\epsilon_k - \mu)} - 1} $$
+  
+
+$$
+\langle n_k \rangle_{BE} = \frac{1}{e^{\beta(\epsilon_k - \mu)} - 1}
+$$
 
   En el límite $T \to 0$ y con partículas conservadas (donde $\mu \to \epsilon_0$), surge un comportamiento patológico macroscópico donde una fracción dominante de partículas se condensa en el estado fundamental cuántico uniparticular. A este fenómeno lo denominamos **Condensación de Bose-Einstein**.
 
@@ -113,26 +139,50 @@ Los sistemas cuánticos con muchas partículas se analizan mediante números de 
    Cada espín puede apuntar "arriba" (energía $\epsilon_{\uparrow} = -\mu_B B$) o "abajo" (energía $\epsilon_{\downarrow} = +\mu_B B$), donde $\mu_B$ es el magnetón de Bohr.
 2. **Calcular la función de partición de una sola partícula ($z$):**
 
-   $$ z = e^{-\beta(-\mu_B B)} + e^{-\beta(+\mu_B B)} = e^{\beta \mu_B B} + e^{-\beta \mu_B B} = 2 \cosh(\beta \mu_B B) $$
+   
+
+$$
+z = e^{-\beta(-\mu_B B)} + e^{-\beta(+\mu_B B)} = e^{\beta \mu_B B} + e^{-\beta \mu_B B} = 2 \cosh(\beta \mu_B B)
+$$
 
 3. **Calcular la función de partición total ($Z$):**
    Como las partículas son distinguibles por estar fijas en la red cristalina:
 
-   $$ Z = z^N = \left[ 2 \cosh(\beta \mu_B B) \right]^N $$
+   
+
+$$
+Z = z^N = \left[ 2 \cosh(\beta \mu_B B) \right]^N
+$$
 
 4. **Calcular la energía interna ($U$):**
 
-   $$ U = -\frac{\partial \ln Z}{\partial \beta} = -N \frac{\partial}{\partial \beta} \ln[2 \cosh(\beta \mu_B B)] $$
+   
 
-   $$ U = -N \frac{2 \mu_B B \sinh(\beta \mu_B B)}{2 \cosh(\beta \mu_B B)} = -N \mu_B B \tanh(\beta \mu_B B) $$
+$$
+U = -\frac{\partial \ln Z}{\partial \beta} = -N \frac{\partial}{\partial \beta} \ln[2 \cosh(\beta \mu_B B)]
+$$
+
+   
+
+$$
+U = -N \frac{2 \mu_B B \sinh(\beta \mu_B B)}{2 \cosh(\beta \mu_B B)} = -N \mu_B B \tanh(\beta \mu_B B)
+$$
 
 5. **Calcular la capacidad calorífica ($C$):**
 
-   $$ C = \frac{\partial U}{\partial T} = \frac{\partial U}{\partial \beta} \frac{\partial \beta}{\partial T} $$
+   
+
+$$
+C = \frac{\partial U}{\partial T} = \frac{\partial U}{\partial \beta} \frac{\partial \beta}{\partial T}
+$$
 
    Como $\frac{\partial \beta}{\partial T} = -\frac{1}{k_B T^2}$:
 
-   $$ C = N k_B (\beta \mu_B B)^2 \operatorname{sech}^2(\beta \mu_B B) $$
+   
+
+$$
+C = N k_B (\beta \mu_B B)^2 \operatorname{sech}^2(\beta \mu_B B)
+$$
 
    Este resultado demuestra de forma teórica la "anomalía de Schottky", un pico en la capacidad calorífica a bajas temperaturas típico de sistemas de dos niveles.
 
@@ -159,12 +209,16 @@ Deriva la ecuación de estado de la presión de radiación $P = \frac{1}{3}u(T)$
 2. Al estar en un volumen continuo macroscópico, transformamos la sumatoria en una integral sobre el momento continuo $p$: $\sum_k \to \frac{V}{(2\pi\hbar)^3} \int g_s d^3p$, donde la degeneración de espín del fotón (polarizaciones) es $g_s = 2$.
 3. Usando coordenadas esféricas para los momentos: $d^3p = 4\pi p^2 dp$. Sabiendo que para los fotones $E = pc$:
 
-$$ \Phi = k_B T \frac{2V}{8\pi^3 \hbar^3} \int_0^\infty 4\pi p^2 \ln(1 - e^{-\beta pc}) dp = \frac{Vk_B T}{\pi^2 \hbar^3} \int_0^\infty p^2 \ln(1 - e^{-\beta pc}) dp $$
+$$
+\Phi = k_B T \frac{2V}{8\pi^3 \hbar^3} \int_0^\infty 4\pi p^2 \ln(1 - e^{-\beta pc}) dp = \frac{Vk_B T}{\pi^2 \hbar^3} \int_0^\infty p^2 \ln(1 - e^{-\beta pc}) dp
+$$
 
 4. Integramos por partes, donde $u = \ln(1 - e^{-\beta pc})$ y $dv = p^2 dp$. Resulta en $v = \frac{1}{3}p^3$ y $du = \frac{\beta c e^{-\beta pc}}{1 - e^{-\beta pc}} dp$.
 5. El término de frontera desaparece. La integral se vuelve:
 
-$$ \Phi = -\frac{V}{3\pi^2 \hbar^3} \int_0^\infty \frac{p^3 c}{e^{\beta pc} - 1} dp $$
+$$
+\Phi = -\frac{V}{3\pi^2 \hbar^3} \int_0^\infty \frac{p^3 c}{e^{\beta pc} - 1} dp
+$$
 
 6. Reconocemos que la energía total interna del gas es $U = \sum_k \langle n_k \rangle \epsilon_k = \frac{V}{\pi^2 \hbar^3} \int_0^\infty \frac{pc \cdot p^2}{e^{\beta pc} - 1} dp$.
 7. Comparando las integrales, $\Phi = -\frac{1}{3} U$.
@@ -177,19 +231,27 @@ Un metal se puede modelar como un gas de electrones (fermiones, espín 1/2) libr
 2. La densidad de estados uniparticulares (incluyendo factor de degeneración $g_s = 2$ por el espín) en función del momento $p$ es $D(p)dp = 2 \frac{V}{h^3} 4\pi p^2 dp$.
 3. El número total de electrones $N$ es la integral de esta densidad desde $p=0$ hasta el momento de Fermi $p_F$ (correspondiente a $E_F$):
 
-$$ N = \int_0^{p_F} \frac{8\pi V}{h^3} p^2 dp = \frac{8\pi V}{h^3} \frac{p_F^3}{3} $$
+$$
+N = \int_0^{p_F} \frac{8\pi V}{h^3} p^2 dp = \frac{8\pi V}{h^3} \frac{p_F^3}{3}
+$$
 
 4. Despejamos el momento de Fermi en función de la densidad $n = N/V$:
 
-$$ p_F = \left( \frac{3N h^3}{8\pi V} \right)^{1/3} = \hbar \left( 3\pi^2 n \right)^{1/3} \quad (\text{usando } h = 2\pi\hbar) $$
+$$
+p_F = \left( \frac{3N h^3}{8\pi V} \right)^{1/3} = \hbar \left( 3\pi^2 n \right)^{1/3} \quad (\text{usando } h = 2\pi\hbar)
+$$
 
 5. La Energía de Fermi es la energía cinética correspondiente a las partículas más energéticas en este momento límite de la esfera de Fermi:
 
-$$ E_F = \frac{p_F^2}{2m} $$
+$$
+E_F = \frac{p_F^2}{2m}
+$$
 
 6. Sustituyendo $p_F$:
 
-$$ E_F = \frac{\hbar^2}{2m} (3\pi^2 n)^{2/3} $$
+$$
+E_F = \frac{\hbar^2}{2m} (3\pi^2 n)^{2/3}
+$$
 
 Este resultado monumental subyace a toda la teoría de metales y semiconductores.
 
@@ -254,11 +316,15 @@ La investigación en Mecánica Estadística en 2026 está dominada por las propi
 El tratamiento avanzado de la mecánica estadística cuántica requiere la **Teoría Cuántica de Campos a Temperatura Finita** (formalismo de tiempo imaginario o Matsubara). Para un sistema en equilibrio térmico a temperatura $T = 1/\beta$, la función de partición gran canónica $\mathcal{Z} = \text{Tr}[e^{-\beta(H - \mu N)}]$ se evalúa mapeando la traza mecanocuántica a una **Integral de Camino Euclídea**.
 La variable de tiempo real $t$ se prolonga analíticamente al tiempo imaginario $\tau = i t$, y la termodinámica se recupera imponiendo condiciones de contorno periódicas (para bosones) o antiperiódicas (para fermiones) sobre un intervalo temporal imaginario $\tau \in [0, \beta]$. La función de partición en formalismo de campos coherentes $\phi(\mathbf{x}, \tau)$ viene dada por:
 
-$$ \mathcal{Z} = \int \mathcal{D}[\phi, \phi^\dagger] \exp\left( - \int_0^\beta d\tau \int d^3x \, \mathcal{L}_E(\phi^\dagger, \phi) \right) $$
+$$
+\mathcal{Z} = \int \mathcal{D}[\phi, \phi^\dagger] \exp\left( - \int_0^\beta d\tau \int d^3x \, \mathcal{L}_E(\phi^\dagger, \phi) \right)
+$$
 
 donde la densidad lagrangiana euclídea efectiva incorpora el potencial químico:
 
-$$ \mathcal{L}_E = \phi^\dagger \left(\partial_\tau - \mu - \frac{\nabla^2}{2m}\right)\phi + V(\phi^\dagger, \phi) $$
+$$
+\mathcal{L}_E = \phi^\dagger \left(\partial_\tau - \mu - \frac{\nabla^2}{2m}\right)\phi + V(\phi^\dagger, \phi)
+$$
 
 Para tratar fluctuaciones críticas cerca de transiciones de fase continuas, se emplea el **Grupo de Renormalización (RG) de Wilson**. Definimos una acción efectiva al nivel de un corte de momento $\Lambda$, e integramos los modos de corto alcance $\Lambda' < k < \Lambda$. El flujo de las constantes de acoplamiento $\{g_i\}$ a medida que el sistema escala espacialmente dictamina los exponentes críticos. En el punto fijo de RG, las transformaciones beta se anulan ($\beta(g_i^*) = \mu \partial_\mu g_i = 0$), dictando que el sistema exhibe invariancia de escala conforme (Conformal Field Theory - CFT).
 
@@ -279,7 +345,11 @@ Para estudiar sistemas *fuera del equilibrio* (non-equilibrium), el tiempo imagi
    **Importancia Teórica:** Es la obra cumbre donde Boltzmann formula su célebre Teorema-H (H-Theorem), intentando derivar la flecha irreversible del tiempo macroscópico partiendo puramente de leyes microscópicas reversibles de colisión mecanicista.  
    **Fondo Matemático:** Boltzmann define una cantidad estadística de su distribución $f(\mathbf{v}, t)$ llamada funcional $H$:
 
-   $$ H(t) = \int f(\mathbf{v}, t) \ln f(\mathbf{v}, t) d^3\mathbf{v} $$
+   
+
+$$
+H(t) = \int f(\mathbf{v}, t) \ln f(\mathbf{v}, t) d^3\mathbf{v}
+$$
 
    Mediante su ecuación de transporte, demuestra matemáticamente que por interacciones de colisión, la derivada del tiempo siempre decrece ($\frac{dH}{dt} \le 0$), identificando astutamente $-H$ como proporcional a la entropía $S$.  
    **Implicaciones Físicas:** Fundamentó el concepto estadístico de entropía. Originó críticas masivas (paradojas de Loschmidt y Zermelo) que lo forzaron a reinterpretar la Segunda Ley no como una ley absoluta e inviolable, sino probabilísticamente asintótica.
@@ -289,7 +359,11 @@ Para estudiar sistemas *fuera del equilibrio* (non-equilibrium), el tiempo imagi
    **Importancia Teórica:** Un tratado monumental que estructuró matemáticamente toda la disciplina en su forma actual, inventando el concepto del *espacio de fases* y los *ensambles estadísticos*.  
    **Fondo Matemático:** Desarrolla el Ensamble Canónico de forma abstracta e independiente de la naturaleza atómica (resolviendo los ataques anti-atomistas de su época). Demuestra que para un sistema en equilibrio a temperatura $T$, la distribución de densidad en el espacio de fases depende del Hamiltoniano $\mathcal{H}$:
 
-   $$ \rho(\mathbf{q}, \mathbf{p}) = \frac{1}{Z} \exp\left(-\frac{\mathcal{H}(\mathbf{q}, \mathbf{p})}{k_B T}\right) \quad \text{donde} \quad Z = \int d^{3N}q \, d^{3N}p \, e^{-\beta \mathcal{H}} $$
+   
+
+$$
+\rho(\mathbf{q}, \mathbf{p}) = \frac{1}{Z} \exp\left(-\frac{\mathcal{H}(\mathbf{q}, \mathbf{p})}{k_B T}\right) \quad \text{donde} \quad Z = \int d^{3N}q \, d^{3N}p \, e^{-\beta \mathcal{H}}
+$$
 
    **Implicaciones Físicas:** Proporciona un marco matemático unificado y universal capaz de derivar todos los potenciales termodinámicos macroscópicos a partir del colectivo canónico y gran canónico.
 
@@ -298,7 +372,11 @@ Para estudiar sistemas *fuera del equilibrio* (non-equilibrium), el tiempo imagi
    **Importancia Teórica:** En este asombroso artículo enviado por Bose y traducido por Einstein, se deriva el espectro de cuerpo negro de Planck de una forma revolucionaria: tratando a los fotones como un gas de partículas estadísticamente idénticas e indistinguibles.  
    **Fondo Matemático:** Si existen estados cuánticos discretos, y las partículas bosónicas (espín entero) pueden agruparse sin restricciones de exclusión, la ocupación estadística de un estado energético discreto $i$ es:
 
-   $$ \langle n_i \rangle = \frac{1}{e^{(E_i - \mu)/k_B T} - 1} $$
+   
+
+$$
+\langle n_i \rangle = \frac{1}{e^{(E_i - \mu)/k_B T} - 1}
+$$
 
    **Implicaciones Físicas:** Nace la "Estadística de Bose-Einstein". Poco después, Einstein la extendería a átomos con masa para formular la teórica *Condensación de Bose-Einstein*, un nuevo estado de la materia donde la entropía macroscópica colapsa a nivel microscópico al llegar a $0\text{ K}$, hallado experimentalmente recién en 1995.
 

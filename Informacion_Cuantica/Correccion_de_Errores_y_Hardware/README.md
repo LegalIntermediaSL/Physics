@@ -12,19 +12,25 @@ La corrección de errores cuánticos (QEC) aborda el problema fundamental de pro
 
 Aunque el estado de un qubit puede sufrir perturbaciones continuas, los errores cuánticos pueden discretizarse. Cualquier operador de error $E$ actuando sobre un único qubit puede expandirse en la base de las matrices de Pauli:
 
-$$ E = e_0 I + e_1 X + e_2 Y + e_3 Z $$
+$$
+E = e_0 I + e_1 X + e_2 Y + e_3 Z
+$$
 
 donde $e_i$ son coeficientes complejos. Al medir el síndrome, la superposición del estado erróneo colapsa en uno de los errores discretos de Pauli. Si podemos corregir los errores $X$, $Y$ y $Z$, podemos corregir cualquier error arbitrario continuo.
 
 El grupo de Pauli en $n$ qubits, denotado como $\mathcal{P}_n$, consiste en todos los productos tensoriales de matrices de Pauli con factores de fase globales:
 
-$$ \mathcal{P}_n = \{ i^k P_1 \otimes P_2 \otimes \dots \otimes P_n \mid P_j \in \{I, X, Y, Z\}, k \in \{0, 1, 2, 3\} \} $$
+$$
+\mathcal{P}_n = \{ i^k P_1 \otimes P_2 \otimes \dots \otimes P_n \mid P_j \in \{I, X, Y, Z\}, k \in \{0, 1, 2, 3\} \}
+$$
 
 ### 2. Condiciones de Corrección de Errores (Knill-Laflamme)
 
 Para que un código cuántico con una base de palabras código ortonormales $\{|i_L\rangle\}$ pueda corregir un conjunto de errores $\mathcal{E} = \{E_a\}$, debe satisfacer las condiciones de Knill-Laflamme:
 
-$$ \langle i_L | E_a^\dagger E_b | j_L \rangle = C_{ab} \delta_{ij} $$
+$$
+\langle i_L | E_a^\dagger E_b | j_L \rangle = C_{ab} \delta_{ij}
+$$
 
 donde $C_{ab}$ es una matriz hermitiana que no depende de las palabras código $i, j$.
 
@@ -33,7 +39,11 @@ donde $C_{ab}$ es una matriz hermitiana que no depende de las palabras código $
 2. Definimos una nueva base de errores $F_k = \sum_a U_{ka} E_a$.
 3. La condición se transforma en:
 
-   $$ \langle i_L | F_k^\dagger F_l | j_L \rangle = d_k \delta_{kl} \delta_{ij} $$
+   
+
+$$
+\langle i_L | F_k^\dagger F_l | j_L \rangle = d_k \delta_{kl} \delta_{ij}
+$$
 
    donde $d_k$ son los autovalores reales y no negativos de $C_{ab}$.
 4. Esto implica que los estados $F_k |i_L\rangle$ y $F_l |j_L\rangle$ son ortogonales siempre que $k \neq l$ o $i \neq j$. 
@@ -45,7 +55,9 @@ El formalismo estabilizador es la herramienta algebraica más poderosa para dise
 
 Sea $\mathcal{S} \subset \mathcal{P}_n$ un subgrupo abeliano del grupo de Pauli que no contiene el operador $-I$. El espacio de código $\mathcal{C}$ es el subespacio simultáneo de autovectores con autovalor $+1$ de todos los elementos (estabilizadores) $S \in \mathcal{S}$:
 
-$$ \mathcal{C} = \{ |\psi\rangle \mid S |\psi\rangle = |\psi\rangle, \forall S \in \mathcal{S} \} $$
+$$
+\mathcal{C} = \{ |\psi\rangle \mid S |\psi\rangle = |\psi\rangle, \forall S \in \mathcal{S} \}
+$$
 
 Si $\mathcal{S}$ tiene $n-k$ generadores independientes $\{S_1, S_2, \dots, S_{n-k}\}$, el código codifica $k$ qubits lógicos en $n$ qubits físicos. La dimensión del espacio de código es $2^k$.
 
@@ -63,48 +75,84 @@ Peter Shor propuso el primer código capaz de corregir errores arbitrarios de 1 
 #### Paso 1: Código de Repetición para Bit Flip ($X$)
 Para proteger contra un cambio de amplitud (error $X$), codificamos un qubit lógico en 3 físicos:
 
-$$ |0_L\rangle_X = |000\rangle $$
+$$
+|0_L\rangle_X = |000\rangle
+$$
 
-$$ |1_L\rangle_X = |111\rangle $$
+$$
+|1_L\rangle_X = |111\rangle
+$$
 
 Los estabilizadores para este código son $Z_1 Z_2$ y $Z_2 Z_3$. Estos detectan cambios de paridad en la base $Z$.
 
 #### Paso 2: Código de Repetición para Phase Flip ($Z$)
 Un error de fase $Z$ actúa en la base $\{|+\rangle, |-\rangle\}$ exactamente igual que $X$ actúa en $\{|0\rangle, |1\rangle\}$. Codificamos:
 
-$$ |0_L\rangle_Z = |+++\rangle $$
+$$
+|0_L\rangle_Z = |+++\rangle
+$$
 
-$$ |1_L\rangle_Z = |---\rangle $$
+$$
+|1_L\rangle_Z = |---\rangle
+$$
 
 Los estabilizadores son $X_1 X_2$ y $X_2 X_3$.
 
 #### Paso 3: Código de Shor Combinado
 Shor concatenó estos dos conceptos. Cada qubit del código de fase se codifica internamente usando el código de bit-flip:
 
-$$ |+\rangle_L = \frac{|000\rangle + |111\rangle}{\sqrt{2}} $$
+$$
+|+\rangle_L = \frac{|000\rangle + |111\rangle}{\sqrt{2}}
+$$
 
-$$ |-\rangle_L = \frac{|000\rangle - |111\rangle}{\sqrt{2}} $$
+$$
+|-\rangle_L = \frac{|000\rangle - |111\rangle}{\sqrt{2}}
+$$
 
 El qubit lógico completo de Shor se expresa en bloques de 3 qubits:
 
-$$ |0_L\rangle = \left(\frac{|000\rangle + |111\rangle}{\sqrt{2}}\right)^{\otimes 3} $$
+$$
+|0_L\rangle = \left(\frac{|000\rangle + |111\rangle}{\sqrt{2}}\right)^{\otimes 3}
+$$
 
-$$ |1_L\rangle = \left(\frac{|000\rangle - |111\rangle}{\sqrt{2}}\right)^{\otimes 3} $$
+$$
+|1_L\rangle = \left(\frac{|000\rangle - |111\rangle}{\sqrt{2}}\right)^{\otimes 3}
+$$
 
 El código tiene $n=9$ y $k=1$, lo que requiere $9-1=8$ generadores estabilizadores:
 - Para detectar errores de bit-flip ($X$) dentro de cada bloque, utilizamos pares $Z_i Z_j$:
 
-  $$ g_1 = Z_1 Z_2 I I I I I I I, \quad g_2 = I Z_2 Z_3 I I I I I I $$
+  
 
-  $$ g_3 = I I I Z_4 Z_5 I I I I, \quad g_4 = I I I I Z_5 Z_6 I I I $$
+$$
+g_1 = Z_1 Z_2 I I I I I I I, \quad g_2 = I Z_2 Z_3 I I I I I I
+$$
 
-  $$ g_5 = I I I I I I Z_7 Z_8 I, \quad g_6 = I I I I I I I Z_8 Z_9 $$
+  
+
+$$
+g_3 = I I I Z_4 Z_5 I I I I, \quad g_4 = I I I I Z_5 Z_6 I I I
+$$
+
+  
+
+$$
+g_5 = I I I I I I Z_7 Z_8 I, \quad g_6 = I I I I I I I Z_8 Z_9
+$$
 
 - Para detectar errores de fase ($Z$) entre los bloques, usamos bloques de $X$:
 
-  $$ g_7 = X_1 X_2 X_3 X_4 X_5 X_6 I I I $$
+  
 
-  $$ g_8 = I I I X_4 X_5 X_6 X_7 X_8 X_9 $$
+$$
+g_7 = X_1 X_2 X_3 X_4 X_5 X_6 I I I
+$$
+
+  
+
+$$
+g_8 = I I I X_4 X_5 X_6 X_7 X_8 X_9
+$$
 
 Cualquier error $E$ en un solo qubit originará un patrón de conmutación único frente a estos 8 estabilizadores, localizando espacialmente el error de manera precisa para su corrección.
 
@@ -157,11 +205,19 @@ Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqr
 4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
 5. Calculamos cada término:
 
-   $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+   
+
+$$
+\langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}}
+$$
 
 6. Sumando los términos, el valor de expectación es:
 
-   $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+   
+
+$$
+\langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2}
+$$
 
 7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
 
@@ -183,7 +239,11 @@ Construya el circuito y derive la acción de la QFT sobre un estado de base comp
 1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
 2. Para 3 qubits, se puede reescribir como un producto tensorial:
 
-   $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+   
+
+$$
+\frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)
+$$
 
 3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
 4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
@@ -247,17 +307,23 @@ El hardware de estados bosónicos y las cavidades fotónicas de microondas exige
 
 Para los códigos GKP, los qubits lógicos se encodifican como una cuadrícula en el espacio de fase conjugado de los operadores de cuadratura continuos $[\hat{q}, \hat{p}] = i\hbar$. Los operadores de desplazamiento de Weyl que generan el grupo de traslación Heisenberg-Weyl son:
 
-$$ D(\alpha) = \exp(\alpha \hat{a}^\dagger - \alpha^* \hat{a}) \equiv \exp\left( \frac{i}{\hbar}(p_0 \hat{q} - q_0 \hat{p}) \right) $$
+$$
+D(\alpha) = \exp(\alpha \hat{a}^\dagger - \alpha^* \hat{a}) \equiv \exp\left( \frac{i}{\hbar}(p_0 \hat{q} - q_0 \hat{p}) \right)
+$$
 
 Los estabilizadores del código ideal GKP se definen en el retículo (lattice) de un toro topológico y corresponden a traslaciones por distancias geométricas macroscópicas $2\sqrt{\pi}$:
 
-$$ S_q = e^{i 2\sqrt{\pi} \hat{p}}, \quad S_p = e^{-i 2\sqrt{\pi} \hat{q}} $$
+$$
+S_q = e^{i 2\sqrt{\pi} \hat{p}}, \quad S_p = e^{-i 2\sqrt{\pi} \hat{q}}
+$$
 
 Como $e^{i\hat{A}}e^{i\hat{B}} = e^{i\hat{B}}e^{i\hat{A}} e^{-[\hat{A},\hat{B}]}$ (identidad de Baker-Campbell-Hausdorff), vemos que para $\hat{A} = 2\sqrt{\pi} \hat{p}$ y $\hat{B} = -2\sqrt{\pi} \hat{q}$, el conmutador produce una fase de $e^{i 4\pi} = 1$, lo que certifica la conmutación abeliana de estabilizadores no triviales $[S_q, S_p] = 0$.
 
 El estado lógico $|0\rangle_{GKP}$ se formaliza mediante la suma infinita sobre el retículo de deltas de Dirac:
 
-$$ |0\rangle_{GKP} \propto \sum_{s \in \mathbb{Z}} |\hat{q} = 2s\sqrt{\pi}\rangle $$
+$$
+|0\rangle_{GKP} \propto \sum_{s \in \mathbb{Z}} |\hat{q} = 2s\sqrt{\pi}\rangle
+$$
 
 La dinámica del ruido en hardware (pérdida fotónica) se modela rigurosamente mediante las Operaciones de Kraus en la superoperación Master Equation de Lindblad de forma asintótica difusiva. El problema de la corrección requiere medir síndromes análogos que mapean el error de cuadratura estocástico dentro de la zona de Brillouin fundamental $\mathcal{B} = [-\sqrt{\pi}/2, \sqrt{\pi}/2) \times [-\sqrt{\pi}/2, \sqrt{\pi}/2)$, donde la homología del toro delinea categóricamente la manifestación de un fallo lógico (si el ruido causa un cruce fronterizo topológico de módulo perimetral).
 
@@ -274,11 +340,11 @@ La dinámica del ruido en hardware (pérdida fotónica) se modela rigurosamente 
    - **Importancia Teórica:** Es la obra cumbre que demuestra el Teorema del Umbral: si la tasa de error físico está por debajo de un umbral $p_c$, las operaciones cuánticas lógicas pueden hacerse con una tasa de error asintóticamente nula.
    - **Fondo Matemático:** Introduce códigos concatenados, anidando códigos unos dentro de otros. Si cada nivel reduce el error a $\epsilon' \leq c \cdot \epsilon^2$, tras $k$ concatenaciones el error lógico se suprime doblemente exponencialmente como:
 
-     $$
+     
 
-     \epsilon_{logic} \approx \frac{(c \cdot p_{phys})^{2^k}}{c}
-
-     $$
+$$
+\epsilon_{logic} \approx \frac{(c \cdot p_{phys})^{2^k}}{c}
+$$
 
    - **Implicaciones Físicas:** Demuestra definitivamente que un ordenador cuántico escalable y con tolerancia a fallos es físicamente construible siempre que el hardware rompa la barrera de fidelidad requerida por la arquitectura subyacente.
 
@@ -287,11 +353,11 @@ La dinámica del ruido en hardware (pérdida fotónica) se modela rigurosamente 
    - **Importancia Teórica:** Una exhaustiva revisión que detalla los principios de funcionamiento, ventajas y barreras para la escala de qubits superconductores transmón, el pilar de IBM y Google.
    - **Fondo Matemático:** El hamiltoniano del qubit (unión de Josephson) es fundamentalmente un oscilador anarmónico LC. La fase superconductora $\phi$ y la carga $n$ (pares de Cooper) actúan como variables conjugadas $[\phi, n] = i$. El término no lineal (la energía de Josephson $E_J$) permite usar los dos niveles de energía más bajos ($0, 1$) para formar el qubit:
 
-     $$
+     
 
-     \mathcal{H} = 4 E_C (n - n_g)^2 - E_J \cos(\phi)
-
-     $$
+$$
+\mathcal{H} = 4 E_C (n - n_g)^2 - E_J \cos(\phi)
+$$
 
    - **Implicaciones Físicas:** Establece el compromiso (trade-off) ingenieril intrínseco en los sistemas de hardware cuántico moderno entre la coherencia térmica (tiempos $T_1$ y $T_2$) y la anarmonicidad que previene fugas fuera del subespacio computacional.
 
@@ -300,11 +366,11 @@ La dinámica del ruido en hardware (pérdida fotónica) se modela rigurosamente 
    - **Importancia Teórica:** Propone la adaptación del código Tórico/Superficie para configuraciones de mallas cuadradas 2D de qubits interactuantes locales, minimizando el cruzamiento perjudicial (crosstalk).
    - **Fondo Matemático:** Emplea ciclos homológicos para operaciones lógicas. Un error lógico se corresponde con una cadena de Pauli no trivial (inobservada localmente) de peso macroscópico $d$ (distancia del código) que conecta dos fronteras opuestas del arreglo topológico:
 
-     $$
+     
 
-     E_L = \bigotimes_{i \in \gamma} Z_i \quad \text{donde} \quad |\gamma| = d
-
-     $$
+$$
+E_L = \bigotimes_{i \in \gamma} Z_i \quad \text{donde} \quad |\gamma| = d
+$$
 
    - **Implicaciones Físicas:** Proporciona un modelo ingenieril extremadamente perdonador ($1\%$ de umbral) adaptado excelentemente a arquitecturas físicas rígidas limitadas dimensionalmente.
 

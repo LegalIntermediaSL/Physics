@@ -17,33 +17,45 @@ Resolver la ecuación de Schrödinger en una dimensión permite aislar y examina
 
 Supongamos una partícula de masa $m$ en un potencial $V(x)$:
 
-$$ V(x) = \begin{cases} 0 & \text{si } 0 < x < L \\ \infty & \text{en el exterior} \end{cases} $$
+$$
+V(x) = \begin{cases} 0 & \text{si } 0 < x < L \\ \infty & \text{en el exterior} \end{cases}
+$$
 
 Fuera de la caja, la probabilidad de encontrar la partícula es nula debido al potencial infinito; por ende, $\psi(x) = 0$ para $x \le 0$ y $x \ge L$. 
 
 En el interior de la caja, el Hamiltoniano es el de una partícula libre, y la ecuación de Schrödinger independiente del tiempo se reduce a:
 
-$$ -\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} = E \psi(x) \implies \frac{d^2\psi}{dx^2} + k^2\psi = 0 \quad \text{donde } k = \frac{\sqrt{2mE}}{\hbar} $$
+$$
+-\frac{\hbar^2}{2m} \frac{d^2\psi(x)}{dx^2} = E \psi(x) \implies \frac{d^2\psi}{dx^2} + k^2\psi = 0 \quad \text{donde } k = \frac{\sqrt{2mE}}{\hbar}
+$$
 
 Esta es una ecuación diferencial ordinaria de segundo orden con coeficientes constantes. La solución general es una combinación lineal de ondas planas:
 
-$$ \psi(x) = A\sin(kx) + B\cos(kx) $$
+$$
+\psi(x) = A\sin(kx) + B\cos(kx)
+$$
 
 **Imposición de Condiciones de Contorno:**
 1. $\psi(0) = 0 \implies A\sin(0) + B\cos(0) = B = 0$. La solución se reduce a $\psi(x) = A\sin(kx)$.
 2. $\psi(L) = 0 \implies A\sin(kL) = 0$. Dado que $A \neq 0$ (la solución trivial no es normalizable), la función seno debe anularse, lo que implica que su argumento es un múltiplo entero de $\pi$:
 
-$$ kL = n\pi \implies k_n = \frac{n\pi}{L}, \quad \text{con } n = 1, 2, 3, \dots $$
+$$
+kL = n\pi \implies k_n = \frac{n\pi}{L}, \quad \text{con } n = 1, 2, 3, \dots
+$$
 
 Al sustituir el valor cuantizado de $k_n$ en la definición de energía, descubrimos la **cuantización de la energía**:
 
-$$ E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2\pi^2\hbar^2}{2mL^2} $$
+$$
+E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2\pi^2\hbar^2}{2mL^2}
+$$
 
 Es crucial destacar que la energía más baja posible no es cero ($E_1 > 0$). Este es el llamado nivel de punto cero, una manifestación del Principio de Incertidumbre: confinar la partícula reduce drásticamente su incertidumbre espacial $\Delta x$, lo que fuerza un aumento en la incertidumbre del momento $\Delta p$ y, en consecuencia, en la energía cinética promedio.
 
 Aplicando la condición de normalización $\int_0^L |A\sin(n\pi x / L)|^2 dx = 1$, encontramos la amplitud $A = \sqrt{2/L}$. Las autofunciones resultan:
 
-$$ \psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi x}{L}\right) $$
+$$
+\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi x}{L}\right)
+$$
 
 ```mermaid
 graph LR
@@ -61,30 +73,42 @@ graph LR
 El potencial armónico clásico $V(x) = \frac{1}{2}m\omega^2 x^2$ es fundamental, ya que aproxima el comportamiento de cualquier potencial cerca de un punto de equilibrio estable (expansión de Taylor).
 El Hamiltoniano cuántico es:
 
-$$ \hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2 \hat{x}^2 $$
+$$
+\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2 \hat{x}^2
+$$
 
 En lugar de resolver la complicada ecuación diferencial que involucra polinomios de Hermite, Paul Dirac introdujo el método algebraico de operadores de creación y aniquilación (u operadores escalera). Definimos operadores adimensionales, no hermitianos:
 
-$$ \hat{a} = \sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x} + \frac{i}{m\omega}\hat{p} \right), \quad \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x} - \frac{i}{m\omega}\hat{p} \right) $$
+$$
+\hat{a} = \sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x} + \frac{i}{m\omega}\hat{p} \right), \quad \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x} - \frac{i}{m\omega}\hat{p} \right)
+$$
 
 Se puede demostrar, a partir del conmutador fundamental $[\hat{x}, \hat{p}] = i\hbar$, que:
 
-$$ [\hat{a}, \hat{a}^\dagger] = 1 $$
+$$
+[\hat{a}, \hat{a}^\dagger] = 1
+$$
 
 Reescribiendo el Hamiltoniano en términos de estos operadores:
 
-$$ \hat{H} = \hbar\omega \left( \hat{a}^\dagger\hat{a} + \frac{1}{2} \right) $$
+$$
+\hat{H} = \hbar\omega \left( \hat{a}^\dagger\hat{a} + \frac{1}{2} \right)
+$$
 
 Si actuamos con $\hat{H}$ sobre el estado modificado $\hat{a}|n\rangle$, se comprueba que disminuye la energía en $\hbar\omega$; por eso $\hat{a}$ es el **operador de aniquilación** o descenso. De manera análoga, $\hat{a}^\dagger$ la aumenta, siendo el **operador de creación**. 
 
 Para evitar un colapso hacia energías negativas infinitas (lo cual violaría la positividad del espectro), debe existir un estado fundamental mínimo $|0\rangle$ tal que la aplicación de $\hat{a}$ lo anule: $\hat{a}|0\rangle = 0$.
 A partir de aquí, la energía del estado fundamental es:
 
-$$ \hat{H}|0\rangle = \hbar\omega \left( 0 + \frac{1}{2} \right)|0\rangle = \frac{1}{2}\hbar\omega |0\rangle \implies E_0 = \frac{1}{2}\hbar\omega $$
+$$
+\hat{H}|0\rangle = \hbar\omega \left( 0 + \frac{1}{2} \right)|0\rangle = \frac{1}{2}\hbar\omega |0\rangle \implies E_0 = \frac{1}{2}\hbar\omega
+$$
 
 Los autoestados excitados superiores se obtienen aplicando iterativamente el operador escalera de subida:
 
-$$ E_n = \hbar\omega \left( n + \frac{1}{2} \right), \quad n=0, 1, 2, \dots $$
+$$
+E_n = \hbar\omega \left( n + \frac{1}{2} \right), \quad n=0, 1, 2, \dots
+$$
 
 Este espectro está igualmente espaciado.
 
@@ -94,16 +118,22 @@ Una característica contraria a la intuición surge cuando resolvemos la ecuaci�
 
 Cuantitativamente, la ecuación en la zona prohibida (dentro de la barrera $0 \le x \le a$) es:
 
-$$ \frac{d^2\psi}{dx^2} = \frac{2m(V_0 - E)}{\hbar^2} \psi = \kappa^2 \psi $$
+$$
+\frac{d^2\psi}{dx^2} = \frac{2m(V_0 - E)}{\hbar^2} \psi = \kappa^2 \psi
+$$
 
 Donde $\kappa$ es una constante real. La solución no oscila, sino que decrece exponencialmente:
 
-$$ \psi(x) = C e^{-\kappa x} + D e^{+\kappa x} $$
+$$
+\psi(x) = C e^{-\kappa x} + D e^{+\kappa x}
+$$
 
 Empalmando las funciones de onda y sus primeras derivadas (condiciones de continuidad) en las fronteras de la barrera $x=0$ y $x=a$, se descubre que la amplitud de la onda en la región más allá de la barrera ($x > a$) no es cero. La partícula tiene una probabilidad de "hacer un túnel".
 El coeficiente de transmisión $T$ para una barrera ancha y alta decae exponencialmente de la forma:
 
-$$ T \approx e^{-2\kappa a} = \exp\left( -2a \frac{\sqrt{2m(V_0 - E)}}{\hbar} \right) $$
+$$
+T \approx e^{-2\kappa a} = \exp\left( -2a \frac{\sqrt{2m(V_0 - E)}}{\hbar} \right)
+$$
 
 Este fenómeno explica procesos tan diversos como la desintegración radiactiva alfa, el funcionamiento de microscopios de efecto túnel (STM) y las fusiones nucleares en los centros estelares, que ocurren a temperaturas "demasiado frías" para superar clásicamente las barreras de repulsión de Coulomb.
 
@@ -115,24 +145,34 @@ Este fenómeno explica procesos tan diversos como la desintegración radiactiva 
 **Solución paso a paso:**
 1. La función de onda del estado fundamental ($n=1$) es:
 
-$$ \psi_1(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{\pi x}{L}\right) $$
+$$
+\psi_1(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{\pi x}{L}\right)
+$$
 
 2. La densidad de probabilidad es $P(x) = |\psi_1(x)|^2 = \frac{2}{L} \sin^2\left(\frac{\pi x}{L}\right)$.
 3. Calculamos la integral de probabilidad en el intervalo pedido:
 
-$$ P = \int_{L/3}^{2L/3} \frac{2}{L} \sin^2\left(\frac{\pi x}{L}\right) dx $$
+$$
+P = \int_{L/3}^{2L/3} \frac{2}{L} \sin^2\left(\frac{\pi x}{L}\right) dx
+$$
 
 4. Usamos la identidad trigonométrica $\sin^2(\theta) = \frac{1 - \cos(2\theta)}{2}$:
 
-$$ P = \frac{2}{L} \int_{L/3}^{2L/3} \frac{1 - \cos\left(\frac{2\pi x}{L}\right)}{2} dx = \frac{1}{L} \left[ x - \frac{L}{2\pi}\sin\left(\frac{2\pi x}{L}\right) \right]_{L/3}^{2L/3} $$
+$$
+P = \frac{2}{L} \int_{L/3}^{2L/3} \frac{1 - \cos\left(\frac{2\pi x}{L}\right)}{2} dx = \frac{1}{L} \left[ x - \frac{L}{2\pi}\sin\left(\frac{2\pi x}{L}\right) \right]_{L/3}^{2L/3}
+$$
 
 5. Evaluamos en los límites:
 
-$$ P = \frac{1}{L} \left[ \left( \frac{2L}{3} - \frac{L}{2\pi}\sin\left(\frac{4\pi}{3}\right) \right) - \left( \frac{L}{3} - \frac{L}{2\pi}\sin\left(\frac{2\pi}{3}\right) \right) \right] $$
+$$
+P = \frac{1}{L} \left[ \left( \frac{2L}{3} - \frac{L}{2\pi}\sin\left(\frac{4\pi}{3}\right) \right) - \left( \frac{L}{3} - \frac{L}{2\pi}\sin\left(\frac{2\pi}{3}\right) \right) \right]
+$$
 
 Sabiendo que $\sin(4\pi/3) = -\sqrt{3}/2$ y $\sin(2\pi/3) = \sqrt{3}/2$:
 
-$$ P = \frac{1}{L} \left[ \frac{L}{3} - \frac{L}{2\pi}\left(-\frac{\sqrt{3}}{2} - \frac{\sqrt{3}}{2}\right) \right] = \frac{1}{3} + \frac{\sqrt{3}}{2\pi} \approx 0.333 + 0.276 = 0.609 $$
+$$
+P = \frac{1}{L} \left[ \frac{L}{3} - \frac{L}{2\pi}\left(-\frac{\sqrt{3}}{2} - \frac{\sqrt{3}}{2}\right) \right] = \frac{1}{3} + \frac{\sqrt{3}}{2\pi} \approx 0.333 + 0.276 = 0.609
+$$
 
 La probabilidad es del 60.9%, mucho mayor al 33.3% clásico esperado, debido a que la onda de probabilidad "se abulta" en el centro.
 
@@ -147,11 +187,15 @@ Encuentra el estado ligado y su energía para una partícula de masa $m$ bajo la
 2. Para $x \neq 0$, $V=0$. Las soluciones acotadas para estados ligados ($E < 0$) son ondas evanescentes: $\psi(x) = A e^{-\kappa x}$ (para $x>0$) y $\psi(x) = A e^{+\kappa x}$ (para $x<0$), donde $\kappa = \sqrt{-2mE}/\hbar$. Podemos escribir $\psi(x) = A e^{-\kappa |x|}$.
 3. Integramos la ecuación de Schrödinger en un intervalo $[-\epsilon, +\epsilon]$ alrededor del origen y tomamos el límite $\epsilon \to 0$:
 
-$$ -\frac{\hbar^2}{2m} \left( \left. \frac{d\psi}{dx} \right|_{0^+} - \left. \frac{d\psi}{dx} \right|_{0^-} \right) - \alpha \psi(0) = 0 $$
+$$
+-\frac{\hbar^2}{2m} \left( \left. \frac{d\psi}{dx} \right|_{0^+} - \left. \frac{d\psi}{dx} \right|_{0^-} \right) - \alpha \psi(0) = 0
+$$
 
 4. Calculamos los saltos de las derivadas en $x=0$:
 
-$$ \left. \frac{d\psi}{dx} \right|_{0^+} = -A\kappa, \quad \left. \frac{d\psi}{dx} \right|_{0^-} = +A\kappa $$
+$$
+\left. \frac{d\psi}{dx} \right|_{0^+} = -A\kappa, \quad \left. \frac{d\psi}{dx} \right|_{0^-} = +A\kappa
+$$
 
 5. Sustituimos en la condición de discontinuidad: $-\frac{\hbar^2}{2m} (-2A\kappa) = \alpha A$.
 6. Simplificando obtenemos $\frac{\hbar^2 \kappa}{m} = \alpha \implies \kappa = \frac{m\alpha}{\hbar^2}$.
@@ -163,12 +207,16 @@ Estima el coeficiente de transmisión $T$ para una barrera de potencial paraból
 1. La aproximación WKB para el coeficiente de transmisión es $T \approx \exp\left( -2 \int_{x_1}^{x_2} \kappa(x) dx \right)$, donde $\kappa(x) = \frac{\sqrt{2m(V(x) - E)}}{\hbar}$.
 2. Encontramos los puntos de retorno $x_1, x_2$ igualando $E = V(x)$:
 
-$$ E = V_0 - \frac{1}{2}kx^2 \implies x_{1,2} = \pm \sqrt{\frac{2(V_0 - E)}{k}} $$
+$$
+E = V_0 - \frac{1}{2}kx^2 \implies x_{1,2} = \pm \sqrt{\frac{2(V_0 - E)}{k}}
+$$
 
 3. Evaluamos la integral $I = \int_{-x_0}^{x_0} \sqrt{2m \left( V_0 - E - \frac{1}{2}kx^2 \right)} dx$, donde $x_0 = \sqrt{\frac{2(V_0 - E)}{k}}$.
 4. Esta integral tiene la forma del área de un semi-círculo/elipse. Sea $V_0 - E = \Delta E$:
 
-$$ I = \sqrt{mk} \int_{-x_0}^{x_0} \sqrt{x_0^2 - x^2} dx $$
+$$
+I = \sqrt{mk} \int_{-x_0}^{x_0} \sqrt{x_0^2 - x^2} dx
+$$
 
 5. La integral matemática $\int_{-a}^a \sqrt{a^2-x^2} dx = \frac{\pi}{2}a^2$.
 6. Así, $I = \sqrt{mk} \frac{\pi}{2} x_0^2 = \sqrt{mk} \frac{\pi}{2} \frac{2\Delta E}{k} = \pi \Delta E \sqrt{\frac{m}{k}}$.
@@ -269,15 +317,21 @@ En los confines de 2026, los sistemas unidimensionales dejaron de ser meros "mod
 
 La física 1D en el límite de bajas energías (cerca de la superficie de Fermi reducida a dos puntos) es gobernada dictatorialmente por la **Teoría de Campos Conformes (CFT)** en el espacio de Minkowski 1+1D. El mapeo del álgebra de observables resulta en el Álgebra de Virasoro de dimensiones infinitas con una carga central $c$:
 
-$$ [L_n, L_m] = (n-m)L_{n+m} + \frac{c}{12} n(n^2-1) \delta_{n+m, 0} $$
+$$
+[L_n, L_m] = (n-m)L_{n+m} + \frac{c}{12} n(n^2-1) \delta_{n+m, 0}
+$$
 
 Esta simetría confiere integrabilidad a muchos sistemas 1D acoplados y permite la técnica matemática exacta de la **Bosonización**. En 1D, las estadísticas fermiónicas y bosónicas pueden ser isomórficas; un campo fermiónico de Dirac $\psi(x)$ puede reescribirse a partir de un campo escalar bosónico $\phi(x)$ mediante la transformación compacta:
 
-$$ \psi(x) \sim \frac{1}{\sqrt{2\pi\alpha}} \exp\left( -i\sqrt{4\pi} \phi(x) \right) $$
+$$
+\psi(x) \sim \frac{1}{\sqrt{2\pi\alpha}} \exp\left( -i\sqrt{4\pi} \phi(x) \right)
+$$
 
 Por el lado de la topología unidimensional, para sistemas periódicos gobernados por el teorema de Bloch, definimos la fase de Zak, la integral unidimensional de la conexión de Berry de los estados de banda $\mathcal{A}(k) = i \langle u_k | \partial_k u_k \rangle$ sobre la zona de Brillouin (BZ):
 
-$$ \gamma_{\text{Zak}} = \oint_{\text{BZ}} \mathcal{A}(k) \, dk = \int_{-\pi/a}^{\pi/a} i \langle u_k | \frac{\partial}{\partial k} | u_k \rangle \, dk $$
+$$
+\gamma_{\text{Zak}} = \oint_{\text{BZ}} \mathcal{A}(k) \, dk = \int_{-\pi/a}^{\pi/a} i \langle u_k | \frac{\partial}{\partial k} | u_k \rangle \, dk
+$$
 
 Para cadenas poliméricas 1D o aislantes topológicos 1D con simetría de inversión, esta fase es un invariante topológico cuantizado $\mathbb{Z}_2$, pudiendo tomar estrictamente los valores $0$ o $\pi$. Un valor de $\pi$ predice inequívocamente la existencia física de un estado topológicamente protegido de energía nula incrustado en el borde 1D.
 
@@ -291,21 +345,33 @@ Para cadenas poliméricas 1D o aislantes topológicos 1D con simetría de invers
 1. **Gamow, G. (1928). "Zur Quantentheorie des Atomkernes"**. *Zeitschrift für Physik*, 51(3-4), 204-212. [DOI: 10.1007/BF01343196](https://doi.org/10.1007/BF01343196)
    *Importancia Teórica y Matemática:* Formula la teoría de la desintegración radiactiva alfa mediante el efecto túnel cuántico. Calcula la probabilidad de transmisión a través de la barrera Coulombiana:
 
-   $$ T \approx \exp\left( - \frac{2}{\hbar} \int_{r_0}^{R} \sqrt{2m (V(r) - E)} \, dr \right) $$
+   
+
+$$
+T \approx \exp\left( - \frac{2}{\hbar} \int_{r_0}^{R} \sqrt{2m (V(r) - E)} \, dr \right)
+$$
 
    *Implicaciones Físicas:* Fue el primer gran triunfo predictivo del efecto túnel cuántico en sistemas unidimensionales radiales efectivos, estableciendo una relación directa entre el periodo de semidesintegración y la energía de la partícula alfa (Ley de Geiger-Nuttall).
 
 2. **Dirac, P. A. M. (1927). "The Quantum Theory of the Emission and Absorption of Radiation"**. *Proc. R. Soc. Lond. A*, 114(767), 243-265. [DOI: 10.1098/rspa.1927.0039](https://doi.org/10.1098/rspa.1927.0039)
    *Importancia Teórica y Matemática:* Introdujo formalmente los operadores escalera (creación y aniquilación) para tratar modos electromagnéticos equivalentes a osciladores armónicos 1D, un formalismo algebraico central:
 
-   $$ \hat{H} = \hbar \omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right), \quad [\hat{a}, \hat{a}^\dagger] = 1 $$
+   
+
+$$
+\hat{H} = \hbar \omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right), \quad [\hat{a}, \hat{a}^\dagger] = 1
+$$
 
    *Implicaciones Físicas:* No solo resolvió el problema espectral del oscilador de forma elegante, sino que fundamentó la Segunda Cuantización, transformando osciladores abstractos en "partículas" (fotones).
 
 3. **Kramers, H. A. (1926). "Wellenmechanik und halbzählige Quantisierung"**. *Zeitschrift für Physik*, 39, 828-840. [DOI: 10.1007/BF01451751](https://doi.org/10.1007/BF01451751)
    *Importancia Teórica y Matemática:* Junto con Brillouin y Wentzel (WKB), desarrolla una solución asintótica a la ecuación de Schrödinger dependiente de la acción semiclásica $S(x)$:
 
-   $$ \psi(x) \approx \frac{1}{\sqrt{p(x)}} \exp\left( \pm \frac{i}{\hbar} \int p(x) dx \right) $$
+   
+
+$$
+\psi(x) \approx \frac{1}{\sqrt{p(x)}} \exp\left( \pm \frac{i}{\hbar} \int p(x) dx \right)
+$$
 
    *Implicaciones Físicas:* La aproximación WKB en una dimensión proporcionó la conexión explícita entre la teoría cuántica rigurosa y las reglas de cuantización de Bohr-Sommerfeld de la antigua mecánica cuántica.
 

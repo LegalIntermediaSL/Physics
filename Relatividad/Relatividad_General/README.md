@@ -18,17 +18,23 @@ La Relatividad General (RG) describe la gravitación no como una fuerza que se p
 
 El formalismo matemático de la RG se asienta en la geometría de variedades (Riemannianas y pseudo-Riemannianas). El elemento central es el **Tensor Métrico** $g_{\mu\nu}$, un campo tensorial simétrico de rango 2 que generaliza el teorema de Pitágoras y permite medir distancias (intervalos espacio-temporales), tiempos, ángulos y volúmenes:
 
-$$ ds^2 = g_{\mu\nu} dx^\mu dx^\nu $$
+$$
+ds^2 = g_{\mu\nu} dx^\mu dx^\nu
+$$
 
 A partir del tensor métrico, podemos construir los **Símbolos de Christoffel** $\Gamma^\lambda_{\mu\nu}$, que no son tensores verdaderos pero describen cómo cambian los vectores de la base al moverse de un punto a otro en el espacio curvo (la conexión afín de Levi-Civita):
 
-$$ \Gamma^\lambda_{\mu\nu} = \frac{1}{2} g^{\lambda\sigma} (\partial_\mu g_{\nu\sigma} + \partial_\nu g_{\sigma\mu} - \partial_\sigma g_{\mu\nu}) $$
+$$
+\Gamma^\lambda_{\mu\nu} = \frac{1}{2} g^{\lambda\sigma} (\partial_\mu g_{\nu\sigma} + \partial_\nu g_{\sigma\mu} - \partial_\sigma g_{\mu\nu})
+$$
 
 ### 2. Geodésicas: El Movimiento de la Materia
 
 El principio de equivalencia implica que la gravedad es indistinguible de la aceleración. Por lo tanto, en ausencia de otras fuerzas no gravitatorias, una partícula en caída libre sigue la trayectoria más "recta" en el espacio-tiempo. Matemáticamente, esto se formula minimizando el intervalo a lo largo de la curva $\delta \int ds = 0$, lo que conduce a la **Ecuación de la Geodésica**:
 
-$$ \frac{d^2x^\lambda}{d\tau^2} + \Gamma^\lambda_{\mu\nu} \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} = 0 $$
+$$
+\frac{d^2x^\lambda}{d\tau^2} + \Gamma^\lambda_{\mu\nu} \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} = 0
+$$
 
 Donde $\tau$ es un parámetro afín (típicamente el tiempo propio de la partícula masiva). Esta ecuación nos dice "cómo el espacio-tiempo curva la trayectoria de la materia".
 
@@ -44,7 +50,9 @@ graph LR
 
 Para cuantificar verdaderamente si el espacio-tiempo es curvo de forma independiente a la elección de coordenadas, debemos examinar el **Tensor de Curvatura de Riemann** $R^\rho_{\sigma\mu\nu}$. Este tensor mide la no-conmutatividad de las derivadas covariantes o, equivalentemente, cuánto difiere un vector de sí mismo tras ser transportado paralelamente a lo largo de un bucle infinitesimal:
 
-$$ R^\rho_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho_{\nu\sigma} - \partial_\nu \Gamma^\rho_{\mu\sigma} + \Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma} $$
+$$
+R^\rho_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho_{\nu\sigma} - \partial_\nu \Gamma^\rho_{\mu\sigma} + \Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}
+$$
 
 El tensor de Riemann se puede contraer para obtener el **Tensor de Ricci** $R_{\mu\nu} = R^\lambda_{\mu\lambda\nu}$, y contrayéndolo una vez más usando el tensor métrico obtenemos la curvatura escalar o **Escalar de Ricci** $R = g^{\mu\nu} R_{\mu\nu}$.
 
@@ -54,7 +62,9 @@ El objetivo máximo de Einstein era relacionar la geometría (representada por t
 
 Exigiendo que la divergencia covariante del lado geométrico sea cero (para asegurar la conservación local de la energía y el momento $\nabla_\mu T^{\mu\nu} = 0$), Einstein llegó a sus famosas ecuaciones:
 
-$$ R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu} $$
+$$
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
+$$
 
 - $G$ es la Constante Gravitacional de Newton.
 - $c$ es la velocidad de la luz.
@@ -66,7 +76,9 @@ A este conjunto de 10 ecuaciones diferenciales parciales no lineales (debido a l
 
 La primera solución analítica exacta de estas ecuaciones en el vacío ($T_{\mu\nu} = 0$, excepto en la singularidad central) fue encontrada por Karl Schwarzschild en 1916. Describe el campo gravitatorio alrededor de una masa esféricamente simétrica y estática (no rotatoria) sin carga:
 
-$$ ds^2 = \left(1 - \frac{r_s}{r}\right) c^2 dt^2 - \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 - r^2(d\theta^2 + \sin^2\theta d\phi^2) $$
+$$
+ds^2 = \left(1 - \frac{r_s}{r}\right) c^2 dt^2 - \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 - r^2(d\theta^2 + \sin^2\theta d\phi^2)
+$$
 
 Donde $r_s = \frac{2GM}{c^2}$ es el **Radio de Schwarzschild**.
 - Cuando $r \rightarrow \infty$, la métrica se reduce a la métrica plana de Minkowski.
@@ -82,27 +94,51 @@ Donde $r_s = \frac{2GM}{c^2}$ es el **Radio de Schwarzschild**.
 **Solución paso a paso:**
 1. Consideremos el intervalo $ds^2$ en la superficie ($r=R$) y en el infinito ($r \rightarrow \infty$). Para relojes estacionarios en un campo gravitacional, $dr=d\theta=d\phi=0$, y el tiempo propio medido por un observador $\tau$ se relaciona con el tiempo coordinado $t$ mediante:
 
-   $$ d\tau = \sqrt{g_{00}} dt = \sqrt{1 - \frac{r_s}{r}} dt $$
+   
+
+$$
+d\tau = \sqrt{g_{00}} dt = \sqrt{1 - \frac{r_s}{r}} dt
+$$
 
 2. Si un emisor E en $r=R$ envía señales luminosas con un período de tiempo propio $\Delta \tau_E$, el intervalo de tiempo coordinado entre las emisiones es $\Delta t = \Delta \tau_E / \sqrt{1 - r_s/R}$.
 3. Al viajar los fotones por la misma trayectoria radial, llegan a un observador receptor O en $r \rightarrow \infty$ con el mismo intervalo coordinado $\Delta t$. Sin embargo, para O, en el infinito $g_{00} \approx 1$, por lo tanto, el tiempo propio del observador es $\Delta \tau_O = \Delta t$.
 4. Así, la relación de los tiempos propios, que son inversamente proporcionales a las frecuencias observadas ($\nu = 1/\Delta \tau$), es:
 
-   $$ \frac{\nu_O}{\nu_E} = \frac{\Delta \tau_E}{\Delta \tau_O} = \frac{\sqrt{1 - r_s/R} \Delta t}{\Delta t} = \sqrt{1 - \frac{r_s}{R}} $$
+   
+
+$$
+\frac{\nu_O}{\nu_E} = \frac{\Delta \tau_E}{\Delta \tau_O} = \frac{\sqrt{1 - r_s/R} \Delta t}{\Delta t} = \sqrt{1 - \frac{r_s}{R}}
+$$
 
    Sabiendo que el corrimiento al rojo $z$ se define como $1 + z = \frac{\lambda_O}{\lambda_E} = \frac{\nu_E}{\nu_O}$:
 
-   $$ 1 + z = \frac{1}{\sqrt{1 - \frac{2GM}{Rc^2}}} $$
+   
+
+$$
+1 + z = \frac{1}{\sqrt{1 - \frac{2GM}{Rc^2}}}
+$$
 
 5. Evaluamos el radio de Schwarzschild para la estrella de neutrones:
 
-   $$ M = 1.4 \times 1.989 \times 10^{30} \text{ kg} \approx 2.78 \times 10^{30} \text{ kg} $$
+   
 
-   $$ r_s = \frac{2 \times 6.674\times 10^{-11} \times 2.78 \times 10^{30}}{(3 \times 10^8)^2} = \frac{37.1 \times 10^{19}}{9 \times 10^{16}} \approx 4122 \text{ m} = 4.122 \text{ km} $$
+$$
+M = 1.4 \times 1.989 \times 10^{30} \text{ kg} \approx 2.78 \times 10^{30} \text{ kg}
+$$
+
+   
+
+$$
+r_s = \frac{2 \times 6.674\times 10^{-11} \times 2.78 \times 10^{30}}{(3 \times 10^8)^2} = \frac{37.1 \times 10^{19}}{9 \times 10^{16}} \approx 4122 \text{ m} = 4.122 \text{ km}
+$$
 
 6. Calculamos el redshift para la emisión desde $R=10 \text{ km}$:
 
-   $$ z = \frac{1}{\sqrt{1 - \frac{4.122}{10}}} - 1 = \frac{1}{\sqrt{1 - 0.4122}} - 1 = \frac{1}{\sqrt{0.5878}} - 1 = \frac{1}{0.7667} - 1 \approx 1.304 - 1 = 0.304 $$
+   
+
+$$
+z = \frac{1}{\sqrt{1 - \frac{4.122}{10}}} - 1 = \frac{1}{\sqrt{1 - 0.4122}} - 1 = \frac{1}{\sqrt{0.5878}} - 1 = \frac{1}{0.7667} - 1 \approx 1.304 - 1 = 0.304
+$$
 
 7. **Conclusión:** La luz escapando del inmenso pozo de potencial de una estrella de neutrones pierde energía (corrimiento gravitacional al rojo), incrementando su longitud de onda observada en un $\sim 30.4\%$.
 
@@ -228,15 +264,21 @@ El tratamiento riguroso de la Relatividad General se formula en el lenguaje de l
 
 La curvatura de la variedad está completamente descrita por el tensor de Riemann $R^\rho_{\ \sigma\mu\nu}$, definido por el conmutador de derivadas covariantes aplicadas a un campo vectorial $V^\rho$:
 
-$$ [\nabla_\mu, \nabla_\nu] V^\rho = R^\rho_{\ \sigma\mu\nu} V^\sigma $$
+$$
+[\nabla_\mu, \nabla_\nu] V^\rho = R^\rho_{\ \sigma\mu\nu} V^\sigma
+$$
 
 La dinámica del espacio-tiempo está dictada por las Ecuaciones de Campo de Einstein, las cuales pueden derivarse variacionalmente del principio de mínima acción utilizando la **Acción de Einstein-Hilbert**, incluyendo un término cosmológico $\Lambda$ y la acción de la materia $\mathcal{S}_M$:
 
-$$ \mathcal{S} = \frac{1}{16\pi G} \int_\mathcal{M} (R - 2\Lambda) \sqrt{-g} \, d^4x + \mathcal{S}_M $$
+$$
+\mathcal{S} = \frac{1}{16\pi G} \int_\mathcal{M} (R - 2\Lambda) \sqrt{-g} \, d^4x + \mathcal{S}_M
+$$
 
 Al realizar la variación de la acción con respecto a la métrica inversa $g^{\mu\nu}$, $\delta\mathcal{S} / \delta g^{\mu\nu} = 0$, obtenemos las ecuaciones de campo completas:
 
-$$ G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu} $$
+$$
+G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}
+$$
 
 donde $G_{\mu\nu} \equiv R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu}$ es el tensor de Einstein (que satisface la identidad contraída de Bianchi $\nabla^\mu G_{\mu\nu} = 0$, asegurando la conservación local de energía e impulso $\nabla^\mu T_{\mu\nu} = 0$), $R_{\mu\nu}$ es el tensor de Ricci y $R$ es el escalar de Ricci.
 
@@ -257,7 +299,11 @@ Para estudiar fermiones en RG, el formalismo requiere la introducción de **tét
    **Importancia Teórica:** La presentación maestra, estructurada y completa de la Relatividad General tras años de intentos fallidos ("el argumento del agujero"). Eleva el Principio de Equivalencia a una formulación geométrica covariante.  
    **Fondo Matemático:** Introduce las Ecuaciones de Campo de Einstein que acoplan la geometría del espacio-tiempo con el contenido de energía-impulso (materia):
 
-   $$ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} $$
+   
+
+$$
+R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}
+$$
 
    **Implicaciones Físicas:** Define la gravedad como curvatura y no como fuerza newtoniana; logra derivar analíticamente la precesión anómala del perihelio de Mercurio y predice la deflexión de la luz, ambos confirmados observacionalmente.
 
@@ -266,7 +312,11 @@ Para estudiar fermiones en RG, el formalismo requiere la introducción de **tét
    **Importancia Teórica:** Publicado pocas semanas después del artículo de Einstein (y poco antes de la muerte de Schwarzschild en la Primera Guerra Mundial), representa la primera solución exacta no trivial a las Ecuaciones de Einstein en el vacío ($T_{\mu\nu}=0$).  
    **Fondo Matemático:** Deriva la métrica esféricamente simétrica y estática para una masa puntual $M$, revelando el "radio de Schwarzschild" $r_s = 2GM/c^2$:
 
-   $$ ds^2 = \left(1 - \frac{r_s}{r}\right) c^2 dt^2 - \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 - r^2 d\Omega^2 $$
+   
+
+$$
+ds^2 = \left(1 - \frac{r_s}{r}\right) c^2 dt^2 - \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 - r^2 d\Omega^2
+$$
 
    **Implicaciones Físicas:** Introduce matemáticamente el concepto de singularidad gravitacional y horizonte de sucesos, sentando las bases teóricas de la física de los agujeros negros, mucho antes de que se entendiera su posibilidad física.
 

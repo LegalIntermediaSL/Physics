@@ -12,36 +12,50 @@ La ecuación de Bernoulli no es una postulación axiomática, sino un teorema de
 
 Comenzamos con la ecuación diferencial de Euler para el movimiento de un fluido ideal invíscido y de densidad constante $\rho$, bajo un campo de fuerza externo conservativo, que en nuestro caso será el campo gravitatorio (cuyo potencial es $\phi = gz$):
 
-$$ \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla) \vec{v} = -\frac{1}{\rho} \nabla p - \nabla (gz) $$
+$$
+\frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla) \vec{v} = -\frac{1}{\rho} \nabla p - \nabla (gz)
+$$
 
 Utilizamos la identidad del cálculo vectorial: $(\vec{v} \cdot \nabla) \vec{v} = \frac{1}{2} \nabla (\vec{v} \cdot \vec{v}) - \vec{v} \times (\nabla \times \vec{v})$. 
 Definimos la vorticidad del flujo como $\vec{\omega} = \nabla \times \vec{v}$. Sustituyendo esto en la ecuación:
 
-$$ \frac{\partial \vec{v}}{\partial t} + \frac{1}{2} \nabla (v^2) - \vec{v} \times \vec{\omega} = -\frac{1}{\rho} \nabla p - \nabla (gz) $$
+$$
+\frac{\partial \vec{v}}{\partial t} + \frac{1}{2} \nabla (v^2) - \vec{v} \times \vec{\omega} = -\frac{1}{\rho} \nabla p - \nabla (gz)
+$$
 
 Reagrupando los términos que son gradientes exactos a un lado:
 
-$$ \frac{\partial \vec{v}}{\partial t} - \vec{v} \times \vec{\omega} = - \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) $$
+$$
+\frac{\partial \vec{v}}{\partial t} - \vec{v} \times \vec{\omega} = - \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right)
+$$
 
 **Suposición de Flujo Estacionario:**
 Para un flujo permanente donde las condiciones no cambian en un punto temporalmente, $\frac{\partial \vec{v}}{\partial t} = 0$:
 
-$$ \vec{v} \times \vec{\omega} = \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) $$
+$$
+\vec{v} \times \vec{\omega} = \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right)
+$$
 
 **Evaluación a lo largo de una línea de corriente:**
 Una línea de corriente es, por definición, paralela a la velocidad $\vec{v}$ en todo momento. Por lo tanto, el diferencial de desplazamiento $d\vec{r}$ a lo largo de una línea de corriente es paralelo a $\vec{v}$. Tomando el producto escalar de la ecuación con $d\vec{r}$:
 
-$$ d\vec{r} \cdot (\vec{v} \times \vec{\omega}) = d\vec{r} \cdot \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) $$
+$$
+d\vec{r} \cdot (\vec{v} \times \vec{\omega}) = d\vec{r} \cdot \nabla \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right)
+$$
 
 Ya que $\vec{v}$ y $d\vec{r}$ son paralelos, el producto mixto de la izquierda es matemáticamente cero: $\vec{v} \times \vec{\omega}$ es ortogonal a $\vec{v}$, y por tanto es ortogonal a $d\vec{r}$.
 El término de la derecha es, por definición del diferencial exacto, $d \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right)$.
 Por tanto, llegamos a:
 
-$$ d \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) = 0 $$
+$$
+d \left( \frac{p}{\rho} + \frac{v^2}{2} + gz \right) = 0
+$$
 
 Al integrar, obtenemos la **Ecuación de Bernoulli**:
 
-$$ p + \frac{1}{2} \rho v^2 + \rho g z = H = \text{constante} $$
+$$
+p + \frac{1}{2} \rho v^2 + \rho g z = H = \text{constante}
+$$
 
 Esta constante $H$ (la presión total o cabeza de Bernoulli) permanece invariante **a lo largo de una línea de corriente particular**. Si además el flujo inicial fuera irrotacional ($\vec{\omega} = \nabla \times \vec{v} = 0$ en todos lados), la constante sería idéntica para todas las líneas de corriente de todo el campo de flujo de manera universal.
 
@@ -75,23 +89,47 @@ graph TD
 **Solución paso a paso:**
 1. Áreas de las secciones:
 
-   $$ A_1 = \pi (0.05 \text{ m})^2 = 0.0025\pi \text{ m}^2 $$
+   
 
-   $$ A_2 = \pi (0.025 \text{ m})^2 = 0.000625\pi \text{ m}^2 $$
+$$
+A_1 = \pi (0.05 \text{ m})^2 = 0.0025\pi \text{ m}^2
+$$
+
+   
+
+$$
+A_2 = \pi (0.025 \text{ m})^2 = 0.000625\pi \text{ m}^2
+$$
 
 2. Usamos la ecuación de continuidad para hallar $ v_2 $:
    $ v_2 = v_1 \frac{A_1}{A_2} = 2 \frac{0.0025\pi}{0.000625\pi} = 2 \times 4 = 8 \text{ m/s} $.
 3. Aplicamos Bernoulli. Como es horizontal, $ z_1 = z_2 $, por lo que el término $ \rho g z $ se cancela:
 
-   $$ P_1 + \frac{1}{2} \rho v_1^2 = P_2 + \frac{1}{2} \rho v_2^2 $$
+   
+
+$$
+P_1 + \frac{1}{2} \rho v_1^2 = P_2 + \frac{1}{2} \rho v_2^2
+$$
 
 4. Despejamos $ P_2 $:
 
-   $$ P_2 = P_1 + \frac{1}{2} \rho (v_1^2 - v_2^2) $$
+   
 
-   $$ P_2 = 1.5 \times 10^5 + \frac{1}{2} (1000) (2^2 - 8^2) $$
+$$
+P_2 = P_1 + \frac{1}{2} \rho (v_1^2 - v_2^2)
+$$
 
-   $$ P_2 = 150000 + 500 (4 - 64) = 150000 + 500 (-60) $$
+   
+
+$$
+P_2 = 1.5 \times 10^5 + \frac{1}{2} (1000) (2^2 - 8^2)
+$$
+
+   
+
+$$
+P_2 = 150000 + 500 (4 - 64) = 150000 + 500 (-60)
+$$
 
    $ P_2 = 150000 - 30000 = 120000 \text{ Pa} $ (O $ 1.2 \times 10^5 \text{ Pa} $).
 
@@ -195,11 +233,15 @@ El mayor problema abierto en dinámica de fluidos en 2026 sigue siendo la **Exis
 
 A un nivel doctoral, la dinámica de fluidos de Euler para fluidos incompresibles ideales fue reformulada geométricamente por V. Arnold como el **flujo geodésico sobre el grupo de difeomorfismos que preservan el volumen**. Sea $\text{SDiff}(M)$ el grupo de Lie de difeomorfismos sobre una variedad Riemanniana $M$. La métrica Riemanniana a derecha invariante sobre este espacio de dimensión infinita está inducida por la energía cinética del fluido:
 
-$$ \langle X, Y \rangle = \int_M g(X(x), Y(x)) d\mu $$
+$$
+\langle X, Y \rangle = \int_M g(X(x), Y(x)) d\mu
+$$
 
 Las ecuaciones de Euler emergen espectacularmente como la ecuación geodésica estricta sobre este grupo de Lie:
 
-$$ \nabla_{\dot{\eta}} \dot{\eta} = 0 $$
+$$
+\nabla_{\dot{\eta}} \dot{\eta} = 0
+$$
 
 donde $\eta(t) \in \text{SDiff}(M)$ es la posición Lagrangiana del fluido en el tiempo $t$. Las inestabilidades fluidas (como Rayleigh-Taylor) se traducen en curvaturas seccionales negativas de esta métrica en $\text{SDiff}(M)$, implicando que las geodésicas (las trayectorias de los campos de velocidad) divergen exponencialmente, formalizando matemáticamente el caos en fluidos ideales.
 
@@ -216,11 +258,11 @@ donde $\eta(t) \in \text{SDiff}(M)$ es la posición Lagrangiana del fluido en el
    - **Importancia Teórica:** La obra magna que fundó la hidrodinámica moderna, estableciendo la relación inversa entre la presión y la velocidad del fluido.
    - **Fondo Matemático:** Deriva la conservación de la energía en una línea de corriente para flujos incompresibles e invíscidos (viscosidad nula):
 
-     $$
+     
 
-     \frac{v^2}{2} + g z + \frac{p}{\rho} = \text{constante}
-
-     $$
+$$
+\frac{v^2}{2} + g z + \frac{p}{\rho} = \text{constante}
+$$
 
    - **Implicaciones Físicas:** Demuestra cómo la energía potencial elástica de la presión se convierte dinámicamente en energía cinética, un principio clave para la aviación y medición de flujo.
 
@@ -229,11 +271,11 @@ donde $\eta(t) \in \text{SDiff}(M)$ es la posición Lagrangiana del fluido en el
    - **Importancia Teórica:** Formalizó de manera definitiva las ecuaciones de Navier-Stokes, incorporando correctamente el tensor de tensiones viscosas para fluidos newtonianos.
    - **Fondo Matemático:** Establece la conservación del momento (segunda ley de Newton continua) bajo fricción interna:
 
-     $$
+     
 
-     \rho \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v} \right) = -\nabla p + \mu \nabla^2 \mathbf{v} + \rho \mathbf{g}
-
-     $$
+$$
+\rho \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v} \right) = -\nabla p + \mu \nabla^2 \mathbf{v} + \rho \mathbf{g}
+$$
 
    - **Implicaciones Físicas:** Forma el pilar absoluto de la dinámica de fluidos realista moderna, gobernando desde la circulación oceánica hasta el flujo de aire aerodinámico turbulento.
 
@@ -242,11 +284,11 @@ donde $\eta(t) \in \text{SDiff}(M)$ es la posición Lagrangiana del fluido en el
    - **Importancia Teórica:** Sintetiza los avances estadísticos fenomenológicos (como Kolmogorov K41) para dar un marco tratable a la turbulencia.
    - **Fondo Matemático:** Estudia el espectro de energía $E(k)$ en función del número de onda, dictando la cascada inercial de energía desde vórtices grandes a pequeños donde se disipa por viscosidad cinemática $\nu$:
 
-     $$
+     
 
-     E(k) = C \varepsilon^{2/3} k^{-5/3}
-
-     $$
+$$
+E(k) = C \varepsilon^{2/3} k^{-5/3}
+$$
 
    - **Implicaciones Físicas:** Ofrece la comprensión teórica estadística para problemas intratables analíticamente de caos determinista, fundamentales para los modelos subgrilla en CFD (Computational Fluid Dynamics).
 

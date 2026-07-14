@@ -14,7 +14,9 @@ La clasificación matemática de la estructura cristalina es uno de los mayores 
 
 Cualquier operación de simetría sobre un cristal ideal se puede describir matemáticamente como un operador de Seitz $\{\mathbf{S} | \mathbf{v}\}$, donde $\mathbf{S}$ representa una operación puntual (rotación, reflexión, inversión) y $\mathbf{v}$ representa un vector de traslación. Al actuar sobre un vector de posición $\mathbf{r}$ en el cristal, transforma la coordenada como:
 
-$$ \mathbf{r}' = \{\mathbf{S} | \mathbf{v}\}\mathbf{r} = \mathbf{S}\mathbf{r} + \mathbf{v} $$
+$$
+\mathbf{r}' = \{\mathbf{S} | \mathbf{v}\}\mathbf{r} = \mathbf{S}\mathbf{r} + \mathbf{v}
+$$
 
 El conjunto de todas estas operaciones que dejan la red de átomos invariante forma el **Grupo Espacial**. En tres dimensiones existen exactamente 230 grupos espaciales. Si restringimos las operaciones a aquellas que no contienen traslación pura (dejando al menos un punto invariante), obtenemos el **Grupo Puntual Cristalino** (las operaciones isomórficas a isometrías puntuales). Existen estrictamente 32 grupos puntuales cristalográficos, debido al teorema de restricción cristalográfica que dicta que solo son posibles rotaciones por factores espaciales de orden $n=1,2,3,4,6$ en una red traslacional (las simetrías de orden 5 y mayores a 6 están prohibidas para llenar el espacio periódicamente, lo que es la base de los *cuasicristales*).
 
@@ -25,15 +27,21 @@ Mientras que la red de Bravais directa reside en el espacio coordenado tridimens
 Dado un cristal con vectores base primitivos $\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3$, la densidad electrónica $\rho(\mathbf{r})$ en el cristal tiene la misma periodicidad de la red: $\rho(\mathbf{r} + \mathbf{R}) = \rho(\mathbf{r})$ para todo vector de Bravais $\mathbf{R}$. Su desarrollo en serie de Fourier requiere la construcción de una base recíproca.
 Un vector de la red recíproca $\mathbf{G}$ se define formalmente como aquel que cumple la periodicidad de ondas planas:
 
-$$ e^{i \mathbf{G} \cdot \mathbf{R}} = 1 $$
+$$
+e^{i \mathbf{G} \cdot \mathbf{R}} = 1
+$$
 
 Sustituyendo $\mathbf{R} = n_1 \mathbf{a}_1 + n_2 \mathbf{a}_2 + n_3 \mathbf{a}_3$ y $\mathbf{G} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3$, la ecuación demanda que el producto escalar mutuo sea un múltiplo de $2\pi$:
 
-$$ \mathbf{a}_i \cdot \mathbf{b}_j = 2\pi \delta_{ij} $$
+$$
+\mathbf{a}_i \cdot \mathbf{b}_j = 2\pi \delta_{ij}
+$$
 
 donde $\delta_{ij}$ es la delta de Kronecker. Esto lleva a las definiciones explícitas del vector recíproco mediante los productos cruz espaciales:
 
-$$ \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V_c}, \quad \mathbf{b}_2 = 2\pi \frac{\mathbf{a}_3 \times \mathbf{a}_1}{V_c}, \quad \mathbf{b}_3 = 2\pi \frac{\mathbf{a}_1 \times \mathbf{a}_2}{V_c} $$
+$$
+\mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V_c}, \quad \mathbf{b}_2 = 2\pi \frac{\mathbf{a}_3 \times \mathbf{a}_1}{V_c}, \quad \mathbf{b}_3 = 2\pi \frac{\mathbf{a}_1 \times \mathbf{a}_2}{V_c}
+$$
 
 Donde $V_c = \mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)$ es el volumen escalar de la celda unitaria primitiva directa.
 
@@ -63,40 +71,81 @@ graph TD
 1. **Definición de vectores base primitivos de la red FCC directa:**
    Una red FCC convencional es un cubo de lado $a$, con puntos reticulares en los vértices y en los centros de todas las caras. Los vectores que unen el origen con los centros de las tres caras adyacentes forman un conjunto primitivo:
 
-   $$ \mathbf{a}_1 = \frac{a}{2}(\hat{y} + \hat{z}) $$
+   
 
-   $$ \mathbf{a}_2 = \frac{a}{2}(\hat{x} + \hat{z}) $$
+$$
+\mathbf{a}_1 = \frac{a}{2}(\hat{y} + \hat{z})
+$$
 
-   $$ \mathbf{a}_3 = \frac{a}{2}(\hat{x} + \hat{y}) $$
+   
+
+$$
+\mathbf{a}_2 = \frac{a}{2}(\hat{x} + \hat{z})
+$$
+
+   
+
+$$
+\mathbf{a}_3 = \frac{a}{2}(\hat{x} + \hat{y})
+$$
 
 2. **Cálculo del volumen de la celda primitiva ($V_c$):**
    Evaluamos el producto mixto $V_c = \mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)$.
    Primero, calculamos el producto cruz $\mathbf{a}_2 \times \mathbf{a}_3$:
 
-   $$ \mathbf{a}_2 \times \mathbf{a}_3 = \frac{a^2}{4} [(\hat{x} + \hat{z}) \times (\hat{x} + \hat{y})] = \frac{a^2}{4} (\hat{x}\times\hat{x} + \hat{x}\times\hat{y} + \hat{z}\times\hat{x} + \hat{z}\times\hat{y}) $$
+   
+
+$$
+\mathbf{a}_2 \times \mathbf{a}_3 = \frac{a^2}{4} [(\hat{x} + \hat{z}) \times (\hat{x} + \hat{y})] = \frac{a^2}{4} (\hat{x}\times\hat{x} + \hat{x}\times\hat{y} + \hat{z}\times\hat{x} + \hat{z}\times\hat{y})
+$$
 
    Usando las propiedades del producto cruz ortonormal ($\hat{x}\times\hat{x}=0$, $\hat{x}\times\hat{y}=\hat{z}$, $\hat{z}\times\hat{x}=\hat{y}$, $\hat{z}\times\hat{y}=-\hat{x}$):
 
-   $$ \mathbf{a}_2 \times \mathbf{a}_3 = \frac{a^2}{4}(\hat{z} + \hat{y} - \hat{x}) $$
+   
+
+$$
+\mathbf{a}_2 \times \mathbf{a}_3 = \frac{a^2}{4}(\hat{z} + \hat{y} - \hat{x})
+$$
 
    Ahora, el producto escalar para el volumen:
 
-   $$ V_c = \frac{a}{2}(\hat{y} + \hat{z}) \cdot \frac{a^2}{4}(-\hat{x} + \hat{y} + \hat{z}) = \frac{a^3}{8} ( (\hat{y}\cdot\hat{y}) + (\hat{z}\cdot\hat{z}) ) = \frac{a^3}{8}(1 + 1) = \frac{a^3}{4} $$
+   
+
+$$
+V_c = \frac{a}{2}(\hat{y} + \hat{z}) \cdot \frac{a^2}{4}(-\hat{x} + \hat{y} + \hat{z}) = \frac{a^3}{8} ( (\hat{y}\cdot\hat{y}) + (\hat{z}\cdot\hat{z}) ) = \frac{a^3}{8}(1 + 1) = \frac{a^3}{4}
+$$
 
    El volumen primitivo es un cuarto del cubo unitario convencional.
 
 3. **Cálculo de los vectores recíprocos ($\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3$):**
    Utilizando la definición matemática demostrada en la teoría:
 
-   $$ \mathbf{b}_1 = \frac{2\pi}{V_c} (\mathbf{a}_2 \times \mathbf{a}_3) = \frac{2\pi}{a^3/4} \left[ \frac{a^2}{4} (-\hat{x} + \hat{y} + \hat{z}) \right] $$
+   
 
-   $$ \mathbf{b}_1 = \frac{2\pi}{a} (-\hat{x} + \hat{y} + \hat{z}) $$
+$$
+\mathbf{b}_1 = \frac{2\pi}{V_c} (\mathbf{a}_2 \times \mathbf{a}_3) = \frac{2\pi}{a^3/4} \left[ \frac{a^2}{4} (-\hat{x} + \hat{y} + \hat{z}) \right]
+$$
+
+   
+
+$$
+\mathbf{b}_1 = \frac{2\pi}{a} (-\hat{x} + \hat{y} + \hat{z})
+$$
+
    
    Por simetría cíclica en la permutación de las coordenadas (haciendo rotaciones $x\to y, y\to z, z\to x$), obtenemos $\mathbf{b}_2$ y $\mathbf{b}_3$:
 
-   $$ \mathbf{b}_2 = \frac{2\pi}{V_c} (\mathbf{a}_3 \times \mathbf{a}_1) = \frac{2\pi}{a} (\hat{x} - \hat{y} + \hat{z}) $$
+   
 
-   $$ \mathbf{b}_3 = \frac{2\pi}{V_c} (\mathbf{a}_1 \times \mathbf{a}_2) = \frac{2\pi}{a} (\hat{x} + \hat{y} - \hat{z}) $$
+$$
+\mathbf{b}_2 = \frac{2\pi}{V_c} (\mathbf{a}_3 \times \mathbf{a}_1) = \frac{2\pi}{a} (\hat{x} - \hat{y} + \hat{z})
+$$
+
+   
+
+$$
+\mathbf{b}_3 = \frac{2\pi}{V_c} (\mathbf{a}_1 \times \mathbf{a}_2) = \frac{2\pi}{a} (\hat{x} + \hat{y} - \hat{z})
+$$
 
 4. **Análisis de los resultados geométricos:**
    Los vectores generados $(\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3)$ son vectores que apuntan hacia las esquinas de un cubo imaginario de tamaño $(4\pi/a)$. Formalmente, este conjunto de base describe puntos que se encuentran en el centro de un cubo y en sus 8 vértices.
@@ -118,11 +167,15 @@ El número de átomos dentro de esta celda primitiva es exactamente 2.
 El radio de las esferas que están en contacto en el plano basal es $R = a/2$.
 El volumen de los átomos dentro de la celda es:
 
-$$ V_{átomos} = 2 \times \frac{4}{3} \pi R^3 = 2 \times \frac{4}{3} \pi \left( \frac{a}{2} \right)^3 = \frac{\pi}{3} a^3 $$
+$$
+V_{átomos} = 2 \times \frac{4}{3} \pi R^3 = 2 \times \frac{4}{3} \pi \left( \frac{a}{2} \right)^3 = \frac{\pi}{3} a^3
+$$
 
 El Factor de Empaquetamiento (APF) es la razón:
 
-$$ APF = \frac{V_{átomos}}{V_{celda}} = \frac{\frac{\pi}{3} a^3}{\sqrt{2} a^3} = \frac{\pi}{3\sqrt{2}} \approx 0.74 $$
+$$
+APF = \frac{V_{átomos}}{V_{celda}} = \frac{\frac{\pi}{3} a^3}{\sqrt{2} a^3} = \frac{\pi}{3\sqrt{2}} \approx 0.74
+$$
 
 Este es el máximo empaquetamiento teóricamente posible para esferas idénticas (idéntico a la estructura FCC).
 
@@ -134,15 +187,31 @@ El procedimiento estándar para hallar los índices de Miller $(hkl)$ es:
 1. Encontrar las intersecciones del plano con los ejes, expresadas en términos de las constantes de red. Aquí son 2, 3 y 1.
 2. Tomar los inversos de estos números:
 
-   $$ 1/2, \quad 1/3, \quad 1/1 $$
+   
+
+$$
+1/2, \quad 1/3, \quad 1/1
+$$
 
 3. Multiplicar por el mínimo común múltiplo (MCM) de los denominadores (que es 6) para reducirlos a los números enteros más pequeños posibles:
 
-   $$ 6 \times (1/2) = 3 $$
+   
 
-   $$ 6 \times (1/3) = 2 $$
+$$
+6 \times (1/2) = 3
+$$
 
-   $$ 6 \times (1/1) = 6 $$
+   
+
+$$
+6 \times (1/3) = 2
+$$
+
+   
+
+$$
+6 \times (1/1) = 6
+$$
 
 Por lo tanto, los índices de Miller para este plano son $(3 2 6)$.
 
@@ -152,22 +221,34 @@ Demuestre que la red recíproca de una estructura cúbica centrada en el cuerpo 
 **Solución paso a paso:**
 Los vectores primitivos de la red BCC directa son:
 
-$$ \mathbf{a}_1 = \frac{a}{2} (\mathbf{\hat{i}} + \mathbf{\hat{j}} - \mathbf{\hat{k}}) $$
+$$
+\mathbf{a}_1 = \frac{a}{2} (\mathbf{\hat{i}} + \mathbf{\hat{j}} - \mathbf{\hat{k}})
+$$
 
-$$ \mathbf{a}_2 = \frac{a}{2} (-\mathbf{\hat{i}} + \mathbf{\hat{j}} + \mathbf{\hat{k}}) $$
+$$
+\mathbf{a}_2 = \frac{a}{2} (-\mathbf{\hat{i}} + \mathbf{\hat{j}} + \mathbf{\hat{k}})
+$$
 
-$$ \mathbf{a}_3 = \frac{a}{2} (\mathbf{\hat{i}} - \mathbf{\hat{j}} + \mathbf{\hat{k}}) $$
+$$
+\mathbf{a}_3 = \frac{a}{2} (\mathbf{\hat{i}} - \mathbf{\hat{j}} + \mathbf{\hat{k}})
+$$
 
 El volumen de esta celda primitiva es $V_c = \mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3) = \frac{a^3}{2}$.
 Calculamos el primer vector primitivo recíproco $\mathbf{b}_1$:
 
-$$ \mathbf{a}_2 \times \mathbf{a}_3 = \frac{a^2}{4} \left( (\mathbf{\hat{j}}+\mathbf{\hat{k}}-\mathbf{\hat{i}}) \times (\mathbf{\hat{i}}+\mathbf{\hat{k}}-\mathbf{\hat{j}}) \right) = \frac{a^2}{2} (\mathbf{\hat{i}} + \mathbf{\hat{j}}) $$
+$$
+\mathbf{a}_2 \times \mathbf{a}_3 = \frac{a^2}{4} \left( (\mathbf{\hat{j}}+\mathbf{\hat{k}}-\mathbf{\hat{i}}) \times (\mathbf{\hat{i}}+\mathbf{\hat{k}}-\mathbf{\hat{j}}) \right) = \frac{a^2}{2} (\mathbf{\hat{i}} + \mathbf{\hat{j}})
+$$
 
-$$ \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V_c} = 2\pi \frac{\frac{a^2}{2}(\mathbf{\hat{i}}+\mathbf{\hat{j}})}{a^3/2} = \frac{2\pi}{a} (\mathbf{\hat{i}} + \mathbf{\hat{j}}) $$
+$$
+\mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V_c} = 2\pi \frac{\frac{a^2}{2}(\mathbf{\hat{i}}+\mathbf{\hat{j}})}{a^3/2} = \frac{2\pi}{a} (\mathbf{\hat{i}} + \mathbf{\hat{j}})
+$$
 
 Por permutación cíclica para los otros dos:
 
-$$ \mathbf{b}_2 = \frac{2\pi}{a} (\mathbf{\hat{j}} + \mathbf{\hat{k}}), \quad \mathbf{b}_3 = \frac{2\pi}{a} (\mathbf{\hat{k}} + \mathbf{\hat{i}}) $$
+$$
+\mathbf{b}_2 = \frac{2\pi}{a} (\mathbf{\hat{j}} + \mathbf{\hat{k}}), \quad \mathbf{b}_3 = \frac{2\pi}{a} (\mathbf{\hat{k}} + \mathbf{\hat{i}})
+$$
 
 Estos tres vectores $\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3$ son exactamente los vectores primitivos canónicos de una red FCC en el espacio recíproco. La arista del cubo de dicha red recíproca es $2 \times \frac{2\pi}{a} = \frac{4\pi}{a}$.
 
@@ -239,7 +320,9 @@ Por ejemplo, las dislocaciones en un cristal tridimensional están asociadas al 
 **Geometría Diferencial con Torsión (Gravedad Análoga):**
 A un nivel continuo, una red con dislocaciones puede modelarse geométricamente dotando al espacio de una conexión afín no simétrica. La densidad de dislocaciones está dada por el tensor de torsión de Cartan $T_{ij}^k$:
 
-$$ T_{ij}^k = \Gamma_{ij}^k - \Gamma_{ji}^k $$
+$$
+T_{ij}^k = \Gamma_{ij}^k - \Gamma_{ji}^k
+$$
 
 Las disclinaciones (defectos de rotación) se relacionan análogamente con el tensor de curvatura de Riemann $R_{ijk}^l$. De este modo, la teoría de plasticidad cristalina toma la forma de una teoría métrico-afín análoga a la Relatividad General de Einstein-Cartan.
 
@@ -255,11 +338,19 @@ Las disclinaciones (defectos de rotación) se relacionan análogamente con el te
    - **Importancia Teórica:** El artículo donde los Bragg formulan por primera vez cómo los planos atómicos dispersan los rayos X de forma coherente. Funda la técnica de difractometría, que permitió ver el interior atómico de los materiales.
    - **Fondo Matemático:** El planteamiento matemático se basa en la interferencia óptica adaptada a la red periódica. Si $d$ es la distancia entre planos adyacentes de la red, una onda que incide con ángulo rasante $\theta$ viajará una diferencia de trayectoria óptica $\Delta x$ con respecto a la onda que incide en el plano superior:
 
-     $$ \Delta x = 2 d \sin \theta $$
+     
+
+$$
+\Delta x = 2 d \sin \theta
+$$
 
      Para que haya interferencia constructiva, el desfase espacial debe ser un múltiplo entero de la longitud de onda $\lambda$:
 
-     $$ n\lambda = 2d_{hkl} \sin \theta $$
+     
+
+$$
+n\lambda = 2d_{hkl} \sin \theta
+$$
 
      La generalización vectorial por von Laue, $\mathbf{k}' - \mathbf{k} = \mathbf{G}_{hkl}$, demuestra la naturaleza de transformada de Fourier intrínseca al experimento, mapeando la densidad real a la red recíproca.
    - **Implicaciones Físicas:** Demuestra sin lugar a dudas la existencia y la disposición periódica del átomo en un sólido, proporcionando un metrólogo sub-angstrom.
@@ -268,7 +359,11 @@ Las disclinaciones (defectos de rotación) se relacionan análogamente con el te
    - **Importancia Teórica:** Referencia canónica sobre la teoría de grupos para la geometría espacial de los cristales, uniendo simetrías traslacionales, reflexiones y rotaciones.
    - **Fondo Matemático:** Un grupo de simetría espacial $G$ está compuesto por isometrías en $\mathbb{R}^3$. Cada operación se describe por la transformación afín $x \mapsto Wx + w$, combinando una matriz ortogonal $W \in O(3)$ (el grupo puntual) y un vector de traslación $w \in \mathbb{R}^3$. La restricción fundamental de que la red es invariante exige que la traza matricial de las rotaciones permitidas debe ser un entero:
 
-     $$ \text{Tr}(W) = 2\cos \phi + 1 \in \mathbb{Z} $$
+     
+
+$$
+\text{Tr}(W) = 2\cos \phi + 1 \in \mathbb{Z}
+$$
 
      Lo cual implica que los ángulos de rotación permitidos son limitados a $\phi \in \{0, \frac{\pi}{3}, \frac{\pi}{2}, \frac{2\pi}{3}, \pi\}$, forzando ejes de simetría de orden 1, 2, 3, 4 y 6, y prohibiendo ordenamientos como el pentagonal.
    - **Implicaciones Físicas:** Proporciona un límite formal a todos los posibles arreglos de átomos en equilibrio térmico, limitándolos a las 14 redes de Bravais.
