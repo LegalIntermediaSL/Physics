@@ -1,6 +1,6 @@
 # 🔬 Laboratorio de Simulaciones Jupyter
 
-Este directorio contiene **720 Cuadernos Jupyter (`.ipynb`)** interactivos, clasificados por dificultad y área de la física, que abarcan desde cinemática básica hasta simulaciones de supercomputación y física de frontera.
+Este directorio contiene la histórica cifra de **2,688 Cuadernos Jupyter (`.ipynb`)** interactivos, clasificados por área de la física, que abarcan desde cinemática básica hasta simulaciones de supercomputación y física de frontera.
 
 Cada cuaderno ha sido programado con `numpy`, `scipy` y `matplotlib` para asegurar la máxima eficiencia y visualización.
 
@@ -36,10 +36,4 @@ Si prefieres ejecutar el código en tu propia computadora, sigue estos pasos:
    ```
 5. Se abrirá una pestaña en tu navegador web. Desde ahí, navega a la carpeta `Simulaciones_Jupyter/` y abre cualquier cuaderno.
 
-## 📁 Estructura del Directorio
-
-- **13 Áreas Temáticas (Carpetas base)**: Contienen 70 simulaciones iniciales sobre principios fundamentales de la física.
-- **`Investigacion_Avanzada/`**: 39 proyectos que exploran fronteras numéricas, topología, relatividad y termodinámica moderna.
-- **`Laboratorio_Especializado/`**: 91 algoritmos que detallan problemas específicos y profundos (Teoría BCS, Computación Cuántica, Geodésicas).
-- **`Proyectos_de_Supercomputacion/`**: 100 colosales proyectos de física computacional de alto rendimiento (HPC), modelando turbulencia 3D, agujeros negros relativistas y QCD en el retículo.
-- **`Compendio_Subtematico/`**: 420 simulaciones masivas (escala industrial) que cubren exhaustivamente cada uno de los 72 subtemas específicos del repositorio.
+- **13 Áreas Temáticas (Carpetas base)**: Todas las simulaciones del repositorio han sido consolidadas en sus áreas principales. Por ejemplo, `Relatividad/` contiene más de 150 cuadernos, `Mecanica_Clasica/` cientos más, etc. Estas carpetas unifican las simulaciones de la fase base, las de investigación avanzada, laboratorio especializado, proyectos de supercomputación y el compendio galáctico masivo.
