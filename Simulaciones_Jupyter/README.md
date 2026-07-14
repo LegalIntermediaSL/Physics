@@ -1,8 +1,22 @@
 # 🔬 Laboratorio de Simulaciones Jupyter
 
-Este directorio contiene un compendio élite de **175 Cuadernos Jupyter (`.ipynb`)** interactivos, de calidad extrema y únicos en su clase. Siguiendo una filosofía de **Calidad sobre Cantidad**, hemos depurado el repositorio de simulaciones genéricas para enfocarnos exclusivamente en modelos matemáticos y físicos altamente curados, con descripciones precisas y código avanzado.
+Bienvenido a la joya de la corona del repositorio: La **Boutique de Simulaciones Jupyter**. 
 
-Cada cuaderno ha sido programado con `numpy`, `scipy` y `matplotlib` para asegurar la máxima eficiencia y visualización.
+Tras una purga masiva de cuadernos generados algorítmicamente, hemos pivotado hacia un modelo de curaduría de altísima calidad. Actualmente albergamos **187 simulaciones de física de élite**. Cada cuaderno ha sido diseñado a mano para abordar un fenómeno físico avanzado de forma interactiva y visual (con librerías como `numpy`, `scipy` y `matplotlib 3D`).
+
+## Estructura de la Boutique
+
+Todas nuestras simulaciones están organizadas en las mismas 16 áreas teóricas del repositorio principal:
+
+- [x] **Mecánica Clásica**: (Caos determinista, Péndulos dobles acoplados).
+- [x] **Relatividad**: (Agujero Negro de Kerr, Lentes gravitacionales, Expansión de Friedmann).
+- [x] **Mecánica Cuántica**: (Efecto Aharonov-Bohm, Oscilaciones de Rabi, Barreras de potencial).
+- [x] **Astrofísica y Cosmología**: (Espectro del CMB, Inflación Eterna, Juego de la Vida de Conway, Vacíos de Cuerdas).
+- [x] **Termodinámica**: (Motores estocásticos, Fluctuaciones de Langevin).
+- [x] **Electromagnetismo**: (Guías de onda, Radiación de sincrotrón).
+- [x] **Métodos Matemáticos**: (Flujo de Ricci, Polinomios de Legendre, Funciones de Bessel, Armónicos Esféricos).
+- [x] **Teoría Cuántica de Campos (NUEVO)**: (Mecanismo de Higgs, Renormalización QED/QCD, Lattice QCD, Propagadores de Feynman, Efecto Casimir).
+- [x] **Gravedad Cuántica y Cuerdas (NUEVO)**: (Vibraciones de Supercuerdas, Entropía de Strominger-Vafa, D-Branas, Redes de Espín LQG, Geometría Calabi-Yau).
 
 ## 🚀 Cómo Ejecutar los Cuadernos en la Nube (Recomendado)
 

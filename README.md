@@ -19,7 +19,10 @@ El repositorio está dividido en las siguientes áreas principales. Selecciona u
 - ☢️ **[Física Nuclear y de Partículas](./Fisica_Nuclear_y_de_Particulas)**: Estructura del núcleo, decaimientos radiactivos, interacciones fundamentales y detectores.
 - 💎 **[Materia Condensada](./Materia_Condensada)**: Cristales, bandas electrónicas, semiconductores, magnetismo y superconductividad.
 - 🌌 **[Astrofísica y Cosmología](./Astrofisica_y_Cosmologia)**: El estudio de las estrellas, las galaxias y la evolución del universo en su conjunto.
-- 📚 **[Recursos Útiles y Matemáticas](./Recursos_Generales)**: Matemáticas para física, computación científica, trabajo experimental, simuladores y literatura de apoyo.
+- 📐 **[Métodos Matemáticos](./Metodos_Matematicos)**: Geometría diferencial, cálculo tensorial, teoría de grupos y funciones de Green.
+- 🧮 **[Teoría Cuántica de Campos](./Teoria_Cuantica_de_Campos)**: La electrodinámica cuántica (QED), diagramas de Feynman, renormalización y mecanismo de Higgs.
+- 🧶 **[Gravedad Cuántica y Cuerdas](./Gravedad_Cuantica_y_Cuerdas)**: Supercuerdas, anomalías conformes, variedades de Calabi-Yau y Gravedad Cuántica de Lazos (LQG).
+- 📚 **[Recursos Útiles y Matemáticas](./Recursos_Generales)**: Computación científica, trabajo experimental, simuladores y literatura de apoyo.
 
 ## Cómo usar este repositorio
 
