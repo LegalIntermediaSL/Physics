@@ -225,3 +225,13 @@ Esto rigurosamente demuestra la estabilidad de las oscilaciones casi-periódicas
 ### 📖 Referencias Útiles y Bibliografía
 1. [French, A.P. *Vibrations and Waves* (MIT Intro Physics Series)](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362) - El texto definitivo nivel licenciatura. Explica soberbiamente por qué existen y cómo operan matemáticamente las impedancias de onda.
 2. [Elmore, W.C. & Heald, M.A. *Physics of Waves*](https://store.doverpublications.com/products/9780486649269) - Expande severamente la ecuación de D'Alembert usando variables complejas y contorno de propagación vectorial.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [MIT OpenCourseWare: Vibrations and Waves](https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/) - Un curso fundamental para comprender las bases de las oscilaciones y su propagación.
+- [Perimeter Institute: Wave Phenomena Seminars](https://perimeterinstitute.ca/seminars/) - Seminarios avanzados sobre fenómenos ondulatorios en física teórica.
+- [Harvard University: Waves and Optics Course](https://www.physics.harvard.edu/academics/undergrad/courses) - Recursos avanzados sobre el comportamiento de ondas mecánicas y electromagnéticas.
+
+- [Nature: "Observation of topological edge states in a mechanical lattice"](https://www.nature.com/articles/nphys3411) - Demuestra la existencia de estados topológicos de borde en sistemas mecánicos macroscópicos.
+- [Physical Review Letters: "Nonlinear Waves in Periodic Media"](https://journals.aps.org/prl/) - Un análisis profundo de ondas no lineales y solitones en redes periódicas.
+- [Science: "Phononic crystals and metamaterials"](https://www.science.org/) - Revisión del diseño de cristales fonónicos para controlar ondas elásticas de formas sin precedentes.

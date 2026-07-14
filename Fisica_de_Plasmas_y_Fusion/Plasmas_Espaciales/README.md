@@ -280,3 +280,15 @@ Donde $K(\mathbf{r}, p)$ es el tensor de difusión derivado matemáticamente aco
 - Kivelson, M. G., & Russell, C. T. (1995). *Introduction to Space Physics*. Cambridge University Press.
 - Gurnett, D. A., & Bhattacharjee, A. (2005). *Introduction to Plasma Physics: With Space and Laboratory Applications*. Cambridge University Press.
 - Baumjohann, W., & Treumann, R. A. (2012). *Basic Space Plasma Physics*. Imperial College Press.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos
+- [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/events)
+- [MIT Plasma Science and Fusion Center](https://www.psfc.mit.edu/events)
+- [ITER News & Seminars](https://www.iter.org/news)
+
+### Literatura de Frontera
+- [Nuclear Fusion (IAEA)](https://iopscience.iop.org/journal/0029-5515): La revista de referencia para los avances globales en el diseño y física de reactores de fusión.
+- [Physics of Plasmas (AIP)](https://aip.scitation.org/journal/php): Cubre descubrimientos fundamentales en plasmas espaciales, de laboratorio y astrofísicos.
+- [Nature Physics - Plasma Physics](https://www.nature.com/subjects/plasma-physics): Destaca los artículos de mayor impacto relacionados con el confinamiento y las inestabilidades magnéticas.

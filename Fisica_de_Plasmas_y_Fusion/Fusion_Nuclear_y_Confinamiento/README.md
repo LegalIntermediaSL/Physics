@@ -278,3 +278,15 @@ Los coeficientes de transporte $D, \chi, \mu$ se obtienen invirtiendo la matriz 
 - Wesson, J. (2011). *Tokamaks*. Oxford University Press.
 - Atzeni, S., & Meyer-ter-Vehn, J. (2004). *The Physics of Inertial Fusion*. Oxford University Press.
 - Freidberg, J. P. (2007). *Plasma Physics and Fusion Energy*. Cambridge University Press.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos
+- [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/events)
+- [MIT Plasma Science and Fusion Center](https://www.psfc.mit.edu/events)
+- [ITER News & Seminars](https://www.iter.org/news)
+
+### Literatura de Frontera
+- [Nuclear Fusion (IAEA)](https://iopscience.iop.org/journal/0029-5515): La revista de referencia para los avances globales en el diseño y física de reactores de fusión.
+- [Physics of Plasmas (AIP)](https://aip.scitation.org/journal/php): Cubre descubrimientos fundamentales en plasmas espaciales, de laboratorio y astrofísicos.
+- [Nature Physics - Plasma Physics](https://www.nature.com/subjects/plasma-physics): Destaca los artículos de mayor impacto relacionados con el confinamiento y las inestabilidades magnéticas.

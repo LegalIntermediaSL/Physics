@@ -195,3 +195,13 @@ La densidad de energía elástica de deformación $W$ depende de la métrica efe
 ### 📖 Referencias Útiles y Bibliografía
 1. [Theory of Elasticity (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Theory-Elasticity-Course-Theoretical-Physics/dp/075062633X)
 2. [Continuum Mechanics (A.J.M. Spencer)](https://www.amazon.com/Continuum-Mechanics-Dover-Books-Physics/dp/0486435946)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Harvard SEAS: Solid Mechanics Seminars](https://seas.harvard.edu/) - Avances en mecánica de la fractura y elasticidad de grandes deformaciones.
+- [MIT Solid Mechanics Seminar](https://meche.mit.edu/) - Charlas sobre materiales hiperelásticos y respuestas mecánicas exóticas.
+- [Caltech Solid Mechanics Research Seminars](https://eas.caltech.edu/) - Fronteras del estudio de tensores de esfuerzos y materiales activos.
+
+- [Nature: "Metamaterials with negative Poisson's ratio"](https://www.nature.com/) - Diseño de materiales auxéticos revolucionarios.
+- [Science: "Fracture mechanics of 2D materials"](https://www.science.org/) - Límites de elasticidad y tensión en el grafeno y otros cristales bidimensionales.
+- [Physical Review Letters: "Elasticity of amorphous solids"](https://journals.aps.org/prl/) - Profundo estudio sobre las teorías de módulos elásticos en vidrios.

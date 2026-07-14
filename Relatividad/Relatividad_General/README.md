@@ -261,3 +261,15 @@ Para estudiar fermiones en RG, el formalismo requiere la introducción de **tét
 1. **Sean M. Carroll - [Spacetime and Geometry: An Introduction to General Relativity (Cambridge, 2019)](https://www.cambridge.org/highereducation/books/spacetime-and-geometry/1F2F2D1F6E20700B025C6BE60037BD62)** - El equilibrio perfecto entre accesibilidad intuitiva y rigor matemático de alto nivel, ideal para cursos modernos de posgrado o pregrado avanzado.
 2. **Bernard F. Schutz - [A First Course in General Relativity (Cambridge, 2009)](https://www.cambridge.org/highereducation/books/a-first-course-in-general-relativity/94B2E0D6528A32A17EFB738C2ACAEFDE)** - La recomendación más sólida para el primer acercamiento matemático; es sumamente cuidadoso en la enseñanza del cálculo tensorial.
 3. **Charles W. Misner, Kip S. Thorne, John Archibald Wheeler - [Gravitation (Princeton University Press, 1973)](https://press.princeton.edu/books/hardcover/9780691177793/gravitation)** - Conocida coloquialmente como "MTW" (o "el ladrillo"). Un clásico monumental, enciclopédico y muy geométrico (usando formas diferenciales) que no ha perdido vigencia en su poder conceptual.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### 🎓 Seminarios Web y Cursos Avanzados
+- [Perimeter Institute (PIRSA) - General Relativity & Quantum Gravity](https://pirsa.org/): Clases magistrales y seminarios semanales sobre relatividad general, ondas gravitacionales y gravedad cuántica.
+- [Harvard Black Hole Initiative (BHI) Seminars](https://bhi.fas.harvard.edu/): Charlas interdisciplinarias de frontera centradas exclusivamente en el estudio observacional y teórico de los agujeros negros.
+- [CERN Theoretical Physics Seminars](https://home.cern/science/physics/gravitational-waves): Conferencias avanzadas sobre las intersecciones entre gravedad clásica, ondas gravitacionales y cosmología temprana.
+
+### 📝 Literatura de Frontera (High-Impact Papers)
+- [Observation of Gravitational Waves from a Binary Black Hole Merger (Phys. Rev. Lett.)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102): Reporta la primera detección directa de ondas gravitacionales, confirmando una de las mayores predicciones de la Relatividad General un siglo después.
+- [First M87 Event Horizon Telescope Results (ApJ Letters)](https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7): Presenta la primera imagen directa de la sombra de un agujero negro supermasivo, validando las soluciones geométricas en campos gravitatorios ultrafuertes.
+- [The Cosmological Constant and Dark Energy (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.559): Analiza de manera exhaustiva cómo la adición de la constante cosmológica a las ecuaciones de Einstein explica la expansión acelerada del universo.

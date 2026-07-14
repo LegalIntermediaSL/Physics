@@ -249,3 +249,11 @@ Las célebres ecuaciones canónicas de Hamilton son simplemente la expresión lo
 ### 📖 Referencias Útiles y Bibliografía
 - **[Classical Dynamics of Particles and Systems (Thornton & Marion)](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: Perfecto para problemas numéricos aplicados a fuerzas de arrastre y oscilaciones dinámicas.
 - **[Mechanics - L. D. Landau & E. M. Lifshitz (Course of Theoretical Physics)](https://www.elsevier.com/books/mechanics/landau/978-0-08-021022-3)**: El texto sagrado ruso para la mecánica; inicia la dinámica asumiendo directamente la homogeneidad e isotropía del espacio.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+- [CERN Theory Division Seminars](https://theory.cern/seminars) - Seminarios enfocados en la dinámica fundamental de partículas elementales, caos cuántico y física no lineal.
+- [Kavli Institute for Theoretical Physics (KITP): Dynamics Seminars](https://www.kitp.ucsb.edu/activities) - Ciclos de charlas sobre dinámica de materia activa, fluidos complejos y sistemas fuera del equilibrio.
+- [Perimeter Institute: Quantum and Classical Dynamics](https://pirsa.org/) - Conferencias impartidas por líderes mundiales sobre geometría simpléctica y sistemas dinámicos acoplados.
+- [Reviews of Modern Physics: Dynamics of Active Matter](https://journals.aps.org/rmp/) - Un análisis exhaustivo del estado del arte en sistemas cuyas partículas violan el teorema de fluctuación-disipación.
+- [Science: Observation of chaos in deterministic microscopic systems](https://www.science.org/) - Reporta evidencia experimental de dinámicas hiperdimensionales caóticas a escalas nanométricas insospechadas.
+- [PRL: Anomalous Stochastic Dynamics in Networks](https://journals.aps.org/prl/) - Expone soluciones recientes para redes de osciladores acoplados tipo Kuramoto con fluctuaciones anómalas.

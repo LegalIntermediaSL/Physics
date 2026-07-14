@@ -251,3 +251,11 @@ Las singularidades en la derivada $d\Theta/db$ mapean hacia las cáusticas de la
 ### 📖 Referencias Útiles y Bibliografía
 - **[Classical Dynamics of Particles and Systems - Marion & Thornton](https://www.cengage.com/c/classical-dynamics-of-particles-and-systems-5e-thornton/9780534408961/)**: El Capítulo de "Dinámica de un Sistema de Partículas" provee desgloses matriciales exhaustivos de las transformaciones Lab $\to$ CM y deducciones sobre la ecuación escalar del cohete.
 - **[Classical Mechanics - John R. Taylor](https://uscibooks.aip.org/books/classical-mechanics/)**: Los capítulos iniciales traen problemas fantásticos sobre cohetes de propulsión de iones y colisiones frontales ultra-inelásticas de objetos de plastilina.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+- [CERN: LHC Heavy Ion Seminars](https://home.cern/science/experiments/alice) - Seminarios de la colaboración ALICE sobre las colisiones más energéticas, recreando condiciones extremas de plasma de quarks y gluones.
+- [FRIB (Facility for Rare Isotope Beams) Colloquia](https://frib.msu.edu/events) - Análisis de dispersión e interacciones elásticas en aceleradores punteros dedicados a mapear estructuras nucleares exóticas.
+- [Max Planck Institute for Plasma Physics Colloquia](https://www.ipp.mpg.de/seminars) - Cursos sobre choques atómicos en reactores de fusión magnética y termodinámica de plasmas confinados.
+- [PRL: Hypervelocity Impact Phenomena in Low Earth Orbit](https://journals.aps.org/prl/) - Revela nuevas físicas hidrodinámicas que emergen cuando micrometeoritos impactan satélites a velocidades orbitales catastróficas.
+- [Science: Laser-Driven Inertial Confinement Fusion Collisions](https://www.science.org/) - Documenta la ignición histórica lograda colapsando simétricamente el momento de cápsulas de combustible mediante láseres ultra-potentes.
+- [arXiv: S-Matrix Theory and Scattering Amplitudes (Preprints)](https://arxiv.org/) - Fronteras teóricas donde las trayectorias de colisión clásicas convergen orgánicamente con diagramas cuánticos y la matriz-S.

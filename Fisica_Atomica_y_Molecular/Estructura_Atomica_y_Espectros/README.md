@@ -268,3 +268,15 @@ Donde $\Gamma$ es la amplitud del estado ligado, $P$ el momento total, $p$ el mo
 1. **Libro**: [Atomic Physics - C.J. Foot](https://global.oup.com/academic/product/atomic-physics-9780198506966) (Capítulos 4-5). Explicación brillante de la estructura fina/hiperfina y efecto Zeeman.
 2. **Libro**: [Physics of Atoms and Molecules - B.H. Bransden & C.J. Joachain](https://www.pearson.com/en-gb/subject-catalog/p/physics-of-atoms-and-molecules/P200000005272/9780582356924). Referencia pesada y analítica para espectroscopía rigurosa.
 3. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 6: Teoría de Perturbaciones). Muestra explícitamente cómo derivar la estructura fina del hidrógeno sumando el término cinético relativista y el término de espín-órbita.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [Harvard Center for Astrophysics Seminars](https://cfa.harvard.edu/) - Seminarios semanales sobre descubrimientos en física atómica y astrofísica.
+2. [MIT Center for Ultracold Atoms Seminars](https://cuaweb.mit.edu/) - Charlas avanzadas sobre estructura atómica y control cuántico de la materia.
+3. [Perimeter Institute Recorded Seminars (PIRSA)](https://pirsa.org/) - Archivo extenso de seminarios de física teórica y cuántica fundamental.
+
+### Literatura de Frontera
+1. [Precision Measurement of the Proton Radius (Nature)](https://www.nature.com/articles/nature09250) - Este artículo revela la discrepancia en el radio del protón a través de espectroscopía de hidrógeno muónico, desafiando el Modelo Estándar.
+2. [Test of the Fine-Structure Constant (Science)](https://www.science.org/doi/10.1126/science.aay9672) - Mediciones experimentales de la constante de estructura fina mediante interferometría atómica con una precisión sin precedentes.
+3. [Rydberg atoms for quantum technologies (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.82.2313) - Una revisión exhaustiva de cómo la estructura altamente excitada de los átomos de Rydberg es fundamental para la información cuántica moderna.

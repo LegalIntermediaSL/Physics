@@ -252,3 +252,11 @@ donde $\hat{\omega} \in \mathfrak{so}(3)$ es la matriz antisimétrica asociada a
 ### 📖 Referencias Útiles y Bibliografía
 - **[Classical Mechanics - H. Goldstein, C. Poole, J. Safko](https://www.pearson.com/en-us/subject-catalog/p/classical-mechanics/P200000003328/9780201657029)**: El texto estándar para pregrado y posgrado en cinemática analítica.
 - **[Introduction to Classical Mechanics - D. Morin (Cambridge University Press)](https://www.cambridge.org/highereducation/books/introduction-to-classical-mechanics/31CB8B93623D3F14E1EE98B223D1DE47)**: Enfoque riguroso y matemático con ejercicios complejos sobre movimiento relativo y coordenadas curvilíneas.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+- [Harvard CMSA: Mathematical Physics Seminars](https://cmsa.fas.harvard.edu/seminars/mathematical-physics-seminar/) - Charlas avanzadas sobre estructuras geométricas y topológicas aplicadas a la cinemática teórica y moderna.
+- [Perimeter Institute: Recorded Seminar Archive](https://pirsa.org/) - Colección de cursos sobre las bases geométricas espaciotemporales, con énfasis en transformaciones de Lorentz y cinemática relativista.
+- [MIT Center for Theoretical Physics Seminars](https://ctp.lns.mit.edu/seminars/) - Series de conferencias semanales donde se discuten avances recientes en sistemas dinámicos y descripción cinemática.
+- [Nature Physics: Emergent kinematics in active matter](https://www.nature.com/nphys/) - Demuestra cómo conjuntos de partículas autopropulsadas exhiben leyes cinemáticas colectivas novedosas y no triviales.
+- [PRL: Kinematic control in non-Hermitian systems](https://journals.aps.org/prl/) - Analiza la cinemática de sistemas microscópicos que presentan disipación y ganancia asimétrica, redefiniendo trayectorias.
+- [arXiv: Lie Group Formulation of Kinematics (Preprints)](https://arxiv.org/archive/math-ph) - Explora modelos contemporáneos sobre la aplicación sistemática del Álgebra de Lie $\mathfrak{se}(3)$ en robótica blanda.

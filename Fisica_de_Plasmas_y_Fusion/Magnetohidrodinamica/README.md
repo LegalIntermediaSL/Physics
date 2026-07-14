@@ -308,3 +308,15 @@ Este formalismo variacional (teorema extendido de Newcomb) es la base para dise�
 - Biskamp, D. (1993). *Nonlinear Magnetohydrodynamics*. Cambridge University Press.
 - Davidson, P. A. (2001). *An Introduction to Magnetohydrodynamics*. Cambridge University Press.
 - Goedbloed, J. P., & Poedts, S. (2004). *Principles of Magnetohydrodynamics*. Cambridge University Press.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos
+- [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/events)
+- [MIT Plasma Science and Fusion Center](https://www.psfc.mit.edu/events)
+- [ITER News & Seminars](https://www.iter.org/news)
+
+### Literatura de Frontera
+- [Nuclear Fusion (IAEA)](https://iopscience.iop.org/journal/0029-5515): La revista de referencia para los avances globales en el diseño y física de reactores de fusión.
+- [Physics of Plasmas (AIP)](https://aip.scitation.org/journal/php): Cubre descubrimientos fundamentales en plasmas espaciales, de laboratorio y astrofísicos.
+- [Nature Physics - Plasma Physics](https://www.nature.com/subjects/plasma-physics): Destaca los artículos de mayor impacto relacionados con el confinamiento y las inestabilidades magnéticas.

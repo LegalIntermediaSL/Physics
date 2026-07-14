@@ -264,3 +264,15 @@ En regímenes impulsados por disipación en cavidades abiertas orientadas hacia 
 - [Cohen-Tannoudji, C., Dupont-Roc, J., & Grynberg, G. (1992). *Atom-Photon Interactions*. Wiley-VCH.](https://www.wiley.com/en-us/Atom+Photon+Interactions%3A+Basic+Processes+and+Applications-p-9780471293361)
 - [Scully, M. O., & Zubairy, M. S. (1997). *Quantum Optics*. Cambridge University Press.](https://www.cambridge.org/core/books/quantum-optics/2C0485908FA5E1E66678C62A860F5E8E)
 - [Foot, C. J. (2005). *Atomic Physics*. Oxford University Press.](https://global.oup.com/academic/product/atomic-physics-9780198506966)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [Caltech Institute for Quantum Information and Matter (IQIM) Seminars](https://iqim.caltech.edu/) - Exploración de nuevos paradigmas en interacción luz-materia e información cuántica.
+2. [Stanford Ginzton Laboratory Seminars](https://ginzton.stanford.edu/) - Conferencias sobre fotónica, óptica cuántica y óptica no lineal.
+3. [Kavli Institute for Theoretical Physics (KITP) Light-Matter Interactions](https://www.kitp.ucsb.edu/) - Programas dedicados a fronteras teóricas en el control electromagnético de la materia.
+
+### Literatura de Frontera
+1. [Cavity quantum electrodynamics for photons (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.73.565) - Fundamentos del acoplamiento fuerte entre átomos individuales y cavidades fotónicas.
+2. [Quantum optics with giant artificial atoms (Nature)](https://www.nature.com/articles/nature08967) - Interacciones luz-materia utilizando circuitos superconductores en el régimen de acoplamiento ultrafuerte.
+3. [Observation of Dicke superradiance for two artificial atoms (Science)](https://www.science.org/doi/10.1126/science.abf6804) - Demostración de los efectos colectivos en la emisión estimulada a nivel microscópico cuántico.

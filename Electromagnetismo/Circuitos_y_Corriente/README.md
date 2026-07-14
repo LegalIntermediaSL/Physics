@@ -249,3 +249,11 @@ Dado que el núcleo y la imagen son ortogonales, $\langle V, I \rangle = \langle
 3. [Electricity and Magnetism - Edward M. Purcell & David J. Morin](https://www.cambridge.org/highereducation/books/electricity-and-magnetism/C16C976ADCD2F4A96DD8DD3DDAB303CE): Magnífico abordaje donde el magnetismo emerge naturalmente como consecuencia de la relatividad especial.
 4. [Física Universitaria (Vol. 2) - Sears y Zemansky](https://www.pearson.com/store/p/fisica-universitaria-vol-2/P200000000305/9786073244404): Libro fundamental de primer año que incluye un tratamiento fenomenológico completo de los circuitos.
 5. [Fundamentos de Circuitos Eléctricos - Sadiku](https://www.mheducation.com/highered/product/fundamentals-electric-circuits-alexander-sadiku/M9781260226409.html): Un referente internacional fundamental que cubre cada teorema importante desde cero con problemas prácticos.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+- [IEEE Solid-State Circuits Society (SSCS) Webinars](https://sscs.ieee.org/education/webinars) - Presentaciones de líderes de la industria sobre circuitos integrados analógicos ultracompactos de próxima generación.
+- [Kavli Institute Seminars on Nanoscale Electronics](https://kni.caltech.edu/events) - Discusiones sobre conductancia cuántica balística, circuitos espintrónicos y arquitecturas moleculares monoatómicas.
+- [MIT Microsystems Technology Laboratories Seminars](https://www.mtl.mit.edu/events) - Conferencias exponiendo redes interconectadas neuromórficas híbridas con memristores para inteligencia artificial de bajo consumo.
+- [Nature Electronics: Topological quantum circuits](https://www.nature.com/natelectron/) - Describe el desarrollo de componentes electrónicos donde el flujo de la corriente está protegido contra imperfecciones estructurales dispersivas.
+- [Science: Room-temperature ballistic transport in nanowires](https://www.science.org/) - Artículos verificando experimentalmente la supresión completa de resistencia óhmica en nanotubos metálicos purificados sin enfriamiento criogénico.
+- [arXiv: Memristive Networks and Graph Homology (Preprints)](https://arxiv.org/) - Estudios teóricos conectando el teorema de Tellegen y topología algebraica con dinámicas de plasticidad en mallas no lineales resistivas.

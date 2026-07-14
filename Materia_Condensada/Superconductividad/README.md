@@ -249,3 +249,13 @@ $$ \oint \nabla \phi \cdot d\mathbf{l} = 2\pi n $$
 ### 📖 Referencias Útiles y Bibliografía
 1. [Tinkham, M. *Introduction to Superconductivity* (2da ed.)](https://store.doverpublications.com/products/9780486435039) - El libro definitivo, obligatorio para todo estudiante de física moderna o cuántica macroscópica.
 2. [De Gennes, P. G. *Superconductivity of Metals and Alloys*](https://www.taylorfrancis.com/books/mono/10.1201/9780429497032/superconductivity-metals-alloys-gennes) - Excelente para uniones S-N-S y el formalismo espacial de cuasipartículas (BdG).
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Kavli Institute (KITP): Superconductivity Seminars](https://www.kitp.ucsb.edu/) - Charlas de alto nivel sobre superconductividad no convencional y cupratos.
+- [Max Planck Institute for Solid State Research](https://www.fkf.mpg.de/) - Materiales cuánticos y la búsqueda de superconductividad a temperatura ambiente.
+- [University of Maryland Center for Nanophysics and Advanced Materials](https://cnam.umd.edu/) - Investigaciones sobre topología y superconductividad.
+
+- [Nature: "Superconductivity at 250 K in lanthanum superhydride"](https://www.nature.com/) - El récord experimental (bajo altas presiones) empujando los límites de la teoría BCS.
+- [Science: "Evidence for Majorana bound states in an iron-based superconductor"](https://www.science.org/) - Integración experimental de estados topológicos y superconductores.
+- [Reviews of Modern Physics: "High-temperature cuprate superconductors"](https://journals.aps.org/rmp/) - La fenomenología del seudogap y líquidos de Fermi no convencionales.

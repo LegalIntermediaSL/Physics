@@ -271,3 +271,15 @@ donde la matemática moderna invoca la discretización espectral por armónicos 
 - Chen, F. F. (1984). *Introduction to Plasma Physics and Controlled Fusion*. Springer.
 - Krane, K. S. (1987). *[Introductory Nuclear Physics](https://www.wiley.com/en-us/Introductory+Nuclear+Physics%2C+3rd+Edition-p-9780471805533)*. John Wiley & Sons.
 - Stacey, W. M. (2010). *[Fusion Plasma Physics](https://www.wiley.com/en-us/Fusion+Plasma+Physics%2C+2nd+Edition-p-9783527411344)*. Wiley-VCH.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos
+- [CERN Academic Training Lectures](https://indico.cern.ch/category/72/)
+- [Fermilab Seminars](https://seminars.fnal.gov/)
+- [SLAC National Accelerator Laboratory Events](https://www-public.slac.stanford.edu/events/)
+
+### Literatura de Frontera
+- [Journal of High Energy Physics (JHEP)](https://link.springer.com/journal/13130): Referencia clave para física teórica de partículas y teoría de cuerdas.
+- [Physical Review C (Nuclear Physics)](https://journals.aps.org/prc/): Publica los avances más relevantes en la física de iones pesados y estructura nuclear.
+- [Annual Review of Nuclear and Particle Science](https://www.annualreviews.org/journal/nucl): Proporciona revisiones exhaustivas y críticas sobre los temas de frontera en interacciones fundamentales.

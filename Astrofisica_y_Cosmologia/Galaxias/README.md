@@ -274,3 +274,15 @@ A partir de esta estructura fundamental de foliación toroidal del espacio de fa
 1. **James Binney & Scott Tremaine - [Galactic Dynamics (Princeton, 2da Ed, 2008)](https://press.princeton.edu/books/paperback/9780691130279/galactic-dynamics)** - Simplemente "La Biblia de Dinámica Galáctica". El libro es denso, profundamente matemático en teoría cinética sin colisiones, potenciales asimétricos espirales, fricción dinámica de Chandrasekhar (para colisiones estelares) y resonancias orbitales orbitales.
 2. **Linda S. Sparke & John S. Gallagher III - [Galaxies in the Universe: An Introduction (Cambridge)](https://www.cambridge.org/highereducation/books/galaxies-in-the-universe/6F045A9524584288C00F7A598F6B928E)** - El libro recomendado por excelencia a nivel pregrado alto; hace el nexo fenomenal e ideal conectando astrofísica matemática teórica con datos y evidencias puramente observacionales.
 3. **Houjun Mo, Frank van den Bosch, y Simon White - [Galaxy Formation and Evolution (Cambridge)](https://www.cambridge.org/highereducation/books/galaxy-formation-and-evolution/8C4A731F75B26E9528D8E9F6A24D3D52)** - Texto moderno, masivo y brutal de referencias teóricas para modelar la disipación termodinámica de un gas en el entramado oscuro (Dark Web) cosmológico; la joya de evolución LCDM.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [Space Telescope Science Institute (STScI) Webcasts](https://www.stsci.edu/) - Charlas sobre galaxias lejanas, el universo distante y descubrimientos del JWST.
+2. [Kavli Institute for Particle Astrophysics and Cosmology (KIPAC) Seminars](https://kipac.stanford.edu/) - Conferencias sobre formación de galaxias, materia oscura y agujeros negros supermasivos.
+3. [European Southern Observatory (ESO) Seminars](https://www.eso.org/) - Observaciones astronómicas de última generación enfocadas en la dinámica y evolución galáctica.
+
+### Literatura de Frontera
+1. [The Formation and Evolution of Galaxies According to the Hierarchical Clustering Paradigm (Nature)](https://www.nature.com/articles/nature04805) - Revisión fundacional sobre cómo las galaxias se ensamblan y crecen a lo largo del tiempo cósmico.
+2. [Supermassive Black Holes in Galactic Nuclei (Annual Review of Astronomy and Astrophysics)](https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101730) - Un estudio crucial que vincula las masas de los agujeros negros supermasivos con las propiedades globales de sus galaxias anfitrionas.
+3. [First Images from the James Webb Space Telescope (Science)](https://www.science.org/doi/10.1126/science.ade2415) - Resultados revolucionarios sobre las estructuras de las galaxias en el universo temprano y de alto corrimiento al rojo.

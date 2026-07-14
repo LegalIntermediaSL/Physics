@@ -281,3 +281,15 @@ Donde $\hat{T}_n$ crea excitaciones de $n$ partículas y $n$ huecos. El mapeo de
 - [Bransden, B. H., & Joachain, C. J. (2003). *Physics of Atoms and Molecules*. Pearson Education.](https://www.pearson.com/en-us/subject-catalog/p/physics-of-atoms-and-molecules/P200000005739)
 - [Woodgate, G. K. (1980). *Elementary Atomic Structure*. Oxford University Press.](https://global.oup.com/academic/product/elementary-atomic-structure-9780198511564)
 - [Cowan, R. D. (1981). *The Theory of Atomic Structure and Spectra*. University of California Press.](https://www.ucpress.edu/book/9780520038219/the-theory-of-atomic-structure-and-spectra)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [Perimeter Institute Recorded Seminars (PIRSA) - Quantum Physics](https://pirsa.org/) - Exploración profunda sobre los fundamentos cuánticos de la estructura atómica y molecular.
+2. [CERN ISOLDE Seminars](https://isolde.cern/seminars) - Estudios experimentales y espectroscopía de precisión sobre estructuras atómicas en isótopos exóticos.
+3. [Max Planck Institute for Nuclear Physics Seminars](https://www.mpi-hd.mpg.de/) - Dinámica de electrones atómicos, procesos iónicos y metrología.
+
+### Literatura de Frontera
+1. [Precision Measurement of the Fine-Structure Constant (Science)](https://www.science.org/doi/10.1126/science.aap7706) - Un hito en la espectroscopía atómica que pone a prueba la electrodinámica cuántica y el Modelo Estándar con precisión abismal.
+2. [Rydberg Atoms for Quantum Information (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.82.2313) - Un estado del arte de cómo las propiedades extremas de átomos en estados altamente excitados habilitan computación cuántica de nueva era.
+3. [Atomic parity violation in cesium (Science)](https://www.science.org/doi/10.1126/science.275.5307.1759) - Medición altamente precisa que investiga la física de partículas débil directamente a través de interacciones en un átomo pesado.

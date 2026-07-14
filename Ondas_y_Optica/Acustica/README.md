@@ -211,3 +211,13 @@ Este formalismo espectacular conecta directamente la hidrodinámica clásica con
 ### 📖 Referencias Útiles y Bibliografía
 1. [Kinsler, L. E., et al. *Fundamentals of Acoustics* (4ta ed.)](https://www.wiley.com/en-us/Fundamentals+of+Acoustics%2C+4th+Edition-p-9780471847892) - Texto imperativo, claro balance de derivación rigurosa y física aplicada.
 2. [Landau, L. D., & Lifshitz, E. M. *Fluid Mechanics*](https://www.sciencedirect.com/bookseries/course-of-theoretical-physics) - El capítulo de ondas sonoras es una obra de arte físico-matemática rigurosa.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Stanford CCRMA: Acoustics Seminars](https://ccrma.stanford.edu/) - Investigación de frontera en acústica física y computacional.
+- [MIT: Acoustics and Vibration](https://ocw.mit.edu/) - Curso avanzado sobre radiación, propagación y dispersión del sonido.
+- [Perimeter Institute: Quantum Acoustics Workshops](https://perimeterinstitute.ca/) - Charlas sobre la frontera cuántica de la acústica y fonones aislados.
+
+- [Nature: "Quantum acoustics with superconducting qubits"](https://www.nature.com/articles/nature13460) - Integración de ondas acústicas superficiales en regímenes cuánticos con qubits.
+- [Physical Review Letters: "Acoustic Metamaterials and Negative Refraction"](https://journals.aps.org/prl/) - Avances teóricos y experimentales en metamateriales acústicos de índice negativo.
+- [Science: "Observation of acoustic bound states in the continuum"](https://www.science.org/) - Demostración de estados atrapados acústicos sin radiación.

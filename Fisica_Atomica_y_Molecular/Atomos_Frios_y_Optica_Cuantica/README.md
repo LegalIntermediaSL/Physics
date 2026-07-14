@@ -396,3 +396,15 @@ La transición de fase cuántica entre un estado Superfluido (SF) delocalizado y
 1. **Libro**: [Foot, C. J. (2005). *Atomic Physics*. Oxford University Press](https://global.oup.com/academic/product/atomic-physics-9780198506966). Referencia definitiva para enfriamiento láser y trampa magnetoóptica.
 2. **Libro**: [Metcalf, H. J., & van der Straten, P. (1999). *Laser Cooling and Trapping*. Springer](https://link.springer.com/book/10.1007/978-1-4612-1470-0).
 3. **Libro**: [Pethick, C. J., & Smith, H. (2002). *Bose-Einstein Condensation in Dilute Gases*. Cambridge University Press](https://www.cambridge.org/core/books/boseeinstein-condensation-in-dilute-gases/9B70C6558661E6DE9A1C63B4895D31D2). Deriva detalladamente la ecuación de Gross-Pitaevskii.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [MIT-Harvard Center for Ultracold Atoms (CUA) Seminars](https://cuaweb.mit.edu/) - Seminarios pioneros sobre átomos ultrafríos, condensados de Bose-Einstein y gases degenerados.
+2. [JILA (University of Colorado / NIST) Colloquia](https://jila.colorado.edu/) - Charlas en la frontera mundial de metrología, relojes atómicos y física de muchos cuerpos cuánticos.
+3. [Max Planck Institute of Quantum Optics (MPQ) Seminars](https://www.mpq.mpg.de/) - Conferencias sobre redes ópticas, información cuántica y dinámica de sistemas de átomos fríos.
+
+### Literatura de Frontera
+1. [Observation of Bose-Einstein Condensation in a Dilute Atomic Vapor (Science)](https://www.science.org/doi/10.1126/science.269.5221.198) - El artículo histórico que demostró por primera vez un BEC en gases alcalinos (Premio Nobel 2001).
+2. [Many-Body Physics with Ultracold Gases (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.80.885) - Un panorama general indispensable de la fenomenología en sistemas atómicos cuánticos fuertemente correlacionados.
+3. [Quantum Simulation of the Hubbard Model with Ultracold Fermions (Nature)](https://www.nature.com/articles/nature19069) - Demostración de simulaciones cuánticas avanzadas de física de la materia condensada usando redes ópticas atómicas.

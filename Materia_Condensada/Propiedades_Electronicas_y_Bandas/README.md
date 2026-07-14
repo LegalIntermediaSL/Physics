@@ -237,3 +237,13 @@ Lo cual es el equivalente a la cuantización de carga de Dirac y origina el Inva
 ### 📖 Referencias Útiles y Bibliografía
 1. [Kittel, C. *Introduction to Solid State Physics* (8va ed.)](https://www.wiley.com/en-us/Introduction+to+Solid+State+Physics%2C+8th+Edition-p-9780471415268) - Fundamentos del modelo de electrón casi libre.
 2. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://www.cengage.com/c/solid-state-physics-1e-ashcroft/9780030839931/) - El tratamiento analítico canónico del modelo LCAO.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Kavli Institute (KITP): Electronic Structure Workshops](https://www.kitp.ucsb.edu/) - Métodos teóricos modernos, DFT y GW, aplicados a la teoría de bandas.
+- [UC Berkeley Condensed Matter Seminars](https://physics.berkeley.edu/) - Estudios ARPES para mapear experimentalmente la estructura de bandas cuánticas.
+- [Perimeter Institute: Quantum Matter Series](https://perimeterinstitute.ca/) - Cruces de bandas de Dirac, fermiones de Weyl y topología de bandas.
+
+- [Reviews of Modern Physics: "Density Functional Theory: A perspective"](https://journals.aps.org/rmp/) - El método computacional estándar para predecir propiedades de bandas.
+- [Nature Physics: "Discovery of a Weyl semimetal and topological Fermi arcs"](https://www.nature.com/nphys/) - Evidencia de una nueva clasificación de estructura de bandas topológica sin masa gap.
+- [Science: "Correlated insulator behaviour at half-filling in magic-angle graphene"](https://www.science.org/) - La reestructuración dramática de bandas y creación de bandas planas por rotación.

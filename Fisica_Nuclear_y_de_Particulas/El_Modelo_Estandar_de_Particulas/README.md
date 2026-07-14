@@ -306,3 +306,15 @@ La profunda justificación de que tales violaciones (Anomalías de Adler-Bell-Ja
 - Halzen, F., & Martin, A. D. (1984). *Quarks and Leptons*. John Wiley & Sons.
 - Griffiths, D. J. (2008). *Introduction to Elementary Particles*. Wiley-VCH.
 - Thomson, M. (2013). *Modern Particle Physics*. Cambridge University Press.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos
+- [CERN Academic Training Lectures](https://indico.cern.ch/category/72/)
+- [Fermilab Seminars](https://seminars.fnal.gov/)
+- [SLAC National Accelerator Laboratory Events](https://www-public.slac.stanford.edu/events/)
+
+### Literatura de Frontera
+- [Journal of High Energy Physics (JHEP)](https://link.springer.com/journal/13130): Referencia clave para física teórica de partículas y teoría de cuerdas.
+- [Physical Review C (Nuclear Physics)](https://journals.aps.org/prc/): Publica los avances más relevantes en la física de iones pesados y estructura nuclear.
+- [Annual Review of Nuclear and Particle Science](https://www.annualreviews.org/journal/nucl): Proporciona revisiones exhaustivas y críticas sobre los temas de frontera en interacciones fundamentales.

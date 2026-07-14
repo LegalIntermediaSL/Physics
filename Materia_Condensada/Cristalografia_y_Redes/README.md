@@ -256,3 +256,13 @@ Las redes no son solo entes geométricos, sino bases que soportan campos gauge e
 ### 📖 Referencias Útiles y Bibliografía
 1. [Kittel, C. *Introduction to Solid State Physics* (8va ed.)](https://www.wiley.com/en-us/Introduction+to+Solid+State+Physics%2C+8th+Edition-p-9780471415268) - La biblia clásica de la materia condensada.
 2. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://www.cengage.com/c/solid-state-physics-1e-ashcroft/9780030839931/) - Un tratamiento más riguroso de la red recíproca y los grupos de simetría espacial.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [IUCr (International Union of Crystallography) Seminars](https://www.iucr.org/) - Charlas magistrales globales sobre cristalografía matemática y experimental.
+- [SLAC National Accelerator Laboratory Seminars](https://www-ssrl.slac.stanford.edu/) - Uso de fuentes de luz coherente para estudios cristalográficos ultrarrápidos.
+- [Max Planck Institute for Solid State Research](https://www.fkf.mpg.de/) - Investigaciones en la relación entre simetría de red y propiedades cuánticas.
+
+- [Nature: "Quasicrystals with classically forbidden symmetries"](https://www.nature.com/) - El descubrimiento seminal de estructuras aperiodicamente ordenadas.
+- [Science: "Crystallography of topological insulators"](https://www.science.org/) - Cómo los grupos espaciales cristalinos fuerzan la existencia de estados topológicos de superficie.
+- [Physical Review Letters: "Fractional crystallization in moiré superlattices"](https://journals.aps.org/prl/) - Estudios sobre la simetría emergente en estructuras de van der Waals bidimensionales trenzadas.

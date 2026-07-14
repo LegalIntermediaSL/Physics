@@ -223,3 +223,13 @@ donde $L$ y $B$ son los operadores de Lax (por ejemplo, el operador de Schrödin
 ### 📖 Referencias Útiles y Bibliografía
 1. [French, A.P. *Vibrations and Waves* (MIT Intro Physics Series)](https://www.routledge.com/Vibrations-and-Waves/French/p/book/9780393099362) - Texto fundamental por excelencia de MIT, desglosando la física y las analogías eléctricas y acústicas con las cuerdas acopladas.
 2. [Elmore, W.C. & Heald, M.A. *Physics of Waves*](https://store.doverpublications.com/products/9780486649269) - Aterriza en la profundidad matemática para transiciones modales, Fourier, frentes e impedancias en sistemas acústicos.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [MIT OpenCourseWare: Mechanical Vibrations](https://ocw.mit.edu/courses/2-032-dynamics-fall-2004/) - Análisis detallado de vibraciones en sistemas mecánicos complejos.
+- [CERN: Acoustic and Mechanical Resonance Seminars](https://indico.cern.ch/) - Charlas enfocadas en la mitigación de vibraciones mecánicas en aceleradores.
+- [Stanford University: Advanced Acoustics Seminars](https://ccrma.stanford.edu/) - Estudios sobre resonancias y fenómenos no lineales en acústica y vibraciones.
+
+- [Nature Physics: "Topological mechanical metamaterials"](https://www.nature.com/articles/nphys3801) - Estudio pionero sobre metamateriales mecánicos y la propagación de ondas elásticas direccionales.
+- [Physical Review Letters: "Solitonic Excitations in Mechanical Chains"](https://journals.aps.org/prl/) - Avances en la observación de solitones mecánicos.
+- [Science Advances: "Programmable mechanical properties of origami structures"](https://www.science.org/journal/sciadv) - Cómo usar diseños de origami para programar propiedades de ondas mecánicas en materiales.

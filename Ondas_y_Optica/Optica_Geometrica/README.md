@@ -243,3 +243,13 @@ Más profundamente, en el marco del espacio de fases $T^*M$, la óptica geométr
 ### 📖 Referencias Útiles y Bibliografía
 1. [Hecht, E. *Optics* (5ta ed.)](https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780133977226) - Un trato ejemplar del diseño matricial ABCD para lentes complejas.
 2. [Gerrard, A., & Burch, J. M. *Introduction to Matrix Methods in Optics*](https://store.doverpublications.com/products/9780486680446) - Exclusivamente centrado en la matriz de transferencia y cavidades láser.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [MIT OpenCourseWare: Optics](https://ocw.mit.edu/courses/2-71-optics-spring-2009/) - Curso profundo sobre la propagación geométrica y sistemas de imágenes.
+- [The Institute of Optics (University of Rochester) Seminars](https://www.hajim.rochester.edu/optics/events/) - Seminarios avanzados de diseño óptico e instrumentación.
+- [Harvard Physics: Modern Optical Design Seminars](https://www.physics.harvard.edu/) - Discusiones sobre los límites modernos de las aproximaciones de rayos.
+
+- [Nature Photonics: "Transformation optics and cloaking"](https://www.nature.com/nphoton/) - Revisión del uso de óptica de transformación para diseñar capas de invisibilidad controlando el flujo de luz.
+- [Science: "Flat optics with designer metasurfaces"](https://www.science.org/doi/10.1126/science.1255936) - Paradigma revolucionario de lentes ultradelgadas (metalentes) que reemplazan la óptica geométrica tradicional.
+- [Physical Review Letters: "Ray dynamics in microcavities"](https://journals.aps.org/prl/) - Estudio sobre caos cuántico y óptica geométrica en cavidades ópticas microscópicas.

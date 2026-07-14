@@ -252,3 +252,15 @@ Para deducir las ecuaciones de la hidrodinámica, se utiliza el **Método de Cha
 1. **Stephen J. Blundell & Katherine M. Blundell - [Concepts in Thermal Physics (Oxford, 2009)](https://global.oup.com/academic/product/concepts-in-thermal-physics-9780199562107)** - Excepcional para el nivel de pregrado. Brinda una exposición fluida que entrelaza la termodinámica tradicional con las demostraciones deductivas de la teoría cinética (viscosidad, difusión y efusión molecular).
 2. **David V. Schroeder - [An Introduction to Thermal Physics (Oxford, 2021)](https://global.oup.com/academic/product/an-introduction-to-thermal-physics-9780193884386)** - El libro más amigable del área. Sus secciones de teoría cinética presentan excelentes aplicaciones empíricas y atmosféricas.
 3. **Frederick Reif - [Fundamentals of Statistical and Thermal Physics (Waveland Press)](https://books.google.com/books?id=0sM4DgAAQBAJ)** - Ofrece capítulos completos minuciosamente deducidos del límite fluido a sistemas colisionales, sección de transporte integral (ecuación de Boltzmann simplificada) con enorme rigor analítico.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### 🎓 Seminarios Web y Cursos Avanzados
+- [Max Planck Institute for Dynamics and Self-Organization - Fluids & Kinetic Theory](https://www.ds.mpg.de/seminars): Charlas especializadas sobre hidrodinámica avanzada, materia activa y aplicaciones microscópicas de las teorías cinéticas.
+- [MIT OpenCourseWare - Kinetic Theory of Gases](https://ocw.mit.edu/): Material suplementario y clases que examinan las distribuciones de Boltzmann y fenómenos de transporte desde los primeros principios.
+- [Perimeter Institute - Relativistic Kinetic Theory](https://pirsa.org/): Seminarios avanzados que exploran cómo las colisiones estocásticas operan bajo restricciones relativistas y en plasmas de física de altas energías.
+
+### 📝 Literatura de Frontera (High-Impact Papers)
+- [Relativistic Kinetic Theory and Hydrodynamics (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.81.35): Conecta la teoría cinética estocástica de partículas con las ecuaciones macroscópicas hidrodinámicas necesarias para simular el plasma de quarks y gluones.
+- [Brownian Motion and Non-equilibrium Statistical Mechanics (Nature)](https://www.nature.com/articles/35011000): Revisa los desarrollos desde la derivación original del movimiento browniano de Einstein hasta los modernos teoremas cinéticos de fluctuación.
+- [The Boltzmann Equation and its Applications in High-Energy Physics (Physics Reports)](https://www.sciencedirect.com/science/article/pii/S037015730800252X): Explora cómo la ecuación integro-diferencial de transporte fundacional sigue siendo indispensable para modelar la termalización en fluidos extremos.

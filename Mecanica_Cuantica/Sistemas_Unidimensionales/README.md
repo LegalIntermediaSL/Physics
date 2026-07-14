@@ -261,3 +261,12 @@ Para cadenas poliméricas 1D o aislantes topológicos 1D con simetría de invers
 ### 📖 Referencias Útiles y Bibliografía
 1. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 2). Estándar indiscutible para problemas en 1D.
 2. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulos 5 y 7).
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Harvard - Condensed Matter Physics](https://www.physics.harvard.edu/): Cursos centrados en sistemas de electrones de baja dimensión y líquidos de Luttinger.
+- [MIT 8.05 Quantum Physics II](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/): Un curso enfocado en resolver sistemas 1D acoplados y efectos cuánticos de baja dimensionalidad.
+- [Perimeter Institute - Topological Quantum Matter](https://pirsa.org/): Conferencias sobre cómo los sistemas unidimensionales albergan modos de Majorana.
+- [RMP: Colloquium: Majorana fermions in wire networks and quantum computing](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.87.137): Revisa cómo los sistemas 1D semiconductores son cruciales para la topología cuántica.
+- [Nature: Signatures of Majorana fermions in hybrid superconductor-semiconductor nanowire devices](https://www.nature.com/articles/nature11062): Experimento pionero observando estados cuantizados de borde en sistemas unidimensionales.
+- [Science: Realization of a Tonks-Girardeau Gas in One-Dimensional Atomic Gases](https://www.science.org/doi/10.1126/science.1098650): Confirmación de ferminización de bosones al ser confinados en una dimensión estricta.

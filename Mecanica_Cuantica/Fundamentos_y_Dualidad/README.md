@@ -210,3 +210,12 @@ Donde la clase de cohomología de obstrucción $[\mathcal{O}]$ dictamina matemá
 1. **Libro**: [Quantum Physics of Atoms, Molecules, Solids, Nuclei, and Particles - Eisberg & Resnick](https://www.wiley.com/en-us/Quantum+Physics+of+Atoms%2C+Molecules%2C+Solids%2C+Nuclei%2C+and+Particles%2C+2nd+Edition-p-9780471873730). Texto fantástico sobre los experimentos fundamentales.
 2. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C).
 3. **Libro**: [Concepts of Modern Physics - Arthur Beiser](https://www.mheducation.com/highered/product/concepts-modern-physics-beiser/M9780072448481.html).
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [CERN - Quantum Technology Initiative](https://quantum.cern/): Seminarios sobre la validación de los fundamentos cuánticos a través de tecnologías modernas.
+- [MIT 8.225 - Quantum Physics of Matter](https://ocw.mit.edu/): Explora cómo la dualidad onda-partícula domina las propiedades macroscópicas de la materia.
+- [Perimeter Institute - Foundations of Quantum Mechanics](https://pirsa.org/): Discusiones modernas y seminarios web sobre los fundamentos y problemas de interpretación cuántica.
+- [Nature: Quantum superposition of molecules beyond 25 kDa](https://www.nature.com/articles/s41567-019-0663-9): Prueba experimental de la dualidad onda-partícula en macromoléculas masivas.
+- [Science: Wheeler's delayed-choice gedanken experiment with a single atom](https://www.science.org/doi/10.1126/science.1261183): Una demostración definitiva de la naturaleza no clásica y la dualidad onda-partícula a voluntad.
+- [PRL: Loophole-free Bell Inequality Violation using Electron Spins Separated by 1.3 Kilometres](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.250401): Fundamental para consolidar la ruptura del realismo local en los cimientos cuánticos.

@@ -235,3 +235,13 @@ Las disclinaciones (defectos de rotación) se relacionan análogamente con el te
 ### 📖 Referencias Útiles y Bibliografía
 1. [Hammond, C. *The Basics of Crystallography and Diffraction*](https://global.oup.com/academic/product/the-basics-of-crystallography-and-diffraction-9780198738671) - Obra magistral de la IUCr.
 2. [Cullity, B. D. *Elements of X-Ray Diffraction*](https://www.pearson.com/en-us/subject-catalog/p/elements-of-x-ray-diffraction/P200000006767) - Enfoque clásico y aplicativo en la ingeniería.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Diamond Light Source: Crystallography Seminars](https://www.diamond.ac.uk/) - Avances en resolución estructural y difracción sincrotrón.
+- [Harvard Condensed Matter Physics Seminars](https://www.physics.harvard.edu/) - La intersección de la estructura cristalográfica de baja dimensión y la mecánica cuántica.
+- [IUCr Computational Crystallography](https://www.iucr.org/) - Desarrollo de algoritmos para resolver estructuras complejas y defectos.
+
+- [Nature Materials: "High-entropy alloys: A new era of crystallography"](https://www.nature.com/nmat/) - Efectos de la ocupación cristalográfica aleatoria en la estabilidad estructural.
+- [Science Advances: "Dynamical structures in metal-organic frameworks (MOFs)"](https://www.science.org/journal/sciadv) - Materiales cristalinos flexibles y su porosidad sintonizable.
+- [Physical Review B: "Lattice dynamics and phonon spectra of complex crystals"](https://journals.aps.org/prb/) - Correlaciones entre estructura cristalina estática y transporte fonónico dinámico.

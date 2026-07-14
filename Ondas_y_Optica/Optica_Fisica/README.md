@@ -221,3 +221,13 @@ En el régimen de la **Óptica Cuántica y QED**, la forma $\mathcal{A}$ es prom
 ### 📖 Referencias Útiles y Bibliografía
 1. [Born, M., & Wolf, E. *Principles of Optics* (7ma ed.)](https://www.cambridge.org/core/books/principles-of-optics/1B445037E90B051D57457FBD56A1F6E2) - El texto canónico mundial definitivo. Invaluable para aberraciones integrales y óptica de Fourier.
 2. [Hecht, E. *Optics* (5ta ed.)](https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780133977226) - El texto pedagógico universitario estándar; muy amigable y expansivo con demostraciones.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Harvard Quantum Initiative Seminars](https://quantum.harvard.edu/) - Investigaciones recientes sobre óptica cuántica, interferencia y fotónica.
+- [MIT RLE: Optics and Quantum Electronics](https://www.rle.mit.edu/) - Seminarios sobre las propiedades ondulatorias fundamentales de la luz.
+- [CERN: Laser and Optics Seminars](https://indico.cern.ch/) - Charlas sobre óptica física aplicada a diagnósticos de haces de partículas.
+
+- [Nature: "Generation of optical 'Schrödinger cat' states"](https://www.nature.com/) - Experimentos revolucionarios sobre superposiciones de estados fotónicos macroscópicos.
+- [Science: "Optical metamaterials: Invisible cloak and superlens"](https://www.science.org/) - Trabajo seminal en óptica física sobre materiales diseñados con propiedades de difracción anómalas.
+- [Reviews of Modern Physics: "Colloquium: Light scattering by particle and hole arrays"](https://journals.aps.org/rmp/) - Análisis definitivo sobre la transmisión óptica extraordinaria.

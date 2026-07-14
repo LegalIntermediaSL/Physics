@@ -233,3 +233,12 @@ donde $\Phi$ es un espacio nuclear denso de funciones de prueba (típicamente el
 1. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulo 1). Resumen excelente del álgebra lineal.
 2. **Libro**: [Mathematical Foundations of Quantum Mechanics - John von Neumann](https://press.princeton.edu/books/paperback/9780691178578/mathematical-foundations-of-quantum-mechanics). 
 3. **Libro**: [The Principles of Quantum Mechanics - Paul Dirac](https://global.oup.com/academic/product/the-principles-of-quantum-mechanics-9780198520115). La obra fundacional original.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Harvard - Physics 253a: Quantum Field Theory I](https://www.physics.harvard.edu/academics/undergrad/courses): Expande el formalismo de operadores a la teoría de campos cuánticos.
+- [Perimeter Institute - Quantum Information](https://perimeterinstitute.ca/research/quantum-information): Seminarios enfocados en la estructura de los espacios de Hilbert en información cuántica.
+- [Stanford: Advanced Quantum Mechanics](https://online.stanford.edu/courses/phye51-advanced-quantum-mechanics): Profundización en espacios de Hilbert equipados y observables.
+- [RMP: Quantum Reference Frames](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.79.405): Discute cómo la teoría de operadores y espacios de Hilbert se adapta cuando los sistemas de referencia también son cuánticos.
+- [Nature Physics: Experimental Test of Local Observer Independence](https://www.nature.com/articles/s41567-018-0346-y): Aborda los límites de la medición y observables usando el formalismo de Hilbert y la paradoja del amigo de Wigner.
+- [arXiv:1703.01043 - Categorical Quantum Mechanics](https://arxiv.org/abs/1703.01043): Una reformulación moderna y abstracta de los espacios de Hilbert para procesos cuánticos.

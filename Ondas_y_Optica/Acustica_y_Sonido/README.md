@@ -228,3 +228,13 @@ Este marco integro-diferencial con memoria no local captura correctamente el ret
 ### 📖 Referencias Útiles y Bibliografía
 1. [Pierce, A. D. *Acoustics: An Introduction to Its Physical Principles and Applications*](https://link.springer.com/book/10.1007/978-3-030-11214-1) - El texto definitivo nivel graduado que integra acústica no lineal e impedancia.
 2. [Blackstock, D. T. *Fundamentals of Physical Acoustics*](https://www.wiley.com/en-us/Fundamentals+of+Physical+Acoustics-p-9780471319794) - Formulación magistral de ecuaciones termodinámicas perturbativas.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Acoustical Society of America (ASA) Seminars](https://acousticalsociety.org/) - Serie de charlas abarcando lo último en ciencia del sonido.
+- [ISVR University of Southampton Seminars](https://www.southampton.ac.uk/isvr) - Investigaciones sobre control de sonido y vibración.
+- [Penn State Center for Acoustics and Vibration](https://www.cav.psu.edu/) - Charlas de alto impacto en acústica no lineal.
+
+- [Nature Materials: "Acoustic metamaterials: from local resonances to broad horizons"](https://www.nature.com/articles/nmat4393) - Revisión crítica del diseño moderno de metamateriales acústicos.
+- [Science: "Phononic crystals for shaping acoustic waves"](https://www.science.org/) - Aplicaciones del control espectral del sonido a escalas nanoscópicas y macroscópicas.
+- [Physical Review Letters: "Parity-Time Symmetric Acoustics"](https://journals.aps.org/prl/) - Avances en la dirección asimétrica de ondas de sonido simulando hamiltonianos cuánticos.

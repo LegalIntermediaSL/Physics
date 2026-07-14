@@ -205,3 +205,13 @@ donde $II$ es la segunda forma fundamental de $\Sigma$, $\mathbf{n}$ el vector n
 ### 📖 Referencias Útiles y Bibliografía
 1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
 2. [Introduction to Fluid Mechanics (R.W. Fox, A.T. McDonald)](https://www.amazon.com/Fox-McDonalds-Introduction-Fluid-Mechanics/dp/1119616175)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Stanford Fluids Seminars](https://fluids.stanford.edu/) - Investigaciones sobre presión en medios porosos complejos.
+- [Caltech Fluid Mechanics Seminars](https://eas.caltech.edu/) - Dinámica y estática de fluidos complejos bajo presiones extremas.
+- [Harvard Soft Matter Seminars](https://seas.harvard.edu/) - Transmisión de presión (Pascal) en fluidos no newtonianos e hidrogeles.
+
+- [Nature Materials: "High-pressure physics of fluids"](https://www.nature.com/nmat/) - Efectos sorprendentes del principio de Pascal en transiciones de fase a gigapascales.
+- [Science Advances: "Hydraulic metamaterials"](https://www.science.org/journal/sciadv) - Mecanismos fluídicos programables a microescala explotando isostasia.
+- [Physical Review E: "Hydrostatics of jammed soft particles"](https://journals.aps.org/pre/) - Desviaciones del principio de Pascal en suspensiones de materia granular densa.

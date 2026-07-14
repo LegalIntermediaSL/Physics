@@ -304,3 +304,15 @@ El desafío analítico reside en dominar los factores de forma electrodébiles $
 - Krane, K. S. (1987). *Introductory Nuclear Physics*. John Wiley & Sons.
 - Turner, J. E. (2007). *Atoms, Radiation, and Radiation Protection*. Wiley-VCH.
 - Lilley, J. (2001). *Nuclear Physics: Principles and Applications*. Wiley.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos
+- [CERN Academic Training Lectures](https://indico.cern.ch/category/72/)
+- [Fermilab Seminars](https://seminars.fnal.gov/)
+- [SLAC National Accelerator Laboratory Events](https://www-public.slac.stanford.edu/events/)
+
+### Literatura de Frontera
+- [Journal of High Energy Physics (JHEP)](https://link.springer.com/journal/13130): Referencia clave para física teórica de partículas y teoría de cuerdas.
+- [Physical Review C (Nuclear Physics)](https://journals.aps.org/prc/): Publica los avances más relevantes en la física de iones pesados y estructura nuclear.
+- [Annual Review of Nuclear and Particle Science](https://www.annualreviews.org/journal/nucl): Proporciona revisiones exhaustivas y críticas sobre los temas de frontera en interacciones fundamentales.

@@ -279,3 +279,15 @@ Este formalismo prueba que la Segunda Ley de la Termodinámica ($\langle W \rang
 1. **Herbert B. Callen - [Thermodynamics and an Introduction to Thermostatistics (Wiley)](https://archive.org/details/thermodynamicsan0000call)** - El libro de texto definitivo para una aproximación matemática y puramente axiomática. Formaliza las leyes en términos de colectores, ecuaciones fundamentales ($U(S,V,N)$) y transformadas de Legendre.
 2. **Mark W. Zemansky & Richard H. Dittman - [Heat and Thermodynamics (McGraw-Hill)](https://www.mheducation.com/highered/product/heat-thermodynamics-zemansky-dittman/M9780070170599.html)** - Un clásico para comprender profundamente los ciclos empíricos, gases reales, la licuefacción y los termómetros.
 3. **David V. Schroeder - [An Introduction to Thermal Physics (Oxford, 2021)](https://global.oup.com/academic/product/an-introduction-to-thermal-physics-9780193884386)** - El texto más recomendado a nivel de pregrado, mezclando la termodinámica empírica macroscópica de forma amena con sus orígenes estadísticos.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### 🎓 Seminarios Web y Cursos Avanzados
+- [Kavli Institute for Theoretical Physics (KITP) - Non-equilibrium Thermodynamics](https://www.kitp.ucsb.edu/): Seminarios avanzados sobre fenómenos estocásticos, termodinámica cuántica y sistemas fuera del equilibrio.
+- [Perimeter Institute (PIRSA) - Quantum Thermodynamics](https://pirsa.org/): Exploración detallada sobre cómo las leyes de la termodinámica se extienden al régimen de la información cuántica.
+- [MIT OpenCourseWare - Thermodynamics of Materials](https://ocw.mit.edu/): Cursos de alto nivel centrados en las aplicaciones macroscópicas y leyes empíricas de los procesos térmicos.
+
+### 📝 Literatura de Frontera (High-Impact Papers)
+- [Fluctuation Theorem for Arbitrary Open Quantum Systems (Phys. Rev. Lett.)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.3168): Generaliza las leyes de la termodinámica al dominio microscópico y estocástico, conectando la irreversibilidad con fluctuaciones entrópicas.
+- [Quantum Thermodynamics: A Nonequilibrium Green's Function Approach (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.93.041002): Proporciona un marco unificado para entender la Primera y Segunda Ley en dispositivos nanoscópicos que operan en el régimen cuántico.
+- [Thermodynamics of Information (Nature Physics)](https://www.nature.com/articles/nphys3230): Establece el vínculo termodinámico fundamental entre la entropía y la teoría de la información, revelando cómo el procesamiento de datos tiene un costo energético físico.

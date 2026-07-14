@@ -240,3 +240,12 @@ donde la curvatura de la conexión $F = dA$ define el campo magnético. Para ecu
 1. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulos 1 y 2). 
 2. **Libro**: [Principles of Quantum Mechanics - R. Shankar](https://link.springer.com/book/10.1007/978-1-4615-7675-4) (Capítulo 4).
 3. **Libro**: [Modern Quantum Mechanics - J.J. Sakurai](https://www.cambridge.org/highereducation/books/modern-quantum-mechanics/144AE26BDEFB9A7CB06C0CD0696D12CA) (Capítulo 2).
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Perimeter Institute Recorded Seminar Archive (PIRSA)](https://pirsa.org/): Repositorio inmenso de seminarios avanzados en física teórica y cuántica.
+- [CERN Lectures on Quantum Mechanics](https://home.cern/science/physics/quantum): Charlas magistrales sobre los fundamentos de la mecánica cuántica moderna.
+- [MIT 8.04 Quantum Physics I](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Curso de frontera sobre la interpretación y resolución de la ecuación de onda.
+- [Nature: Deep neural network solution of the electronic Schrödinger equation](https://www.nature.com/articles/s41557-020-0544-y): Demuestra el uso de la IA para resolver con alta precisión la ecuación de Schrödinger en sistemas de muchos cuerpos.
+- [PRL: Observation of topological phenomena in a programmable lattice of superconducting qubits](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.110501): Simulación directa de la dinámica de Schrödinger en redes superconductoras avanzadas.
+- [arXiv: quant-ph/0312150 - Quantum Computation by Adiabatic Evolution](https://arxiv.org/abs/quant-ph/0312150): Fundacional para comprender cómo la evolución adiabática de la ecuación de Schrödinger permite la computación cuántica.

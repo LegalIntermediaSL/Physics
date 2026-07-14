@@ -287,3 +287,15 @@ donde $D_\mu = \partial_\mu + iqA_\mu$ y $F_{\mu\nu}$ es el tensor de curvatura 
 1. **Edwin F. Taylor & John Archibald Wheeler - [Spacetime Physics (W. H. Freeman, 1992)](https://www.eftaylor.com/spacetimephysics/)** - El mejor libro pedagógico para desarrollar intuición sobre diagramas de espacio-tiempo y la métrica de Lorentz.
 2. **David J. Griffiths - [Introduction to Electrodynamics (Cambridge University Press)](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/40B7E0D3528A32A17EFB738C2ACAEFDE)** - El Capítulo 12 es magistral al tratar cómo el campo magnético emerge como un efecto relativista del campo eléctrico al aplicar el formalismo covariante (tensor $F^{\mu\nu}$).
 3. **Wolfgang Rindler - [Introduction to Special Relativity (Oxford University Press)](https://global.oup.com/academic/product/introduction-to-special-relativity-9780198539520)** - Un texto avanzado y riguroso para profundizar en tensores, cuadrivectores y espinores, sentando las bases para cursos de Relatividad General.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### 🎓 Seminarios Web y Cursos Avanzados
+- [Perimeter Institute (PIRSA) - Special Relativity and Field Theory](https://pirsa.org/): Archivo en video de clases magistrales del instituto sobre física teórica y los fundamentos del espacio-tiempo.
+- [CERN Academic Training - Relativistic Kinematics](https://indico.cern.ch/): Repositorio de charlas y entrenamientos académicos sobre cinemática relativista y física de partículas.
+- [Stanford Theoretical Minimum - Advanced Special Relativity](https://theoreticalminimum.com/courses): Serie de seminarios diseñados por Leonard Susskind para proporcionar la base matemática de las teorías modernas.
+
+### 📝 Literatura de Frontera (High-Impact Papers)
+- [Lorentz Invariance Violation at the Planck Scale (arXiv)](https://arxiv.org/abs/gr-qc/9712019): Propone formas en que las mediciones de física de altas energías podrían revelar violaciones de la invariancia de Lorentz debido a la gravedad cuántica.
+- [Test of Time Dilation Using Stored Li+ Ions as Clocks at Relativistic Speed (Phys. Rev. Lett.)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.120405): Representa una de las pruebas experimentales empíricas más rigurosas de la dilatación del tiempo utilizando espectroscopía de iones de litio.
+- [Testing Lorentz Invariance with Neutrinos (Nature Physics)](https://www.nature.com/articles/nphys1026): Analiza de manera exhaustiva cómo los osciladores de neutrinos imponen límites muy estrictos a las desviaciones de las predicciones del espacio-tiempo de Minkowski.

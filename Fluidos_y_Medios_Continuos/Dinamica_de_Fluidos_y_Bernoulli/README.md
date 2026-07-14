@@ -216,3 +216,13 @@ donde $\eta(t) \in \text{SDiff}(M)$ es la posición Lagrangiana del fluido en el
 ### 📖 Referencias Útiles y Bibliografía
 1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
 2. [Fluid Mechanics (Pijush K. Kundu, Ira M. Cohen)](https://www.amazon.com/Fluid-Mechanics-Pijush-K-Kundu/dp/012405935X)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Caltech Fluid Dynamics Seminar](https://www.caltech.edu/) - Conferencias sobre aerodinámica y flujos de potencial.
+- [Oxford Fluids Seminar](https://www.maths.ox.ac.uk/events/) - Investigaciones en los límites de ecuaciones de Euler y Bernoulli.
+- [Princeton Mechanical and Aerospace Engineering Seminars](https://mae.princeton.edu/) - Seminarios sobre interacciones complejas de flujos rápidos.
+
+- [Annual Review of Fluid Mechanics: "Aerodynamics of Flying Insects"](https://www.annualreviews.org/) - Discusión de regímenes donde el teorema de Bernoulli debe ser modificado por fuerzas viscosas inestables.
+- [Physical Review Letters: "Hydrodynamic analog of the Casimir effect"](https://journals.aps.org/prl/) - Efectos macroscópicos extraños basados en la dinámica de flujos fundamentales.
+- [Science: "Levitation and flow control using Bernoulli principles at micro-scales"](https://www.science.org/) - Uso de las ecuaciones de momento en aplicaciones de microfluídica.

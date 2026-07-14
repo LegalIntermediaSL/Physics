@@ -278,3 +278,15 @@ lo cual permite evaluar sistemáticamente decaimientos de cúmulos súper-pesado
 - Turner, J. E. (2007). *Atoms, Radiation, and Radiation Protection*. Wiley-VCH.
 - Evans, R. D. (1955). *The Atomic Nucleus*. McGraw-Hill.
 - Knoll, G. F. (2010). *Radiation Detection and Measurement*. Wiley.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos
+- [CERN Academic Training Lectures](https://indico.cern.ch/category/72/)
+- [Fermilab Seminars](https://seminars.fnal.gov/)
+- [SLAC National Accelerator Laboratory Events](https://www-public.slac.stanford.edu/events/)
+
+### Literatura de Frontera
+- [Journal of High Energy Physics (JHEP)](https://link.springer.com/journal/13130): Referencia clave para física teórica de partículas y teoría de cuerdas.
+- [Physical Review C (Nuclear Physics)](https://journals.aps.org/prc/): Publica los avances más relevantes en la física de iones pesados y estructura nuclear.
+- [Annual Review of Nuclear and Particle Science](https://www.annualreviews.org/journal/nucl): Proporciona revisiones exhaustivas y críticas sobre los temas de frontera en interacciones fundamentales.

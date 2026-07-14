@@ -276,3 +276,15 @@ La solución de estas ecuaciones íntegro-diferenciales requiere una **Ecuación
 1. **Bradley W. Carroll & Dale A. Ostlie - [An Introduction to Modern Astrophysics (Cambridge)](https://www.cambridge.org/highereducation/books/an-introduction-to-modern-astrophysics/8C2B3C2B3A6C5B3E6B4A6C8D8E9F6B5C)** - El texto estándar global para estudiantes universitarios, apodado cariñosamente "The BOB" (Big Orange Book); su enorme sección de evolución estelar es inigualable pedagógicamente en pregrado, abarcando atmósferas y pulsaciones estelares.
 2. **Rudolf Kippenhahn, Alfred Weigert & Achim Weiss - [Stellar Structure and Evolution (Springer)](https://link.springer.com/book/10.1007/978-3-642-30304-3)** - El tratado analítico moderno superior y enciclopédico de física computacional y teórica estelar. Es imperdible en posgrado, cubriendo códigos numéricos y física de fases.
 3. **Stuart L. Shapiro & Saul A. Teukolsky - [Black Holes, White Dwarfs, and Neutron Stars (Wiley)](https://onlinelibrary.wiley.com/doi/book/10.1002/9783527617661)** - "La biblia" teórica indiscutible para remanentes compactos superdensos. Abarca fluidos relativistas, magnetares y un detallado tratamiento formal sobre degeneración de materia condensada.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [Harvard-Smithsonian Center for Astrophysics Seminars](https://cfa.harvard.edu/) - Seminarios enfocados en evolución estelar, exoplanetas y astrofísica observacional.
+2. [Max Planck Institute for Astrophysics Colloquia](https://www.mpa-garching.mpg.de/) - Investigaciones recientes sobre estructura estelar y explosiones de supernovas.
+3. [Institute for Advanced Study (IAS) Astrophysics Seminars](https://www.ias.edu/astrophysics) - Charlas sobre astrofísica teórica, interiores estelares y sistemas binarios densos.
+
+### Literatura de Frontera
+1. [The Equation of State in Stellar Structure (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.85.49) - Un análisis crítico y moderno de las propiedades de la materia bajo condiciones extremas en interiores estelares.
+2. [Massive Star Evolution Through the Ages (Annual Review of Astronomy and Astrophysics)](https://www.annualreviews.org/doi/10.1146/annurev-astro-081915-023347) - Resumen integral sobre cómo las estrellas masivas evolucionan e impactan su entorno galáctico.
+3. [Neutron Star Mergers and the Origin of Heavy Elements (Science)](https://www.science.org/doi/10.1126/science.aap9810) - Un descubrimiento histórico que confirma las colisiones de estrellas de neutrones como sitios principales para el proceso r.

@@ -227,3 +227,13 @@ Donde la autoenergía (self-energy) $\Sigma \sim -i |\omega|^\alpha$ (con $\alph
 ### 📖 Referencias Útiles y Bibliografía
 1. [Ashcroft, N. W., & Mermin, N. D. *Solid State Physics*](https://www.cengage.com/c/solid-state-physics-1e-ashcroft/9780030839931/) - Un tratamiento insuperable para la fenomenología del gas de electrones.
 2. [Kittel, C. *Introduction to Solid State Physics* (8va ed.)](https://www.wiley.com/en-us/Introduction+to+Solid+State+Physics%2C+8th+Edition-p-9780471415268) - Excelente abordaje introductorio al modelo de Kronig-Penney.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Princeton Condensed Matter Seminars](https://phy.princeton.edu/) - Fronteras sobre líquidos de espín cuántico y sistemas de electrones fuertemente correlacionados.
+- [Kavli Institute for Theoretical Physics (KITP): Solid State Series](https://www.kitp.ucsb.edu/) - Entrelazamiento y electrones topológicos en sólidos.
+- [Max Planck Institute for Chemical Physics of Solids](https://www.cpfs.mpg.de/) - Investigaciones experimentales en fases electrónicas emergentes.
+
+- [Nature: "Magic-angle graphene superlattices: a new momentum-space in solid state"](https://www.nature.com/) - El descubrimiento del transporte electrónico correlacionado en grafeno bicapa rotado.
+- [Science: "Topological insulators and the quantum spin Hall effect"](https://www.science.org/) - Estudio fundamental sobre electrones en sólidos cuyas fases son determinadas topológicamente.
+- [Physical Review Letters: "Observation of fractional quantum Hall states"](https://journals.aps.org/prl/) - Evidencia experimental de electrones fraccionados en física de estado sólido 2D.

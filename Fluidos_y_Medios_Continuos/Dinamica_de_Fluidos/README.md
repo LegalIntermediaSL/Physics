@@ -241,3 +241,13 @@ donde $\eta(t) \in \text{SDiff}(M)$ es la posición Lagrangiana del fluido en el
 ### 📖 Referencias Útiles y Bibliografía
 1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
 2. [Fluid Mechanics (Pijush K. Kundu, Ira M. Cohen)](https://www.amazon.com/Fluid-Mechanics-Pijush-K-Kundu/dp/012405935X)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Cambridge University: Fluid Dynamics Seminars](https://www.maths.cam.ac.uk/) - Charlas sobre mecánica de fluidos teórica y matemática.
+- [MIT Fluid Mechanics Seminar Series](https://engineering.mit.edu/) - Investigaciones punteras en flujos complejos e inestabilidades.
+- [Stanford Center for Turbulence Research (CTR) Seminars](https://ctr.stanford.edu/seminars) - Seminarios sobre modelado avanzado de fluidos computacionales.
+
+- [Nature: "Machine learning for fluid mechanics"](https://www.nature.com/) - Uso de redes neuronales para descubrir leyes fundamentales en dinámica de fluidos.
+- [Science: "Vortex reconnection and turbulence"](https://www.science.org/) - Estudio experimental de la reconexión de vórtices en fluidos cuánticos y clásicos.
+- [Physical Review Fluids: "Navier-Stokes equations and their singular limits"](https://journals.aps.org/prfluids/) - Avances recientes en la compresión matemática de singularidades en turbulencia.

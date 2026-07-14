@@ -268,3 +268,13 @@ $$ Q = \frac{1}{4\pi} \int dx dy \, \mathbf{n} \cdot \left( \partial_x \mathbf{n
 ### 📖 Referencias Útiles y Bibliografía
 1. [Blundell, S. *Magnetism in Condensed Matter*](https://global.oup.com/academic/product/magnetism-in-condensed-matter-9780198505914) - El texto definitivo de introducción para magnetismo en sólidos.
 2. [Coey, J. M. D. *Magnetism and Magnetic Materials*](https://www.cambridge.org/highereducation/books/magnetism-and-magnetic-materials/09BC11AF43C142B28B4666E31E2A40E0) - Cobertura profunda del origen atómico al magnetismo macroscópico.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Spintronics Seminars at MIT](https://engineering.mit.edu/) - Charlas sobre la manipulación de corrientes puras de espín magnético.
+- [Tohoku University: Magnetism and Spintronics Research](https://www.tohoku.ac.jp/en/) - Avances globales en magnetismo aplicado y memorias MRAM.
+- [Max Planck Institute of Microstructure Physics](https://www.mpi-halle.mpg.de/) - Seminarios sobre texturas magnéticas topológicas y skyrmiones.
+
+- [Nature: "Room-temperature skyrmions and their dynamics"](https://www.nature.com/) - Visualización y control de monopolos magnéticos cuasipartículas a temperatura ambiente.
+- [Science: "Giant magnetoresistance (GMR) in magnetic multilayers"](https://www.science.org/) - El fenómeno que revolucionó el almacenamiento magnético y originó la espintrónica.
+- [Reviews of Modern Physics: "Spin ice and frustration in magnetic systems"](https://journals.aps.org/rmp/) - Análisis sobre la física del magnetismo frustrado geométricamente.

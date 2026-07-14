@@ -299,3 +299,15 @@ Donde $\Sigma_{ab} = \frac{i}{4}[\gamma_a, \gamma_b]$ son los generadores de Lor
 2. **Libro**: [Physics of Atoms and Molecules - B.H. Bransden & C.J. Joachain](https://www.pearson.com/en-gb/subject-catalog/p/physics-of-atoms-and-molecules/P200000005272/9780582356924). Es la referencia absoluta para un tratamiento físico-matemático riguroso de las reglas de selección y efectos de campos magnéticos (Zeeman) sobre espectros.
 3. **Libro**: [Fundamentals of Molecular Spectroscopy - C.N. Banwell](https://www.mheducation.co.in/fundamentals-of-molecular-spectroscopy-9781259062599-india). Estándar dorado (más accesible que Bransden) para químicos y físicos de estado sólido.
 4. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 9). Contiene la derivación paso a paso explícita de los coeficientes de Einstein mediante la teoría de perturbaciones dependiente del tiempo.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [NIST Physical Measurement Laboratory Seminars](https://www.nist.gov/) - Desarrollos sobre relojes atómicos ópticos y espectroscopía de precisión de última generación.
+2. [Institute of Optics (University of Rochester) Colloquia](https://www.hajim.rochester.edu/optics/) - Charlas fundamentales sobre interacción luz-materia, óptica cuántica y fotónica.
+3. [Stanford PULSE Institute Seminars](https://pulse.stanford.edu/) - Conferencias sobre dinámica ultrarrápida, ciencia de attosegundos y fotónica avanzada.
+
+### Literatura de Frontera
+1. [Optical Frequency Comb Technology (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.325) - Descripción definitiva de los peines de frecuencias ópticas que revolucionaron la espectroscopía de ultra-precisión (Premio Nobel 2005).
+2. [Attosecond Physics (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.81.163) - Avances fenomenales en la observación de la dinámica de los electrones a escalas de tiempo de attosegundos.
+3. [Single-molecule optical spectroscopy (Science)](https://www.science.org/doi/10.1126/science.283.5408.1667) - Un artículo clave que demuestra la detección fotónica y el análisis espectroscópico de moléculas de fluoróforo individuales.

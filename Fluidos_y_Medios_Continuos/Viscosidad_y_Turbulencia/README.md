@@ -216,3 +216,13 @@ donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbu
 ### 📖 Referencias Útiles y Bibliografía
 1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
 2. [Boundary-Layer Theory (Hermann Schlichting)](https://www.amazon.com/Boundary-Layer-Theory-Hermann-Schlichting/dp/3662529176)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Center for Turbulence Research (Stanford) Seminars](https://ctr.stanford.edu/) - El instituto global líder para la investigación en turbulencia y DNS.
+- [Kavli Institute for Theoretical Physics: Turbulence Workshops](https://www.kitp.ucsb.edu/) - La turbulencia desde la mecánica estadística pura y la teoría de campos.
+- [Max Planck Institute for Dynamics and Self-Organization](https://www.ds.mpg.de/) - Investigaciones experimentales en flujos extremadamente turbulentos (alto Reynolds).
+
+- [Nature Physics: "The energy cascade in turbulence"](https://www.nature.com/nphys/) - Observaciones experimentales de la teoría K41 de Kolmogorov a escalas disipativas viscosas.
+- [Physical Review Letters: "Intermittency in turbulent flows"](https://journals.aps.org/prl/) - Avances teóricos sobre la formación de estructuras coherentes y eventos extremos.
+- [Science: "Active turbulence in biological flows"](https://www.science.org/) - Fenómenos que imitan la turbulencia sin inercia (bajo Reynolds) impulsados por bacterias viscosas.

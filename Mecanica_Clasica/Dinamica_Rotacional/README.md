@@ -221,3 +221,11 @@ donde $\Omega = \mathbb{I}^{-1}(\Pi) \in \mathfrak{so}(3)$ es la velocidad angul
 ### 📖 Referencias Útiles y Bibliografía
 - **[Classical Mechanics - H. Goldstein](https://www.pearson.com/en-us/subject-catalog/p/classical-mechanics/P200000003328/9780201657029)**: Los Capítulos 4 y 5 de este libro son la Biblia de la cinemática y dinámica del sólido rígido, explicando la conexión con matrices ortogonales.
 - **[Analytical Mechanics - L. Hand & J. Finch](https://www.cambridge.org/highereducation/books/analytical-mechanics/9780521575720)**: Libro intermedio-avanzado excelente por su trato profundo a tensores de inercia acoplados.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+- [Isaac Newton Institute for Mathematical Sciences Seminars](https://www.newton.ac.uk/events/seminars/) - Seminarios intensivos sobre los enfoques geométricos para sistemas en rotación y topología de espacios de configuración SO(3).
+- [Max Planck Institute for Dynamics and Self-Organization](https://www.ds.mpg.de/seminars) - Discusiones sobre la auto-organización y precesión de enjambres fluidos y sistemas biológicos rotatorios.
+- [Harvard Physics Department Colloquia](https://www.physics.harvard.edu/events/colloquia) - Ponencias sobre rotaciones moleculares ultra-rápidas y su control dinámico con láseres.
+- [Nature Communications: Chaotic rotation of asymmetric rigid bodies](https://www.nature.com/ncomms/) - Estudio de vanguardia que detalla transiciones caóticas impredecibles en el espacio de fase rotacional.
+- [PRL: Geometric Phases in Rotational Dynamics](https://journals.aps.org/prl/) - Investiga la acumulación de fases de Berry en cuerpos sólidos sometidos a rotaciones cíclicas complejas.
+- [arXiv: Nonlinear Control of Spacecraft Attitude (Preprints)](https://arxiv.org/) - Artículos punteros en esquemas matemáticos para estabilizar la rotación caótica de naves espaciales y asteroides irregulares.

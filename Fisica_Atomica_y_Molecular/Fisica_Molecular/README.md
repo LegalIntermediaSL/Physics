@@ -295,3 +295,15 @@ La adquisición de esta fase de $\pi$ (cambio de signo, un resultado puramente t
 2. **Libro**: [Molecular Quantum Mechanics - P.W. Atkins & R.S. Friedman](https://global.oup.com/academic/product/molecular-quantum-mechanics-9780199541423). El texto clásico y enormemente popular y accesible para químicos físicos; detalla la teoría de grupos, la construcción de orbitales, y las transiciones de Raman.
 3. **Libro**: [Fundamentals of Molecular Spectroscopy - C.N. Banwell](https://www.mheducation.co.in/fundamentals-of-molecular-spectroscopy-9781259062599-india). Estándar dorado (mucho más amigable que Bransden) que aborda explícita y didácticamente los espectros rotacionales, vibracionales, Raman y electrónicos.
 4. **Libro**: [Introduction to Quantum Mechanics - David J. Griffiths](https://www.cambridge.org/highereducation/books/introduction-to-quantum-mechanics/990799252758F46C8765A2C3946C342C) (Capítulo 7 y 8). Incluye una muy lúcida introducción a la molécula del ión de hidrógeno $H_2^+$ en el contexto del principio variacional, y a la aproximación WKB usada en el enlace del hidrógeno.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [Harvard ITAMP Seminars](https://itamp.harvard.edu/) - Seminarios enfocados en física atómica, molecular y óptica teórica y experimental.
+2. [Max Planck Institute for the Structure and Dynamics of Matter](https://www.mpsd.mpg.de/) - Investigaciones recientes sobre el control y las propiedades de moléculas complejas.
+3. [JILA (CU Boulder / NIST) Colloquia](https://jila.colorado.edu/) - Charlas sobre espectroscopía de precisión y física molecular ultrafría.
+
+### Literatura de Frontera
+1. [Laser cooling of a diatomic molecule (Nature)](https://www.nature.com/articles/nature09422) - La primera demostración del enfriamiento láser directo de una molécula, abriendo la puerta a la física molecular ultrafría.
+2. [Observation of a chemical reaction in the quantum regime (Science)](https://www.science.org/doi/10.1126/science.1184121) - Estudio pionero sobre reacciones químicas entre moléculas ultrafrías dominadas por el tunelaje cuántico.
+3. [Polar molecules in the quantum regime (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.81.515) - Revisión exhaustiva sobre la creación, control y aplicaciones de moléculas polares ultrafrías.

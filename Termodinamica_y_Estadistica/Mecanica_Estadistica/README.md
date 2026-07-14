@@ -254,3 +254,15 @@ Para estudiar sistemas *fuera del equilibrio* (non-equilibrium), el tiempo imagi
 1. **R. K. Pathria & Paul D. Beale - [Statistical Mechanics (Elsevier/Academic Press, 3rd Ed)](https://www.elsevier.com/books/statistical-mechanics/pathria/978-0-12-382188-1)** - El libro estándar para cursos de posgrado. Rigor matemático supremo, ideal para dominar condensación BE, gases de Fermi, transiciones de fase y fluctuaciones de Onsager.
 2. **Kerson Huang - [Statistical Mechanics (Wiley)](https://www.wiley.com/en-us/Statistical+Mechanics%2C+2nd+Edition-p-9780471815181)** - Un clásico respetado con una exposición profunda de la teoría de gases imperfectos (expansión virial), superfluidez e Ising.
 3. **Frederick Reif - [Fundamentals of Statistical and Thermal Physics (Waveland Press)](https://books.google.com/books?id=0sM4DgAAQBAJ)** - Un texto extenso, didáctico y extremadamente formativo que une termodinámica clásica, caminos aleatorios microscópicos y ensambles de manera magistral (recomendado a nivel de pregrado).
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### 🎓 Seminarios Web y Cursos Avanzados
+- [Perimeter Institute (PIRSA) - Statistical Mechanics & Many-Body Physics](https://pirsa.org/): Seminarios especializados en las fronteras de la termalización, la física de muchos cuerpos y la mecánica estadística fuera del equilibrio.
+- [Harvard Physics - Condensed Matter Seminars](https://physics.harvard.edu/): Colección de charlas recientes sobre sistemas cuánticos correlacionados y fases topológicas guiadas por estadística cuántica.
+- [CERN Indico - Statistical Field Theory Lectures](https://indico.cern.ch/): Conferencias detalladas sobre las aplicaciones de la teoría de campos en los fenómenos críticos y la mecánica estadística.
+
+### 📝 Literatura de Frontera (High-Impact Papers)
+- [Observation of Bose-Einstein Condensation in a Dilute Atomic Gas (Science)](https://www.science.org/doi/10.1126/science.269.5221.198): Relata la creación experimental pionera del primer condensado de Bose-Einstein, un estado cuántico macroscópico dictado puramente por la estadística bosónica.
+- [Many-Body Localization and Thermalization in Quantum Statistical Mechanics (Annu. Rev. Condens. Matter Phys.)](https://www.annualreviews.org/doi/10.1146/annurev-conmatphys-031214-014726): Discute el fenómeno por el cual ciertos sistemas cuánticos fuertemente interactuantes evitan la termalización ergódica predicha por la estadística estándar.
+- [Eigenstate Thermalization Hypothesis (Advances in Physics)](https://www.tandfonline.com/doi/abs/10.1080/00018732.2016.1198134): Fundamenta teóricamente por qué los sistemas cuánticos aislados pueden alcanzar un estado de equilibrio térmico, unificando la mecánica cuántica con el ensamble microcanónico.

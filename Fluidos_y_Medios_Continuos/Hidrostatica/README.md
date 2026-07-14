@@ -196,3 +196,13 @@ donde $II$ es la segunda forma fundamental de $\Sigma$, $\mathbf{n}$ el vector n
 ### 📖 Referencias Útiles y Bibliografía
 1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
 2. [Introduction to Fluid Mechanics (R.W. Fox, A.T. McDonald)](https://www.amazon.com/Fox-McDonalds-Introduction-Fluid-Mechanics/dp/1119616175)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Princeton Fluid Mechanics Seminars](https://mae.princeton.edu/) - Estudios sobre hidrostática compleja e interacciones de tensión superficial.
+- [MIT Fluid Dynamics Seminars](https://engineering.mit.edu/) - Charlas sobre estabilidad en sistemas estratificados bajo gravedad.
+- [Cambridge Fluids Group Seminars](https://www.maths.cam.ac.uk/) - Física matemática de superficies libres y capilaridad.
+
+- [Nature: "Self-assembly at fluid interfaces"](https://www.nature.com/) - Manipulación del principio de Arquímedes a nivel coloidal usando capilaridad.
+- [Science: "Elastocapillarity: When surface tension deforms elastic solids"](https://www.science.org/) - Efectos hidrostáticos que compiten con la elasticidad de los materiales.
+- [Physical Review Letters: "Stability of floating bodies"](https://journals.aps.org/prl/) - Extensiones topológicas sobre los centros de flotación y metacentros.

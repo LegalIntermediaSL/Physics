@@ -257,3 +257,13 @@ $$ I = \frac{ie}{h} \int dE \, \text{Tr}\left[ \Gamma_L(E) f_L(E) - \Gamma_R(E) 
 ### 📖 Referencias Útiles y Bibliografía
 1. [Sze, S. M., & Ng, K. K. *Physics of Semiconductor Devices*](https://www.wiley.com/en-us/Physics+of+Semiconductor+Devices%2C+3rd+Edition-p-9780471143239) - El libro definitivo y más referenciado globalmente de la industria semiconductora.
 2. [Pierret, R. F. *Semiconductor Device Fundamentals*](https://www.pearson.com/en-us/subject-catalog/p/semiconductor-device-fundamentals/P200000006764) - Texto pedagógico introductorio ideal para estadistica de portadores.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Stanford SystemX Alliance Seminars](https://systemx.stanford.edu/) - El futuro de la tecnología de semiconductores, empaquetado 3D y materiales 2D.
+- [IMEC Technology Forums](https://www.imec-int.com/en) - Charlas sobre miniaturización en los límites de litografía EUV y más allá de los transistores FinFET.
+- [MIT Microsystems Technology Laboratories](https://www.mtl.mit.edu/) - Nuevos paradigmas en la física de dispositivos semiconductores nanométricos.
+
+- [Nature: "Two-dimensional transition metal dichalcogenides for next-generation electronics"](https://www.nature.com/) - Uso de TMDs monocapa como semiconductores límite-escalado.
+- [Science: "Silicon spin qubits for quantum computation"](https://www.science.org/) - Semiconductores clásicos adaptados para aislar electrones individuales como qubits.
+- [Physical Review Letters: "Exciton condensation in semiconductor heterostructures"](https://journals.aps.org/prl/) - Formación de fluidos cuánticos bosónicos a partir de excitones semiconductores.

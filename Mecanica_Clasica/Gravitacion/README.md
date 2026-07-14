@@ -234,3 +234,11 @@ lo cual transforma las ecuaciones de Einstein en un problema de valor inicial co
 ### 📖 Referencias Útiles y Bibliografía
 - **[Classical Mechanics - John R. Taylor](https://uscibooks.aip.org/books/classical-mechanics/)**: El Capítulo 8 sobre Problemas de Fuerza Central provee la deducción más didáctica posible sobre el problema Kepleriano, secciones cónicas y órbitas de Hohmann.
 - **[Orbital Mechanics for Engineering Students - H. Curtis](https://www.elsevier.com/books/orbital-mechanics-for-engineering-students/curtis/978-0-08-102133-0)**: Extenso tratado riguroso para aplicaciones aeroespaciales prácticas: problemas de tres cuerpos restringidos, maniobras de transferencia orbital y encuentros planetarios.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+- [Perimeter Institute: Gravity Seminars](https://pirsa.org/) - Exploración profunda sobre gravedad cuántica, relatividad numérica y fronteras observacionales de campos gravitatorios.
+- [LIGO/Virgo Collaboration Open Seminars](https://www.ligo.caltech.edu/page/ligo-seminars) - Presentaciones de frontera sobre detección astronómica de ondas gravitacionales y colisiones astrofísicas masivas.
+- [CERN: Cosmology and Astroparticle Physics Seminars](https://theory.cern/seminars) - Debates sobre materia oscura, modificaciones del campo de gravedad clásico y evolución cosmológica estructurada.
+- [Nature: Testing General Relativity with Black Hole Mergers](https://www.nature.com/) - Observaciones clave que revalidan o desafían el marco relativista de Einstein en el límite de gravedad extrema.
+- [PRL: High-Precision Measurements of the Gravitational Constant](https://journals.aps.org/prl/) - Publicaciones con las determinaciones experimentales modernas más exactas de $G$ usando interferometría atómica.
+- [Reviews of Modern Physics: Post-Newtonian Approximations](https://journals.aps.org/rmp/) - Reseña matemática exhaustiva que compendia cómo expandir el formalismo relativista hacia parámetros manejables clásicamente.

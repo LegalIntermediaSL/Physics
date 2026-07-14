@@ -218,3 +218,13 @@ La densidad de energía elástica de deformación $W$ depende de la métrica efe
 ### 📖 Referencias Útiles y Bibliografía
 1. [Theory of Elasticity (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Theory-Elasticity-Course-Theoretical-Physics/dp/075062633X)
 2. [Continuum Mechanics (A.J.M. Spencer)](https://www.amazon.com/Continuum-Mechanics-Dover-Books-Physics/dp/0486435946)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Cambridge Solid Mechanics Seminars](https://www.eng.cam.ac.uk/) - Charlas avanzadas sobre medios continuos, elasticidad no lineal y plasticidad.
+- [Brown University Solid Mechanics Seminars](https://engineering.brown.edu/) - La cuna de la mecánica computacional continua moderna.
+- [Perimeter Institute: Soft Matter Seminars](https://perimeterinstitute.ca/) - Medios continuos en el contexto de física estadística de materia blanda.
+
+- [Nature Materials: "Active matter mechanics"](https://www.nature.com/nmat/) - Formulación de leyes constitutivas para materiales que generan esfuerzos internamente.
+- [Reviews of Modern Physics: "The physics of crumpling"](https://journals.aps.org/rmp/) - Comportamiento de medios continuos bajo condiciones de alta deformación localizada.
+- [Science: "Topology in continuous media"](https://www.science.org/) - Cómo usar la teoría de campos para entender dislocaciones continuas topológicas.

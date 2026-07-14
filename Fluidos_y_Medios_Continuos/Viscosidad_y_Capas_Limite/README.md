@@ -206,3 +206,13 @@ donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbu
 ### 📖 Referencias Útiles y Bibliografía
 1. [Fluid Mechanics (L.D. Landau y E.M. Lifshitz)](https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0080339336)
 2. [Boundary-Layer Theory (Hermann Schlichting)](https://www.amazon.com/Boundary-Layer-Theory-Hermann-Schlichting/dp/3662529176)
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Johns Hopkins University (JHU) Fluids Seminars](https://engineering.jhu.edu/) - Centro de excelencia para simulaciones de capa límite.
+- [Imperial College London: Fluid Mechanics Seminars](https://www.imperial.ac.uk/fluid-mechanics) - Charlas sobre arrastre aerodinámico y control de capa límite.
+- [AIAA Boundary Layer Control Sessions](https://www.aiaa.org/) - Aplicaciones modernas en aviación e ingeniería hipersónica.
+
+- [Journal of Fluid Mechanics: "Laminar-turbulent transition in boundary layers"](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics) - Estudio definitivo sobre las inestabilidades de Tollmien-Schlichting.
+- [Nature: "Superhydrophobic surfaces for drag reduction"](https://www.nature.com/) - Manipulación de la capa límite viscosa utilizando texturas de escala nanométrica.
+- [Science: "Slip at the fluid-solid interface"](https://www.science.org/) - Violaciones a la condición de "no-deslizamiento" en microfluidos y nanofluidos viscosos.

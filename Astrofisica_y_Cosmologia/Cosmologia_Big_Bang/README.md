@@ -263,3 +263,15 @@ donde $\epsilon = -\dot{H}/H^2$ es el parámetro de slow-roll (rodadura lenta) d
 1. **Barbara Ryden - [Introduction to Cosmology (Cambridge University Press)](https://www.cambridge.org/highereducation/books/introduction-to-cosmology/A7080DA9D6A9C5D089E4670DAB5259B2)** - Posiblemente el libro de introducción pedagógica más claro y ameno a nivel de pregrado, excepcional para derivar y aplicar en ejercicios prácticos la métrica FLRW y las ecuaciones de Friedmann.
 2. **Steven Weinberg - [Cosmology (Oxford University Press)](https://global.oup.com/academic/product/cosmology-9780198526827)** - Una joya moderna e implacablemente rigurosa firmada por un físico ganador del Premio Nobel, enfocada explícitamente en el desarrollo avanzado de tensores y perturbaciones cosmológicas inflacionarias (posgrado).
 3. **Scott Dodelson & Fabian Schmidt - [Modern Cosmology (Academic Press, 2da Ed)](https://shop.elsevier.com/books/modern-cosmology/dodelson/978-0-12-815948-4)** - El estándar contemporáneo indispensable y avanzado que enseña explícitamente cómo interpretar analíticamente el espectro de potencias del CMB y analizar numéricamente las anisotropías térmicas cósmicas.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+### Seminarios y Cursos Avanzados
+1. [Perimeter Institute Recorded Seminars (PIRSA) - Cosmology](https://pirsa.org/) - Conferencias teóricas y experimentales en la frontera del Big Bang y el universo temprano.
+2. [CERN Theoretical Physics Department Seminars](https://theory.cern/) - Discusiones sobre la física de partículas en el universo primordial y modelos inflacionarios.
+3. [Kavli Institute for Cosmological Physics (KICP) Seminars](https://kicp.uchicago.edu/) - Charlas en profundidad sobre radiación cósmica de fondo y energía oscura.
+
+### Literatura de Frontera
+1. [Planck 2018 results. VI. Cosmological parameters (Astronomy & Astrophysics)](https://www.aanda.org/articles/aa/full_html/2020/08/aa33910-18/aa33910-18.html) - Resultados cruciales de la misión Planck que definen el modelo estándar de la cosmología $\Lambda$CDM moderno.
+2. [Inflationary cosmology: Exploring the Universe from the smallest to the largest scales (Physics Reports)](https://www.sciencedirect.com/science/article/pii/S037015731500196X) - Una revisión extensiva de los modelos inflacionarios y sus firmas observacionales.
+3. [Observation of Gravitational Waves from a Binary Black Hole Merger (Physical Review Letters)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102) - El descubrimiento fundamental de ondas gravitacionales, abriendo una nueva era para estudiar el universo distante.

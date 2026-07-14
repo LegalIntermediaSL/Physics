@@ -201,3 +201,13 @@ Si $\mathbf{q} \neq 0$, el material exhibe ferromagnetismo superconductor espont
 ### 📖 Referencias Útiles y Bibliografía
 1. [Tinkham, M. *Introduction to Superconductivity* (2da ed.)](https://store.doverpublications.com/products/9780486435039) - Trata a la perfección las formulaciones de Ginzburg-Landau donde el magnetismo externo y el diamagnetismo pelean.
 2. [Blundell, S. *Magnetism in Condensed Matter*](https://global.oup.com/academic/product/magnetism-in-condensed-matter-9780198505914) - Indispensable lectura de la ruptura simétrica del ferromagnetismo.
+
+## 🌐 Seminarios Avanzados y Literatura de Frontera
+
+- [Argonne National Laboratory: Materials Science Seminars](https://www.anl.gov/msd) - Estudios sobre la coexistencia y competencia entre estados magnéticos y superconductores.
+- [Los Alamos National Laboratory (LANL) Condensed Matter](https://www.lanl.gov/) - Fermiones pesados e interacciones fuertemente correlacionadas.
+- [Perimeter Institute: Strongly Correlated Systems](https://perimeterinstitute.ca/) - Entrelazamiento cuántico, frustración e hibridación de fases.
+
+- [Nature Physics: "Coexistence of superconductivity and antiferromagnetism"](https://www.nature.com/nphys/) - Cómo ciertos compuestos logran evadir el límite de Clogston-Chandrasekhar.
+- [Science: "Spin-triplet superconductivity"](https://www.science.org/) - Materiales raros (como UTe2) donde pares de Cooper poseen momento magnético neto.
+- [Physical Review Letters: "Quantum criticality in heavy fermion systems"](https://journals.aps.org/prl/) - Entendimiento del punto crítico cuántico separando fases magnéticas y superconductoras a 0 K.
