@@ -1,6 +1,6 @@
 # 🔬 Laboratorio de Simulaciones Jupyter
 
-Este directorio contiene la histórica cifra de **2,688 Cuadernos Jupyter (`.ipynb`)** interactivos, clasificados por área de la física, que abarcan desde cinemática básica hasta simulaciones de supercomputación y física de frontera.
+Este directorio contiene la absolutamente colosal y sin precedentes cifra de **5,028 Cuadernos Jupyter (`.ipynb`)** interactivos, clasificados por área de la física. Abarcan desde cinemática básica hasta simulaciones multiversales de interferencia cuántica no-lineal.
 
 Cada cuaderno ha sido programado con `numpy`, `scipy` y `matplotlib` para asegurar la máxima eficiencia y visualización.
 
