@@ -1,17 +1,23 @@
-# Mecánica Clásica
+# Mecánica Clásica y Analítica
 
-La Mecánica Clásica es la rama de la física que estudia el movimiento de los cuerpos a velocidades pequeñas comparadas con la velocidad de la luz, y las fuerzas que causan o alteran ese movimiento. Es la base sobre la que se construye gran parte de la física y la ingeniería modernas.
+La Mecánica Clásica es la rama fundacional de la física. Aunque comienza con el estudio vectorial del movimiento (Leyes de Newton), su maduración matemática en los siglos XVIII y XIX la elevó a la **Mecánica Analítica (Lagrange y Hamilton)**, un poderoso marco geométrico y variacional que sentó las bases directas e ineludibles para el desarrollo de la Mecánica Cuántica y la Teoría de Campos.
 
 ## Temas de Estudio
 
-Explora cada una de las siguientes subcarpetas para un desarrollo profundo, ecuaciones y conceptos clave:
+Explora cada una de las siguientes subcarpetas. El repositorio abarca desde los fundamentos de bachillerato hasta el rigor extremo del Nivel Universitario (Landau/Goldstein):
 
-- 🏃 **[Cinemática](./Cinematica)**: Descripción geométrica del movimiento (posición, velocidad, aceleración).
+### Nivel Introductorio (Física General)
+- 🏃 **[Cinemática](./Cinematica)**: Descripción geométrica del movimiento.
 - ⚖️ **[Dinámica y Leyes de Newton](./Dinamica)**: Causas del movimiento y fuerzas.
-- ⚡ **[Trabajo y Energía](./Trabajo_y_Energia)**: Conservación de la energía mecánica y teoremas de trabajo.
-- 💥 **[Momento y Colisiones](./Momento_y_Colisiones)**: Conservación del momento lineal y sistemas de partículas.
+- ⚡ **[Trabajo y Energía](./Trabajo_y_Energia)**: Conservación de la energía mecánica.
+- 💥 **[Momento y Colisiones](./Momento_y_Colisiones)**: Conservación del momento lineal.
 - 🔄 **[Dinámica Rotacional](./Dinamica_Rotacional)**: Torque, momento de inercia y momento angular.
-- 🌍 **[Gravitación](./Gravitacion)**: Ley de Newton y leyes orbitales de Kepler.
+- 🌍 **[Gravitación](./Gravitacion)**: Ley de Newton y orbitales de Kepler.
+
+### Nivel Analítico y Avanzado (Física Teórica)
+- 💎 **[Mecánica Analítica Lagrangiana](./Mecanica_Analitica_Lagrangiana)**: El Principio de Mínima Acción, las Ecuaciones de Euler-Lagrange, Multiplicadores para vínculos holónomos, y el monumental Teorema de Noether (Leyes de Conservación $\leftrightarrow$ Simetrías).
+- 🌌 **[Mecánica Analítica Hamiltoniana](./Mecanica_Analitica_Hamiltoniana)**: El Espacio Fásico, las Ecuaciones de Hamilton, el Álgebra de Corchetes de Poisson, Transformaciones Canónicas y la Ecuación de Hamilton-Jacobi (la frontera con la óptica y la cuántica).
+- 🌪️ **[Sistemas Dinámicos y Caos Clásico](./Sistemas_Dinamicos_y_Caos_Clasico)**: El Teorema KAM (supervivencia de toros integrables), Exponentes de Lyapunov, atractores extraños y la rotura de la predicibilidad newtoniana.
 
 ---
 
