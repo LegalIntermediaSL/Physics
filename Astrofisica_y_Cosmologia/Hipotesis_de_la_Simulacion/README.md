@@ -1,15 +1,18 @@
-# La Hipótesis de la Simulación y Computación Cósmica
+# La Hipótesis de la Simulación y Cosmología Computacional (Tratado)
 
-¿Es el universo un objeto físico, o es un sustrato informacional? La física moderna, a través de la termodinámica de agujeros negros (el límite de Bekenstein) y la mecánica cuántica cuántica, sugiere fuertemente que la información, y no la materia, es el bloque fundamental de la realidad ("It from Bit", John Archibald Wheeler).
+A medida que la física teórica profundiza en los constituyentes más fundamentales de la realidad (cuantos, cuerdas, lazos cuánticos, agujeros negros), se hace cada vez más patente una profunda simetría entre el comportamiento de las partículas y el procesamiento de la información. 
 
-Esto ha resucitado una antigua idea filosófica bajo una formulación estadística y física moderna rigurosa: la **Hipótesis de la Simulación**.
+John Archibald Wheeler, en 1989, popularizó la idea del **"It from Bit"**. Argumentó, basándose en la correspondencia termodinámica-informacional, que todas las cosas físicas son subproductos teóricos de las interacciones informáticas (respuestas sí/no).
 
-## Ontología Computacional
+> *"El universo, su contenido físico, sus partículas, sus interacciones; todas derivan su función, su significado, su propia existencia, en su nivel más fundamental, a partir de respuestas obtenidas a interrogantes sí-o-no instrumentales: bits. Todo lo físico es, en el fondo, puramente informativo."* - J.A. Wheeler.
 
-En este directorio, exploramos formalmente los límites termodinámicos e informáticos del cosmos y los argumentos ontológicos que sustentan esta hipótesis:
+Bajo este poderoso paradigma de **Física Digital (Digital Physics)**, el viejo debate filosófico de René Descartes y su "genio maligno" resucita, no como un experimento mental metafísico, sino como una hipótesis estadísticamente cuantificable y físicamente defendible: **La Hipótesis de la Simulación.**
 
-1. [El Trilema de Nick Bostrom](Argumento_Trilenio_Bostrom.md): El análisis estadístico que postula la alta probabilidad de que nuestro universo sea simulado.
-2. [Física Digital y Mecánica Cuántica](Fisica_Digital_y_Mecanica_Cuantica.md): Principio Holográfico, borrador cuántico y paralelismos con motores de renderizado.
-3. [Límites Computacionales del Universo](Limites_Computacionales_del_Universo.md): Límite de Bremermann y el costo termodinámico del procesamiento de información.
-4. [Bibliografía y Artículos Seminales](Bibliografia_y_Articulos.md): *Papers* y ensayos filosófico-físicos fundamentales.
-r
+## Ontología Computacional: Directorio Teórico
+
+Este tratado consta de 4 extensos capítulos que entrelazan los últimos desarrollos de la ontología filosófica con la gravedad cuántica y la teoría de la información:
+
+1. [El Trilema Estadístico de Nick Bostrom](Argumento_Trilenio_Bostrom.md): El análisis del argumento de la simulación mediante probabilidad condicionada, el límite de independencia de sustrato y el teorema del "Ancestro Post-Humano".
+2. [Física Digital y Mecánica Cuántica](Fisica_Digital_y_Mecanica_Cuantica.md): La **Correspondencia AdS/CFT**, el Principio Holográfico, la granularidad gravitacional cuántica y las similitudes radicales del colapso de ondas con algoritmos de "Occlusion Culling".
+3. [Límites Termodinámicos y Computacionales del Cosmos](Limites_Computacionales_del_Universo.md): Límite de Bremermann, Principio de Landauer, Límite de Margolus-Levitin y los cálculos masivos de Seth Lloyd sobre un universo que *calcula* exactamente $10^{120}$ operaciones booleanas lógicas.
+4. [Bibliografía y Artículos Seminales](Bibliografia_y_Articulos.md): *Papers* y ensayos (Wheeler, Bekenstein, Bostrom, Maldacena, Lloyd) de obligatoria lectura.
