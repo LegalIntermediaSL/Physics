@@ -6,9 +6,13 @@ El apoyo físico más estremecedor a la idea de la simulación no provino de pro
 Jacob Bekenstein y Stephen Hawking calcularon teóricamente la entropía (y por tanto el límite de contenido de información termodinámico) de un agujero negro. Encontraron algo que dinamitaba el sentido común tridimensional: 
 
 La entropía máxima que puede ser empaquetada en una región esférica dada, de masa-energía suficiente para colapsar un agujero negro, no es proporcional a su volumen (en $r^3$), sino a su área superficial (en $r^2$):
+
 $$
+
  S_{BH} = \frac{k_B c^3}{4 G \hbar} A = \frac{k_B}{4} \left( \frac{A}{l_p^2} \right) 
+
 $$
+
 Donde $l_p$ es la Longitud de Planck. Cada "área de Planck" en el horizonte de sucesos contiene 1/4 de bit (o 1 nit) de información matemática pura.
 
 Leonard Susskind y Gerard 't Hooft extendieron esto (1993) como el **Principio Holográfico Fuerte**: La descripción matemática de un volumen de espacio tridimensional (nuestra experiencia física del mundo) puede ser codificada íntegramente de manera isomórfica como una teoría física que opera solo en la frontera superficial (2D) de ese espacio. Todo lo interior es solo una proyección.

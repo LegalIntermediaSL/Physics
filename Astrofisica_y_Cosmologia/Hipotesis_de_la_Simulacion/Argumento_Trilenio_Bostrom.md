@@ -22,7 +22,9 @@ Sea $N$ el número colosal de "simulaciones de ancestros" que correría una sola
 Matemáticamente, la probabilidad o fracción de todas las mentes (incluyéndote a ti) que experimentan ser observadores vivos en un mundo simulado es, grosso modo:
 
 $$
+
  f_{sim} = \frac{f_p f_I N}{f_p f_I N + 1} 
+
 $$
 
 ## 3. Discusión Estadística (El Golpe Fuerte)

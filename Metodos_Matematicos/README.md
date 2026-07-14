@@ -17,7 +17,9 @@ Explora las áreas fundamentales:
 En la descripción de sistemas dinámicos continuos, el operador Laplaciano en diversas geometrías es central. En forma tensorial covariante (Laplace-Beltrami) sobre una variedad con métrica $g_{\mu\nu}$:
 
 $$
+
 \nabla^2 \phi = \frac{1}{\sqrt{|g|}} \partial_\mu \left( \sqrt{|g|} g^{\mu\nu} \partial_\nu \phi \right)
+
 $$
 
 Donde $g$ es el determinante del tensor métrico.
@@ -25,7 +27,9 @@ Donde $g$ es el determinante del tensor métrico.
 De igual forma, la estructura subyacente de la mecánica cuántica se codifica en espacios de Hilbert $\mathcal{H}$ infinito-dimensionales, donde el producto interno cumple:
 
 $$
+
 \langle \psi | \phi \rangle = \int \psi^*(\mathbf{x}) \phi(\mathbf{x}) d^3\mathbf{x}
+
 $$
 
 ## 🌐 Seminarios Avanzados y Literatura de Frontera
