@@ -191,6 +191,18 @@ plt.xlabel("X"); plt.ylabel("Y")
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+El mayor problema abierto en dinámica de fluidos en 2026 sigue siendo la **Existencia y Suavidad de las Ecuaciones de Navier-Stokes** (un Problema del Milenio). Más allá de las matemáticas puras, la frontera física se halla en la "disipación anómala" en turbulencia: la idea de que los fluidos reales disipan energía cinemática incluso en el límite donde la viscosidad tiende a cero. Otros campos de vanguardia incluyen la magnetohidrodinámica (MHD) para confinamiento de plasma en reactores de fusión comercial (tokamaks) y flujos hipersónicos, donde los modelos fluidos clásicos fallan y deben acoplarse con la física cuántica de disociación molecular del aire.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+A un nivel doctoral, la dinámica de fluidos de Euler para fluidos incompresibles ideales fue reformulada geométricamente por V. Arnold como el **flujo geodésico sobre el grupo de difeomorfismos que preservan el volumen**. Sea $\text{SDiff}(M)$ el grupo de Lie de difeomorfismos sobre una variedad Riemanniana $M$. La métrica Riemanniana a derecha invariante sobre este espacio de dimensión infinita está inducida por la energía cinética del fluido:
+$$ \langle X, Y \rangle = \int_M g(X(x), Y(x)) d\mu $$
+Las ecuaciones de Euler emergen espectacularmente como la ecuación geodésica estricta sobre este grupo de Lie:
+$$ \nabla_{\dot{\eta}} \dot{\eta} = 0 $$
+donde $\eta(t) \in \text{SDiff}(M)$ es la posición Lagrangiana del fluido en el tiempo $t$. Las inestabilidades fluidas (como Rayleigh-Taylor) se traducen en curvaturas seccionales negativas de esta métrica en $\text{SDiff}(M)$, implicando que las geodésicas (las trayectorias de los campos de velocidad) divergen exponencialmente, formalizando matemáticamente el caos en fluidos ideales.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Recomendados

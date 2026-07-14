@@ -212,6 +212,24 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+El estudio fundamental de los plasmas requiere hoy abordar el límite en que la aproximación clásica falla y los efectos colectivos se mezclan con interacciones a nivel de primeros principios.
+- **Micro-Inestabilidades y Turbulencia de Deriva (Drift Turbulence):** El origen anómalo del transporte térmico en dispositivos experimentales está ligado a una miríada de inestabilidades a escala del radio de Larmor (ITG, TEM, ETG). Su resolución integral desde los fundamentos está activa mediante códigos de supercomputación giro-cinéticos.
+- **Ecos en Plasmas de Estado Sólido y Cuánticos:** En plasmas degenerados o fuertemente confinados, los análogos de los ecos espín y ecos de fotones revelan una memoria oculta en la función de distribución (fenomenología no Markoviana) más allá del clásico amortiguamiento de Landau.
+- **Electrodinámica Estocástica en Plasmas Astrofísicos Relativistas:** Plasmas en campos magnéticos de magnetares donde los efectos de la electrodinámica cuántica (producción de pares en el vacío) afectan directamente la ecuación de Vlasov.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El sistema de Vlasov-Maxwell no es solo un par de ecuaciones diferenciales, sino una estructura geométrica profunda de dimensión infinita.
+
+**Estructura Hamiltoniana y Paréntesis de Lie-Poisson:**
+El sistema Vlasov-Poisson (y Vlasov-Maxwell) puede formularse como un sistema dinámico Hamiltoniano de campo. El estado del plasma $f(\mathbf{x}, \mathbf{p}, t)$ evoluciona según la ecuación de Liouville generalizada:
+$$ \frac{\partial f}{\partial t} = \{f, H\} $$
+Donde el funcional Hamiltoniano $H[f]$ es la energía total y el corchete de Poisson no es el canónico, sino un paréntesis de Lie-Poisson definido sobre el dual de un álgebra de Lie:
+$$ \{F, G\} = \int d^3x \, d^3p \, f \left[ \frac{\delta F}{\delta f} , \frac{\delta G}{\delta f} \right]_c $$
+con $[\cdot, \cdot]_c$ siendo el corchete de Poisson canónico estándar. Esta estructura geométrica implica la existencia de una infinidad de invariantes (los Casimires $C = \int c(f) dx dp$) que constriñen drásticamente la relajación y el equilibrio del plasma (limitando los estados estacionarios según el teorema de BGK).
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

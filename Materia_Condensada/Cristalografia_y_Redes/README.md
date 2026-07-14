@@ -206,6 +206,28 @@ if __name__ == '__main__':
     plot_bcc_lattice()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La cristalografía moderna, más allá de la mera clasificación de estructuras periódicas, se enfrenta en la actualidad a desafíos que mezclan la física del estado sólido con la inteligencia artificial y la ciencia de materiales avanzada.
+- **Predicción Computacional de Estructuras (Ab Initio y Machine Learning):** El desafío de predecir la estructura cristalina estable de un compuesto dado (conociendo solo su composición química) sigue siendo uno de los "Santos Griales". El uso de redes neuronales gráficas (GNN) y modelos generativos (similares a AlphaFold pero para materiales) está revolucionando este campo en 2026.
+- **Cuasicristales y Estructuras Aperiódicas:** La comprensión de la termodinámica de formación de cuasicristales y sus exóticas propiedades de transporte (p. ej., aislantes térmicos perfectos pero buenos conductores eléctricos) sigue sin estar resuelta por completo. 
+- **Cristalografía Dinámica (Time-Resolved):** Utilizando láseres de electrones libres de rayos X (XFELs), se busca observar la formación y ruptura de enlaces, así como transiciones de fase estructurales en escalas de tiempo de femtosegundos.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El estudio avanzado de la cristalografía requiere abandonar la simple geometría euclidiana y adentrarse en la teoría de grupos algebraicos, representaciones y topología algebraica.
+
+**Cohomología de Grupos y Grupos Espaciales Magnéticos:**
+Para describir no solo las posiciones atómicas sino también propiedades tensoriales y magnéticas, se expanden los grupos espaciales convencionales a grupos de Shubnikov (grupos magnéticos o "en blanco y negro"). La clasificación de las posibles simetrías se puede formular mediante el segundo grupo de cohomología de grupo $H^2(G, \mathbb{Z})$. Las representaciones irreducibles (irreps) de los grupos espaciales determinan el comportamiento de los fermiones en la red.
+
+La condición de Bloch generalizada se escribe considerando un fibrado vectorial sobre la zona de Brillouin (un toro topológico $\mathbb{T}^d$). La conexión de Berry $\mathbf{A}(\mathbf{k})$ asociada a las funciones de Bloch periódicas $u_{n,\mathbf{k}}(\mathbf{r})$ es:
+$$ \mathbf{A}_{nn'}(\mathbf{k}) = i \langle u_{n,\mathbf{k}} | \nabla_{\mathbf{k}} | u_{n',\mathbf{k}} \rangle $$
+
+La curvatura de Berry (una 2-forma diferencial) determina invariantes topológicos de la red, de manera que la fase del cristal se asocia a la primera clase de Chern:
+$$ C_1 = \frac{1}{2\pi} \int_{\partial \text{BZ}} \mathbf{\Omega}(\mathbf{k}) \cdot d\mathbf{S} $$
+
+Las redes no son solo entes geométricos, sino bases que soportan campos gauge emergentes.
+
 ## 📚 Recursos Específicos
 
 ### Cursos

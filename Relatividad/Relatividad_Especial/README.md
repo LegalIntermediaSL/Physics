@@ -235,6 +235,23 @@ plt.tight_layout()
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En pleno 2026, la Relatividad Especial (RE) sigue siendo una piedra angular inquebrantable de la física moderna, pero las fronteras de la investigación se centran paradójicamente en buscar su ruptura. La búsqueda de violaciones a la Invariancia de Lorentz (LIV - Lorentz Invariance Violation) es uno de los campos más activos en la fenomenología de la gravedad cuántica. Modelos como la Gravedad Cuántica de Bucles y ciertas formulaciones de la Teoría de Cuerdas sugieren que, a la escala de Planck ($10^{-35}$ metros), el espacio-tiempo podría tener una estructura discreta o no conmutativa, lo que implicaría que la velocidad de la luz depende sutilmente de su energía. Observatorios de rayos gamma y neutrinos de muy alta energía, como IceCube y el Cherenkov Telescope Array (CTA), analizan los tiempos de llegada de partículas extragalácticas para detectar retrasos anómalos que confirmarían esta dispersión del vacío. Además, el desarrollo de relojes ópticos de red ultra-precisos permite realizar pruebas del Principio de Equivalencia y de dilatación del tiempo a escalas milimétricas, buscando desviaciones en el marco de la Extensión del Modelo Estándar (SME).
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+A un nivel avanzado, la Relatividad Especial se formula en el lenguaje de la teoría de grupos y geometría diferencial. El espacio-tiempo de Minkowski $\mathcal{M}$ es un espacio afín cuya variedad vectorial subyacente posee una métrica pseudo-riemanniana plana de signatura $(1,3)$. Las isometrías de este espacio forman el **Grupo de Poincaré** $\text{ISO}(1,3) = \mathbb{R}^{1,3} \rtimes \text{SO}^+(1,3)$, el cual es el producto semidirecto del grupo de traslaciones espacio-temporales y el grupo de Lorentz propio ortocrónico.
+
+El álgebra de Lie asociada, $\mathfrak{iso}(1,3)$, está generada por los momentos $P_\mu$ (generadores de traslaciones) y los generadores de Lorentz $M_{\mu\nu}$ (rotaciones y boosts), que satisfacen el álgebra:
+$$ [P_\mu, P_\nu] = 0 $$
+$$ [M_{\mu\nu}, P_\rho] = -i(\eta_{\mu\rho}P_\nu - \eta_{\nu\rho}P_\mu) $$
+$$ [M_{\mu\nu}, M_{\rho\sigma}] = -i(\eta_{\mu\rho}M_{\nu\sigma} - \eta_{\mu\sigma}M_{\nu\rho} - \eta_{\nu\rho}M_{\mu\sigma} + \eta_{\nu\sigma}M_{\mu\rho}) $$
+
+Para incluir fermiones en la teoría, es necesario recurrir a las representaciones del grupo recubridor universal del grupo de Lorentz, $\text{SL}(2,\mathbb{C})$. Un espinor de Weyl de quiralidad izquierda se transforma bajo una representación irreducible $(1/2, 0)$, mientras que uno de quiralidad derecha bajo $(0, 1/2)$. La ecuación de Dirac surge naturalmente al requerir invariancia bajo el grupo de Poincaré completo combinando estas representaciones en un espinor de Dirac (bispinor) $\psi$, donde la acción de los generadores se construye usando el álgebra de Clifford de las matrices gamma $\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}\mathbb{I}_4$. La acción de la teoría, acoplada al campo electromagnético $A_\mu$, se expresa mediante la derivada covariante de gauge:
+$$ \mathcal{S} = \int d^4x \, \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu} $$
+donde $D_\mu = \partial_\mu + iqA_\mu$ y $F_{\mu\nu}$ es el tensor de curvatura asociado a la conexión del fibrado principal $\text{U}(1)$.
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

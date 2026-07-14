@@ -242,6 +242,29 @@ ax.legend()
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+El Modelo Estándar, a 2026, si bien es el triunfo indiscutible de la física del siglo XX, está asediado por misterios persistentes que señalan inexorablemente a nueva física (Beyond Standard Model, BSM).
+
+- **La Naturaleza Mayorana vs Dirac del Neutrino:** Aunque las oscilaciones de neutrinos demostraron que tienen masa, se desconoce el origen de dicha masa. ¿Adquieren masa por el mecanismo de Yukawa convencional o a través de un "See-Saw Mechanism" (Mecanismo de Balancín) de gran unificación a la escala de $\sim 10^{15} \text{ GeV}$ requiriendo neutrinos estériles supermasivos de Majorana? El decaimiento beta doble sin neutrinos ($0\nu\beta\beta$) sigue sin ser observado concluyentemente.
+- **Tensión Cuántica del Momento Magnético Anómalo del Muón ($g-2$):** A pesar de los esfuerzos masivos en lattice QCD, las mediciones a 2026 de la polarización del vacío y la dispersión luz-luz (HLbL) mantienen una tensión estadística persistente $> 5\sigma$ respecto a las mediciones del experimento Muon g-2 del Fermilab, sugiriendo la interferencia de partículas virtuales exóticas (ej. leptoquarks o partículas supersimétricas ultra-ligeras).
+- **El Problema del CP Fuerte (Strong CP Problem):** El lagrangiano de QCD permite matemáticamente de forma natural un término que violaría drásticamente la simetría CP ($\mathcal{L} \supset \theta \frac{g_s^2}{32\pi^2} G_{\mu\nu}^a \tilde{G}^{\mu\nu,a}$). Sin embargo, mediciones del momento dipolar eléctrico del neutrón exigen que $|\theta| < 10^{-10}$. La solución más elegante propone la simetría de Peccei-Quinn y la existencia del Axión, una de las reliquias candidatas dominantes para la materia oscura oscura oscura fría, cuya búsqueda de conversión resonante en cavidades de haloscopio de microondas es límite crítico.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento riguroso contemporáneo del Modelo Estándar y su extensión exige dominar la **Teoría Cuántica de Campos Algebraica**, **Cohomología de BRST**, y **Anomalías Cuánticas en Variedades de Espaciotiempo Curvo**.
+
+La invariancia de gauge y la unitaridad del bosón gauge no-abeliano (en el sector electrodébil y de QCD) están interconectadas a través de la cuantización de Faddeev-Popov. El Lagrangiano efectivo incorpora campos ficticios "fantasmas" (ghosts) anticommutativos escalares $c^a, \bar{c}^a$:
+$$ \mathcal{L}_{eff} = \mathcal{L}_{gauge} - \frac{1}{2\xi} (\partial^\mu A_\mu^a)^2 + \bar{c}^a [-\partial^\mu (\partial_\mu \delta^{ac} + g f^{abc} A_\mu^b)] c^c $$
+
+La topología del vacío en el Modelo Estándar exhibe una riqueza insospechada. La integral de acción de Yang-Mills posee soluciones no perturbativas llamadas Instantones, que conectan diferentes mínimos topológicamente no equivalentes del vacío (esquematizados por el índice de Pontryagin o clase de Chern, $n \in \mathbb{Z}$). 
+
+El decaimiento anómalo y la violación bariónica-leptónica conjunta ($B+L$) a temperaturas electrodébiles, que teóricamente modela la bariogénesis, transcurre a través de la configuración estática conocida como "Sphaleron". La tasa de cruce de esta barrera de energía topológica ($E_{sph} \sim 9 \text{ TeV}$) en plasma primitivo térmico escala según:
+$$ \Gamma_{sph} \approx T^4 \exp\left(-\frac{E_{sph}}{T}\right) \quad (\text{para } T \ll E_{sph}) $$
+$$ \Gamma_{sph} \approx \alpha_W^5 T^4 \quad (\text{para } T > T_c \approx 160 \text{ GeV}) $$
+
+La profunda justificación de que tales violaciones (Anomalías de Adler-Bell-Jackiw) sean finitas radica en el **Teorema del Índice de Atiyah-Singer**, que mapea rigurosamente el desequilibrio espectral del operador de Dirac invariante quiral (modos cero) al invariante topológico de la variedad diferencial riemanniana que embebe el campo de gauge electrodébil.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

@@ -189,6 +189,19 @@ if __name__ == '__main__':
     simular_batido_sonoro()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+Hacia el 2026, las fronteras entre acústica, biología e informática han creado el campo de la **Acústica Neuromórfica** y la **Levitación Acústica Avanzada**. Se están investigando transductores que actúan directamente como redes neuronales físicas procesando ondas sonoras sin necesidad de digitalización previa. Por otro lado, los misterios persisten en la acústica no lineal extrema, particularmente en la cavitación acústica inducida en tejidos vivos durante litotricia y terapias focalizadas, donde predecir y controlar las microburbujas en interfaces de tejido complejo para la administración localizada de fármacos (sonoporación) requiere superar el caos inherente a la formación de burbujas asimétricas.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La acústica fuertemente no lineal (como ondas de choque direccionales) requiere abandonar las suposiciones de pequeña amplitud. El formalismo se traslada a la modelización asintótica avanzada y a la Ecuación de Westervelt. Sin embargo, para incluir atenuación acústica termoviscosa anómala que no sigue el modelo clásico de Stokes (la disipación no es proporcional a $\omega^2$), como ocurre fuertemente en polímeros complejos y tejidos biológicos humanos, se requiere utilizar el **Cálculo Diferencial Fraccionario**. 
+La propagación de la perturbación de presión se formula incorporando derivadas de Caputo de orden fraccionario $\alpha$ ($1 < \alpha < 2$):
+$$ \nabla^2 p - \frac{1}{c_0^2} \frac{\partial^2 p}{\partial t^2} + \tau^\alpha \frac{\partial^\alpha}{\partial t^\alpha} (\nabla^2 p) = -\frac{\beta}{\rho_0 c_0^4} \frac{\partial^2 p^2}{\partial t^2} $$
+donde $\beta$ es el parámetro de no linealidad y la derivada temporal fraccionaria está dada por:
+$$ \frac{\partial^\alpha p(t)}{\partial t^\alpha} = \frac{1}{\Gamma(m-\alpha)} \int_0^t \frac{p^{(m)}(\tau)}{(t-\tau)^{\alpha - m + 1}} d\tau $$
+Este marco integro-diferencial con memoria no local captura correctamente el retardo de relajación y la dispersión polinómica del sonido a lo largo del espectro de frecuencias completo, representando la vanguardia matemática en acústica médica.
+
 ## 📚 Recursos Específicos
 
 ### Cursos

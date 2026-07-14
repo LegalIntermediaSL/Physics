@@ -219,8 +219,21 @@ plt.tight_layout()
 # plt.show()
 ```
 
-## 📚 Recursos Específicos
+## 🚀 Fronteras de Investigación y Problemas Abiertos
 
+Para 2026, el campo combinado de la Estructura Atómica y los Espectros se ha consolidado como la plataforma principal para poner a prueba el Modelo Estándar a bajas energías. Un pilar es la medición de precisión del Desplazamiento de Lamb (Lamb Shift) en Átomos Muónicos, donde el electrón es reemplazado por un muón; dado que su órbita es 200 veces más cercana al núcleo, exacerba drásticamente las discrepancias en la polarización del vacío y el radio de carga del protón (originando el "Proton Radius Puzzle", que sigue impulsando mejoras experimentales y teóricas). Otra frontera es la espectroscopía astrofísica de absorción de cuásares distantes en busca de una variación temporal y espacial de la Constante de Estructura Fina ($\alpha$). Adicionalmente, el estudio sistemático de la No Conservación de Paridad (PNC) en átomos pesados como Cesio o Francio, originada por el intercambio de bosones $Z^0$ débiles entre el núcleo y los electrones, permite medir el "ángulo de Weinberg" en un régimen de momento de transferencia extraordinariamente bajo, complementando las pruebas de colisionadores masivos.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento de los desplazamientos atómicos más ínfimos recae sobre la **Electrodinámica Cuántica (QED) y Teoría de Campos Perturbativa**. Aquí, los niveles de energía atómica no son simples autovalores de un Hamiltoniano, sino que se derivan de los polos de las **Funciones de Green (Propagadores)** de las partículas interactuantes en el espacio-tiempo usando **Integrales de Camino de Feynman**.
+
+Para problemas de estado ligado verdaderamente rigurosos, como el positronio o átomos hidrogenoides exactos, la teoría perturbativa estándar (diagramas de Feynman) no converge adecuadamente, forzando la formulación integral no-perturbativa de la **Ecuación de Bethe-Salpeter**:
+
+$$ \Gamma(p, P) = \int \frac{d^4k}{(2\pi)^4} K(p, k, P) S_F^{(1)}(k + \eta_1 P) \Gamma(k, P) S_F^{(2)}(k - \eta_2 P) $$
+
+Donde $\Gamma$ es la amplitud del estado ligado, $P$ el momento total, $p$ el momento relativo, $S_F$ los propagadores fermiónicos completos y $K$ el kernel de interacción irreducible de dos partículas acoplado. Al intentar resolver sistemáticamente estos problemas relativistas, se evidencian divergencias en los bucles diagramáticos debido a momentos integrados infinitos. Se hace mandatario emplear un esquema de regularización matemática y las Ecuaciones del **Grupo de Renormalización**, lo que introduce a las constantes fundamentales de acoplamiento no como números puros fijos, sino como parámetros dinámicos "corrientes" (Running Coupling Constants) que varían con la escala de energía de la medición, dictaminando rigurosamente por qué la constante $\alpha \approx 1/137$ en el régimen atómico.
+
+## 📚 Recursos Específicos
 ### Cursos Específicos
 1. [Atomic and Optical Physics I - MIT OCW](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/)
 2. [Quantum Mechanics and Atomic Physics - MIT OCW](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/)

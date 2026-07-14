@@ -226,6 +226,22 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En la actual investigación (2026), el estudio de las leyes de la termodinámica se ha desplazado de los sistemas macroscópicos a los dominios nanoscópicos y cuánticos, forjando las disciplinas de la **Termodinámica Estocástica** y la **Termodinámica Cuántica**. Una de las mayores fronteras es la validación y extensión de los Teoremas de Fluctuación (como los de Jarzynski y Crooks) en sistemas cuánticos abiertos, donde los efectos de coherencia y entrelazamiento cuántico modifican radicalmente los conceptos clásicos de trabajo y calor. Se investigan máquinas térmicas cuánticas capaces de explotar depósitos "squeezed" (comprimidos) para superar aparentemente los límites de eficiencia de Carnot clásicos. Asimismo, el comportamiento de sistemas far-from-equilibrium (lejos del equilibrio) y la caracterización rigurosa de la producción de entropía en procesos que involucran materia activa biológica o nanomotores impulsados por gradientes químicos, continúan planteando problemas teóricos profundos sin unificar.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+Desde un punto de vista matemático riguroso, la termodinámica del equilibrio puede formularse elegantemente mediante la **Geometría de Contacto**. El espacio de estados termodinámicos se modela como una variedad de contacto $(2n+1)$-dimensional $\mathcal{P}$. Las variables termodinámicas intensivas y extensivas forman coordenadas conjugadas. La primera ley de la termodinámica se expresa requiriendo que los estados físicos residan en subvariedades de Legendre de $\mathcal{P}$, en las cuales se anula la forma de contacto fundamental:
+$$ \theta = dU - T dS + p dV - \sum_i \mu_i dN_i = 0 $$
+
+En la **Termodinámica Estocástica**, la evolución de sistemas lejos del equilibrio se describe a nivel de trayectorias usando ecuaciones diferenciales estocásticas (formalismo de Langevin) o su equivalente probabilístico, la ecuación de Fokker-Planck. La entropía se promueve a una variable estocástica fluctuante a lo largo de una trayectoria $\vec{x}(t)$ en el espacio de fases. 
+Usando cálculo estocástico (convención de Stratonovich), el calor disipado en un entorno a temperatura $T$ a lo largo de una trayectoria aleatoria de duración $\tau$ se asocia a la reversibilidad temporal de las probabilidades de trayectoria $\mathbb{P}$. El Teorema de Fluctación de Crooks establece que la asimetría en las distribuciones de trabajo $P(W)$ entre un proceso "forward" (F) y su proceso "reverse" (R) satisface:
+$$ \frac{P_F(W)}{P_R(-W)} = e^{\beta(W - \Delta F)} $$
+donde $\beta = 1/k_B T$ y $\Delta F$ es el cambio de energía libre. Integrando esta relación, emerge la célebre **Igualdad de Jarzynski**, que relaciona exponencialmente promedios fuera del equilibrio con diferencias de energía libre de equilibrio:
+$$ \langle e^{-\beta W} \rangle = e^{-\beta \Delta F} $$
+Este formalismo prueba que la Segunda Ley de la Termodinámica ($\langle W \rangle \ge \Delta F$) es una consecuencia estadística macroscópica de una simetría microscópica exacta de las fluctuaciones.
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

@@ -209,6 +209,24 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La cosmología en 2026 se encuentra en una fase de "crisis fértil" debido a las precisiones observacionales que han puesto a prueba el modelo estándar $\Lambda$CDM. El problema más candente es la "Tensión de $H_0$", una discrepancia estadísticamente insalvable (>5$\sigma$) entre la constante de Hubble medida localmente (mediante Cefeidas y supernovas) y la deducida de la radiación de fondo de microondas (CMB) en el universo temprano. Esta tensión sugiere nueva física: energía oscura temprana (Early Dark Energy), interacciones oscuras, o especies de neutrinos ligeros estériles. Al mismo tiempo, la búsqueda incansable de la señal de los **modos B primordiales** en la polarización del CMB (por satélites y telescopios terrestres de próxima generación como el Simons Observatory y CMB-S4) pretende ofrecer la confirmación definitiva de la época inflacionaria y fijar la escala de energía de la gravedad cuántica, mediante la detección de ondas gravitacionales tensor-a-escalar. La asimetría bariónica del universo (por qué hay más materia que antimateria) sigue siendo otro de los misterios insondables que une la cosmología y la física de partículas.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La cosmología moderna se fundamenta en la **Teoría de Perturbaciones Cosmológicas Relativistas**, crucial para entender cómo las fluctuaciones cuánticas del vacío se expandieron inflacionariamente para formar la estructura cósmica a gran escala. Partimos de la métrica de Friedmann-Lemaître-Robertson-Walker (FLRW) perturbada. En el calibre longitudinal (o calibre conforme newtoniano), la métrica perturbada con perturbaciones escalares se escribe usando el tiempo conforme $\eta$:
+$$ ds^2 = a^2(\eta) \left[ -(1 + 2\Phi)d\eta^2 + (1 - 2\Psi)\gamma_{ij} dx^i dx^j \right] $$
+donde $a(\eta)$ es el factor de escala, y $\Phi$ y $\Psi$ son los potenciales métricos de Bardeen (que son invariantes gauge).
+
+La dinámica del universo temprano está dominada por un campo escalar inflatón $\varphi = \varphi_0(\eta) + \delta\varphi(x, \eta)$. Expandiendo las ecuaciones de Einstein y la ecuación de Klein-Gordon a primer orden, introducimos la variable conjugada invariante de Mukhanov-Sasaki $v = a \left( \delta\varphi + \frac{\varphi_0'}{\mathcal{H}}\Phi \right)$, donde $\mathcal{H} = a'/a$. La cuantización de las perturbaciones se realiza promoviendo $v$ a un operador que satisface la **Ecuación de Mukhanov-Sasaki**:
+$$ v_k'' + \left( k^2 - \frac{z''}{z} \right) v_k = 0 $$
+con $z = a\varphi_0' / \mathcal{H}$. 
+
+El estado de vacío de Bunch-Davies proporciona las condiciones iniciales en el límite asintótico $k \gg \mathcal{H}$ (modos sub-horizonte) con $v_k(\eta) \simeq e^{-ik\eta} / \sqrt{2k}$. Al evolucionar estos modos fuera del horizonte de Hubble durante la inflación cósmica ($k \ll \mathcal{H}$), sus amplitudes se "congelan". El espectro de potencia adimensional primordial $\mathcal{P}_\mathcal{R}(k)$ para la curvatura comóvil $\mathcal{R} = v/z$ evaluado a la salida del horizonte es:
+$$ \mathcal{P}_\mathcal{R}(k) = \frac{k^3}{2\pi^2} |\mathcal{R}_k|^2 \approx \frac{H^2}{8\pi^2 M_{Pl}^2 \epsilon} $$
+donde $\epsilon = -\dot{H}/H^2$ es el parámetro de slow-roll (rodadura lenta) de la inflación. Este formalismo riguroso es el que predice el espectro de Harrison-Zel'dovich casi invariante de escala ($n_s \approx 0.965$) que ha sido confirmado con asombrosa precisión por el satélite Planck.
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

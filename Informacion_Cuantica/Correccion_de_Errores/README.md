@@ -180,6 +180,33 @@ fidelidad = np.real(np.trace(rho_initial @ rho_corrected))
 print(f"Fidelidad tras corrección ideal mayoritaria: {fidelidad:.4f}")
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En 2026, el campo de la Corrección de Errores Cuánticos (QEC) ha migrado radicalmente de los códigos topológicos de superficie 2D convencionales hacia los **Códigos Cuánticos de Baja Densidad de Paridad (qLDPC)**, prometiendo revolucionar el overhead de qubits (ratio físico/lógico).
+
+- **El Problema del Enrutamiento Topológico en Códigos qLDPC:** A diferencia de los códigos de superficie, las familias de qLDPC asintóticamente buenas (y el hito de los códigos del producto tensorial de grupos de Panteleev y Kalachev) requieren conexiones geométricas de rango infinito u orden hipercúbico, incompatibles con arquitecturas rígidas 2D superconductoras. El desafío estriba en mapear estos grafos altamente expansores en lattices planas mediante arquitecturas modulares (Quantum Interconnects) sin destruir el umbral de tolerancia.
+- **Decodificadores Neuronales y de Creencia Propagada Cuántica (BP-OSD):** El umbral algorítmico. Mientras que Minimum Weight Perfect Matching (MWPM) es excelente para el Código Torico, es NP-hard para qLDPC. El problema abierto es diseñar decodificadores probabilísticos paralelizables a ritmos de reloj de 1 MHz.
+- **Decoherencia Sesgada y Códigos XZZX:** La optimización geométrica de códigos topológicos bajo ruido puramente de fase $Z$, o ruido fuertemente asimétrico, donde se busca un umbral topológico que exceda el 10% mediante deformaciones dinámicas del álgebra de estabilizadores de código de color topológico 3D.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La fundamentación de los códigos de error topológicos reside intrínsecamente en el corazón de la **Topología Algebraica, la Homología y las Variedades Celulares**.
+
+Un código de estabilizador puede ser formulado como un complejo de cadenas cohomológico bi-graduado $\mathcal{C}$ dotado de un operador diferencial frontera $\partial$ que satisface $\partial^2 = 0$. Consideremos el complejo clásico:
+$$ C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 $$
+
+Los espacios vectoriales (sobre $\mathbb{F}_2$) corresponden respectivamente a estabilizadores-plaqueta ($Z$), qubits, y estabilizadores-vértice ($X$). La condición de conmutación de estabilizadores equivale directamente al lema topológico $\partial_1 \circ \partial_2 = 0$, significando que los límites de las fronteras topológicas son nulos.
+
+El grupo de Homología $\mathbb{F}_2$-coeficiente codifica asombrosamente los estados lógicos del código:
+$$ H_1(\mathcal{C}, \mathbb{F}_2) = \frac{\ker(\partial_1)}{\text{Im}(\partial_2)} $$
+
+Los elementos de $\ker(\partial_1)$ son lazos cerrados (ciclos) correspondientes a palabras lógicas (cadenas de $Z$ que conmutan con estabilizadores tipo $X$). Los elementos triviales en $\text{Im}(\partial_2)$ son ciclos contráctiles equivalentes a los operadores estabilizadores, es decir, el síndrome nulo.
+
+La distancia del código, que determina el grado de entrelazamiento cuántico tripartito, coincide con el radio de inyectividad homotópica de la variedad sistólica, definiéndose por el menor peso de un operador homotópicamente no trivial:
+$$ d_Z = \min_{c \in \ker(\partial_1) \setminus \text{Im}(\partial_2)} \text{peso}(c) $$
+
+La investigación actual explora Códigos de Haces Perversos (Perverse Sheaves) sobre Variedades de Riemann hiperbólicas $4D$, buscando estabilizadores de peso constante local (qLDPC) que alberguen subespacios lógicos expansores $k \propto n$, rompiendo asintóticamente la barrera impuesta por el teorema de Bravyi-Poulin-Terhal para grafos eucledianos acotados.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Recomendados

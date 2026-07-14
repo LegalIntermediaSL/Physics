@@ -223,6 +223,27 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La era espacial ha dotado de un volumen inmenso de datos in-situ proporcionados por sondas solares (Parker Solar Probe, Solar Orbiter) y magnetosféricas (MMS).
+- **Mecanismos de Calentamiento de la Corona Solar:** ¿Por qué la corona solar tiene millones de grados mientras la superficie es de $6000$ K? La evidencia actual señala a la disipación turbulenta del viento solar mediante la reconexión nanoflare intermitente y el amortiguamiento de ondas de Alfvén hacia la escala cinética.
+- **Aceleración de Rayos Cósmicos y Relatividad (Choques No Colisionales):** Identificar el mecanismo preciso de inyección del espectro universal de las leyes de potencia (Fermi de Tipo I y II) en los remanentes de supernova y jets de agujeros negros, incluyendo los procesos cinéticos inestables en los precursores de las ondas de choque astrofísicas.
+- **Clima Espacial Extremo y Reconexión Magnética Espacial:** Utilizando datos de la misión MMS, desentrañar la física 3D ultrarrápida del punto neutro $X$, reconexión asimétrica y difusividad magnética en los eventos geomagnéticos de interacciones viento solar - magnetosfera terrestre.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El límite astrofísico con bajísimas densidades requiere abandonar la mecánica de fluidos estándar a favor de ecuaciones cinéticas difusivas en regímenes casi no-colisionales.
+
+**Teoría Cuasilineal de Interacción Onda-Partícula y Viento Solar:**
+Para describir el esparcimiento de rayos cósmicos y la radiación capturada por campos planetarios (cinturones de Van Allen) producida por una banda turbulenta ancha de ondas electromagnéticas (Alfvénicas o Whistler), se recurre a la expansión cuasilineal de la ecuación Vlasov. La función de distribución $f_0(\mathbf{p})$ evoluciona estocásticamente bajo un operador difusivo espacial y de momentos de Fokker-Planck:
+$$ \frac{\partial f_0}{\partial t} = \frac{\partial}{\partial p_i} \left( D_{ij}(\mathbf{p}) \frac{\partial f_0}{\partial p_j} \right) $$
+El tensor de difusión $D_{ij}$ emerge de resonancias onda-partícula evaluadas en polos (como la resonancia de ciclotrón normal y anómala) en el espectro de fluctuaciones turbulento del campo $|\delta \mathbf{B}_k|^2$.
+
+**Ecuación de Transporte de Parker-Krylov:**
+La propagación cósmica global está gobernada por la ecuación de Parker, que balancea advección, difusión isotrópica, esparcimiento por vientos (derivado adiabático) y ganancia por ondas de choque:
+$$ \frac{\partial U}{\partial t} = \nabla \cdot (K \cdot \nabla U) - \mathbf{V}_w \cdot \nabla U + \frac{1}{3} (\nabla \cdot \mathbf{V}_w) \frac{\partial (p U)}{\partial p} + Q $$
+Donde $K(\mathbf{r}, p)$ es el tensor de difusión derivado matemáticamente acoplando dinámicamente este campo a las perturbaciones MHD en la vasta heliosfera.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

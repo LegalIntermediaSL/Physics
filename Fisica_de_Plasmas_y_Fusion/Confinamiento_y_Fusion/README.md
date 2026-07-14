@@ -216,6 +216,24 @@ plt.axis('equal')
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+El progreso hacia la fusión comercial es continuo, y en 2026 nos encontramos ante hitos críticos de integración e ignición sostenida.
+- **Predicción y Mitigación de Disrupciones (IA en Tokamaks):** Una disrupción térmica o electromagnética puede dañar las paredes del reactor. El control de plasmas hiper-calientes (150 millones de grados) requiere usar Machine Learning (Redes Neuronales de Refuerzo Profundo) que actúen sobre los sistemas de calentamiento en nanosegundos para evitar la formación de Modos de Desgarro Neoclásicos (NTMs).
+- **Stellarators Optimizados por Supercomputación:** Mientras el tokamak es simétrico (axisimétrico), el stellarator utiliza bobinas 3D asimétricas y muy retorcidas. Los nuevos diseños (tipo W7-X) están descubriendo óptimos casi-isodinámicos ocultos en el espacio de parámetros multidimensional.
+- **Manejo del Escape de Calor de Pared (El Divertor):** Extraer los subproductos de la fusión y el inmenso calor sin derretir el wolframio de la pared requiere crear estados desprendidos (detached plasmas), un régimen atómico y molecular altamente no lineal en los bordes del reactor.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El confinamiento magnético se basa en la topología de la superficie toriodal y en teoremas hamiltonianos fundamentales.
+
+**Teoría KAM (Kolmogorov-Arnold-Moser) y Coordenadas de Boozer:**
+Las líneas de campo magnético en un toroide cerrado (tokamak o stellarator) son descritas como las trayectorias de un sistema hamiltoniano con grado de libertad 1.5. El "tiempo" hamiltoniano es la coordenada toroidal $\phi$.
+La existencia de superficies de flujo anidadas perfectas está garantizada por el teorema KAM, siempre y cuando la perturbación de la simetría original sea pequeña y el perfil del factor de seguridad $q$ sea fuertemente cizallado (irracional e inconmensurable):
+$$ \left| m - nq(\psi) \right| > \frac{C}{m^\tau} $$
+Si el solapamiento de resonancias magnéticas excede el criterio de Chirikov, las superficies invariantes colapsan formando islas magnéticas y regiones caóticas o estocásticas, lo que destruye el confinamiento radial y permite que la difusividad de calor aumente órdenes de magnitud (caos cuántico y clásico).
+Para mapear la estructura topológica, se utilizan las coordenadas de flujo de Boozer $(\psi, \theta_B, \phi_B)$ donde el campo métrico garantiza que las líneas de campo son perfectamente rectilíneas métricamente en ese espacio abstracto tridimensional curvilíneo.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

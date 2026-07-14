@@ -205,6 +205,24 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+Las fronteras modernas de la dinámica en 2026 exploran la **materia activa**, donde conjuntos de partículas autopropulsadas violan activamente el teorema de fluctuación-disipación microscópico para generar dinámicas macroscópicas emergentes, tales como enjambres celulares y turbulencia nemática activa. Asimismo, problemas de **sistemas caóticos hiperdimensionales** y **dinámica estocástica anómala** siguen siendo grandes interrogantes, al igual que los fenómenos de sincronización espontánea en redes dinámicas complejas (modelos de Kuramoto generalizados).
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El estudio fundamental de la dinámica se enmarca rigurosamente en la **Geometría Simpléctica** de las variedades diferenciables. El espacio de fases es un haz cotangente $T^*Q$ sobre la variedad de configuración $Q$, dotado de una **forma simpléctica** canónica cerrada y no degenerada $\omega$.
+
+Dado un sistema con coordenadas locales $(q^i, p_i)$, la forma simpléctica exacta es:
+
+$$ \omega = \sum_{i=1}^n dq^i \wedge dp_i = -d\theta $$
+
+donde $\theta = \sum p_i dq^i$ es la 1-forma tautológica de Liouville. La evolución temporal del sistema está dada por el flujo generador de un observable Hamiltoniano $H: T^*Q \to \mathbb{R}$, produciendo el campo vectorial Hamiltoniano $X_H$, definido unívocamente por la relación fundamental:
+
+$$ \iota_{X_H} \omega = dH $$
+
+Las célebres ecuaciones canónicas de Hamilton son simplemente la expresión local en coordenadas de la relación global de variedades simplécticas. Bajo este marco geométrico riguroso, transformaciones canónicas no son más que difeomorfismos que preservan (pullbacks) la forma simpléctica: $\Phi^*\omega = \omega$.
+
 ## 📚 Recursos Específicos de Dinámica
 
 ### 🎓 Cursos y Clases Recomendadas

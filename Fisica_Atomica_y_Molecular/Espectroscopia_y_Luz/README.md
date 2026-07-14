@@ -258,8 +258,25 @@ plt.tight_layout()
 # plt.show()
 ```
 
-## 📚 Recursos Específicos
+## 🚀 Fronteras de Investigación y Problemas Abiertos
 
+La espectroscopía en 2026 está dictada por regímenes temporales y de precisión extremos. La Espectroscopía de Attosegundos permite actualmente mapear en tiempo real la dinámica de electrones individuales durante el rompimiento de enlaces químicos, así como el efecto túnel fotoeléctrico. Además, el uso de Peines de Frecuencias (Frequency Combs) se ha extendido al rango del ultravioleta extremo (XUV) para mediciones metrológicas de transiciones antes inaccesibles. Paralelamente, la Espectroscopía Cuántica explotando luz comprimida (squeezed light) y pares de fotones entrelazados está superando el límite cuántico estándar (Standard Quantum Limit) reduciendo radicalmente el ruido de disparo (shot noise), permitiendo mediciones ultra-sensibles in-vivo sin fototoxicidad para las muestras biológicas. En el límite fundamental, se persigue la Espectroscopía de Precisión de Antimateria, donde el espectro del antihidrógeno se mide en el CERN con precisiones relativas del $10^{-12}$ buscando la más mínima violación de la simetría CPT (Carga-Paridad-Tiempo).
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La formulación avanzada de las reglas de selección espectroscópicas requiere la Teoría de Representaciones de Grupos de Lie. Las transiciones electromagnéticas se analizan a través del **Teorema de Wigner-Eckart**, que factoriza los elementos de matriz en una parte geométrica universal (coeficientes de Clebsch-Gordan del grupo $SO(3)$ o $SU(2)$) y un elemento de matriz reducido que concentra la dinámica física:
+
+$$ \langle j', m' | \hat{T}_q^{(k)} | j, m \rangle = \frac{\langle j' || \hat{T}^{(k)} || j \rangle}{\sqrt{2j'+1}} \langle j, m ; k, q | j', m' \rangle $$
+
+Donde $\hat{T}_q^{(k)}$ es un operador tensorial esférico de rango $k$. La expansión multipolar de la radiación se vuelve completamente geométrica: $k=1$ corresponde al dipolo eléctrico (E1), $k=2$ al cuadrupolo (E2), etc.
+
+Además, cuando los átomos se encuentran en campos de gravedad extremos o para testear el principio de equivalencia, se emplea el acoplamiento mínimo en la formulación cuántica de espines sobre un espacio-tiempo curvo de Lorentz. Para acoplar espinores de Dirac a la gravedad, es imperativo usar un **formalismo de tétradas (Vielbein)** $e_\mu^a$ y definir la derivada covariante espinorial con la conexión de espín $\omega_\mu^{ab}$:
+
+$$ D_\mu \psi = \left( \partial_\mu - \frac{i}{2} \omega_{\mu}^{ab} \Sigma_{ab} - iqA_\mu \right) \psi $$
+
+Donde $\Sigma_{ab} = \frac{i}{4}[\gamma_a, \gamma_b]$ son los generadores de Lorentz. El Hamiltoniano efectivo relativista en curvaturas débiles genera pequeñas correcciones gravitacionales a los niveles de estructura fina, dando una firma espectroscópica unificada de gravedad y mecánica cuántica.
+
+## 📚 Recursos Específicos
 ### 🎓 Cursos y Clases Recomendadas
 1. [MIT 8.421 Atomic and Optical Physics I (Wolfgang Ketterle)](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/): Fundamental para la comprensión teórica de la interacción átomo-luz y la estructura fina/hiperfina subyacente a los espectros atómicos.
 2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Las secciones sobre momento angular proporcionan la base indispensable para comprender las reglas de selección de dipolo eléctrico.

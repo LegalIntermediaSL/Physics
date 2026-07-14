@@ -203,6 +203,18 @@ if __name__ == '__main__':
     trazar_rayos_lente_delgada()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La frontera de la óptica geométrica en 2026 ha evolucionado hacia la **Óptica de Forma Libre (Freeform Optics)** y los metamateriales GRIN (Gradient-Index) extremos. Con el advenimiento del diseño computacional inverso impulsado por IA y la nanofabricación, las superficies ópticas ya no se restringen a formas esféricas o asféricas de revolución, sino que utilizan superficies paramétricas complejas (polinomios de Zernike generalizados). El gran problema abierto es la corrección cromática perfecta en un solo elemento óptico (metalentes) a través de todo el espectro visible, utilizando resonadores plasmónicos a sub-longitud de onda para controlar localmente el frente de fase sin sufrir aberraciones cromáticas masivas típicas del diseño plano.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+A un nivel avanzado, la óptica geométrica no es más que el estudio del **flujo geodésico en variedades Riemannianas** y geometría de contacto. Según el Principio de Fermat, los rayos de luz trazan trayectorias que minimizan el camino óptico temporal. Matemáticamente, esto equivale a encontrar las geodésicas en una variedad Riemanniana $M$ dotada de una métrica óptica conforme, definida por el índice de refracción $n(x)$:
+$$ ds^2 = n(x)^2 \left( dx_1^2 + dx_2^2 + dx_3^2 \right) = n(x)^2 \delta_{ij} dx^i dx^j $$
+La ecuación de las geodésicas (ecuación del rayo) se expresa a través de los símbolos de Christoffel $\Gamma^i_{jk}$:
+$$ \frac{d^2 x^i}{d\tau^2} + \Gamma^i_{jk} \frac{dx^j}{d\tau} \frac{dx^k}{d\tau} = 0 $$
+Más profundamente, en el marco del espacio de fases $T^*M$, la óptica geométrica es la teoría de la **propagación de singularidades** (frentes de onda) para operadores hiperbólicos. Los rayos son precisamente las curvas bi-características del símbolo principal del operador de onda hamiltoniano. El frente de onda evoluciona como una subvariedad Legendriana dentro de una variedad de contacto, permitiendo aplicar el poderoso formalismo de la teoría de Morse y la topología diferencial para clasificar rigurosamente las cáusticas y singularidades ópticas (catástrofes de Arnold).
+
 ## 📚 Recursos Específicos
 
 ### Cursos

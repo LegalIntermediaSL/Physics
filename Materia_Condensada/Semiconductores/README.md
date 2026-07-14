@@ -208,6 +208,26 @@ if __name__ == '__main__':
     plot_intrinsic_carrier_concentration()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La física de semiconductores, pilar de la tecnología actual, sigue expandiéndose hacia nuevos regímenes de interacción de luz y materia y nanoestructuración.
+- **Valletrónica y Espintrónica en Semiconductores 2D:** Dicalcogenuros de Metales de Transición (TMDs) como el MoS$_2$ monocapa, donde es posible manipular cuánticamente el momento angular (spin) y el momento del valle (extremos locales en las bandas) acoplándolos mediante espín-órbita.
+- **Dispositivos Optoelectrónicos de Alta Eficiencia (Perovskitas):** Entender la física de recombinación de pares electrón-hueco y el rol de los polarones grandes en semiconductores híbridos de perovskitas halógenas, buscando la celda solar "perfecta" y económica.
+- **Puntos Cuánticos (Quantum Dots) para Qubits de Espín:** Atrapar electrones o huecos individuales en heteroestructuras semiconductoras a bajas temperaturas, donde las interacciones hiperfinas con los espines nucleares del semiconductor son el principal mecanismo de decoherencia (y un desafío activo a superar para lograr la computación cuántica).
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+Cuando los semiconductores se miniaturizan a la escala nanométrica y operan fuera del equilibrio, la ecuación semiclásica de Boltzmann falla.
+
+**Formalismo de Keldysh para el No-Equilibrio Cuántico:**
+Para describir transporte cuántico a través de uniones túnel o puntos cuánticos, es indispensable utilizar las Funciones de Green de No Equilibrio (NEGF). En el formalismo de Keldysh, la evolución temporal requiere un contorno de integración cerrado $\mathcal{C}$ (desde $t=-\infty$ hasta $t=\infty$ y viceversa).
+Las funciones de Green matriciales se organizan en la matriz de Keldysh:
+$$ \mathbf{G}(1,2) = \begin{pmatrix} G^R(1,2) & G^K(1,2) \\ 0 & G^A(1,2) \end{pmatrix} $$
+Donde $G^R$ (Retardada) contiene información del espectro y la estructura de bandas, mientras que $G^K$ (Cinética/Keldysh) contiene información sobre la ocupación (función de distribución cuántica).
+
+La corriente $I$ eléctrica estacionaria a través de una región semiconductora interactuante entre contactos $L$ y $R$ se calcula exactamante mediante la fórmula de Landauer generalizada (Fórmula de Meir-Wingreen):
+$$ I = \frac{ie}{h} \int dE \, \text{Tr}\left[ \Gamma_L(E) f_L(E) - \Gamma_R(E) f_R(E) \right] \{ G^R(E) - G^A(E) \} + \text{Tr} \left[ \Gamma_L(E) G^<(E) + \text{...} \right] $$
+
 ## 📚 Recursos Específicos
 
 ### Cursos

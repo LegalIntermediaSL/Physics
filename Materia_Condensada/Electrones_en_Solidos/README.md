@@ -176,6 +176,27 @@ if __name__ == '__main__':
     plot_fermi_dirac()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+El estudio de los electrones en sólidos ha derivado hacia el estudio de sistemas altamente correlacionados, donde la aproximación de electrones independientes falla catastróficamente.
+- **Materiales de Moiré y Twistrónica:** Al apilar capas de grafeno (o dicalcogenuros de metales de transición) con un "ángulo mágico", los electrones experimentan bandas casi planas. El origen exacto de la superconductividad y de los estados aislantes correlacionados en estos sistemas es una de las fronteras más ardientes de la física cuántica actual.
+- **Líquidos No-Fermi:** En ciertos materiales, como los fermiones pesados o cupratos en la fase "strange metal", la descripción de los electrones como cuasipartículas del líquido de Fermi de Landau colapsa. La resistividad escala linealmente con la temperatura ($\rho \propto T$), y encontrar una teoría general para estos líquidos no-Fermi, posiblemente vinculada a la dualidad holográfica (AdS/CFT), es un problema abierto.
+- **Fases Topológicas Fuertemente Correlacionadas:** Más allá de los aislantes topológicos no interactuantes, la física de hoy busca comprender fases como los Aislantes Topológicos Fraccionarios y sistemas con excitaciones anyónicas que podrían servir para computación cuántica topológica.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+En regímenes de fuerte correlación, el formalismo hamiltoniano estándar se reemplaza a menudo por teorías cuánticas de campos y formulaciones de integral de camino.
+
+**Integrales de Camino y Funciones de Green (Teoría de Muchos Cuerpos):**
+La función de partición gran canónica de un gas de electrones interactuantes se expresa como una integral funcional sobre campos de Grassmann $\psi, \bar{\psi}$:
+$$ \mathcal{Z} = \int \mathcal{D}[\bar{\psi}, \psi] \exp\left( -S[\bar{\psi}, \psi] \right) $$
+Donde la acción de Matsubara en tiempo imaginario $\tau = it$ (con $\beta = 1/k_B T$) es:
+$$ S = \int_0^\beta d\tau \int d^3x \left[ \bar{\psi}_\sigma \left( \partial_\tau - \frac{\nabla^2}{2m} - \mu \right) \psi_\sigma + \frac{1}{2} \int d^3x' \, V(|\mathbf{x} - \mathbf{x}'|) \bar{\psi}_\sigma(\mathbf{x}) \bar{\psi}_{\sigma'}(\mathbf{x}') \psi_{\sigma'}(\mathbf{x}') \psi_\sigma(\mathbf{x}) \right] $$
+
+Para tratar el "Líquido No-Fermi", se hace uso de teorías de campo gauge efectivas acopladas a la materia, donde las cuasipartículas fermiónicas se acoplan a bosones mediadores (p. ej., fluctuaciones magnéticas) con un acoplamiento singular. La función de Green vestida $G(k, \omega)$ diverge de su polo cuasiparticular estándar, teniendo la forma:
+$$ G^{-1}(\mathbf{k}, \omega) = \omega - v_F(k - k_F) - \Sigma(\mathbf{k}, \omega) $$
+Donde la autoenergía (self-energy) $\Sigma \sim -i |\omega|^\alpha$ (con $\alpha < 1$) destruye el concepto de cuasipartícula.
+
 ## 📚 Recursos Específicos
 
 ### Cursos

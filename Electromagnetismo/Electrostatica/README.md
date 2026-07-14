@@ -188,6 +188,22 @@ plt.legend()
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La electrostática en el siglo XXI ya no trata sobre esferas estáticas en el vacío, sino sobre **electrostática en materia blanda y electrolitos concentrados**. A fecha de 2026, la teoría de Poisson-Boltzmann muestra importantes deficiencias al modelar interacciones en baterías de estado sólido de alta densidad y líquidos iónicos. Modelar el apantallamiento electrostático asimétrico, las correlaciones ion-ion extremas, y las interacciones electrostáticas en interfaces complejas proteína-ADN constituye una de las mayores fronteras en química física y biofísica moderna.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+A un nivel avanzado, los problemas electrostáticos de contorno (Dirichlet o Neumann) se abordan utilizando la poderosa **Teoría del Potencial, Funciones de Green y Análisis Complejo**.
+
+En electrostática bidimensional (invariancia traslacional en $z$), el potencial eléctrico $V(x,y)$ satisface la Ecuación de Laplace, implicando que es una **función armónica**. Por tanto, $V(x,y)$ se puede considerar como la parte real de una función analítica compleja $W(z) = V(x,y) + i U(x,y)$ dependiente de la variable compleja $z = x + iy$. El mapeo conforme mediante la teoría de variable compleja permite transformar geometrías de contorno extremadamente complicadas en simples planos u ortógonos, conservando la ecuación de Laplace invariante, resolviendo el potencial trivialmente y realizando la transformación inversa.
+
+En el espacio 3D, la solución para la densidad de carga volumétrica $\rho(\vec{r}')$ se formula integralmente utilizando la técnica de **Funciones de Green** $G(\vec{r}, \vec{r}')$, que resuelven $\nabla^2 G = -\delta^{(3)}(\vec{r} - \vec{r}')$:
+
+$$ \Phi(\vec{r}) = \frac{1}{\epsilon_0} \int_V \rho(\vec{r}') G(\vec{r}, \vec{r}') d^3r' - \oint_S \left[ \Phi(\vec{r}') \frac{\partial G}{\partial n'} - G \frac{\partial \Phi}{\partial n'} \right] da' $$
+
+Esta ecuación integral maestra permite la inclusión rigurosa de distribuciones de carga arbitrarias y condiciones de contorno genéricas en variedades Riemannianas, siendo la base de los modernos solucionadores numéricos de elementos de contorno (BEM).
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

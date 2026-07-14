@@ -225,6 +225,23 @@ plt.grid(True, which="both", ls="--", alpha=0.5)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La física de reactores de fusión se encuentra en la transición del laboratorio científico al entorno industrial-comercial.
+- **Reactores Compactos y Superconductores REBCO:** El uso de superconductores de alta temperatura (YBCO, REBCO) permite duplicar el campo magnético (a más de 12 T). Como la densidad de potencia de fusión escala con $B^4$, reactores esféricos compactos tipo SPARC prometen alcanzar ganancia neta ($Q>1$) en volúmenes mucho menores.
+- **Breeding de Tritio (Ciclo del Combustible Cerrado):** Los reactores D-T requieren tritio, un isótopo inestable que debe fabricarse en el propio manto del reactor a partir de litio bajo bombardeo neutrónico. El diseño fluido de mantos (como Plomo-Litio líquido) enfrentado a extremas corrientes magnetohidrodinámicas es un desafío mayúsculo.
+- **Ignición Robusta en Fusión Inercial:** Lograr que la cápsula en experimentos tipo NIF queme el combustible D-T de forma asimétrica y resiliente frente a inestabilidades hidrodinámicas (Rayleigh-Taylor y Richtmyer-Meshkov) durante la implosión de alta compresión.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El transporte en el reactor no obedece la difusión clásica debido a la complicada topología magnética de los toroides y los efectos colectivos.
+
+**Teoría Neoclásica del Transporte:**
+La difusión colisional en un plasma magnetizado curvo está dominada por las trayectorias cerradas con forma de plátano (banana orbits) de las partículas atrapadas en pozos magnéticos locales. Se resuelve utilizando expansiones asintóticas del operador de colisión de Landau-Fokker-Planck:
+$$ C(f, f) = \Gamma \frac{\partial}{\partial \mathbf{v}} \cdot \int d^3v' \, \mathbb{U}(\mathbf{v} - \mathbf{v}') \cdot \left( f(\mathbf{v}') \frac{\partial f(\mathbf{v})}{\partial \mathbf{v}} - f(\mathbf{v}) \frac{\partial f(\mathbf{v}')}{\partial \mathbf{v}'} \right) $$
+La ecuación cinética (ecuación de Fokker-Planck de deriva-cinética o girocinética) se integra a lo largo de las superficies de flujo magnético etiquetadas por el radio menor $r$.
+Los coeficientes de transporte $D, \chi, \mu$ se obtienen invirtiendo la matriz termodinámica de flujos de fuerza impulsora. Se demuestra que la conductividad térmica iónica neoclásica $\chi_i^{\text{neo}}$ escala como $\sim q^2 \epsilon^{-3/2} \chi_i^{\text{clásico}}$, excediendo en dos órdenes de magnitud la predicción de cilindro ideal, lo que define el diseño de escala de los reactores experimentales tipo ITER.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

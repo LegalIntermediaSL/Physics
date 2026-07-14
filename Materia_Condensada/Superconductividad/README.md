@@ -199,6 +199,24 @@ if __name__ == '__main__':
     plot_meissner_effect()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La búsqueda de superconductores de alta temperatura (y preferiblemente a temperatura ambiente) y presión atmosférica sigue siendo el problema más famoso de la física de la materia condensada.
+- **Superconductividad a Temperatura Ambiente (Bajo Presión):** El estudio de hidruros superdensos (como $LaH_{10}$ o compuestos de carbono-azufre-hidrógeno) que alcanzan la superconductividad cerca de los 250 K pero a millones de atmósferas de presión.
+- **Superconductores Topológicos y Fermiones de Majorana:** La búsqueda de materiales con emparejamiento p-wave (triplete), donde las excitaciones en los bordes o en el núcleo de los vórtices son fermiones de Majorana. Su trenzado no-abeliano se postula como base para la computación cuántica topológicamente protegida frente al ruido.
+- **Transición Superconductor-Aislante (SIT):** Una transición de fase cuántica pura ($T=0$) inducida por campo magnético o desorden en películas delgadas, ligada a la condensación y dinámica cuántica de los propios vórtices.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento avanzado de la superconductividad emplea herramientas potentes de teoría de campos.
+
+**Formalismo de Gorkov y Teoría de Eliashberg:**
+Para ir más allá de la teoría de campo medio espacialmente homogénea de BCS, el formalismo de funciones de Green con espinores de Nambu trata de manera exacta el ensanchamiento térmico y los efectos de retardo (interacción electrón-fonón dinámica). La ecuación de gap se generaliza a las ecuaciones integrales no lineales de Eliashberg, utilizando la función espectral fonónica $\alpha^2 F(\omega)$:
+$$ \Delta(i\omega_n) = \frac{T}{N(0)} \sum_{m} \int d\Omega \, \frac{\Delta(i\omega_m) \lambda(i\omega_n - i\omega_m)}{\sqrt{\omega_m^2 + \Delta^2(i\omega_m)}} $$
+
+Para defectos espaciales (como vórtices) y fluctuaciones cercanas a $T_c$, la energía libre se mapea en un funcional de Ginzburg-Landau, que es isomorfo al modelo de Higgs abeliano en Teoría Cuántica de Campos, gobernado por la topología de un fibrado principal $U(1)$. La cuantización del flujo magnético surge naturalmente como invariante topológico (grado del mapeo) de la fase del parámetro de orden:
+$$ \oint \nabla \phi \cdot d\mathbf{l} = 2\pi n $$
+
 ## 📚 Recursos Específicos
 
 ### Cursos

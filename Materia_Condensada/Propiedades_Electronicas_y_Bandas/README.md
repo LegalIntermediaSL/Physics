@@ -185,6 +185,27 @@ if __name__ == '__main__':
     plot_tight_binding_bands_1d()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La física de bandas ha renacido gracias al descubrimiento del papel de la topología en las funciones de onda electrónicas en el espacio recíproco.
+- **Semimetales Topológicos de Weyl, Dirac y Línea Nodal:** Materiales cuyas bandas se cruzan protegidamente cerca de la energía de Fermi. Los fermiones de Weyl emergen como cuasipartículas y presentan fenómenos de física de altas energías (anomalía quiral, magnetorresistencia negativa gigante) dentro de materiales de estado sólido.
+- **Aislantes Topológicos de Orden Superior (HOTI):** Materiales en 3D que son aislantes en su interior, pero sus estados conductores topológicamente protegidos no están en las superficies 2D, sino en las "bisagras" 1D o en los vértices 0D de la red.
+- **Control Activo de la Estructura de Bandas:** El uso de campos electromagnéticos intensos (luz láser THz o Floquet) para inducir transiciones de fase topológicas ultra-rápidas ("Floquet Topological Insulators").
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La clasificación completa de los materiales topológicos no interactuantes requirió adaptar matemáticas abstractas (la teoría K) al estudio de sistemas físicos fermiónicos.
+
+**El Esquema "Tenfold Way" y Teoría K:**
+La clasificación de aislantes y superconductores topológicos según las simetrías discretas fundamentales: Reversión Temporal ($\mathcal{T}$), Conjugación de Carga ($\mathcal{C}$) y Simetría Quiral ($\mathcal{S} = \mathcal{T} \cdot \mathcal{C}$).
+Los Hamiltonianos hermíticos se categorizan en las clases de simetría de Cartan. Matemáticamente, este problema de clasificación se formula evaluando la Teoría K de álgebra de operadores, que clasifica los haces vectoriales sobre la zona de Brillouin. La clasificación genera una tabla periódica topológica, indicando los invariantes asociados, como $Z, Z_2$ o trivial ($0$), dependientes de la dimensión espacial $d$.
+
+Para un punto de Weyl centrado en $\mathbf{k}_0$ (en un semimetal de Weyl), el Hamiltoniano de baja energía toma la forma de Dirac:
+$$ H(\mathbf{k}) = \pm v_F \, \boldsymbol{\sigma} \cdot (\mathbf{k} - \mathbf{k}_0) $$
+La curvatura de Berry $\mathbf{\Omega}(\mathbf{k})$ de un punto de Weyl divergen monopolos magnéticos en el espacio de momentos, cumpliendo:
+$$ \nabla_{\mathbf{k}} \cdot \mathbf{\Omega}(\mathbf{k}) = \pm 2\pi \delta^{(3)}(\mathbf{k} - \mathbf{k}_0) $$
+Lo cual es el equivalente a la cuantización de carga de Dirac y origina el Invariante de Chern (carga topológica).
+
 ## 📚 Recursos Específicos
 
 ### Cursos

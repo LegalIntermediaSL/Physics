@@ -168,8 +168,23 @@ plt.tight_layout()
 # plt.show() # Descomentar para visualizar
 ```
 
-## 📚 Recursos Específicos
+## 🚀 Fronteras de Investigación y Problemas Abiertos
 
+Para 2026, los Fundamentos de la Mecánica Cuántica han transitado desde discusiones filosóficas hasta experimentación precisa y rigor informático. Un campo explosivo es el testeo de la paradoja del "Amigo de Wigner", donde experimentos con fotones entrelazados (observadores cuánticos simulados) están falsando la universalidad de hechos objetivos (Observer-independent facts) a nivel macroscópico, obligando a teorías como el QBism (Quantum Bayesianism) o Relational Quantum Mechanics a tomar más relevancia. Además, los modelos de colapso objetivo (como CSL - Continuous Spontaneous Localization) se están sondeando mediante experimentos de optomecánica y superposición masiva (ej. interferometría de moléculas complejas e incluso virus o nanodiamantes), buscando el límite en el cual la masa induciría un colapso real y estocástico de la función de onda, uniendo finalmente la cuántica con la relatividad general gravitacional.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento avanzado de los fundamentos cuánticos requiere la formalización de la contextualidad y la no localidad mediante estructuras abstractas. La Teoría de Categorías, y más específicamente las **Categorías Monoidales Simétricas Dagger (Dagger Compact Closed Categories)**, provee el marco axiomático para la cuántica procesal, donde el entrelazamiento es un functor estructural en lugar de un misterio dinámico.
+
+Aún más impactante es el uso de la **Teoría de Haces (Sheaf Theory)** y la Cohomología para caracterizar el teorema de Kochen-Specker y la no localidad de Bell. Sea $X$ un espacio topológico que representa los contextos de medición maximales, podemos definir un prehaz empírico de probabilidades sobre los eventos locales. Una distribución de probabilidad empírica global libre de contexto correspondería a una sección global de este haz. 
+
+La paradoja de la no localidad y la contextualidad se reduce a una obstrucción topológica: el modelo no admite secciones globales. Evaluando el primer grupo de cohomología de Čech $\check{H}^1(X, \mathcal{F})$, si $\check{H}^1 \neq 0$, se demuestra invariablemente la existencia de contextualidad irresoluble:
+
+$$ [\mathcal{O}] \in \check{H}^1(\mathcal{U}, \mathcal{R}) \implies \text{Contextualidad Fuerte} $$
+
+Donde la clase de cohomología de obstrucción $[\mathcal{O}]$ dictamina matemáticamente que las variables ocultas locales son incompatibles con la estructura fibrada probabilística subyacente. La dualidad onda-partícula resulta ser una consecuencia de representaciones proyectivas irreducibles del grupo de Poincaré en variedades simplécticas cuantizadas.
+
+## 📚 Recursos Específicos
 ### 🎓 Cursos y Clases Recomendadas
 1. [MIT OCW 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Clases 1 y 2, absolutamente excelentes para motivación histórica.
 2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Introducción magistral a la "rareza cuántica".

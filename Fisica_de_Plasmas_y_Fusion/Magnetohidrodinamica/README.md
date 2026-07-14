@@ -246,6 +246,30 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La Magnetohidrodinámica (MHD) a altos números de Reynolds magnéticos domina los grandes sistemas astrofísicos y reactores de fusión terrestres, operando como un caos determinista y complejo.
+- **Dinamos Magnéticas y Turbulencia de Dynamo:** Entender y replicar experimentalmente el mecanismo por el que el flujo cinético caótico turbulento (estelar o planetario) amplifica y mantiene exponencialmente el campo magnético macroscópico.
+- **Reconexión Magnética Anómala (Rápida):** En el Sol y en reactores, las líneas magnéticas se rompen y reconectan mucho más rápido de lo que predice el modelo de resistividad colisional de Sweet-Parker. La física cinética de capas de corriente, la turbulencia y los efectos del efecto Hall rigen este fenómeno (como en la teoría de Petschek y el modelo plasmoide).
+- **Control Activo de Inestabilidades MHD (RWM, NTM, ELM):** Comprender el espectro de valores propios continuos (espectro de Alfven) y el uso de bobinas asimétricas externas resonantes para estabilizar los plasmas cerca del límite de la disrupción beta de Troyon en un Tokamak.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El marco de la MHD trasciende el análisis vectorial ordinario para adentrarse en la topología diferencial aplicada a fluidos.
+
+**Helicidad Magnética y Topología de Taylor:**
+La conservación de la helicidad magnética $H_M = \int \mathbf{A} \cdot \mathbf{B} \, d^3x$ (donde $\mathbf{B} = \nabla \times \mathbf{A}$) representa el número de entrelazamientos o "nudos" (linkages) de las líneas de flujo de campo magnético.
+De acuerdo con la hipótesis de relajación de Taylor (MHD de Taylor), un plasma altamente turbulento que conserve la helicidad disipará su energía magnética buscando el estado de energía mínima (Beltrami flow), conduciendo a una configuración "libre de fuerza" (Force-Free):
+$$ \nabla \times \mathbf{B} = \lambda \mathbf{B} $$
+donde $\lambda$ es un autovalor constante sobre el dominio.
+
+**Inestabilidades de MHD Ideal (Análisis Espectral de Autovalores):**
+La estabilidad en MHD ideal reduce a analizar el operador autoadjunto de fuerzas de volumen (operador de desplazamiento de Bernstein $\mathbf{F}(\boldsymbol{\xi})$) obtenido por una perturbación lineal lagrangiana $\boldsymbol{\xi}(\mathbf{r})$:
+$$ \rho \omega^2 \boldsymbol{\xi} = \mathbf{F}(\boldsymbol{\xi}) $$
+El principio de energía de la MHD ($\delta W$) permite demostrar la estabilidad (o no) basándose únicamente en la forma variacional:
+$$ \delta W = -\frac{1}{2} \int \boldsymbol{\xi}^* \cdot \mathbf{F}(\boldsymbol{\xi}) d^3r > 0 $$
+Este formalismo variacional (teorema extendido de Newcomb) es la base para diseñar perfiles de confinamiento magnético seguros contra grandes erupciones macroscópicas.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

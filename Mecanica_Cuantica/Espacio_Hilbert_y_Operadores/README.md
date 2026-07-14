@@ -191,8 +191,23 @@ plt.tight_layout()
 # plt.show() # Descomentar para visualizar
 ```
 
-## 📚 Recursos Específicos
+## 🚀 Fronteras de Investigación y Problemas Abiertos
 
+La formulación del espacio de Hilbert y operadores continúa enfrentando problemas fundamentales en 2026. Una frontera prominente es la Mecánica Cuántica No-Hermitiana (con simetría $\mathcal{PT}$), que estudia Hamiltonianos que no son autoadjuntos pero poseen espectros reales, modelando sistemas cuánticos abiertos con ganancia y pérdida equilibradas (ampliamente implementados en metamateriales fotónicos). Otra frontera crucial es el desarrollo de Marcos de Referencia Cuánticos (Quantum Reference Frames): reformular las leyes de la física asumiendo que el observador y sus reglas e instrumentos de medición también están sujetos al principio de superposición en el Espacio de Hilbert, difuminando la noción de un "entorno" clásico o un tiempo absoluto de fondo, e impactando directamente la búsqueda de la gravedad cuántica.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El estudio avanzado de los observables cuánticos abandona la ingenuidad del álgebra lineal finita para adentrarse en la teoría de las **Álgebras de von Neumann** y las **$C^*$-álgebras**. En la formulación algebraica, un sistema físico se define por una $C^*$-álgebra de observables $\mathfrak{A}$, y los estados son funcionales lineales positivos normados $\omega: \mathfrak{A} \to \mathbb{C}$.
+
+Para sistemas con infinitos grados de libertad (como en Teoría Cuántica de Campos), el Teorema de Stone-von Neumann falla, produciendo representaciones unitariamente inequivalentes de las relaciones de conmutación canónicas. La recuperación del Espacio de Hilbert se logra estrictamente a través de la **Construcción Gelfand-Naimark-Segal (GNS)**. Dado un estado $\omega$, la construcción GNS genera una representación $\pi_\omega(\mathfrak{A})$ como operadores acotados en un espacio de Hilbert $\mathcal{H}_\omega$, junto con un vector cíclico $|\Omega\rangle$ tal que:
+
+$$ \omega(\hat{A}) = \langle \Omega | \pi_\omega(\hat{A}) | \Omega \rangle \quad \forall \hat{A} \in \mathfrak{A} $$
+
+Para incluir rigurosamente autofunciones no normalizables (como las ondas planas $|p\rangle$ o estados de posición $|x\rangle$), se extiende el espacio de Hilbert $\mathcal{H}$ a un **Espacio de Hilbert Equipado (Rigged Hilbert Space o Tripleta de Gelfand)**:
+$$ \Phi \subset \mathcal{H} \subset \Phi^\times $$
+donde $\Phi$ es un espacio nuclear denso de funciones de prueba (típicamente el espacio de Schwartz $\mathcal{S}(\mathbb{R}^n)$) y $\Phi^\times$ es el espacio de distribuciones temperadas. El Teorema Espectral de Gelfand-Maurin garantiza la existencia de un espectro continuo completo para operadores autoadjuntos extendidos sobre $\Phi^\times$, proveyendo el andamiaje riguroso para la notación de Dirac introducida empíricamente hace un siglo.
+
+## 📚 Recursos Específicos
 ### 🎓 Cursos y Clases Recomendadas
 1. [MIT OCW 8.05 Quantum Physics II (Barton Zwiebach)](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/): La primera mitad del curso enseña rigurosamente la notación de Dirac, espacios vectoriales complejos y formalismo de operadores hermitianos.
 2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Primeros videos de la serie que arrancan directamente desde el enfoque de espacios vectoriales usando el espín como motivación principal.

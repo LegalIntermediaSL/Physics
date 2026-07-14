@@ -154,6 +154,25 @@ if __name__ == '__main__':
     plot_pauli_limit()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+Clásicamente, el magnetismo destruye la superconductividad porque el campo de intercambio polariza los espines rompiendo los pares singletes (límite de Clogston-Chandrasekhar).
+- **Superconductividad Triplete de Espín:** En materiales como el UTe$_2$, los pares de Cooper tienen espín total $S=1$, lo cual los vuelve extremadamente resistentes a altos campos magnéticos (hasta 60 Teslas). Entender la simetría de ordenamiento de este vector triplete es crucial.
+- **Fase FFLO (Fulde-Ferrell-Larkin-Ovchinnikov):** Un estado exótico predicho desde hace 60 años y de difícil observación, en el que un fuerte campo paramagnético fuerza a los pares de Cooper a formarse con momento neto no nulo ($+\mathbf{k}$ y $-\mathbf{k}+\mathbf{q}$). Esto induce una modulación espacial del gap superconductor $\Delta(\mathbf{r}) \propto \cos(\mathbf{q} \cdot \mathbf{r})$.
+- **Coexistencia Microscópica:** Materiales de fermiones pesados o pnicturos basados en hierro donde el estado superconductor y el orden antiferromagnético coexisten a escala atómica y probablemente compiten por las mismas bandas de electrones itinerantes.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+Para describir el entrelazamiento cuántico de grados de libertad de carga y espín en superconductores magnéticos, el formalismo matricial se expande considerablemente.
+
+**Superconductividad Triplete (Vector $\mathbf{d}$):**
+El parámetro de orden ya no es un escalar complejo, sino una matriz en el espacio de espín $\hat{\Delta}(\mathbf{k})$. Para espines triplete, esto se parametrizará usando el vector de espín complejo de Balian-Werthamer $\mathbf{d}(\mathbf{k})$:
+$$ \hat{\Delta}(\mathbf{k}) = (\mathbf{d}(\mathbf{k}) \cdot \boldsymbol{\sigma}) i\sigma_y = \begin{pmatrix} -d_x + id_y & d_z \\ d_z & d_x + id_y \end{pmatrix} $$
+La invariancia gauge $U(1)$ y la invariancia de rotación de espín $SU(2)$ se rompen espontáneamente, reduciendo la simetría a un subgrupo isotrópico complejo. El hamiltoniano del cuasipartícula es:
+$$ E_{\mathbf{k}} = \sqrt{\xi_{\mathbf{k}}^2 + |\mathbf{d}(\mathbf{k})|^2 \pm |\mathbf{q}(\mathbf{k})|} $$
+donde $\mathbf{q}(\mathbf{k}) = i (\mathbf{d}(\mathbf{k}) \times \mathbf{d}^*(\mathbf{k}))$ es proporcional al momento magnético de los pares de Cooper.
+Si $\mathbf{q} \neq 0$, el material exhibe ferromagnetismo superconductor espontáneo y rompe invariancia por reversión temporal.
+
 ## 📚 Recursos Específicos
 
 ### Cursos

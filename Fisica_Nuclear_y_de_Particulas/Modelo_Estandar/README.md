@@ -273,6 +273,27 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+El Modelo Estándar sigue demostrando una solidez asombrosa en el LHC a 2026, sin embargo, sufre de severas limitaciones conceptuales y lagunas empíricas fenomenológicas.
+
+- **El Problema de la Jerarquía (Hierarchy Problem) y la Masa del Higgs:** La masa observada del Bosón de Higgs ($m_h \approx 125$ GeV) es divergente de forma cuadrática frente a correcciones radiativas de las fluctuaciones cuánticas del vacío. Estabilizar el Higgs frente a la masa de Planck ($\sim 10^{19}$ GeV) sin un "Ajuste Fino" (Fine-Tuning) irrazonable es la motivación principal para supersimetría (SUSY), dimensiones extras (Randall-Sundrum) o modelos de Higgs compuesto, ninguno de los cuales ha sido encontrado aún.
+- **La Naturaleza Mayorana vs Dirac del Neutrino:** Aunque las oscilaciones de neutrinos demostraron que tienen masa, se desconoce el origen de dicha masa. ¿Adquieren masa por el mecanismo de Yukawa convencional o a través de un "See-Saw Mechanism" (Mecanismo de Balancín) de gran unificación a la escala de $\sim 10^{15} \text{ GeV}$ requiriendo neutrinos estériles supermasivos de Majorana? El decaimiento beta doble sin neutrinos ($0\nu\beta\beta$) sigue sin ser observado concluyentemente.
+- **Asimetría Bariónica del Universo (Bariogénesis Electrodébil):** El universo observable está hecho de materia, no antimateria. Las tres condiciones de Sakharov (violación de número bariónico, violación de simetrías C y CP, y desviación del equilibrio térmico) se cumplen en el Modelo Estándar, pero la violación CP es $\sim 10^{10}$ veces demasiado débil. ¿Qué mecanismo dinámico generó esta enorme asimetría durante la transición de fase electrodébil?
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El rigor axiomático del Modelo Estándar invoca **Teoría de Grupos de Lie, Haces Fibrados Principales (Principal Bundles) y Cuantización BRS/BRST**.
+
+Físicamente, un campo de gauge es matemáticamente una conexión (connection) en un haz fibrado principal sobre la variedad del espaciotiempo, y el tensor de intensidad del campo (Field Strength Tensor $F_{\mu\nu}$) es la curvatura (curvature) de esa conexión. Para el grupo $G = SU(3) \times SU(2) \times U(1)$, la derivada covariante fundamental actúa sobre una sección $\psi$ de un haz vectorial asociado (los fermiones):
+$$ D_\mu \psi = \left( \partial_\mu - i g A_\mu^a T^a \right) \psi $$
+
+La estabilización del sector longitudinal de los bosones vectoriales masivos $W^\pm, Z^0$ se garantiza por la **Teoría de Equivalencia del Bosón de Goldstone** a altas energías ($E \gg M_W$). Las amplitudes de dispersión $WW \to WW$ que de otro modo violarían la unitaridad límite de onda parcial crecen como $(E/M_W)^2$, pero la cancelación diagramática del intercambio s y t del bosón de Higgs unitariza exactamente la amplitud.
+
+A nivel de matriz S, el formalismo requiere la simetría residual **BRST** (Becchi-Rouet-Stora-Tyutin) para cancelar las polarizaciones no físicas de los bosones de gauge no abelianos en la matriz-S. El operador nilpotente $Q_{BRST}$ (con $Q_{BRST}^2 = 0$) clasifica los estados físicos del espacio de Fock:
+$$ |\text{Físico}\rangle \in \frac{\text{Ker}(Q_{BRST})}{\text{Im}(Q_{BRST})} $$
+garantizando que la unitaridad probabilística y la invariancia de Lorentz coexistan armónicamente en el cálculo de procesos del Modelo Estándar a multi-loops.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

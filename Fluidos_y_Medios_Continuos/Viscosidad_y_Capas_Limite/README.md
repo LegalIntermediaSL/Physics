@@ -154,6 +154,16 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La reducción del "arrastre" (drag) es el Santo Grial ingenieril del 2026 para la eficiencia energética global. La frontera involucra el **control activo de las sub-capas viscosas turbulenta** mediante superficies bio-inspiradas (riblets dinámicos a escala nanométrica) y metamateriales superhidrofóbicos que inducen condiciones de deslizamiento (slip boundary conditions). Además, el estudio de la turbulencia en fluidos viscoelásticos y no-newtonianos (como la sangre o plásticos fundidos) ha revelado el fenómeno de la "turbulencia elástica", donde el flujo se vuelve caótico no por la inercia (Reynolds altísimo), sino por las tensiones elásticas a bajísimo número de Reynolds, un misterio que apenas comienza a dilucidarse.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento riguroso de fluidos viscosos y la turbulencia requiere el **Análisis Funcional y la Teoría de Sistemas Dinámicos en Espacios de Banach**. En lugar de vectores clásicos, la velocidad $\mathbf{v}(\mathbf{x},t)$ se considera un punto en un espacio de Hilbert-Sobolev incompresible $V \subset H^1_0(\Omega)^3$. La ecuación de Navier-Stokes asume la forma de un sistema dinámico abstracto evolutivo:
+$$ \frac{d\mathbf{u}}{dt} + \nu A\mathbf{u} + B(\mathbf{u}, \mathbf{u}) = \mathbf{f} $$
+donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbulencia plenamente desarrollada, se asume la existencia de un Atractor Global $\mathcal{A}$ compacto de dimensión Hausdorff finita a pesar de que el espacio de fase es de dimensión infinita. Entender la medida invariante ergódica de Hopf $\mu$ sobre este atractor, $\int f(\mathbf{u}(t)) dt \to \int_{\mathcal{A}} f d\mu$, es crucial para justificar matemáticamente la teoría estadística de turbulencia K41.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Recomendados

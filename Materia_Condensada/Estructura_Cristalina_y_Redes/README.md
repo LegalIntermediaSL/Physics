@@ -185,6 +185,27 @@ if __name__ == '__main__':
     plot_reciprocal_lattice_2d()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+El estudio de redes cristalinas ha evolucionado más allá del espacio estático.
+- **Cristales de Tiempo Cuánticos:** Fases de la materia que rompen espontáneamente la simetría de traslación temporal continua, presentando oscilaciones periódicas incluso en su estado fundamental o estacionario.
+- **Topología de Defectos y Dislocaciones:** Entender las redes de dislocaciones tridimensionales como estructuras topológicas entrelazadas (nudos magnéticos o mecánicos).
+- **Materiales Activos y Cristales Dinámicos:** Fases cristalinas compuestas por partículas autopropulsadas (materia activa) que presentan cristales con orden orientacional pero constante fluctuación posicional de no equilibrio.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento matemático de los defectos en redes cristalinas hace uso intensivo de la topología algebraica y la geometría diferencial.
+
+**Grupos de Homotopía y Clasificación de Defectos:**
+Un cristal con defectos se puede mapear mediante un parámetro de orden que vive en una variedad $V = G/H$, donde $G$ es el grupo de simetría de la fase desordenada y $H$ de la ordenada.
+Los defectos puntuales, lineales y superficiales se clasifican según los grupos de homotopía $\pi_k(V)$.
+Por ejemplo, las dislocaciones en un cristal tridimensional están asociadas al grupo fundamental $\pi_1(V)$. Si $\pi_1(V)$ es no trivial, un bucle de Burgers cerrado produce un desplazamiento neto.
+
+**Geometría Diferencial con Torsión (Gravedad Análoga):**
+A un nivel continuo, una red con dislocaciones puede modelarse geométricamente dotando al espacio de una conexión afín no simétrica. La densidad de dislocaciones está dada por el tensor de torsión de Cartan $T_{ij}^k$:
+$$ T_{ij}^k = \Gamma_{ij}^k - \Gamma_{ji}^k $$
+Las disclinaciones (defectos de rotación) se relacionan análogamente con el tensor de curvatura de Riemann $R_{ijk}^l$. De este modo, la teoría de plasticidad cristalina toma la forma de una teoría métrico-afín análoga a la Relatividad General de Einstein-Cartan.
+
 ## 📚 Recursos Específicos
 
 ### Cursos

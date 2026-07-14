@@ -187,6 +187,24 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La física gravitacional en 2026 se centra en la astronomía de precisión de **ondas gravitacionales** usando detectores de próxima generación (LISA, Einstein Telescope), buscando señales estocásticas del fondo cosmológico y fusiones de agujeros negros primordiales. A nivel teórico, la tensión de Hubble y la naturaleza intrínseca de la **materia oscura** vs. teorías de **gravedad modificada** (MOND escalar-tensorial) siguen siendo problemas abiertos dominantes que la mecánica celeste avanzada intenta dilucidar mediante sondeos galácticos masivos.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La gravitación clásica profunda abandona el potencial escalar newtoniano $V(r)$ para ser reformulada geométricamente. Utilizando **Geometría Diferencial**, la gravedad es una manifestación de la curvatura del espaciotiempo pseudo-riemanniano $\mathcal{M}$ equipado con una métrica lorentziana $g_{\mu\nu}$.
+
+El formalismo culmina en las Ecuaciones de Campo de Einstein, que vinculan el tensor de Einstein $G_{\mu\nu}$ (curvatura) con el tensor de energía-impulso $T_{\mu\nu}$ (materia/energía):
+
+$$ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu} $$
+
+Bajo el **formalismo hamiltoniano ADM (Arnowitt-Deser-Misner)**, usado exhaustivamente en la relatividad numérica moderna para simular fusiones de agujeros negros, la variedad tetradimensional se folia en hipersuperficies espaciales $\Sigma_t$ de evolución continua. La métrica se descompone usando el lapso $\alpha$ y el vector de desplazamiento $\beta^i$:
+
+$$ ds^2 = -\alpha^2 dt^2 + \gamma_{ij}(dx^i + \beta^i dt)(dx^j + \beta^j dt) $$
+
+lo cual transforma las ecuaciones de Einstein en un problema de valor inicial con ecuaciones de ligadura y ecuaciones de evolución geométrica, resolubles mediante supercomputadoras para predecir las ondas gravitacionales en el régimen de campo fuerte no lineal.
+
 ## 📚 Recursos Específicos de Gravitación
 
 ### 🎓 Cursos y Clases Recomendadas

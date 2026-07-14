@@ -275,6 +275,31 @@ else:
     print("Mecánica clásica no superada.")
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En 2026, el análisis y caracterización del entrelazamiento ha trascendido los meros pares bipártitos de qubits, abriéndose camino en la vastedad fenomenológica de la **Termodinámica Cuántica de Muchos Cuerpos** y la cuantificación del entrelazamiento macroscópico.
+
+- **Entrelazamiento Multipartito Complejo (W, GHZ vs Grafos):** Determinar, clasificar taxonómicamente y sintetizar empíricamente verdaderos estados entrelazados de cientos de subsistemas sin caer en descripciones polinómicas. El problema de separabilidad multipartita es notoriamente NP-Hard. El límite exacto del entrelazamiento genuino no local en sistemas condensados es aún objeto de intenso debate (e.g. ¿Cuándo la Entropía Topológica de Entrelazamiento distingue inequívocamente el orden líquido de espín a temperatura finita?).
+- **El Problema de la Discordia Cuántica (Quantum Discord):** Identificar con exactitud el rol algorítmico y termodinámico (para los Motores Térmicos Cuánticos) de las correlaciones no clásicas que *sobreviven* a la ausencia estricta de entrelazamiento. Aún no se conoce el límite último extractable del trabajo (Ergotropía) usando ensambles densos con discordancia no nula.
+- **Mediciones Continuas, POVM Adaptativos y Efecto Zenón Inverso:** Las fronteras actuales persiguen el régimen de medición estocástica débil (weak measurement routing) para la retroalimentación en tiempo real con latencias ultra-bajas, con la incógnita de cuál es la precisión óptima de la Inferencia Bayesiana Cuántica Filtrada frente a fluctuaciones no-Markovianas del baño térmico.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento riguroso de medidas cuánticas (POVM) y canales de decoherencia (CPTP maps) requiere la inmersión en la **Teoría de C*-Álgebras y Mapas Completamente Positivos y Preservadores de Traza**.
+
+Cualquier dinámica discreta general (como una medición) del sistema cuántico $\mathcal{H}_A$, denotado a través del espacio de clase traza afín (estado $\rho \in \mathcal{T}(\mathcal{H}_A)$), debe estar regido por un súper-operador (Canal Cuántico) $\mathcal{E}: \mathcal{T}(\mathcal{H}_A) \to \mathcal{T}(\mathcal{H}_B)$. Para asegurar la consistencia causal probabilística de cualquier subsistema extendido en el multiverso tensor $\mathcal{H}_A \otimes \mathcal{H}_{aux}$, el canal debe ser **Completamente Positivo** (Teorema de Stinespring). 
+
+La formalización algebraica se comprueba verificando que la *Matriz Dinámica de Choi-Jamiołkowski* es definida no negativa. Isomorfismo de Choi-Jamiołkowski:
+Dado un estado máximamente entrelazado $|\Omega\rangle = \frac{1}{\sqrt{d}} \sum_{i=1}^d |i\rangle \otimes |i\rangle$, la isometría unívoca es:
+$$ J(\mathcal{E}) = (\mathcal{E} \otimes \mathbb{I}) (|\Omega\rangle \langle\Omega|) \geq 0 $$
+
+En cuanto al Entrelazamiento de Formación (Entanglement of Formation) y Entropía Topológica para el Entrelazamiento Bipartito sobre Funcionales Convexas. El estado óptimo se busca minimizando el índice espectral:
+$$ E_F(\rho) = \inf \left\{ \sum_j p_j S(\text{Tr}_B(|\psi_j\rangle\langle\psi_j|)) \;\Bigg|\; \rho = \sum_j p_j |\psi_j\rangle\langle\psi_j| \right\} $$
+
+Matemáticamente, para los estados de clase Genuinamente Multipartitos (GME), el análisis invoca el Álgebra Polinomial de los Invariantes Locales Unitarios. La medida polinómica canónica, el "3-Tangle" (o hiperdeterminante de Cayley), mide invariantes de superposición para 3 qubits ($| \psi \rangle = \sum c_{ijk} |i,j,k\rangle$), expresándose mediante tensores antisimétricos con contracciones tensoriales:
+$$ \tau_{ABC} = 4 \left| d_1 - 2 d_2 + 4 d_3 \right| $$
+donde $d_m$ son contracciones polinomiales complejas de grado 4 de la amplitud métrica $c_{ijk}$. Extender estas métricas topológicas irreductibles y variedades seccionadas hipercomplejas a más de 4 qubits subyace la actual gran incógnita matemática en Teoría Cuántica de la Información.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Recomendados

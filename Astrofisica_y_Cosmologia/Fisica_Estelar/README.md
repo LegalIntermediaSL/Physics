@@ -227,6 +227,21 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La física estelar extrema es en 2026 una de las ventanas más fértiles de la astrofísica multimensajero. Uno de los mayores retos abiertos es el modelado hidrodinámico en 3D del mecanismo exacto de explosión de las supernovas de colapso de núcleo (Core-Collapse Supernovae, CCSN). El sutil equilibrio e interacción entre el calentamiento por neutrinos y la turbulencia fluidodinámica subyacente sigue evadiendo el consenso computacional definitivo. A la vez, las estrellas de neutrones funcionan como laboratorios insustituibles de cromodinámica cuántica (QCD). Su Ecuación de Estado (EoS) a densidades supra-nucleares es incierta: ¿poseen núcleos de materia de quarks desconfinada, hiperones, o condensados de piones? Las restricciones de la EoS se afinan hoy en día mediante la detección simultánea de ondas gravitacionales de fusión de estrellas de neutrones (kilonovas), revelando las fases exactas del proceso de captura rápida (proceso r) responsable de la síntesis del oro y los elementos más pesados del universo.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+Para modelar estrellas compactas (enanas blancas, estrellas de neutrones), la gravedad de Newton es insuficiente, y debe emplearse el andamiaje de la Relatividad General exacta. Asumiendo que la estrella es una masa fluida estática y de simetría esférica, la métrica interna puede expresarse como:
+$$ ds^2 = -e^{2\Phi(r)} c^2 dt^2 + \left(1 - \frac{2Gm(r)}{rc^2}\right)^{-1} dr^2 + r^2(d\theta^2 + \sin^2\theta d\phi^2) $$
+
+Modelando el interior estelar como un fluido perfecto, su tensor de energía-momento viene dado por $T^{\mu\nu} = (\rho c^2 + P)u^\mu u^\nu + P g^{\mu\nu}$. Proyectando la conservación covariante $\nabla_\mu T^{\mu\nu} = 0$ y usando las ecuaciones de campo de Einstein $G_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$, se derivan las famosas **Ecuaciones de Tolman-Oppenheimer-Volkoff (TOV)**, que establecen el balance hidrostático exacto bajo extrema gravedad:
+$$ \frac{dP}{dr} = -\frac{G}{r^2} \left( \rho + \frac{P}{c^2} \right) \left( m(r) + \frac{4\pi r^3 P}{c^2} \right) \left( 1 - \frac{2Gm(r)}{rc^2} \right)^{-1} $$
+$$ \frac{dm}{dr} = 4\pi r^2 \rho $$
+
+La solución de estas ecuaciones íntegro-diferenciales requiere una **Ecuación de Estado** barotrópica (EoS) $P = P(\rho)$. El radio de la estrella $R$ está definido por la condición de frontera $P(R) = 0$. Los términos adicionales de presión y masa en el numerador, junto con el factor relativista en el denominador, amplifican dramáticamente el gradiente de presión requerido para sostener a la estrella en comparación con el caso newtoniano, lo que irremediablemente conduce a un límite máximo teórico de masa antes del colapso ineludible hacia un agujero negro (el Límite de Tolman-Oppenheimer-Volkoff, estimado alrededor de $2.1-2.3 M_\odot$ para estrellas de neutrones según los recientes hallazgos astrofísicos).
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

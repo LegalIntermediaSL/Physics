@@ -177,6 +177,22 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En 2026, la dinámica rotacional clásica de cuerpos macroscópicos se une de forma sinérgica a la ingeniería astronáutica con el reto del **control hiperágil de satélites flexibles** y la atenuación activa de las libraciones en velas solares. Además, se indaga intensamente en las inestabilidades no lineales complejas del acoplamiento espín-órbita de sistemas exoplanetarios y agujeros negros en colisión, donde la rotación induce efectos clásicos equivalentes al arrastre de marco de Lense-Thirring.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La dinámica rotacional de cuerpos rígidos encuentra su descripción matemática más elegante a través de la teoría de **Grupos de Lie**, y el formalismo geométrico de la reducción de sistemas de control hamiltonianos.
+
+Considerando que el espacio de configuración es el Grupo Ortogonal Especial $SO(3)$, el momento angular $\Pi$ puede verse como un elemento en el espacio dual del álgebra de Lie $\mathfrak{so}(3)^*$. La evolución dinámica temporal de este vector sin torques externos obedece a las Ecuaciones de Euler, que no son más que un sistema Hamiltoniano reducido sobre la variedad de las órbitas coadjuntas acopladas por la estructura de corchetes de Lie-Poisson. 
+
+La Ecuación de Euler intrínseca es:
+
+$$ \dot{\Pi} = \Pi \times \Omega = \text{ad}^*_\Omega \Pi $$
+
+donde $\Omega = \mathbb{I}^{-1}(\Pi) \in \mathfrak{so}(3)$ es la velocidad angular, $\mathbb{I}$ es el tensor de inercia interpretado como un mapeo simétrico y positivo definido $\mathbb{I}: \mathfrak{so}(3) \to \mathfrak{so}(3)^*$, y $\text{ad}^*$ denota la acción coadjunta. Las órbitas donde ocurre este flujo se identifican geométricamente como esferas $S^2$, lo cual muestra que el caos requiere acoplamientos adicionales en sistemas de dinámica rotacional clásica.
+
 ## 📚 Recursos Específicos de Dinámica Rotacional
 
 ### 🎓 Cursos y Clases Recomendadas

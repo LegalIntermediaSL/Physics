@@ -216,8 +216,27 @@ plt.tight_layout()
 # plt.show() # Descomentar para visualizar
 ```
 
-## 📚 Recursos Específicos
+## 🚀 Fronteras de Investigación y Problemas Abiertos
 
+En los confines de 2026, los sistemas unidimensionales dejaron de ser meros "modelos de juguete" para ser las plataformas físicas más codiciadas en la computación cuántica topológica. En 1D interactuante, el modelo del líquido de Fermi se quiebra completamente, dando lugar a los Líquidos de Luttinger, donde ocurren fenómenos de fraccionalización cuántica (ej. separación espín-carga). Otra frontera masiva es la observación y manipulación de Modos Cero de Majorana en hilos cuánticos (nanowires) unidimensionales acoplados a superconductores de onda-$p$. Al estar localizados en los bordes del sistema 1D, estos estados permiten el entrelazamiento trenzado (braiding) para bits cuánticos topológicos intrínsecamente protegidos contra la decoherencia local. Adicionalmente, el estudio de estados de borde en cadenas 1D, como el modelo Su-Schrieffer-Heeger (SSH), provee los prototipos para simuladores cuánticos en redes ópticas de átomos fríos.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La física 1D en el límite de bajas energías (cerca de la superficie de Fermi reducida a dos puntos) es gobernada dictatorialmente por la **Teoría de Campos Conformes (CFT)** en el espacio de Minkowski 1+1D. El mapeo del álgebra de observables resulta en el Álgebra de Virasoro de dimensiones infinitas con una carga central $c$:
+
+$$ [L_n, L_m] = (n-m)L_{n+m} + \frac{c}{12} n(n^2-1) \delta_{n+m, 0} $$
+
+Esta simetría confiere integrabilidad a muchos sistemas 1D acoplados y permite la técnica matemática exacta de la **Bosonización**. En 1D, las estadísticas fermiónicas y bosónicas pueden ser isomórficas; un campo fermiónico de Dirac $\psi(x)$ puede reescribirse a partir de un campo escalar bosónico $\phi(x)$ mediante la transformación compacta:
+
+$$ \psi(x) \sim \frac{1}{\sqrt{2\pi\alpha}} \exp\left( -i\sqrt{4\pi} \phi(x) \right) $$
+
+Por el lado de la topología unidimensional, para sistemas periódicos gobernados por el teorema de Bloch, definimos la fase de Zak, la integral unidimensional de la conexión de Berry de los estados de banda $\mathcal{A}(k) = i \langle u_k | \partial_k u_k \rangle$ sobre la zona de Brillouin (BZ):
+
+$$ \gamma_{\text{Zak}} = \oint_{\text{BZ}} \mathcal{A}(k) \, dk = \int_{-\pi/a}^{\pi/a} i \langle u_k | \frac{\partial}{\partial k} | u_k \rangle \, dk $$
+
+Para cadenas poliméricas 1D o aislantes topológicos 1D con simetría de inversión, esta fase es un invariante topológico cuantizado $\mathbb{Z}_2$, pudiendo tomar estrictamente los valores $0$ o $\pi$. Un valor de $\pi$ predice inequívocamente la existencia física de un estado topológicamente protegido de energía nula incrustado en el borde 1D.
+
+## 📚 Recursos Específicos
 ### 🎓 Cursos y Clases Recomendadas
 1. [MIT OCW 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Serie de clases meticulosamente dedicadas a pozos cuadrados, pozos finitos, dispersión en escalones de potencial y funciones de onda atadas.
 2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Lecciones que resuelven el oscilador armónico cuántico de manera puramente algebraica usando operadores de creación y destrucción.

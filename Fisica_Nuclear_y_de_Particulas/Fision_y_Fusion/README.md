@@ -209,6 +209,27 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La física aplicada a la Fisión y Fusión de 2026 transita del prototipado experimental de plasma a la demostración rigurosa de viabilidad energética y escalabilidad termodinámica.
+
+- **Confinamiento Termonuclear y Disrupciones del Plasma (ITER, SPARC):** El mayor misterio sin resolver de la hidrodinámica del plasma magnético (MHD) reside en los modos de inestabilidad límite de borde acoplados iterativamente (Edge Localized Modes - ELMs) y disrupciones mayores impulsadas por anomalías de transporte turbulento microfísico. Mitigar teóricamente los flujos térmicos extremos a los materiales desviadores de Tungsteno que comprometen todo esfuerzo de fusión magnética auto-mantenida ($Q \gg 10$).
+- **Quemado Ignicionado Inercial de Alta Ganancia (Ignition Gain):** A pesar de la ignición empírica alcanzada por el National Ignition Facility (NIF) superando $Q > 1.5$, la escalabilidad de la Fusión de Confinamiento Inercial depende de evitar la mezcla inestable de Rayleigh-Taylor durante la implosión de ablación no-ideal bajo simetría de hohlraum perfecta con cavidades X y modelado asimétrico del transporte electrónico no local de radiación térmica.
+- **Fisión Acelerada Subcrítica y Reactores Espectro Rápido (SMR y Gen-IV):** Minimizar y reciclar a largo plazo actínidos menores de alta vida media radiotóxica (Americio, Curio) del ciclo de combustible irradiado excitando reactores subcríticos (ADS - Accelerator Driven Systems) mediante transmutación con espalación por protones GeV altamente paralela, eliminando las oscilaciones estocásticas paramétricas del coeficiente del vacío del refrigerante.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento riguroso contemporáneo se cimenta en la **Teoría Cinética del Plasma No-Lineal, las Ecuaciones Integrodiferenciales de Transporte, y Dinámica Relativista Causal de Fluidos y Turbulencia de Vlasov**.
+
+En Fusión por Confinamiento Magnético, el plasma de Deuterio-Tritio completamente ionizado no se gobierna por choques en equilibrio térmico sino mediante interacciones macro-coulombianas colectivas. La evolución de la función de distribución del espacio de fases $f_\alpha(\vec{r}, \vec{v}, t)$ (partículas $\alpha = e, i, \dots$) dicta la Ecuación de Boltzmann-Vlasov-Fokker-Planck no lineal acoplada a las Ecuaciones de Maxwell:
+$$ \frac{\partial f_\alpha}{\partial t} + \vec{v} \cdot \nabla f_\alpha + \frac{q_\alpha}{m_\alpha} (\vec{E} + \vec{v} \times \vec{B}) \cdot \nabla_{\vec{v}} f_\alpha = \sum_\beta C_{\alpha \beta}[f_\alpha, f_\beta] $$
+
+El operador de colisión difusivo $C_{\alpha \beta}$ de Fokker-Planck de gran escala domina en plasmas estelares o reactores Tokamak (Landu collision operator). Para la reducción analítica fundamental se exige la **Girocinética**; promediar sobre el radio de Larmor (gyroradius ultrarrápido). Aislando los modos turbulentos derivando la función $F(X, \mu, E)$ donde las variables de coordenadas conjugadas simplécticas revelan el caos micro-escalar (Drift-Wave Turbulence).
+
+Para el caso de Fisión, en cambio, la criticalidad del ensamble $k_{eff}$ obedece a la Ecuación Integro-Diferencial de Transporte Neutrónico de Boltzmann:
+$$ \frac{1}{v} \frac{\partial \psi}{\partial t} + \vec{\Omega} \cdot \nabla \psi + \Sigma_t(\vec{r}, E) \psi(\vec{r}, \vec{\Omega}, E, t) = \int_{4\pi} d\Omega' \int_0^\infty dE' \, \Sigma_s(E' \to E, \vec{\Omega}' \to \vec{\Omega}) \psi' + \frac{\chi(E)}{4\pi k_{eff}} \int_{4\pi} d\Omega' \int_0^\infty dE' \, \nu \Sigma_f \psi' $$
+donde la matemática moderna invoca la discretización espectral por armónicos esféricos $P_N$ y ordenadas discretas $S_N$, solucionada mediante algoritmos híbridos adjuntos Krylov iterativos para matrices de un billón de entradas, lo cual constituye el culmen moderno del diseño paramétrico acoplado multi-física termo-hidráulica computacional de criticidad.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Online y Material Académico

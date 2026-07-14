@@ -169,6 +169,17 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En 2026, la mecánica de medios continuos ha dado a luz al concepto de **Elasticidad Impar (Odd Elasticity)**. En materia activa y sistemas vivos (geles moleculares que consumen ATP, enjambres robóticos), el tensor de elasticidad clásico pierde su simetría mayor (el trabajo realizado en un ciclo cerrado de deformación ya no es nulo). Esto permite la extracción de trabajo de los ciclos de tensión, dando lugar a ondas mecánicas unidireccionales y estáticas no conservativas sin análogos clásicos. La comprensión de los defectos topológicos en estos medios activos viscoelásticos (por ejemplo, cómo los "asteres" actina-miosina pulsan) representa la vanguardia de la biológica física y la ciencia de materiales inteligentes.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El estudio de un medio continuo con defectos intrínsecos (dislocaciones, disclinaciones) abandona la geometría Euclidiana para utilizar **Geometría de Riemann-Cartan**. El cuerpo elástico se modela como una variedad con una métrica elástica y una conexión afin que posee **Torsión** $T^a_{\bc}$ y **Curvatura** $R^a_{\bcd}$.
+Si denotamos el corepere de la estructura reticular por 1-formas $e^a$, las ecuaciones de la teoría geométrica de dislocaciones relacionan la densidad de dislocaciones $\alpha$ directamente con el tensor de Torsión:
+$$ \alpha = de + \Gamma \wedge e = T $$
+La densidad de energía elástica de deformación $W$ depende de la métrica efectiva dependiente de $e$. Al variar esta acción respecto a la estructura $e$ y a la métrica, las tensiones elásticas (el tensor momento-energía del medio continuo) se derivan elegantemente del principio de gauge, conectando la teoría de plasticidad macroscópica de metales y polímeros estelares directamente con las teorías de calibre (Gauge Theory) empleadas en la teoría de cuerdas y gravedad.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Recomendados

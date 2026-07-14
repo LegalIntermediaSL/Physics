@@ -235,6 +235,28 @@ if np.isclose(entropy_A, 1.0):
     print("-> El subsistema está máximamente entrelazado.")
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La física del entrelazamiento en 2026 abarca vastas fronteras cruzadas en Relatividad General y Cosmología. El paradigma ha escalado desde la tecnología cuántica de base hasta la ontología del espaciotiempo mismo ("It from Qubit").
+
+- **Efecto Unruh, Radiación de Hawking y Entrelazamiento Dinámico:** Si un qubit local está en aceleración extrema (frame de Rindler), sufre el efecto Unruh que destruye o modula fuertemente el entrelazamiento termodinámico compartido con un sistema inercial asintótico. Un problema sin resolver persistente: ¿Puede un estado GME (Genuinamente Multipartito) altamente entrelazado sobrevivir al colapso de Información del horizonte de sucesos de un agujero negro real y reconstruir axiomáticamente el unitarismo estocástico de Page?
+- **Entrelazamiento Masivo Sensible a Gravedad:** Experimentos ópticos de vanguardia intentan producir superposiciones y entrelazamiento macroscópico a escalas mayores a la masa de Planck ($\sim 10 \mu g$). El desafío de los interferómetros con resonadores optomecánicos y masas en caída libre busca elucidar empíricamente modelos de **Colapso Inducido por Gravedad (Penrose)**: Si el espacio-tiempo no permite superposiciones topológicas cuánticas masivas, esto delimitará asintóticamente la escala superior fundamental admisible para un qubit real.
+- **Teoría de Recursos del Entrelazamiento Multipartito Cíclico:** Establecer invariantes funcionales bajo SLOCC (Stochastic Local Operations and Classical Communication) para estados continuos fotónicos o cuádruplos de dimensiones $d>5$, que superen la mera generalización del hiperdeterminante, categorizando irreductiblemente todo entrelazamiento cósmico superior.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento riguroso contemporáneo del entrelazamiento en el paradigma de múltiples cuerpos termodinámicos y en teoría de campo cuántico demanda la instrumentación del **Álgebra de von Neumann, Teoría Modular de Tomita-Takesaki y Holografía de Entrelazamiento**.
+
+En el contexto estricto del marco del límite termodinámico y de la Teoría Cuántica de Campos Algebraica (AQFT), el concepto de un tensor producto trivial de espacios de Hilbert $\mathcal{H}_A \otimes \mathcal{H}_B$ falla topológicamente (debido a divergencias ultravioletas locales infinitas en la matriz densidad o teorema de Reeh-Schlieder).
+La partición del espaciotiempo se asigna axiomáticamente a $\mathcal{A}(V)$, el álgebra de von Neumann de observables locales sobre el hipervolumen compacto $V$. La pureza geométrica del entrelazamiento del vacío relativista $| \Omega \rangle$ se codifica empleando el Operador Modular $\Delta$ y el Operador de Conjugación $J$:
+$$ S|\psi\rangle = |\psi\rangle \quad \text{donde} \quad S = J \Delta^{1/2} $$
+y la conexión con la densidad hamiltoniana de entrelazamiento $\hat{K}$, donde formalmente el estado de vacío simulado térmicamente (Unruh-KMS condition) en la cuña de Rindler obedece a:
+$$ \rho_V = \frac{e^{-2\pi \hat{K}}}{\text{Tr}(e^{-2\pi \hat{K}})} $$
+
+En Teoría Cuántica de la Información Holográfica y gravedad cuántica (AdS/CFT), el entrelazamiento topológico $S(A)$ geométricamente se iguala a la superficie extremal de dimensión colindante (Fórmula Cuántica de Ryu-Takayanagi extendida):
+$$ S(\rho_A) = \frac{\text{Area}(\gamma_A)}{4 G_N \hbar} + S_{bulk}(\Sigma_A) $$
+donde $\gamma_A$ es la superficie mínima geodésica bulk invariante anclada al subespacio de contorno $A$ en la variedad subyacente Riemanniana o de Lorentz. Esta monumental fórmula (2026) demuestra matemáticamente que la **conexión del tejido espaciotemporal (gravedad geométrica)** es enteramente emergente del **entrelazamiento microscópico de los qubits distribuidos**, forjando la unificación intrínseca del estado sólido cuántico con el marco de Gravedad Cuántica.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Recomendados

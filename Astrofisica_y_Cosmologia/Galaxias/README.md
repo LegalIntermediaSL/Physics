@@ -222,6 +222,23 @@ plt.xlim(0, 30)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La dinámica y formación galáctica se ha visto sacudida profundamente en esta década por los descubrimientos del Telescopio Espacial James Webb (JWST). La observación de galaxias inusualmente masivas, brillantes y estructuradas (como discos rotantes ya maduros) en tiempos cosmológicos muy tempranos ($z > 10$) ha desafiado directamente los ritmos estándar predecidos por los modelos de materia oscura fría jerárquica ($\Lambda$CDM). Una intensa área de investigación teórica hoy en día se centra en la física bariónica del **AGN Feedback** (retroalimentación de núcleos galácticos activos): cómo la inyección masiva de jets relativistas y vientos desde los agujeros negros supermasivos aborta la formación estelar en galaxias masivas, regulando su evolución a lo largo del tiempo cósmico. Además, perfiles de densidad anómalos en los halos de galaxias enanas (el problema del core-cusp) impulsan la búsqueda de Materia Oscura Auto-Interactuante (SIDM), donde secciones eficaces cruzadas diminutas podrían redistribuir el momento y energía térmica del halo oscuro, alterando la dinámica galáctica a pequeña escala.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento riguroso de una galaxia como un sistema $N$-cuerpos de dimensiones colosales ($N \sim 10^{11}$ estrellas) recurre a la mecánica analítica estadística gravitacional. Debido a que el tiempo de relajación colisional $t_{relax}$ excede largamente la edad del universo, una galaxia puede describirse estadísticamente por una función de distribución continua en el espacio de fases $f(\mathbf{r}, \mathbf{v}, t)$ regida por la aproximación sin colisiones.
+
+La dinámica del sistema está gobernada acopladamente por la **Ecuación de Vlasov** (o Ecuación de Boltzmann sin colisiones) y la **Ecuación de Poisson** para el potencial gravitacional medio $\Phi$:
+$$ \frac{\partial f}{\partial t} + \mathbf{v} \cdot \nabla f - \nabla\Phi \cdot \frac{\partial f}{\partial \mathbf{v}} = 0 $$
+$$ \nabla^2\Phi = 4\pi G \rho = 4\pi G \int f(\mathbf{r}, \mathbf{v}, t) \, d^3\mathbf{v} $$
+
+Para estudiar soluciones estacionarias (teorema de Jeans), el formalismo más poderoso involucra el uso de la mecánica Hamiltoniana y la formulación en **Variables de Ángulo-Acción** $(\mathbf{\theta}, \mathbf{J})$. Si el potencial admite órbitas integrables regulares, podemos realizar una transformación canónica desde el espacio de fases $(\mathbf{q}, \mathbf{p})$ tal que las acciones $J_i = \frac{1}{2\pi} \oint p_i dq_i$ sean integrales de movimiento ($\dot{J}_i = 0$), y los ángulos fluyan a frecuencias constantes $\dot{\theta}_i = \Omega_i(\mathbf{J})$. En estas coordenadas covariantes, la ecuación de Vlasov estacionaria implica que la función de distribución sólo puede depender del vector de acciones (Teorema de Jeans Fuerte):
+$$ f = f(\mathbf{J}) $$
+
+A partir de esta estructura fundamental de foliación toroidal del espacio de fases estacionario, se puede perturbar la distribución $f = f_0(\mathbf{J}) + \delta f(\mathbf{\theta}, \mathbf{J}, t)$ para estudiar formalmente las inestabilidades dinámicas de disco (como las ondas de densidad espirales de Lin-Shu) o el decaimiento de oscilaciones globales gravitacionales (amortiguamiento de Landau gravitacional), resolviendo integrales de resonancia sofisticadas en el plano de frecuencias orbitales complejas.
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

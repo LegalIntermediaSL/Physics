@@ -155,6 +155,17 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La hidrostática en 2026 ha renacido gracias al campo de los **fluidos activos** y las superficies programables. Ya no se trata solo de fluidos en reposo absoluto, sino de investigar medios donde el "reposo" macroscópico es el resultado del caos microscópico propulsado (bacterias, micro-motores). Además, la hidrostática capilar en entornos de microgravedad y el diseño de "metamateriales hidrostáticos" (donde fluidos nano-confinados muestran compresibilidades anómalas e incluso negativas) están revolucionando la absorción de energía. Un problema abierto es el comportamiento termodinámico exacto del agua super-enfriada confinada en poros bidimensionales, donde exhibe transiciones de fase líquida-líquida exóticas.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+La hidrostática capilar avanzada y la formación de meniscos se formulan como un problema en la **Geometría Diferencial de Superficies**. La condición de equilibrio mecánico interfacial (Ecuación de Young-Laplace) dictamina que la presión de salto a través de la interfaz es proporcional a su Curvatura Media $H$. Minimizar la energía libre de Helmholtz bajo una restricción de volumen conduce al estudio de las Superficies de Curvatura Media Constante (CMC).
+En el formalismo del cálculo exterior sobre una variedad Riemanniana $(M, g)$, si la interfaz $\Sigma$ es una subvariedad embebida, la variación de la funcional de energía capilar es:
+$$ \delta \mathcal{E} = \int_\Sigma \left( \Delta P - \gamma \text{tr}(II) \right) \delta x \cdot \mathbf{n} \, dA + \oint_{\partial \Sigma} \left( \gamma \cos\theta_c - \gamma_{SL} + \gamma_{SV} \right) \delta x \cdot \nu \, ds $$
+donde $II$ es la segunda forma fundamental de $\Sigma$, $\mathbf{n}$ el vector normal y $\theta_c$ el ángulo de contacto estático de Young. La resolución geométrica implica estudiar operadores elípticos sobre estas variedades.
+
 ## 📚 Recursos Específicos
 
 ### Cursos Recomendados

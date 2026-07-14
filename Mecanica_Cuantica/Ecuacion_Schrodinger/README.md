@@ -200,8 +200,21 @@ plt.tight_layout()
 # plt.show() # Descomentar para ver la animación localmente
 ```
 
-## 📚 Recursos Específicos
+## 🚀 Fronteras de Investigación y Problemas Abiertos
 
+En 2026, la investigación en la Ecuación de Schrödinger está dominada por sus generalizaciones y la superación de sus límites computacionales. La Ecuación de Schrödinger No Lineal (NLSE), particularmente en su forma de Gross-Pitaevskii, sigue arrojando misterios sobre la turbulencia cuántica y la formación de vórtices cuantizados en condensados de Bose-Einstein fuertemente interactuantes. Además, la Ecuación de Schrödinger Fraccionaria se utiliza intensamente para modelar difusión anómala y dinámicas de propagación en medios fractales y ópticos de índice de refracción variable. Un problema abierto crítico es la resolución exacta de la Ecuación de Schrödinger de Muchos Cuerpos; mientras que las aproximaciones tradicionales (DFT, Hartree-Fock) fallan en sistemas fuertemente correlacionados, arquitecturas modernas de Machine Learning (como *Neural Quantum States*) están empujando los límites de los sistemas cuánticos que podemos simular de manera exacta, difuminando la frontera entre la física de materia condensada y la inteligencia artificial cuántica.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+En un marco matemáticamente riguroso, el Hamiltoniano $\hat{H} = -\frac{\hbar^2}{2m}\Delta + V$ se estudia como un operador diferencial no acotado que actúa sobre subespacios densos del espacio de Hilbert $\mathcal{H} = L^2(\mathbb{R}^n)$. Para asegurar la auto-adjunticidad esencial (y por ende, la evolución unitaria dictada por el Teorema de Stone), se emplea la teoría de espacios de Sobolev $H^s(\mathbb{R}^n)$. 
+
+La generalización topológica de la Ecuación de Schrödinger exige que la función de onda se defina como una sección de un fibrado de líneas complejo $L \to M$ sobre una variedad diferenciable $M$. En presencia de campos electromagnéticos, el momento $\hat{\mathbf{p}}$ se eleva a la derivada covariante con respecto a una conexión $A$ en dicho fibrado, $\nabla_A = d - i\frac{e}{\hbar}A$. El Hamiltoniano invariante de *gauge* se escribe entonces en términos del operador de Laplace-Beltrami:
+
+$$ \hat{H} = -\frac{\hbar^2}{2m} \text{tr}_g (\nabla_A \nabla_A) + V $$
+
+donde la curvatura de la conexión $F = dA$ define el campo magnético. Para ecuaciones dependientes del tiempo, el transporte paralelo de estados a través del espacio de parámetros adiabáticos expone la fase holonómica, manifestándose de forma rigurosa como la Fase Topológica de Berry y cuantizándose a través de las clases de Chern asociadas a la topología del fibrado vectorial, $\frac{1}{2\pi}\int_S F \in \mathbb{Z}$.
+
+## 📚 Recursos Específicos
 ### 🎓 Cursos y Clases Recomendadas
 1. [MIT OCW 8.04 Quantum Physics I (Allan Adams)](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/): Clases detalladas sobre la construcción heurística y motivación de la ecuación de Schrödinger a partir de las ondas de materia de de Broglie.
 2. [Stanford - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtWCAh1E_yT1eF82k7bFepf): Conferencias enfocadas en la evolución temporal, el operador Hamiltoniano y cómo se relaciona la ecuación de onda con las matrices.

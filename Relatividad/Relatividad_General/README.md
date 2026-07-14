@@ -207,6 +207,26 @@ plt.grid(True)
 plt.show()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En 2026, la Relatividad General (RG) vive una edad de oro impulsada por la astronomía multimensajero y las ondas gravitacionales, aunque se enfrenta a tensiones teóricas fundamentales. El mayor desafío cosmológico sigue siendo la naturaleza de la Energía Oscura y la Materia Oscura. Alternativas a la RG pura, como las teorías $f(R)$, gravedad de Horndeski, o gravedad masiva, se contrastan rigurosamente mediante las precisas mediciones de ondas gravitacionales (LIGO/Virgo/KAGRA y el próximo LISA) buscando desviaciones en la velocidad de propagación tensorial o modos de polarización adicionales (escalar o vectorial). Otro enigma de gran relevancia es el problema de la Singularidad y la Gravedad Cuántica: cómo reconciliar los horizontes de sucesos y la resolución de las singularidades cosmológicas en el centro de los agujeros negros. El fondo estocástico de ondas gravitacionales, evidenciado recientemente por consorcios de pulsar timing arrays (PTAs como NANOGrav), abre una nueva ventana hacia la inflación cósmica primigenia, transiciones de fase de primer orden en el universo temprano, o la existencia de cuerdas cósmicas, todas regiones donde la RG debe ser extendida hacia teorías cuánticas efectivas.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El tratamiento riguroso de la Relatividad General se formula en el lenguaje de la geometría diferencial de variedades pseudo-riemannianas. Sea $(\mathcal{M}, g)$ una variedad diferenciable de dimensión 4 equipada con una métrica lorentziana $g$ de signatura $(-,+,+,+)$. La conexión afín natural es la **conexión de Levi-Civita** $\nabla$, que es la única conexión libre de torsión ($\nabla_X Y - \nabla_Y X = [X,Y]$) y métrica-compatible ($\nabla g = 0$).
+
+La curvatura de la variedad está completamente descrita por el tensor de Riemann $R^\rho_{\ \sigma\mu\nu}$, definido por el conmutador de derivadas covariantes aplicadas a un campo vectorial $V^\rho$:
+$$ [\nabla_\mu, \nabla_\nu] V^\rho = R^\rho_{\ \sigma\mu\nu} V^\sigma $$
+
+La dinámica del espacio-tiempo está dictada por las Ecuaciones de Campo de Einstein, las cuales pueden derivarse variacionalmente del principio de mínima acción utilizando la **Acción de Einstein-Hilbert**, incluyendo un término cosmológico $\Lambda$ y la acción de la materia $\mathcal{S}_M$:
+$$ \mathcal{S} = \frac{1}{16\pi G} \int_\mathcal{M} (R - 2\Lambda) \sqrt{-g} \, d^4x + \mathcal{S}_M $$
+
+Al realizar la variación de la acción con respecto a la métrica inversa $g^{\mu\nu}$, $\delta\mathcal{S} / \delta g^{\mu\nu} = 0$, obtenemos las ecuaciones de campo completas:
+$$ G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu} $$
+donde $G_{\mu\nu} \equiv R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu}$ es el tensor de Einstein (que satisface la identidad contraída de Bianchi $\nabla^\mu G_{\mu\nu} = 0$, asegurando la conservación local de energía e impulso $\nabla^\mu T_{\mu\nu} = 0$), $R_{\mu\nu}$ es el tensor de Ricci y $R$ es el escalar de Ricci.
+
+Para estudiar fermiones en RG, el formalismo requiere la introducción de **tétradas (o vielbeins)** $e^a_\mu$ que relacionan la métrica del espacio-tiempo con la métrica plana local $\eta_{ab}$: $g_{\mu\nu} = e^a_\mu e^b_\nu \eta_{ab}$. Esto nos permite levantar la estructura al fibrado ortonormal e introducir la conexión de espín $\omega_{\mu}^{ab}$, definiendo así la derivada covariante espinorial $\mathcal{D}_\mu = \partial_\mu + \frac{1}{8} \omega_{\mu ab}[\gamma^a, \gamma^b]$ necesaria para acoplar espinores a la gravedad.
+
 ## 📚 Recursos Específicos
 
 ### 🎓 Cursos y Clases Recomendadas

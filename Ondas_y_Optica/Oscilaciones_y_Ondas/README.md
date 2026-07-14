@@ -185,6 +185,18 @@ if __name__ == '__main__':
     simular_osciladores_acoplados()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+En 2026, la frontera de investigación en oscilaciones y ondas se centra fuertemente en la **mecánica topológica** y la **física de ondas no hermíticas**. Inspirados por el descubrimiento de aislantes topológicos en física del estado sólido, los investigadores están diseñando redes de osciladores acoplados macroscópicos y metamateriales mecánicos que exhiben estados de borde robustos y protegidos topológicamente. Además, el estudio de sistemas que rompen la simetría de inversión temporal y espacial (PT-simetría) ha llevado al descubrimiento de **puntos excepcionales (Exceptional Points)** en sistemas clásicos. Cerca de estos puntos, el comportamiento de fase de los osciladores experimenta transiciones abruptas, abriendo vías revolucionarias para el diseño de sensores hiper-sensibles y aisladores acústicos/mecánicos unidireccionales.
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+El estudio avanzado de oscilaciones acopladas requiere abandonar la notación matricial básica y adentrarse en la **geometría simpléctica**. Consideremos una variedad simpléctica $(M, \omega)$, donde $M$ es el espacio de fases $T^*Q$ del sistema de osciladores, y $\omega = \sum_{i} dq^i \wedge dp_i$ es la 2-forma simpléctica canónica. La dinámica está gobernada por un Hamiltoniano $H: M \to \mathbb{R}$. Los campos vectoriales Hamiltonianos $X_H$ se definen mediante la relación geométrica:
+$$ i_{X_H} \omega = dH $$
+Para perturbaciones no lineales y modos normales resonantes (Resonancias de Fermi-Pasta-Ulam-Tsingou), el análisis se formaliza mediante la **Forma Normal de Birkhoff** y la **teoría de perturbaciones de Kolmogorov-Arnold-Moser (KAM)**. Una perturbación integrable $H = H_0(I) + \epsilon H_1(I, \theta)$, expresada en variables de acción-ángulo, preserva toros invariantes si se cumple la condición de no degeneración $\det \left( \frac{\partial^2 H_0}{\partial I_i \partial I_j} \right) \neq 0$ y si el vector de frecuencias satisface la condición Diofántica:
+$$ |\mathbf{k} \cdot \boldsymbol{\omega}| \geq \frac{\gamma}{|\mathbf{k}|^\tau} \quad \forall \mathbf{k} \in \mathbb{Z}^n \setminus \{0\} $$
+Esto rigurosamente demuestra la estabilidad de las oscilaciones casi-periódicas frente a perturbaciones arbitrariamente complejas en sistemas no disipativos.
+
 ## 📚 Recursos Específicos
 
 ### Cursos

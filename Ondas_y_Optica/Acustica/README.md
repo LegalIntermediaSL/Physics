@@ -172,6 +172,18 @@ if __name__ == '__main__':
     simular_interferencia_acustica()
 ```
 
+## 🚀 Fronteras de Investigación y Problemas Abiertos
+
+La investigación actual en acústica avanzada para el año 2026 se ha adentrado profundamente en los dominios del espacio-tiempo análogo y la materia condensada. Una frontera espectacular son los **agujeros negros acústicos**, donde un fluido en movimiento acelerado cruza la velocidad del sonido local, creando un "horizonte de eventos" fonónico. Confirmar irrefutablemente y aislar la radiación de Hawking acústica térmica en condensados de Bose-Einstein y fluidos cuánticos sigue siendo un enorme desafío observacional debido a los altos niveles de ruido de fondo. Además, los fenómenos de sonoluminiscencia, donde el colapso de cavitaciones emite intensos destellos de luz e incluso plasma, siguen sin tener un consenso absoluto sobre la posibilidad de termonuclearización en el micro-núcleo colapsado (cavitación inercial extrema).
+
+## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
+
+Para analizar la acústica en fluidos inhomogéneos o en movimiento relativista, la teoría escalar simple se descarta a favor de una **geometría pseudo-Riemanniana** efectiva. Si consideramos fluctuaciones de fase $\phi$ del potencial de velocidad en un flujo de fondo no rotacional con velocidad $\mathbf{v}$ y velocidad del sonido $c$, la ecuación de onda acústica puede reescribirse exactamente como la ecuación de D'Alembert covariantemente invariante para un campo escalar sin masa en un espacio-tiempo curvado:
+$$ \frac{1}{\sqrt{-g}} \partial_\mu \left( \sqrt{-g} g^{\mu\nu} \partial_\nu \phi \right) = 0 $$
+donde el tensor métrico acústico efectivo $g_{\mu\nu}$ (la métrica de Unruh) está dado por:
+$$ g_{\mu\nu} = \frac{\rho_0}{c} \begin{pmatrix} -(c^2 - v^2) & -v^i \\ -v^j & \delta_{ij} \end{pmatrix} $$
+Este formalismo espectacular conecta directamente la hidrodinámica clásica con la relatividad general geométrica. Los horizontes de eventos fonónicos ocurren donde el determinante de la métrica $g_{tt}$ cambia de signo (el fluido supera localmente $c$). Toda la maquinaria matemática de los diagramas de Penrose-Carter y el transporte paralelo de supergravedad puede aplicarse al diseño de metamateriales acústicos que "curvan" el espacio del sonido.
+
 ## 📚 Recursos Específicos
 
 ### Cursos
