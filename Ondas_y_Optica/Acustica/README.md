@@ -17,45 +17,65 @@ La acústica se fundamenta en las ecuaciones de la mecánica de fluidos aplicada
 ### 1. Ecuación de Onda Acústica Unidimensional
 
 Consideremos un tubo lleno de un fluido con densidad de equilibrio $\rho_0$ y presión estática $p_0$. Una onda acústica introduce perturbaciones:
+
 $$ \rho = \rho_0 + \rho' \quad \text{y} \quad p = p_0 + p' $$
+
 donde $\rho'$ y $p'$ son fluctuaciones acústicas. 
 
 La ecuación de continuidad (conservación de la masa) linealizada en una dimensión espacial $x$ es:
+
 $$ \frac{\partial \rho'}{\partial t} + \rho_0 \frac{\partial u}{\partial x} = 0 $$
+
 donde $u$ es la velocidad de la partícula del fluido.
 
 La ecuación de Euler (conservación del momento) linealizada, asumiendo ausencia de fuerzas externas y viscosidad, es:
+
 $$ \rho_0 \frac{\partial u}{\partial t} + \frac{\partial p'}{\partial x} = 0 $$
 
 ### 2. Relación de Estado y Velocidad del Sonido
 
 Para cerrar el sistema, necesitamos una relación entre la presión y la densidad. Asumiendo un proceso adiabático reversible (isentrópico), porque las variaciones de presión ocurren demasiado rápido para el intercambio de calor:
+
 $$ p' = \left( \frac{\partial p}{\partial \rho} \right)_S \rho' = c^2 \rho' $$
+
 donde definimos la velocidad termodinámica del sonido como:
+
 $$ c = \sqrt{\left( \frac{\partial p}{\partial \rho} \right)_S} $$
 
 Para un gas ideal con ecuación de estado $p = \rho R T / M$, la relación isentrópica es $p \propto \rho^\gamma$, donde $\gamma = C_p/C_v$ es el coeficiente de dilatación adiabática. Derivando obtenemos:
+
 $$ c = \sqrt{\frac{\gamma p_0}{\rho_0}} = \sqrt{\frac{\gamma R T}{M}} $$
 
 ### 3. Derivación de la Ecuación de Onda
 
 Tomando la derivada parcial con respecto al tiempo de la ecuación de continuidad y la derivada parcial con respecto a $x$ de la ecuación de Euler:
+
 $$ \frac{\partial^2 \rho'}{\partial t^2} + \rho_0 \frac{\partial^2 u}{\partial x \partial t} = 0 $$
+
 $$ \rho_0 \frac{\partial^2 u}{\partial t \partial x} + \frac{\partial^2 p'}{\partial x^2} = 0 $$
+
 Restando estas dos ecuaciones e introduciendo la relación isentrópica $\rho' = p'/c^2$, obtenemos la **ecuación de onda acústica**:
+
 $$ \frac{\partial^2 p'}{\partial x^2} - \frac{1}{c^2} \frac{\partial^2 p'}{\partial t^2} = 0 $$
 
 La solución general de D'Alembert es:
+
 $$ p'(x, t) = f(x - ct) + g(x + ct) $$
+
 que representa ondas viajeras hacia la derecha y hacia la izquierda.
 
 ### 4. Impedancia Acústica e Intensidad
 
 La impedancia acústica específica $Z$ de un medio determina cómo se transmite la energía y se define como la razón entre la presión acústica y la velocidad de partícula:
+
 $$ Z = \frac{p'}{u} = \rho_0 c $$
+
 Para una onda plana progresiva pura, esta relación es real y constante. La intensidad sonora $I$ (energía por unidad de área y tiempo) transportada por una onda armónica es el promedio temporal del producto de la presión y la velocidad:
+
 $$ I = \langle p' u \rangle = \frac{p_{\text{rms}}^2}{Z} = \frac{p_m^2}{2 \rho_0 c} $$
+
 donde $p_m$ es la amplitud de presión. El nivel de intensidad se mide en decibelios (dB):
+
 $$ \beta = 10 \log_{10}\left( \frac{I}{I_0} \right) \quad \text{con} \quad I_0 = 10^{-12} \, \text{W/m}^2 $$
 
 ```mermaid
@@ -179,9 +199,13 @@ La investigación actual en acústica avanzada para el año 2026 se ha adentrado
 ## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
 
 Para analizar la acústica en fluidos inhomogéneos o en movimiento relativista, la teoría escalar simple se descarta a favor de una **geometría pseudo-Riemanniana** efectiva. Si consideramos fluctuaciones de fase $\phi$ del potencial de velocidad en un flujo de fondo no rotacional con velocidad $\mathbf{v}$ y velocidad del sonido $c$, la ecuación de onda acústica puede reescribirse exactamente como la ecuación de D'Alembert covariantemente invariante para un campo escalar sin masa en un espacio-tiempo curvado:
+
 $$ \frac{1}{\sqrt{-g}} \partial_\mu \left( \sqrt{-g} g^{\mu\nu} \partial_\nu \phi \right) = 0 $$
+
 donde el tensor métrico acústico efectivo $g_{\mu\nu}$ (la métrica de Unruh) está dado por:
+
 $$ g_{\mu\nu} = \frac{\rho_0}{c} \begin{pmatrix} -(c^2 - v^2) & -v^i \\ -v^j & \delta_{ij} \end{pmatrix} $$
+
 Este formalismo espectacular conecta directamente la hidrodinámica clásica con la relatividad general geométrica. Los horizontes de eventos fonónicos ocurren donde el determinante de la métrica $g_{tt}$ cambia de signo (el fluido supera localmente $c$). Toda la maquinaria matemática de los diagramas de Penrose-Carter y el transporte paralelo de supergravedad puede aplicarse al diseño de metamateriales acústicos que "curvan" el espacio del sonido.
 
 ## 📚 Recursos Específicos
@@ -195,14 +219,18 @@ Este formalismo espectacular conecta directamente la hidrodinámica clásica con
 1. **["The Theory of Sound" por Lord Rayleigh (Vol. I & II)](https://www.cambridge.org/core/books/theory-of-sound/B0F33A18C1D6B408B1271DDEB2A4B3A8)**
    - **Importancia Teórica:** Esta es la Biblia fundacional de la acústica. Rayleigh sistematizó matemáticamente casi toda la disciplina, desde vibraciones de cuerdas, membranas y placas, hasta la difracción esférica del sonido.
    - **Fondo Matemático:** Rayleigh introdujo el método perturbativo de Rayleigh-Ritz para calcular frecuencias naturales. Si tenemos una cuerda inhomogénea, aproximamos la frecuencia fundamental estimando un perfil de desplazamiento $y(x)$ (por ejemplo, elástico estático) e igualamos la energía potencial máxima con la cinética máxima:
+
      $$ \omega^2 \approx \frac{\int_0^L T \left( \frac{dy}{dx} \right)^2 dx}{\int_0^L \rho(x) y^2 dx} $$
+
      Este principio variacional garantiza que la frecuencia calculada siempre será un límite superior a la frecuencia fundamental real (Principio de Rayleigh), una herramienta vital cuando las ecuaciones diferenciales exactas no tienen solución analítica.
    - **Implicaciones Físicas:** Transformó la acústica de un conjunto de observaciones empíricas musicales a una rama madura del análisis de valores de contorno en física matemática, posibilitando el diseño analítico de resonadores e instrumentos.
 
 2. **["Acoustic Metamaterials and Phononic Crystals" por P. A. Deymier (2013)](https://link.springer.com/book/10.1007/978-3-642-31232-8)**
    - **Importancia Teórica:** Muestra cómo los materiales estructurados artificialmente pueden manipular las ondas sonoras más allá de los límites de los materiales naturales, permitiendo la "invisibilidad" acústica, superlentes y guías de onda con índice de refracción negativo.
    - **Fondo Matemático:** Se describe la propagación a través de celdas unitarias periódicas usando el teorema de Bloch para la ecuación acústica. La densidad efectiva $\rho_{\text{eff}}(\omega)$ y el módulo volumétrico efectivo $K_{\text{eff}}(\omega)$ se vuelven funciones tensoriales dispersivas fuertemente dependientes de la frecuencia, dadas por resonancias locales. Cerca de una resonancia de Helmholtz interna $\omega_0$:
+
      $$ \rho_{\text{eff}}(\omega) = \rho_0 \left( 1 - \frac{F \omega_0^2}{\omega^2 - \omega_0^2 + i\gamma\omega} \right) $$
+
      Si $\omega \gtrsim \omega_0$, la densidad efectiva se vuelve *negativa* ($\rho_{\text{eff}} < 0$). Esto implica que la aceleración del medio ocurre en dirección opuesta al gradiente de presión impulsora local, prohibiendo la propagación de modos sonoros ordinarios (abriendo un "bandgap" acústico absoluto).
    - **Implicaciones Físicas:** Provee la base para aislamientos sonoros perfectos en bandas de frecuencias específicas (estructuras fonónicas) y la construcción de capas de camuflaje que obligan al sonido del sonar marino a rodear un objeto como si no estuviera ahí.
 

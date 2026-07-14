@@ -9,41 +9,59 @@ El estudio riguroso de la hidrostática se deduce de las ecuaciones de Navier-St
 ### 1. La Ecuación Fundamental de la Hidrostática
 
 Bajo la condición estática, la ecuación diferencial de conservación de la cantidad de movimiento se colapsa a un balance exclusivo entre las fuerzas de presión y las fuerzas de volumen (campo externo):
+
 $$ \nabla p = \rho \vec{g} $$
+
 Esta es la **Ecuación Fundamental de la Hidrostática**, que revela que el gradiente de presión escalar $\nabla p$ debe ser exactamente co-lineal con el campo vectorial de fuerzas por unidad de masa $\vec{g}$. 
 
 **Consecuencias de la ecuación:**
 1. Si el fluido está sujeto a un campo gravitatorio constante $\vec{g} = -g \hat{k}$ (donde $\hat{k}$ es el vector unitario vertical hacia arriba), la ecuación se descompone en:
+
    $$ \frac{\partial p}{\partial x} = 0, \quad \frac{\partial p}{\partial y} = 0, \quad \frac{\partial p}{\partial z} = -\rho g $$
+
    Esto demuestra rigurosamente que la presión es constante en planos isobáricos (planos horizontales $z = \text{cte}$).
 
 2. Al integrar $\frac{dp}{dz} = -\rho g$ entre una referencia $z_0$ (superficie del líquido a presión $P_0$) y una profundidad arbitraria $h$ (donde $z = z_0 - h$), asumimos densidad incompresible constante $\rho$ para líquidos:
+
    $$ p(h) = P_0 + \rho g h $$
+
    Esta variación lineal de la presión (Presión Manométrica = $\rho gh$) es la razón por la que presas de agua son más gruesas en su base.
 
 ### 2. Isotropía del Tensor de Esfuerzos (Ley de Pascal)
 
 En un estado de reposo absoluto sin gradientes de velocidad, la Ley de Fricción de Newton establece que todos los esfuerzos cortantes del tensor hidrodinámico de esfuerzos son idénticamente cero ($\tau_{ij} = 0$ para $i \neq j$). El tensor de esfuerzos hidrostáticos resulta en:
+
 $$ \boldsymbol{\sigma} = -p \mathbf{I} $$
+
 donde $\mathbf{I}$ es la matriz identidad. La presión estática $p$ es una magnitud escalar isotrópica; la fuerza ejercida sobre una superficie infinitesimal sumergida $d\vec{A}$ es idéntica en magnitud e inversamente normal a la superficie independientemente de su orientación ($d\vec{F} = -p \hat{n} dA$). Esto explica formalmente la premisa del Principio de Pascal de transmisión isótropa en fluidos confinados.
 
 ### 3. Fluido Compresible en Equilibrio Estático
 
 Si consideramos un fluido altamente compresible como la atmósfera terrestre regido por la ecuación de los gases ideales ($p = \rho R T / M$), la densidad depende fuertemente de la presión y la temperatura. 
 Sustituyendo $\rho(p)$ en la ecuación hidrostática obtenemos:
+
 $$ \frac{dp}{dz} = -\left(\frac{p M}{R T}\right) g $$
+
 Integrando esta ecuación diferencial lineal, asumiendo un modelo de atmósfera isotérmica ($T = \text{cte}$), derivamos la **Fórmula Barométrica**:
+
 $$ p(z) = P_0 \exp\left(-\frac{Mg z}{RT}\right) $$
+
 La presión atmosférica decae exponencialmente con la altitud $z$. 
 
 ### 4. Derivación del Principio de Arquímedes
 
 Consideremos un cuerpo sumergido arbitrario de volumen $V$ y superficie $\partial V$. La fuerza neta ejercida por la presión del fluido circundante sobre su superficie es la integral de las fuerzas superficiales normales:
+
 $$ \vec{F}_b = -\oint_{\partial V} p \hat{n} dA $$
+
 Usando el teorema del gradiente (una variante del teorema de la divergencia):
+
 $$ \vec{F}_b = -\iiint_V \nabla p \, dV $$
+
 Sustituyendo el gradiente hidrostático $\nabla p = \rho_{\text{fluido}} \vec{g}$ (para líquido incompresible), obtenemos:
+
 $$ \vec{F}_b = -\iiint_V \rho_{\text{fluido}} \vec{g} \, dV = -(\rho_{\text{fluido}} V) \vec{g} $$
+
 La magnitud de esta fuerza ascensional o **Empuje** es exactamente el peso del volumen de fluido desplazado por el cuerpo ($m_{\text{desplazado}} g$), demostrando matemáticamente el Principio postulado por Arquímedes. Si el objeto pesa más que este empuje se hunde; si pesa menos, asciende hasta estabilizarse parcialmente sumergido, y si iguala, adquiere flotabilidad neutra.
 
 ```mermaid
@@ -154,7 +172,9 @@ La hidrostática en 2026 ha renacido gracias al campo de los **fluidos activos**
 
 La hidrostática capilar avanzada y la formación de meniscos se formulan como un problema en la **Geometría Diferencial de Superficies**. La condición de equilibrio mecánico interfacial (Ecuación de Young-Laplace) dictamina que la presión de salto a través de la interfaz es proporcional a su Curvatura Media $H$. Minimizar la energía libre de Helmholtz bajo una restricción de volumen conduce al estudio de las Superficies de Curvatura Media Constante (CMC).
 En el formalismo del cálculo exterior sobre una variedad Riemanniana $(M, g)$, si la interfaz $\Sigma$ es una subvariedad embebida, la variación de la funcional de energía capilar es:
+
 $$ \delta \mathcal{E} = \int_\Sigma \left( \Delta P - \gamma \text{tr}(II) \right) \delta x \cdot \mathbf{n} \, dA + \oint_{\partial \Sigma} \left( \gamma \cos\theta_c - \gamma_{SL} + \gamma_{SV} \right) \delta x \cdot \nu \, ds $$
+
 donde $II$ es la segunda forma fundamental de $\Sigma$, $\mathbf{n}$ el vector normal y $\theta_c$ el ángulo de contacto estático de Young. La resolución geométrica implica estudiar operadores elípticos sobre estas variedades.
 
 ## 📚 Recursos Específicos
@@ -169,27 +189,39 @@ donde $II$ es la segunda forma fundamental de $\Sigma$, $\mathbf{n}$ el vector n
    - **Enlace:** [https://en.wikipedia.org/wiki/On_Floating_Bodies](https://en.wikipedia.org/wiki/On_Floating_Bodies)
    - **Importancia Teórica:** El texto fundador de la hidrostática, estableció el famoso principio de empuje para objetos total o parcialmente sumergidos.
    - **Fondo Matemático:** El principio de Arquímedes dictamina que la fuerza de flotación $F_B$ equivale al peso del fluido desplazado:
+
      $$
+
      F_B = \rho_{\text{fluido}} \cdot V_{\text{sumergido}} \cdot g
+
      $$
+
    - **Implicaciones Físicas:** Demuestra el equilibrio de fuerzas estáticas gravitacionales en medios continuos, aplicable universalmente a barcos, globos aerostáticos e isostasia geológica.
 
 2. **The Treatise on the Equilibrium of Liquids (Blaise Pascal, 1653)**
    - **Enlace:** [https://archive.org/details/physicaltreatise00pasc](https://archive.org/details/physicaltreatise00pasc)
    - **Importancia Teórica:** Formuló el Principio de Pascal, aclarando que en un fluido incompresible en reposo, cualquier variación de presión se transmite isotrópicamente sin atenuación.
    - **Fondo Matemático:** Define la igualdad de tensiones isotrópicas:
+
      $$
+
      \Delta P_1 = \Delta P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2}
+
      $$
+
    - **Implicaciones Físicas:** Constituye la base física de la prensa hidráulica y la transmisión de potencia en la ingeniería civil, multiplicando la fuerza lineal mediante geometría de área.
 
 3. **Stability of Floating Bodies (Journal of Ship Research)**
    - **Enlace:** [https://sname.org/journal-of-ship-research](https://sname.org/journal-of-ship-research)
    - **Importancia Teórica:** Examina las condiciones rigurosas de equilibrio rotacional en el diseño hidroestático moderno.
    - **Fondo Matemático:** La estabilidad depende de la posición relativa del metacentro $M$ y el centro de gravedad $G$. Para estabilidad asintótica de un ángulo pequeño $\theta$, el par restaurador $\tau$ obedece:
+
      $$
+
      \tau = W \cdot \overline{GM} \cdot \sin(\theta)
+
      $$
+
      donde $\overline{GM} > 0$ exige que el metacentro esté arriba de la gravedad.
    - **Implicaciones Físicas:** Crucial para la arquitectura naval y el diseño de boyas oceanográficas frente a perturbaciones estocásticas de las olas marinas.
 

@@ -34,23 +34,33 @@ La estructura atómica moderna descansa sobre los fundamentos matemáticos de la
 ### 1. El Átomo de Hidrógeno: Solución Exacta de la Ecuación de Schrödinger
 
 El hamiltoniano no relativista para un electrón sometido a un potencial central de Coulomb, generado por un núcleo de carga $Ze$ (donde $Z=1$ para el hidrógeno), se expresa como:
+
 $$ \hat{H}_0 = -\frac{\hbar^2}{2\mu} \nabla^2 - \frac{Z e^2}{4\pi\epsilon_0 r} $$
+
 donde $\mu = \frac{m_e m_N}{m_e + m_N}$ es la masa reducida del sistema. 
 
 Para resolver la ecuación de Schrödinger independiente del tiempo, $\hat{H}_0 \psi(\boldsymbol{r}) = E \psi(\boldsymbol{r})$, explotamos la simetría esférica del potencial mediante la técnica de separación de variables en coordenadas esféricas $(r, \theta, \phi)$:
+
 $$ \psi(r, \theta, \phi) = R(r) Y_{l}^{m}(\theta, \phi) $$
+
 Las funciones $Y_{l}^{m}(\theta, \phi)$ son los armónicos esféricos, los cuales son simultáneamente autofunciones de los operadores $\hat{L}^2$ y $\hat{L}_z$:
+
 $$ \hat{L}^2 Y_{l}^{m}(\theta, \phi) = \hbar^2 l(l+1) Y_{l}^{m}(\theta, \phi) $$
+
 $$ \hat{L}_z Y_{l}^{m}(\theta, \phi) = \hbar m Y_{l}^{m}(\theta, \phi) $$
 
 Al sustituir esta forma en la ecuación de Schrödinger, obtenemos la ecuación radial para la función de onda dependiente de la distancia al núcleo:
+
 $$ \left[ -\frac{\hbar^2}{2\mu} \left( \frac{d^2}{dr^2} + \frac{2}{r} \frac{d}{dr} \right) + \frac{\hbar^2 l(l+1)}{2\mu r^2} - \frac{Z e^2}{4\pi\epsilon_0 r} \right] R(r) = E R(r) $$
 
 El comportamiento asintótico de esta ecuación dicta la forma de la solución. Introduciendo una variable radial adimensional $\rho = \frac{2Z}{n a_0} r$, con $a_0 = \frac{4\pi\epsilon_0 \hbar^2}{\mu e^2}$ como el radio de Bohr, las soluciones normalizables que corresponden a los estados ligados (energía negativa $E < 0$) vienen dadas en términos de los polinomios asociados de Laguerre $L_{n-l-1}^{2l+1}(\rho)$:
+
 $$ R_{nl}(r) = \sqrt{ \left( \frac{2Z}{n a_0} \right)^3 \frac{(n-l-1)!}{2n(n+l)!} } e^{-\rho/2} \rho^l L_{n-l-1}^{2l+1}(\rho) $$
 
 Para que los polinomios no se conviertan en series infinitas divergentes, el número cuántico principal $n$ debe ser un entero estrictamente positivo ($n=1,2,3,\dots$), confinando a $l$ a los valores $0, 1, \dots, n-1$. Esto produce el famoso espectro de energías discretas y degeneradas de Bohr:
+
 $$ E_n = - \frac{Z^2 e^4 \mu}{2(4\pi\epsilon_0)^2 \hbar^2} \frac{1}{n^2} = - \frac{Z^2 R_y}{n^2} \approx -13.6 \text{ eV} \frac{Z^2}{n^2} $$
+
 donde $R_y$ es la energía de Rydberg.
 
 ### 2. Estructura Fina: Rompiendo la Degeneración Accidental
@@ -59,24 +69,35 @@ La teoría espectral de alto poder resolutivo muestra desdoblamientos adicionale
 
 #### A. Corrección de la Energía Cinética Relativista
 La expansión de Taylor de la energía cinética relativista es:
+
 $$ T = \sqrt{p^2 c^2 + m^2 c^4} - m c^2 \approx \frac{p^2}{2m} - \frac{p^4}{8m^3 c^2} $$
+
 El término perturbativo es $\hat{H}_{rel} = -\frac{\hat{p}^4}{8m_e^3 c^2}$, que se reescribe como $-\frac{1}{2m_e c^2} (\hat{H}_0 - V(r))^2$. Aplicando teoría de perturbaciones, el corrimiento al nivel de energía está dado por el valor esperado:
+
 $$ \Delta E_{rel} = \langle \hat{H}_{rel} \rangle = E_n \frac{(Z \alpha)^2}{n} \left( \frac{1}{l+1/2} - \frac{3}{4n} \right) $$
+
 Aquí, $\alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} \approx \frac{1}{137}$ es la constante de estructura fina.
 
 #### B. Acoplamiento Espín-Órbita
 En el sistema de referencia donde el electrón está en reposo, el núcleo en órbita genera una corriente, produciendo un campo magnético local. El momento magnético intrínseco del electrón (su espín $\hat{\boldsymbol{S}}$) interactúa con este campo, acoplándose al momento angular orbital $\hat{\boldsymbol{L}}$. Se requiere un factor cinemático adicional de 1/2 debido a la precesión de Thomas:
+
 $$ \hat{H}_{SO} = \frac{1}{2 m_e^2 c^2} \frac{1}{r} \frac{dV}{dr} \hat{\boldsymbol{L}} \cdot \hat{\boldsymbol{S}} $$
+
 Dado que $\hat{\boldsymbol{J}} = \hat{\boldsymbol{L}} + \hat{\boldsymbol{S}}$, entonces $\hat{\boldsymbol{L}} \cdot \hat{\boldsymbol{S}} = \frac{1}{2} (\hat{J}^2 - \hat{L}^2 - \hat{S}^2)$. Los estados atómicos son ahora autofunciones de $\hat{J}^2$, permitiendo la evaluación:
+
 $$ \Delta E_{SO} = - E_n \frac{(Z \alpha)^2}{n} \left[ \frac{j(j+1) - l(l+1) - 3/4}{2l(l+1/2)(l+1)} \right] $$
 
 #### C. Término de Darwin
 Aparece una corrección fundamental localizada en el origen asociada con el temblor relativista fundamental (*Zitterbewegung*) del electrón sobre distancias del orden de su longitud de onda de Compton. Afecta exclusivamente a aquellos electrones con probabilidad no nula de existir dentro del núcleo ($l=0$):
+
 $$ \hat{H}_{Darwin} = \frac{\pi \hbar^2}{2 m_e^2 c^2} \left( \frac{Z e^2}{4\pi\epsilon_0} \right) \delta^3(\boldsymbol{r}) $$
+
 $$ \Delta E_{Darwin} = \langle \hat{H}_{Darwin} \rangle = - E_n \frac{(Z \alpha)^2}{n} \delta_{l,0} $$
 
 **Resultado Total Estructura Fina:** Sumando sorprendentemente estas tres componentes, la perturbación consolidada de la estructura fina se simplifica dependiendo de $j$ de manera exclusiva:
+
 $$ \Delta E_{FS} = E_n \frac{(Z\alpha)^2}{n^2} \left( \frac{n}{j+1/2} - \frac{3}{4} \right) $$
+
 Lo cual es exacto con los resultados obtenidos resolviendo la Ecuación de Dirac.
 
 ### 3. Interacciones con Campos Electromagnéticos Externos
@@ -99,21 +120,29 @@ graph TD
 
 #### Efecto Zeeman y Efecto Paschen-Back
 En presencia de un campo magnético estático uniforme $\boldsymbol{B} = B \hat{z}$, el hamiltoniano adquiere el término magnético por acoplamiento al momento magnético orbital y de espín:
+
 $$ \hat{H}_B = \frac{\mu_B}{\hbar} (\hat{\boldsymbol{L}} + 2\hat{\boldsymbol{S}}) \cdot \boldsymbol{B} $$
+
 donde $\mu_B = \frac{e\hbar}{2m_e}$ es el magnetón de Bohr.
 
 1. **Efecto Zeeman Anómalo (Débil):** Si el campo magnético es suficientemente tenue como para ser una pequeña perturbación frente al acoplamiento espín-órbita, los estados de estructura fina $|n, l, j, m_j\rangle$ dominan. El desplazamiento de energía resulta ser:
+
    $$ \Delta E_Z = g_J \mu_B B m_j $$
+
    Donde el factor giromagnético $g_J$ (factor de Landé) es:
+
    $$ g_J = 1 + \frac{j(j+1) + s(s+1) - l(l+1)}{2j(j+1)} $$
 
 2. **Efecto Paschen-Back (Fuerte):** Cuando $\hat{H}_B$ supera con creces el término $\hat{H}_{SO}$, se rompe el acoplamiento entre el espín y el momento angular. Las proyecciones individuales se vuelven buenas constantes de movimiento, y:
+
    $$ \Delta E_{PB} = \mu_B B (m_l + 2m_s) $$
 
 ### 4. Dinámica Espectral: Transiciones y Reglas de Selección
 
 El campo electromagnético cuántico estimula saltos en los niveles de energía del átomo, causando emisión o absorción de fotones. Tratando el campo de luz por teoría de perturbaciones dependiente del tiempo, la probabilidad de transición por unidad de tiempo dictada por la "Regla de Oro de Fermi" toma en el régimen de aproximación dipolar la forma:
+
 $$ W_{i \to f} = \frac{4\omega_{fi}^3}{3\hbar c^3} |\langle f | \hat{\boldsymbol{r}} | i \rangle|^2 $$
+
 El elemento de la matriz dipolar eléctrica es vital. Cuando se descompone en las componentes angulares $Y_l^m$, las propiedades de ortogonalidad dictan que este valor esperado sólo sobrevive cuando las simetrías son coherentes. Esto genera las estrictas **Reglas de Selección Dipolares**:
 1. Para el momento angular orbital: $\Delta l = \pm 1$ (Consecuencia explícita de la conservación de la paridad en la absorción/emisión de un fotón).
 2. Para la proyección magnética: $\Delta m_l = 0, \pm 1$.
@@ -130,10 +159,14 @@ Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido 
 2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
 3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
 4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+
    $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+
    donde $a_0$ es el radio de Bohr.
 5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+
    $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+
 6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
 
 ### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
@@ -154,12 +187,17 @@ Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein d
 **Solución paso a paso:**
 1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
 2. El número total de partículas en estados excitados viene dado por la integral:
+
    $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+
 3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
 4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+
    $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+
 5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
 6. Resolviendo para $T_c$:
+
    $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
 
 ## 💻 Simulaciones Computacionales
@@ -251,17 +289,23 @@ Donde $\Gamma$ es la amplitud del estado ligado, $P$ el momento total, $p$ el mo
 ### 📝 Artículos Científicos Clave
 1. **Sommerfeld, A. (1916). "Zur Quantentheorie der Spektrallinien"**. *Annalen der Physik*, 356(17), 1-94. [DOI: 10.1002/andp.19163561702](https://doi.org/10.1002/andp.19163561702)
    *Importancia Teórica y Matemática:* Extiende el modelo de Bohr para incluir órbitas elípticas e introduce correcciones relativistas. Define la constante de estructura fina $\alpha$:
+
    $$ \alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} \approx \frac{1}{137} $$
+
    *Implicaciones Físicas:* Las correcciones relativistas de Sommerfeld explicaron el desdoblamiento del nivel fundamental de hidrógeno (estructura fina) antes del descubrimiento del espín del electrón, revelando la necesidad del tratamiento relativista en la espectroscopía de precisión.
 
 2. **Lamb, W. E., & Retherford, R. C. (1947). "Fine Structure of the Hydrogen Atom by a Microwave Method"**. *Phys. Rev.*, 72(3), 241-243. [DOI: 10.1103/PhysRev.72.241](https://doi.org/10.1103/PhysRev.72.241)
    *Importancia Teórica y Matemática:* Demostró experimentalmente que los estados $2S_{1/2}$ y $2P_{1/2}$ del hidrógeno, degenerados según la ecuación de Dirac, en realidad están separados por $\sim 1057$ MHz. El desplazamiento provocado por fluctuaciones del vacío puede aproximarse como:
+
    $$ \Delta E_{\text{Lamb}} \propto \alpha^5 m_e c^2 $$
+
    *Implicaciones Físicas:* Rompió la degeneración exacta de Dirac, lo cual fue el impulso experimental crítico e inmediato para el desarrollo moderno de la Electrodinámica Cuántica (QED) por Feynman, Schwinger y Tomonaga.
 
 3. **Stark, J. (1914). "Beobachtungen über den Effekt des elektrischen Feldes auf Spektrallinien I"**. *Annalen der Physik*, 348(5), 965-982. [DOI: 10.1002/andp.19143480507](https://doi.org/10.1002/andp.19143480507)
    *Importancia Teórica y Matemática:* Estudio del desdoblamiento espectral bajo campos eléctricos $E_{\text{ext}}$. El Hamiltoniano de perturbación (Efecto Stark) es:
+
    $$ \hat{H}' = e \vec{r} \cdot \vec{E}_{\text{ext}} $$
+
    *Implicaciones Físicas:* Demuestra cómo la simetría esférica se rompe, mezclando estados de diferente paridad. Para el estado fundamental del hidrógeno se da un efecto Stark cuadrático, mientras que en estados excitados degenerados, produce un efecto Stark lineal.
 
 ### 📖 Referencias Útiles y Bibliografía

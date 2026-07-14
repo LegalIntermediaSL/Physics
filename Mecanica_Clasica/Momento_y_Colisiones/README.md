@@ -17,20 +17,27 @@ El vector momento lineal (o ímpetu) para un objeto o una partícula individual 
 
 **La Segunda Ley Generalizada**:
 Si replanteamos axiomáticamente el Principio de Newton usando este invariante, permitiendo el estudio riguroso de cuerpos con transferencia de masa:
+
 $$ \sum \vec{F} = \frac{d\vec{p}}{dt} = m \frac{d\vec{v}}{dt} + \vec{v} \frac{dm}{dt} $$
+
 Esta reformulación es la base ineludible de la **Dinámica Estocástica Continua** (fricción de cohetes en lanzamiento asintótico donde se eyectan o adquieren propulsantes).
 
 **Teorema de Impulso - Transferencia Discreta**:
 En eventos cataclísmicos mecánicos de extremada brevedad temporal (como impactos, explosiones estelares o pelotazos), la función de la fuerza $\vec{F}(t)$ experimenta picos tipo función delta de Dirac en $t_0$. Si integramos en todo el dominio temporal infinitesimal del contacto $\Delta t \to \epsilon$:
+
 $$ \vec{J} = \int_{t_0}^{t_0+\Delta t} \vec{F}(t) \, dt = \int_{\vec{p}_i}^{\vec{p}_f} d\vec{p} = \Delta\vec{p} $$
+
 El Impulso Vectorial $\vec{J}$ se transfiere de inmediato, permitiendo puentear y esquivar analíticamente los procesos micro-deformativos del choque.
 
 ### 2. Teorema de Noether y Sistemas Continuos Aislados
 
 Considerando un ensamble $N$-partículas de sub-masas $m_1, m_2...$, si la métrica espacial presenta **Homogeneidad Traslacional** (las leyes de la física son intrínsecamente independientes de "dónde" se sitúe el sistema en el vacío de universo cerrado), el teorema de Emmy Noether asegura formalmente una constante local de conservación del lagrangiano, que resulta ser justamente el vector del Momento Lineal Total $\vec{P}_{tot} = \sum_{j=1}^N \vec{p}_j$.
 Esto se valida también derivando las sumatorias de las terceras leyes accionales ($\vec{F}_{ij} = - \vec{F}_{ji}$ cancela los vínculos inter-atomicos):
+
 $$ \frac{d\vec{P}_{tot}}{dt} = \sum \vec{F}_{ext} $$
+
 Si el ensamble no experimenta gradientes de campo de fondo perturbantes ($\sum \vec{F}_{ext} = 0$):
+
 $$ \mathbf{\vec{P}_{tot} = Constante Vectorial} \implies m_1\vec{v}_{1,i} + m_2\vec{v}_{2,i} + ... = m_1\vec{v}_{1,f} + m_2\vec{v}_{2,f} + ... $$
 
 ```mermaid
@@ -51,8 +58,11 @@ Para un choque 1D entre $m_1$ y $m_2$ donde $v_{2i} = 0$:
 2. $\frac{1}{2}m_1 v_{1i}^2 = \frac{1}{2}m_1 v_{1f}^2 + \frac{1}{2}m_2 v_{2f}^2$
 
 La manipulación matricial acoplada de ambas depara a las célebres soluciones modales cerradas:
+
 $$ v_{1f} = \left(\frac{m_1 - m_2}{m_1 + m_2}\right) v_{1i} $$
+
 $$ v_{2f} = \left(\frac{2m_1}{m_1 + m_2}\right) v_{1i} $$
+
 Las asintóticas demuestran escenarios maravillosos:
 - Si $m_1 = m_2$, los constituyentes ceden momento perfecto como partículas especulares (bolas de billar, péndulo de Newton).
 - Si $m_1 \ll m_2$, rebote elástico a pared inamovible $v_{1f} \approx -v_{1i}$.
@@ -62,7 +72,9 @@ Las asintóticas demuestran escenarios maravillosos:
 
 Las restricciones microscópicas termodinámicas impiden el ideal elástico en la práctica; siempre hay desorden estructural asimétrico vibracional, fonones que disipan como sonido o roturas de malla ($K_{final} < K_{inicial}$). 
 Esta inelásticidad macroscópica está encapsulada estocásticamente de modo pragmático dentro del **Coeficiente Empírico Restitutivo** $e$, el cual impone una métrica lineal sobre las magnitudes recesivas de la cinemática de aproximación y expansión a lo largo de la normal instantánea de contacto $\hat{n}$:
+
 $$ e = \frac{\vec{v}_{separacion} \cdot \hat{n}}{\vec{v}_{aproximacion} \cdot \hat{n}} = \frac{v_{2f} - v_{1f}}{v_{1i} - v_{2i}} $$
+
 Rango métrico:
 - $e = 1$: Ideal elástico inafectado por gradientes de choque disipativos en su sección seccional de red.
 - $0 < e < 1$: Regímenes cuasi y semi-inelásticos estables macroscópicos. Disipación parcial de $K$.
@@ -71,7 +83,9 @@ Rango métrico:
 ### 5. Mecánica del Centro de Masa (C.M.) y Transformaciones de Referencia
 
 El paradigma matemático se simplifica operando en transformadas referenciales galileanas que anulan el momento agregado. El **Centro de Masa** constituye un pseudo-baricentro gravitacional topológico:
+
 $$ \vec{R}_{CM} = \frac{1}{M_{tot}} \int \vec{r} \, dm $$
+
 La velocidad del C.M., al ser ponderada por las masas, no es otra cosa que $\vec{v}_{CM} = \frac{\vec{P}_{tot}}{M_{tot}}$. Si no intervienen macro-fuerzas externas, $\vec{v}_{CM}$ es estrictamente inmodificable, ni colisiones estruendosas nucleares interrumpiéndolo le afectan en lo más mínimo.
 
 El uso de un sistema coordinado móvil anclado a este punto ($S_{cm}$) hace que la sumatoria total del Momento del ensamble allí valga cero ($\vec{P}_{cm}^{tot} = \vec{0}$). Este "Zero-Momentum Frame" permite que todo colisionador cuántico actual (CERN, Fermilab) reduzca las geometrías de scattering angular 3D complejas de interacciones nucleónicas a distribuciones polares simples dependientes sólo de secciones transversales y ángulos esféricos, desacoplando la cinética del centroide virtual de las dinámicas relativas inelásticas.
@@ -85,12 +99,17 @@ Un bloque de madera de masa $M$ cuelga de dos cuerdas. Una bala de masa $m$ que 
 Este clásico problema se divide en dos fases distintas:
 1. **Fase de Colisión (Completamente inelástica)**: 
    Las fuerzas impulsivas internas son inmensas, pero la fuerza externa neta horizontal es 0. Conservamos el momento, *pero no* la energía.
+
    $$ m v_0 = (m + M) V_{final} \implies V_{final} = \frac{m}{m+M} v_0 $$
+
 2. **Fase de Balanceo (Conservación de Energía)**:
    La tensión de las cuerdas no hace trabajo. La única fuerza conservativa es la gravedad. Aquí se conserva la energía mecánica, *pero no* el momento (la gravedad actúa).
    Energía inicial de esta fase: $K = \frac{1}{2}(m+M)V_{final}^2$. Energía final: $U = (m+M)gh$.
+
    $$ \frac{1}{2}(m+M)V_{final}^2 = (m+M)gh \implies V_{final} = \sqrt{2gh} $$
+
 3. **Igualando ecuaciones**:
+
    $$ \frac{m}{m+M} v_0 = \sqrt{2gh} \implies \mathbf{v_0 = \left(\frac{m+M}{m}\right) \sqrt{2gh}} $$
 
 ---
@@ -235,7 +254,9 @@ Las singularidades en la derivada $d\Theta/db$ mapean hacia las cáusticas de la
 1. **[Invariant Variation Problems (Emmy Noether, 1918)](https://arxiv.org/abs/physics/0503066)**
    - *Importancia Teórica*: El Teorema de Noether es, argumentablemente, el descubrimiento teórico más hermoso e importante de la física teórica del siglo XX.
    - *Contexto Matemático*: Postula que toda simetría diferenciable continua de la Acción $\mathcal{S}$ de un sistema genera una ley de conservación local estricta. Si el Lagrangiano $L(q_i, \dot{q}_i, t)$ es invariante frente a una traslación espacial infinitesimal $\delta \vec{r} = \vec{\epsilon}$ (homogeneidad del espacio vacío):
+
      $$ \frac{\partial L}{\partial \vec{r}} = 0 \implies \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\vec{r}}} \right) = \frac{d}{dt}(\vec{p}) = \vec{0} $$
+
      El momento conjugado se conserva universalmente.
    - *Implicaciones*: Transforma la Conservación del Momento Lineal de una simple "consecuencia" de la 3ª Ley de Newton, a un requisito axiomático del tejido cosmológico isotrópico.
 2. **[Center-of-Mass Frame in Elastic Scattering (Rutherford, 1911)](https://doi.org/10.1080/14786440508637080)**
@@ -245,7 +266,9 @@ Las singularidades en la derivada $d\Theta/db$ mapean hacia las cáusticas de la
 3. **[The Dynamics of Variable Mass Systems: Tsiolkovsky Rocket Equation (Tsiolkovsky, 1903)](https://en.wikipedia.org/wiki/Tsiolkovsky_rocket_equation)**
    - *Importancia Teórica*: Describe que para acelerar un sistema en el vacío sideral sin rozar contra un entorno externo, es imperativo expulsar continuamente masa a alta velocidad relativa, cediéndole momento.
    - *Contexto Matemático*: Del balance general $\vec{F}_{ext} = \frac{d\vec{P}}{dt}$, y sin gravedad, el cohete de masa variable eyecta gas con velocidad exhaustiva relativa $-v_e$. La integración da como resultado una ganancia logarítmica extrema de velocidad $\Delta v$:
+
      $$ \Delta v = v_e \ln \left( \frac{m_0}{m_f} \right) $$
+
    - *Implicaciones*: Demuestra que viajar al espacio requiere que un cohete sea mayormente combustible líquido ($m_0 \gg m_f$), dado que la ganancia de velocidad es terriblemente ineficiente (logarítmica).
 
 ### 📖 Referencias Útiles y Bibliografía

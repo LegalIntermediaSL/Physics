@@ -79,6 +79,7 @@ $$ -\frac{\hbar^2}{2\mu} \frac{d^2 S(R)}{dR^2} + \left[ V(R) + \frac{\hbar^2 J(J
 Alrededor de la posición de equilibrio $R_e$ (mínimo de la PES), expandimos el potencial efectivo $V_{\text{eff}}(R) = V(R) + \frac{\hbar^2 J(J+1)}{2\mu R^2}$ en serie de Taylor:
 
 $$ V(R) \approx V(R_e) + \frac{1}{2} k (R - R_e)^2 $$
+
 donde $k = \left( \frac{d^2 V}{dR^2} \right)_{R_e}$ es la constante de fuerza del enlace.
 Fijando $R \approx R_e$ en el término rotacional (modelo de rotor rígido), la energía total cuantizada es la suma de los niveles rotacionales y vibracionales:
 
@@ -126,28 +127,38 @@ xychart-beta
    Las reglas de selección para transiciones de absorción dipolar eléctrica exigen $\Delta J = +1$.
    La energía del estado inicial es $E_J = B J(J+1)$ y del estado final $E_{J+1} = B(J+1)(J+2)$.
    La energía del fotón absorbido es:
+
    $$ \Delta E = E_{J+1} - E_J = B \left[ (J+1)(J+2) - J(J+1) \right] = 2B(J+1) $$
+
    La frecuencia de transición para $J \rightarrow J+1$ es $\nu_J = \frac{2B(J+1)}{h}$.
    La separación entre dos líneas espectrales sucesivas ($J \rightarrow J+1$ y $J+1 \rightarrow J+2$) es:
+
    $$ \Delta \nu = \nu_{J+1} - \nu_J = \frac{2B(J+2)}{h} - \frac{2B(J+1)}{h} = \frac{2B}{h} $$
+
    Se nos da que $\Delta \nu = 115.27 \times 10^9 \, \text{Hz}$.
 
 2. **Calcular la Constante Rotacional $B$ en Julios:**
+
    $$ B = \frac{h \Delta \nu}{2} = \frac{(6.62607 \times 10^{-34} \, \text{J s})(115.27 \times 10^9 \, \text{s}^{-1})}{2} = 3.8188 \times 10^{-23} \, \text{J} $$
 
 3. **Extraer el Momento de Inercia $I$:**
    Sabiendo que $B = \frac{\hbar^2}{2I}$, despejamos $I$:
+
    $$ I = \frac{\hbar^2}{2B} = \frac{(1.05457 \times 10^{-34} \, \text{J s})^2}{2(3.8188 \times 10^{-23} \, \text{J})} = 1.4559 \times 10^{-46} \, \text{kg m}^2 $$
 
 4. **Calcular la Masa Reducida $\mu$:**
    Las masas isotópicas exactas son $m(^{12}\text{C}) = 12.0000 \, \text{u}$ y $m(^{16}\text{O}) = 15.9949 \, \text{u}$.
    Con $1 \, \text{u} = 1.660539 \times 10^{-27} \, \text{kg}$:
+
    $$ \mu = \frac{m_C m_O}{m_C + m_O} = \frac{(12.0000)(15.9949)}{12.0000 + 15.9949} \, \text{u} \approx 6.8562 \, \text{u} $$
+
    $$ \mu \approx 6.8562 \times 1.660539 \times 10^{-27} \, \text{kg} \approx 1.1385 \times 10^{-26} \, \text{kg} $$
 
 5. **Resolver para la Longitud de Enlace de Equilibrio $R_e$:**
    A partir de $I = \mu R_e^2$:
+
    $$ R_e = \sqrt{\frac{I}{\mu}} = \sqrt{\frac{1.4559 \times 10^{-46}}{1.1385 \times 10^{-26}}} \approx \sqrt{1.2788 \times 10^{-20}} $$
+
    $$ R_e \approx 1.1308 \times 10^{-10} \, \text{m} = 0.1131 \, \text{nm} \, (1.131 \, \text{Å}) $$
 
 **Análisis de la Disminución a Alto $J$ (Efecto de Distorsión Centrífuga):**
@@ -163,10 +174,14 @@ Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido 
 2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
 3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
 4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+
    $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+
    donde $a_0$ es el radio de Bohr.
 5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+
    $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+
 6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
 
 ### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
@@ -187,12 +202,17 @@ Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein d
 **Solución paso a paso:**
 1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
 2. El número total de partículas en estados excitados viene dado por la integral:
+
    $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+
 3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
 4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+
    $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+
 5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
 6. Resolviendo para $T_c$:
+
    $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
 
 ## 💻 Simulaciones Computacionales

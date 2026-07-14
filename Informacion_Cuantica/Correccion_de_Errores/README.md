@@ -12,16 +12,22 @@ Para que un código cuántico pueda corregir un conjunto de errores $\mathcal{E}
 
 **Teorema (Condiciones de Knill-Laflamme):**
 Un código cuántico $\mathcal{C}$ con proyector asociado $P = \sum_k |k_L\rangle \langle k_L|$ (donde $\{|k_L\rangle\}$ forma una base ortonormal para $\mathcal{C}$) puede corregir exactamente un conjunto de errores $\{E_i\}$ si y solo si:
+
 $$ P E_i^\dagger E_j P = C_{ij} P $$
+
 donde $C_{ij}$ es una matriz hermitiana y definida positiva independiente del estado.
 
 **Demostración Paso a Paso:**
 1. **Diagonalización de la matriz de error:** Al ser $C_{ij}$ hermitiana, puede diagonalizarse mediante una transformación unitaria $U$: $C = U D U^\dagger$, donde $D$ es diagonal con elementos $d_{kk}$.
 2. **Base de errores ortogonales:** Definimos un nuevo conjunto de errores $F_k = \sum_i U_{ki} E_i$. Evaluando la condición de Knill-Laflamme con esta nueva base, obtenemos:
+
    $$ P F_k^\dagger F_l P = \sum_{i,j} U_{ki}^* U_{lj} P E_i^\dagger E_j P = \sum_{i,j} U_{ki}^* C_{ij} U_{lj} P = d_{kl} \delta_{kl} P $$
+
 3. **Medida del Síndrome:** Esta ortogonalidad implica que los subespacios de error $\mathcal{E}_k = F_k \mathcal{C}$ son mutuamente ortogonales para distintos $k$. Esto permite realizar una medida proyectiva (síndrome) descrita por los proyectores $P_k = F_k P F_k^\dagger / d_{kk}$ sin colapsar la superposición de estados lógicos.
 4. **Operación de Recuperación:** Si el resultado de la medida es $k$, el estado proyectado es proporcional a $F_k |\psi\rangle$. La recuperación se efectúa aplicando $R_k = U_k F_k^\dagger$, donde $U_k$ es un operador unitario que invierte $F_k$ sobre su soporte. Entonces:
+
    $$ R_k F_k |\psi\rangle = U_k F_k^\dagger F_k P |\psi\rangle = U_k (d_{kk} P) |\psi\rangle \propto |\psi\rangle $$
+
 Esto concluye la demostración formal: el estado inicial se restaura perfectamente.
 
 ### 2. El Código de Repetición de 3 Qubits (Bit-Flip Code)
@@ -29,11 +35,15 @@ Esto concluye la demostración formal: el estado inicial se restaura perfectamen
 El error más simple es el de salto de bit (bit-flip), representado por la matriz de Pauli $X$. Supongamos un canal cuántico donde cada qubit sufre un error $X$ con probabilidad $p$.
 
 Codificamos los estados base en tres qubits físicos:
+
 $$ |0_L\rangle = |000\rangle, \quad |1_L\rangle = |111\rangle $$
+
 Un estado lógico general es $|\psi\rangle = \alpha|0_L\rangle + \beta|1_L\rangle = \alpha|000\rangle + \beta|111\rangle$.
 
 Si un bit-flip ocurre en el primer qubit, el estado se convierte en:
+
 $$ X_1 |\psi\rangle = \alpha|100\rangle + \beta|011\rangle $$
+
 Para detectar este error sin medir $\alpha$ y $\beta$, medimos la paridad de los pares de qubits (los generadores del estabilizador):
 - Paridad $Z_1 Z_2$: compara el qubit 1 y 2.
 - Paridad $Z_2 Z_3$: compara el qubit 2 y 3.
@@ -58,7 +68,9 @@ graph TD;
 ```
 
 **Análisis de Medidas:**
+
 $$ \langle \psi| X_1^\dagger (Z_1 Z_2) X_1 |\psi\rangle = \langle \psi| (-Z_1 X_1 X_1 Z_2) |\psi\rangle = -\langle \psi| Z_1 Z_2 |\psi\rangle $$
+
 Como $Z_1 Z_2 |000\rangle = |000\rangle$ y $Z_1 Z_2 |111\rangle = |111\rangle$, el valor propio antes del error es $+1$. Después de $X_1$, el valor medido es $-1$. El síndrome $(Z_1 Z_2, Z_2 Z_3) = (-1, +1)$ nos indica unívocamente (para un solo error) que el error $X_1$ ha ocurrido, permitiéndonos aplicar $X_1$ de nuevo para restaurar $|\psi\rangle$.
 
 ### 3. Formalismo Estabilizador
@@ -66,12 +78,15 @@ Como $Z_1 Z_2 |000\rangle = |000\rangle$ y $Z_1 Z_2 |111\rangle = |111\rangle$, 
 El código de 3 qubits es un ejemplo de un **código estabilizador**. Sea el grupo de Pauli en $n$ qubits $\mathcal{P}_n = \{ \pm 1, \pm i \} \times \{I, X, Y, Z\}^{\otimes n}$.
 
 Un código estabilizador se define por un subgrupo abeliano $S \subset \mathcal{P}_n$ que no contiene a $-I$. El subespacio codificado (espacio del código) es el subespacio simultáneo de +1 autovalores de todos los elementos $s \in S$:
+
 $$ \mathcal{C} = \{ |\psi\rangle \in (\mathbb{C}^2)^{\otimes n} \mid s |\psi\rangle = |\psi\rangle, \forall s \in S \} $$
 
 **Propiedades Algebraicas:**
 Dado un grupo estabilizador $S$ generado por $n-k$ operadores independientes $\langle g_1, \dots, g_{n-k} \rangle$, el subespacio $\mathcal{C}$ codifica exactamente $k$ qubits lógicos (dimensión $2^k$).
 Los errores pueden describirse como operadores $E \in \mathcal{P}_n$. El síndrome del error $E$ está dado por las relaciones de conmutación con los generadores de $S$:
+
 $$ E g_i = (-1)^{c_i} g_i E $$
+
 donde $c_i = 0$ si $E$ y $g_i$ conmutan, y $c_i = 1$ si anticonmutan. El vector $(c_1, \dots, c_{n-k})$ es el **síndrome clásico**. 
 
 **Condición de Corrección:** Dos errores $E_1$ y $E_2$ tienen el mismo síndrome si y solo si $E_1^\dagger E_2$ conmuta con todos los elementos de $S$ (pertenece al centralizador $C(S)$). Para evitar errores lógicos irrecuperables, requerimos que $E_1^\dagger E_2 \notin C(S) \setminus S$, es decir, la distancia del código $d$ es el peso mínimo de un operador en $C(S) \setminus S$. Un código corrige cualquier error de peso $\lfloor (d-1)/2 \rfloor$.
@@ -79,7 +94,9 @@ donde $c_i = 0$ si $E$ y $g_i$ conmutan, y $c_i = 1$ si anticonmutan. El vector 
 ### 4. El Código de Shor (9 Qubits)
 
 El código de Shor concatena un código de bit-flip y uno de phase-flip ($Z$) para corregir errores arbitrarios de un qubit. La codificación lógica es:
+
 $$ |0_L\rangle = \frac{(|000\rangle + |111\rangle)(|000\rangle + |111\rangle)(|000\rangle + |111\rangle)}{2\sqrt{2}} $$
+
 $$ |1_L\rangle = \frac{(|000\rangle - |111\rangle)(|000\rangle - |111\rangle)(|000\rangle - |111\rangle)}{2\sqrt{2}} $$
 
 Este código tiene 8 generadores estabilizadores:
@@ -99,9 +116,13 @@ Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqr
 3. Elegimos las mediciones para Bob como $B = \frac{-\sigma_z - \sigma_x}{\sqrt{2}}$ y $B' = \frac{\sigma_z - \sigma_x}{\sqrt{2}}$.
 4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
 5. Calculamos cada término:
+
    $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+
 6. Sumando los términos, el valor de expectación es:
+
    $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+
 7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
 
 ### Ejercicio 2: Código de Corrección de Errores de Shor (9 qubits)
@@ -121,7 +142,9 @@ Construya el circuito y derive la acción de la QFT sobre un estado de base comp
 **Solución paso a paso:**
 1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
 2. Para 3 qubits, se puede reescribir como un producto tensorial:
+
    $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+
 3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
 4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
 5. Se repite el proceso para los qubits restantes, aplicando Hadamard y $R_2$ en $x_1$, y finalmente Hadamard en $x_0$.
@@ -193,16 +216,19 @@ En 2026, el campo de la Corrección de Errores Cuánticos (QEC) ha migrado radic
 La fundamentación de los códigos de error topológicos reside intrínsecamente en el corazón de la **Topología Algebraica, la Homología y las Variedades Celulares**.
 
 Un código de estabilizador puede ser formulado como un complejo de cadenas cohomológico bi-graduado $\mathcal{C}$ dotado de un operador diferencial frontera $\partial$ que satisface $\partial^2 = 0$. Consideremos el complejo clásico:
+
 $$ C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 $$
 
 Los espacios vectoriales (sobre $\mathbb{F}_2$) corresponden respectivamente a estabilizadores-plaqueta ($Z$), qubits, y estabilizadores-vértice ($X$). La condición de conmutación de estabilizadores equivale directamente al lema topológico $\partial_1 \circ \partial_2 = 0$, significando que los límites de las fronteras topológicas son nulos.
 
 El grupo de Homología $\mathbb{F}_2$-coeficiente codifica asombrosamente los estados lógicos del código:
+
 $$ H_1(\mathcal{C}, \mathbb{F}_2) = \frac{\ker(\partial_1)}{\text{Im}(\partial_2)} $$
 
 Los elementos de $\ker(\partial_1)$ son lazos cerrados (ciclos) correspondientes a palabras lógicas (cadenas de $Z$ que conmutan con estabilizadores tipo $X$). Los elementos triviales en $\text{Im}(\partial_2)$ son ciclos contráctiles equivalentes a los operadores estabilizadores, es decir, el síndrome nulo.
 
 La distancia del código, que determina el grado de entrelazamiento cuántico tripartito, coincide con el radio de inyectividad homotópica de la variedad sistólica, definiéndose por el menor peso de un operador homotópicamente no trivial:
+
 $$ d_Z = \min_{c \in \ker(\partial_1) \setminus \text{Im}(\partial_2)} \text{peso}(c) $$
 
 La investigación actual explora Códigos de Haces Perversos (Perverse Sheaves) sobre Variedades de Riemann hiperbólicas $4D$, buscando estabilizadores de peso constante local (qLDPC) que alberguen subespacios lógicos expansores $k \propto n$, rompiendo asintóticamente la barrera impuesta por el teorema de Bravyi-Poulin-Terhal para grafos eucledianos acotados.
@@ -219,27 +245,39 @@ La investigación actual explora Códigos de Haces Perversos (Perverse Sheaves) 
    - **Enlace:** [https://doi.org/10.1103/PhysRevA.52.R2493](https://doi.org/10.1103/PhysRevA.52.R2493)
    - **Importancia Teórica:** Este histórico trabajo mostró por primera vez que la decoherencia de múltiples tipos (bit-flip y phase-flip) puede corregirse utilizando la redundancia de entrelazamiento, sin violar el teorema de no-clonación.
    - **Fondo Matemático:** Construye el estado codificado entrelazando 9 qubits para 1 qubit lógico. Utiliza proyectores estabilizadores locales como $Z_1 Z_2$ y $X_1 X_2 X_3 X_4 X_5 X_6$ para proyectar el error continuo en un error discreto corregible:
+
      $$
+
      E |\psi_L\rangle \xrightarrow{\text{Medida}} P_k |\psi_L\rangle
+
      $$
+
    - **Implicaciones Físicas:** Demostró la viabilidad a largo plazo de la computación cuántica, mitigando la creencia previa de que los errores analógicos acumularían inevitablemente un ruido catastrófico.
 
 2. **Surface codes: Towards practical large-scale quantum computation (A. Fowler et al., 2012)**
    - **Enlace:** [https://arxiv.org/abs/1208.0928](https://arxiv.org/abs/1208.0928)
    - **Importancia Teórica:** Los códigos de superficie (una clase de códigos topológicos) poseen el umbral de tolerancia a fallos más alto conocido ($\approx 1\%$), y demandan únicamente interacciones geométricas de 2-vecinos (arquitectura bidimensional local).
    - **Fondo Matemático:** El Hamiltoniano de superficie (código Torico de Kitaev) se basa en estabilizadores tipo placa $B_p$ y cruz $A_v$:
+
      $$
+
      H = - \sum_v A_v - \sum_p B_p \quad \text{donde} \quad A_v = \prod_{i \in \text{star}(v)} X_i, \quad B_p = \prod_{j \in \text{plaquette}(p)} Z_j
+
      $$
+
    - **Implicaciones Físicas:** Conecta la teoría de la información con las fases topológicas de la materia (quasipartículas anyónicas). Es el modelo dominante propuesto para la computación escalable moderna por Google e IBM.
 
 3. **Stabilizer Codes and Quantum Error Correction (Gottesman, 1997)**
    - **Enlace:** [https://arxiv.org/abs/quant-ph/9705052](https://arxiv.org/abs/quant-ph/9705052)
    - **Importancia Teórica:** La tesis fundacional de Gottesman que establece el poderoso formalismo algebraico estabilizador.
    - **Fondo Matemático:** Explota el subgrupo de Pauli $\mathcal{S} \subset \mathcal{P}_n$. El subespacio lógico se define como el autoespacio de $+1$ para cada estabilizador:
+
      $$
+
      \mathcal{C} = \{ |\psi\rangle \mid S_i |\psi\rangle = |\psi\rangle, \forall S_i \in \mathcal{S} \}
+
      $$
+
      Demuestra que las compuertas lógicas pueden rastrearse actualizando generadores (Teorema de Gottesman-Knill).
    - **Implicaciones Físicas:** Unifica los códigos clásicos lineales con los cuánticos y provee una simulación eficiente de un subconjunto de circuitos cuánticos en computadoras clásicas.
 

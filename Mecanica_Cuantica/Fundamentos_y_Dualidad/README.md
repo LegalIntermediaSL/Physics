@@ -16,15 +16,23 @@ A finales del siglo XIX y principios del XX, una serie de experimentos inexplica
 ### Teoría Cuántica de la Radiación del Cuerpo Negro
 
 El inicio del formalismo cuántico surgió al analizar la densidad de energía de la radiación electromagnética en una cavidad en equilibrio térmico. Clásicamente, la física estadística y el electromagnetismo (ley de Rayleigh-Jeans) asumen que la energía térmica se reparte equitativamente en todos los modos vibracionales. Como el número de modos por unidad de frecuencia escala con $\nu^2$, la densidad de energía sería:
+
 $$ \rho_{RJ}(\nu, T) = \frac{8\pi \nu^2 k_B T}{c^3} $$
+
 Esto predice que un objeto a temperatura constante radiará una cantidad infinita de energía en altas frecuencias ($\nu \to \infty$), un absurdo físico bautizado como la "Catástrofe Ultravioleta".
 
 Para resolver esto, Max Planck propuso una hipótesis ad hoc (1900): los osciladores materiales en las paredes de la cavidad no pueden emitir o absorber energía de manera continua, sino en paquetes discretos o "cuantos". La energía de un oscilador de frecuencia $\nu$ se cuantiza en múltiplos enteros:
+
 $$ E_n = nh\nu, \quad n = 0, 1, 2, \dots $$
+
 donde $h$ es la constante de Planck ($6.62607015 \times 10^{-34} \text{ J}\cdot\text{s}$). Calculando el valor esperado estadístico de la energía de los osciladores usando la distribución de Boltzmann:
+
 $$ \langle E \rangle = \frac{\sum_{n=0}^{\infty} (nh\nu) e^{-nh\nu / k_B T}}{\sum_{n=0}^{\infty} e^{-nh\nu / k_B T}} = \frac{h\nu}{e^{h\nu / k_B T} - 1} $$
+
 Multiplicando por la densidad de modos $\frac{8\pi \nu^2}{c^3}$, surge la **Ley de Radiación de Planck**:
+
 $$ \rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \frac{1}{e^{h\nu / k_B T} - 1} $$
+
 Esta fórmula coincide perfectamente con los espectros observados y decae exponencialmente a altas frecuencias, resolviendo la divergencia clásica.
 
 ```mermaid
@@ -43,23 +51,33 @@ En 1905, Einstein fue más allá: la cuantización no era un artefacto de los os
 
 En el efecto fotoeléctrico, cuando una placa de metal es iluminada, emite electrones. Clásicamente se esperaba que una luz más intensa aumentara la energía de estos electrones y que existiera un retardo temporal. Sin embargo, la energía de los electrones resultaba ser independiente de la intensidad, pero linealmente dependiente de la frecuencia. 
 Einstein modeló el proceso como colisiones uno-a-uno entre fotones y electrones. La conservación de la energía en la extracción de un electrón dicta:
+
 $$ h\nu = K_{\max} + \Phi $$
+
 $$ K_{\max} = h\nu - \Phi $$
+
 donde $\Phi$ (función de trabajo) es la energía mínima necesaria para arrancar un electrón, dependiente del material. Si $h\nu < \Phi$, ningún electrón es emitido, explicando el efecto del umbral de frecuencia.
 
 ### Dualidad Onda-Partícula y Momento del Fotón
 
 El fotón viaja a la velocidad de la luz $c$, por lo que su masa invariante es nula. Por relatividad especial, la relación energía-momento es $E^2 = (pc)^2 + (m_0 c^2)^2$. Para $m_0 = 0$:
+
 $$ E = pc \implies p = \frac{E}{c} = \frac{h\nu}{c} = \frac{h}{\lambda} $$
+
 Arthur Compton (1923) confirmó que los fotones portan este momento $p = h/\lambda$ colisionándolos con electrones y verificando la conservación del momento (Dispersión Compton):
+
 $$ \Delta \lambda = \lambda' - \lambda = \frac{h}{m_e c} (1 - \cos\theta) $$
 
 ### Hipótesis de de Broglie: Ondas de Materia
 
 Si las ondas de luz presentan comportamiento de partícula (fotón), Louis de Broglie propuso (1924) la simetría opuesta: las partículas materiales (como los electrones) deberían exhibir comportamiento de onda. A toda partícula con momento $p$ se le asocia una onda de materia de longitud:
+
 $$ \lambda_{dB} = \frac{h}{p} = \frac{h}{mv} $$
+
 Esta relación revolucionaria fue confirmada cuando se observó difracción cristalina en haces de electrones (Davisson-Germer, 1927). A partir de la hipótesis de de Broglie, la condición de cuantización del átomo de Bohr ($mvr = n\hbar$) emerge naturalmente al exigir que la onda electrónica forme una onda estacionaria estable en la órbita atómica:
+
 $$ 2\pi r = n\lambda_{dB} = n\frac{h}{p} \implies pr = n\frac{h}{2\pi} = n\hbar $$
+
 Este salto conceptual prepararía el terreno para la formulación completa de la función de onda de Schrödinger.
 
 ---
@@ -69,13 +87,21 @@ Este salto conceptual prepararía el terreno para la formulación completa de la
 
 **Solución paso a paso:**
 1. La energía cinética ganada por el electrón es $K = eV$, donde $e = 1.6 \times 10^{-19} \text{ C}$.
+
 $$ K = (1.6 \times 10^{-19} \text{ C})(100 \text{ V}) = 1.6 \times 10^{-17} \text{ J} $$
+
 2. Relacionamos la energía cinética (no relativista) con el momento:
+
 $$ K = \frac{p^2}{2m_e} \implies p = \sqrt{2m_e K} $$
+
 3. Sustituimos la masa del electrón $m_e = 9.11 \times 10^{-31} \text{ kg}$:
+
 $$ p = \sqrt{2 (9.11 \times 10^{-31}) (1.6 \times 10^{-17})} \approx 5.4 \times 10^{-24} \text{ kg}\cdot\text{m/s} $$
+
 4. Usamos la relación de de Broglie:
+
 $$ \lambda = \frac{h}{p} = \frac{6.626 \times 10^{-34}}{5.4 \times 10^{-24}} \approx 1.23 \times 10^{-10} \text{ m} = 0.123 \text{ nm} $$
+
 La longitud de onda está en el rango de los rayos X, adecuada para difracción cristalina.
 
 ---
@@ -88,7 +114,9 @@ Considera un fotón de baja energía que choca contra un electrón ultra-relativ
 1. En el sistema de reposo del electrón inicial, el fotón incidente tiene una energía aumentada por el efecto Doppler relativista: $E'_0 \approx 2\gamma E_0$, donde $\gamma = E_e / m_e c^2$.
 2. En este marco de referencia, ocurre la dispersión Compton normal. Para un fotón de baja energía en este marco ($E'_0 \ll m_e c^2$), la transferencia de energía es pequeña, luego $E'_f \approx E'_0$.
 3. Transformamos de vuelta al sistema de laboratorio (donde el electrón inicialmente se movía rápido). El fotón reflejado hacia atrás (en la dirección del electrón) sufre otro corrimiento Doppler:
+
 $$ E_f \approx 2\gamma E'_f \approx 2\gamma (2\gamma E_0) = 4\gamma^2 E_0 $$
+
 4. Si la colisión es extrema (régimen de Klein-Nishina), toda la energía cinética del electrón se transfiere. Pero en el límite de baja energía, el fotón emerge con una energía multiplicada por un factor $4\gamma^2$, un mecanismo crucial en astrofísica de altas energías.
 
 **Problema 2: Cuantización de Sommerfeld-Wilson**
@@ -96,7 +124,9 @@ Usa la regla de cuantización de Bohr-Sommerfeld $\oint p \, dq = n h$ para enco
 **Solución paso a paso:**
 1. La energía total es invariante: $E = \frac{p^2}{2m} + \frac{1}{2}kx^2$.
 2. Esta ecuación describe una elipse en el espacio de fase $(x,p)$:
+
 $$ \frac{p^2}{2mE} + \frac{x^2}{2E/k} = 1 $$
+
 3. Los semiejes de la elipse son $a = \sqrt{2E/k}$ (en $x$) y $b = \sqrt{2mE}$ (en $p$).
 4. El área de la elipse, que corresponde a la integral cíclica $\oint p \, dx$, es $\text{Área} = \pi a b$.
 5. Sustituimos: $\oint p \, dx = \pi \sqrt{2E/k} \sqrt{2mE} = 2\pi E \sqrt{m/k}$.
@@ -193,17 +223,23 @@ Donde la clase de cohomología de obstrucción $[\mathcal{O}]$ dictamina matemá
 ### 📝 Artículos Científicos Clave
 1. **Planck, M. (1901). "On the Law of Distribution of Energy in the Normal Spectrum"**. *Annalen der Physik*, 4(3), 553-563. [DOI: 10.1002/andp.19013090310](https://doi.org/10.1002/andp.19013090310)
    *Importancia Teórica y Matemática:* Resuelve la catástrofe ultravioleta asumiendo matemáticamente que la energía de los osciladores térmicos es proporcional a su frecuencia:
+
    $$ E_n = nh\nu, \quad \rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \frac{1}{e^{h\nu / k_B T} - 1} $$
+
    *Implicaciones Físicas:* Fue el nacimiento del "cuanto", probando que el intercambio de energía materia-radiación es discontinuo, revolucionando la termodinámica estadística y abriendo la puerta a la física cuántica.
 
 2. **Einstein, A. (1905). "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt"**. *Annalen der Physik*, 17(6), 132-148. [DOI: 10.1002/andp.19053220607](https://doi.org/10.1002/andp.19053220607)
    *Importancia Teórica y Matemática:* Explica el efecto fotoeléctrico postulando que la luz en sí misma está cuantizada en fotones discretos:
+
    $$ K_{\max} = h\nu - \Phi $$
+
    *Implicaciones Físicas:* Extiende la cuantización de Planck (que aplicaba a osciladores de materia) a los propios campos electromagnéticos, introduciendo la noción dual corpúsculo-onda de la luz e impulsando el desarrollo futuro de la QED.
 
 3. **de Broglie, L. (1924). "Recherches sur la théorie des quanta"** (Tesis). *Annales de Physique*, 10(3), 22-128. [DOI: 10.1051/anphys/192510030022](https://doi.org/10.1051/anphys/192510030022)
    *Importancia Teórica y Matemática:* Postula que cualquier partícula material masiva moviéndose con momento $p$ tiene asociada una longitud de onda:
+
    $$ \lambda = \frac{h}{p} = \frac{h}{\gamma m_0 v} $$
+
    *Implicaciones Físicas:* Introduce la dualidad onda-partícula generalizada. Justifica directamente las reglas empíricas de cuantización de órbitas de Bohr-Sommerfeld al requerir ondas estacionarias constructivas en las trayectorias atómicas.
 
 ### 📖 Referencias Útiles y Bibliografía

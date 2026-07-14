@@ -90,6 +90,7 @@ Con una **frecuencia de Rabi generalizada** introducida en forma de norma espect
 Para ampliar a sistemas reales abiertos macroscópicos con disipación, utilizamos las **Ecuaciones de Bloch Ópticas**:
 
 $$ \dot{\rho}_{ee} = -\Gamma \rho_{ee} + \frac{i}{2} (\Omega_R \tilde{\rho}_{ge} - \Omega_R^* \tilde{\rho}_{eg}) $$
+
 $$ \dot{\tilde{\rho}}_{eg} = -\left( \frac{\Gamma}{2} + \gamma_d + i\Delta \right) \tilde{\rho}_{eg} + \frac{i}{2} \Omega_R (\rho_{ee} - \rho_{gg}) $$
 
 Aquí $\Gamma$ es la relajación poblacional y $\gamma_d$ la tasa de desfasamiento puro.
@@ -109,6 +110,7 @@ $$ \hat{H}_{JC} = \frac{1}{2} \hbar\omega_0 \hat{\sigma}_z + \hbar\omega_c \left
 La superposición hamiltoniana desintegra matrices diagonales en pequeños espacios discretos aislados entrelazados $|e, n\rangle$ frente al $|g, n+1\rangle$. Diagonalizando estos subespacios, surgen las hibridaciones polaritónicas de radiación material denominadas **Estados Vestidos (Dressed States)** en resonancia $\omega_c = \omega_0$:
 
 $$ |+_{n}\rangle = \frac{1}{\sqrt{2}} \left( |e, n\rangle + |g, n+1\rangle \right) $$
+
 $$ |-_n\rangle = \frac{1}{\sqrt{2}} \left( -|e, n\rangle + |g, n+1\rangle \right) $$
 
 Esto predice el espaciamiento energético experimental cuántico observable denominado **Desdoblamiento de Vacío Rabi (Vacuum Rabi Splitting)** $2\hbar g \sqrt{n+1}$. Debido a que la luz de un láser real posee distribución de Poisson $P(n) = e^{-\langle n \rangle} \langle n \rangle^n / n!$, una superposición de modos de Jaynes-Cummings causa interferencia macroscópica de desfasamientos manifestando el célebre **Colapso y Revivificación de Rabi**, validando así con precisión absoluta la cuantización del campo electromagnético en interacción óptico-atómica.
@@ -132,10 +134,14 @@ Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido 
 2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
 3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
 4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+
    $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+
    donde $a_0$ es el radio de Bohr.
 5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+
    $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+
 6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
 
 ### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
@@ -156,12 +162,17 @@ Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein d
 **Solución paso a paso:**
 1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
 2. El número total de partículas en estados excitados viene dado por la integral:
+
    $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+
 3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
 4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+
    $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+
 5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
 6. Resolviendo para $T_c$:
+
    $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
 
 ## 💻 Simulaciones Computacionales
@@ -232,7 +243,9 @@ Para el año 2026, la Interacción Luz-Materia avanza fuertemente hacia la hibri
 Cuando el Hamiltoniano de interacción trasciende perturbaciones menores, los sistemas acoplados requieren marcos teóricos globales y simetrías colectivas. El Modelo de Dicke generaliza el acoplamiento a $N$ átomos de dos niveles idénticos dentro de una cavidad. Matemáticamente, el comportamiento de este conjunto está mapeado a un espín gigante colectivo descrito por los operadores del Álgebra $\mathfrak{su}(2)$ ($S_x, S_y, S_z$). 
 
 El Hamiltoniano de Dicke:
+
 $$ \hat{H} = \hbar \omega \hat{a}^\dagger \hat{a} + \hbar \omega_0 \hat{S}_z + \frac{\lambda}{\sqrt{N}}(\hat{a}^\dagger + \hat{a})(\hat{S}_+ + \hat{S}_-) $$
+
 En el Límite Termodinámico ($N \to \infty$), un análisis de campo medio predice la **Transición de Fase Cuántica de Superradiancia**. A pesar de que los subsistemas no interactúan directamente entre sí, por encima de un acoplamiento crítico $\lambda > \lambda_c$, la simetría $Z_2$ de paridad de excitaciones se rompe espontáneamente y el estado base adquiere una coherencia fotónica macroscópica permanente ($\langle \hat{a} \rangle \neq 0$) en estado puro.
 
 En regímenes impulsados por disipación en cavidades abiertas orientadas hacia arquitecturas meta-superficiales acopladas direccionalmente, el análisis se traslada de espacios de Hilbert autoadjuntos a **Puntos Excepcionales (Exceptional Points)** en Hamiltonianos No-Hermitianos matriciales y defectivos (donde los autovectores dejan de formar bases completas), requiriendo un tratamiento analítico matricial fraccionario usando teoría de nudos y superficies de Riemann, que enlazan intrínsecamente el caos cuántico y las transiciones topológicas dependientes de la pérdida fotónica orientada.
@@ -246,17 +259,23 @@ En regímenes impulsados por disipación en cavidades abiertas orientadas hacia 
 ### 📝 Artículos Científicos Clave
 1. **Einstein, A. (1916). "Strahlungs-Emission und -Absorption nach der Quantentheorie"**. *Verhandlungen der Deutschen Physikalischen Gesellschaft*, 18, 318-323. [Enlace Abierto - Traducción B.L. van der Waerden](https://einsteinpapers.press.princeton.edu/vol6-trans/232)
    *Importancia Teórica y Matemática:* Postuló la emisión estimulada y la emisión espontánea basándose puramente en requerimientos termodinámicos, años antes que la mecánica cuántica rigurosa. Relaciona los coeficientes probabilísticos de transición mediante:
+
    $$ \frac{A_{21}}{B_{21}} = \frac{8\pi h \nu^3}{c^3}, \quad g_1 B_{12} = g_2 B_{21} $$
+
    *Implicaciones Físicas:* Estableció la base para comprender la interacción de conjuntos atómicos con la luz y cimentó el camino que llevaría al desarrollo del máser y el láser cuarenta años después.
 
 2. **Dirac, P. A. M. (1927). "The Quantum Theory of the Emission and Absorption of Radiation"**. *Proc. R. Soc. Lond. A*, 114(767), 243-265. [DOI: 10.1098/rspa.1927.0039](https://doi.org/10.1098/rspa.1927.0039)
    *Importancia Teórica y Matemática:* Cuantiza el campo electromagnético, tratándolo como un conjunto de osciladores armónicos. Aplica teoría de perturbaciones dependiente del tiempo para calcular la tasa de emisión espontánea, que semiclasicamente era un misterio:
+
    $$ w_{2\to 1} = \frac{2\pi}{\hbar} | \langle \psi_1, n_k+1 | \hat{H}' | \psi_2, n_k \rangle |^2 \rho(E) $$
+
    *Implicaciones Físicas:* Nace la Electrodinámica Cuántica (QED). Explica que la "emisión espontánea" no ocurre en el vacío clásico absoluto, sino que es estimulada por las inevitables fluctuaciones del vacío cuántico del campo electromagnético.
 
 3. **Jaynes, E. T., & Cummings, F. W. (1963). "Comparison of quantum and semiclassical radiation theories with application to the beam maser"**. *Proc. IEEE*, 51(1), 89-109. [DOI: 10.1109/PROC.1963.1664](https://doi.org/10.1109/PROC.1963.1664)
    *Importancia Teórica y Matemática:* Desarrolla un modelo exacto de un átomo de dos niveles interactuando fuertemente con un único modo cuantizado de la cavidad electromagnética. El Hamiltoniano de Jaynes-Cummings es:
+
    $$ \hat{H} = \hbar \omega_c \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) + \frac{\hbar \omega_a}{2} \hat{\sigma}_z + \hbar g (\hat{a} \hat{\sigma}_+ + \hat{a}^\dagger \hat{\sigma}_-) $$
+
    *Implicaciones Físicas:* Reveló el fenómeno de los "colapsos y revivales" de las oscilaciones de Rabi, probando el carácter discreto (fotónico) del campo. Es el modelo teórico más importante en Cavity QED (CQED) e información cuántica moderna.
 
 ### 📖 Referencias Útiles y Bibliografía

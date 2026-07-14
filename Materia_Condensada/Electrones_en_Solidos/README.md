@@ -80,23 +80,33 @@ graph TD
    Una celda unitaria de la red FCC contiene exactamente 4 átomos.
    Puesto que cada átomo aporta un electrón libre de conducción ($Z=1$), el número de electrones de conducción por celda unitaria es 4.
    El volumen de la celda unitaria es $V_c = a^3$.
+
    $$ n = \frac{\text{electrones}}{\text{volumen}} = \frac{4}{a^3} $$
+
    Convirtiendo el parámetro de red a metros: $a = 3.61 \times 10^{-10} \, \text{m}$.
+
    $$ n = \frac{4}{(3.61 \times 10^{-10})^3} \approx \frac{4}{4.704 \times 10^{-29}} \approx 8.50 \times 10^{28} \, \text{m}^{-3} $$
 
 2. **Cálculo del Vector de Onda de Fermi ($k_F$):**
+
    $$ k_F = (3 \pi^2 n)^{1/3} $$
+
    $$ k_F = (3 \pi^2 \times 8.50 \times 10^{28})^{1/3} = (2.518 \times 10^{30})^{1/3} \approx 1.36 \times 10^{10} \, \text{m}^{-1} $$
 
 3. **Cálculo de la Energía de Fermi ($E_F$):**
    Usando la masa del electrón en reposo $m_e = 9.11 \times 10^{-31} \, \text{kg}$ y $\hbar = 1.055 \times 10^{-34} \, \text{J}\cdot\text{s}$:
+
    $$ E_F = \frac{\hbar^2 k_F^2}{2 m_e} = \frac{(1.055 \times 10^{-34})^2 (1.36 \times 10^{10})^2}{2 \times 9.11 \times 10^{-31}} $$
+
    $$ E_F = \frac{(1.11 \times 10^{-68}) (1.85 \times 10^{20})}{1.822 \times 10^{-30}} \approx \frac{2.05 \times 10^{-48}}{1.822 \times 10^{-30}} \approx 1.125 \times 10^{-18} \, \text{J} $$
+
    Convirtiendo a electrón-voltios ($1 \, \text{eV} = 1.602 \times 10^{-19} \, \text{J}$):
+
    $$ E_F (\text{eV}) = \frac{1.125 \times 10^{-18}}{1.602 \times 10^{-19}} \approx 7.02 \, \text{eV} $$
 
 4. **Cálculo de la Temperatura de Fermi ($T_F$):**
    La temperatura equivalente es aquella donde la energía térmica iguala a la energía de Fermi:
+
    $$ T_F = \frac{E_F}{k_B} = \frac{1.125 \times 10^{-18}}{1.38 \times 10^{-23}} \approx 81,500 \, \text{K} $$
 
 **Conclusión:** La Energía de Fermi en el Cobre es de 7.02 eV, lo cual corresponde a una colosal temperatura termodinámica de más de ochenta mil grados Kelvin. Debido a que a temperatura ambiente ($T \sim 300 \, \text{K}$) se cumple que $T \ll T_F$, el gas electrónico en metales es un gas de fermiones altamente degenerado cuánticamente. Las excitaciones térmicas apenas afectan a los electrones en la base de la banda; sólo los electrones cercanos a la superficie de Fermi pueden absorber calor o conducir electricidad.
@@ -109,11 +119,17 @@ Determine la expresión analítica para la energía de Fermi $E_F$ de un gas tri
 **Solución paso a paso:**
 La densidad de estados en el espacio de momento (espacio k) para un volumen tridimensional es constante, dada por $\frac{V}{(2\pi)^3}$.
 El número total de estados permitidos dentro de una esfera de radio $k_F$ (vector de onda de Fermi) considerando la degeneración de espín (2 electrones por estado k) es:
+
 $$ N = 2 \frac{V}{(2\pi)^3} \int_0^{k_F} 4\pi k^2 dk = \frac{V}{\pi^2} \frac{k_F^3}{3} $$
+
 Despejando $k_F$ en función de la densidad electrónica $n = N/V$:
+
 $$ k_F = (3\pi^2 n)^{1/3} $$
+
 La energía de Fermi es la energía cinética correspondiente a $k_F$:
+
 $$ E_F = \frac{\hbar^2 k_F^2}{2m} = \frac{\hbar^2}{2m} (3\pi^2 n)^{2/3} $$
+
 Esta es la energía máxima ocupada a temperatura $T=0$ K, un resultado puramente cuántico que surge del Principio de Exclusión de Pauli.
 
 ### Problema 2: Densidad de Estados (DOS) en un Gas Bidimensional (2D)
@@ -121,13 +137,21 @@ Demuestre que la densidad de estados en energía, $g(E)$, para un gas de electro
 
 **Solución paso a paso:**
 En 2D, el número total de estados con vector de onda menor que $k$ es:
+
 $$ N(k) = 2 \times \frac{A}{(2\pi)^2} \times (\pi k^2) = \frac{A k^2}{2\pi} $$
+
 Para electrones libres, la energía isotrópica es $E = \frac{\hbar^2 k^2}{2m}$. Despejamos $k^2$:
+
 $$ k^2 = \frac{2m E}{\hbar^2} $$
+
 Sustituyendo en $N(k)$ obtenemos el número de estados con energía menor que $E$:
+
 $$ N(E) = \frac{A}{2\pi} \left( \frac{2m E}{\hbar^2} \right) = \frac{A m E}{\pi \hbar^2} $$
+
 La densidad de estados $g(E)$ se define como la derivada del número total de estados respecto a la energía:
+
 $$ g(E) = \frac{dN(E)}{dE} = \frac{A m}{\pi \hbar^2} $$
+
 Como vemos, $g(E)$ es una constante independiente de $E$ (una función escalón si consideramos el fondo del pozo $E_0$).
 
 ### Problema 3: Capacidad Calorífica del Gas de Electrones Libres
@@ -138,11 +162,17 @@ A temperatura $T > 0$, sólo los electrones cercanos a la energía de Fermi (den
 La fracción de electrones que participan en las excitaciones térmicas es proporcional a $\frac{k_B T}{E_F}$.
 Cada electrón excitado aumenta su energía térmica en aproximadamente $\sim k_B T$.
 Por lo tanto, la energía interna térmica adicional total del sistema de $N$ electrones es:
+
 $$ \Delta U \approx N \left( \frac{k_B T}{E_F} \right) k_B T = \frac{N k_B^2 T^2}{E_F} $$
+
 La capacidad calorífica electrónica a volumen constante es la derivada respecto a $T$:
+
 $$ C_v = \frac{\partial U}{\partial T} \approx 2 \frac{N k_B^2}{E_F} T $$
+
 Haciendo el tratamiento riguroso con la integral de Fermi-Dirac, la constante exacta es:
+
 $$ C_v = \frac{\pi^2}{2} \frac{N k_B^2}{E_F} T \equiv \gamma T $$
+
 Esto demuestra que el calor específico electrónico decae a cero de forma lineal con $T$ para $T \to 0$.
 
 ## 💻 Simulaciones Computacionales
@@ -189,12 +219,17 @@ En regímenes de fuerte correlación, el formalismo hamiltoniano estándar se re
 
 **Integrales de Camino y Funciones de Green (Teoría de Muchos Cuerpos):**
 La función de partición gran canónica de un gas de electrones interactuantes se expresa como una integral funcional sobre campos de Grassmann $\psi, \bar{\psi}$:
+
 $$ \mathcal{Z} = \int \mathcal{D}[\bar{\psi}, \psi] \exp\left( -S[\bar{\psi}, \psi] \right) $$
+
 Donde la acción de Matsubara en tiempo imaginario $\tau = it$ (con $\beta = 1/k_B T$) es:
+
 $$ S = \int_0^\beta d\tau \int d^3x \left[ \bar{\psi}_\sigma \left( \partial_\tau - \frac{\nabla^2}{2m} - \mu \right) \psi_\sigma + \frac{1}{2} \int d^3x' \, V(|\mathbf{x} - \mathbf{x}'|) \bar{\psi}_\sigma(\mathbf{x}) \bar{\psi}_{\sigma'}(\mathbf{x}') \psi_{\sigma'}(\mathbf{x}') \psi_\sigma(\mathbf{x}) \right] $$
 
 Para tratar el "Líquido No-Fermi", se hace uso de teorías de campo gauge efectivas acopladas a la materia, donde las cuasipartículas fermiónicas se acoplan a bosones mediadores (p. ej., fluctuaciones magnéticas) con un acoplamiento singular. La función de Green vestida $G(k, \omega)$ diverge de su polo cuasiparticular estándar, teniendo la forma:
+
 $$ G^{-1}(\mathbf{k}, \omega) = \omega - v_F(k - k_F) - \Sigma(\mathbf{k}, \omega) $$
+
 Donde la autoenergía (self-energy) $\Sigma \sim -i |\omega|^\alpha$ (con $\alpha < 1$) destruye el concepto de cuasipartícula.
 
 ## 📚 Recursos Específicos
@@ -208,18 +243,26 @@ Donde la autoenergía (self-energy) $\Sigma \sim -i |\omega|^\alpha$ (con $\alph
 1. **["The Band Theory of Graphite" por P. R. Wallace (1947)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.71.622)**
    - **Importancia Teórica:** Fue el primer cálculo teórico de la estructura de bandas del grafeno y grafito utilizando el método de enlace fuerte (tight-binding). Es fundamental por haber predicho los puntos de Dirac 60 años antes del aislamiento experimental del grafeno.
    - **Fondo Matemático:** El Hamiltoniano de amarre fuerte considerando vecinos más cercanos sobre la red de panal de abeja (que contiene dos subredes, A y B) se formula como una matriz $2 \times 2$. Los valores propios de energía para los electrones $\pi$ están dados por:
+
      $$ E(\mathbf{k}) = \pm \gamma_0 \sqrt{1 + 4\cos\left(\frac{\sqrt{3} k_x a}{2}\right)\cos\left(\frac{k_y a}{2}\right) + 4\cos^2\left(\frac{k_y a}{2}\right)} $$
+
      En las esquinas de la zona de Brillouin (los puntos $K$ y $K'$), la dispersión de energía se vuelve lineal respecto al momento cristalino $\mathbf{q} = \mathbf{k} - \mathbf{K}$:
+
      $$ E(\mathbf{q}) \approx \pm \hbar v_F |\mathbf{q}| $$
+
      donde $v_F$ es la velocidad de Fermi (aproximadamente $10^6 \text{ m/s}$).
    - **Implicaciones Físicas:** Demostró que los electrones en el grafeno obedecen la ecuación relativista de Dirac en lugar de la ecuación de Schrödinger no relativista, actuando como fermiones de Dirac sin masa. Esto tiene profundas implicaciones en la conductividad balística del material.
 
 2. **["Colloquium: Topological insulators" por M. Z. Hasan y C. L. Kane (2010)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.82.3045)**
    - **Importancia Teórica:** Artículo fundacional que unifica la topología con la teoría de bandas clásica. Introduce los materiales aislantes topológicos que son aislantes en su interior pero conductores perfectos en su superficie.
    - **Fondo Matemático:** La estructura topológica se caracteriza por el invariante topológico de Chern (para el efecto Hall cuántico) o el invariante $\mathbb{Z}_2$ (para sistemas con simetría de inversión temporal). La curvatura de Berry $\mathbf{\Omega}(\mathbf{k})$ de una banda de Bloch $|u_{n\mathbf{k}}\rangle$ se define como:
+
      $$ \mathbf{\Omega}_n(\mathbf{k}) = i \langle \nabla_{\mathbf{k}} u_{n\mathbf{k}} | \times | \nabla_{\mathbf{k}} u_{n\mathbf{k}} \rangle $$
+
      El número de Chern $C_n$, que debe ser un entero invariante, se obtiene integrando sobre toda la primera zona de Brillouin (BZ):
+
      $$ C_n = \frac{1}{2\pi} \int_{\text{BZ}} d^2k \, \Omega_{n,z}(\mathbf{k}) $$
+
    - **Implicaciones Físicas:** Concluye que la presencia de estados de superficie metálicos (y fuertemente polarizados en espín) está topológicamente protegida contra el desorden, las impurezas y las perturbaciones suaves, ofreciendo una ruta hacia una espintrónica robusta y la computación cuántica tolerante a fallos.
 
 3. **[nanoHUB: Band Structure Lab](https://nanohub.org/resources/bandstr)**: Herramienta de simulación de alta calidad que permite visualizar y calcular estructuras de bandas electrónicas en sólidos utilizando diferentes modelos de masa y potenciales periódicos.

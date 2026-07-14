@@ -13,45 +13,72 @@ El estudio analítico de los circuitos eléctricos requiere una inmersión profu
 
 ### 1. Ecuación de Continuidad y Conservación de la Carga
 La piedra angular de toda la teoría de circuitos es la conservación de la carga eléctrica, expresada localmente mediante la ecuación de continuidad. Consideremos un volumen arbitrario $V$ delimitado por una superficie cerrada $S$. La tasa de disminución de la carga neta $Q$ en este volumen debe ser exactamente igual al flujo de carga que atraviesa $S$:
+
 $$ \oint_S \vec{J} \cdot d\vec{A} = -\frac{d}{dt} \int_V \rho_e \, dV $$
+
 Aplicando el Teorema de la Divergencia de Gauss al lado izquierdo:
+
 $$ \int_V (\nabla \cdot \vec{J}) \, dV = \int_V \left( -\frac{\partial \rho_e}{\partial t} \right) \, dV $$
+
 Dado que esto se cumple para cualquier volumen $V$, obtenemos la **Ecuación de Continuidad Diferencial**:
+
 $$ \nabla \cdot \vec{J} + \frac{\partial \rho_e}{\partial t} = 0 $$
+
 En condiciones estacionarias (corriente continua, DC), la densidad de carga no varía con el tiempo ($\partial \rho_e / \partial t = 0$), lo que implica que el campo vectorial de la densidad de corriente es solenoidal:
+
 $$ \nabla \cdot \vec{J} = 0 $$
 
 ### 2. Modelo de Drude para la Conducción Eléctrica
 El flujo de corriente macroscópico está intrínsecamente ligado al movimiento microscópico de los electrones. El modelo clásico de Drude asume un "gas de electrones" libres que sufren colisiones inelásticas con la red de iones positivos. 
 
 La ecuación de movimiento para un electrón promedio, sometido a un campo eléctrico externo $\vec{E}$ y sujeto a una fuerza de fricción visco-elástica debida a colisiones (caracterizada por un tiempo medio entre colisiones $\tau$), es:
+
 $$ m_e \frac{d\vec{v}_d}{dt} = -e\vec{E} - \frac{m_e \vec{v}_d}{\tau} $$
+
 En régimen estacionario ($d\vec{v}_d/dt = 0$), la velocidad de deriva $\vec{v}_d$ alcanza un valor terminal:
+
 $$ \vec{v}_d = -\frac{e \tau}{m_e} \vec{E} $$
+
 La densidad de corriente está dada por $\vec{J} = -n e \vec{v}_d$, donde $n$ es la densidad numérica de electrones de conducción. Sustituyendo $\vec{v}_d$:
+
 $$ \vec{J} = \left( \frac{n e^2 \tau}{m_e} \right) \vec{E} $$
+
 Definimos la **conductividad eléctrica** $\sigma$ como:
+
 $$ \sigma = \frac{n e^2 \tau}{m_e} $$
+
 Lo cual nos lleva a la forma microscópica de la Ley de Ohm:
+
 $$ \vec{J} = \sigma \vec{E} $$
 
 ### 3. Condiciones de Contorno en Conductores
 Para resolver problemas complejos de circuitos distribuidos, debemos aplicar condiciones de contorno en las interfaces entre dos materiales de conductividades $\sigma_1$ y $\sigma_2$. 
 
 Asumiendo que no hay acumulación de carga interfacial constante en el tiempo en estado estacionario, la componente normal de $\vec{J}$ debe ser continua:
+
 $$ J_{1n} = J_{2n} \implies \sigma_1 E_{1n} = \sigma_2 E_{2n} $$
+
 Dado que el campo eléctrico conservativo cumple $\oint \vec{E} \cdot d\vec{l} = 0$, la componente tangencial de $\vec{E}$ también es continua:
+
 $$ E_{1t} = E_{2t} \implies \frac{J_{1t}}{\sigma_1} = \frac{J_{2t}}{\sigma_2} $$
+
 Estas condiciones determinan cómo las líneas de corriente se refractan al pasar de un material a otro, un fenómeno análogo a la refracción óptica, siguiendo la ley:
+
 $$ \frac{\tan \theta_1}{\tan \theta_2} = \frac{\sigma_1}{\sigma_2} $$
 
 ### 4. Derivación Macroscópica de Resistencia y Capacidad
 Considere un material conductor acotado con terminales en potenciales $V_1$ y $V_2$. La diferencia de potencial y la corriente total están dadas por:
+
 $$ V = V_1 - V_2 = \int_1^2 \vec{E} \cdot d\vec{l} $$
+
 $$ I = \int_S \vec{J} \cdot d\vec{A} = \int_S (\sigma \vec{E}) \cdot d\vec{A} $$
+
 La resistencia $R$ queda definida rigurosamente como el cociente integral:
+
 $$ R = \frac{\int_1^2 \vec{E} \cdot d\vec{l}}{\oint_S \sigma \vec{E} \cdot d\vec{A}} $$
+
 Existe una profunda dualidad entre conductancia ($G = 1/R$) y capacitancia ($C$). Dado que para un dieléctrico de permitividad $\varepsilon$, la carga es $Q = \oint \varepsilon \vec{E} \cdot d\vec{A}$, obtenemos la relación fundamental para la misma geometría:
+
 $$ R C = \frac{\varepsilon}{\sigma} $$
 
 ### 5. Teoremas de Redes y Topología de Circuitos
@@ -59,13 +86,18 @@ Para redes con elementos discretos (Lumped Element Model), las leyes de conserva
 
 #### A. Formalismo de Grafos de Nodos
 Sea una red con $N$ nodos y $B$ ramas. Se define la matriz de incidencia reducida $\mathbf{A}$ de tamaño $(N-1) \times B$. La Ley de Corrientes de Kirchhoff (KCL) se expresa matricialmente:
+
 $$ \mathbf{A} \mathbf{i} = \mathbf{0} $$
+
 donde $\mathbf{i}$ es el vector columna de corrientes de rama. La relación entre voltajes de nodo $\mathbf{v}_n$ y voltajes de rama $\mathbf{v}_b$ es:
+
 $$ \mathbf{v}_b = \mathbf{A}^T \mathbf{v}_n $$
 
 #### B. Teorema de Tellegen
 El Teorema de Tellegen es una consecuencia puramente topológica que garantiza la conservación de la potencia en cualquier circuito que obedezca KCL y KVL, independientemente de la naturaleza lineal o no lineal de los componentes:
+
 $$ \sum_{k=1}^B v_k i_k = \mathbf{v}_b^T \mathbf{i} = (\mathbf{A}^T \mathbf{v}_n)^T \mathbf{i} = \mathbf{v}_n^T (\mathbf{A} \mathbf{i}) = 0 $$
+
 Esto afirma que la suma de todas las potencias absorbidas o entregadas por cada elemento de una red cerrada siempre es exactamente cero.
 
 ```mermaid
@@ -84,9 +116,13 @@ graph TD
 
 ### 6. Trabajo y Termodinámica del Efecto Joule
 El trabajo realizado por el campo eléctrico sobre un portador de carga $q$ que se mueve una distancia $d\vec{l}$ es $dW = q\vec{E} \cdot d\vec{l}$. La potencia volumétrica disipada $p$ (potencia por unidad de volumen) se obtiene sumando sobre todos los portadores:
+
 $$ p = \frac{1}{dt \, dV} \sum q \vec{E} \cdot d\vec{l} = \vec{E} \cdot \left( \sum \frac{q \vec{v}_d}{dV} \right) = \vec{E} \cdot \vec{J} $$
+
 Aplicando la Ley de Ohm local $\vec{J} = \sigma \vec{E}$:
+
 $$ p = \sigma |\vec{E}|^2 = \frac{|\vec{J}|^2}{\sigma} $$
+
 Esta energía se transfiere a los iones de la red cristalina a través de las colisiones descritas en el Modelo de Drude, incrementando la energía cinética vibracional de la red, lo que macroscópicamente se manifiesta como un aumento de temperatura (Efecto Joule).
 
 ---
@@ -97,17 +133,28 @@ Esta energía se transfiere a los iones de la red cristalina a través de las co
 **Solución paso a paso:**
 1. **Aplicar la Ley de Mallas de Kirchhoff:**
    Al recorrer el circuito, tenemos el aumento de la fuente, la caída en el resistor y la caída en el condensador:
+
    $$ \mathcal{E} - I R - \frac{q}{C} = 0 $$
+
 2. **Expresar la corriente:** Sabemos que $I = \frac{dq}{dt}$, luego:
+
    $$ R \frac{dq}{dt} + \frac{q}{C} = \mathcal{E} $$
+
 3. **Resolver la ecuación diferencial:**
    Esta es una ecuación diferencial lineal de primer orden separable:
+
    $$ \frac{dq}{dt} = \frac{\mathcal{E} C - q}{R C} \implies \frac{dq}{q - \mathcal{E} C} = -\frac{dt}{R C} $$
+
    Integrando desde $t=0$ (con $q(0)=0$) hasta $t$:
+
    $$ \ln \left( \frac{q(t) - \mathcal{E} C}{-\mathcal{E} C} \right) = -\frac{t}{R C} $$
+
 4. **Despejar $q(t)$:**
+
    $$ q(t) - \mathcal{E} C = -\mathcal{E} C e^{-t/(RC)} $$
+
    $$ q(t) = C \mathcal{E} \left( 1 - e^{-t/\tau} \right) $$
+
    Donde $\tau = R C$ es la constante de tiempo del circuito. La carga crece asintóticamente hasta el valor máximo $Q_{\max} = C \mathcal{E}$.
 
 ---

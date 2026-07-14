@@ -7,20 +7,27 @@ El modelo ondulatorio de la luz fue propuesto inicialmente por Christiaan Huygen
 ## 🧮 Desarrollo Teórico Profundo
 
 El marco formal de la óptica física es el electromagnetismo clásico regido por las ecuaciones de Maxwell. Desde este punto de vista, la luz es una onda transversal conformada por campos eléctricos ($\vec{E}$) y magnéticos ($\vec{B}$) oscilando perpendicularmente entre sí y a la dirección de propagación. En el vacío, la ecuación de onda se expresa como:
+
 $$ \nabla^2 \vec{E} - \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2} = 0 \quad \text{con} \quad c = \frac{1}{\sqrt{\mu_0 \epsilon_0}} $$
 
 ### 1. Interferencia por Superposición de Ondas
 
 Cuando dos ondas luminosas armónicas, emitidas por fuentes coherentes, se superponen en un punto del espacio, el campo eléctrico resultante es la suma vectorial:
+
 $$ \vec{E}_{T} = \vec{E}_1 + \vec{E}_2 = \vec{E}_{01} \cos(\vec{k}_1\cdot\vec{r} - \omega t + \phi_1) + \vec{E}_{02} \cos(\vec{k}_2\cdot\vec{r} - \omega t + \phi_2) $$
+
 La intensidad óptica observable $I$ es proporcional al promedio temporal del vector de Poynting ($I \propto \langle |\vec{E}_{T}|^2 \rangle$). Al promediar temporalmente, obtenemos:
+
 $$ I = I_1 + I_2 + 2\sqrt{I_1 I_2} \cos(\delta) $$
+
 donde $\delta = (\vec{k}_2\cdot\vec{r} - \vec{k}_1\cdot\vec{r}) + (\phi_2 - \phi_1)$ es la **diferencia de fase total**.
 
 **Experimento de Young (Doble Rendija):**
 Si la luz proviene de dos rendijas separadas por una distancia $d$, incidiendo sobre una pantalla distante a distancia $L$ ($L \gg d$), la diferencia de camino óptico es $\Delta r = d \sin(\theta) \approx d \frac{y}{L}$. Así, $\delta = k \Delta r = \frac{2\pi}{\lambda} d \sin \theta$. 
 Si las fuentes tienen igual intensidad ($I_1 = I_2 = I_0$), la intensidad resultante es:
+
 $$ I(\theta) = 4 I_0 \cos^2\left(\frac{\pi d \sin \theta}{\lambda}\right) $$
+
 Los máximos brillantes (interferencia constructiva) ocurren cuando $\cos^2(...) = 1$, es decir, $\delta = 2\pi m \implies d \sin \theta = m\lambda$.
 
 ### 2. Teoría de Difracción Escalar de Fraunhofer
@@ -30,26 +37,37 @@ La difracción resulta de la interferencia de un número infinito de fuentes sec
 **Difracción por una rendija de ancho $a$:**
 Consideremos la rendija en el eje $y$ desde $-a/2$ hasta $a/2$. Cada segmento diferencial $dy$ emite una onda esférica secundaria con amplitud proporcional a $dy$. La diferencia de fase respecto al centro de la rendija es $\beta(y) = k y \sin \theta$. 
 El campo total en la pantalla es la integral:
+
 $$ E(\theta) \propto \int_{-a/2}^{a/2} e^{i k y \sin \theta} dy = \left[ \frac{e^{i k y \sin \theta}}{i k \sin \theta} \right]_{-a/2}^{a/2} = a \frac{\sin\left(\frac{k a \sin \theta}{2}\right)}{\frac{k a \sin \theta}{2}} $$
+
 Definiendo el parámetro adimensional $\beta = \frac{\pi a \sin \theta}{\lambda}$, la intensidad $I(\theta) \propto |E(\theta)|^2$ resulta en el patrón sinc cuadrado:
+
 $$ I(\theta) = I_0 \text{sinc}^2(\beta) = I_0 \left( \frac{\sin(\beta)}{\beta} \right)^2 $$
+
 Los mínimos de intensidad ocurren para $\beta = m\pi$ (donde $m = \pm 1, \pm 2, \dots$), lo que lleva a la condición $a \sin \theta = m\lambda$. Notemos que no hay mínimo para $m=0$, ya que $\lim_{\beta \to 0} \frac{\sin \beta}{\beta} = 1$ (máximo central).
 
 ### 3. Redes de Difracción y Poder Resolutivo
 
 Una red de difracción contiene $N$ rendijas igualmente espaciadas por una distancia $d$. La amplitud transmitida es una serie geométrica de fases. La distribución de intensidad combina la difracción de una sola rendija con la interferencia de $N$ fuentes:
+
 $$ I(\theta) = I_0 \left( \frac{\sin\left(\frac{\pi a \sin \theta}{\lambda}\right)}{\frac{\pi a \sin \theta}{\lambda}} \right)^2 \left( \frac{\sin\left(\frac{N \pi d \sin \theta}{\lambda}\right)}{\sin\left(\frac{\pi d \sin \theta}{\lambda}\right)} \right)^2 $$
+
 Los máximos principales (o "órdenes") ocurren cuando $\frac{\pi d \sin \theta}{\lambda} = m\pi$, o $d \sin \theta = m\lambda$. La nitidez de los picos aumenta drásticamente con $N$, lo que hace a las redes de difracción esenciales en espectroscopía.
 El poder de resolución espectral $\mathcal{R} = \frac{\lambda}{\Delta \lambda}$ de una red operando en orden $m$ es fundamental:
+
 $$ \mathcal{R} = m N $$
 
 ### 4. Polarización y Ley de Malus
 
 El vector de campo eléctrico $\vec{E}$ en una onda transversal puede oscilar en un plano específico (polarización lineal), rotar en un círculo (polarización circular) o ser una mezcla probabilística (luz no polarizada). 
 Cuando luz polarizada linealmente con intensidad $I_0$ e incidente bajo un ángulo de polarización $\phi_i$ atraviesa un analizador ideal con eje de transmisión en ángulo $\phi_a$, la componente del campo transmitido es la proyección paralela al eje:
+
 $$ E_t = E_0 \cos(\phi_i - \phi_a) = E_0 \cos \theta $$
+
 Puesto que la intensidad es proporcional a $E^2$, se deduce la **Ley de Malus**:
+
 $$ I = I_0 \cos^2 \theta $$
+
 Si luz natural no polarizada incide sobre un polarizador, la intensidad se reduce exactamente a la mitad: $I = I_0 / 2$.
 
 ```mermaid
@@ -71,13 +89,17 @@ graph TD
 
 **Demostración y Solución:**
 1. La intensidad total para una doble rendija de ancho finito es el producto del término de interferencia y la envolvente de difracción:
+
    $$ I(\theta) \propto \cos^2\left(\frac{\pi d \sin \theta}{\lambda}\right) \text{sinc}^2\left(\frac{\pi a \sin \theta}{\lambda}\right) $$
+
 2. Los máximos de interferencia ocurren donde el argumento del coseno es $m\pi$, es decir, $\sin \theta_m = \frac{m\lambda}{d}$. El tercer máximo ideal correspondería a $m=3$, donde $\sin \theta_3 = \frac{3\lambda}{d}$.
 3. Para que este máximo se cancele ("órdenes faltantes"), el primer mínimo de difracción de la envolvente sinc debe coincidir con este mismo ángulo $\theta_3$. 
 4. El primer mínimo de difracción ocurre cuando el argumento de la función sinc es $\pi$, es decir, $\sin \theta_{\text{min}} = \frac{\lambda}{a}$.
 5. Igualando los senos de los ángulos: $\frac{3\lambda}{d} = \frac{\lambda}{a}$.
 6. Por lo tanto, cancelando $\lambda$, obtenemos la relación estricta:
+
    $$ d = 3a $$
+
    La distancia entre centros de ranura debe ser exactamente el triple de la anchura de la ranura.
 
 ## 📝 Guía de Ejercicios Resueltos
@@ -187,10 +209,15 @@ En 2026, la óptica física está dominada por la **ciencia de los attosegundos*
 ## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
 
 La óptica física rigurosa y su transición al régimen cuántico se formula elegantemente mediante la **Teoría de Gauge (Gauge Theory)**. El campo electromagnético clásico se describe geométricamente como una conexión $\mathcal{A}$ sobre un fibrado principal $U(1)$ base el espacio-tiempo de Minkowski $\mathcal{M}$. El potencial vector $A_\mu$ son los componentes locales de esta conexión, y el tensor de campo electromagnético (que engloba $\vec{E}$ y $\vec{B}$) es la forma de curvatura $\mathcal{F}$ asociada:
+
 $$ \mathcal{F} = d\mathcal{A} = \frac{1}{2} F_{\mu\nu} dx^\mu \wedge dx^\nu \quad \text{donde} \quad F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu $$
+
 Las Ecuaciones de Maxwell en el vacío se reducen de forma espectacularmente compacta usando la derivada exterior $d$ y el operador estrella de Hodge $\star$:
+
 $$ d\mathcal{F} = 0 \quad (\text{Identidad de Bianchi: ausencias de monopolos e inducción de Faraday}) $$
+
 $$ d \star \mathcal{F} = \star \mathcal{J} \quad (\text{Ampère-Maxwell y Gauss}) $$
+
 En el régimen de la **Óptica Cuántica y QED**, la forma $\mathcal{A}$ es promovida a un operador algebraico que actúa sobre el espacio de Fock, y la luz ya no viaja según ecuaciones deterministas, sino a través de una suma sobre todas las trayectorias posibles mediante integrales de camino de Feynman: $\mathcal{Z} = \int \mathcal{D}A \, \exp(i S_{EM}[A] / \hbar)$.
 
 ## 📚 Recursos Específicos
@@ -204,15 +231,21 @@ En el régimen de la **Óptica Cuántica y QED**, la forma $\mathcal{A}$ es prom
 1. **["A Dynamical Theory of the Electromagnetic Field" por J. C. Maxwell (1865)](https://royalsocietypublishing.org/doi/10.1098/rstl.1865.0008)** (Histórico y Teórico)
    - **Importancia Teórica:** La revolución más importante en la óptica después de Newton. Maxwell demostró que la luz que se estudiaba en laboratorios ópticos no era más que una perturbación transversal autosostenida en los campos electromagnéticos, calculando su velocidad a partir de constantes netamente eléctricas.
    - **Fondo Matemático:** Maxwell formuló un conjunto de 20 ecuaciones (hoy condensadas vectorialmente por Heaviside a 4). Al perturbar el rotacional de su Ley de Ampère-Maxwell con la Ley de Faraday para el vacío, eliminó un campo para aislar el campo eléctrico $\vec{E}$, obteniendo la Ecuación de Onda Vectorial Pura:
+
      $$ \nabla \times (\nabla \times \vec{E}) = -\mu_0 \epsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} $$
+
      Usando la identidad vectorial general $\nabla \times (\nabla \times \vec{E}) = \nabla(\nabla \cdot \vec{E}) - \nabla^2 \vec{E}$, y sabiendo que en el vacío no hay cargas eléctricas netas para divergir el campo $\nabla \cdot \vec{E} = 0$ (Ley de Gauss), se reduce a un laplaciano puro:
+
      $$ \nabla^2 \vec{E} = \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2} \quad \text{donde} \quad c = \frac{1}{\sqrt{\mu_0 \epsilon_0}} $$
+
    - **Implicaciones Físicas:** Probó teóricamente que la óptica es tan solo un subconjunto de muy alta frecuencia del electromagnetismo general, aniquilando al éter mecánico como medio necesario para la propagación.
 
 2. **["Optical coherence and quantum optics" por L. Mandel y E. Wolf (Review moderno)](https://www.cambridge.org/core/books/optical-coherence-and-quantum-optics/2C0B8EFBE9AA4D20BE401CE763CB1B06)**
    - **Importancia Teórica:** Expande la óptica física a regímenes donde la luz tiene fluctuaciones parciales, estocásticas o estadísticas. Un haz de luz nunca es una onda senoidal infinita; posee propiedades aleatorias definidas por "funciones de correlación", esenciales para describir láseres o interferometría estelar.
    - **Fondo Matemático:** La coherencia entre dos puntos en campos aleatorios espaciotemporales se captura rigurosamente mediante el grado complejo de coherencia mutua (Teorema de Zernike-Van Cittert) $\Gamma_{12}(\tau) = \langle E^*(\vec{r}_1, t) E(\vec{r}_2, t+\tau) \rangle$. La intensidad en el plano de observación de Young está dictada completamente por la parte real de este tensor cruzado:
+
      $$ I(P) = I_1 + I_2 + 2\sqrt{I_1 I_2} |\gamma_{12}(\tau)| \cos(\alpha_{12}(\tau) - \delta) $$
+
      donde $|\gamma_{12}(\tau)| \le 1$ es el grado de coherencia de la fuente extensa y caótica, lo que rige si veremos interferencia (visibilidad de franjas) o tan solo una suma de luz informe.
    - **Implicaciones Físicas:** Habilita el funcionamiento de los interferómetros estelares gigantescos (como el de Michelson) que son capaces de medir el minúsculo diámetro angular estelar analizando matemáticamente cuán rápido la "visibilidad" (el contraste) de los patrones interféricos se degrada al separar espacialmente los espejos captores.
 

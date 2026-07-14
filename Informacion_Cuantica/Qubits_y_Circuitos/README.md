@@ -11,19 +11,25 @@ El estudio de la información cuántica comienza irremediablemente con la unidad
 Matemáticamente, el estado de un qubit puro se representa mediante un vector de estado $|\psi\rangle$ que pertenece a un espacio de Hilbert complejo de dos dimensiones, denotado por $\mathcal{H} \cong \mathbb{C}^2$. Elegimos una base ortonormal para este espacio, típicamente la base computacional (o base $Z$), formada por los vectores $|0\rangle$ y $|1\rangle$, los cuales se representan como vectores columna:
 
 $$
+
 |0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad |1\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+
 $$
 
 El estado general de un qubit puro es una combinación lineal de los estados base:
 
 $$
+
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle = \begin{pmatrix} \alpha \\ \beta \end{pmatrix}
+
 $$
 
 donde las amplitudes $\alpha, \beta \in \mathbb{C}$. Para que el estado represente una probabilidad física válida, debe cumplir con la **condición de normalización** impuesta por la regla de Born, según la cual la suma de las probabilidades de todos los resultados posibles debe ser $1$:
 
 $$
+
 |\alpha|^2 + |\beta|^2 = 1
+
 $$
 
 Esta condición implica que el vector de estado está restringido a la superficie de una esfera unidad en $\mathbb{C}^2$.
@@ -33,13 +39,17 @@ Esta condición implica que el vector de estado está restringido a la superfici
 Dado que $\alpha$ y $\beta$ son números complejos, cada uno puede escribirse en forma polar: $\alpha = r_0 e^{i\phi_0}$ y $\beta = r_1 e^{i\phi_1}$. El estado se puede reescribir como:
 
 $$
+
 |\psi\rangle = r_0 e^{i\phi_0}|0\rangle + r_1 e^{i\phi_1}|1\rangle = e^{i\phi_0} \left( r_0 |0\rangle + r_1 e^{i(\phi_1 - \phi_0)}|1\rangle \right)
+
 $$
 
 En mecánica cuántica, una fase global (el término $e^{i\phi_0}$) no afecta ninguna probabilidad de medición ni ningún observable físico, por lo que podemos factorizarla e ignorarla matemáticamente. Esto nos permite redefinir el estado utilizando solo dos parámetros reales:
 
 $$
+
 |\psi\rangle = \cos\left(\frac{\theta}{2}\right) |0\rangle + e^{i\phi} \sin\left(\frac{\theta}{2}\right) |1\rangle
+
 $$
 
 donde:
@@ -58,16 +68,20 @@ La evolución temporal de un estado cuántico cerrado está descrita por una tra
 Las operaciones más fundamentales de 1 qubit son las representadas por las **Matrices de Pauli**:
 
 $$
+
 X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad
 Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad
 Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+
 $$
 
 **Demostración de la acción de $X$ (NOT cuántico):**
 Si aplicamos $X$ a un estado arbitrario $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$:
 
 $$
+
 X|\psi\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \begin{pmatrix} \beta \\ \alpha \end{pmatrix} = \beta|0\rangle + \alpha|1\rangle
+
 $$
 
 Por lo tanto, la puerta $X$ invierte las amplitudes, actuando como un inversor lógico ($|0\rangle \leftrightarrow |1\rangle$).
@@ -75,13 +89,17 @@ Por lo tanto, la puerta $X$ invierte las amplitudes, actuando como un inversor l
 Otra puerta de vital importancia es la **Puerta de Hadamard ($H$)**, encargada de crear superposiciones equilibradas a partir de la base computacional:
 
 $$
+
 H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
+
 $$
 
 Al aplicarla al estado $|0\rangle$, obtenemos el estado $|+\rangle$:
 
 $$
+
 H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) \equiv |+\rangle
+
 $$
 
 Este estado se ubica en el ecuador de la Esfera de Bloch a lo largo del eje $+x$.
@@ -92,7 +110,9 @@ Para sistemas de $n$ qubits, el espacio de Hilbert es el **producto tensorial** 
 Para 2 qubits, la base computacional es $\{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}$, y el estado general es:
 
 $$
+
 |\Psi\rangle = c_{00}|00\rangle + c_{01}|01\rangle + c_{10}|10\rangle + c_{11}|11\rangle
+
 $$
 
 con $\sum |c_{ij}|^2 = 1$.
@@ -101,25 +121,30 @@ con $\sum |c_{ij}|^2 = 1$.
 La principal puerta de dos qubits es la CNOT. Esta puerta invierte (aplica $X$) el estado del "target" (qubit objetivo) si y solo si el "control" (qubit controlador) está en el estado $|1\rangle$. Su matriz $4 \times 4$ es:
 
 $$
+
 \text{CNOT} = \begin{pmatrix}
 1 & 0 & 0 & 0 \\
 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 1 \\
 0 & 0 & 1 & 0
 \end{pmatrix}
+
 $$
 
 #### Creación de un Estado Entrelazado (Estado de Bell)
 El circuito cuántico más fundamental para demostrar entrelazamiento consiste en un Hadamard seguido de una CNOT. Procedamos a derivar analíticamente este estado, paso por paso:
 
 1. **Estado Inicial:** Preparamos dos qubits en el estado $|0\rangle$:
+
    $$ |\psi_0\rangle = |0\rangle_C \otimes |0\rangle_T = |00\rangle $$
 
 2. **Aplicación de Hadamard al qubit de control:**
+
    $$ |\psi_1\rangle = (H \otimes I) |00\rangle = \left(\frac{|0\rangle + |1\rangle}{\sqrt{2}}\right) \otimes |0\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |10\rangle) $$
 
 3. **Aplicación de CNOT:**
    La CNOT actúa sobre el estado, dejando intacta la componente donde el control es $|0\rangle$ e invirtiendo el target en la componente donde el control es $|1\rangle$:
+
    $$ |\psi_2\rangle = \text{CNOT} \left( \frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |10\rangle \right) = \frac{1}{\sqrt{2}} |00\rangle + \frac{1}{\sqrt{2}} |11\rangle \equiv |\Phi^+\rangle $$
 
 Este estado resultante, $|\Phi^+\rangle$, es uno de los cuatro estados de Bell. Se dice que está **máximamente entrelazado** porque no puede ser factorizado como el producto tensorial de dos estados individuales ($|\psi_A\rangle \otimes |\psi_B\rangle$). La medición de cualquiera de los dos qubits colapsará instantáneamente el estado del otro, revelando una correlación perfecta de las estadísticas que supera cualquier límite clásico establecido por las desigualdades de Bell.
@@ -161,9 +186,13 @@ Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqr
 3. Elegimos las mediciones para Bob como $B = \frac{-\sigma_z - \sigma_x}{\sqrt{2}}$ y $B' = \frac{\sigma_z - \sigma_x}{\sqrt{2}}$.
 4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
 5. Calculamos cada término:
+
    $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+
 6. Sumando los términos, el valor de expectación es:
+
    $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+
 7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
 
 ### Ejercicio 2: Código de Corrección de Errores de Shor (9 qubits)
@@ -183,7 +212,9 @@ Construya el circuito y derive la acción de la QFT sobre un estado de base comp
 **Solución paso a paso:**
 1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
 2. Para 3 qubits, se puede reescribir como un producto tensorial:
+
    $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+
 3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
 4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
 5. Se repite el proceso para los qubits restantes, aplicando Hadamard y $R_2$ en $x_1$, y finalmente Hadamard en $x_0$.
@@ -252,6 +283,7 @@ En 2026, la frontera central dentro de la disciplina de síntesis de circuitos c
 La abstracción última del diseño y síntesis lógica de circuitos exige dominar la **Teoría de Grupos, Geometría Discreta sobre Cuerpos Finitos y Álgebras de Operadores Polinomiales**.
 
 El pilar subyacente para el procesamiento tolerante a errores reside en el **Grupo de Clifford $\mathcal{C}_n$** sobre $n$ qubits. Se define matemáticamente como el normalizador del Grupo de Pauli $\mathcal{P}_n$ dentro del Grupo Unitario Especial $U(2^n)$:
+
 $$ \mathcal{C}_n = \{ U \in U(2^n) \mid U \mathcal{P}_n U^\dagger = \mathcal{P}_n \} $$
 
 Por el Teorema de Gottesman-Knill, cualquier circuito construido con lazos dentro de $\mathcal{C}_n$ puede ser simulado eficientemente en $\mathcal{O}(n^2)$ de tiempo, implicando que carecen del poder intrínseco de ventaja cuántica exponencial algorítmica.
@@ -260,7 +292,9 @@ Para alcanzar la universalidad pura, se exige un recurso ajeno a Clifford, como 
 
 La topología analítica en el plano hipercomplejo del grupo generador permite acotar las expansiones en palabras (words) cortas. Considerando matrices $M$ pertenecientes al subgrupo multiplicativo libre con el anillo coordenado diádico $\mathbb{Z}[1/\sqrt{2}, i]$, el problema de la **Síntesis Óptima Monotónica (Optimal T-count)** equivale matemáticamente a una ecuación diofántica. 
 Para la descomposición canónica de un unitario de 1-qubit $U \in SU(2)$, se parametriza geométricamente la esfera de Bloch-Schoenflies. El algoritmo se abstrae al anillo de enteros y la ecuación de forma cuadrática cuaterniónica de Euler:
+
 $$ \det(U) = a^2 + b^2 + c^2 + d^2 = 1 $$
+
 donde $a, b, c, d \in \mathbb{Z}[\sqrt{2}]$. La representación rigurosa sobre el árbol de Cayley-Bruhat-Tits de retículos algebraicos proyecta el enrutamiento más corto exacto de un circuito mediante la topología $p$-ádica. Es este profundo andamiaje hiperbólico el que define el límite fundamental analítico de cómo compilar el circuito de menor redundancia que satisfaga el modelo de Hardware estocástico.
 
 ## 📚 Recursos Específicos
@@ -275,27 +309,39 @@ donde $a, b, c, d \in \mathbb{Z}[\sqrt{2}]$. La representación rigurosa sobre e
    - **Enlace:** [https://arxiv.org/abs/quant-ph/9503016](https://arxiv.org/abs/quant-ph/9503016)
    - **Importancia Teórica:** Demuestra la universalidad de las compuertas cuánticas, un hito que equipara conceptualmente los circuitos cuánticos a las redes lógicas booleanas clásicas.
    - **Fondo Matemático:** Comprueba que cualquier transformación unitaria $U \in U(2^n)$ se puede descomponer en compuertas CNOT más rotaciones locales (SU(2)) en cada qubit individual:
+
      $$
+
      U \approx \prod_k U^{(2)}_k \quad \text{donde} \quad U^{(2)} \in \text{CNOT} \otimes \text{Rotaciones}
+
      $$
+
    - **Implicaciones Físicas:** Reduce el complejo desafío de controlar un espacio de Hilbert multipartito altamente entrelazado al diseño tecnológico simplificado de interacciones 1- y 2-qubit.
 
 2. **The Solovay-Kitaev algorithm (Dawson & Nielsen, 2005)**
    - **Enlace:** [https://arxiv.org/abs/quant-ph/0505030](https://arxiv.org/abs/quant-ph/0505030)
    - **Importancia Teórica:** Proveé un método constructivo para sintetizar cualquier compuerta de un qubit a partir de un conjunto finito universal (como Clifford+T) con alta eficiencia.
    - **Fondo Matemático:** Si un conjunto discreto es denso en SU(2), cualquier unitaria deseada $U$ puede aproximarse con precisión $\epsilon$ utilizando una secuencia de compuertas de longitud poli-logarítmica $\mathcal{O}(\log^c(1/\epsilon))$:
+
      $$
+
      \lVert U - U_{aprox} \rVert \leq \epsilon
+
      $$
+
    - **Implicaciones Físicas:** Hizo posible la tolerancia a fallos computacional asegurando que el coste temporal para aproximar compuertas continuas analógicas no escala exponencialmente ante ruido acotado.
 
 3. **Circuit QED: How strong can the coupling between a superconducting qubit and a photon be? (Blais et al., 2004)**
    - **Enlace:** [https://arxiv.org/abs/cond-mat/0402216](https://arxiv.org/abs/cond-mat/0402216)
    - **Importancia Teórica:** Sentó las bases para el acoplamiento fuerte en la electrodinámica cuántica de circuitos (cQED), la arquitectura hardware de facto.
    - **Fondo Matemático:** Extiende el modelo clásico de Jaynes-Cummings para cajas de pares de Cooper en resonadores coplanares:
+
      $$
+
      H_{JC} = \omega_r a^\dagger a + \frac{\omega_q}{2} \sigma_z + g(a^\dagger \sigma_- + a \sigma_+)
+
      $$
+
    - **Implicaciones Físicas:** Consolidó el uso de los modos bosónicos de microondas como 'bus cuántico' mediador, permitiendo dispersar interacciones tipo CNOT ultrarrápidas entre transmones distantes en un chip.
 
 ### 📖 Referencias Útiles y Bibliografía

@@ -11,23 +11,33 @@ El núcleo de la óptica geométrica puede derivarse rigurosamente a partir de l
 ### 1. El Eikonal y el Principio de Fermat
 
 Asumamos una onda electromagnética monocromática de la forma $\vec{E}(\vec{r}, t) = \vec{E}_0(\vec{r}) e^{i(k_0 \mathcal{S}(\vec{r}) - \omega t)}$, donde $k_0 = 2\pi/\lambda_0$ es el número de onda en el vacío, y $\mathcal{S}(\vec{r})$ es una función escalar llamada el **eikonal** (frente de onda óptico). Insertando esto en la ecuación de onda y tomando el límite $\lambda_0 \to 0$, se obtiene la Ecuación del Eikonal:
+
 $$ |\nabla \mathcal{S}|^2 = n(\vec{r})^2 $$
+
 donde $n(\vec{r}) = c/v(\vec{r})$ es el índice de refracción espacial. Las curvas ortogonales a las superficies de fase constante $\mathcal{S}(\vec{r}) = C$ definen las trayectorias de los **rayos de luz**. 
 
 La solución geométrica a esta ecuación diferencial parcial es equivalente al problema variacional de encontrar la trayectoria $\Gamma$ que minimiza el camino óptico $L_O$ (Principio de Fermat):
+
 $$ \delta \int_{\Gamma} n(\vec{r}) \, ds = 0 $$
+
 donde el tiempo de vuelo es $t = \frac{1}{c} \int_\Gamma n(s) ds$. Así, la luz sigue la trayectoria de tiempo estacionario (usualmente mínimo).
 
 ### 2. Derivación de las Leyes de Reflexión y Refracción
 
 Usando el Principio de Fermat para dos puntos $A$ y $B$ separados por una interfaz plana entre medios de índices $n_1$ y $n_2$:
 Sea el punto de incidencia sobre la interfaz $x$. El camino óptico total es:
+
 $$ L_O(x) = n_1 \sqrt{h_1^2 + x^2} + n_2 \sqrt{h_2^2 + (D - x)^2} $$
+
 Para minimizar el camino óptico, fijamos la derivada respecto a $x$ en cero:
+
 $$ \frac{dL_O}{dx} = n_1 \frac{x}{\sqrt{h_1^2 + x^2}} - n_2 \frac{D - x}{\sqrt{h_2^2 + (D - x)^2}} = 0 $$
+
 A partir de la geometría, reconocemos que $\frac{x}{\sqrt{h_1^2 + x^2}} = \sin \theta_1$ y $\frac{D - x}{\sqrt{h_2^2 + (D - x)^2}} = \sin \theta_2$.
 Por tanto, recuperamos la **Ley de Snell**:
+
 $$ n_1 \sin \theta_1 = n_2 \sin \theta_2 $$
+
 Por un argumento análogo con un solo medio ($n_1 = n_2$), se obtiene $\sin \theta_i = \sin \theta_r$, o la **Ley de Reflexión**.
 
 ### 3. Matriz de Transferencia de Rayos (Óptica Paraxial)
@@ -37,14 +47,18 @@ Un rayo se caracteriza por su altura respecto al eje óptico, $y$, y su ángulo 
 
 **Matriz de Traslación en un medio homogéneo (distancia $d$):**
 El ángulo no cambia, la altura cambia en $d \cdot \theta$:
+
 $$ \begin{pmatrix} y_2 \\ \theta_2 \end{pmatrix} = \begin{bmatrix} 1 & d \\ 0 & 1 \end{bmatrix} \begin{pmatrix} y_1 \\ \theta_1 \end{pmatrix} $$
 
 **Matriz de Refracción en una superficie esférica de radio $R$:**
+
 $$ \begin{pmatrix} y_2 \\ \theta_2 \end{pmatrix} = \begin{bmatrix} 1 & 0 \\ \frac{n_1 - n_2}{n_2 R} & \frac{n_1}{n_2} \end{bmatrix} \begin{pmatrix} y_1 \\ \theta_1 \end{pmatrix} $$
 
 **Lente Delgada con focal $f$ en aire:**
 Aproximando el espesor de la lente a 0 y combinando las refracciones, la matriz característica es:
+
 $$ M_{lente} = \begin{bmatrix} 1 & 0 \\ -1/f & 1 \end{bmatrix} $$
+
 donde el poder focal es $P = 1/f = (n - 1)(1/R_1 - 1/R_2)$, también conocida como la **Ecuación del Fabricante de Lentes**.
 
 La ecuación de formación de imágenes $\frac{1}{s} + \frac{1}{s'} = \frac{1}{f}$ se deriva exigiendo que la posición final $y'$ sea independiente del ángulo inicial $\theta$ del rayo proveniente del punto objeto para una traslación $s$, paso por lente, y traslación $s'$.
@@ -68,20 +82,34 @@ Determine la matriz de transferencia de sistema (ABCD) para una lente gruesa de 
 
 **Solución paso a paso:**
 1. El sistema consiste en tres operaciones sucesivas: Refracción en $R_1$, Traslación por $d$, y Refracción en $R_2$. El orden de multiplicación matricial es inverso al orden físico.
+
    $$ M = M_{R_2} \times M_d \times M_{R_1} $$
+
 2. Matriz de refracción inicial ($1 \to n$ en $R_1$):
+
    $$ M_{R_1} = \begin{bmatrix} 1 & 0 \\ \frac{1 - 1.5}{1.5 (10)} & \frac{1}{1.5} \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ -\frac{1}{30} & \frac{2}{3} \end{bmatrix} $$
+
 3. Matriz de traslación en vidrio por $d=5$:
+
    $$ M_d = \begin{bmatrix} 1 & 5 \\ 0 & 1 \end{bmatrix} $$
+
 4. Matriz de refracción final ($n \to 1$ en $R_2$):
+
    $$ M_{R_2} = \begin{bmatrix} 1 & 0 \\ \frac{1.5 - 1}{1 (-20)} & \frac{1.5}{1} \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ -\frac{1}{40} & \frac{3}{2} \end{bmatrix} $$
+
 5. Calculamos $M_d \times M_{R_1}$:
+
    $$ M' = \begin{bmatrix} 1 & 5 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ -1/30 & 2/3 \end{bmatrix} = \begin{bmatrix} 1 - 5/30 & 10/3 \\ -1/30 & 2/3 \end{bmatrix} = \begin{bmatrix} 5/6 & 10/3 \\ -1/30 & 2/3 \end{bmatrix} $$
+
 6. Multiplicamos por $M_{R_2}$ por la izquierda:
+
    $$ M = \begin{bmatrix} 1 & 0 \\ -1/40 & 3/2 \end{bmatrix} \begin{bmatrix} 5/6 & 10/3 \\ -1/30 & 2/3 \end{bmatrix} = \begin{bmatrix} 5/6 & 10/3 \\ -\frac{1}{48} - \frac{1}{20} & -\frac{1}{12} + 1 \end{bmatrix} = \begin{bmatrix} 5/6 & 10/3 \\ -17/240 & 11/12 \end{bmatrix} $$
+
 7. La matriz final es $M = \begin{bmatrix} A & B \\ C & D \end{bmatrix}$. El poder focal del sistema se define como $P = -C$. Por tanto, $1/f = 17/240 \text{ cm}^{-1}$.
 8. La longitud focal efectiva (EFL) es:
+
    $$ f = \frac{240}{17} \approx 14.12 \text{ cm} $$
+
    Si usáramos la aproximación de lente delgada $(d=0)$, habríamos tenido $1/f = (0.5)(1/10 + 1/20) = 0.5(3/20) = 3/40$, entonces $f_{delgada} = 13.33\text{ cm}$. El espesor añade una corrección importante.
 
 ## 📝 Guía de Ejercicios Resueltos
@@ -210,9 +238,13 @@ La frontera de la óptica geométrica en 2026 ha evolucionado hacia la **Óptica
 ## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
 
 A un nivel avanzado, la óptica geométrica no es más que el estudio del **flujo geodésico en variedades Riemannianas** y geometría de contacto. Según el Principio de Fermat, los rayos de luz trazan trayectorias que minimizan el camino óptico temporal. Matemáticamente, esto equivale a encontrar las geodésicas en una variedad Riemanniana $M$ dotada de una métrica óptica conforme, definida por el índice de refracción $n(x)$:
+
 $$ ds^2 = n(x)^2 \left( dx_1^2 + dx_2^2 + dx_3^2 \right) = n(x)^2 \delta_{ij} dx^i dx^j $$
+
 La ecuación de las geodésicas (ecuación del rayo) se expresa a través de los símbolos de Christoffel $\Gamma^i_{jk}$:
+
 $$ \frac{d^2 x^i}{d\tau^2} + \Gamma^i_{jk} \frac{dx^j}{d\tau} \frac{dx^k}{d\tau} = 0 $$
+
 Más profundamente, en el marco del espacio de fases $T^*M$, la óptica geométrica es la teoría de la **propagación de singularidades** (frentes de onda) para operadores hiperbólicos. Los rayos son precisamente las curvas bi-características del símbolo principal del operador de onda hamiltoniano. El frente de onda evoluciona como una subvariedad Legendriana dentro de una variedad de contacto, permitiendo aplicar el poderoso formalismo de la teoría de Morse y la topología diferencial para clasificar rigurosamente las cáusticas y singularidades ópticas (catástrofes de Arnold).
 
 ## 📚 Recursos Específicos
@@ -226,15 +258,21 @@ Más profundamente, en el marco del espacio de fases $T^*M$, la óptica geométr
 1. **["Sir W.R. Hamilton’s Theory of Systems of Rays" (1828)](https://www.maths.tcd.ie/pub/HistMath/People/Hamilton/Rays/Rays.pdf)**
    - **Importancia Teórica:** William Rowan Hamilton unificó de golpe el principio de Fermat de la óptica geométrica con la mecánica analítica de la acción mínima de Lagrange. Fue la pista teórica principal que llevó a Schrödinger, 100 años después, a deducir su ecuación cuántica partiendo de la analogía entre materia y óptica.
    - **Fondo Matemático:** Hamilton demostró que el trazado geométrico entero puede derivarse a partir de una única Función Característica $V(\vec{r}_0, \vec{r}_1)$, que representa el camino óptico exacto entre el plano emisor y el receptor en un sistema asimétrico:
+
      $$ V(\vec{r}_0, \vec{r}_1) = \int_{\vec{r}_0}^{\vec{r}_1} n(x,y,z) ds $$
+
      Al aplicar la formulación del principio de mínima acción, demostró que el vector unitario de la dirección del rayo saliente está dado estrictamente por el gradiente de esta matriz espacial:
+
      $$ \vec{v}_1 = \frac{1}{n_1} \nabla_{\vec{r}_1} V \quad \text{y} \quad \vec{v}_0 = -\frac{1}{n_0} \nabla_{\vec{r}_0} V $$
+
    - **Implicaciones Físicas:** Al igual que en la mecánica clásica donde conocer el lagrangiano resuelve toda la dinámica futura, si uno conoce (o diseña) la función característica $V$ del bloque de cristal o arreglo de lentes, puede predecir exactamente hacia dónde escapará cada rayo de luz sin tener que calcular explícitamente refracciones sucesivas de Snell en múltiples interfaces intrincadas, dando nacimiento al análisis de aberraciones puramente algebraico.
 
 2. **["Gradient-Index (GRIN) Optics: A Review" (Moore, 1980)](https://opg.optica.org/ao/abstract.cfm?uri=ao-19-7-1035)**
    - **Importancia Teórica:** Analiza los medios donde la luz se curva de forma continua y elegante, no abruptamente en paredes discretas. Es la física matemática usada detrás del camuflaje ("mirages", oasis del desierto) y el diseño de endoscopios de fibra GRIN de un milímetro de diámetro sin usar cristal curvo.
    - **Fondo Matemático:** Cuando el índice $n$ no es constante, sino un perfil paraboide inyectado como $n(r) = n_0(1 - \frac{1}{2}g^2 r^2)$ (con $r$ la distancia radial del cilindro), la ecuación del Eikonal de rayos se reduce, para pequeños ángulos, a la ecuación de un oscilador armónico simple para la trayectoria meridional geométrica:
+
      $$ \frac{d^2 r(z)}{dz^2} + g^2 r(z) = 0 $$
+
      Cuyas soluciones exactas son funciones armónicas tipo $r(z) = r_0 \cos(gz) + \frac{\theta_0}{g} \sin(gz)$.
    - **Implicaciones Físicas:** Esto es milagroso; los rayos de luz trazan trayectorias sinusoidales en espiral continuas a lo largo de un cilindro perfecto y plano, enfocándose a sí mismos periódicamente en un "punto focal" interno repetitivo sin que haya una sola superficie esférica curva en toda la fibra, abaratando e impulsando la fibra óptica para telecomunicaciones intercontinentales.
 

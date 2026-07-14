@@ -135,9 +135,11 @@ $$ \langle \hat{\mathbf{L}} \cdot \hat{\mathbf{S}} \rangle = \frac{\hbar^2}{2} [
 Como el nucleón es un fermión, su espín intrínseco es $s = 1/2$. El momento angular total puede tomar dos valores $j = l + 1/2$ (alineados) o $j = l - 1/2$ (anti-alineados). Computando la energía para cada caso:
 
 **Para $j = l + 1/2$:**
+
 $$ \langle \hat{\mathbf{L}} \cdot \hat{\mathbf{S}} \rangle = \frac{\hbar^2}{2} \left[ \left(l + \frac{1}{2}\right)\left(l + \frac{3}{2}\right) - l(l+1) - \frac{3}{4} \right] = l \frac{\hbar^2}{2} $$
 
 **Para $j = l - 1/2$:**
+
 $$ \langle \hat{\mathbf{L}} \cdot \hat{\mathbf{S}} \rangle = \frac{\hbar^2}{2} \left[ \left(l - \frac{1}{2}\right)\left(l + \frac{1}{2}\right) - l(l+1) - \frac{3}{4} \right] = -(l+1) \frac{\hbar^2}{2} $$
 
 El desdoblamiento energético entre ambos estados (splitting) asciende a:
@@ -175,15 +177,25 @@ Determine el núcleo más estable contra decaimiento beta para una familia isob�
 
 **Solución paso a paso:**
 1. La masa atómica de un núcleo isobárico es aproximadamente una parábola en función de $Z$:
+
    $$ M(A,Z) \approx \alpha Z^2 + \beta Z + \gamma $$
+
 2. Los términos relevantes de la fórmula de Bethe-Weizsäcker que dependen de $Z$ son el término de Coulomb y el de asimetría:
+
    $$ E_C = a_c \frac{Z(Z-1)}{A^{1/3}} \approx a_c \frac{Z^2}{A^{1/3}}, \quad E_A = a_a \frac{(A-2Z)^2}{A} $$
+
 3. Maximizando la energía de ligadura con respecto a $Z$ (o minimizando la masa):
+
    $$ \frac{\partial E_B}{\partial Z} = -2 a_c \frac{Z}{A^{1/3}} + 4 a_a \frac{A-2Z}{A} = 0 $$
+
 4. Despejando $Z$ para el isóbaro más estable ($Z_{min}$):
+
    $$ Z_{min} = \frac{A}{2 + \frac{a_c}{2 a_a} A^{2/3}} $$
+
 5. Utilizando valores típicos $a_c = 0.71$ MeV y $a_a = 23.2$ MeV para $A = 125$:
+
    $$ Z_{min} = \frac{125}{2 + \frac{0.71}{46.4} (125)^{2/3}} = \frac{125}{2 + 0.0153 \times 25} = \frac{125}{2.3825} \approx 52.4 $$
+
 6. El número atómico entero más cercano es $Z = 52$, que corresponde al Telurio ($^{125}\text{Te}$).
 
 ### Ejercicio 2: Cinemática Relativista del Decaimiento del Pion
@@ -194,9 +206,13 @@ Un pion neutro ($\pi^0$) en reposo decae en dos fotones ($\pi^0 \to \gamma + \ga
 2. El pion se mueve en el sistema de laboratorio (Lab) con velocidad $v=0.8c$, por lo que el factor de Lorentz es $\gamma = \frac{1}{\sqrt{1-0.8^2}} = \frac{1}{0.6} = \frac{5}{3}$.
 3. Usamos la transformación de Lorentz para la energía del fotón: $E = \gamma E' (1 + \beta \cos\theta')$, donde $\theta'$ es el ángulo de emisión en el sistema CM relativo a la velocidad del pion.
 4. La energía máxima ocurre cuando el fotón se emite hacia adelante ($\theta'=0$):
+
    $$ E_{max} = \gamma \frac{m_\pi c^2}{2} (1 + \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 + 0.8) = 112.5 \times 1.8 = 202.5 \text{ MeV} $$
+
 5. La energía mínima ocurre cuando el fotón se emite hacia atrás ($\theta'=\pi$):
+
    $$ E_{min} = \gamma \frac{m_\pi c^2}{2} (1 - \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 - 0.8) = 112.5 \times 0.2 = 22.5 \text{ MeV} $$
+
 6. Verificación: $E_{max} + E_{min} = 225 \text{ MeV}$, que es precisamente la energía total del pion en el sistema de laboratorio ($E = \gamma m_\pi c^2$).
 
 ### Ejercicio 3: Sección Eficaz de Dispersión de Rutherford Cuántica
@@ -205,15 +221,23 @@ A partir de la Regla de Oro de Fermi y la aproximación de Born, derive la secci
 **Solución paso a paso:**
 1. El potencial de Coulomb es $V(r) = \frac{z Z e^2}{4\pi\epsilon_0 r}$.
 2. En la primera aproximación de Born, la amplitud de dispersión es proporcional a la transformada de Fourier del potencial:
+
    $$ f(\theta) = -\frac{m}{2\pi\hbar^2} \int V(r) e^{i \vec{q} \cdot \vec{r}} d^3r $$
+
    donde $\vec{q} = \vec{k}_f - \vec{k}_i$ es la transferencia de momento.
 3. Para asegurar convergencia, se utiliza un potencial apantallado $V(r) e^{-\mu r}$ y luego se toma $\mu \to 0$. La integral resulta en:
+
    $$ \int \frac{e^{-\mu r}}{r} e^{i \vec{q} \cdot \vec{r}} d^3r = \frac{4\pi}{q^2 + \mu^2} \xrightarrow{\mu \to 0} \frac{4\pi}{q^2} $$
+
 4. La magnitud de la transferencia de momento, considerando dispersión elástica ($|\vec{k}_i| = |\vec{k}_f| = k$), es $q = 2k \sin(\theta/2)$.
 5. Sustituyendo todo, la amplitud es:
+
    $$ f(\theta) = -\frac{m z Z e^2}{2\pi\hbar^2 4\pi\epsilon_0} \frac{4\pi}{(2k \sin(\theta/2))^2} = -\frac{z Z e^2}{16\pi\epsilon_0 E \sin^2(\theta/2)} $$
+
 6. La sección diferencial es $\frac{d\sigma}{d\Omega} = |f(\theta)|^2$:
+
    $$ \frac{d\sigma}{d\Omega} = \left( \frac{z Z e^2}{16\pi\epsilon_0 E} \right)^2 \frac{1}{\sin^4(\theta/2)} $$
+
    que coincide exactamente con el resultado clásico de Rutherford.
 
 ## 💻 Simulaciones Computacionales
@@ -285,14 +309,19 @@ El estado del arte en estructura nuclear aísla fenomenologías obsoletas para m
 En lugar de potenciales fenomenológicos como Woods-Saxon o Argonne V18, el potencial nucleón-nucleón (y fuerzas de tres nucleones $3N$) se deriva rigurosamente a partir del lagrangiano de bajas energías de QCD empleando simetría quiral rota espontáneamente y explícitamente por la masa de los piones. 
 
 El Hamiltoniano microscópico Ab Initio se define mediante una expansión sistemática en momentos (power counting) de la forma $Q/\Lambda_{\chi}$:
+
 $$ \mathcal{L}_{eff} = \mathcal{L}_{\pi\pi} + \mathcal{L}_{\pi N} + \mathcal{L}_{NN} $$
 
 El problema estacionario de 20-100 cuerpos interactuantes se soluciona empleando formalismos del **Grupo de Renormalización de Similitud (SRG)**, el cual aplica transformaciones unitarias continuas $U(s)$ parametrizadas por un flujo continuo $s$ al Hamiltoniano inicial $H$, obligando a desacoplar los momentos de alta energía y eliminando el inmanejable "core repulsivo" duro:
+
 $$ \frac{dH(s)}{ds} = [ \eta(s), H(s) ] $$
+
 donde el generador antihermítico estándar de Wegner es $\eta(s) = [T_{rel}, H(s)]$.
 
 Macroscópicamente, para núcleos pesados, la matemática requerida invoca la **Aproximación de Hartree-Fock-Bogoliubov (HFB)**, unificando la correlación de emparejamiento (superfluidez) y el campo medio de la gota líquida. La matriz generalizada de densidad general superespacial (Bogoliubov quasiparticle transformation) satisface la ecuación cuasi-lineal autoconsecuente no acoplada:
+
 $$ \begin{pmatrix} h - \lambda & \Delta \\ -\Delta^* & -h^* + \lambda \end{pmatrix} \begin{pmatrix} U \\ V \end{pmatrix} = E \begin{pmatrix} U \\ V \end{pmatrix} $$
+
 donde $h$ es el hamiltoniano de partícula única, $\lambda$ el potencial químico, y $\Delta$ el campo de emparejamiento superfluido invariante de calibre (gap parameter). El manejo en Variedades de Grassmann (Grassmannians) proyectando isospín y momento angular colectivo conforma la frontera computacional de la ecuación maestra estructural en 2026.
 
 ## 📚 Recursos Específicos
@@ -316,10 +345,14 @@ donde $h$ es el hamiltoniano de partícula única, $\lambda$ el potencial quími
    **Contexto Matemático:** 
    Bohr demostró que un núcleo esférico cerrado en el modelo de capas, al excitarse o añadirle nucleones de valencia, se deforma, comportándose como un rotor asimétrico cuántico de muchos cuerpos.
    El Hamiltoniano rotacional de un núcleo deformado con forma elipsoidal se escribe intrínsecamente como:
+
    $$ \hat{H}_{rot} = \frac{\hbar^2}{2 \mathcal{J}} \mathbf{R}^2 $$
+
    donde $\mathcal{J}$ es el momento de inercia dinámico y $\mathbf{R}$ el momento angular rotacional colectivo. 
    Para núcleos par-par ($J_{base} = 0^+$), la energía de los niveles rotacionales excitados sigue rígidamente la secuencia:
+
    $$ E_J = \frac{\hbar^2}{2 \mathcal{J}} J(J+1) $$
+
    con $J = 0, 2, 4, \dots$ (los estados impares son prohibidos por la simetría de paridad). La precisión abrumadora de este escalamiento $J(J+1)$ en el espectro gamma validó magistralmente su teoría unificada.
 
 2. **"On Closed Shells in Nuclei. II"** - *M. Goeppert Mayer (1950), Phys. Rev. 78, 16*  
@@ -330,7 +363,9 @@ donde $h$ es el hamiltoniano de partícula única, $\lambda$ el potencial quími
    
    **Contexto Matemático:** 
    La base fundamental residió en el Hamiltoniano central más el acoplamiento relativista:
+
    $$ \hat{H} = \frac{p^2}{2m} + V(r) - \lambda \left( \frac{1}{r} \frac{dV(r)}{dr} \right) \mathbf{L} \cdot \mathbf{S} $$
+
    donde $\lambda > 0$ refleja un acoplamiento repulsivo respecto al gradiente del potencial (contrario a la estructura atómica de los electrones).
    La genialidad matemática de Mayer fue demostrar que la expectativa radial del desdoblamiento para un potencial de oscilador armónico escalaba fuertemente con el número cuántico de momento angular $l$.
    El splitting de energía, $\Delta E \propto l \cdot \hbar^2$, provoca que la capa $1g_{9/2}$ caiga verticalmente de su degeneración original, cerrándose el hueco mágico $N,Z = 50$, lo que fue un avance triunfal predictivo.

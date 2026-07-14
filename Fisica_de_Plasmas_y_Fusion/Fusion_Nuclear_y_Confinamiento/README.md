@@ -95,26 +95,35 @@ graph TD
 
 1. **Tiempo de confinamiento para ignición ($\tau_{E, ign}$):**
    Utilizando la condición del Producto Triple de Lawson para ignición:
+
    $$ n T \tau_{E, ign} \approx 3 \times 10^{21} \, \text{m}^{-3} \cdot \text{keV} \cdot \text{s} $$
+
    Despejando $\tau_{E, ign}$:
+
    $$ \tau_{E, ign} = \frac{3 \times 10^{21}}{n T} $$
+
    $$ \tau_{E, ign} = \frac{3 \times 10^{21}}{(10^{20}) (15)} = \frac{3 \times 10^{21}}{1.5 \times 10^{21}} = 2.0 \, \text{s} $$
+
    Para lograr la ignición autónoma, el calor debe retenerse en promedio durante 2.0 segundos.
 
 2. **Cálculo del Factor $Q$ con el tiempo real:**
    Dado $\tau_{E, real} = 1.8 \, \text{s} < 2.0 \, \text{s}$, el reactor no alcanza la ignición ($Q < \infty$). Necesitará calentamiento externo $P_{ext}$ constante.
    Sabemos que:
+
    $$ Q = \frac{5 P_\alpha}{P_{trans} - P_\alpha} $$  (despreciando Bremsstrahlung)
    
    Dividimos numerador y denominador por $P_{trans}$:
+
    $$ Q = \frac{5 (P_\alpha / P_{trans})}{1 - (P_\alpha / P_{trans})} $$
    
    La relación $(P_\alpha / P_{trans})$ depende linealmente del tiempo de confinamiento si $n$ y $T$ son constantes. Como sabemos que a $\tau_E = 2.0 \, \text{s}$ la potencia alfa iguala exactamente a la potencia perdida por transporte (ignición, $P_\alpha = P_{trans}$), entonces:
+
    $$ \frac{P_\alpha}{P_{trans}} = \frac{\tau_{E, real}}{\tau_{E, ign}} = \frac{1.8}{2.0} = 0.9 $$
    
    Es decir, las partículas alfa proveen el 90% del calentamiento necesario, y el $P_{ext}$ debe aportar el 10% restante.
 
 3. **Obtención del valor final de $Q$:**
+
    $$ Q = \frac{5 (0.9)}{1 - 0.9} = \frac{4.5}{0.1} = 45 $$
 
 **Conclusión:** El reactor no se autosostendrá completamente, pero generará 45 veces más energía térmica de fusión que la energía inyectada para mantener el plasma caliente. Este es un reactor de muy alto rendimiento, muy superior al break-even ($Q=1$), y comparable al objetivo de diseño base de ITER ($Q \ge 10$).
@@ -128,17 +137,25 @@ Calcule la densidad de potencia de fusión (en $\text{MW/m}^3$) de un plasma equ
 1. **Densidad de Potencia de Fusión:**
 Para una mezcla 50:50 de D-T, las densidades de combustible son $n_D = n_T = n_e / 2 = 0.5 \times 10^{20} \, \text{m}^{-3}$.
 La tasa volumétrica de reacciones es:
+
 $$ R_{DT} = n_D n_T \langle \sigma v \rangle = (0.5 \times 10^{20})^2 (1.1 \times 10^{-22}) = 2.75 \times 10^{17} \, \text{reacciones/m}^3\cdot\text{s} $$
+
 La energía liberada por cada reacción es $E_{fus} = 17.6 \, \text{MeV} = 2.82 \times 10^{-12} \, \text{J}$.
 Densidad de potencia total de fusión:
+
 $$ P_{fus} = R_{DT} E_{fus} = (2.75 \times 10^{17}) (2.82 \times 10^{-12}) = 7.75 \times 10^5 \, \text{W/m}^3 = 0.775 \, \text{MW/m}^3 $$
 
 2. **Requerimiento para Break-Even ($Q=1$):**
 En el break-even, la potencia de fusión total generada iguala a las pérdidas de potencia (ignorando Bremsstrahlung y asumiendo $T_e = T_i = 10 \, \text{keV}$):
+
 $$ P_{fus} = \frac{3 n k_B T}{\tau_E} $$
+
 Despejamos $\tau_E$:
+
 $$ \tau_E = \frac{3 n k_B T}{P_{fus}} = \frac{3 (10^{20}) (10 \times 10^3 \text{ eV}) (1.6 \times 10^{-19} \text{ J/eV})}{7.75 \times 10^5 \text{ W/m}^3} $$
+
 $$ \tau_E = \frac{4.8 \times 10^5}{7.75 \times 10^5} \approx 0.62 \, \text{s} $$
+
 Para que el reactor rompa el empate energético bajo estas condiciones ideales, la energía debe mantenerse por al menos $0.62$ segundos.
 
 ### Problema 2: Compresión Inercial (Confinamiento Inercial)
@@ -148,16 +165,23 @@ En fusión por confinamiento inercial (ICF), un pulso láser comprime esféricam
 La condición de ignición inercial requiere que la fracción de quemado sea alta, típicamente requiriendo el parámetro areal $\rho R \ge 3 \, \text{g/cm}^2$.
 1. Conservación de masa:
 La masa de la cápsula esférica de combustible es constante durante la implosión.
+
 $$ M = \frac{4}{3} \pi r_0^3 \rho_0 = \frac{4}{3} \pi R^3 \rho $$
+
 De aquí, el radio comprimido es $R = r_0 \left( \frac{\rho_0}{\rho} \right)^{1/3}$.
 
 2. Reemplazo en el criterio de densidad areal:
+
 $$ \rho R = \rho \left( r_0 \left( \frac{\rho_0}{\rho} \right)^{1/3} \right) = r_0 \rho_0^{1/3} \rho^{2/3} = 3 \, \text{g/cm}^2 $$
 
 3. Despeje de la densidad comprimida requerida $\rho$:
+
 $$ \rho^{2/3} = \frac{\rho R}{r_0 \rho_0^{1/3}} $$
+
 En unidades CGS: $r_0 = 0.1 \, \text{cm}$, $\rho_0 = 0.2 \, \text{g/cm}^3$.
+
 $$ \rho^{2/3} = \frac{3}{(0.1) (0.2)^{1/3}} = \frac{3}{(0.1) (0.585)} = \frac{3}{0.0585} = 51.3 $$
+
 $$ \rho = (51.3)^{3/2} \approx 367 \, \text{g/cm}^3 $$
 
 **Conclusión:** El plasma inercial debe ser comprimido a una densidad más de 1000 veces mayor que la sólida para frenar intrínsecamente las partículas alfa generadas y lograr la retroalimentación térmica estallante.
@@ -173,7 +197,9 @@ El sistema generará teóricamente $N_{bred} = 1.15 N_0$ átomos de Tritio en el
 La eficiencia de recolección, confinamiento y purificación en la planta de tritio es $\eta_{ext} = 0.90$.
 Además, el decaimiento radiactivo del Tritio (vida media $\approx 12.3$ años) y las interrupciones imponen la disponibilidad del reactor. Si está desconectado $f_{down} = 0.05$, operará el $95\%$ del tiempo. (Para simplificar, tomamos directamente el factor de disponibilidad como penalización de tiempo de reacción, aunque rigurosamente afecta a la acumulación global).
 Tritio recuperado neto y disponible como combustible:
+
 $$ TBR_{net} = TBR_{ideal} \times \eta_{ext} \times (1 - f_{down}) $$
+
 $$ TBR_{net} = 1.15 \times 0.90 \times 0.95 = 0.983 $$
 
 **Conclusión:** Como el $TBR_{net} < 1.0$, el reactor consumirá más tritio del que logra reemplazar en el ciclo. Se necesita mejorar los multiplicadores neutrónicos o minimizar las pérdidas de recolección química en el manto para que el reactor sea autosostenible en combustible.
@@ -238,7 +264,9 @@ El transporte en el reactor no obedece la difusión clásica debido a la complic
 
 **Teoría Neoclásica del Transporte:**
 La difusión colisional en un plasma magnetizado curvo está dominada por las trayectorias cerradas con forma de plátano (banana orbits) de las partículas atrapadas en pozos magnéticos locales. Se resuelve utilizando expansiones asintóticas del operador de colisión de Landau-Fokker-Planck:
+
 $$ C(f, f) = \Gamma \frac{\partial}{\partial \mathbf{v}} \cdot \int d^3v' \, \mathbb{U}(\mathbf{v} - \mathbf{v}') \cdot \left( f(\mathbf{v}') \frac{\partial f(\mathbf{v})}{\partial \mathbf{v}} - f(\mathbf{v}) \frac{\partial f(\mathbf{v}')}{\partial \mathbf{v}'} \right) $$
+
 La ecuación cinética (ecuación de Fokker-Planck de deriva-cinética o girocinética) se integra a lo largo de las superficies de flujo magnético etiquetadas por el radio menor $r$.
 Los coeficientes de transporte $D, \chi, \mu$ se obtienen invirtiendo la matriz termodinámica de flujos de fuerza impulsora. Se demuestra que la conductividad térmica iónica neoclásica $\chi_i^{\text{neo}}$ escala como $\sim q^2 \epsilon^{-3/2} \chi_i^{\text{clásico}}$, excediendo en dos órdenes de magnitud la predicción de cilindro ideal, lo que define el diseño de escala de los reactores experimentales tipo ITER.
 
@@ -260,7 +288,9 @@ Los coeficientes de transporte $D, \chi, \mu$ se obtienen invirtiendo la matriz 
    
    **Contexto Matemático:** 
    Al evaluar el balance entre la producción de energía por la reactividad térmica cruzada $\langle \sigma v \rangle$ y las pérdidas disipativas irrecuperables por Bremsstrahlung, Lawson encontró que el umbral de ignición obedece a una función del producto densidad-tiempo de confinamiento. Para la reacción D-T dominante:
+
    $$ n \tau_E \ge \frac{12 k_B T}{\langle \sigma v \rangle E_{\text{fus}} - C_{br} T^{1/2}} $$
+
    Esta desigualdad paramétrica impone, a la temperatura ideal de $15 \, \text{keV}$, que $n \tau_E \ge 10^{20} \, \text{s m}^{-3}$, definiendo matemáticamente el tamaño colosal y las especificaciones magnéticas necesarias para reactores comerciales futuros.
 
 2. **"Laser Compression of Matter to Super-High Densities: Thermonuclear (CTR) Applications"** - *J. Nuckolls et al. (1972), Nature 239, 139-142*  
@@ -271,7 +301,9 @@ Los coeficientes de transporte $D, \chi, \mu$ se obtienen invirtiendo la matriz 
    
    **Contexto Matemático:** 
    El artículo demostró que calentar un plasma a densidad sólida no es suficiente porque la energía láser requerida escalaría prohibitivamente y la onda de expansión térmica desarmaría el blanco antes de quemarse. En su lugar, derivaron que una compresión adiabática esférica (mediante una implosión guiada por presión de ablación) requiere que la densidad areal comprimida cumpla:
+
    $$ \rho R \ge \frac{m_i c_s}{\langle \sigma v \rangle} \approx 3 \, \text{g/cm}^2 $$
+
    Para maximizar la fracción de quemado ($f \approx \frac{\rho R}{\rho R + 6}$), el blanco debe comprimirse a densidades gigantescas ($\sim 1000$ veces la densidad sólida) limitando la energía láser de ignición a regímenes factibles (megajulios en lugar de gigajulios), aprovechando la propagación de una onda de quemado termonuclear iniciada en un 'hot-spot' central.
 
 ### 📖 Referencias Útiles y Bibliografía

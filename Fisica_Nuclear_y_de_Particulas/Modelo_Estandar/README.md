@@ -48,6 +48,7 @@ $$ L = \begin{pmatrix} \nu_e \\ e \end{pmatrix}_L, \quad R = e_R $$
 Las transformaciones bajo el grupo gauge $SU(2)_L \otimes U(1)_Y$ se definen por:
 
 $$ L \to \exp\left(i \frac{g}{2} \vec{\alpha}(x) \cdot \vec{\sigma} + i \frac{g'}{2} y_L \beta(x)\right) L $$
+
 $$ R \to \exp\left(i \frac{g'}{2} y_R \beta(x)\right) R $$
 
 donde $\vec{\sigma}$ son las matrices de Pauli, $g$ y $g'$ son las constantes de acoplamiento de $SU(2)_L$ y $U(1)_Y$ respectivamente, y $y$ es la hipercarga débil, vinculada a la carga eléctrica por la fórmula de Gell-Mann–Nishijima: $Q = T_3 + \frac{Y}{2}$.
@@ -63,6 +64,7 @@ $$ \mathcal{L}_{Gauge} = -\frac{1}{4} W^a_{\mu\nu} W^{a\mu\nu} - \frac{1}{4} B_{
 donde los tensores de campo (field strengths) se definen formalmente considerando la no-abelianidad de $SU(2)$:
 
 $$ W^a_{\mu\nu} = \partial_\mu W^a_\nu - \partial_\nu W^a_\mu + g \epsilon^{abc} W^b_\mu W^c_\nu $$
+
 $$ B_{\mu\nu} = \partial_\mu B_\nu - \partial_\nu B_\mu $$
 
 Sin embargo, los términos de masa para los bosones $W$ y $Z$ de la forma $\frac{1}{2} M^2 W_\mu W^\mu$ violarían explícitamente la invarianza gauge. Esto motiva la introducción del Mecanismo de Brout-Englert-Higgs.
@@ -122,6 +124,7 @@ Definimos los campos físicos de masa definida:
 - Fotón $A$: $A_\mu = \frac{g' W^3_\mu + g B_\mu}{\sqrt{g^2 + g'^2}}$. Vemos que su coeficiente en la forma cuadrática es cero; por lo tanto, **$M_A = 0$**.
 
 La relación entre los acoplamientos y el ángulo de mezcla de Weinberg $\theta_W$ es:
+
 $$ \cos\theta_W = \frac{g}{\sqrt{g^2 + g'^2}}, \quad \sin\theta_W = \frac{g'}{\sqrt{g^2 + g'^2}} $$
 
 Esto nos lleva a la profunda relación del ME: $M_W = M_Z \cos\theta_W$.
@@ -177,15 +180,25 @@ Determine el núcleo más estable contra decaimiento beta para una familia isob�
 
 **Solución paso a paso:**
 1. La masa atómica de un núcleo isobárico es aproximadamente una parábola en función de $Z$:
+
    $$ M(A,Z) \approx \alpha Z^2 + \beta Z + \gamma $$
+
 2. Los términos relevantes de la fórmula de Bethe-Weizsäcker que dependen de $Z$ son el término de Coulomb y el de asimetría:
+
    $$ E_C = a_c \frac{Z(Z-1)}{A^{1/3}} \approx a_c \frac{Z^2}{A^{1/3}}, \quad E_A = a_a \frac{(A-2Z)^2}{A} $$
+
 3. Maximizando la energía de ligadura con respecto a $Z$ (o minimizando la masa):
+
    $$ \frac{\partial E_B}{\partial Z} = -2 a_c \frac{Z}{A^{1/3}} + 4 a_a \frac{A-2Z}{A} = 0 $$
+
 4. Despejando $Z$ para el isóbaro más estable ($Z_{min}$):
+
    $$ Z_{min} = \frac{A}{2 + \frac{a_c}{2 a_a} A^{2/3}} $$
+
 5. Utilizando valores típicos $a_c = 0.71$ MeV y $a_a = 23.2$ MeV para $A = 125$:
+
    $$ Z_{min} = \frac{125}{2 + \frac{0.71}{46.4} (125)^{2/3}} = \frac{125}{2 + 0.0153 \times 25} = \frac{125}{2.3825} \approx 52.4 $$
+
 6. El número atómico entero más cercano es $Z = 52$, que corresponde al Telurio ($^{125}\text{Te}$).
 
 ### Ejercicio 2: Cinemática Relativista del Decaimiento del Pion
@@ -196,9 +209,13 @@ Un pion neutro ($\pi^0$) en reposo decae en dos fotones ($\pi^0 \to \gamma + \ga
 2. El pion se mueve en el sistema de laboratorio (Lab) con velocidad $v=0.8c$, por lo que el factor de Lorentz es $\gamma = \frac{1}{\sqrt{1-0.8^2}} = \frac{1}{0.6} = \frac{5}{3}$.
 3. Usamos la transformación de Lorentz para la energía del fotón: $E = \gamma E' (1 + \beta \cos\theta')$, donde $\theta'$ es el ángulo de emisión en el sistema CM relativo a la velocidad del pion.
 4. La energía máxima ocurre cuando el fotón se emite hacia adelante ($\theta'=0$):
+
    $$ E_{max} = \gamma \frac{m_\pi c^2}{2} (1 + \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 + 0.8) = 112.5 \times 1.8 = 202.5 \text{ MeV} $$
+
 5. La energía mínima ocurre cuando el fotón se emite hacia atrás ($\theta'=\pi$):
+
    $$ E_{min} = \gamma \frac{m_\pi c^2}{2} (1 - \beta) = \frac{5}{3} \frac{135 \text{ MeV}}{2} (1 - 0.8) = 112.5 \times 0.2 = 22.5 \text{ MeV} $$
+
 6. Verificación: $E_{max} + E_{min} = 225 \text{ MeV}$, que es precisamente la energía total del pion en el sistema de laboratorio ($E = \gamma m_\pi c^2$).
 
 ### Ejercicio 3: Sección Eficaz de Dispersión de Rutherford Cuántica
@@ -207,15 +224,23 @@ A partir de la Regla de Oro de Fermi y la aproximación de Born, derive la secci
 **Solución paso a paso:**
 1. El potencial de Coulomb es $V(r) = \frac{z Z e^2}{4\pi\epsilon_0 r}$.
 2. En la primera aproximación de Born, la amplitud de dispersión es proporcional a la transformada de Fourier del potencial:
+
    $$ f(\theta) = -\frac{m}{2\pi\hbar^2} \int V(r) e^{i \vec{q} \cdot \vec{r}} d^3r $$
+
    donde $\vec{q} = \vec{k}_f - \vec{k}_i$ es la transferencia de momento.
 3. Para asegurar convergencia, se utiliza un potencial apantallado $V(r) e^{-\mu r}$ y luego se toma $\mu \to 0$. La integral resulta en:
+
    $$ \int \frac{e^{-\mu r}}{r} e^{i \vec{q} \cdot \vec{r}} d^3r = \frac{4\pi}{q^2 + \mu^2} \xrightarrow{\mu \to 0} \frac{4\pi}{q^2} $$
+
 4. La magnitud de la transferencia de momento, considerando dispersión elástica ($|\vec{k}_i| = |\vec{k}_f| = k$), es $q = 2k \sin(\theta/2)$.
 5. Sustituyendo todo, la amplitud es:
+
    $$ f(\theta) = -\frac{m z Z e^2}{2\pi\hbar^2 4\pi\epsilon_0} \frac{4\pi}{(2k \sin(\theta/2))^2} = -\frac{z Z e^2}{16\pi\epsilon_0 E \sin^2(\theta/2)} $$
+
 6. La sección diferencial es $\frac{d\sigma}{d\Omega} = |f(\theta)|^2$:
+
    $$ \frac{d\sigma}{d\Omega} = \left( \frac{z Z e^2}{16\pi\epsilon_0 E} \right)^2 \frac{1}{\sin^4(\theta/2)} $$
+
    que coincide exactamente con el resultado clásico de Rutherford.
 
 ## 💻 Simulaciones Computacionales
@@ -286,12 +311,15 @@ El Modelo Estándar sigue demostrando una solidez asombrosa en el LHC a 2026, si
 El rigor axiomático del Modelo Estándar invoca **Teoría de Grupos de Lie, Haces Fibrados Principales (Principal Bundles) y Cuantización BRS/BRST**.
 
 Físicamente, un campo de gauge es matemáticamente una conexión (connection) en un haz fibrado principal sobre la variedad del espaciotiempo, y el tensor de intensidad del campo (Field Strength Tensor $F_{\mu\nu}$) es la curvatura (curvature) de esa conexión. Para el grupo $G = SU(3) \times SU(2) \times U(1)$, la derivada covariante fundamental actúa sobre una sección $\psi$ de un haz vectorial asociado (los fermiones):
+
 $$ D_\mu \psi = \left( \partial_\mu - i g A_\mu^a T^a \right) \psi $$
 
 La estabilización del sector longitudinal de los bosones vectoriales masivos $W^\pm, Z^0$ se garantiza por la **Teoría de Equivalencia del Bosón de Goldstone** a altas energías ($E \gg M_W$). Las amplitudes de dispersión $WW \to WW$ que de otro modo violarían la unitaridad límite de onda parcial crecen como $(E/M_W)^2$, pero la cancelación diagramática del intercambio s y t del bosón de Higgs unitariza exactamente la amplitud.
 
 A nivel de matriz S, el formalismo requiere la simetría residual **BRST** (Becchi-Rouet-Stora-Tyutin) para cancelar las polarizaciones no físicas de los bosones de gauge no abelianos en la matriz-S. El operador nilpotente $Q_{BRST}$ (con $Q_{BRST}^2 = 0$) clasifica los estados físicos del espacio de Fock:
+
 $$ |\text{Físico}\rangle \in \frac{\text{Ker}(Q_{BRST})}{\text{Im}(Q_{BRST})} $$
+
 garantizando que la unitaridad probabilística y la invariancia de Lorentz coexistan armónicamente en el cálculo de procesos del Modelo Estándar a multi-loops.
 
 ## 📚 Recursos Específicos
@@ -314,7 +342,9 @@ garantizando que la unitaridad probabilística y la invariancia de Lorentz coexi
    
    **Contexto Matemático:** 
    Para detectar una partícula altamente inestable (su vida media es minúscula), ATLAS tuvo que rastrear los canales de decaimiento acoplados al Higgs. La sección eficaz y la razón de decaimiento (branching ratio, $BR$) dependen de los acoplamientos del Higgs:
+
    $$ \Gamma(H \to f\bar{f}) = \frac{N_c G_F m_f^2 M_H}{4\pi\sqrt{2}} \left( 1 - \frac{4m_f^2}{M_H^2} \right)^{3/2} $$
+
    donde la anchura de decaimiento (probabilidad) para un canal fermiónico depende inherentemente de la masa del fermión al cuadrado ($m_f^2$), reflejando el acoplamiento directo de Yukawa $y_f \propto m_f$. En el artículo, destacan canales como $H \to \gamma\gamma$ (una anomalía cuántica a 1-loop mediada por un loop del quark top o bosones W) debido a su señal ultra-limpia frente a un tremendo fondo hadrónico de Bremsstrahlung. 
 
 2. **"Quantum Chromodynamics at high energies"** - *L. N. Lipatov (1995), Physics Reports 286, 131* / (Relacionado con libertad asintótica y PDF)  
@@ -326,9 +356,13 @@ garantizando que la unitaridad probabilística y la invariancia de Lorentz coexi
    
    **Contexto Matemático:** 
    El avance radical fue probar que las teorías de gauge no abelianas ($SU(3)_C$) poseen una "función Beta" ($\beta(g)$) inherentemente negativa. La ecuación del Grupo de Renormalización para la constante de acoplamiento fuerte $\alpha_s(Q^2)$ a orden de 1-loop se deriva como:
+
    $$ \mu \frac{\partial \alpha_s}{\partial \mu} = \beta(\alpha_s) = - \frac{\alpha_s^2}{2\pi} \left( 11 - \frac{2}{3}n_f \right) $$
+
    Donde $n_f$ es el número de sabores de quarks operativos a esa escala de energía. Puesto que $n_f = 6 \le 16$, el factor entre paréntesis es positivo y la función $\beta$ completa es negativa. Integrando esto desde un impulso transferido de referencia $Q_0$ hasta $Q$, obtenemos:
+
    $$ \alpha_s(Q^2) = \frac{\alpha_s(Q_0^2)}{1 + \frac{\alpha_s(Q_0^2)}{12\pi} (33 - 2n_f) \ln(Q^2/Q_0^2)} $$
+
    Esta fórmula matemática atestigua el milagro del Modelo Estándar: conforme el momento transferido $Q^2 \to \infty$, la interacción se desvanece $\alpha_s(Q^2) \to 0$ (Libertad Asintótica).
 
 ### 📖 Referencias Útiles y Bibliografía

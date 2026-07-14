@@ -45,17 +45,22 @@ Al insertar la métrica FLRW y un tensor de energía-impulso para un fluido perf
 
 **Primera Ecuación de Friedmann (Ecuación de la Expansión):**
 Derivada de la componente temporal de las ecuaciones de Einstein, gobierna la tasa de expansión:
+
 $$ H^2 \equiv \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3} $$
+
 Donde $H(t)$ es el Parámetro de Hubble, $\rho$ es la densidad total de materia/radiación y $\Lambda$ es la constante cosmológica.
 
 **Segunda Ecuación de Friedmann (Ecuación de Aceleración o de Raychaudhuri):**
 Derivada de las componentes espaciales:
+
 $$ \frac{\ddot{a}}{a} = -\frac{4\pi G}{3} \left( \rho + \frac{3P}{c^2} \right) + \frac{\Lambda c^2}{3} $$
+
 Esta ecuación muestra que tanto la masa-energía ($\rho$) como la presión ($P$) contribuyen a frenar la expansión cósmica (de ahí el signo menos), a menos que predomine el término $\Lambda$.
 
 ### 3. Ecuación de Continuidad y Evolución de las Especies Cósmicas
 
 Por conservación de la energía ($\nabla_\mu T^{\mu 0} = 0$), obtenemos la ecuación termodinámica del fluido cósmico:
+
 $$ \dot{\rho} + 3\frac{\dot{a}}{a}\left(\rho + \frac{P}{c^2}\right) = 0 $$
 
 El comportamiento de $\rho(a)$ depende de la **Ecuación de Estado** termodinámica $P = w \rho c^2$, donde $w$ es un parámetro adimensional:
@@ -70,10 +75,13 @@ El comportamiento de $\rho(a)$ depende de la **Ecuación de Estado** termodinám
 ### 4. Parámetros de Densidad y el Universo Concordante
 
 Es útil dividir la densidad por la **Densidad Crítica** $\rho_c$, que es la densidad exacta necesaria para un universo plano ($k=0, \Lambda=0$):
+
 $$ \rho_c(t) = \frac{3H(t)^2}{8\pi G} $$
 
 Definimos los parámetros de densidad adimensionales $\Omega_i = \rho_i / \rho_c$. La primera ecuación de Friedmann puede escribirse como una regla de suma:
+
 $$ \Omega_m + \Omega_r + \Omega_\Lambda + \Omega_k = 1 $$
+
 Donde $\Omega_k = -kc^2 / (a^2 H^2)$. Las observaciones actuales (como la misión Planck) indican que nuestro universo es plano ($\Omega_k \approx 0$), compuesto aproximadamente por $\Omega_\Lambda \approx 0.68$, $\Omega_m \approx 0.32$ (materia oscura + bariónica), y una cantidad insignificante de radiación $\Omega_r \sim 10^{-4}$ en la era actual.
 
 ---
@@ -85,21 +93,36 @@ Donde $\Omega_k = -kc^2 / (a^2 H^2)$. Las observaciones actuales (como la misió
 **Solución paso a paso:**
 1. En un universo dominado por la materia, $\rho(t) \propto a^{-3}$. Específicamente, $\rho = \rho_0 a^{-3}$ asumiendo $a_0 = 1$.
 2. La ecuación de Friedmann es:
+
    $$ \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} \frac{\rho_0}{a^3} \implies \dot{a}^2 = \frac{H_0^2}{a} $$
+
    Donde hemos usado que en $t_0$, $H_0^2 = \frac{8\pi G}{3} \rho_0$.
 3. Despejamos $dt$:
+
    $$ \dot{a} = \frac{da}{dt} = H_0 a^{-1/2} \implies dt = \frac{1}{H_0} a^{1/2} da $$
+
 4. Integramos desde el Big Bang ($t=0, a=0$) hasta hoy ($t=t_0, a=1$):
+
    $$ \int_0^{t_0} dt = \frac{1}{H_0} \int_0^1 a^{1/2} da $$
+
    $$ t_0 = \frac{1}{H_0} \left[ \frac{2}{3} a^{3/2} \right]_0^1 = \frac{2}{3 H_0} $$
+
 5. Convertimos $H_0$ a unidades SI ($s^{-1}$). Sabemos que $1 \text{ Mpc} = 3.086 \times 10^{19} \text{ km}$.
+
    $$ H_0 = \frac{70 \text{ km/s}}{1 \text{ Mpc}} = \frac{70}{3.086 \times 10^{19}} \text{ s}^{-1} \approx 2.268 \times 10^{-18} \text{ s}^{-1} $$
+
 6. El inverso de la constante de Hubble, conocido como el *Tiempo de Hubble*, es:
+
    $$ t_H = \frac{1}{H_0} \approx \frac{1}{2.268 \times 10^{-18} \text{ s}^{-1}} \approx 4.409 \times 10^{17} \text{ s} $$
+
 7. Convertimos a años ($1 \text{ año} \approx 3.154 \times 10^7 \text{ s}$):
+
    $$ t_H = \frac{4.409 \times 10^{17}}{3.154 \times 10^7} \approx 13.98 \times 10^9 \text{ años} = 13.98 \text{ mil millones de años} $$
+
 8. La edad para un universo puramente dominado por materia es $t_0 = \frac{2}{3} t_H$:
+
    $$ t_0 = \frac{2}{3} \times 13.98 \times 10^9 \approx 9.32 \text{ mil millones de años} $$
+
 9. **Conclusión:** Este resultado ($9.32 \times 10^9$ años) es notablemente inferior a la edad observada de los cúmulos estelares más antiguos ($\sim 13$ mil millones). Fue la adición de la energía oscura (que cambia la relación integral de $t_0$) la que resolvió el "problema de la edad", arrojando el valor exacto de $13.8$ mil millones de años.
 
 ---
@@ -216,15 +239,21 @@ La cosmología en 2026 se encuentra en una fase de "crisis fértil" debido a las
 ## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
 
 La cosmología moderna se fundamenta en la **Teoría de Perturbaciones Cosmológicas Relativistas**, crucial para entender cómo las fluctuaciones cuánticas del vacío se expandieron inflacionariamente para formar la estructura cósmica a gran escala. Partimos de la métrica de Friedmann-Lemaître-Robertson-Walker (FLRW) perturbada. En el calibre longitudinal (o calibre conforme newtoniano), la métrica perturbada con perturbaciones escalares se escribe usando el tiempo conforme $\eta$:
+
 $$ ds^2 = a^2(\eta) \left[ -(1 + 2\Phi)d\eta^2 + (1 - 2\Psi)\gamma_{ij} dx^i dx^j \right] $$
+
 donde $a(\eta)$ es el factor de escala, y $\Phi$ y $\Psi$ son los potenciales métricos de Bardeen (que son invariantes gauge).
 
 La dinámica del universo temprano está dominada por un campo escalar inflatón $\varphi = \varphi_0(\eta) + \delta\varphi(x, \eta)$. Expandiendo las ecuaciones de Einstein y la ecuación de Klein-Gordon a primer orden, introducimos la variable conjugada invariante de Mukhanov-Sasaki $v = a \left( \delta\varphi + \frac{\varphi_0'}{\mathcal{H}}\Phi \right)$, donde $\mathcal{H} = a'/a$. La cuantización de las perturbaciones se realiza promoviendo $v$ a un operador que satisface la **Ecuación de Mukhanov-Sasaki**:
+
 $$ v_k'' + \left( k^2 - \frac{z''}{z} \right) v_k = 0 $$
+
 con $z = a\varphi_0' / \mathcal{H}$. 
 
 El estado de vacío de Bunch-Davies proporciona las condiciones iniciales en el límite asintótico $k \gg \mathcal{H}$ (modos sub-horizonte) con $v_k(\eta) \simeq e^{-ik\eta} / \sqrt{2k}$. Al evolucionar estos modos fuera del horizonte de Hubble durante la inflación cósmica ($k \ll \mathcal{H}$), sus amplitudes se "congelan". El espectro de potencia adimensional primordial $\mathcal{P}_\mathcal{R}(k)$ para la curvatura comóvil $\mathcal{R} = v/z$ evaluado a la salida del horizonte es:
+
 $$ \mathcal{P}_\mathcal{R}(k) = \frac{k^3}{2\pi^2} |\mathcal{R}_k|^2 \approx \frac{H^2}{8\pi^2 M_{Pl}^2 \epsilon} $$
+
 donde $\epsilon = -\dot{H}/H^2$ es el parámetro de slow-roll (rodadura lenta) de la inflación. Este formalismo riguroso es el que predice el espectro de Harrison-Zel'dovich casi invariante de escala ($n_s \approx 0.965$) que ha sido confirmado con asombrosa precisión por el satélite Planck.
 
 ## 📚 Recursos Específicos
@@ -241,14 +270,18 @@ donde $\epsilon = -\dot{H}/H^2$ es el parámetro de slow-roll (rodadura lenta) d
    *Edwin Hubble (1929)*. [Proceedings of the National Academy of Sciences, 15(3), 168-173](https://www.pnas.org/doi/10.1073/pnas.15.3.168).  
    **Importancia Teórica:** El hito observacional fundacional de la cosmología moderna. Utilizando Cefeidas para medir distancias, Hubble demostró de forma concluyente que las galaxias ("nebulosas espirales") no solo están fuera de la Vía Láctea, sino que se alejan sistemáticamente, probando la expansión métrica del espacio.  
    **Fondo Matemático:** Establece empíricamente la Ley de Hubble (hoy Hubble-Lemaître), relacionando la velocidad de recesión aparente $v$ (obtenida del corrimiento al rojo $z$ estelar) con la distancia propia $D$:
+
    $$ v = H_0 D $$
+
    **Implicaciones Físicas:** Demolió el modelo del "Universo Estático" propuesto inicialmente por Einstein y condujo directamente a la formulación empírica del origen del universo a partir de un punto concentrado: el "Átomo Primigenio" (Big Bang).
 
 2. **A Measurement of Excess Antenna Temperature at 4080 Mc/s (Una medida del exceso de temperatura de antena a 4080 Mc/s)**  
    *Arno Penzias & Robert Wilson (1965)*. [The Astrophysical Journal, 142, 419-421](https://ui.adsabs.harvard.edu/abs/1965ApJ...142..419P/abstract).  
    **Importancia Teórica:** Confirma de forma accidental pero decisiva el Fondo Cósmico de Microondas (CMB), la radiación térmica isotrópica fósil predicha teóricamente por Gamow, Alpher y Herman para un universo que comenzó en un estado extremadamente caliente y se ha enfriado por expansión.  
    **Fondo Matemático:** Observan un ruido de fondo que corresponde a un espectro de cuerpo negro perfecto no direccional, validando la ley del desplazamiento de Wien termodinámica en cosmología:
+
    $$ T(z) = T_0 (1 + z) $$
+
    A un $z \approx 1100$ (era de la recombinación atómica), la temperatura cayó por debajo del límite de ionización del hidrógeno (unos $3000\text{ K}$), liberando para siempre el baño de fotones al universo, que hoy medimos enfriado astronómicamente a $T_0 = 2.725\text{ K}$.  
    **Implicaciones Físicas:** Hizo descartar por completo el Modelo del Estado Estacionario (Steady State) en cosmología, consolidando al Big Bang como la única teoría aceptada de la evolución cósmica general.
 
@@ -256,7 +289,9 @@ donde $\epsilon = -\dot{H}/H^2$ es el parámetro de slow-roll (rodadura lenta) d
    *A. Riess et al. (High-Z Supernova Search Team) & S. Perlmutter et al. (Supernova Cosmology Project) (1998/1999)*. [The Astronomical Journal, 116(3), 1009-1038](https://iopscience.iop.org/article/10.1086/300499).  
    **Importancia Teórica:** El descubrimiento más revolucionario en astrofísica de finales del s. XX, demostrando que la expansión del universo no se está frenando por la gravedad mutua de la materia, sino que está acelerando positivamente.  
    **Fondo Matemático:** Midiendo explosiones de Supernovas Tipo Ia lejanas como candelas estándar (determinando así su distancia luminosa $d_L$), hallaron que están mucho más tenues de lo esperado en un universo dominado por la materia. Esto obliga a incluir un término positivo dominante de "Energía Oscura" ($\Omega_\Lambda$) en la Ecuación de Aceleración de Friedmann-Raychaudhuri:
+
    $$ \frac{\ddot{a}}{a} = -\frac{4\pi G}{3}\rho_m + \frac{\Lambda c^2}{3} > 0 $$
+
    **Implicaciones Físicas:** Llevó a la adopción formal del modelo Concordante Lambda-CDM ($\Lambda$CDM), donde el ~68% del cosmos se compone de una repulsión de vacío inexplicable, sellando el destino de un "Big Freeze" (muerte térmica) eterna e insalvable para nuestro universo.
 
 ### 📖 Referencias Útiles y Bibliografía

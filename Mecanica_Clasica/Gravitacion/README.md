@@ -14,14 +14,20 @@ El tratamiento moderno de la gravitación clásica abarca no solo la formulació
 ### 1. Formulación de Campo y Ley de Gauss Gravitacional
 
 La ley de fuerza gravitatoria entre masas puntuales $\vec{F}_{12} = -G \frac{m_1 m_2}{r_{12}^2} \hat{r}_{12}$ se reinterpreta localmente postulando que una fuente $M$ altera las propiedades del espacio euclidiano creando un **campo gravitacional vectorial** $\vec{g}(\vec{r})$:
+
 $$ \vec{g}(\vec{r}) = \lim_{m_{test} \to 0} \frac{\vec{F}_{grav}}{m_{test}} = -G \int_{V} \frac{\rho(\vec{r}') (\vec{r} - \vec{r}')}{|\vec{r} - \vec{r}'|^3} d^3r' $$
+
 Dado que este campo exhibe dependencia inversa al cuadrado (decaimiento $1/r^2$), el flujo del campo a través de una superficie cerrada $\partial V$ depende exclusivamente de la masa contenida. De aquí deriva la forma integral de la **Ley de Gauss para la Gravedad**:
+
 $$ \oint_{\partial V} \vec{g} \cdot d\vec{A} = -4\pi G M_{int} $$
+
 Mediante el Teorema de la Divergencia de Gauss ($\int_V \nabla \cdot \vec{g} dV = \oint \vec{g} \cdot d\vec{A}$), se extrae la Ecuación Diferencial de Campo local (Ecuación de Poisson gravitatoria):
+
 $$ \nabla \cdot \vec{g} = -4\pi G \rho $$
 
 Dado que la curvatura curliana es nula ($\nabla \times \vec{g} = \vec{0}$), el campo $\vec{g}$ es puramente irrotacional y por ende deriva del gradiente de un **Potencial Gravitatorio Escalar** $\Phi(\vec{r})$, tal que $\vec{g} = -\nabla \Phi$. 
 Sustituyendo esto en la ley local obtenemos la formulación final de campo:
+
 $$ \nabla^2 \Phi = 4\pi G \rho $$
 
 ```mermaid
@@ -36,9 +42,13 @@ graph TD
 
 Consideremos dos masas estelares, $m_1$ y $m_2$, sujetas puramente a su gravedad mutua. El sistema se formula con el Hamiltoniano de 6 grados de libertad espaciales, pero se puede reducir explotando integrales de movimiento asintóticas.
 Definimos el Centro de Masa $\vec{R}$ y el vector de Posición Relativa $\vec{r}$:
+
 $$ \vec{R} = \frac{m_1\vec{r}_1 + m_2\vec{r}_2}{m_1 + m_2}, \quad \vec{r} = \vec{r}_1 - \vec{r}_2 $$
+
 La dinámica del centro de masa $\vec{R}$ es rectilínea y uniforme (invariancia de Galileo). El sistema colapsa drásticamente a un problema efectivo de **un solo cuerpo** sometido a una fuerza central esféricamente simétrica:
+
 $$ \mu \ddot{\vec{r}} = -\frac{G m_1 m_2}{r^2} \hat{r} $$
+
 Donde la "Masa Reducida" de la partícula ficticia es $\mu = \frac{m_1 m_2}{m_1 + m_2}$.
 
 ### 3. Solución a la Ecuación de la Órbita Keplereana
@@ -49,7 +59,9 @@ Esto impone inmediatamente dos fuertes restricciones topológicas:
 2. En coordenadas polares cilíndricas planares, $\ell = \mu r^2 \dot{\theta} = \text{constante}$. Esta constante revela geométrica y diferencialmente la Segunda Ley de Kepler: el radio vector barre áreas a un ritmo $\frac{dA}{dt} = \frac{\ell}{2\mu} = \text{cte}$.
 
 Con la conservación de la Energía Mecánica relativa $E = \frac{1}{2}\mu \dot{r}^2 + \frac{\ell^2}{2\mu r^2} - \frac{GM\mu}{r}$, efectuamos el histórico cambio de variable de Binet $u(\theta) = 1/r(\theta)$. La ecuación diferencial no lineal del tiempo se convierte mágicamente en la Ecuación Diferencial del Oscilador Armónico Excitado, cuya solución asintótica traza explícitamente secciones cónicas matemáticas:
+
 $$ \frac{d^2u}{d\theta^2} + u = \frac{GM\mu^2}{\ell^2} \implies r(\theta) = \frac{p}{1 + \epsilon \cos(\theta - \theta_0)} $$
+
 Donde:
 - $p = \frac{\ell^2}{GM\mu^2}$ es el semi-latus rectum.
 - $\epsilon = \sqrt{1 + \frac{2E\ell^2}{\mu(GM\mu)^2}}$ es la excentricidad orbital dependiente de la energía del sistema.
@@ -62,7 +74,9 @@ El estado final del sistema astrofísico es rígidamente dictaminado por su ener
 - Si $E > 0$, entonces $\epsilon > 1$: Estado de Dispersión (Scattering). Partícula intrusa que desvía asintóticamente en una **Hipérbola**.
 
 Finalmente, el hecho de que las órbitas limitadas no presenten precesión anómala y se cierren geométricamente sobre sí mismas de vuelta a $2\pi$ es garantizado en la mecánica newtoniana por un segundo e ignoto vector conservado que señala la simetría especial del potencial $-1/r$, conocido como vector invariante de excentricidad o **Vector de Laplace-Runge-Lenz**:
+
 $$ \vec{A} = \vec{p} \times \vec{L} - \mu k \hat{r} $$
+
 La precesión mínima observada en Mercurio violaba esta simetría subyacente, pavimentando la crisis fundacional que resolvió la Relatividad General un siglo después.
 
 ---
@@ -75,9 +89,13 @@ La precesión mínima observada en Mercurio violaba esta simetría subyacente, p
 2. En la superficie: $E_i = K_i + U_i = \frac{1}{2}m v_{esc}^2 - G \frac{mM}{R}$.
 3. Para apenas escapar, su velocidad al llegar al infinito ($r \to \infty$) será exactamente cero: $E_f = K_f + U_f = 0 + 0 = 0$.
 4. Igualamos:
+
    $$ \frac{1}{2}m v_{esc}^2 - G \frac{mM}{R} = 0 $$
+
 5. Despejando $v_{esc}$ (nota que no depende de la masa $m$ del cohete):
+
    $$ \mathbf{v_{esc} = \sqrt{\frac{2GM}{R}}} $$
+
    Para la Tierra, esto equivale a unos espectaculares $11.2 \text{ km/s}$.
 
 ---
@@ -216,19 +234,25 @@ lo cual transforma las ecuaciones de Einstein en un problema de valor inicial co
 1. **[The Runge-Lenz Vector and the Kepler Problem (Goldstein, 1975)](https://aapt.scitation.org/doi/10.1119/1.10023)**
    - *Importancia Teórica*: Explora la simetría "escondida" (simetría dinámica SO(4)) del potencial central $V(r) = -k/r$.
    - *Contexto Matemático*: En la mecánica celeste, la fuerza gravitatoria de Newton conserva no solo la energía $E$ y el momento angular $\vec{L}$, sino un tercer vector, el vector de Laplace-Runge-Lenz:
+
      $$ \vec{A} = \vec{p} \times \vec{L} - \mu k \hat{r} $$
+
      La conservación de $\vec{A}$ implica algebraicamente que las órbitas acotadas ($E < 0$) son cónicas perfectamente cerradas y sin precesión. El corrimiento del perihelio de Mercurio se debió a perturbaciones que rompen exactamente esta invariancia $\frac{d\vec{A}}{dt} \neq 0$.
    - *Implicaciones*: Explica la degeneración "accidental" de los niveles de energía del átomo de hidrógeno en mecánica cuántica (que obedece al mismo potencial inverso).
 2. **[Newton's Theorem on the Gravitational Field of Spherical Shells (Principia, 1687)](https://cudl.lib.cam.ac.uk/view/PR-ADV-B-00039-00001/1)**
    - *Importancia Teórica*: El Teorema del Cascarón Esférico (*Shell Theorem*) probó que un cuerpo masivo esférico simétrico se comporta gravitacionalmente en su exterior como si toda su masa se concentrara en un punto matemático central.
    - *Contexto Matemático*: Newton integró anillos infinitesimales superficiales; hoy usamos la Ley de Gauss. Para un cascarón esférico $M$ de radio $R$, el campo interno $(r<R)$ resulta ser cero debido a la perfecta cancelación simétrica escalar del potencial:
+
      $$ V(r < R) = - \frac{GM}{R} = \text{constante} \implies \vec{g} = -\nabla V = \vec{0} $$
+
      Para $r > R$, $\vec{g} = -\frac{GM}{r^2}\hat{r}$.
    - *Implicaciones*: Validó el que Newton pudiera modelar a los gigantescos planetas físicos como simples masas puntuales sin error matemático.
 3. **[Tidal Forces and the Roche Limit (Édouard Roche, 1848)](https://en.wikipedia.org/wiki/Roche_limit)**
    - *Importancia Teórica*: Teoría fundamental en astrofísica para comprender la estabilidad estructural bajo gradientes gravitacionales (fuerzas de marea).
    - *Contexto Matemático*: La fuerza gravitatoria de marea a través de un cuerpo de diámetro $2r$ orbitando a un cuerpo mayor $M$ a distancia $R$ viene de la expansión diferencial de Taylor del campo. La condición límite para que la auto-gravedad del satélite sucumba ante el desgarro de marea arroja el Límite de Roche rígido:
+
      $$ d = R_M \left( \frac{2 \rho_M}{\rho_m} \right)^{1/3} $$
+
    - *Implicaciones*: Explica la formación y persistencia de los anillos de Saturno y advierte de la espaguetización (*spaghettification*) cerca del horizonte de eventos de un Agujero Negro, donde el tensor de curvatura de Riemann es colosal.
 
 ### 📖 Referencias Útiles y Bibliografía

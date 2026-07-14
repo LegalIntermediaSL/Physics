@@ -91,7 +91,9 @@ Si $S_{hkl} = 0$, el pico de difracción predicho geométricamente por la red de
 
 2. **Cálculo del Factor de Estructura:**
    Sustituimos estas posiciones en la ecuación de $S_{hkl}$ asumiendo $f_1 = f_2 = f$ (mismo tipo de átomo):
+
    $$ S_{hkl} = f \left( e^{-2\pi i (0)} + e^{-2\pi i (h(1/2) + k(1/2) + l(1/2))} \right) $$
+
    $$ S_{hkl} = f \left( 1 + e^{-i\pi (h + k + l)} \right) $$
 
 3. **Análisis de la paridad:**
@@ -100,10 +102,14 @@ Si $S_{hkl} = 0$, el pico de difracción predicho geométricamente por la red de
    
    Esto nos da dos casos fundamentales:
    - **Caso A (suma par):** Si $h+k+l = \text{número par}$, entonces $(-1)^{h+k+l} = 1$.
+
      $$ S_{hkl} = f (1 + 1) = 2f $$
+
      (La intensidad es proporcional a $|S|^2 = 4f^2$, el pico es **observable**).
    - **Caso B (suma impar):** Si $h+k+l = \text{número impar}$, entonces $(-1)^{h+k+l} = -1$.
+
      $$ S_{hkl} = f (1 - 1) = 0 $$
+
      (La intensidad es cero, el pico sufre **extinción sistemática**).
 
 4. **Aplicación al plano (1 0 0):**
@@ -125,14 +131,22 @@ La celda unitaria convencional FCC contiene 4 átomos en las siguientes posicion
 4) $(0, 1/2, 1/2)$
 El factor de estructura geométrico es $S_{hkl} = \sum_{j=1}^4 f e^{-2\pi i (hx_j + ky_j + lz_j)}$.
 Sustituyendo las posiciones:
+
 $$ S_{hkl} = f \left[ 1 + e^{-i\pi(h+k)} + e^{-i\pi(h+l)} + e^{-i\pi(k+l)} \right] $$
+
 Usando la propiedad $e^{-i\pi n} = (-1)^n$:
+
 $$ S_{hkl} = f \left[ 1 + (-1)^{h+k} + (-1)^{h+l} + (-1)^{k+l} \right] $$
+
 Analizamos la paridad de los índices $(h,k,l)$:
 - Si $h,k,l$ son todos pares o todos impares (ej. 111, 200, 220), la suma de cualquier par será par. Entonces $(-1)^{\text{par}} = 1$.
+
   $$ S_{hkl} = f [1 + 1 + 1 + 1] = 4f $$
+
 - Si hay una mezcla de pares e impares (ej. 100, 210, 211), al menos dos sumas serán impares y una par (o viceversa).
+
   $$ S_{hkl} = f [1 - 1 - 1 + 1] = 0 $$
+
 Por lo tanto, la red FCC solo presenta picos de difracción cuando los índices $h,k,l$ tienen todos la misma paridad.
 
 ### Problema 2: Volumen de la Red Recíproca
@@ -140,18 +154,31 @@ Demuestre que el volumen de la celda primitiva en el espacio recíproco $V_{rec}
 
 **Solución paso a paso:**
 El volumen de la celda en el espacio recíproco es el producto triple escalar de sus vectores base:
+
 $$ V_{rec} = \mathbf{b}_1 \cdot (\mathbf{b}_2 \times \mathbf{b}_3) $$
+
 Usando las definiciones de los vectores de la red recíproca:
+
 $$ \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_2 \times \mathbf{a}_3}{V_c}, \quad \mathbf{b}_2 = 2\pi \frac{\mathbf{a}_3 \times \mathbf{a}_1}{V_c}, \quad \mathbf{b}_3 = 2\pi \frac{\mathbf{a}_1 \times \mathbf{a}_2}{V_c} $$
+
 Sustituyendo $\mathbf{b}_2$ y $\mathbf{b}_3$ en el producto vectorial:
+
 $$ \mathbf{b}_2 \times \mathbf{b}_3 = \frac{(2\pi)^2}{V_c^2} [(\mathbf{a}_3 \times \mathbf{a}_1) \times (\mathbf{a}_1 \times \mathbf{a}_2)] $$
+
 Aplicando la identidad del vector cuádruple $(\mathbf{A} \times \mathbf{B}) \times \mathbf{C} = \mathbf{B}(\mathbf{A}\cdot\mathbf{C}) - \mathbf{A}(\mathbf{B}\cdot\mathbf{C})$ con $\mathbf{C} = \mathbf{a}_1 \times \mathbf{a}_2$:
+
 $$ (\mathbf{a}_3 \times \mathbf{a}_1) \times \mathbf{C} = \mathbf{a}_1 (\mathbf{a}_3 \cdot \mathbf{C}) - \mathbf{a}_3 (\mathbf{a}_1 \cdot \mathbf{C}) $$
+
 Sabemos que $\mathbf{a}_3 \cdot (\mathbf{a}_1 \times \mathbf{a}_2) = V_c$ y $\mathbf{a}_1 \cdot (\mathbf{a}_1 \times \mathbf{a}_2) = 0$. Entonces:
+
 $$ \mathbf{b}_2 \times \mathbf{b}_3 = \frac{(2\pi)^2}{V_c^2} [\mathbf{a}_1 (V_c)] = \frac{(2\pi)^2}{V_c} \mathbf{a}_1 $$
+
 Ahora multiplicamos escalarmente por $\mathbf{b}_1$:
+
 $$ V_{rec} = \mathbf{b}_1 \cdot \left( \frac{(2\pi)^2}{V_c} \mathbf{a}_1 \right) = \frac{(2\pi)^2}{V_c} (\mathbf{b}_1 \cdot \mathbf{a}_1) $$
+
 Sabiendo que por definición $\mathbf{b}_1 \cdot \mathbf{a}_1 = 2\pi$:
+
 $$ V_{rec} = \frac{(2\pi)^3}{V_c} $$
 
 ### Problema 3: Separación Interplanar $d_{hkl}$ en Sistema Cúbico
@@ -159,18 +186,29 @@ Demuestre que la distancia interplanar $d_{hkl}$ para una red ortogonal (incluye
 
 **Solución paso a paso:**
 El vector de la red recíproca asociado al plano $(hkl)$ es:
+
 $$ \mathbf{G}_{hkl} = h\mathbf{b}_1 + k\mathbf{b}_2 + l\mathbf{b}_3 $$
+
 La distancia interplanar se define como $d_{hkl} = 2\pi / |\mathbf{G}_{hkl}|$. Por lo tanto, $1/d_{hkl}^2 = |\mathbf{G}_{hkl}|^2 / (2\pi)^2$.
 Para una red ortogonal pura con parámetros de red $a, b, c$:
+
 $$ \mathbf{a}_1 = a\mathbf{\hat{i}}, \quad \mathbf{a}_2 = b\mathbf{\hat{j}}, \quad \mathbf{a}_3 = c\mathbf{\hat{k}} $$
+
 Los vectores recíprocos son:
+
 $$ \mathbf{b}_1 = \frac{2\pi}{a}\mathbf{\hat{i}}, \quad \mathbf{b}_2 = \frac{2\pi}{b}\mathbf{\hat{j}}, \quad \mathbf{b}_3 = \frac{2\pi}{c}\mathbf{\hat{k}} $$
+
 Por lo tanto, $\mathbf{G}_{hkl} = \frac{2\pi h}{a}\mathbf{\hat{i}} + \frac{2\pi k}{b}\mathbf{\hat{j}} + \frac{2\pi l}{c}\mathbf{\hat{k}}$.
 El módulo al cuadrado es:
+
 $$ |\mathbf{G}_{hkl}|^2 = 4\pi^2 \left[ \left(\frac{h}{a}\right)^2 + \left(\frac{k}{b}\right)^2 + \left(\frac{l}{c}\right)^2 \right] $$
+
 Sustituyendo en la ecuación de la distancia interplanar:
+
 $$ \frac{1}{d_{hkl}^2} = \left(\frac{h}{a}\right)^2 + \left(\frac{k}{b}\right)^2 + \left(\frac{l}{c}\right)^2 $$
+
 Para una red cúbica, $a = b = c$, lo que simplifica la expresión a:
+
 $$ d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}} $$
 
 ## 💻 Simulaciones Computacionales
@@ -221,9 +259,11 @@ El estudio avanzado de la cristalografía requiere abandonar la simple geometrí
 Para describir no solo las posiciones atómicas sino también propiedades tensoriales y magnéticas, se expanden los grupos espaciales convencionales a grupos de Shubnikov (grupos magnéticos o "en blanco y negro"). La clasificación de las posibles simetrías se puede formular mediante el segundo grupo de cohomología de grupo $H^2(G, \mathbb{Z})$. Las representaciones irreducibles (irreps) de los grupos espaciales determinan el comportamiento de los fermiones en la red.
 
 La condición de Bloch generalizada se escribe considerando un fibrado vectorial sobre la zona de Brillouin (un toro topológico $\mathbb{T}^d$). La conexión de Berry $\mathbf{A}(\mathbf{k})$ asociada a las funciones de Bloch periódicas $u_{n,\mathbf{k}}(\mathbf{r})$ es:
+
 $$ \mathbf{A}_{nn'}(\mathbf{k}) = i \langle u_{n,\mathbf{k}} | \nabla_{\mathbf{k}} | u_{n',\mathbf{k}} \rangle $$
 
 La curvatura de Berry (una 2-forma diferencial) determina invariantes topológicos de la red, de manera que la fase del cristal se asocia a la primera clase de Chern:
+
 $$ C_1 = \frac{1}{2\pi} \int_{\partial \text{BZ}} \mathbf{\Omega}(\mathbf{k}) \cdot d\mathbf{S} $$
 
 Las redes no son solo entes geométricos, sino bases que soportan campos gauge emergentes.
@@ -239,16 +279,22 @@ Las redes no son solo entes geométricos, sino bases que soportan campos gauge e
 1. **["Crystallography of Quasicrystals" por Steinhardt et al.](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.53.2477)**
    - **Importancia Teórica:** Este artículo revolucionó la comprensión de la periodicidad espacial al introducir el concepto de cuasicristales, estructuras que poseen un orden de largo alcance pero carecen de simetría traslacional.
    - **Fondo Matemático:** El marco matemático utiliza transformadas de Fourier sobre redes cuasiperiódicas. Mientras que para un cristal clásico el factor de estructura $S(\mathbf{G})$ es no nulo solo para vectores de la red recíproca $\mathbf{G}$, en un cuasicristal, el conjunto de vectores de onda forma un módulo densamente poblado pero numerable de la forma:
+
      $$ \mathbf{G} = \sum_{i=1}^d n_i \mathbf{b}_i $$
+
      donde $d > 3$ es la dimensión del espacio supersimétrico en el cual el cuasicristal es una proyección, y $n_i \in \mathbb{Z}$.
    - **Implicaciones Físicas:** Demuestra que la difracción con simetría icosaédrica (prohibida por los teoremas de restricción cristalográfica clásicos en 3D) es físicamente realizable, abriendo nuevos campos en el diseño de aleaciones metálicas con propiedades térmicas y de fricción exóticas.
 
 2. **["The Phase Problem in X-ray Crystallography" (Acta Crystallographica)](https://journals.iucr.org/a/issues/1990/01/00/a31034/)**
    - **Importancia Teórica:** Analiza matemáticamente el "problema de la fase", el obstáculo fundamental en la resolución de estructuras cristalinas a partir de datos de difracción, ya que los detectores solo miden la intensidad (módulo al cuadrado) y pierden la fase de la onda dispersada.
    - **Fondo Matemático:** La densidad de electrones $\rho(\mathbf{r})$ está dada por la transformada inversa de Fourier de los factores de estructura $F_{\mathbf{h}}$:
+
      $$ \rho(\mathbf{r}) = \frac{1}{V} \sum_{\mathbf{h}} |F_{\mathbf{h}}| e^{i\phi_{\mathbf{h}}} e^{-2\pi i \mathbf{h} \cdot \mathbf{r}} $$
+
      El experimento proporciona solo $|F_{\mathbf{h}}| \propto \sqrt{I_{\mathbf{h}}}$. Los métodos directos explotan desigualdades matemáticas y relaciones de probabilidad entre fases $\phi_{\mathbf{h}}$, como la relación de la triplete de fase de Hauptman y Karle:
+
      $$ \phi_{\mathbf{h}} + \phi_{\mathbf{k}} + \phi_{-\mathbf{h}-\mathbf{k}} \approx 0 $$
+
    - **Implicaciones Físicas:** La resolución de este problema permitió la cristalografía de macromoléculas biológicas complejas, incluyendo proteínas y el propio ADN, revolucionando la biología molecular moderna.
 
 3. **[VESTA (Visualization for Electronic and STructural Analysis)](https://jp-minerals.org/vesta/en/)**: Un programa de simulación avanzado de modelado en 3D para visualizar estructuras atómicas y densidades electrónicas, indispensable para estudios de ciencia de materiales.

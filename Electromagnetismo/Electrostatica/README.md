@@ -17,22 +17,31 @@ El teorema de Helmholtz establece que cualquier campo vectorial suave y de decai
 2. **Fuentes (Ley de Gauss diferencial):** $\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}$.
 
 Como el rotacional de todo gradiente es idénticamente nulo, la primera condición asegura la existencia de un potencial escalar unívoco (hasta una constante) $V$:
+
 $$ \vec{E} = -\nabla V $$
+
 El trabajo realizado para mover una carga $q$ entre dos puntos $\vec{a}$ y $\vec{b}$ es independiente de la trayectoria:
+
 $$ W = -q \int_{\vec{a}}^{\vec{b}} \vec{E} \cdot d\vec{l} = q[V(\vec{b}) - V(\vec{a})] $$
 
 ### 2. Ecuaciones de Poisson y Laplace
 Sustituyendo $\vec{E} = -\nabla V$ en la ecuación diferencial de Gauss, obtenemos la **Ecuación de Poisson**:
+
 $$ \nabla \cdot (-\nabla V) = \frac{\rho}{\varepsilon_0} \implies \nabla^2 V = -\frac{\rho}{\varepsilon_0} $$
+
 donde $\nabla^2$ es el operador Laplaciano. Esta es la ecuación fundamental de la electrostática para resolver el potencial en presencia de una distribución de carga conocida. 
 
 En las regiones libres de carga ($\rho = 0$), esto se reduce a la **Ecuación de Laplace**:
+
 $$ \nabla^2 V = 0 $$
+
 Las soluciones a la ecuación de Laplace (funciones armónicas) no admiten máximos ni mínimos locales en el interior del dominio, sólo en sus fronteras (Teorema del Máximo). La unicidad de la solución para un conjunto de condiciones de contorno (Dirichlet o Neumann) está garantizada por el **Teorema de Unicidad**.
 
 ### 3. Desarrollo Multipolar
 A menudo necesitamos evaluar el potencial o el campo eléctrico generado por una distribución de carga localizada compleja en un punto lejano $|\vec{r}| \gg |\vec{r}'|$. Utilizamos una expansión en serie de Taylor del término $1/|\vec{r} - \vec{r}'|$ (empleando polinomios de Legendre), obteniendo el **Desarrollo Multipolar**:
+
 $$ V(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \sum_{n=0}^{\infty} \frac{1}{r^{n+1}} \int (r')^n P_n(\cos\theta') \rho(\vec{r}') \, d\tau' $$
+
 Los primeros términos son:
 1. **Monopolar ($n=0$):** $V_{\text{mono}}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r}$, donde $Q = \int \rho \, d\tau$ es la carga neta.
 2. **Dipolar ($n=1$):** $V_{\text{dip}}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}$, donde $\vec{p} = \int \vec{r}' \rho(\vec{r}') \, d\tau'$ es el momento dipolar eléctrico.
@@ -40,15 +49,24 @@ Los primeros términos son:
 
 ### 4. Energía Electroestática y Tensión de Maxwell
 La energía requerida para ensamblar una distribución discreta de cargas desde el infinito es:
+
 $$ U = \frac{1}{2} \sum_{i \neq j} \frac{1}{4\pi\varepsilon_0} \frac{q_i q_j}{|\vec{r}_i - \vec{r}_j|} = \frac{1}{2} \sum_i q_i V(\vec{r}_i) $$
+
 Pasando al límite continuo, la energía electrostática total almacenada en todo el espacio es:
+
 $$ U = \frac{1}{2} \int \rho V \, d\tau $$
+
 Podemos reescribir esto enteramente en función del campo eléctrico. Sustituyendo $\rho = \varepsilon_0 \nabla \cdot \vec{E}$ e integrando por partes, asumiendo que el campo decae suficientemente rápido en el infinito:
+
 $$ U = \frac{\varepsilon_0}{2} \int |\vec{E}|^2 \, d\tau $$
+
 Esto nos dice que la energía electrostática está almacenada *en el propio campo*, con una densidad de energía $u = \frac{\varepsilon_0}{2} |\vec{E}|^2$. 
 Las fuerzas sobre los conductores pueden calcularse de forma elegante utilizando el **Tensor de Esfuerzos de Maxwell** $T_{ij}$:
+
 $$ T_{ij} = \varepsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} |\vec{E}|^2 \right) $$
+
 Donde la fuerza neta sobre un volumen $V$ contenido en una superficie $S$ es simplemente la integral del flujo de la tensión a través de la superficie:
+
 $$ \vec{F} = \oint_S \mathbf{T} \cdot d\vec{A} $$
 
 ```mermaid
@@ -76,11 +94,16 @@ Por ejemplo, para una carga puntual $q$ a distancia $d$ de un plano conductor in
 2. **Definir la densidad de carga:** La densidad volumétrica de carga es $\rho = \frac{Q}{\frac{4}{3}\pi R^3}$.
 3. **Aplicar la Ley de Gauss en el interior ($r < R$):**
    Consideramos una superficie gaussiana esférica de radio $r$.
+
    $$ \oint_S \vec{E} \cdot d\vec{A} = E(4\pi r^2) $$
+
    La carga encerrada es $Q_{\text{enc}} = \rho (\frac{4}{3}\pi r^3) = Q \frac{r^3}{R^3}$.
+
    $$ E(4\pi r^2) = \frac{Q}{\varepsilon_0} \frac{r^3}{R^3} \implies \vec{E}_{\text{int}} = \frac{Q}{4\pi\varepsilon_0 R^3} r \, \hat{r} $$
+
 4. **Aplicar la Ley de Gauss en el exterior ($r \ge R$):**
    La carga encerrada es total, $Q_{\text{enc}} = Q$.
+
    $$ E(4\pi r^2) = \frac{Q}{\varepsilon_0} \implies \vec{E}_{\text{ext}} = \frac{Q}{4\pi\varepsilon_0 r^2} \hat{r} $$
 
 ---

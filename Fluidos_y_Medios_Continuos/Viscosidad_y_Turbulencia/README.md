@@ -12,24 +12,35 @@ La turbulencia es una inestabilidad universal del flujo de fluidos a altos Núme
 
 Un flujo laminar inicialmente regular es una solución exacta a las Ecuaciones de Navier-Stokes. Sin embargo, matemáticamente se demuestra mediante Análisis de Estabilidad Lineal (ej., Ecuación de Orr-Sommerfeld) que perturbaciones infinitesimales pueden crecer exponencialmente cuando el campo inercial abruma a las fuerzas de amortiguación viscosas. 
 El **Número de Reynolds**:
+
 $$ Re = \frac{\rho U L}{\mu} = \frac{\text{Fuerzas Inerciales}}{\text{Fuerzas Viscosas}} $$
+
 es el discriminador primario. En tuberías, si $Re \approx 2300$ el flujo se vuelve inestable (Transición) y si $Re > 4000$ es completamente Turbulento.
 
 ### 2. Descomposición de Reynolds (RANS)
 
 Debido al caos, tratar analíticamente campos instantáneos $\vec{v}(\vec{x}, t)$ es estocástico. Osborne Reynolds propuso descomponer cada variable de flujo en su valor medio temporal ($\bar{u}$) y sus fluctuaciones turbulentas de alta frecuencia ($u'$):
+
 $$ u(\vec{x}, t) = \bar{u}(\vec{x}) + u'(\vec{x}, t) $$
+
 $$ p(\vec{x}, t) = \bar{p}(\vec{x}) + p'(\vec{x}, t) $$
+
 Al sustituir esta descomposición en Navier-Stokes y promediar toda la ecuación en el tiempo, obtenemos las Ecuaciones de Navier-Stokes Promediadas por Reynolds (RANS):
+
 $$ \rho \left( \frac{\partial \bar{u}_i}{\partial t} + \bar{u}_j \frac{\partial \bar{u}_i}{\partial x_j} \right) = -\frac{\partial \bar{p}}{\partial x_i} + \mu \nabla^2 \bar{u}_i - \rho \frac{\partial}{\partial x_j} (\overline{u'_i u'_j}) $$
+
 Emerge mágicamente un término adicional de tensores derivado de la no linealidad convectiva promedio de las fluctuaciones cruzadas:
+
 $$ \tau_{ij}^{turb} = -\rho \overline{u'_i u'_j} $$
+
 Conocido como el **Tensor de Esfuerzos de Reynolds**, representa el momento difusivo transportado por vórtices turbulentos. Este tensor introduce incógnitas adicionales superando el número de ecuaciones disponibles. Este es el clásico e histórico **Problema de Cierre de la Turbulencia**.
 
 ### 3. Modelos de Cierre y Viscosidad de Remolino (Boussinesq)
 
 Joseph Boussinesq postuló que el transporte de momento por los vórtices gigantes análogamente emula la colisión de moléculas en la difusión de momento. Por ende, los esfuerzos de Reynolds se modelan proporcionales al gradiente del flujo medio macroscópico, usando una viscosidad aparente $\mu_t$ (**Viscosidad de Remolino o Turbulenta**):
+
 $$ -\rho \overline{u'_i u'_j} \approx \mu_t \left( \frac{\partial \bar{u}_i}{\partial x_j} + \frac{\partial \bar{u}_j}{\partial x_i} \right) - \frac{2}{3} \rho k \delta_{ij} $$
+
 donde $k = \frac{1}{2} (\overline{u'^2} + \overline{v'^2} + \overline{w'^2})$ es la Energía Cinética Turbulenta.
 A diferencia de $\mu$ (que es propiedad del fluido), la $\mu_t$ es una propiedad agresiva local del estado de la turbulencia. Para encontrarla, se recurre a ecuaciones diferenciales transportables, siendo los más universales el modelo algebraico de **Longitud de Mezcla de Prandtl** ($\mu_t = \rho l_m^2 |\partial \bar{u} / \partial y|$) y modelos de dos ecuaciones de transporte $k-\epsilon$ o $k-\omega$.
 
@@ -43,9 +54,13 @@ En 1941, **Andrey Kolmogorov** formuló matemáticamente (Teoría K41) la distri
 2. Esta energía cinética percola inercialmente e isoinvíscidamente a remolinos cada vez más ínfimos (Rango Inercial).
 3. En las minúsculas escalas finales (Escalas de Kolmogorov $\eta$), el Re local cae hacia el límite de la unidad y la cizalla viscosa disipa abruptamente la energía cinética en calor a una tasa $\epsilon$.
 La relación microescalar de Kolmogorov estima el diámetro de los vórtices disipativos termales:
+
 $$ \eta = \left(\frac{\nu^3}{\epsilon}\right)^{1/4} $$
+
 Kolmogorov demostró por análisis dimensional que, en el Rango Inercial, la densidad espectral de la energía cinética de los torbellinos sigue una asombrosa y fundamental ley de potencia universal:
+
 $$ E(\kappa) = C_K \epsilon^{2/3} \kappa^{-5/3} $$
+
 donde $\kappa$ es el número de onda y $C_K \approx 1.5$ es la constante de Kolmogorov. Esta es, indudablemente, una de las mayores contribuciones matemáticas a la física de fluidos del siglo XX.
 
 ```mermaid
@@ -69,12 +84,18 @@ graph TD
 
 **Solución paso a paso:**
 1. Calculamos el Número de Reynolds ($ D = 0.004 \text{ m}, v = 0.3 \text{ m/s} $):
+
    $$ Re = \frac{\rho v D}{\mu} = \frac{1060 \times 0.3 \times 0.004}{4 \times 10^{-3}} = \frac{1.272}{0.004} = 318 $$
+
    Como $ Re = 318 < 2100 $, el flujo es fuertemente **laminar**.
 2. Al ser laminar, podemos aplicar la Ley de Poiseuille. Relacionamos $ Q $ con $ v $:
+
    $$ Q = v A = v (\pi r^2) $$
+
 3. Sustituyendo $ Q $ en la ecuación de Poiseuille ($ r = 0.002 \text{ m} $):
+
    $$ v \pi r^2 = \frac{\pi r^4 \Delta P}{8 \mu L} \implies \Delta P = \frac{8 \mu L v}{r^2} $$
+
 4. Calculamos $ \Delta P $ ($ L = 0.1 \text{ m} $):
    $ \Delta P = \frac{8 (4 \times 10^{-3}) (0.1) (0.3)}{(0.002)^2} = \frac{9.6 \times 10^{-4}}{4 \times 10^{-6}} = 240 \text{ Pa} $.
 
@@ -171,7 +192,9 @@ La reducción del "arrastre" (drag) es el Santo Grial ingenieril del 2026 para l
 ## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
 
 El tratamiento riguroso de fluidos viscosos y la turbulencia requiere el **Análisis Funcional y la Teoría de Sistemas Dinámicos en Espacios de Banach**. En lugar de vectores clásicos, la velocidad $\mathbf{v}(\mathbf{x},t)$ se considera un punto en un espacio de Hilbert-Sobolev incompresible $V \subset H^1_0(\Omega)^3$. La ecuación de Navier-Stokes asume la forma de un sistema dinámico abstracto evolutivo:
+
 $$ \frac{d\mathbf{u}}{dt} + \nu A\mathbf{u} + B(\mathbf{u}, \mathbf{u}) = \mathbf{f} $$
+
 donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbulencia plenamente desarrollada, se asume la existencia de un Atractor Global $\mathcal{A}$ compacto de dimensión Hausdorff finita a pesar de que el espacio de fase es de dimensión infinita. Entender la medida invariante ergódica de Hopf $\mu$ sobre este atractor, $\int f(\mathbf{u}(t)) dt \to \int_{\mathcal{A}} f d\mu$, es crucial para justificar matemáticamente la teoría estadística de turbulencia K41.
 
 ## 📚 Recursos Específicos
@@ -186,31 +209,47 @@ donde $A$ es el operador de Stokes y $B$ es la forma bilineal inercial. En turbu
    - **Enlace:** [https://en.wikipedia.org/wiki/Boundary_layer](https://en.wikipedia.org/wiki/Boundary_layer)
    - **Importancia Teórica:** Es considerado el artículo más influyente en la dinámica de fluidos del siglo XX. Resolvió la paradoja de d'Alembert separando el fluido en dos regímenes.
    - **Fondo Matemático:** Propuso que con un alto número de Reynolds ($Re \gg 1$), las fuerzas viscosas se limitan a una capa límite delgada adyacente a la superficie. Simplifica Navier-Stokes en 2D:
+
      $$
+
      u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + \nu \frac{\partial^2 u}{\partial y^2}
+
      $$
+
    - **Implicaciones Físicas:** Explicó de dónde proviene el arrastre (fricción de piel) y la separación del flujo (pérdida de sustentación aerodinámica).
 
 2. **The Local Structure of Turbulence in Incompressible Viscous Fluid for Very Large Reynolds Numbers (A.N. Kolmogorov, 1941)**
    - **Enlace:** [https://rspa.royalsocietypublishing.org/content/434/1890/9](https://rspa.royalsocietypublishing.org/content/434/1890/9)
    - **Importancia Teórica:** Formuló la teoría K41. Introdujo las bases universales de la turbulencia isotrópica, proporcionando las primeras predicciones cuantitativas exitosas para el régimen caótico.
    - **Fondo Matemático:** Postuló por análisis dimensional que, en el rango inercial, las propiedades del flujo dependen únicamente de la tasa de disipación de energía $\varepsilon$. La función de estructura de segundo orden exhibe escalamiento de dos tercios:
+
      $$
+
      \langle [u(x+r) - u(x)]^2 \rangle \sim \varepsilon^{2/3} r^{2/3}
+
      $$
+
    - **Implicaciones Físicas:** Demostró un aparente orden subyacente determinista estocástico dentro del régimen turbulento complejo y guio modelos de gran escala para la meteorología (LES).
 
 3. **On the Dynamical Theory of Incompressible Viscous Fluids and the Determination of the Criterion (Osborne Reynolds, 1895)**
    - **Enlace:** [https://royalsocietypublishing.org/doi/10.1098/rstl.1895.0004](https://royalsocietypublishing.org/doi/10.1098/rstl.1895.0004)
    - **Importancia Teórica:** Definió cuantitativamente la transición del flujo laminar al turbulento mediante el adimensional Número de Reynolds.
    - **Fondo Matemático:** El número relaciona las fuerzas inerciales a las viscosas:
+
      $$
+
      Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}
+
      $$
+
      También derivó las ecuaciones de Navier-Stokes promediadas por Reynolds (RANS), dividiendo el flujo en media temporal $U$ y fluctuaciones $u'$:
+
      $$
+
      u(x,t) = U(x) + u'(x,t)
+
      $$
+
    - **Implicaciones Físicas:** Proporcionó la herramienta unificadora de escala empírica para todos los estudios hidrodinámicos en tuberías y perfiles alares.
 
 ### 📖 Referencias Útiles y Bibliografía

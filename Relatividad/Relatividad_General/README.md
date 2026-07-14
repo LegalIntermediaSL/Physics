@@ -81,18 +81,29 @@ Donde $r_s = \frac{2GM}{c^2}$ es el **Radio de Schwarzschild**.
 
 **Solución paso a paso:**
 1. Consideremos el intervalo $ds^2$ en la superficie ($r=R$) y en el infinito ($r \rightarrow \infty$). Para relojes estacionarios en un campo gravitacional, $dr=d\theta=d\phi=0$, y el tiempo propio medido por un observador $\tau$ se relaciona con el tiempo coordinado $t$ mediante:
+
    $$ d\tau = \sqrt{g_{00}} dt = \sqrt{1 - \frac{r_s}{r}} dt $$
+
 2. Si un emisor E en $r=R$ envía señales luminosas con un período de tiempo propio $\Delta \tau_E$, el intervalo de tiempo coordinado entre las emisiones es $\Delta t = \Delta \tau_E / \sqrt{1 - r_s/R}$.
 3. Al viajar los fotones por la misma trayectoria radial, llegan a un observador receptor O en $r \rightarrow \infty$ con el mismo intervalo coordinado $\Delta t$. Sin embargo, para O, en el infinito $g_{00} \approx 1$, por lo tanto, el tiempo propio del observador es $\Delta \tau_O = \Delta t$.
 4. Así, la relación de los tiempos propios, que son inversamente proporcionales a las frecuencias observadas ($\nu = 1/\Delta \tau$), es:
+
    $$ \frac{\nu_O}{\nu_E} = \frac{\Delta \tau_E}{\Delta \tau_O} = \frac{\sqrt{1 - r_s/R} \Delta t}{\Delta t} = \sqrt{1 - \frac{r_s}{R}} $$
+
    Sabiendo que el corrimiento al rojo $z$ se define como $1 + z = \frac{\lambda_O}{\lambda_E} = \frac{\nu_E}{\nu_O}$:
+
    $$ 1 + z = \frac{1}{\sqrt{1 - \frac{2GM}{Rc^2}}} $$
+
 5. Evaluamos el radio de Schwarzschild para la estrella de neutrones:
+
    $$ M = 1.4 \times 1.989 \times 10^{30} \text{ kg} \approx 2.78 \times 10^{30} \text{ kg} $$
+
    $$ r_s = \frac{2 \times 6.674\times 10^{-11} \times 2.78 \times 10^{30}}{(3 \times 10^8)^2} = \frac{37.1 \times 10^{19}}{9 \times 10^{16}} \approx 4122 \text{ m} = 4.122 \text{ km} $$
+
 6. Calculamos el redshift para la emisión desde $R=10 \text{ km}$:
+
    $$ z = \frac{1}{\sqrt{1 - \frac{4.122}{10}}} - 1 = \frac{1}{\sqrt{1 - 0.4122}} - 1 = \frac{1}{\sqrt{0.5878}} - 1 = \frac{1}{0.7667} - 1 \approx 1.304 - 1 = 0.304 $$
+
 7. **Conclusión:** La luz escapando del inmenso pozo de potencial de una estrella de neutrones pierde energía (corrimiento gravitacional al rojo), incrementando su longitud de onda observada en un $\sim 30.4\%$.
 
 ---
@@ -216,13 +227,17 @@ En 2026, la Relatividad General (RG) vive una edad de oro impulsada por la astro
 El tratamiento riguroso de la Relatividad General se formula en el lenguaje de la geometría diferencial de variedades pseudo-riemannianas. Sea $(\mathcal{M}, g)$ una variedad diferenciable de dimensión 4 equipada con una métrica lorentziana $g$ de signatura $(-,+,+,+)$. La conexión afín natural es la **conexión de Levi-Civita** $\nabla$, que es la única conexión libre de torsión ($\nabla_X Y - \nabla_Y X = [X,Y]$) y métrica-compatible ($\nabla g = 0$).
 
 La curvatura de la variedad está completamente descrita por el tensor de Riemann $R^\rho_{\ \sigma\mu\nu}$, definido por el conmutador de derivadas covariantes aplicadas a un campo vectorial $V^\rho$:
+
 $$ [\nabla_\mu, \nabla_\nu] V^\rho = R^\rho_{\ \sigma\mu\nu} V^\sigma $$
 
 La dinámica del espacio-tiempo está dictada por las Ecuaciones de Campo de Einstein, las cuales pueden derivarse variacionalmente del principio de mínima acción utilizando la **Acción de Einstein-Hilbert**, incluyendo un término cosmológico $\Lambda$ y la acción de la materia $\mathcal{S}_M$:
+
 $$ \mathcal{S} = \frac{1}{16\pi G} \int_\mathcal{M} (R - 2\Lambda) \sqrt{-g} \, d^4x + \mathcal{S}_M $$
 
 Al realizar la variación de la acción con respecto a la métrica inversa $g^{\mu\nu}$, $\delta\mathcal{S} / \delta g^{\mu\nu} = 0$, obtenemos las ecuaciones de campo completas:
+
 $$ G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu} $$
+
 donde $G_{\mu\nu} \equiv R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu}$ es el tensor de Einstein (que satisface la identidad contraída de Bianchi $\nabla^\mu G_{\mu\nu} = 0$, asegurando la conservación local de energía e impulso $\nabla^\mu T_{\mu\nu} = 0$), $R_{\mu\nu}$ es el tensor de Ricci y $R$ es el escalar de Ricci.
 
 Para estudiar fermiones en RG, el formalismo requiere la introducción de **tétradas (o vielbeins)** $e^a_\mu$ que relacionan la métrica del espacio-tiempo con la métrica plana local $\eta_{ab}$: $g_{\mu\nu} = e^a_\mu e^b_\nu \eta_{ab}$. Esto nos permite levantar la estructura al fibrado ortonormal e introducir la conexión de espín $\omega_{\mu}^{ab}$, definiendo así la derivada covariante espinorial $\mathcal{D}_\mu = \partial_\mu + \frac{1}{8} \omega_{\mu ab}[\gamma^a, \gamma^b]$ necesaria para acoplar espinores a la gravedad.
@@ -241,14 +256,18 @@ Para estudiar fermiones en RG, el formalismo requiere la introducción de **tét
    *Albert Einstein (1916)*. [Annalen der Physik, 354(7), 769-822](https://onlinelibrary.wiley.com/doi/10.1002/andp.19163540702).  
    **Importancia Teórica:** La presentación maestra, estructurada y completa de la Relatividad General tras años de intentos fallidos ("el argumento del agujero"). Eleva el Principio de Equivalencia a una formulación geométrica covariante.  
    **Fondo Matemático:** Introduce las Ecuaciones de Campo de Einstein que acoplan la geometría del espacio-tiempo con el contenido de energía-impulso (materia):
+
    $$ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} $$
+
    **Implicaciones Físicas:** Define la gravedad como curvatura y no como fuerza newtoniana; logra derivar analíticamente la precesión anómala del perihelio de Mercurio y predice la deflexión de la luz, ambos confirmados observacionalmente.
 
 2. **Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie (Sobre el campo gravitacional de una masa puntual según la teoría de Einstein)**  
    *Karl Schwarzschild (1916)*. [Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften, 189-196](https://arxiv.org/abs/physics/9905030). *(Traducción al inglés en arXiv)*.  
    **Importancia Teórica:** Publicado pocas semanas después del artículo de Einstein (y poco antes de la muerte de Schwarzschild en la Primera Guerra Mundial), representa la primera solución exacta no trivial a las Ecuaciones de Einstein en el vacío ($T_{\mu\nu}=0$).  
    **Fondo Matemático:** Deriva la métrica esféricamente simétrica y estática para una masa puntual $M$, revelando el "radio de Schwarzschild" $r_s = 2GM/c^2$:
+
    $$ ds^2 = \left(1 - \frac{r_s}{r}\right) c^2 dt^2 - \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 - r^2 d\Omega^2 $$
+
    **Implicaciones Físicas:** Introduce matemáticamente el concepto de singularidad gravitacional y horizonte de sucesos, sentando las bases teóricas de la física de los agujeros negros, mucho antes de que se entendiera su posibilidad física.
 
 3. **Observation of Gravitational Waves from a Binary Black Hole Merger (GW150914)**  

@@ -13,6 +13,7 @@ En el siglo XIX, Fraunhofer descubrió líneas oscuras en el espectro solar (Lí
 Para estudiar la interacción entre un átomo y un campo electromagnético, comenzamos desde la formulación clásica del electromagnetismo utilizando los potenciales vector $\mathbf{A}(\mathbf{r}, t)$ y escalar $\phi(\mathbf{r}, t)$. El campo eléctrico $\mathbf{E}$ y el campo magnético $\mathbf{B}$ se expresan como:
 
 $$ \mathbf{E} = -\nabla \phi - \frac{\partial \mathbf{A}}{\partial t} $$
+
 $$ \mathbf{B} = \nabla \times \mathbf{A} $$
 
 En el **calibre de Coulomb** (o *gauge* de radiación), elegimos $\nabla \cdot \mathbf{A} = 0$ y $\phi = 0$ (en ausencia de fuentes de carga externas libres). Para un electrón de masa $m_e$ y carga $-e$ ligado a un núcleo por un potencial $V(\mathbf{r})$, el Hamiltoniano clásico se obtiene mediante la sustitución del momento canónico $\mathbf{p} \rightarrow \mathbf{p} + e\mathbf{A}$:
@@ -66,6 +67,7 @@ $$ i\hbar \frac{dc_f^{(1)}(t)}{dt} \approx \langle f | \hat{H}'(t) | i \rangle e
 Para nuestra perturbación armónica $\hat{H}'(t) = \hat{V} e^{-i\omega t} + \hat{V}^\dagger e^{i\omega t}$ (donde $\hat{V} = e \hat{\mathbf{r}} \cdot \mathbf{E}_0 / 2$), la integración directa resulta en:
 
 $$ c_f^{(1)}(t) = -\frac{i}{\hbar} \int_0^t \langle f | \hat{H}'(t') | i \rangle e^{i\omega_{fi} t'} dt' $$
+
 $$ c_f^{(1)}(t) = -\frac{1}{\hbar} \left[ \langle f | \hat{V} | i \rangle \frac{e^{i(\omega_{fi}-\omega)t}-1}{\omega_{fi}-\omega} + \langle f | \hat{V}^\dagger | i \rangle \frac{e^{i(\omega_{fi}+\omega)t}-1}{\omega_{fi}+\omega} \right] $$
 
 En el régimen de resonancia ($\omega \approx \omega_{fi}$ para absorción), el primer término domina drásticamente. Ignorando el segundo término (aproximación de onda rotatoria), la probabilidad de transición $P_{i \rightarrow f}(t) = |c_f^{(1)}(t)|^2$ resulta:
@@ -91,8 +93,11 @@ Para un átomo hidrogenoide, las funciones de onda se separan en partes radiales
 Para que la integral angular $\int (Y_{l'}^{m'})^* Y_1^\mu Y_l^m d\Omega$ no se anule, deben cumplirse condiciones estrictas relacionadas con el teorema de Wigner-Eckart y la conservación del momento angular:
 
 1. **Regla del cambio de paridad ($\Delta l$):** El momento dipolar es impar bajo inversión espacial ($\mathbf{r} \rightarrow -\mathbf{r}$). Para que la integral de todo el espacio sea simétrica, el estado final debe tener diferente paridad que el inicial:
+
    $$ \Delta l = l_f - l_i = \pm 1 $$
+
 2. **Regla del número cuántico magnético ($\Delta m_l$):** Correspondiente a la conservación de la componente z del momento angular cuando se absorbe un fotón (que tiene espín 1):
+
    $$ \Delta m_l = m_f - m_i = 0, \pm 1 $$
 
 ### 6. Desdoblamiento de Niveles y Perturbaciones Estáticas
@@ -151,7 +156,9 @@ graph TD
 3. Para el nivel superior $nd$ ($L=2$), las proyecciones magnéticas son $m_{L_i} \in \{-2, -1, 0, 1, 2\}$.
 4. Para el nivel inferior $np$ ($L=1$), las proyecciones son $m_{L_f} \in \{-1, 0, 1\}$.
 5. La frecuencia original de la transición en ausencia de campo es $\nu_0 = \frac{E_{nd} - E_{np}}{h}$. Con el campo activado, las energías de transición modificadas se expresan como:
+
    $$ h\nu = (E_{nd} + \mu_B m_{L_i} B) - (E_{np} + \mu_B m_{L_f} B) = h\nu_0 + \mu_B B (m_{L_i} - m_{L_f}) $$
+
 6. Aplicando la regla de selección dipolar $\Delta m_L = m_{L_f} - m_{L_i} \in \{0, \pm 1\}$:
    - Para $\Delta m_L = 0$ (transiciones $\pi$), el cambio de energía es cero: $h\nu = h\nu_0$.
    - Para $\Delta m_L = +1$ (transiciones $\sigma^+$), $h\nu = h\nu_0 - \mu_B B$.
@@ -168,10 +175,14 @@ Considere un átomo de hidrógeno en el primer estado excitado ($n=2$) sometido 
 2. El Hamiltoniano de perturbación es $H' = e \mathcal{E}_0 z = e \mathcal{E}_0 r \cos\theta$.
 3. Los elementos de matriz de $H'$ solo son no nulos si $\Delta m = 0$ y $\Delta l = \pm 1$ debido a las reglas de selección.
 4. Por lo tanto, el único elemento no diagonal no nulo es entre $|2,0,0\rangle$ y $|2,1,0\rangle$:
+
    $$ \langle 2,0,0 | H' | 2,1,0 \rangle = e \mathcal{E}_0 \int d^3r \psi_{200}^* z \psi_{210} = -3 e \mathcal{E}_0 a_0 $$
+
    donde $a_0$ es el radio de Bohr.
 5. La matriz de perturbación en la sub-base $\{|2,0,0\rangle, |2,1,0\rangle, |2,1,1\rangle, |2,1,-1\rangle\}$ es:
+
    $$ H' = \begin{pmatrix} 0 & -3ea_0\mathcal{E}_0 & 0 & 0 \\ -3ea_0\mathcal{E}_0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} $$
+
 6. Los autovalores son $\Delta E = \pm 3 e a_0 \mathcal{E}_0$ y $0$ (doblemente degenerado).
 
 ### Ejercicio 2: Espectro Rotovibracional de la Molécula de Diatómica
@@ -192,12 +203,17 @@ Determine la temperatura crítica $T_c$ para la condensación de Bose-Einstein d
 **Solución paso a paso:**
 1. La densidad de estados para un oscilador armónico 3D es $g(E) = \frac{E^2}{2(\hbar\omega)^3}$.
 2. El número total de partículas en estados excitados viene dado por la integral:
+
    $$ N_{ex} = \int_0^\infty \frac{g(E)}{e^{\beta (E-\mu)} - 1} dE $$
+
 3. En la temperatura crítica $T_c$, el potencial químico $\mu \to 0$ y $N_{ex} = N$.
 4. Reemplazando $g(E)$ e introduciendo $x = E/k_B T_c$:
+
    $$ N = \frac{(k_B T_c)^3}{2(\hbar\omega)^3} \int_0^\infty \frac{x^2}{e^x - 1} dx $$
+
 5. La integral es conocida como $\Gamma(3)\zeta(3) = 2 \times 1.202$.
 6. Resolviendo para $T_c$:
+
    $$ N = \left( \frac{k_B T_c}{\hbar\omega} \right)^3 \zeta(3) \implies T_c = \frac{\hbar\omega}{k_B} \left( \frac{N}{\zeta(3)} \right)^{1/3} $$
 
 ## 💻 Simulaciones Computacionales

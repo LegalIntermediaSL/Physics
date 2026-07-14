@@ -11,19 +11,24 @@ El auge de la física experimental moderna se le atribuye a Galileo Galilei por 
 **Teoría de Errores y Estadística:**
 
 Ninguna medición es absolutamente exacta. Una medida se reporta como:
+
 $$ x = \bar{x} \pm \delta x $$
 
 La **media muestral** para $N$ mediciones es la mejor estimación del valor real:
+
 $$ \bar{x} = \frac{1}{N} \sum_{i=1}^N x_i $$
 
 El error estándar de la media está ligado a la **desviación estándar** $\sigma$:
+
 $$ \sigma_x = \sqrt{ \frac{1}{N-1} \sum_{i=1}^N (x_i - \bar{x})^2 } \quad \implies \quad \delta \bar{x} = \frac{\sigma_x}{\sqrt{N}} $$
 
 **Propagación de Errores:**
 Si calculamos una magnitud $q = f(x, y, z)$ a partir de mediciones independientes, la incertidumbre resultante se obtiene expandiendo $f$ en serie de Taylor de primer orden (asumiendo variables no correlacionadas):
+
 $$ \delta q = \sqrt{ \left( \frac{\partial f}{\partial x} \delta x \right)^2 + \left( \frac{\partial f}{\partial y} \delta y \right)^2 + \left( \frac{\partial f}{\partial z} \delta z \right)^2 } $$
 
 En mediciones que siguen estadística de conteo (como fotomultiplicadores o decaimientos radiactivos), la fluctuación estadística sigue la **distribución de Poisson**, donde la varianza es igual a la media, por lo que el error inherente para $N$ conteos es:
+
 $$ \sigma_N = \sqrt{N} $$
 
 ## 🛠 Ejemplo Práctico
@@ -38,18 +43,28 @@ Determinar $g$ y su incertidumbre $\delta g$.
 
 **Solución paso a paso:**
 1. Calculamos el valor central de $g$:
+
    $$ g = 4 \pi^2 \frac{1.000}{(2.00)^2} = 4 \pi^2 \frac{1.000}{4.00} = \pi^2 \approx 9.8696 \, \text{m/s}^2 $$
+
 2. Para una función multiplicativa $g = C L T^{-2}$, la fórmula de propagación de error relativo simplificada es:
+
    $$ \left( \frac{\delta g}{g} \right)^2 = \left( \frac{\delta L}{L} \right)^2 + \left( -2 \frac{\delta T}{T} \right)^2 $$
+
 3. Evaluamos los errores relativos individuales:
    - Para $L$: $\frac{\delta L}{L} = \frac{0.005}{1.000} = 0.005 = 0.5\%$
    - Para $T$: $\frac{\delta T}{T} = \frac{0.02}{2.00} = 0.01 = 1.0\%$
 4. Propagamos el error relativo al cuadrado:
+
    $$ \left( \frac{\delta g}{g} \right)^2 = (0.005)^2 + (2 \times 0.01)^2 = 0.000025 + 0.0004 = 0.000425 $$
+
 5. Extraemos la raíz cuadrada para obtener el error relativo de $g$:
+
    $$ \frac{\delta g}{g} = \sqrt{0.000425} \approx 0.0206 \, (2.06\%) $$
+
 6. Obtenemos la incertidumbre absoluta:
+
    $$ \delta g = 0.0206 \times 9.8696 \approx 0.203 \, \text{m/s}^2 $$
+
 **Conclusión:** El resultado final de la medición se reporta (redondeando al primer dígito incierto) como $g = 9.87 \pm 0.20 \, \text{m/s}^2$. Notar que el error en $T$ domina ampliamente la incertidumbre total porque su contribución se cuadriplica al estar al cuadrado en la fórmula.
 
 ## 📚 Recursos Específicos

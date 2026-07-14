@@ -22,11 +22,13 @@ Para un semiconductor no degenerado, donde $E_c - E_F \gg k_B T$ y $E_F - E_v \g
 $$ n_c = N_c e^{-(E_c - E_F)/k_B T} \quad \text{y} \quad p_v = N_v e^{-(E_F - E_v)/k_B T} $$
 
 donde las densidades efectivas de estados de banda son:
+
 $$ N_c = 2 \left( \frac{m_e^* k_B T}{2\pi \hbar^2} \right)^{3/2} \quad \text{y} \quad N_v = 2 \left( \frac{m_h^* k_B T}{2\pi \hbar^2} \right)^{3/2} $$
 
 El producto empírico de las densidades es la **Ley de Acción de Masas** para semiconductores, siendo independiente del nivel de Fermi y por tanto inalterable ante el dopaje:
 
 $$ n_c p_v = n_i^2 = N_c N_v e^{-E_g / k_B T} $$
+
 donde $E_g = E_c - E_v$ es el bandgap. En un semiconductor intrínseco (puro), $n = p = n_i$.
 
 ### 2. Semiconductores Extrínsecos: Teoría del Dopaje Hidrogenoide
@@ -93,24 +95,37 @@ Asumiendo ionización completa:
 1. **Estimación por Ionización Completa:**
    El Boro es un dopante Aceptor del Grupo III. Actuará robando electrones de la banda de valencia, creando huecos. 
    Dado que $N_A \gg n_i$ ($10^{16} \gg 10^{10}$), asumimos que la concentración de huecos (portadores mayoritarios) es igual a la concentración de dopantes a temperatura ambiente:
+
    $$ p \approx N_A = 10^{16} \, \text{cm}^{-3} $$
 
 2. **Cálculo de Portadores Minoritarios:**
    Utilizamos la fundamental Ley de Acción de Masas para semiconductores en equilibrio térmico:
+
    $$ n \cdot p = n_i^2 $$
+
    Despejando la concentración de electrones (minoritarios):
+
    $$ n = \frac{n_i^2}{p} = \frac{(10^{10} \, \text{cm}^{-3})^2}{10^{16} \, \text{cm}^{-3}} = \frac{10^{20}}{10^{16}} = 10^4 \, \text{cm}^{-3} $$
+
    El dopaje ha suprimido a los electrones por un factor de un millón (de $10^{10}$ a $10^4$).
 
 3. **Cálculo del Desplazamiento del Nivel de Fermi:**
    Para relacionar concentraciones con los niveles de energía, usamos las distribuciones de Boltzmann relativas al nivel intrínseco $E_i$ (donde $n = p = n_i$):
+
    $$ p = n_i e^{(E_i - E_F) / k_B T} $$
+
    Despejando $(E_i - E_F)$:
+
    $$ \frac{p}{n_i} = e^{(E_i - E_F) / k_B T} \implies \ln\left(\frac{p}{n_i}\right) = \frac{E_i - E_F}{k_B T} $$
+
    $$ E_i - E_F = k_B T \ln\left(\frac{p}{n_i}\right) $$
+
    Sustituyendo los valores, sabiendo que a $T=300 \, \text{K}$, la energía térmica es $k_B T \approx 0.0259 \, \text{eV}$:
+
    $$ E_i - E_F = 0.0259 \times \ln\left( \frac{10^{16}}{10^{10}} \right) = 0.0259 \times \ln(10^6) $$
+
    Sabiendo que $\ln(10^6) = 6 \ln(10) \approx 6 \times 2.302 = 13.81$:
+
    $$ E_i - E_F = 0.0259 \times 13.81 \approx 0.358 \, \text{eV} $$
 
 **Conclusión:** 
@@ -124,16 +139,23 @@ A partir de las densidades efectivas de estados en las bandas de conducción ($N
 
 **Solución paso a paso:**
 En equilibrio térmico, la concentración de electrones $n$ en la banda de conducción y de huecos $p$ en la banda de valencia, usando estadística de Maxwell-Boltzmann (válida si el nivel de Fermi está al menos a $3k_B T$ del borde de banda), son:
+
 $$ n = N_c e^{-(E_c - E_F)/k_B T} $$
+
 $$ p = N_v e^{-(E_F - E_v)/k_B T} $$
+
 donde $N_c = 2(m_e^* k_B T / 2\pi\hbar^2)^{3/2}$ y $N_v = 2(m_h^* k_B T / 2\pi\hbar^2)^{3/2}$.
 El producto de estas concentraciones nos da la ley de acción de masas para semiconductores:
+
 $$ np = N_c N_v e^{-(E_c - E_v)/k_B T} $$
+
 La diferencia $E_c - E_v$ es precisamente la energía del gap prohibido $E_g$.
 Para un semiconductor intrínseco (sin dopar), por conservación de carga se debe cumplir que $n = p = n_i$.
 Entonces $n_i^2 = n p = N_c N_v e^{-E_g/k_B T}$.
 Tomando la raíz cuadrada:
+
 $$ n_i = \sqrt{N_c N_v} e^{-E_g / 2k_B T} $$
+
 Dado que $N_c, N_v \propto T^{3/2}$, la concentración intrínseca varía como $T^{3/2} e^{-E_g / 2k_B T}$.
 Esta fuerte dependencia exponencial domina, por lo que una pequeña variación de $T$ produce cambios de órdenes de magnitud en el número de portadores intrínsecos.
 
@@ -144,12 +166,19 @@ Estime la energía de ionización de una impureza donadora (como fósforo) en si
 En el modelo hidrogenoide, el electrón donado orbita alrededor del ión donador positivo incrustado en el cristal.
 Utilizamos los resultados del modelo de Bohr para la energía del estado fundamental, reemplazando la masa del electrón por la masa efectiva $m_e^*$ y la permitividad del vacío $\epsilon_0$ por la permitividad del material $\epsilon = \epsilon_r \epsilon_0$.
 La energía de ionización del átomo de hidrógeno en el vacío es:
+
 $$ E_H = \frac{m_e e^4}{8 \epsilon_0^2 h^2} = 13.6 \text{ eV} $$
+
 Para la impureza en el cristal, la energía de ionización será:
+
 $$ E_d = \frac{m_e^* e^4}{8 (\epsilon_r \epsilon_0)^2 h^2} = E_H \left( \frac{m_e^*}{m_e} \right) \left( \frac{1}{\epsilon_r^2} \right) $$
+
 Sustituyendo los valores para el Silicio:
+
 $$ E_d = 13.6 \text{ eV} \times (0.26) \times \left( \frac{1}{11.7^2} \right) $$
+
 $$ E_d = 13.6 \times 0.26 \times 0.0073 \approx 0.0258 \text{ eV} \approx 25.8 \text{ meV} $$
+
 Esta energía ($~25$ meV) es muy cercana a la energía térmica a temperatura ambiente ($k_B T \approx 26$ meV). Por esta razón, a temperatura ambiente, casi todos los donadores en silicio están completamente ionizados, aportando un electrón libre a la banda de conducción.
 
 ### Problema 3: Potencial de Contacto en una Unión p-n
@@ -159,18 +188,30 @@ Calcule el potencial de contacto $V_0$ (built-in potential) de una unión p-n ab
 Lejos de la región de agotamiento (en las zonas neutras), las concentraciones mayoritarias son aproximadamente $p_p \approx N_A$ y $n_n \approx N_D$.
 En el equilibrio, el nivel de Fermi debe ser constante en toda la estructura.
 En el lado p:
+
 $$ p_p = n_i e^{(E_i - E_{Fp}) / k_B T} \implies E_i^{(p)} - E_F = k_B T \ln\left(\frac{N_A}{n_i}\right) $$
+
 En el lado n:
+
 $$ n_n = n_i e^{(E_{Fn} - E_i) / k_B T} \implies E_F - E_i^{(n)} = k_B T \ln\left(\frac{N_D}{n_i}\right) $$
+
 El potencial de contacto surge de la diferencia entre el nivel intrínseco $E_i$ en los dos lados. Puesto que la energía potencial es $-q V(x) = E_i(x)$, la diferencia de potencial electrostático es $V_0 = \frac{1}{q} [E_i^{(p)} - E_i^{(n)}]$.
 Sumando las ecuaciones:
+
 $$ E_i^{(p)} - E_i^{(n)} = k_B T \ln\left(\frac{N_A}{n_i}\right) + k_B T \ln\left(\frac{N_D}{n_i}\right) = k_B T \ln\left(\frac{N_A N_D}{n_i^2}\right) $$
+
 Entonces el potencial de contacto en voltios es:
+
 $$ V_0 = V_T \ln\left(\frac{N_A N_D}{n_i^2}\right) $$
+
 Sustituyendo los valores:
+
 $$ V_0 = 0.0259 \ln\left(\frac{10^{16} \times 10^{15}}{(10^{10})^2}\right) = 0.0259 \ln(10^{11}) $$
+
 Sabiendo que $\ln(10) \approx 2.303$:
+
 $$ V_0 = 0.0259 \times 11 \times 2.303 \approx 0.656 \text{ V} $$
+
 El potencial de contacto es de aproximadamente 0.66 V.
 
 ## 💻 Simulaciones Computacionales
@@ -222,10 +263,13 @@ Cuando los semiconductores se miniaturizan a la escala nanométrica y operan fue
 **Formalismo de Keldysh para el No-Equilibrio Cuántico:**
 Para describir transporte cuántico a través de uniones túnel o puntos cuánticos, es indispensable utilizar las Funciones de Green de No Equilibrio (NEGF). En el formalismo de Keldysh, la evolución temporal requiere un contorno de integración cerrado $\mathcal{C}$ (desde $t=-\infty$ hasta $t=\infty$ y viceversa).
 Las funciones de Green matriciales se organizan en la matriz de Keldysh:
+
 $$ \mathbf{G}(1,2) = \begin{pmatrix} G^R(1,2) & G^K(1,2) \\ 0 & G^A(1,2) \end{pmatrix} $$
+
 Donde $G^R$ (Retardada) contiene información del espectro y la estructura de bandas, mientras que $G^K$ (Cinética/Keldysh) contiene información sobre la ocupación (función de distribución cuántica).
 
 La corriente $I$ eléctrica estacionaria a través de una región semiconductora interactuante entre contactos $L$ y $R$ se calcula exactamante mediante la fórmula de Landauer generalizada (Fórmula de Meir-Wingreen):
+
 $$ I = \frac{ie}{h} \int dE \, \text{Tr}\left[ \Gamma_L(E) f_L(E) - \Gamma_R(E) f_R(E) \right] \{ G^R(E) - G^A(E) \} + \text{Tr} \left[ \Gamma_L(E) G^<(E) + \text{...} \right] $$
 
 ## 📚 Recursos Específicos
@@ -239,16 +283,22 @@ $$ I = \frac{ie}{h} \int dE \, \text{Tr}\left[ \Gamma_L(E) f_L(E) - \Gamma_R(E) 
 1. **["Electron-Hole Drops in Semiconductors" por T. M. Rice (1977)](https://www.sciencedirect.com/science/article/pii/0038109877913349)**
    - **Importancia Teórica:** Describe el fenómeno de condensación en el cual, bajo alta excitación óptica y muy bajas temperaturas, el gas libre de excitones (pares electrón-hueco unidos coulombianamente) sufre una transición de fase termodinámica para formar un "líquido metálico" macroscópico análogo a gotas de agua.
    - **Fondo Matemático:** El Hamiltoniano interactuante del plasma de electrones y huecos es sometido a un análisis termodinámico. El sistema tiene una fase gas aislante a baja densidad $\rho$ y una fase líquida metálica a alta densidad $\rho_c$. La energía de la gota por par e-h se parametriza minimizando la energía en función del parámetro de densidad de radio de Wigner-Seitz $r_s$:
+
      $$ E(r_s) = E_{kin}(r_s) + E_{exch}(r_s) + E_{corr}(r_s) = \frac{a}{r_s^2} - \frac{b}{r_s} + E_{corr}(r_s) $$
+
      donde $E_{exch}$ es la energía de intercambio de Hartree-Fock atractiva, y $E_{corr}$ incluye correlaciones complejas (como RPA).
    - **Implicaciones Físicas:** Demuestra cómo un semiconductor puede experimentar transiciones de fase puramente gobernadas por interacciones correlacionadas electrón-electrón impulsadas ópticamente, de forma similar al modelo gas-líquido de Van der Waals.
 
 2. **["Shockley-Queisser Limit on the Efficiency of a P-N Junction Solar Cell" (1961)](https://aip.scitation.org/doi/10.1063/1.1736034)**
    - **Importancia Teórica:** Establece el límite termodinámico máximo insuperable de eficiencia para la conversión de luz solar a electricidad utilizando una unión P-N de banda prohibida simple.
    - **Fondo Matemático:** El cálculo impone un balance detallado (equilibrio termodinámico de radiación) asumiendo el espectro de Planck $I(E, T_s)$ emitido por el Sol ($T_s \approx 6000\text{ K}$). Para un semiconductor de bandgap $E_g$, los fotones con $E < E_g$ se pierden transparentemente, y los fotones con $E > E_g$ desperdician el exceso térmicamente (termalización) bajando hasta $E_g$. La corriente máxima extraíble, suponiendo 1 electrón por fotón, es:
+
      $$ J_{sc} = q \int_{E_g}^{\infty} \frac{I(E, T_s)}{E} dE $$
+
      La potencia saliente, penalizada por la recombinación radiativa fundamental en el balance térmico de la celda a $T_c \approx 300\text{ K}$, genera una eficiencia termodinámica final $\eta(E_g)$:
+
      $$ \eta(E_g) = \frac{V_{oc} \cdot J_{sc} \cdot FF}{P_{in}} $$
+
      donde la eficiencia pico matemática arroja matemáticamente un $\approx 33.7\%$ óptimo para un semiconductor con $E_g \approx 1.34\text{ eV}$ (afortunadamente, el GaAs y el Silicio caen muy cerca de este pico radiativo).
    - **Implicaciones Físicas:** Condiciona todo el esfuerzo de ingeniería en dispositivos fotovoltaicos. Es el motivo por el cual hoy en día se buscan tecnologías multi-unión (tándem) o perovskitas superpuestas con silicio para superar este límite estricto de banda única.
 

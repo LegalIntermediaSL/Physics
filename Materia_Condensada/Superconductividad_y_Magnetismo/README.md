@@ -13,13 +13,16 @@ Existen dos mecanismos teóricos principales por los cuales el magnetismo aniqui
 **El Efecto Orbital (Límite Meissner):**
 Un campo magnético externo ($\mathbf{H}$) interacciona geométricamente con los momentos orbitales de los electrones mediante las fuerzas de Lorentz. El superconductor gasta energía en mantener corrientes superficiales de apantallamiento para cancelar $\mathbf{B}$ en su interior ($\mathbf{B} = \mu_0(\mathbf{H} + \mathbf{M}) = 0 \implies \mathbf{M} = -\mathbf{H}$).
 La termodinámica requiere que el aumento de la energía libre magnética no supere a la energía de condensación estabilizadora del estado BCS. Cuando el campo aplicado $H$ supera un límite termodinámico crítico, se vuelve energéticamente favorable abortar la fase Meissner, romper los pares y que el material reingrese al estado normal permeable.
+
 $$ \Delta G_{mag} = \frac{1}{2} \mu_0 H_c^2 \equiv E_{condensacion} \implies H_c = \sqrt{\frac{2 \mu_0}{V_c} E_{cond}} $$
+
 Para superconductores Tipo II, las ecuaciones de Ginzburg-Landau demuestran que en lugar de destruirse uniformemente, el material permite la penetración parcial y cuantizada del campo a través de la formación de una Red de Vórtices de Abrikosov, sobreviviendo así hasta campos formidables $H_{c2}$.
 
 **El Efecto Paramagnético de Pauli (Límite de Clogston-Chandrasekhar):**
 Este mecanismo microscópico no concierne al movimiento orbital, sino estrictamente a la energía Zeeman de los espines. Un campo magnético penetrante interactúa de manera desigual con los espines del par de Cooper ($\uparrow$ y $\downarrow$).
 La energía del estado antiparalelo no se altera promedialmente, pero en el estado normal, los electrones pueden polarizarse todos "spin-up" para ganar energía Zeeman ($\Delta E_{Z} = \mu_B B$). Si la ganancia de energía Zeeman térmica de los electrones normales iguala o supera la brecha atractiva emparejadora $\Delta_0$ (gap superconductor a T=0), el par se rompe catastróficamente por desalineación de momentos.
 El campo crítico superior estricto impuesto por la ruptura de par de Pauli es:
+
 $$ \mu_B B_p = \frac{\Delta_0}{\sqrt{2}} \implies B_p(T=0) \approx 1.84 \, T_c \, [\text{Tesla/Kelvin}] $$
 
 ### 2. Parámetro de Orden de Ginzburg-Landau Acoplado
@@ -61,15 +64,22 @@ Utilice la ley de Clogston-Chandrasekhar para calcular teóricamente la intensid
 
 1. **Estimación del Gap de BCS:**
    Para calcular el límite teórico, primero determinamos la brecha de energía superconductora en el cero absoluto ($\Delta_0$). Empleamos la universalidad BCS para un acoplamiento débil de electrones-fonones:
+
    $$ 2\Delta_0 = 3.52 k_B T_c \implies \Delta_0 = 1.76 k_B T_c $$
+
    Usando $k_B \approx 8.617 \times 10^{-5} \, \text{eV/K}$:
+
    $$ \Delta_0 = 1.76 \times (8.617 \times 10^{-5}) \times 4.2 \approx 6.37 \times 10^{-4} \, \text{eV} = 0.637 \, \text{meV} $$
 
 2. **Cálculo del Límite Paramagnético Crítico (Pauli-Clogston):**
    La condición física establece que la superconductividad se extingue cuando la ganancia energética de orientar un espín electrón al campo (Energía Zeeman $\mu_B B$) iguala a la energía necesaria para quebrar el par estabilizado por la brecha de energía, ajustado por la termodinámica de la superficie de Fermi normal ($1/\sqrt{2}$ de diferencia en energías libres):
+
    $$ \mu_B B_p = \frac{\Delta_0}{\sqrt{2}} $$
+
    Con el magnetón de Bohr $\mu_B \approx 5.788 \times 10^{-5} \, \text{eV/T}$ y $\sqrt{2} \approx 1.414$:
+
    $$ B_p = \frac{6.37 \times 10^{-4} \, \text{eV}}{\sqrt{2} \times 5.788 \times 10^{-5} \, \text{eV/T}} \approx \frac{6.37}{1.414 \times 0.5788} \approx \frac{6.37}{0.818} \approx 7.78 \, \text{Tesla} $$
+
    *(Alternativamente, la fórmula empírica directa establece $B_p \approx 1.84 \, T_c = 1.84 \times 4.2 \approx 7.73 \, \text{T}$, muy concordante dadas las diferencias de redondeo).*
 
 3. **Análisis de Coexistencia del Dopaje:**
@@ -86,12 +96,18 @@ La temperatura crítica de un elemento superconductor está vinculada experiment
 
 **Solución paso a paso:**
 En la teoría BCS de acoplamiento débil (cuando el potencial de interacción electrón-fonón $V$ por la densidad de estados $N(0)$ cumple $N(0)V \ll 1$), la temperatura crítica $T_c$ se obtiene de:
+
 $$ k_B T_c \approx 1.13 \hbar \omega_D e^{-1 / N(0)V} $$
+
 donde $\omega_D$ es la frecuencia de Debye de la red cristalina, indicativa de la energía fonónica característica.
 En el modelo simple de osciladores acoplados de masa iónica $M$ y constante restauradora de muelle $K$ (asociada a los enlaces químicos), la frecuencia máxima $\omega_D$ es proporcional a la frecuencia del oscilador armónico básico:
+
 $$ \omega_D \propto \sqrt{\frac{K}{M}} $$
+
 Puesto que distintos isótopos de un material cambian $M$ pero dejan la estructura electrónica y, por ende, el acoplamiento $V$ y la fuerza elástica $K$ prácticamente invariantes, tenemos que:
+
 $$ T_c \propto \omega_D \propto M^{-1/2} $$
+
 Por lo tanto, la teoría BCS predice intrínsecamente un exponente isotópico $\alpha = 1/2$.
 Esto fue una prueba definitiva de que los fonones (vibraciones reticulares) median la atracción entre electrones (formación de pares de Cooper) responsable de la superconductividad clásica.
 
@@ -100,9 +116,13 @@ Dadas la longitud de coherencia $\xi \approx 3$ nm y la longitud de penetración
 
 **Solución paso a paso:**
 El parámetro de Ginzburg-Landau se define adimensionalmente como el cociente:
+
 $$ \kappa = \frac{\lambda_L}{\xi} $$
+
 Sustituyendo los valores provistos:
+
 $$ \kappa = \frac{150 \text{ nm}}{3 \text{ nm}} = 50 $$
+
 La teoría fenomenológica de Ginzburg-Landau indica que la transición de energía superficial en la interfaz entre una región normal y una superconductora cambia de signo en $\kappa = 1/\sqrt{2} \approx 0.707$.
 - Si $\kappa < 1/\sqrt{2}$, la energía superficial es positiva y el campo es totalmente expulsado (Tipo I).
 - Si $\kappa > 1/\sqrt{2}$, la energía superficial es negativa (Tipo II).
@@ -167,9 +187,13 @@ Para describir el entrelazamiento cuántico de grados de libertad de carga y esp
 
 **Superconductividad Triplete (Vector $\mathbf{d}$):**
 El parámetro de orden ya no es un escalar complejo, sino una matriz en el espacio de espín $\hat{\Delta}(\mathbf{k})$. Para espines triplete, esto se parametrizará usando el vector de espín complejo de Balian-Werthamer $\mathbf{d}(\mathbf{k})$:
+
 $$ \hat{\Delta}(\mathbf{k}) = (\mathbf{d}(\mathbf{k}) \cdot \boldsymbol{\sigma}) i\sigma_y = \begin{pmatrix} -d_x + id_y & d_z \\ d_z & d_x + id_y \end{pmatrix} $$
+
 La invariancia gauge $U(1)$ y la invariancia de rotación de espín $SU(2)$ se rompen espontáneamente, reduciendo la simetría a un subgrupo isotrópico complejo. El hamiltoniano del cuasipartícula es:
+
 $$ E_{\mathbf{k}} = \sqrt{\xi_{\mathbf{k}}^2 + |\mathbf{d}(\mathbf{k})|^2 \pm |\mathbf{q}(\mathbf{k})|} $$
+
 donde $\mathbf{q}(\mathbf{k}) = i (\mathbf{d}(\mathbf{k}) \times \mathbf{d}^*(\mathbf{k}))$ es proporcional al momento magnético de los pares de Cooper.
 Si $\mathbf{q} \neq 0$, el material exhibe ferromagnetismo superconductor espontáneo y rompe invariancia por reversión temporal.
 
@@ -185,14 +209,18 @@ Si $\mathbf{q} \neq 0$, el material exhibe ferromagnetismo superconductor espont
    - **Importancia Teórica:** Este artículo causó un asombro fundacional porque se creía teóricamente imposible que un ferromagneto masivo (F) sufriera de manera intrínseca y homogénea una transición hacia la superconductividad sin apagar antes el ferromagnetismo (por el límite de paramagnetismo de Pauli).
    - **Fondo Matemático:** El emparejamiento electrónico singlete clásico de BCS ($\mathbf{k}\uparrow$, $-\mathbf{k}\downarrow$) está absolutamente vetado en un ferromagneto fuerte porque las bandas magnéticas intercambiadas Zeeman están brutalmente divididas, imposibilitando aparear fermiones con momentos simétricos en el nivel de Fermi. 
      Para sobrevivir, la función de onda de pares de Cooper se ve obligada a adquirir estadística de **triplete de espín** ($S=1$, permitiendo estados espaciales orbitales $L=1, 3...$ es decir *onda P*), tal como:
+
      $$ |\Psi_{triplete}\rangle \propto \left( c^\dagger_{\mathbf{k}\uparrow} c^\dagger_{-\mathbf{k}\uparrow} + e^{i\phi} c^\dagger_{\mathbf{k}\downarrow} c^\dagger_{-\mathbf{k}\downarrow} \right) |0\rangle $$
+
      Esta antisimetría cuántica orbital forzada permite que los electrones con espines enteramente alineados al enorme campo molecular logren una atracción termodinámica e interceptar el estado condensado.
    - **Implicaciones Físicas:** Demuestra empíricamente el surgimiento de nuevos e inexplorados estados colectivos fermiónicos topológicos, probando que el paradigma BCS no solo está restringido al gas no magnético estándar, sino que puede abarcar apareamientos magnéticamente sintonizados.
 
 2. **["Majorana fermions in a tunable semiconductor device" (Science, 2012)](https://www.science.org/doi/10.1126/science.1222360)**
    - **Importancia Teórica:** Reporta las primeras huellas serias del Fermión de Majorana (partículas que son sus propias antipartículas, conceptualizadas inicialmente en física de altas energías) emergiendo paradójicamente dentro de la materia condensada.
    - **Fondo Matemático:** La física teórica subyacente surge de acoplar un material ferromagnético Zeeman local $V_Z = g \mu_B B$ en contacto con un hilo cuántico fuertemente acoplado en espín-órbita (Rashba $\alpha_R$), y promediando por cercanía (efecto proximidad) con un superconductor macroscópico $s$-wave usual $\Delta$. El Hamiltoniano 1D topológico (similar al modelo de Kitaev 1D) que rige al estado de quasipartícula adquiere la estructura:
+
      $$ \mathcal{H} = \left( \frac{-\hbar^2 \partial_x^2}{2m^*} - \mu \right) \tau_z + i\alpha_R \partial_x \tau_z \sigma_y + V_Z \sigma_x + \Delta \tau_x $$
+
      donde $\sigma$ y $\tau$ son matrices de Pauli para espín y hueco-partícula (Nambu). Cuando la condición del gap invertido $V_Z > \sqrt{\Delta^2 + \mu^2}$ es violada topológicamente, surgen modos ligados puros de energía $E=0$ en los extremos físicos espaciales del hilo. El operador que crea esta excitación exótica satisface $\gamma = \gamma^\dagger$ y $\gamma^2 = 1$.
    - **Implicaciones Físicas:** Estas quasipartículas de estado sólido tienen estadísticas no-abelianas excepcionales, prometiendo el diseño arquitectónico de una computadora cuántica topológica intrínsecamente protegida de la decoherencia externa.
 

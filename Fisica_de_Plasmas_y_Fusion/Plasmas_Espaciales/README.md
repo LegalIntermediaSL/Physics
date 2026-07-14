@@ -40,7 +40,9 @@ Presión Dinámica del Viento Solar: $p_{dyn} = \rho u^2$
 Presión Magnética del Campo Terrestre: $p_{mag} = \frac{B_{mp}^2}{2\mu_0}$
 
 El campo dipolar a lo largo del ecuador disminuye con el radio cúbico:
+
 $$ B(r) = B_0 \left( \frac{R_E}{r} \right)^3 $$
+
 donde $B_0 \approx 31,000$ nT es el campo magnético en el ecuador terrestre y $R_E$ es el radio de la Tierra. Asumiendo una compresión del campo en la frontera por las corrientes de magnetopausa inducidas de un factor de $\approx 2$:
 
 $$ B_{mp} \approx 2 B_0 \left( \frac{R_E}{r} \right)^3 $$
@@ -90,16 +92,23 @@ En la capa de difusión disipativa a escala electrónica, la ecuación generaliz
    - Permeabilidad $\mu_0 = 4\pi \times 10^{-7} \, \text{T}\cdot\text{m/A}$
 
 2. **Cálculo de la Presión Dinámica del Viento Solar:**
+
    $$ p_{dyn} = n_w m_p u_w^2 = (5 \times 10^7) (1.67 \times 10^{-27}) (9 \times 10^5)^2 $$
+
    $$ p_{dyn} = (8.35 \times 10^{-20}) (8.1 \times 10^{11}) \approx 6.76 \times 10^{-8} \, \text{Pa} $$
+
    *(Para dar contexto, en tiempo de calma el viento es $\approx 5 \, \text{cm}^{-3}$ y $400 \, \text{km/s}$, con $p_{dyn} \approx 1.3 \times 10^{-9} \, \text{Pa}$. ¡Esta es una compresión de 50 veces!)*
 
 3. **Cálculo de la constante magnética del numerador:**
+
    $$ \frac{2 B_0^2}{\mu_0} = \frac{2 (3.1 \times 10^{-5})^2}{4\pi \times 10^{-7}} = \frac{1.922 \times 10^{-9}}{1.256 \times 10^{-6}} \approx 1.53 \times 10^{-3} \, \text{Pa} $$
 
 4. **Despeje de $R_{mp}$ usando la Distancia de Chapman-Ferraro:**
+
    $$ \frac{R_{mp}}{R_E} = \left( \frac{2 B_0^2 / \mu_0}{p_{dyn}} \right)^{1/6} $$
+
    $$ \frac{R_{mp}}{R_E} = \left( \frac{1.53 \times 10^{-3}}{6.76 \times 10^{-8}} \right)^{1/6} = (22633)^{1/6} $$
+
    $$ \frac{R_{mp}}{R_E} \approx 5.3 $$
 
 **Conclusión:** La magnetopausa ha sido comprimida violentamente desde sus $10 \, R_E$ nominales hasta $R_{mp} \approx 5.3 \, R_E$.
@@ -113,18 +122,29 @@ Asumiendo un Sol en rotación con velocidad angular $\Omega_\odot$ y un viento s
 **Solución paso a paso:**
 Consideremos el marco de referencia en corrotación con el Sol. En este marco (sistema ideal estacionario), la ley de congelamiento de flujo dicta que la velocidad del fluido es estrictamente paralela al campo magnético: $\mathbf{u}' \parallel \mathbf{B}$.
 En el marco sidéreo inercial, la velocidad del plasma cuenta con una componente de rotación arrastrada desde el origen $\mathbf{v}_\phi = \Omega_\odot r$, de manera que la velocidad corrotante aparente del viento visto desde el Sol rígidamente giratorio es:
+
 $$ \mathbf{u}' = u_w \hat{r} - \Omega_\odot r \hat{\phi} $$
+
 Como $\mathbf{B}$ es paralelo a $\mathbf{u}'$, las componentes de $\mathbf{B} = (B_r, B_\phi, 0)$ satisfacen:
+
 $$ \frac{B_\phi}{B_r} = \frac{- \Omega_\odot r}{u_w} $$
+
 En coordenadas polares $(r, \phi)$, la ecuación diferencial de una línea de campo geométricamente es $r d\phi / dr = B_\phi / B_r$.
+
 $$ \frac{r d\phi}{dr} = -\frac{\Omega_\odot r}{u_w} \implies d\phi = -\frac{\Omega_\odot}{u_w} dr $$
+
 Integrando desde la superficie fuente $r_0$ hasta $r$:
+
 $$ \phi(r) - \phi_0 = -\frac{\Omega_\odot}{u_w} (r - r_0) $$
+
 Esta es matemáticamente la ecuación de la Espiral de Arquímedes.
 Para la Tierra, la distancia $r \approx 1 \, \text{AU} = 1.5 \times 10^{11} \, \text{m}$, y el periodo de rotación ecuatorial solar es unos $25.4$ días, $\Omega_\odot = \frac{2\pi}{25.4 \times 86400} \approx 2.86 \times 10^{-6} \, \text{rad/s}$. Si tomamos $u_w \approx 400 \, \text{km/s} = 4 \times 10^5 \, \text{m/s}$:
 El ángulo de espiral del IMF (el ángulo entre la dirección radial y el campo), está dado por:
+
 $$ \tan \theta_P = \left| \frac{B_\phi}{B_r} \right| = \frac{\Omega_\odot r}{u_w} = \frac{(2.86 \times 10^{-6}) (1.5 \times 10^{11})}{4 \times 10^5} \approx \frac{429}{400} \approx 1.07 $$
+
 $$ \theta_P = \arctan(1.07) \approx 47^\circ $$
+
 Esto indica que el campo magnético del sol no nos alcanza radialmente, sino que intercepta la Tierra con un ángulo de unos 45 grados de desviación matutina.
 
 ### Problema 2: Presión Magnética en la Cola de la Magnetosfera (Magnetotail)
@@ -132,12 +152,17 @@ Asuma que el lóbulo magnético en la cola oscura de la Tierra es modelable geom
 
 **Solución paso a paso:**
 En la transición de las fronteras magnetosféricas estacionarias largas donde la tensión tangencial magnética y la curvatura son despreciables, el equilibrio requiere estricta continuidad de la presión total (cinética + magnética) a través de la frontera de la magnetopausa externa hacia el lóbulo.
+
 $$ \left( p + \frac{B^2}{2\mu_0} \right)_{Lóbulo} = \left( p + \frac{B^2}{2\mu_0} \right)_{Vaina} $$
+
 El lóbulo de la cola magnética está prácticamente vacío de partículas comparado con su inmenso campo; es una estructura magnéticamente dominada, por tanto $p_{Lóbulo} \approx 0$.
 En contraste, asumimos según el enunciado que en la región exterior el campo magnético tangencial dispersado es pequeño, entonces su término magnético puede subestimarse, siendo dominante la presión térmica o estática del plasma $p_s$.
 Igualando:
+
 $$ \frac{B_L^2}{2\mu_0} \approx p_s $$
+
 $$ B_L \approx \sqrt{2\mu_0 p_s} $$
+
 El campo geomagnético en la inmensa cola se autosustenta estrictamente equilibrando con su presión interna la presión termodinámica ejercida por el viento solar circundante fluyendo hacia el abismo exterior. 
 
 ### Problema 3: Reflexión de Ondas de Radio Cortas en la Ionosfera
@@ -145,16 +170,24 @@ La ionosfera de la Tierra presenta capas sucesivas (D, E, F1, F2) con densidades
 
 **Solución paso a paso:**
 Para ondas electromagnéticas puramente transversales no magnetizadas en propagación vertical, la relación de dispersión local es:
+
 $$ \omega^2 = \omega_{pe}^2 + c^2 k^2 $$
+
 La onda de radio penetrará la ionosfera conforme viaja hacia arriba, enfrentando un gradiente creciente de densidad, lo que incrementa $\omega_{pe}(z)$.
 La frecuencia de la onda emitida ($\omega$) es constante. A medida que entra, su número de onda local $k(z)$ debe disminuir (la fase se ensancha) para satisfacer la relación de dispersión:
+
 $$ c^2 k(z)^2 = \omega^2 - \omega_{pe}(z)^2 $$
+
 La reflexión ocurre idénticamente cuando el vector de onda se anula localmente ($k(z) = 0$), en ese punto el índice de refracción es nulo y la señal se vuelve evanescente perdiéndose en el horizonte imaginario, lo cual significa que se refleja.
 La condición de reflexión es: $\omega = \omega_{pe}(z_{reflejo})$.
 La frecuencia de onda más alta capaz de reflejarse será la que encuentre apenas la densidad máxima absoluta antes de escapar del planeta:
+
 $$ \omega_{max} = \omega_{pe}(N_{max}) = \sqrt{\frac{N_{max} e^2}{m_e \epsilon_0}} $$
+
 En frecuencia lineal $f_c = \frac{\omega_{max}}{2\pi} \approx 8.98 \sqrt{N_{max}}$ (fórmula empírica práctica en Hz y $\text{m}^{-3}$).
+
 $$ f_c \approx 8.98 \sqrt{10^{12}} = 8.98 \times 10^6 \, \text{Hz} = 8.98 \, \text{MHz} $$
+
 **Conclusión:** Cualquier señal de comunicación vertical a la Tierra que exceda $\sim 9 \, \text{MHz}$ perforará limpiamente la ionosfera escapando al espacio profundo (vital para comunicarse con satélites). Las estaciones de radiodifusión en Onda Corta (SW) utilizan frecuencias hábilmente calculadas menores que esto pero radiadas oblicuamente, de modo que logran la refracción iónica y se rebotan en "saltos" intercontinentales transoceánicos que rebasan la curvatura terrestre.
 
 ## 💻 Simulaciones Computacionales
@@ -236,12 +269,16 @@ El límite astrofísico con bajísimas densidades requiere abandonar la mecánic
 
 **Teoría Cuasilineal de Interacción Onda-Partícula y Viento Solar:**
 Para describir el esparcimiento de rayos cósmicos y la radiación capturada por campos planetarios (cinturones de Van Allen) producida por una banda turbulenta ancha de ondas electromagnéticas (Alfvénicas o Whistler), se recurre a la expansión cuasilineal de la ecuación Vlasov. La función de distribución $f_0(\mathbf{p})$ evoluciona estocásticamente bajo un operador difusivo espacial y de momentos de Fokker-Planck:
+
 $$ \frac{\partial f_0}{\partial t} = \frac{\partial}{\partial p_i} \left( D_{ij}(\mathbf{p}) \frac{\partial f_0}{\partial p_j} \right) $$
+
 El tensor de difusión $D_{ij}$ emerge de resonancias onda-partícula evaluadas en polos (como la resonancia de ciclotrón normal y anómala) en el espectro de fluctuaciones turbulento del campo $|\delta \mathbf{B}_k|^2$.
 
 **Ecuación de Transporte de Parker-Krylov:**
 La propagación cósmica global está gobernada por la ecuación de Parker, que balancea advección, difusión isotrópica, esparcimiento por vientos (derivado adiabático) y ganancia por ondas de choque:
+
 $$ \frac{\partial U}{\partial t} = \nabla \cdot (K \cdot \nabla U) - \mathbf{V}_w \cdot \nabla U + \frac{1}{3} (\nabla \cdot \mathbf{V}_w) \frac{\partial (p U)}{\partial p} + Q $$
+
 Donde $K(\mathbf{r}, p)$ es el tensor de difusión derivado matemáticamente acoplando dinámicamente este campo a las perturbaciones MHD en la vasta heliosfera.
 
 ## 📚 Recursos Específicos
@@ -262,7 +299,9 @@ Donde $K(\mathbf{r}, p)$ es el tensor de difusión derivado matemáticamente aco
    
    **Contexto Matemático:** 
    Al resolver la ecuación estacionaria de momento radial para un gas isotérmico gravitacional, encontró una topología de soluciones en el espacio de fases. La única curva que satisface las condiciones de contorno (baja velocidad en la corona e isobárica nula en el infinito) es la solución singular que atraviesa el punto crítico sónico $r_c = GM/2c_s^2$. La ecuación que la describe resulta:
+
    $$ \left( u - \frac{c_s^2}{u} \right) \frac{du}{dr} = \frac{2 c_s^2}{r} - \frac{GM}{r^2} $$
+
    Parker probó elegantemente que, si el plasma gana suficiente energía térmica en la corona para extender su perfil más allá de $r_c$, se produce una boquilla termodinámica de Laval gravitacional: se acelera desde un flujo subsónico a uno implacablemente supersónico lejos del sol, arrasando con los modelos previos estáticos del espacio interplanetario.
 
 2. **"Interplanetary Magnetic Field and the Auroral Zones"** - *J. W. Dungey (1961), Physical Review Letters 6, 47*  
@@ -273,7 +312,9 @@ Donde $K(\mathbf{r}, p)$ es el tensor de difusión derivado matemáticamente aco
    
    **Contexto Matemático:** 
    El artículo estableció topológicamente que cuando el Campo Magnético Interplanetario (IMF, acarreado por el viento solar) tiene un componente orientado hacia el sur (antiparalelo al campo diurno ecuatorial de la Tierra), se forma obligatoriamente un Punto-X neutral ($\mathbf{B}=0$) en la magnetopausa frontal. La inducción eléctrica global trans-magnetosférica impulsa plasma a través del separatrix por la deriva de convección:
+
    $$ \mathbf{v}_E = \frac{\mathbf{E} \times \mathbf{B}}{B^2} $$
+
    El flujo es barrido antisunward sobre los casquetes polares, almacenando flujo magnético y energía electromagnética de Poynting en las aletas de la vasta magnetocola. Allí, una segunda reconexión nocturna en la capa neutral lanza el plasma hacia atrás en dirección a la Tierra, bombardeando la atmósfera y detonando el óvalo auroral en el proceso de descarga.
 
 ### 📖 Referencias Útiles y Bibliografía

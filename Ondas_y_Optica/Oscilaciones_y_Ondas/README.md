@@ -9,41 +9,60 @@ El estudio de las oscilaciones y ondas constituye uno de los pilares de la físi
 ### 1. El Oscilador Armónico Simple, Amortiguado y Forzado
 
 Un sistema de masa $m$ sujeto a una fuerza restauradora lineal (Ley de Hooke) $F = -kx$ obedece la ecuación diferencial:
+
 $$ m \frac{d^2 x}{dt^2} + kx = 0 $$
+
 Definiendo la frecuencia angular natural $\omega_0 = \sqrt{k/m}$, la solución general es $x(t) = A \cos(\omega_0 t + \phi)$. 
 
 **Oscilador Amortiguado:** Si consideramos una fuerza disipativa proporcional a la velocidad, $F_d = -b v$, la ecuación se convierte en:
+
 $$ m \frac{d^2 x}{dt^2} + b \frac{dx}{dt} + kx = 0 \implies \frac{d^2 x}{dt^2} + 2\gamma \frac{dx}{dt} + \omega_0^2 x = 0 $$
+
 donde $\gamma = b/2m$. En el caso subamortiguado ($\gamma < \omega_0$), la solución es:
+
 $$ x(t) = A e^{-\gamma t} \cos(\omega_d t + \phi) \quad \text{con} \quad \omega_d = \sqrt{\omega_0^2 - \gamma^2} $$
+
 La amplitud decrece exponencialmente, perdiendo energía cinética y potencial en forma de calor.
 
 **Oscilador Forzado y Resonancia:** Al aplicar una fuerza armónica externa $F_{ext}(t) = F_0 \cos(\omega t)$, el estado estacionario adopta la frecuencia de la fuerza externa:
+
 $$ x(t) = A(\omega) \cos(\omega t - \delta) $$
+
 donde la amplitud $A(\omega)$ tiene un máximo absoluto (resonancia) cuando $\omega \approx \omega_0$:
+
 $$ A(\omega) = \frac{F_0 / m}{\sqrt{(\omega_0^2 - \omega^2)^2 + (2\gamma\omega)^2}} $$
 
 ### 2. La Ecuación de Onda Clásica
 
 Cuando conectamos una infinidad de osciladores acoplados, pasamos del dominio discreto al continuo. Consideremos una cuerda bajo tensión $T$ y con densidad lineal de masa $\mu$. Aplicando la Segunda Ley de Newton a un segmento infinitesimal $dx$, y asumiendo ángulos pequeños $\theta \approx \partial y/\partial x$, la componente vertical de la fuerza neta es:
+
 $$ dF_y = T \left( \frac{\partial y}{\partial x}\Big|_{x+dx} - \frac{\partial y}{\partial x}\Big|_{x} \right) \approx T \frac{\partial^2 y}{\partial x^2} dx $$
+
 Igualando esto a la masa $(\mu dx)$ por la aceleración $(\partial^2 y/\partial t^2)$, obtenemos la **Ecuación de Onda de d'Alembert**:
+
 $$ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} $$
+
 donde la velocidad de propagación es $v = \sqrt{T/\mu}$. 
 
 ### 3. Soluciones de la Ecuación de Onda
 
 La solución de d'Alembert demuestra que cualquier función dos veces diferenciable de la forma $y(x,t) = f(x - vt) + g(x + vt)$ satisface la ecuación de onda.
 Para ondas armónicas, usamos el método de separación de variables $y(x,t) = X(x)T(t)$, que nos lleva a:
+
 $$ y(x,t) = A \cos(kx \pm \omega t + \phi) $$
+
 donde el número de onda $k = 2\pi/\lambda$ y $\omega = 2\pi/T = 2\pi f$. La velocidad de fase está dada por la relación de dispersión $v_p = \omega / k$.
 
 ### 4. Interferencia y Ondas Estacionarias
 
 Si una onda viajera incidente $y_1 = A \sin(kx - \omega t)$ se refleja en un extremo fijo, produce una onda reflejada $y_2 = A \sin(kx + \omega t)$. La superposición $y = y_1 + y_2$ resulta en una **onda estacionaria**:
+
 $$ y(x,t) = [2A \sin(kx)] \cos(\omega t) $$
+
 El término espacial $\sin(kx)$ obliga a la cuerda a tener nodos inmóviles en los puntos $x = n\pi/k = n\lambda/2$. Si la cuerda está fija en sus dos extremos (longitud $L$), se imponen las condiciones de frontera de Dirichlet $y(0,t)=y(L,t)=0$. Esto restringe las longitudes de onda permitidas (cuantización):
+
 $$ \lambda_n = \frac{2L}{n} \implies f_n = \frac{nv}{2L} = n f_1 $$
+
 Estos $f_n$ representan los modos normales de vibración o armónicos del sistema.
 
 ```mermaid
@@ -192,9 +211,13 @@ En 2026, la frontera de investigación en oscilaciones y ondas se centra fuertem
 ## 📐 Formalismo Matemático Avanzado (Nivel Posgrado/Doctorado)
 
 El estudio avanzado de oscilaciones acopladas requiere abandonar la notación matricial básica y adentrarse en la **geometría simpléctica**. Consideremos una variedad simpléctica $(M, \omega)$, donde $M$ es el espacio de fases $T^*Q$ del sistema de osciladores, y $\omega = \sum_{i} dq^i \wedge dp_i$ es la 2-forma simpléctica canónica. La dinámica está gobernada por un Hamiltoniano $H: M \to \mathbb{R}$. Los campos vectoriales Hamiltonianos $X_H$ se definen mediante la relación geométrica:
+
 $$ i_{X_H} \omega = dH $$
+
 Para perturbaciones no lineales y modos normales resonantes (Resonancias de Fermi-Pasta-Ulam-Tsingou), el análisis se formaliza mediante la **Forma Normal de Birkhoff** y la **teoría de perturbaciones de Kolmogorov-Arnold-Moser (KAM)**. Una perturbación integrable $H = H_0(I) + \epsilon H_1(I, \theta)$, expresada en variables de acción-ángulo, preserva toros invariantes si se cumple la condición de no degeneración $\det \left( \frac{\partial^2 H_0}{\partial I_i \partial I_j} \right) \neq 0$ y si el vector de frecuencias satisface la condición Diofántica:
+
 $$ |\mathbf{k} \cdot \boldsymbol{\omega}| \geq \frac{\gamma}{|\mathbf{k}|^\tau} \quad \forall \mathbf{k} \in \mathbb{Z}^n \setminus \{0\} $$
+
 Esto rigurosamente demuestra la estabilidad de las oscilaciones casi-periódicas frente a perturbaciones arbitrariamente complejas en sistemas no disipativos.
 
 ## 📚 Recursos Específicos
@@ -214,10 +237,14 @@ Esto rigurosamente demuestra la estabilidad de las oscilaciones casi-periódicas
 2. **["Solitons and the Inverse Scattering Transform" por M. J. Ablowitz](https://epubs.siam.org/doi/book/10.1137/1.9781611970883)**
    - **Importancia Teórica:** Rompe el paradigma de la Ecuación de Onda Lineal (D'Alembert) que predecía la dispersión de pulsos. Un solitón es un colosal pulso robusto de onda única que se desplaza eternamente sin cambiar su forma al estabilizar la dispersión natural disipadora balanceándola matemáticamente contra un término de no-linealidad amplificadora. (Históricamente observado por J.S. Russell galopando en un canal a caballo en 1834).
    - **Fondo Matemático:** En agua de canal estrecho y largo, la elevación solitaria $\eta(x,t)$ responde rigurosamente a la endiablada ecuación diferencial diferencial no lineal de Korteweg-de Vries (KdV):
+
      $$ \frac{\partial \eta}{\partial t} + 6\eta \frac{\partial \eta}{\partial x} + \frac{\partial^3 \eta}{\partial x^3} = 0 $$
+
      El término central $6\eta \partial_x\eta$ provoca que los picos altos viajen más rápido (inclinando el frente de onda), mientras el término dispersivo $\partial^3_{xxx}\eta$ trata de deshacer el pico desparramando sus colas de baja longitud. 
      La solución asombrosa es el solitón puro secante-hiperbólico constante, viajando a velocidad de fase pura $c$: 
+
      $$ \eta(x,t) = \frac{c}{2} \text{sech}^2\left( \frac{\sqrt{c}}{2} (x - ct - x_0) \right) $$
+
    - **Implicaciones Físicas:** Dos de estos pulsos al colisionar se atraviesan mutuamente como si fueran corpúsculos o fantasmas, preservando tamaño, masa e identidad luego del impacto, solo exhibiendo un leve desfase posicional. Fundamento indispensable para que hoy los cables de fibra óptica submarinos envíen terabytes de pulsos láser intercontinentales sin que estos se vuelvan borrosos durante el gigantesco viaje por el océano.
 
 3. **[PhET Interactive: Normal Modes & Strings](https://phet.colorado.edu/en/simulations/normal-modes)**: Simulador de mecánica hamiltoniana interactiva; ideal para armar cristales oscilatorios acoplados unidimensionales y observar Fourier emerger vívidamente en modos normales purísimos de onda estacionaria.

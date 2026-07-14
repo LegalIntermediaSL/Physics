@@ -52,6 +52,7 @@ $$ |\Psi\rangle_{AB} = |\psi\rangle_A \otimes |\phi\rangle_B $$
 Los estados de Bell son cuatro estados máximamente entrelazados de dos qubits ($d_A = d_B = 2$). Estos forman una base ortonormal para $\mathcal{H}_{AB} \cong \mathbb{C}^4$:
 
 $$ |\Phi^\pm\rangle = \frac{1}{\sqrt{2}} ( |00\rangle \pm |11\rangle ) $$
+
 $$ |\Psi^\pm\rangle = \frac{1}{\sqrt{2}} ( |01\rangle \pm |10\rangle ) $$
 
 **Prueba de que $|\Phi^+\rangle$ es entrelazado:**
@@ -104,10 +105,13 @@ Evaluamos la traza parcial respecto a $B$:
 $$ \rho_A = \text{Tr}_B(\rho_{AB}) = \langle 0|_B \rho_{AB} |0\rangle_B + \langle 1|_B \rho_{AB} |1\rangle_B $$
 
 Primero evaluamos la contribución para $\langle 0|_B \dots |0\rangle_B$:
+
 $$ \langle 0|_B \rho_{AB} |0\rangle_B = \frac{1}{2} \Big( |0\rangle_A\langle 0|_A \langle 0|0\rangle \langle 0|0\rangle + |0\rangle_A\langle 1|_A \langle 0|0\rangle \langle 1|0\rangle + |1\rangle_A\langle 0|_A \langle 0|1\rangle \langle 0|0\rangle + |1\rangle_A\langle 1|_A \langle 0|1\rangle \langle 1|0\rangle \Big) $$
+
 $$ = \frac{1}{2} |0\rangle\langle 0| $$
 
 De manera similar, la contribución para $\langle 1|_B \dots |1\rangle_B$:
+
 $$ \langle 1|_B \rho_{AB} |1\rangle_B = \frac{1}{2} |1\rangle\langle 1| $$
 
 Sumando ambos términos:
@@ -136,6 +140,7 @@ El teorema de Bell y en particular la desigualdad CHSH demuestran que las predic
 Consideremos que Alice mide observables $A$ y $a$ y Bob mide observables $B$ y $b$. Los resultados de estas medidas dicotómicas (espín o polarización) siempre toman valores $\pm 1$. Por lo tanto, para cualquier realización dada, bajo un marco de realismo local, la cantidad:
 
 $$ S_{CHSH} = (A - a)B + (A + a)b $$
+
 puede evaluarse algebraicamente. Ya que $A, a \in \{-1, +1\}$, uno de los términos $(A-a)$ o $(A+a)$ debe ser 0, y el otro debe ser $\pm 2$. Dado que $B, b \in \{-1, +1\}$, se deduce rigurosamente que $S_{CHSH} \in \{-2, 2\}$.
 
 Calculando el valor esperado estadístico sobre múltiples ejecuciones, el límite de realismo local es:
@@ -148,6 +153,7 @@ Alice mide en direcciones correspondientes a los observables de Pauli: $A = \sig
 Bob mide en direcciones rotadas: $B = -\frac{1}{\sqrt{2}}(\sigma_z + \sigma_x)$ y $b = \frac{1}{\sqrt{2}}(\sigma_z - \sigma_x)$.
 
 La correlación para un singlet al medir proyectando en direcciones $\hat{n}_A$ y $\hat{n}_B$ es:
+
 $$ \langle \Psi^- | (\hat{n}_A \cdot \vec{\sigma} \otimes \hat{n}_B \cdot \vec{\sigma}) |\Psi^- \rangle = -\hat{n}_A \cdot \hat{n}_B $$
 
 Calculamos cada valor esperado:
@@ -171,8 +177,11 @@ $$ O = \sum_{m} \lambda_m P_m $$
 
 donde $\lambda_m$ son los valores propios reales (posibles resultados experimentales) y $P_m = |m\rangle\langle m|$ son los proyectores ortogonales correspondientes. 
 - La probabilidad de medir $\lambda_m$ en un estado $|\psi\rangle$ está dada por la regla de Born:
+
   $$ p(m) = \langle\psi|P_m|\psi\rangle $$
+
 - El estado posterior a la medida (colapso de la función de onda) se actualiza de acuerdo a:
+
   $$ |\psi'\rangle = \frac{P_m |\psi\rangle}{\sqrt{p(m)}} $$
 
 #### 5.2 Medidas Generalizadas (POVMs)
@@ -183,6 +192,7 @@ Un POVM consiste en un conjunto de operadores hermíticos semi-definidos positiv
 $$ \sum_{m} E_m = \mathbb{I} $$
 
 La probabilidad de obtener el resultado $m$ es:
+
 $$ p(m) = \text{Tr}(\rho E_m) = \langle \psi | E_m | \psi \rangle $$
 
 A diferencia de los proyectores, los elementos de un POVM no necesitan cumplir $E_m^2 = E_m$ ni ser mutuamente ortogonales, permitiendo el estudio de técnicas avanzadas como **State Discrimination** óptimo donde las proyecciones estándar no bastan. 
@@ -200,9 +210,13 @@ Demuestre que el estado singlete de dos qubits $|\psi^{-}\rangle = \frac{1}{\sqr
 3. Elegimos las mediciones para Bob como $B = \frac{-\sigma_z - \sigma_x}{\sqrt{2}}$ y $B' = \frac{\sigma_z - \sigma_x}{\sqrt{2}}$.
 4. Evaluamos las correlaciones para el estado singlete $\langle \psi^- | \sigma_i \otimes \sigma_j | \psi^- \rangle = -\delta_{ij}$.
 5. Calculamos cada término:
+
    $$ \langle A \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A \otimes B' \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B \rangle = \frac{1}{\sqrt{2}}, \quad \langle A' \otimes B' \rangle = -\frac{1}{\sqrt{2}} $$
+
 6. Sumando los términos, el valor de expectación es:
+
    $$ \langle S \rangle = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} - \left(-\frac{1}{\sqrt{2}}\right) = 2\sqrt{2} $$
+
 7. Como $2\sqrt{2} > 2$, la mecánica cuántica viola el límite clásico (Desigualdad de Bell).
 
 ### Ejercicio 2: Código de Corrección de Errores de Shor (9 qubits)
@@ -222,7 +236,9 @@ Construya el circuito y derive la acción de la QFT sobre un estado de base comp
 **Solución paso a paso:**
 1. La definición de la QFT en $n$ qubits es $|x\rangle \to \frac{1}{\sqrt{2^n}} \sum_{y=0}^{2^n-1} e^{2\pi i x y / 2^n} |y\rangle$.
 2. Para 3 qubits, se puede reescribir como un producto tensorial:
+
    $$ \frac{1}{\sqrt{8}} (|0\rangle + e^{2\pi i 0.x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_1 x_0}|1\rangle) \otimes (|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle) $$
+
 3. Se aplica primero una compuerta Hadamard al qubit $x_2$, obteniendo $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2}|1\rangle)$.
 4. Se aplican rotaciones controladas $R_2$ dependiente de $x_1$ y $R_3$ dependiente de $x_0$, transformando el estado a $\frac{1}{\sqrt{2}}(|0\rangle + e^{2\pi i 0.x_2 x_1 x_0}|1\rangle)$.
 5. Se repite el proceso para los qubits restantes, aplicando Hadamard y $R_2$ en $x_1$, y finalmente Hadamard en $x_0$.
@@ -291,13 +307,17 @@ Cualquier dinámica discreta general (como una medición) del sistema cuántico 
 
 La formalización algebraica se comprueba verificando que la *Matriz Dinámica de Choi-Jamiołkowski* es definida no negativa. Isomorfismo de Choi-Jamiołkowski:
 Dado un estado máximamente entrelazado $|\Omega\rangle = \frac{1}{\sqrt{d}} \sum_{i=1}^d |i\rangle \otimes |i\rangle$, la isometría unívoca es:
+
 $$ J(\mathcal{E}) = (\mathcal{E} \otimes \mathbb{I}) (|\Omega\rangle \langle\Omega|) \geq 0 $$
 
 En cuanto al Entrelazamiento de Formación (Entanglement of Formation) y Entropía Topológica para el Entrelazamiento Bipartito sobre Funcionales Convexas. El estado óptimo se busca minimizando el índice espectral:
+
 $$ E_F(\rho) = \inf \left\{ \sum_j p_j S(\text{Tr}_B(|\psi_j\rangle\langle\psi_j|)) \;\Bigg|\; \rho = \sum_j p_j |\psi_j\rangle\langle\psi_j| \right\} $$
 
 Matemáticamente, para los estados de clase Genuinamente Multipartitos (GME), el análisis invoca el Álgebra Polinomial de los Invariantes Locales Unitarios. La medida polinómica canónica, el "3-Tangle" (o hiperdeterminante de Cayley), mide invariantes de superposición para 3 qubits ($| \psi \rangle = \sum c_{ijk} |i,j,k\rangle$), expresándose mediante tensores antisimétricos con contracciones tensoriales:
+
 $$ \tau_{ABC} = 4 \left| d_1 - 2 d_2 + 4 d_3 \right| $$
+
 donde $d_m$ son contracciones polinomiales complejas de grado 4 de la amplitud métrica $c_{ijk}$. Extender estas métricas topológicas irreductibles y variedades seccionadas hipercomplejas a más de 4 qubits subyace la actual gran incógnita matemática en Teoría Cuántica de la Información.
 
 ## 📚 Recursos Específicos
@@ -312,18 +332,26 @@ donde $d_m$ son contracciones polinomiales complejas de grado 4 de la amplitud m
    - **Enlace:** [https://doi.org/10.1103/PhysRev.47.777](https://doi.org/10.1103/PhysRev.47.777)
    - **Importancia Teórica:** El artículo EPR, que formalizó conceptualmente el entrelazamiento cuántico señalándolo paradójicamente como "acción espeluznante a distancia" (spooky action at a distance).
    - **Fondo Matemático:** Examina estados inseparables de la forma $|\psi\rangle = \int dp |p\rangle |-p\rangle$, donde la posición relativa $x_1 - x_2$ y momento total $p_1 + p_2$ conmutan:
+
      $$
+
      [X_1 - X_2, P_1 + P_2] = [X_1, P_1] - [X_2, P_2] = i\hbar - i\hbar = 0
+
      $$
+
    - **Implicaciones Físicas:** Demuestra que si se exige causalidad local estricta, la mecánica cuántica no puede describir de manera completa todos los elementos de la realidad física, impulsando las teorías de variables ocultas.
 
 2. **On the Einstein Podolsky Rosen paradox (J. S. Bell, 1964)**
    - **Enlace:** [https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195](https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195)
    - **Importancia Teórica:** Las desigualdades de Bell. Proveyó el mecanismo matemático para falsar empíricamente cualquier teoría de variables ocultas locales.
    - **Fondo Matemático:** Establece que para cualquier modelo determinista local, la correlación de medidas $P(\vec{a}, \vec{b})$ debe satisfacer la desigualdad de CHSH:
+
      $$
+
      |E(a, b) - E(a, b') + E(a', b) + E(a', b')| \leq 2
+
      $$
+
      Mientras que la mecánica cuántica para el estado singlete viola este límite alcanzando $2\sqrt{2}$.
    - **Implicaciones Físicas:** Probó que el universo, en su nivel fundamental, es intrínsecamente no-local, marcando el nacimiento de la teoría de la información cuántica experimental.
 
@@ -331,9 +359,13 @@ donde $d_m$ son contracciones polinomiales complejas de grado 4 de la amplitud m
    - **Enlace:** [https://arxiv.org/abs/quant-ph/0306072](https://arxiv.org/abs/quant-ph/0306072)
    - **Importancia Teórica:** Resuelve en gran medida el problema de la medición explicando el colapso aparente y cómo surge el mundo clásico macroscópico a partir de la cuántica (Darwinismo Cuántico).
    - **Fondo Matemático:** Estudia la dinámica de la matriz de densidad reducida $\rho_S = \text{Tr}_E[\rho_{SE}]$ bajo un hamiltoniano de interacción con el entorno $H_{int}$. La decoherencia suprime los términos no diagonales de $\rho_S$ en la base de "pointer states":
+
      $$
+
      \rho_S(t) \approx \sum_i P_i |\pi_i\rangle \langle \pi_i|
+
      $$
+
    - **Implicaciones Físicas:** Desmitifica el papel del observador consciente, mostrando que la interacción continua y no evitable con el ambiente es lo que induce la selección de superposiciones viables.
 
 ### 📖 Referencias Útiles y Bibliografía

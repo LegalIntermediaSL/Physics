@@ -13,48 +13,68 @@ El tratamiento riguroso de las ondas sonoras en fluidos requiere un análisis de
 En un fluido ideal sin viscosidad ni conductividad térmica, el flujo acústico se describe mediante las ecuaciones de Navier-Stokes linealizadas. Sea un estado de reposo con presión $P_0$ y densidad $\rho_0$. Una perturbación induce $p = P_0 + p'$ y $\rho = \rho_0 + \rho'$. Las ecuaciones gobernantes son:
 
 **Ecuación de Continuidad (Masa):**
+
 $$ \frac{\partial \rho'}{\partial t} + \rho_0 \nabla \cdot \vec{u} = 0 $$
 
 **Ecuación de Euler (Momento):**
+
 $$ \rho_0 \frac{\partial \vec{u}}{\partial t} = - \nabla p' $$
 
 **Relación Adiabática (Termodinámica):**
 Dado que la oscilación acústica es típicamente un proceso rápido, el calor transferido es despreciable (condición isentrópica):
+
 $$ p' = c^2 \rho' $$
+
 donde $ c = \sqrt{(\partial P/\partial \rho)_S} $ es la velocidad del sonido en el medio.
 
 ### 2. Obtención de la Ecuación de Onda Tridimensional
 
 Para encontrar una ecuación en términos únicamente de la presión $p'$, tomamos la divergencia de la ecuación de Euler:
+
 $$ \rho_0 \nabla \cdot \frac{\partial \vec{u}}{\partial t} = - \nabla^2 p' $$
+
 Al derivar la ecuación de continuidad respecto al tiempo:
+
 $$ \frac{\partial^2 \rho'}{\partial t^2} + \rho_0 \frac{\partial}{\partial t}(\nabla \cdot \vec{u}) = 0 $$
+
 Combinando ambas ecuaciones y usando la relación adiabática $\rho' = p'/c^2$:
+
 $$ \frac{1}{c^2} \frac{\partial^2 p'}{\partial t^2} - \nabla^2 p' = 0 $$
+
 Esta es la **Ecuación de Onda Acústica**.
 
 ### 3. Solución para Ondas Planas y Esféricas
 
 Para una **onda plana** monocromática propagándose en la dirección $\vec{k}$:
+
 $$ p'(\vec{r}, t) = P_m e^{i(\vec{k} \cdot \vec{r} - \omega t)} $$
+
 donde el número de onda $k = |\vec{k}| = \omega / c = 2\pi/\lambda$.
 
 Para una **onda esférica** simétrica radiando desde una fuente puntual, el operador Laplaciano en coordenadas esféricas se simplifica, y la solución armónica es:
+
 $$ p'(r, t) = \frac{A}{r} e^{i(kr - \omega t)} $$
+
 La amplitud de presión disminuye inversamente con la distancia $r$ desde la fuente, lo cual implica que la intensidad $I \propto |p'|^2 \propto 1/r^2$ (Ley de la inversa del cuadrado).
 
 ### 4. Energía e Intensidad Sonora
 
 La densidad de energía acústica $w$ en el medio tiene dos componentes: energía cinética y energía potencial elástica:
+
 $$ w = \frac{1}{2} \rho_0 u^2 + \frac{1}{2} \frac{p'^2}{\rho_0 c^2} $$
+
 El flujo de energía está dado por el vector de intensidad acústica $\vec{I} = p' \vec{u}$. Para una onda plana progresiva:
+
 $$ I = \langle p' u \rangle = \frac{p_{\text{rms}}^2}{\rho_0 c} $$
+
 El nivel de intensidad sonora (NPS) se define logarítmicamente:
+
 $$ \beta = 10 \log_{10} \left( \frac{I}{I_0} \right) \, \text{dB} \quad (I_0 = 10^{-12} \, \text{W/m}^2) $$
 
 ### 5. El Efecto Doppler
 
 El cambio de frecuencia percibido debido al movimiento relativo se deriva considerando las ondas en el marco de referencia del medio material. Si una fuente se mueve con velocidad $v_s$ (positiva hacia el observador) y el observador con velocidad $v_o$ (positiva hacia la fuente):
+
 $$ f' = f \left( \frac{c + v_o}{c - v_s} \right) $$
 
 ```mermaid
@@ -74,14 +94,22 @@ graph LR
 
 **Solución paso a paso:**
 1. **Intensidad (a):** La intensidad a distancia $r=5\text{ m}$ por conservación de energía en una esfera de área $4\pi r^2$:
+
    $$ I = \frac{\Pi}{4 \pi r^2} = \frac{0.5}{4 \pi (5)^2} = \frac{0.5}{100 \pi} \approx 1.59 \times 10^{-3} \text{ W/m}^2 $$
+
 2. **Nivel de Intensidad (b):**
+
    $$ \beta = 10 \log_{10} \left( \frac{1.59 \times 10^{-3}}{10^{-12}} \right) = 10 \log_{10}(1.59 \times 10^9) \approx 92 \text{ dB} $$
+
 3. **Amplitud de desplazamiento (c):** 
    Sabemos que $ I = \frac{1}{2} \rho_0 c \omega^2 s_m^2 $, donde $\omega = 2\pi f$ y $s_m$ es la amplitud de desplazamiento.
+
    $$ \omega = 2\pi(1000) \approx 6283 \text{ rad/s} $$
+
    $$ s_m = \sqrt{ \frac{2I}{\rho_0 c \omega^2} } = \sqrt{ \frac{2 (1.59 \times 10^{-3})}{(1.2)(343)(6283)^2} } $$
+
    $$ s_m \approx \sqrt{ \frac{3.18 \times 10^{-3}}{1.62 \times 10^{10}} } \approx 1.4 \times 10^{-7} \text{ m} \text{ (0.14 micrómetros)} $$
+
    Esta minúscula amplitud de vibración es suficiente para ser percibida como un sonido muy fuerte.
 
 ## 📝 Guía de Ejercicios Resueltos
@@ -197,9 +225,13 @@ Hacia el 2026, las fronteras entre acústica, biología e informática han cread
 
 La acústica fuertemente no lineal (como ondas de choque direccionales) requiere abandonar las suposiciones de pequeña amplitud. El formalismo se traslada a la modelización asintótica avanzada y a la Ecuación de Westervelt. Sin embargo, para incluir atenuación acústica termoviscosa anómala que no sigue el modelo clásico de Stokes (la disipación no es proporcional a $\omega^2$), como ocurre fuertemente en polímeros complejos y tejidos biológicos humanos, se requiere utilizar el **Cálculo Diferencial Fraccionario**. 
 La propagación de la perturbación de presión se formula incorporando derivadas de Caputo de orden fraccionario $\alpha$ ($1 < \alpha < 2$):
+
 $$ \nabla^2 p - \frac{1}{c_0^2} \frac{\partial^2 p}{\partial t^2} + \tau^\alpha \frac{\partial^\alpha}{\partial t^\alpha} (\nabla^2 p) = -\frac{\beta}{\rho_0 c_0^4} \frac{\partial^2 p^2}{\partial t^2} $$
+
 donde $\beta$ es el parámetro de no linealidad y la derivada temporal fraccionaria está dada por:
+
 $$ \frac{\partial^\alpha p(t)}{\partial t^\alpha} = \frac{1}{\Gamma(m-\alpha)} \int_0^t \frac{p^{(m)}(\tau)}{(t-\tau)^{\alpha - m + 1}} d\tau $$
+
 Este marco integro-diferencial con memoria no local captura correctamente el retardo de relajación y la dispersión polinómica del sonido a lo largo del espectro de frecuencias completo, representando la vanguardia matemática en acústica médica.
 
 ## 📚 Recursos Específicos
@@ -213,13 +245,17 @@ Este marco integro-diferencial con memoria no local captura correctamente el ret
 1. **["Theory of the Acoustic Radiation Force" por L.V. King (1934)](https://royalsocietypublishing.org/doi/10.1098/rspa.1934.0190)**
    - **Importancia Teórica:** Revela los efectos no lineales que la acústica puede ejercer. Mientras la acústica lineal describe ondas donde la presión temporal promedio es cero ($\langle p' \rangle = 0$), King demostró analíticamente que la dispersión de sonido alrededor de objetos produce una fuerza de radiación continua promediada en el tiempo (Acoustic Radiation Force).
    - **Fondo Matemático:** Para calcular esta fuerza, la ecuación de momento de Navier-Stokes debe ser retenida hasta el segundo orden en el desarrollo de la perturbación (retener el término convectivo material $(\vec{v}\cdot\nabla)\vec{v}$). La fuerza estacionaria sobre una pequeña esfera de radio $a \ll \lambda$ en una onda estacionaria $p = p_0 \cos(kx)\cos(\omega t)$ resulta proporcional a la energía acústica promediada espacialmente $E_{ac}$:
+
      $$ F_R = \frac{5\pi}{6} k a^3 E_{ac} \sin(2kx) \left( \frac{\rho_{esf} - \rho_0}{2\rho_{esf} + \rho_0} \right) $$
+
    - **Implicaciones Físicas:** Esta fuerza empuja a los objetos hacia los nodos o antinodos espaciales de presión. Constituye el principio físico rector de las "pinzas acústicas" (Acoustic Tweezers) modernas, permitiendo la levitación acústica paramétrica de células u objetos pesados utilizando metamateriales sonoros sin tocarlos en absoluto.
 
 2. **["Acoustic Black Holes" por V.V. Krylov (2004)](https://asa.scitation.org/doi/10.1121/1.1710502)**
    - **Importancia Teórica:** Traslación asombrosa de la astrofísica a la mecánica elástica. Demuestra cómo una cuña sólida diseñada con un perfil de grosor que sigue una ley de potencia (perfil decreciente hasta cero) actúa funcionalmente igual a un horizonte de sucesos para ondas acústicas de flexión.
    - **Fondo Matemático:** La velocidad de fase de una onda flexional en una placa sólida disminuye al reducirse el grosor local $h(x)$. Si diseñamos $h(x) = \epsilon x^m$ (para $m \ge 2$), la velocidad se precipita a cero conforme la onda avanza hacia la punta ($x \to 0$): $c(x) \propto \sqrt{h(x)} \to 0$. El tiempo de viaje de la onda para alcanzar el borde se calcula como:
+
      $$ t = \int_{x_0}^0 \frac{dx}{c(x)} \propto \int_{x_0}^0 x^{-m/2} dx $$
+
      Si $m \ge 2$, ¡la integral diverge asintóticamente a $\infty$! La onda nunca logra alcanzar el extremo matemáticamente, y en la práctica cualquier remanente amortiguador la disipa por completo, reduciendo el coeficiente de reflexión exactamente a cero.
    - **Implicaciones Físicas:** Permite el diseño de terminaciones amortiguadoras absolutas para vehículos (aviones o autos), extinguiendo el 100% de la energía de vibración acústica que entra a la cuña sin necesidad de materiales de goma pesados, lo que se ha popularizado en diseños estructurales avanzados.
 

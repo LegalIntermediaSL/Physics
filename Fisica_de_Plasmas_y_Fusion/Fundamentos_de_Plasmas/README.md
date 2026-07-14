@@ -21,6 +21,7 @@ $$ \frac{\partial f_s}{\partial t} + \mathbf{v} \cdot \nabla f_s + \frac{q_s}{m_
 Esta ecuación integro-diferencial es altamente no lineal y está acoplada al sistema completo de **Ecuaciones de Maxwell**. Las fuentes de los campos $\mathbf{E}$ y $\mathbf{B}$ son las densidades de carga $\rho$ y corriente $\mathbf{J}$, obtenidas al integrar las funciones de distribución sobre el espacio de velocidades:
 
 $$ \rho(\mathbf{r},t) = \sum_s q_s \int f_s(\mathbf{r},\mathbf{v},t) d^3v $$
+
 $$ \mathbf{J}(\mathbf{r},t) = \sum_s q_s \int \mathbf{v} f_s(\mathbf{r},\mathbf{v},t) d^3v $$
 
 El sistema Maxwell-Vlasov es la descripción fundamental para plasmas no colisionales, capaz de predecir amortiguamiento de Landau, microinestabilidades y efectos de atrape magnético.
@@ -33,12 +34,16 @@ Multiplicando la ecuación de Vlasov secuencialmente por $1, m_s\mathbf{v}, \fra
 
 **Momento Cero (Continuidad):**
 Multiplicando por 1:
+
 $$ \frac{\partial n_s}{\partial t} + \nabla \cdot (n_s \mathbf{u}_s) = 0 $$
+
 donde la densidad es $n_s = \int f_s d^3v$ y la velocidad fluida $\mathbf{u}_s = \frac{1}{n_s} \int \mathbf{v} f_s d^3v$.
 
 **Primer Momento (Momento Lineal):**
 Multiplicando por $m_s\mathbf{v}$:
+
 $$ m_s n_s \left( \frac{\partial \mathbf{u}_s}{\partial t} + (\mathbf{u}_s \cdot \nabla)\mathbf{u}_s \right) = q_s n_s (\mathbf{E} + \mathbf{u}_s \times \mathbf{B}) - \nabla \cdot \mathbb{P}_s + \mathbf{R}_s $$
+
 donde $\mathbb{P}_s = m_s \int (\mathbf{v}-\mathbf{u}_s)(\mathbf{v}-\mathbf{u}_s) f_s d^3v$ es el **tensor de presiones** cinético, y $\mathbf{R}_s$ es la transferencia de momento por colisiones (fricción entre especies).
 
 ### 3. La Paradoja del Cierre y el Amortiguamiento de Landau
@@ -92,23 +97,35 @@ graph TD
    $\frac{\partial}{\partial t} \to -i\omega$, \quad $\nabla \to i\mathbf{k}$.
 
    Reescribiendo la ecuación de momento:
+
    $$ -i\omega m_e \mathbf{u}_1 = -e \mathbf{E}_1 \implies \mathbf{u}_1 = \frac{e}{i\omega m_e} \mathbf{E}_1 = -i \frac{e}{\omega m_e} \mathbf{E}_1 $$
 
 3. **Cálculo de la Corriente de Polarización:**
    La densidad de corriente inducida en el plasma proviene del movimiento de los electrones:
+
    $$ \mathbf{J}_1 = -e n_0 \mathbf{u}_1 $$
+
    Sustituyendo $\mathbf{u}_1$:
+
    $$ \mathbf{J}_1 = -e n_0 \left( -i \frac{e}{\omega m_e} \mathbf{E}_1 \right) = i \frac{n_0 e^2}{\omega m_e} \mathbf{E}_1 $$
+
    Usando la definición de la conductividad compleja de plasma $\mathbf{J}_1 = \sigma \mathbf{E}_1$, tenemos $\sigma = i \frac{\epsilon_0 \omega_{pe}^2}{\omega}$, donde $\omega_{pe}^2 = \frac{n_0 e^2}{\epsilon_0 m_e}$.
 
 4. **Ecuación de Ampère-Maxwell y Dieléctrico Equivalente:**
    La ley de Ampère-Maxwell es:
+
    $$ \nabla \times \mathbf{B}_1 = \mu_0 \mathbf{J}_1 + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}_1}{\partial t} $$
+
    Dividiendo entre $\mu_0$ para igualarla a $\nabla \times \mathbf{H}_1$:
+
    $$ \nabla \times \mathbf{H}_1 = \mathbf{J}_1 - i\omega \epsilon_0 \mathbf{E}_1 $$
+
    Sustituimos la corriente inducida:
+
    $$ \nabla \times \mathbf{H}_1 = \left( i \frac{\epsilon_0 \omega_{pe}^2}{\omega} - i\omega \epsilon_0 \right) \mathbf{E}_1 $$
+
    $$ \nabla \times \mathbf{H}_1 = -i\omega \epsilon_0 \left( 1 - \frac{\omega_{pe}^2}{\omega^2} \right) \mathbf{E}_1 $$
+
    Definiendo formalmente la respuesta del material con una **permitividad dieléctrica equivalente** $\epsilon(\omega)$ tal que $\nabla \times \mathbf{H}_1 = -i\omega \epsilon(\omega) \mathbf{E}_1$, deducimos:
    
    $$ \epsilon(\omega) = \epsilon_0 \left( 1 - \frac{\omega_{pe}^2}{\omega^2} \right) $$
@@ -119,20 +136,32 @@ graph TD
 
 ### Problema 1: Amortiguamiento de Landau desde Vlasov-Poisson
 Calcule el decaimiento de una onda electrostática usando la relación de dispersión dieléctrica linealizada obtenida de la ecuación de Vlasov:
+
 $$ 1 + \frac{\omega_{pe}^2}{k} \int_{-\infty}^{\infty} \frac{\partial f_0 / \partial v}{\omega - kv} dv = 0 $$
+
 Asuma que $f_0(v)$ es una distribución maxwelliana y $\omega / k \gg v_{th}$ (ondas rápidas).
 
 **Solución paso a paso:**
 La integral tiene un polo en $v = \omega/k$. Utilizando el contorno de Landau en el plano complejo, la integral de Cauchy se separa en el valor principal de Cauchy (VP) y un residuo:
+
 $$ \int_C \frac{\partial f_0 / \partial v}{kv - \omega} dv = \text{VP} \int \frac{\partial f_0 / \partial v}{kv - \omega} dv + i\pi \left. \frac{\partial f_0}{\partial v} \right|_{v=\omega/k} \frac{1}{|k|} $$
+
 Para la parte real (oscilatoria), asumimos $\omega = \omega_r + i\gamma$ con $|\gamma| \ll \omega_r$. El valor principal para la maxwelliana expandido en serie asintótica para altas velocidades de fase da:
+
 $$ 1 - \frac{\omega_{pe}^2}{\omega_r^2} \left( 1 + \frac{3k^2 v_{th}^2}{\omega_r^2} \right) = 0 \implies \omega_r^2 \approx \omega_{pe}^2 + 3k^2 v_{th}^2 $$
+
 Para la parte imaginaria $\gamma$, que representa el decaimiento o amortiguamiento de la onda, igualamos las contribuciones imaginarias de la función dieléctrica $\epsilon(\omega, k) = \epsilon_r + i\epsilon_i = 0$:
+
 $$ \gamma \approx -\frac{\epsilon_i(\omega_r, k)}{\partial \epsilon_r / \partial \omega_r} $$
+
 Calculando el residuo de la maxwelliana $f_0(v) = \frac{1}{\sqrt{2\pi v_{th}^2}} e^{-v^2/2v_{th}^2}$:
+
 $$ \epsilon_i = -\pi \frac{\omega_{pe}^2}{k^2} \left. \frac{\partial f_0}{\partial v} \right|_{\omega_r/k} = \sqrt{\frac{\pi}{2}} \frac{\omega_{pe}^2}{k^2} \frac{\omega_r}{k v_{th}^3} e^{-\omega_r^2/2k^2 v_{th}^2} $$
+
 Sustituyendo el jacobiano $\partial \epsilon_r / \partial \omega_r \approx 2/\omega_r$:
+
 $$ \gamma = -\omega_r \sqrt{\frac{\pi}{8}} \frac{1}{(k\lambda_D)^3} \exp\left( -\frac{1}{2(k\lambda_D)^2} - \frac{3}{2} \right) $$
+
 Esto demuestra matemáticamente la transferencia de energía de la onda a las partículas resonantes que viajan ligeramente más despacio que la velocidad de fase.
 
 ### Problema 2: Inestabilidad de Dos Haces (Two-Stream Instability)
@@ -140,13 +169,21 @@ Considere un plasma de electrones fríos en un fondo iónico neutralizador. Supo
 
 **Solución paso a paso:**
 Partimos de la función dieléctrica para $N$ fluidos fríos no relativistas:
+
 $$ \epsilon(\omega, k) = 1 - \sum_j \frac{\omega_{pj}^2}{(\omega - k v_{0j})^2} = 0 $$
+
 Para nuestro caso, con dos haces electrónicos simétricos:
+
 $$ 1 = \frac{\omega_{pe}^2/2}{(\omega - kv_0)^2} + \frac{\omega_{pe}^2/2}{(\omega + kv_0)^2} $$
+
 Multiplicando por los denominadores:
+
 $$ (\omega^2 - k^2 v_0^2)^2 = \frac{\omega_{pe}^2}{2} \left( (\omega + kv_0)^2 + (\omega - kv_0)^2 \right) = \omega_{pe}^2 (\omega^2 + k^2 v_0^2) $$
+
 Esta es una ecuación bicuadrática para $\omega$. Resolviendo para $\omega^2$:
+
 $$ \omega^2 = k^2 v_0^2 + \frac{\omega_{pe}^2}{2} \pm \sqrt{ \left( k^2 v_0^2 + \frac{\omega_{pe}^2}{2} \right)^2 - k^2 v_0^2 (k^2 v_0^2 - \omega_{pe}^2) } $$
+
 La inestabilidad ocurre cuando $\omega^2 < 0$, lo que implica que $\omega$ tiene una componente imaginaria pura $\omega = i\gamma$, creciendo exponencialmente en el tiempo.
 Esto requiere $k^2 v_0^2 < \omega_{pe}^2$.
 La tasa de crecimiento máxima se encuentra optimizando $\gamma(k)$. Tomando derivadas, el máximo ocurre en $k \approx \frac{\sqrt{3}}{2} \frac{\omega_{pe}}{v_0}$, rindiendo una tasa de crecimiento de la inestabilidad $\gamma_{max} = \frac{\omega_{pe}}{2}$.
@@ -157,16 +194,25 @@ Determine las frecuencias de corte para las ondas electromagnéticas polarizadas
 **Solución paso a paso:**
 Para propagación paralela $\mathbf{k} \parallel \mathbf{B}_0$, la relación de dispersión tensorial del plasma magnetizado se desacopla en dos modos de polarización circular:
 El índice de refracción $N^2 = \left( \frac{kc}{\omega} \right)^2$ está dado por:
+
 $$ N_R^2 = 1 - \frac{\omega_{pe}^2}{\omega (\omega - \Omega_{ce})} \quad \text{(Modo Right / Extraordinario)} $$
+
 $$ N_L^2 = 1 - \frac{\omega_{pe}^2}{\omega (\omega + \Omega_{ce})} \quad \text{(Modo Left / Ordinario)} $$
+
 donde $\Omega_{ce} = e B_0 / m_e$ es la frecuencia ciclotrónica electrónica.
 Los cortes ocurren cuando la onda se refleja, es decir $N^2 = 0$ (o $k=0$).
 Para el modo R ($N_R^2 = 0$):
+
 $$ \omega^2 - \omega \Omega_{ce} - \omega_{pe}^2 = 0 $$
+
 $$ \omega_R = \frac{\Omega_{ce} + \sqrt{\Omega_{ce}^2 + 4\omega_{pe}^2}}{2} $$
+
 Para el modo L ($N_L^2 = 0$):
+
 $$ \omega^2 + \omega \Omega_{ce} - \omega_{pe}^2 = 0 $$
+
 $$ \omega_L = \frac{-\Omega_{ce} + \sqrt{\Omega_{ce}^2 + 4\omega_{pe}^2}}{2} $$
+
 Las ondas con frecuencias menores a estos umbrales son evanescentes, demostrando que el campo magnético levanta la degeneración del plasma isotrópico y causa birrefringencia en medios interestelares.
 
 ## 💻 Simulaciones Computacionales
@@ -225,9 +271,13 @@ El sistema de Vlasov-Maxwell no es solo un par de ecuaciones diferenciales, sino
 
 **Estructura Hamiltoniana y Paréntesis de Lie-Poisson:**
 El sistema Vlasov-Poisson (y Vlasov-Maxwell) puede formularse como un sistema dinámico Hamiltoniano de campo. El estado del plasma $f(\mathbf{x}, \mathbf{p}, t)$ evoluciona según la ecuación de Liouville generalizada:
+
 $$ \frac{\partial f}{\partial t} = \{f, H\} $$
+
 Donde el funcional Hamiltoniano $H[f]$ es la energía total y el corchete de Poisson no es el canónico, sino un paréntesis de Lie-Poisson definido sobre el dual de un álgebra de Lie:
+
 $$ \{F, G\} = \int d^3x \, d^3p \, f \left[ \frac{\delta F}{\delta f} , \frac{\delta G}{\delta f} \right]_c $$
+
 con $[\cdot, \cdot]_c$ siendo el corchete de Poisson canónico estándar. Esta estructura geométrica implica la existencia de una infinidad de invariantes (los Casimires $C = \int c(f) dx dp$) que constriñen drásticamente la relajación y el equilibrio del plasma (limitando los estados estacionarios según el teorema de BGK).
 
 ## 📚 Recursos Específicos
@@ -248,9 +298,13 @@ con $[\cdot, \cdot]_c$ siendo el corchete de Poisson canónico estándar. Esta e
    
    **Contexto Matemático:** 
    La derivación resolvió la singularidad de resonancia $v = \omega/k$ de la integral dispersiva en el formalismo de Vlasov-Poisson:
+
    $$ 1 + \frac{\omega_{pe}^2}{k} \int_C \frac{\partial f_0 / \partial v}{\omega - kv} dv = 0 $$
+
    Landau propuso deformar el contorno de integración $C$ en el plano complejo de velocidades, aplicando el Teorema de los Residuos de Cauchy. Extrajo un componente imaginario en la frecuencia $ \omega = \omega_r + i\gamma $, demostrando un decaimiento de fase (fase mixing):
+
    $$ \gamma \approx -\omega_{pe} \sqrt{\frac{\pi}{8}} \frac{1}{(k \lambda_D)^3} \exp\left( -\frac{1}{2(k \lambda_D)^2} - \frac{3}{2} \right) $$
+
    Esta proeza reveló matemáticamente la transferencia microscópica de energía colectiva a partículas cuasi-resonantes, sentando las bases modernas de todo el calentamiento por microondas y las inestabilidades de haces.
 
 2. **"Microscopic Equations for a Plasma"** - *O. Penrose (1960), Physics of Fluids 3, 258*  
@@ -261,7 +315,9 @@ con $[\cdot, \cdot]_c$ siendo el corchete de Poisson canónico estándar. Esta e
    
    **Contexto Matemático:** 
    El problema de las inestabilidades micro-cinéticas (como el 'two-stream instability') requerían un tratamiento sistemático más allá de distribuciones maxwellianas térmicas simples. Penrose aplicó métodos de variables complejas al mapeo conforme de la función de dispersión dieléctrica en el plano complejo. Estableció que, dado un mínimo local en la función de distribución de velocidades $f(v)$ (es decir, distribuciones tipo joroba o 'bump-on-tail') en una velocidad $v = v_m$ (donde $f'(v_m)=0$ y $f''(v_m)>0$), el plasma será inestable a perturbaciones electrostáticas si y solo si la integral del valor principal de Cauchy satisface la condición:
+
    $$ \int_{-\infty}^{\infty} \frac{f(v) - f(v_m)}{(v - v_m)^2} dv > 0 $$
+
    Este teorema matemáticamente elegante se volvió un hito fundamental. Indica de manera precisa que no basta con tener dos jorobas de haces interactuando para producir una inestabilidad; la "profundidad" relativa de las corrientes debe sobrepasar un umbral estadístico estricto, guiando la comprensión de inestabilidades turbulentas en aceleradores y reactores.
 
 ### 📖 Referencias Útiles y Bibliografía
