@@ -1,6 +1,6 @@
 # 🔬 Laboratorio de Simulaciones Jupyter
 
-Este directorio contiene un compendio élite de **159 Cuadernos Jupyter (`.ipynb`)** interactivos, de calidad extrema y únicos en su clase. Siguiendo una filosofía de **Calidad sobre Cantidad**, hemos depurado el repositorio de simulaciones genéricas para enfocarnos exclusivamente en modelos matemáticos y físicos altamente curados, con descripciones precisas y código avanzado.
+Este directorio contiene un compendio élite de **169 Cuadernos Jupyter (`.ipynb`)** interactivos, de calidad extrema y únicos en su clase. Siguiendo una filosofía de **Calidad sobre Cantidad**, hemos depurado el repositorio de simulaciones genéricas para enfocarnos exclusivamente en modelos matemáticos y físicos altamente curados, con descripciones precisas y código avanzado.
 
 Cada cuaderno ha sido programado con `numpy`, `scipy` y `matplotlib` para asegurar la máxima eficiencia y visualización.
 
