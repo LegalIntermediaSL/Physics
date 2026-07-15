@@ -1,29 +1,16 @@
-# Lattice QCD: La Cromodinámica en el Retículo
+# CromoDinámica Cuántica en el Retículo (Lattice QCD)
 
-La Teoría de Perturbaciones, expresada mediante los amigables Diagramas de Feynman, asume que la constante de acoplamiento es pequeña (como $\alpha \approx 1/137$ en QED). Pero en la Cromodinámica Cuántica (QCD), la fuerza fuerte entre quarks *aumenta* al separarlos. A distancias del tamaño de un protón, el acoplamiento es mayor a 1, y la serie matemática de perturbaciones explota hacia el infinito. Feynman ya no nos sirve aquí.
+La Cromodinámica Cuántica (QCD) es la teoría gauge que describe la fuerza fuerte entre los Quarks mediada por los Gluones ($SU(3)$). Presenta dos propiedades asintóticas límite extremas y opuestas. A altísimas energías goza de **Libertad Asintótica**: los quarks apenas interactúan. Pero a bajas energías, el acoplamiento diverge, invalidando cualquier cálculo perturbativo estándar. 
 
-Para resolver este "régimen de acoplamiento fuerte", Kenneth Wilson inventó una de las técnicas más brutales y hermosas de la física moderna: **Lattice QCD**.
+## 1. Acción de Wilson y Plaquetas
+Para poder realizar cálculos físicos en el régimen no-perturbativo de bajas energías, discretizamos el espaciotiempo continuo euclidiano en una cuadrícula discreta o **Lattice (Retículo)**.
+En este marco analítico, los campos continuos de gluones $A_\mu$ se reemplazan por **Enlaces (Links) $U_\mu(x)$**, matrices discretas situadas en las aristas del retículo conectando puntos vecinos.
+La Acción gauge de Yang-Mills se evalúa multiplicando las matrices de estos enlaces conformando cuadrados geométricos elementales cerrados, denominados **Plaquetas ($W_{\mu\nu}$)**. Esta construcción geométrica garantiza la invarianza gauge de forma exacta sin necesidad de fijar un gauge (gauge-fixing).
 
-## 1. Discretización del Espacio-Tiempo (El Retículo)
-En lugar de un espacio-tiempo continuo infinito, Wilson lo reemplazó por un **Retículo Hipercúbico 4D** (una red de puntos espaciados por una distancia $a$). 
-Las matemáticas se transforman:
-*   **Quarks (Fermiones)**: Viven *exclusivamente en los nodos* (vértices) de la red.
-*   **Gluones (Bosones Gauge)**: Viven en los *enlaces (links)* que conectan los nodos. No se describen como campos vectoriales normales, sino como **Matrices Unitarias de SU(3)** que actúan como "transportes paralelos" de la carga de color al moverse de un nodo al adyacente.
-
-## 2. La Acción de Wilson y la Integración de Monte Carlo
-Al discretizar, la Integral de Camino (Path Integral) de Feynman, que tiene infinitos grados de libertad, se reduce a una integral múltiple gigantesca pero *finita*, de la forma:
-
-$$
-Z = \int \prod_{x,\mu} dU_\mu(x) \exp\left( - S_W[U] \right)
-$$
-
-Donde $S_W$ es la Acción de Wilson en tiempo imaginario (Euclídeo), calculada a partir de las trazas de las matrices SU(3) multiplicadas alrededor de bucles cerrados diminutos de 1x1 conocidos como *plaquetas*.
-
-## 3. Confinamiento Resuelto en Supercomputadoras
-Esta integral es imposible de resolver analíticamente. Pero es perfecta para una computadora moderna. Mediante algoritmos de **Monte Carlo**, supercomputadoras enteras tiran los "dados cósmicos" millones de veces para muestrear los campos de gluones más probables.
-
-Los resultados de Lattice QCD demostraron abrumadoramente el **Confinamiento del Color**: Si intentas separar un quark y un antiquark en la simulación, el campo de gluones entre ellos se exprime formando un "tubo de flujo" monodimensional de energía densa. La fuerza se vuelve constante (aprox 10,000 Newtons), y la energía requerida para romper el tubo es suficiente para crear un nuevo par quark-antiquark del vacío.
-Por primera vez en la historia, derivamos analíticamente la masa y estructura real del protón desde puros principios cuánticos ab initio.
+## 2. El Confinamiento de Color
+La técnica de Lattice QCD ha permitido demostrar, mediante simulaciones computacionales formidables, el fenómeno del **Confinamiento Cuántico**.
+Al tratar de separar experimental y analíticamente dos quarks, el flujo del campo gluónico no se disipa en el espacio como ocurre con el campo eléctrico clásico. En cambio, por la auto-interacción no abeliana de los gluones, se condensa formando un "tubo de flujo" tenso de dimensiones casi 1D.
+La energía potencial del sistema crece linealmente con la distancia $V(r) \sim \sigma r$. Antes de poder separar los quarks y observar un quark aislado, el tubo acumula energía suficiente para romperse rompiendo el vacío topológico, induciendo la creación de un nuevo par quark-antiquark. Consecuentemente, el color gauge permanece eternamente confinado.
 
 ## 📺 Clases Magistrales en YouTube
 

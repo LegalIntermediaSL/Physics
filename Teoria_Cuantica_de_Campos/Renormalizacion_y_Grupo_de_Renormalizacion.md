@@ -1,32 +1,19 @@
-# Domando el Infinito: Renormalización
+# Renormalización y el Grupo de Renormalización (RG)
 
-En los años 1930, la incipiente QFT se encontró con un desastre matemático. Cuando los físicos usaban diagramas de Feynman de "orden superior" (diagramas que contenían lazos (loops) donde partículas virtuales emergían de la nada e interactuaban consigo mismas), las integrales sobre los momentos de estas partículas virtuales **divergían hacia el infinito ($\infty$)**.
+Al evaluar diagramas de Feynman que contienen bucles (loops) internos, como la auto-energía del electrón o la polarización del vacío, el momento del bucle virtual no está restringido cinemáticamente. La integral sobre todos los momentos posibles estalla frecuentemente hacia el infinito. Esta divergencia a altas energías se denomina **Divergencia Ultravioleta (UV)**.
 
-$$
-\int_0^\infty \frac{d^4k}{k^2 + m^2} \to \infty
-$$
+## 1. Regularización Dimensional y Esquema MS-bar
+Para aislar matemáticamente y entender estos infinitos temporales, 't Hooft y Veltman introdujeron la **Regularización Dimensional**.
+Consiste en extender analíticamente la dimensión del espaciotiempo desde 4 hasta una dimensión abstracta $d = 4 - \epsilon$. 
+Las divergencias UV se manifiestan algebraicamente como polos matemáticos de la forma $1/\epsilon$.
+Mediante el proceso de renormalización sistemática, estos polos infinitos se absorben redefiniendo (escalando) los parámetros fundamentales de la teoría: la masa "desnuda" $m_0$ se renorma a $m$, la carga desnuda $e_0$ a $e$, en el popular esquema de substracción mínima modificada ($\overline{MS}$).
 
-Puesto que la masa y la carga del electrón no son infinitas en la vida real, la teoría parecía estar completamente rota.
-
-## 1. El Proceso de Renormalización
-Feynman, Schwinger y Tomonaga idearon una solución (Renormalización). Asumieron que los parámetros originales que aparecen en el Lagrangiano de la ecuación (la "masa desnuda" $m_0$ y "carga desnuda" $e_0$) no son los que medimos en el laboratorio.
-
-Un electrón real viaja envuelto en una nube de pares electrón-positrón virtuales continuos (polarización del vacío) que apantallan su carga. Los infinitos de las integrales de lazo son físicamente "cancelados" al ser absorbidos en la redefinición matemática de estos parámetros. Por tanto, restamos infinito a infinito, y nos queda un número finito y físicamente medible.
-
-## 2. El Grupo de Renormalización (K. Wilson)
-Kenneth Wilson en los años 70 dio el salto filosófico real. Comprendió que la renormalización no era un truco sucio matemático, sino una realidad profunda de la escala.
-
-En física estadística y QFT, la física que observas *depende de la escala de energía a la que sondes el sistema*. El Grupo de Renormalización (RG) describe cómo "fluyen" las constantes de la naturaleza cuando cambias el microscopio con el que las miras.
-
-## 3. Las Funciones Beta ($\beta$)
-La función Beta describe cómo la constante de acoplamiento $g$ (la "fuerza" de la interacción) cambia respecto a la escala de energía $\mu$:
-
-$$
-\beta(g) = \frac{\partial g}{\partial \ln \mu}
-$$
-
-- **QED (Electromagnetismo):** La función beta es positiva. A mayores energías (menores distancias, atravesando la nube de polarización), la carga eléctrica real del electrón *aumenta*.
-- **QCD (Fuerza Fuerte):** La función beta es *negativa*. A mayores energías (o quarks muy juntos), la interacción se vuelve increíblemente débil, alcanzando la **Libertad Asintótica** (Nobel 2004 para Gross, Politzer y Wilczek). 
+## 2. La Ecuación de Callan-Symanzik y Flujo de RG
+La física real observable de las interacciones cuánticas no puede depender de la escala arbitraria de renormalización $\mu$ introducida durante la regularización dimensional. 
+Esta invarianza forzada se condensa en la **Ecuación de Callan-Symanzik**, la cual rige cómo cambian los parámetros físicos de la teoría.
+La consecuencia directa es el **Grupo de Renormalización (RG)**, que revela que las constantes de "acoplamiento" no son realmente constantes. "Fluyen" o evolucionan en función de la escala de energía a la que se sondea el sistema.
+- En QED, la carga eléctrica efectiva *aumenta* a muy altas energías (distancias cortas).
+- En QCD, la carga de color efectiva *disminuye* drásticamente a muy altas energías.
 
 ## 📺 Clases Magistrales en YouTube
 

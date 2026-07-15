@@ -1,33 +1,33 @@
-# La Ecuación de Dirac y el Descubrimiento de la Antimateria
+# Ecuación de Dirac, Espinores y Antimateria
 
-En 1928, Paul Dirac intentó unificar la mecánica cuántica con la relatividad especial formulando una ecuación para el electrón que fuera lineal tanto en el tiempo como en el espacio, algo que la ecuación de Klein-Gordon (cuadrática) fallaba en hacer con probabilidades positivas.
+Paul Dirac buscaba formular una ecuación de onda relativista que fuera lineal tanto en derivadas espaciales como temporales, garantizando así densidades de probabilidad positivas que la ecuación de Klein-Gordon inicialmente fallaba en proveer.
 
-## 1. La Ecuación de Dirac
-Para que la ecuación fuera lineal e invariante de Lorentz, Dirac tuvo que introducir coeficientes matemáticos que no podían ser números ordinarios, sino que debían ser **matrices $4 \times 4$**. La famosa ecuación de Dirac es:
+## 1. Álgebra de Clifford y la Ecuación de Dirac
+Para linealizar el operador diferencial relativista de d'Alembert $\partial^2 + m^2$, Dirac postuló la existencia de cuatro matrices anticomutantes $\gamma^\mu$, conocidas como las **Matrices de Dirac**.
+Estas matrices satisfacen el Álgebra de Clifford:
 
 $$
-(i \gamma^\mu \partial_\mu - m) \psi = 0
+\{ \gamma^\mu, \gamma^\nu \} = \gamma^\mu \gamma^\nu + \gamma^\nu \gamma^\mu = 2\eta^{\mu\nu} \mathbb{I}_{4\times4}
 $$
 
-Donde:
-*   $\gamma^\mu$ son las matrices de Dirac.
-*   $\psi$ es un objeto matemático de 4 componentes llamado **espinor de Dirac**.
+La Ecuación de Dirac resultante se expresa elegantemente como:
 
-## 2. Espinores y Espín Intrínseco
-El hecho de que la función de onda $\psi$ sea un vector columna de 4 componentes reveló instantáneamente por qué el electrón tiene espín $1/2$ intrínseco. El espín no era un añadido *ad hoc* a la teoría, sino una consecuencia directa y obligatoria de unir la geometría del espacio-tiempo de Minkowski con la cuántica.
+$$
+(i\gamma^\mu \partial_\mu - m) \psi = 0
+$$
 
-Las 4 componentes del espinor describen:
-1.  Espín "arriba" (Electrón)
-2.  Espín "abajo" (Electrón)
-3.  Espín "arriba" (Energía Negativa / Positrón)
-4.  Espín "abajo" (Energía Negativa / Positrón)
+La función de onda $\psi(x)$ no es un campo escalar ni un vector espacial, sino un **Espinor de Dirac** de cuatro componentes complejas.
 
-## 3. El Mar de Dirac y la Antimateria
-La solución matemática dictaba la existencia de estados de energía negativa. Dirac propuso inicialmente que el universo es un "Mar de Dirac" donde todos los estados de energía negativa están llenos (por el Principio de Exclusión de Pauli).
+## 2. Anticonmutación y el Principio de Exclusión
+Al cuantizar el campo espinorial de Dirac para electrones, nos topamos con un problema fundamental: el hamiltoniano carece de cota inferior si usamos conmutadores bosónicos estándar (produciendo el colapso del vacío). 
+Para resolverlo y asegurar una energía positiva definida, debemos cuantizar el campo fermiónico utilizando **Anticonmutadores**:
 
-Si un electrón en este mar absorbe suficiente energía (un fotón gamma $> 1.022$ MeV), saltaría a un estado de energía positiva. Esto deja atrás un "agujero" en el mar de energía negativa. Ese agujero se comporta matemáticamente exactamente como una partícula de igual masa pero carga opuesta: el **positrón** (antimateria).
+$$
+\{ \psi_\alpha(\vec{x}), \psi^\dagger_\beta(\vec{y}) \} = \delta^{(3)}(\vec{x} - \vec{y}) \delta_{\alpha\beta}
+$$
 
-En QFT moderna, abandonamos el mar de Dirac. Simplemente se postula que el operador de creación de una partícula de energía negativa se reinterpreta matemáticamente como un operador de aniquilación de una antipartícula de energía positiva (Regla de Feynman-Stueckelberg).
+Esta sencilla imposición algebraica es el origen riguroso del **Principio de Exclusión de Pauli**.
+La expansión en modos del espinor cuantizado requiere dos conjuntos de soluciones de polarización: $u^s(p)$ para partículas de materia (electrones) y $v^s(p)$ para estados de energía negativa, que reinterpretamos como las antipartículas (positrones).
 
 ## 📺 Clases Magistrales en YouTube
 
