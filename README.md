@@ -22,6 +22,7 @@ El repositorio está dividido en las siguientes áreas principales. Selecciona u
 - 📐 **[Métodos Matemáticos](./Metodos_Matematicos)**: Geometría diferencial, cálculo tensorial, teoría de grupos y funciones de Green.
 - 🧮 **[Teoría Cuántica de Campos](./Teoria_Cuantica_de_Campos)**: La electrodinámica cuántica (QED), diagramas de Feynman, renormalización y mecanismo de Higgs.
 - 🧶 **[Gravedad Cuántica y Cuerdas](./Gravedad_Cuantica_y_Cuerdas)**: Supercuerdas, anomalías conformes, variedades de Calabi-Yau y Gravedad Cuántica de Lazos (LQG).
+- 🌌 **[Física Más Allá del Modelo Estándar (BSM)](./Fisica_Mas_Alla_del_Modelo_Estandar)**: Supersimetría (SUSY), Teorías de Gran Unificación (GUT), Materia Oscura y Energía Oscura.
 - 📚 **[Recursos Útiles y Matemáticas](./Recursos_Generales)**: Computación científica, trabajo experimental, simuladores y literatura de apoyo.
 
 ## Cómo usar este repositorio
