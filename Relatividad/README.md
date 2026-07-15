@@ -8,6 +8,7 @@ Explora cada una de las siguientes subcarpetas para un desarrollo profundo:
 
 - 🚀 **[Relatividad Especial](./Relatividad_Especial)**: Espacio-tiempo plano, dilatación del tiempo, contracción de longitudes y $E=mc^2$.
 - 🌌 **[Relatividad General](./Relatividad_General)**: Curvatura del espacio-tiempo, gravedad, agujeros negros y ondas gravitacionales.
+- 🕳️ **[Relatividad General Avanzada](./Relatividad_General_Avanzada)**: Soluciones exactas extremas, métrica de Kerr-Newman, topología de agujeros de gusano y termodinámica de agujeros negros.
 
 ---
 

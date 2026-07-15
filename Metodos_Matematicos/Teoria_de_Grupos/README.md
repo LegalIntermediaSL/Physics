@@ -4,6 +4,9 @@ Bienvenido a la sección de **Teoria de Grupos**. Aquí encontrarás tratados te
 
 ## Índice de Contenidos
 
-- 📄 **[Grupos de Lie y Simetrías Gauge](./Grupos_de_Lie_y_Fisica_Subatomica.md)**
-- 📄 **[Grupos de Lorentz y Poincaré: La Simetría del Espacio-Tiempo](./Grupos_de_Lorentz_y_Poincare.md)**
-- 📄 **[Teoría de Representaciones de Grupos y el Lema de Schur](./Representaciones_de_Grupos_y_Schur.md)**
+- 📄 **[Fundamentos de la Teoría de Grupos (Discretos)](./1_Fundamentos_y_Grupos_Discretos.md)**
+- 📄 **[Grupos de Lie y Álgebras de Lie (El Núcleo Continuo)](./2_Grupos_y_Algebras_de_Lie.md)**
+- 📄 **[Teoría de Representaciones (El Lema de Schur)](./3_Teoria_de_Representaciones_y_Schur.md)**
+- 📄 **[La Clasificación de Cartan-Dynkin (Raíces y Pesos)](./4_Clasificacion_de_Cartan_Dynkin.md)**
+- 📄 **[Los Grupos de Lorentz y de Poincaré](./5_Grupos_Lorentz_y_Poincare.md)**
+- 📄 **[Grupos Unitarios $SU(N)$ y las Fuerzas Gauge](./6_Grupos_Unitarios_SUN_y_Gauge.md)**
