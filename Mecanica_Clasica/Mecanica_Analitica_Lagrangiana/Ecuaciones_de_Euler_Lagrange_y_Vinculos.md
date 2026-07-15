@@ -1,32 +1,39 @@
-# Ecuaciones de Euler-Lagrange y Multiplicadores
+# Ecuaciones de Euler-Lagrange y Sistemas Ligados
 
-Aplicando el Cálculo de Variaciones al Principio de Hamilton ($\delta \mathcal{S} = 0$) e integrando por partes, llegamos a las ecuaciones maestras de la dinámica clásica.
+El requisito de que el funcional de acción sea estacionario genera directamente las ecuaciones diferenciales del movimiento.
 
 ## 1. Las Ecuaciones de Euler-Lagrange
-Para cada coordenada generalizada $q_i$ y su velocidad generalizada $\dot{q}_i$, la trayectoria real del universo obedece ciegamente:
+Como corolario del Cálculo de Variaciones, para cada coordenada generalizada $q_i$, se satisface la ecuación diferencial de segundo orden:
 
 $$
 \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) - \frac{\partial L}{\partial q_i} = 0
 $$
 
-La magia monumental de estas ecuaciones es que son **invariantes de forma**. No importa si usas coordenadas esféricas, cilíndricas, ángulos de péndulos, o coordenadas en una variedad curva tetradimensional: la ecuación luce exactamente igual, algo que NO es cierto para $F=ma$, donde en coordenadas esféricas aparecen horribles términos de fuerzas ficticias (Coriolis, centrífugas) que en Lagrange salen automáticamente y gratis.
-
-## 2. Momento Conjugado y Fuerzas Generalizadas
-El término $p_i = \frac{\partial L}{\partial \dot{q}_i}$ se denomina **Momento Conjugado** (o canónico). Si $q$ es una posición lineal $x$, el momento conjugado es la cantidad de movimiento $mv$. Pero si $q$ es un ángulo $\theta$, su momento conjugado es el Momento Angular ($L = I\omega$).
-El término $F_i = \frac{\partial L}{\partial q_i}$ se denomina **Fuerza Generalizada**.
-
-Por tanto, Euler-Lagrange simplemente dicta: $\frac{d p_i}{dt} = F_i$. (El cambio del momento canónico es la fuerza generalizada).
-
-## 3. Vínculos Holónomos y Multiplicadores de Lagrange
-En la vida real, los cuerpos no se mueven libremente. Un tren debe ir por la vía; un péndulo no puede estirar su hilo. Estos son **vínculos holónomos**, representados por ecuaciones algebraicas $f_k(q_1, ... q_n, t) = 0$.
-
-Para incluir vínculos sin necesidad de rompernos la cabeza calculando las fuerzas de tensión a mano, introducimos los **Multiplicadores de Lagrange** ($\lambda_k$):
+Definimos formalmente el **Momento Generalizado** o Momento Canónico Conjugado $p_i$ y la Fuerza Generalizada $F_i$:
 
 $$
-\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) - \frac{\partial L}{\partial q_i} = \sum_{k} \lambda_k \frac{\partial f_k}{\partial q_i}
+p_i = \frac{\partial L}{\partial \dot{q}_i}, \quad F_i = \frac{\partial L}{\partial q_i}
 $$
 
-El término de la derecha escupe directamente las "fuerzas de restricción" (ej. la tensión de la cuerda o la fuerza normal del suelo) necesarias para mantener a la partícula atada al vínculo geométrico, ¡y todo sin dibujar ni un solo diagrama vectorial de cuerpo libre!
+La ecuación de movimiento se reduce elegantemente a $\dot{p}_i = F_i$. Si el Lagrangiano no depende explícitamente de una coordenada concreta $q_k$ (coordenada cíclica), entonces $\frac{\partial L}{\partial q_k} = 0$, lo que implica que su momento conjugado correspondiente $p_k$ es una constante exacta del movimiento.
+
+## 2. Vínculos Holonómicos y Multiplicadores de Lagrange
+En sistemas reales, las partículas a menudo están restringidas a moverse sobre superficies o curvas. Un vínculo es **Holonómico** si puede escribirse algebraicamente en función de las coordenadas como $f(q_1, \dots, q_n, t) = 0$.
+Para derivar las ecuaciones de movimiento con vínculos sin tener que despejar las coordenadas, utilizamos el método de los **Multiplicadores de Lagrange ($\lambda$)**.
+
+Se modifica el Principio de Acción añadiendo el vínculo al Lagrangiano:
+
+$$
+L' = L + \lambda f(q, t)
+$$
+
+El requerimiento variacional $\delta \int L' dt = 0$ rinde el nuevo conjunto de ecuaciones acopladas:
+
+$$
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) - \frac{\partial L}{\partial q_i} = \lambda \frac{\partial f}{\partial q_i}
+$$
+
+El término $\lambda \frac{\partial f}{\partial q_i}$ es la componente $i$-ésima de la **Fuerza de Ligadura**.
 
 ## 📺 Clases Magistrales en YouTube
 

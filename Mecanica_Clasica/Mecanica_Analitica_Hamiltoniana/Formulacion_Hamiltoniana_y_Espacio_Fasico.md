@@ -1,35 +1,39 @@
 # Formulación Hamiltoniana y el Espacio Fásico
 
-El Lagrangiano $L(q, \dot{q})$ trata coordenadas espaciales ($q$) y velocidades ($\dot{q}$) como las variables fundamentales del sistema. Es un espacio de "configuración".
-En 1833, Hamilton se dio cuenta de que si cambiamos matemáticamente las velocidades por los **momentos canónicos** ($p$), la mecánica se eleva a un plano geométrico completamente nuevo y simétrico.
+Mientras que la mecánica lagrangiana opera en el "Espacio de Configuración" coordenado por $(q_i, \dot{q}_i)$, la formulación hamiltoniana abandona las velocidades a favor de los momentos, operando en el **Espacio Fásico** de $2N$ dimensiones coordinado estrictamente por posiciones y momentos conjugados $(q_i, p_i)$ tratados como variables independientes.
 
-## 1. La Transformada de Legendre y el Hamiltoniano
-Usamos una Transformada de Legendre para reemplazar $\dot{q}_i$ por $p_i = \frac{\partial L}{\partial \dot{q}_i}$. La nueva función generada es el **Hamiltoniano** $\mathcal{H}(q, p, t)$:
-
-$$
-\mathcal{H}(q, p, t) = \sum_i p_i \dot{q}_i - L(q, \dot{q}, t)
-$$
-
-En sistemas conservativos normales, ¡el Hamiltoniano es numéricamente igual a la Energía Total del sistema! ($\mathcal{H} = T + V$).
-
-## 2. Ecuaciones Canónicas de Hamilton
-Al aplicar el diferencial total, las $N$ ecuaciones de Euler-Lagrange de segundo orden se escinden milagrosamente en **$2N$ ecuaciones diferenciales ordinarias acopladas de *primer orden***:
+## 1. La Transformada de Legendre
+Para cambiar la dependencia funcional del Lagrangiano $L(q, \dot{q}, t)$ a una nueva función que dependa de $p$, ejecutamos una Transformada de Legendre. 
+Definimos la función **Hamiltoniana ($H$)**:
 
 $$
-\dot{q}_i = \frac{\partial \mathcal{H}}{\partial p_i}
+H(q, p, t) = \sum_i p_i \dot{q}_i - L(q, \dot{q}, t)
+$$
+
+Tomando el diferencial total de esta definición matemática:
+
+$$
+dH = \sum_i (\dot{q}_i dp_i + p_i d\dot{q}_i) - dL
+$$
+
+Sabiendo que $dL = \sum_i \left(\frac{\partial L}{\partial q_i} dq_i + \frac{\partial L}{\partial \dot{q}_i} d\dot{q}_i\right) + \frac{\partial L}{\partial t} dt$ y usando las definiciones $p_i = \frac{\partial L}{\partial \dot{q}_i}$ y $\dot{p}_i = \frac{\partial L}{\partial q_i}$, obtenemos:
+
+$$
+dH = \sum_i (\dot{q}_i dp_i - \dot{p}_i dq_i) - \frac{\partial L}{\partial t} dt
+$$
+
+## 2. Las Ecuaciones Canónicas de Hamilton
+Igualando el diferencial obtenido $dH$ con el diferencial natural de la función $H(q, p, t)$, obtenemos las **Ecuaciones Canónicas de Hamilton**, que reemplazan las $N$ ecuaciones de segundo orden de Lagrange por $2N$ ecuaciones diferenciales de primer orden:
+
+$$
+\dot{q}_i = \frac{\partial H}{\partial p_i}
 $$
 
 $$
-\dot{p}_i = -\frac{\partial \mathcal{H}}{\partial q_i}
+\dot{p}_i = -\frac{\partial H}{\partial q_i}
 $$
 
-Estas son las Ecuaciones de Hamilton. La increíble simetría entre $q$ y $p$ (salvo por el signo negativo) revela que en la estructura profunda del universo, la Posición y el Momento son hermanos gemelos inseparables, operando en un escenario abstracto de $2N$ dimensiones.
-
-## 3. El Espacio Fásico y el Teorema de Liouville
-Ese escenario de $2N$ dimensiones (ejes para $q_1...q_N$ y ejes para $p_1...p_N$) es el **Espacio Fásico** (Variedad Simpléctica). Un sistema mecánico entero es un simple *punto* volando a lo largo del Espacio Fásico.
-
-El Teorema de Liouville afirma que si agarras un enjambre de millones de condiciones iniciales (como un gas de partículas o incertidumbres en tus mediciones), formando un "volumen fluido" hiperdimensional en el Espacio Fásico, a medida que ese volumen fluye por las ecuaciones de Hamilton deformándose y retorciéndose de formas monstruosas por el Caos... **Su Hiper-Volumen total (la hiper-área) es estrictamente constante y jamás cambia.**
-La evolución del universo es un fluido incompresible en el espacio fásico.
+Adicionalmente, se demuestra que $\frac{\partial H}{\partial t} = -\frac{\partial L}{\partial t}$. Si $H$ no depende explícitamente de $t$, su valor es una constante de movimiento (la Energía Total).
 
 ## 📺 Clases Magistrales en YouTube
 

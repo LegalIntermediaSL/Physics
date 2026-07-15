@@ -1,34 +1,36 @@
 # El Principio de Mínima Acción (Principio de Hamilton)
 
-La mecánica newtoniana es vectorial e imperativa: dictamina cómo cambian las cosas instante a instante a través de fuerzas ($\mathbf{F} = m\mathbf{a}$). A finales del siglo XVIII, Joseph-Louis Lagrange y William Rowan Hamilton reformularon toda la mecánica en términos puramente escalares y teleológicos (basados en un propósito global): **El Principio de Mínima Acción**.
+La mecánica analítica trasciende la formulación vectorial de fuerzas de Newton para basarse enteramente en escalares energéticos y métodos variacionales. El cimiento absoluto de esta formulación es el Principio de Hamilton, o Principio de Acción Estacionaria.
 
-## 1. La Acción ($\mathcal{S}$)
-Definimos una nueva cantidad escalar llamada el Lagrangiano $L$, que para sistemas conservativos ordinarios es simplemente la diferencia entre la Energía Cinética ($T$) y la Energía Potencial ($V$):
-
-$$
-L(q, \dot{q}, t) = T - V
-$$
-
-*(Nota: Las variables $q_i$ son coordenadas generalizadas, que no tienen por qué ser cartesianas. Pueden ser ángulos, distancias, o combinaciones de ambas).*
-
-La **Acción** $\mathcal{S}$ de una trayectoria particular entre un instante inicial $t_1$ y un instante final $t_2$ es la integral temporal del Lagrangiano a lo largo de esa trayectoria:
+## 1. El Funcional de Acción
+Consideremos un sistema mecánico cuyas posiciones se describen mediante un conjunto de coordenadas generalizadas $q(t) = (q_1, \dots, q_n)$. Definimos la función **Lagrangiana** $L(q, \dot{q}, t)$ como la diferencia entre la energía cinética $T$ y la energía potencial $V$:
 
 $$
-\mathcal{S}[q(t)] = \int_{t_1}^{t_2} L(q(t), \dot{q}(t), t) dt
+L(q, \dot{q}, t) = T(\dot{q}, q) - V(q, t)
 $$
 
-La Acción es un **Funcional**: toma como entrada una trayectoria completa (una función) y escupe un único número real (con unidades de Energía $\times$ Tiempo, los mismísimos Joules-segundo de la constante de Planck $\hbar$).
-
-## 2. El Principio de Hamilton
-De todas las infinitas trayectorias imaginables mediante las cuales una partícula podría viajar de un punto $A$ a un punto $B$, la naturaleza escoge única y exclusivamente **aquella trayectoria que hace que la Acción sea un extremo** (generalmente un mínimo local). 
-
-En el lenguaje del Cálculo de Variaciones, esto significa que la variación de primer orden de la acción es nula:
+Para cualquier trayectoria posible que conecte un punto inicial $(q(t_1), t_1)$ con un punto final $(q(t_2), t_2)$, se define un escalar funcional denominado **Acción ($S$)**:
 
 $$
-\delta \mathcal{S} = 0
+S[q(t)] = \int_{t_1}^{t_2} L(q(t), \dot{q}(t), t) \, dt
 $$
 
-Este principio no es solo para masas y muelles. El Principio de Mínima Acción dicta las trayectorias de la luz en Relatividad General (geodésicas) y genera literalmente todas las interacciones de partículas en la Teoría Cuántica de Campos cuando insertamos un Lagrangiano electromagnético o nuclear.
+## 2. Cálculo de Variaciones y Acción Estacionaria
+El Principio de Hamilton postula que la trayectoria física real que sigue el sistema es aquella que hace que el funcional de Acción sea estacionario (típicamente un mínimo) ante pequeñas variaciones virtuales de la trayectoria.
+Introducimos una variación arbitraria infinitesimal $\delta q(t)$ tal que las posiciones en los extremos estén fijas: $\delta q(t_1) = \delta q(t_2) = 0$.
+La variación de la Acción es:
+
+$$
+\delta S = \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q} \delta q + \frac{\partial L}{\partial \dot{q}} \delta \dot{q} \right) dt
+$$
+
+Utilizando que $\delta \dot{q} = \frac{d}{dt}(\delta q)$ e integrando por partes el segundo término:
+
+$$
+\delta S = \left[ \frac{\partial L}{\partial \dot{q}} \delta q \right]_{t_1}^{t_2} + \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} \right) \delta q \, dt = 0
+$$
+
+Como los extremos están fijos, el término de frontera se anula. Para que la integral se anule ante cualquier variación arbitraria $\delta q(t)$, el integrando debe ser cero de forma idéntica, produciendo las Ecuaciones de Euler-Lagrange.
 
 ## 📺 Clases Magistrales en YouTube
 
