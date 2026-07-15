@@ -1,23 +1,32 @@
 # Teorías de Gran Unificación (GUT)
 
-El Modelo Estándar posee un grupo de simetría fracturado y feo: $SU(3)_c \times SU(2)_L \times U(1)_Y$. Además, tiene tres constantes de acoplamiento numéricas diferentes, una para cada fuerza.
+Las Teorías de Gran Unificación buscan fusionar las interacciones fuerte, débil y electromagnética del Modelo Estándar (cuyo grupo gauge es $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$) en un único grupo de simetría gauge simple $G_{GUT}$ que se rompe espontáneamente a altas energías.
 
-La hipótesis de la **Gran Unificación (GUT)** estipula que, a energías y temperaturas titánicas cercanas a $10^{16} \text{ GeV}$ (fracciones de segundo tras el Big Bang), las tres fuerzas electromagnéticas, débiles y fuertes son manifestaciones asintóticamente indistinguibles de **un único y hermoso grupo de simetría continua superior**.
+## 1. El Grupo SU(5) de Georgi-Glashow
+El candidato matemático más simple que contiene a $G_{SM}$ como subgrupo es $SU(5)$. En este modelo, los fermiones de una generación se acomodan perfectamente en las representaciones irreducible $\bar{5}$ y $10$ de $SU(5)$:
+- El multiplete $\bar{5}$ contiene a los antiquarks down y al doblete leptónico: $(d^c_r, d^c_g, d^c_b, e^-, -\nu_e)$.
+- El multiplete $10$ contiene a los quarks up, up antiquarks, quarks down y al positrón.
 
-## 1. El Grupo $SU(5)$ de Georgi y Glashow
-En 1974, Howard Georgi y Sheldon Glashow encajaron por primera vez la matriz de los quarks y leptones en las representaciones de $SU(5)$, el grupo unitario especial más pequeño que contiene a $SU(3) \times SU(2) \times U(1)$ como subgrupos.
-El modelo acomoda un bloque de 5 componentes donde los quarks (colores) y los leptones (electrones, neutrinos) se asientan juntos matemáticamente, prediciendo teóricamente que los electrones no son entes fundamentalmente distintos de los quarks.
+La unificación de las constantes de acoplamiento se evalúa mediante las ecuaciones del Grupo de Renormalización (RG). A energías bajas, las tres constantes ($g_1, g_2, g_3$) toman valores experimentales distintos. Sin embargo, extrapolando a la escala GUT ($M_{GUT} \sim 10^{15} \text{ GeV}$), las tres convergen (de forma aproximada en el modelo estándar puro, y de forma casi exacta si se añade Supersimetría).
 
-## 2. Predicción Letal: La Desintegración del Protón
-Si los Quarks (SU(3)) y Leptones (SU(2)) pertenecen al mismo grupo de simetría $SU(5)$, entonces el álgebra debe permitir obligatoriamente "Bosones Leptoquark" súper masivos (Bosones X e Y) que transmuten quarks directamente en electrones.
-¡Esto implica que el **Protón no es estable!** Debe decaer eventualmente en un positrón y un pión neutro ($\pi^0$).
+## 2. Decaimiento del Protón y Leptoquarks
+Dado que los quarks y leptones comparten los mismos multipletes en una GUT, las interacciones gauge de $SU(5)$ incluyen transformaciones directas entre ellos.
+El grupo $SU(5)$ contiene 24 bosones gauge. 12 de ellos son los bosones del Modelo Estándar (8 gluones, $W^\pm$, $Z^0$, $\gamma$). Los 12 restantes son bosones exóticos súper pesados llamados **Leptoquarks $X$ e $Y$** (con cargas eléctricas $\pm 4/3$ y $\pm 1/3$).
 
-Desafortunadamente, inmensos tanques de agua subterráneos super-sensibles en Japón (Super-Kamiokande) han demostrado que la vida media del protón supera los $10^{34}$ años, descartando el modelo simplista $SU(5)$. 
-Sin embargo, GUTs basados en **$SO(10)$** que operan junto con la supersimetría (SUSY GUTs), elevan la vida del protón a rangos permitidos y predicen mágicamente de forma unívoca que los Neutrinos deben tener masa oscilante.
+Estos bosones $X, Y$ pueden mediar transiciones que violan la conservación del número bariónico ($B$) y leptónico ($L$). Por ejemplo, dos quarks $u$ en un protón pueden intercambiar un bosón $X$ para convertirse en un positrón $e^+$ y un antiquark $\bar{d}$. El antiquark $\bar{d}$ se une al quark $d$ restante del protón para formar un pión neutro $\pi^0$.
+El canal de decaimiento dominante predicho es:
 
-## 3. Unificación en el Grupo de Renormalización
-La evidencia matemática más fuerte a favor de las GUT proviene del Grupo de Renormalización. Las constantes de fuerza eléctrica (que se hace más fuerte con la energía) y fuerte (que decae con la energía, por la Libertad Asintótica) son funciones que varían logarítmicamente.
-Si se dibujan sus trayectorias en un gráfico de energía, bajo las correcciones cuánticas del Modelo Estándar casi chocan... pero si agregas Supersimetría (MSSM), **las tres líneas se interceptan perfectamente en un único punto matemático exacto a $10^{16} \text{ GeV}$**. El universo pide a gritos la Unificación.
+$$
+p \to e^+ + \pi^0
+$$
+
+La vida media teórica del protón es proporcional a la cuarta potencia de la masa del mediador:
+
+$$
+\tau_p \propto \frac{M_{GUT}^4}{\alpha_{GUT}^2 m_p^5}
+$$
+
+El modelo $SU(5)$ original predice $\tau_p \sim 10^{30}$ años. Sin embargo, los experimentos empíricos masivos como Super-Kamiokande han establecido un límite experimental inferior de $\tau_p > 1.6 \times 10^{34}$ años, descartando el modelo $SU(5)$ no supersimétrico más simple e impulsando modelos basados en $SO(10)$.
 
 ## 📺 Clases Magistrales en YouTube
 

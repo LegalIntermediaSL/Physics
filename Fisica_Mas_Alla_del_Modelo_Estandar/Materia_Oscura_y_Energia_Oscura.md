@@ -1,19 +1,30 @@
-# El Sector Oscuro: Materia y Energía Oscura
+# Materia Oscura, Energía Oscura y Cosmología del Sector Oculto
 
-La astronomía moderna es una cura brutal de humildad: todo el Modelo Estándar (protones, electrones, la luz, los planetas, las estrellas y nosotros) representa menos del **5% del total de masa/energía** que llena el Universo observable. El 95% de la física de la naturaleza nos resulta experimentalmente alienígena y fantasmal.
+La cosmología de precisión moderna (mediciones del CMB y Supernovas Ia) establece que la materia bariónica ordinaria constituye apenas el $\sim 5\%$ de la densidad de energía del Universo. El $95\%$ restante corresponde a componentes físicamente desconocidos englobados en el Sector Oculto.
 
-## 1. Materia Oscura ($\sim 27\%$)
-La materia oscura no emite luz, no interactúa magnéticamente ni nuclearmente, pero ejerce inmensa gravedad y ancla las galaxias.
-Los modelos teóricos dominantes postulan campos BSM (Más Allá del Modelo Estándar):
--   **WIMPs (Partículas Masivas que Interactúan Débilmente)**: Surgidos térmicamente durante el Big Bang. Principalmente candidatos supersimétricos como los Neutralinos pesados, de masa entre 100 GeV y 1 TeV.
--   **Axiones**: Partículas ultraligeras post-fase del Big Bang, surgidas para solucionar matemáticamente el Problema de la simetría CP Fuerte en el seno de la QCD en regímenes No-Perturbativos. (Las anomalías topológicas de Instantones fuerzan la aparición del campo escalar de Peccei-Quinn).
+## 1. Materia Oscura Termal y el Milagro WIMP
+La materia oscura se define dinámicamente como un componente material no relativista (frío) que interactúa gravitacionalmente pero que carece de carga eléctrica o color.
+El candidato teórico dominante ha sido la Partícula Masiva de Interacción Débil (WIMP). Si suponemos que estas partículas $\chi$ estuvieron en equilibrio térmico en el plasma del Big Bang, su abundancia relicta se determina resolviendo la Ecuación de Boltzmann para el proceso de aniquilación y creación térmica $\chi\bar{\chi} \leftrightarrow \text{SM} \, \text{SM}$.
 
-## 2. Energía Oscura ($\sim 68\%$)
-Descubierta en 1998, es un campo misterioso que repele gravitatoriamente la galaxia, causando que la expansión del universo acelere geométricamente.
-Teorías dominantes:
--   **La Constante Cosmológica ($\Lambda$)**: Un término añadido brutalmente a las Ecuaciones de Einstein. Físicamente, representa la "energía del vacío cuántico puro". Sin embargo, hay un desastre teórico de 120 órdenes de magnitud entre el cálculo de QFT de la energía del vacío y la densidad minúscula observada ($\approx 10^{-29} \text{ g/cm}^3$).
--   **Quintaesencia**: Un campo escalar ultra-ligero y dinámico permeando el universo, cuyo valor cambia lentamente con las eones cósmicos (no es una constante estricta).
--   **Gravedad Modificada (f(R))**: Teorías exóticas asumiendo que la Materia Oscura/Energía Oscura son fantasmas matemáticos producidos porque las ecuaciones originales de Einstein $R_{\mu\nu}$ fallan masivamente a escalas cosmológicas extremas de cúmulos.
+A medida que el Universo se expande y la temperatura desciende por debajo de la masa $m_\chi$, la aniquilación domina y la densidad decae exponencialmente hasta que la tasa de aniquilación ($\Gamma = n_\chi \langle \sigma v \rangle$) se vuelve menor que el ritmo de expansión de Hubble $H$. En este punto ocurre la "congelación" térmica (Freeze-out).
+La abundancia relicta observada (densidad de materia oscura $\Omega_{DM} h^2 \approx 0.12$) requiere una sección eficaz de aniquilación térmicamente promediada de:
+
+$$
+\langle \sigma v \rangle \approx 3 \times 10^{-26} \, \text{cm}^3/\text{s}
+$$
+
+Fascinantemente, una partícula con masa del orden de la escala electrodébil ($100 \text{ GeV}$) interactuando a través de la fuerza nuclear débil genera naturalmente esta magnitud matemática exacta. Esta coincidencia analítica es conocida como el **"Milagro WIMP"**.
+
+## 2. Energía Oscura y Ecuación de Estado
+La aceleración observada en la expansión cósmica requiere un fluido con presión negativa masiva. 
+El comportamiento termodinámico de la Energía Oscura se caracteriza por el parámetro de estado de su fluido cósmico continuo $w$:
+
+$$
+P = w \rho c^2
+$$
+
+- Si $w = -1$ exactamente, la energía oscura es puramente la **Constante Cosmológica ($\Lambda$)** de Einstein, lo que equivale matemáticamente a la energía del vacío cuántico invariable.
+- Si $w \neq -1$ y varía en el tiempo cósmico, la aceleración debe originarse en la dinámica de un campo escalar fundamental (análogo al inflatón) evolucionando muy lentamente bajo su potencial $V(\phi)$. A estos modelos variables impulsados por campos se les denomina genéricamente **Quintaesencia**.
 
 ## 📺 Clases Magistrales en YouTube
 
