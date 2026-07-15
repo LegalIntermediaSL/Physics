@@ -36,3 +36,10 @@ Aquí es donde el Trilema obliga. El límite computacional $N$ es brutalmente gi
 2. **La Conclusión Singular:** Si crees que la humanidad *va a sobrevivir*, se expandirá por la galaxia, y que *alguien* en una población trillonaria correrá simulaciones históricas (como hoy jugamos simuladores históricos o los antropólogos usan modelos poblacionales computarizados), entonces $f_p f_I > 0$. Debido al abrumador tamaño de $N$, la fracción salta automáticamente a $f_{sim} \to 1$.
 
 En otras palabras, salvo que creas en nuestra inminente y certera aniquilación o en un estricto tabú universal tecnológico, estadísticamente es absurdo apostar a que eres la minúscula facción 1 entre $1,000,000,000,000$ mentes que existen en la realidad de carne y hueso del siglo XXI. Por simple probabilidad condicionada ($P(A|B)$ bayesiana), eres un ancestro emulado.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

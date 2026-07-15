@@ -18,3 +18,11 @@ Peter Higgs y otros descubrieron que cuando fuerzas el Teorema de Goldstone en u
 
 En términos físicos, la ruptura de la simetría electrodébil $SU(2)_L \times U(1)_Y \to U(1)_{em}$ devora 3 bosones de Goldstone, dando masa a los Bosones $W^+$, $W^-$ y $Z^0$. 
 El único grado de libertad sobrante del campo de Higgs oscila radialmente contra las paredes del "Sombrero Mexicano": esta excitación masiva es el **Bosón de Higgs** ($125 \text{ GeV}$), descubierto en el CERN en 2012.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
+- [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
+- [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.

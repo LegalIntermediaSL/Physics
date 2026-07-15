@@ -39,3 +39,10 @@ Para que el operador sea estrictamente hermítico, el sistema debe cumplir ciert
 *   **Dirichlet:** $y(a) = y(b) = 0$ (Cuerda atada en los extremos).
 *   **Neumann:** $y'(a) = y'(b) = 0$ (Extremos libres o aislados térmicamente).
 *   **Periódicas:** $y(a) = y(b)$ y $y'(a) = y'(b)$ (Estructuras en forma de anillo, como redes cristalinas).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

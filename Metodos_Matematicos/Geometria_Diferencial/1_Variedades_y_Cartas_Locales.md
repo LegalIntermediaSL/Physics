@@ -9,3 +9,10 @@ Una variedad (Manifold) de dimensión $n$ es simplemente un espacio abstracto in
 El Manifold entero universal cósmico abstracto gigante a menudo asintótico no puede ser "fotografiado" rígidamente con un solo sistema asintótico purista masivo puro liso general algebraico de coordenadas (Piensa en cómo los mapas planos del mundo siempre se rompen asimétricamente abstractos en los polos).
 - Una **Carta Local**: Es un pequeño "parche" (subconjunto abierto) proyectado mágicamente a $\mathbb{R}^n$.
 - El **Atlas Abstracto Asintótico Matemático Puro**: Es la grandiosa colección intersecada superpuesta gigante local suave lisa combinada topológica analítica de todos los parches unidos cubriendo el universo entero, exigiendo empíricamente rígidamente que donde dos parches milagrosos coincidan superpuestos, la traducción topológica lógicamente pura asintótica entre ambos lenguajes cartesianos sea infinitamente lisa suave derivable infinita clase analítica $C^\infty$.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

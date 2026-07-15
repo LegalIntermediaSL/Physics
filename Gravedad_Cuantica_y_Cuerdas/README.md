@@ -11,3 +11,10 @@ Bienvenido a la sección de **Gravedad Cuantica y Cuerdas**. Aquí encontrarás 
 - 📄 **[Gravedad Cuántica de Lazos (Loop Quantum Gravity)](./Gravedad_Cuantica_de_Lazos_LQG.md)**
 - 📄 **[La Teoría M y las Membranas de 11 Dimensiones](./Teoria_M_y_Membranas_11D.md)**
 - 📄 **[De Partículas Puntuales a Supercuerdas](./Teoria_de_Cuerdas_Bosonica_y_Supercuerdas.md)**
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

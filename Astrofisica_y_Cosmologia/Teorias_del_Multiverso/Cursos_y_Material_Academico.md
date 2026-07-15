@@ -31,3 +31,10 @@ Para estudiar las compactaciones dimensionales que generan los $10^{500}$ vacío
 ### El Multiverso de los Muchos Mundos (Mecánica Cuántica Avanzada)
 *   **Curso:** Mecánica Cuántica II (Varios en MIT y Stanford). Enfocado en el teorema de Bell, Matrices Densidad y Decoherencia Cuántica (Zurek).
 *   **Lectura Clásica:** *The Everett Interpretation of Quantum Mechanics: Collected Works 1955-1980*.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

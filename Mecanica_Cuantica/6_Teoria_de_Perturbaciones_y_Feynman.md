@@ -27,3 +27,11 @@ K(A, B) = \int \mathcal{D}x(t) e^{i S[x(t)] / \hbar}
 $$
 
 Esta fórmula (El Path Integral) contiene toda la cuántica entera. Caminos destructivos (fases oscilantes) se cancelan. Cuando $\hbar \to 0$, el único camino que sobrevive sin cancelarse por su vecino es el camino de "Mínima Acción", recuperando milagrosamente la mecánica clásica de Newton y Lagrange.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

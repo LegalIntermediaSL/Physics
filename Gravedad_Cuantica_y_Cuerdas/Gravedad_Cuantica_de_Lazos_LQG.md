@@ -26,3 +26,10 @@ Al cuantizar el volumen geómetrico, LQG propone soluciones elegantes a las rotu
 - En LQG, el volumen no puede caer a cero debido al cuanto mínimo del volumen de espín. La singularidad se elimina mediante un **Gran Rebote (Big Bounce)**. 
 
 Sin embargo, LQG sufre de sus propios problemas. Aún hoy no se ha podido demostrar rigurosamente que el límite macroscópico de las redes de espín devuelva suavemente y sin perturbaciones las Ecuaciones de la Relatividad General Clásica que observamos en los satélites y galaxias de la vida real.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

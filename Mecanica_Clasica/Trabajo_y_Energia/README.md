@@ -305,3 +305,10 @@ $$
 - [Reviews of Modern Physics: Stochastic Energetics and Fluctuation Theorems](https://journals.aps.org/rmp/) - Resumen magistral conectando el concepto de trabajo mecánico y energía con las fluctuaciones microscópicas de pequeñas máquinas estocásticas.
 - [Nature Physics: Dissipationless energy transport in topological states](https://www.nature.com/nphys/) - Artículos revelando cómo la organización geométrica evita totalmente el esparcimiento de electrones sin disipar trabajo de Joule.
 - [PRL: Measuring the absolute minimum work of computation](https://journals.aps.org/prl/) - Demostraciones experimentales punteras validando empíricamente el límite de energía de Landauer al borrar información termodinámica.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

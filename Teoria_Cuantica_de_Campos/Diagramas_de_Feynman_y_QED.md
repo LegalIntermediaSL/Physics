@@ -29,3 +29,11 @@ Cada término matemático de la serie perturbativa se dibuja:
 - **Vértices:** Puntos donde las líneas se unen. Es donde ocurre la interacción fundamental (ej. un electrón emite un fotón). Se asocia un factor de $-i e \gamma^\mu$.
 
 Al dibujar todas las topologías posibles de un choque y sumar sus traducciones matemáticas (Reglas de Feynman), obtenemos la probabilidad total de que el evento físico suceda en la vida real.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
+- [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
+- [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.

@@ -14,3 +14,10 @@ Teorías dominantes:
 -   **La Constante Cosmológica ($\Lambda$)**: Un término añadido brutalmente a las Ecuaciones de Einstein. Físicamente, representa la "energía del vacío cuántico puro". Sin embargo, hay un desastre teórico de 120 órdenes de magnitud entre el cálculo de QFT de la energía del vacío y la densidad minúscula observada ($\approx 10^{-29} \text{ g/cm}^3$).
 -   **Quintaesencia**: Un campo escalar ultra-ligero y dinámico permeando el universo, cuyo valor cambia lentamente con las eones cósmicos (no es una constante estricta).
 -   **Gravedad Modificada (f(R))**: Teorías exóticas asumiendo que la Materia Oscura/Energía Oscura son fantasmas matemáticos producidos porque las ecuaciones originales de Einstein $R_{\mu\nu}$ fallan masivamente a escalas cosmológicas extremas de cúmulos.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Standard Model (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvcsqMC6qB9A-M1jEik5Z4S) - Incluye discusiones profundas sobre las lagunas y roturas de simetría (Higgs).
+- [CERN Lectures: BSM Physics](https://www.youtube.com/c/CERNlectures) - Seminarios avanzados directos desde los detectores del LHC.

@@ -387,3 +387,10 @@ $$
 - [Relativistic Kinetic Theory and Hydrodynamics (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.81.35): Conecta la teoría cinética estocástica de partículas con las ecuaciones macroscópicas hidrodinámicas necesarias para simular el plasma de quarks y gluones.
 - [Brownian Motion and Non-equilibrium Statistical Mechanics (Nature)](https://www.nature.com/articles/35011000): Revisa los desarrollos desde la derivación original del movimiento browniano de Einstein hasta los modernos teoremas cinéticos de fluctuación.
 - [The Boltzmann Equation and its Applications in High-Energy Physics (Physics Reports)](https://www.sciencedirect.com/science/article/pii/S037015730800252X): Explora cómo la ecuación integro-diferencial de transporte fundacional sigue siendo indispensable para modelar la termalización en fluidos extremos.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Statistical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtj_3l8x1k-D1H_cMB-x162) - Colectivos microcanónicos y fluctuaciones cuánticas.
+- [MIT 8.044: Statistical Physics I (Thomas J. Greytak)](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Enfoque riguroso termodinámico (disponible en OCW/YouTube).

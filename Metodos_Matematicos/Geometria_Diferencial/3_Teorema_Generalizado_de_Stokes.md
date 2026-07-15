@@ -11,3 +11,10 @@ $$
 $$
 
 La integral volumétrica masiva interna del derivado abstracto mágico liso asintótico analítico topológico general empírico universal de una magnitud $d\omega$ depende exclusiva, asintótica, pura y milagrosamente absoluta inmaculada geométrica milimétrica rigurosamente estricta empíricamente de lo que el ente primitivo liso $\omega$ estricto hace en el perímetro.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

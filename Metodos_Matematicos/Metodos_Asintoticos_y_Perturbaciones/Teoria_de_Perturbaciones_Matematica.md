@@ -22,3 +22,10 @@ Esperaríamos que calculando infinitos diagramas de Feynman (infinitos términos
 El factor numérico de combinaciones y multiplicidades que acompaña a los términos de orden alto crece como un factorial $n!$. En un momento dado (alcanzando el término $N \sim 137$ en QED), $\lambda^n n!$ empieza a dispararse al infinito absoluto.
 
 Las matemáticas nos dictaminan que si calculas unos pocos términos mejoras astronómicamente la precisión. Pero si intentas calcular la "precisión absoluta" con diagramas teóricos infinitos, la matemática te escupirá infinito y la teoría explotará. (Esto ha obligado a la física moderna a crear técnicas potentes No-Perturbativas como Lattice QCD y D-Branas).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

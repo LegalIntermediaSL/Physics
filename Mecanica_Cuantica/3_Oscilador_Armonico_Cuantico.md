@@ -30,3 +30,11 @@ $$
 $$
 
 Este marco algebraico (Segunda Cuantización) es la semilla a partir de la cual nace la Teoría Cuántica de Campos (donde un electrón es simplemente el estado $|1\rangle$ de un oscilador armónico llenando el universo).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

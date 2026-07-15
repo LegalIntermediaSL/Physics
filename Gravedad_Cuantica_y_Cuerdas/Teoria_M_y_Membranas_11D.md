@@ -14,3 +14,10 @@ Cuando la 11ª dimensión se compactifica (se enrolla en un cilindro muy apretad
 
 ## 3. El Límite de Baja Energía: Supergravedad 11D
 Nadie tiene aún las ecuaciones fundamentales no-perturbativas exactas de la Teoría M completa (es decir, no sabemos qué es la Teoría M). Sin embargo, sabemos que a muy baja energía, la Teoría M se reduce unívocamente a las ecuaciones exactas de la **Supergravedad (SUGRA) de 11 dimensiones**, descubierta por Cremmer, Julia y Scherk en 1978.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

@@ -37,3 +37,9 @@ $$
 \mathcal{L} = -\frac{1}{4\mu_0} F_{\mu\nu} F^{\mu\nu} - J^\mu A_\mu
 $$
 
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.02: Electricity and Magnetism (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiALIcyEP7uHTy1I) - Experimentos magistrales y derivaciones desde cero.
+- [Yale PHYS 201: Fundamentals of Physics II (Ramamurti Shankar)](https://www.youtube.com/playlist?list=PLD07B2225BBFA0681) - Énfasis matemático riguroso en electrostática y radiación.

@@ -23,3 +23,11 @@ $$
 El problema: ¡Este término rompe masivamente la simetría CP (Carga y Paridad)! Si $\theta$ no es exactamente cero, el neutrón debería tener un gigantesco momento dipolar eléctrico observable, pero los experimentos dicen que el neutrón es esférico puro (hasta $10^{-26}$ e·cm). Este es el **Problema de la Simetría CP Fuerte**.
 
 La solución no-perturbativa más brillante a esto es elevar $\theta$ a ser un nuevo campo cuántico dinámico, obligándolo geométricamente a caer al fondo del valle (a cero). La minúscula partícula asociada a este campo correctivo topológico es el infame **Axión**, a día de hoy, el candidato número 1 para formar la Materia Oscura del Universo.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
+- [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
+- [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.

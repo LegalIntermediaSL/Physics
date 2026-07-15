@@ -39,3 +39,9 @@ $$
 \Phi(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \int_V \rho(\vec{r}') G \, d\tau' + \frac{1}{4\pi} \oint_S \left[ G \frac{\partial \Phi}{\partial n'} - \Phi \frac{\partial G}{\partial n'} \right] da'
 $$
 
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.02: Electricity and Magnetism (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiALIcyEP7uHTy1I) - Experimentos magistrales y derivaciones desde cero.
+- [Yale PHYS 201: Fundamentals of Physics II (Ramamurti Shankar)](https://www.youtube.com/playlist?list=PLD07B2225BBFA0681) - Énfasis matemático riguroso en electrostática y radiación.

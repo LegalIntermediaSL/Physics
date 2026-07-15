@@ -31,3 +31,10 @@ En la **Región Clásicamente Prohibida** (bajo una barrera, $E < V(x)$), $p(x)$
 El colapso matemático del método WKB ocurre exactamente en el **Punto de Retorno Clásico**, el punto del espacio donde la partícula agota su energía y frena ($E = V(x)$), y por tanto $p(x) = 0$. La función WKB diverge grotescamente hacia el infinito: $\frac{1}{\sqrt{0}} \to \infty$.
 
 Para evitar el fin de las matemáticas, los físicos parchean la solución cerca del punto usando aproximaciones lineales para el potencial $V(x) \approx ax$. La ecuación diferencial linealizada se vuelve la infame **Ecuación Diferencial de Airy**. Insertando Funciones Matemáticas de Airy de forma microscópica, y conectándolas a las oscilaciones WKB de forma macroscópica (Fórmulas de Conexión), la física vuelve a operar milagrosamente y extrae las Reglas de Cuantización de Bohr-Sommerfeld.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

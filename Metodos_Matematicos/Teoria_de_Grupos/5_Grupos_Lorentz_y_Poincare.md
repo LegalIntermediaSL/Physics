@@ -28,3 +28,10 @@ En 1939, Eugene Wigner clasificó absolutamente todas las representaciones unita
 2.  **El Vector de Pauli-Lubanski $W_\mu$**: Cuyo cuadrado $W^\mu W_\mu$ cuantiza el **Espín**.
 
 Wigner demostró matemáticamente que en nuestro universo: *"Una partícula fundamental no es más que una Irrep del Grupo de Poincaré, caracterizada unívocamente por dos números de Casimir: Masa y Espín"*.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

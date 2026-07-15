@@ -349,3 +349,10 @@ $$
 1. [The Equation of State in Stellar Structure (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.85.49) - Un análisis crítico y moderno de las propiedades de la materia bajo condiciones extremas en interiores estelares.
 2. [Massive Star Evolution Through the Ages (Annual Review of Astronomy and Astrophysics)](https://www.annualreviews.org/doi/10.1146/annurev-astro-081915-023347) - Resumen integral sobre cómo las estrellas masivas evolucionan e impactan su entorno galáctico.
 3. [Neutron Star Mergers and the Origin of Heavy Elements (Science)](https://www.science.org/doi/10.1126/science.aap9810) - Un descubrimiento histórico que confirma las colisiones de estrellas de neutrones como sitios principales para el proceso r.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

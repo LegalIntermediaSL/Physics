@@ -24,3 +24,11 @@ Esta integral es imposible de resolver analíticamente. Pero es perfecta para un
 
 Los resultados de Lattice QCD demostraron abrumadoramente el **Confinamiento del Color**: Si intentas separar un quark y un antiquark en la simulación, el campo de gluones entre ellos se exprime formando un "tubo de flujo" monodimensional de energía densa. La fuerza se vuelve constante (aprox 10,000 Newtons), y la energía requerida para romper el tubo es suficiente para crear un nuevo par quark-antiquark del vacío.
 Por primera vez en la historia, derivamos analíticamente la masa y estructura real del protón desde puros principios cuánticos ab initio.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
+- [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
+- [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.

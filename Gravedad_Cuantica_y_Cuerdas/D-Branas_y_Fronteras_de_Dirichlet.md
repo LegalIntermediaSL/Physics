@@ -23,3 +23,10 @@ Sin embargo, las cuerdas cerradas (que no tienen extremos) representan a los gra
 ## 4. Agujeros Negros de Cuerdas
 Al apilar D-branas una encima de otra, su masa y carga curva el espacio-tiempo circundante drásticamente.
 Strominger y Vafa usaron configuraciones específicas de D1, D5 y D-branas envueltas, creando el primer agujero negro exacto de teoría de cuerdas. Al contar microscópicamente la cantidad de formas en que las cuerdas se enredan dentro del agujero negro (microestados), replicaron matemáticamente la fórmula entrópica exacta de Hawking: $S = A/4$. Fue el triunfo más gigantesco de la teoría de cuerdas en la historia.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

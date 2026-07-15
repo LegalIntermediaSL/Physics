@@ -74,3 +74,10 @@ La matriz densidad se ha vuelto estrictamente **diagonal**, imitando perfectamen
 La principal crítica moderna a la MWI es el origen de las probabilidades. Si la función de onda es totalmente determinista y todas las ramas ocurren físicamente, ¿qué significa que una rama con $\alpha = \sqrt{0.9}$ es "más probable" que una con $\beta = \sqrt{0.1}$?
 
 La justificación más potente descansa en el **Teorema de Gleason (1957)**, modificado mediante aproximaciones de teoría de decisión y argumentos de conteo (David Wallace, Simon Saunders). El teorema establece que en un espacio de Hilbert de dimensión $\ge 3$, la *única* asignación matemática consistente de medidas de peso (medidas probabilísticas aditivas) a los subespacios de Hilbert debe tomar la forma $\text{Tr}(\rho P_k)$, que es directamente equivalente a la Regla de Born $p_k = |c_k|^2$. La probabilidad no refleja una aleatoriedad ontológica, sino una "medida de peso o densidad ontológica" en el espacio de Hilbert estático del universo.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

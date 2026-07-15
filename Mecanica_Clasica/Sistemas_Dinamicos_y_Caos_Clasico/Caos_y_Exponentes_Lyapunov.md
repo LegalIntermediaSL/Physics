@@ -22,3 +22,10 @@ Las trayectorias a largo plazo son arrastradas matemáticamente hacia sumideros 
 
 Si el sistema es caótico, estos atractores no son puntos de reposo, ni ciclos circulares estables. Son los infames **Atractores Extraños** (como el Atractor de Lorenz o el Atractor de Rössler).
 Estas estructuras tienen una dimensión no entera (Son Topologías Fractales Infinitas). La trayectoria de la partícula da vueltas erráticamente por los "lóbulos" del fractal por toda la eternidad, sin repetir jamás, ni una sola vez, la misma posición exacta. El desorden y la complejidad infinita paridos por la mecánica de Euler-Lagrange más sencilla.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

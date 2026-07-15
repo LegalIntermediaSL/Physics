@@ -33,3 +33,10 @@ Cada una de estas configuraciones discretas estabilizadas (cada "valle" en la in
 Físicos como Leonard Susskind abrazaron esta explosión de complejidad bautizándola como **"El Paisaje de la Teoría de Cuerdas"**. En lugar de ver los $10^{500}$ vacíos como una pérdida de predictibilidad y una crisis, Susskind lo fusionó matemáticamente con la Inflación Eterna (Nivel II).
 
 Durante la Inflación Eterna, las violentas fluctuaciones térmicas y cuánticas pueden provocar que un vacío salte en energía por efecto túnel sobre las barreras topológicas (Tunelización de Coleman-De Luccia). El "Paisaje" no es solo un conjunto de posibilidades matemáticas estáticas; **está siendo explorado físicamente, perpetuamente**. Nuestro universo (y nuestro "imposible" ajuste fino) es, inevitable y trivialmente, solo uno de los innumerables valles poblados causalmente de facto.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

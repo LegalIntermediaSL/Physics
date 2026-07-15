@@ -372,3 +372,10 @@ $$
 1. [Planck 2018 results. VI. Cosmological parameters (Astronomy & Astrophysics)](https://www.aanda.org/articles/aa/full_html/2020/08/aa33910-18/aa33910-18.html) - Resultados cruciales de la misión Planck que definen el modelo estándar de la cosmología $\Lambda$CDM moderno.
 2. [Inflationary cosmology: Exploring the Universe from the smallest to the largest scales (Physics Reports)](https://www.sciencedirect.com/science/article/pii/S037015731500196X) - Una revisión extensiva de los modelos inflacionarios y sus firmas observacionales.
 3. [Observation of Gravitational Waves from a Binary Black Hole Merger (Physical Review Letters)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102) - El descubrimiento fundamental de ondas gravitacionales, abriendo una nueva era para estudiar el universo distante.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

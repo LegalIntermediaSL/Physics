@@ -363,3 +363,10 @@ donde $\hat{\omega} \in \mathfrak{so}(3)$ es la matriz antisimétrica asociada a
 - [Nature Physics: Emergent kinematics in active matter](https://www.nature.com/nphys/) - Demuestra cómo conjuntos de partículas autopropulsadas exhiben leyes cinemáticas colectivas novedosas y no triviales.
 - [PRL: Kinematic control in non-Hermitian systems](https://journals.aps.org/prl/) - Analiza la cinemática de sistemas microscópicos que presentan disipación y ganancia asimétrica, redefiniendo trayectorias.
 - [arXiv: Lie Group Formulation of Kinematics (Preprints)](https://arxiv.org/archive/math-ph) - Explora modelos contemporáneos sobre la aplicación sistemática del Álgebra de Lie $\mathfrak{se}(3)$ en robótica blanda.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

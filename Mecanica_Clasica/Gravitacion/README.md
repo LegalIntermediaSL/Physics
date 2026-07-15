@@ -306,3 +306,10 @@ $$
 - [Nature: Testing General Relativity with Black Hole Mergers](https://www.nature.com/) - Observaciones clave que revalidan o desafían el marco relativista de Einstein en el límite de gravedad extrema.
 - [PRL: High-Precision Measurements of the Gravitational Constant](https://journals.aps.org/prl/) - Publicaciones con las determinaciones experimentales modernas más exactas de $G$ usando interferometría atómica.
 - [Reviews of Modern Physics: Post-Newtonian Approximations](https://journals.aps.org/rmp/) - Reseña matemática exhaustiva que compendia cómo expandir el formalismo relativista hacia parámetros manejables clásicamente.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

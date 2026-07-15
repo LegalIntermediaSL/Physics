@@ -17,3 +17,10 @@ En física del estado sólido y la química cuántica, los grupos discretos domi
 -   **$Z_n$ (Grupos Cíclicos)**: Rotaciones discretas en el plano (ej. un copo de nieve).
 -   **$S_n$ (Grupos Simétricos)**: Las permutaciones de $n$ objetos. Vital para entender la estadística cuántica (Bosones vs Fermiones surgen de las representaciones del grupo de permutación de partículas idénticas).
 -   **Grupos Puntuales y Espaciales**: Las 230 formas únicas en que los átomos pueden ordenarse en un cristal 3D (redes de Bravais con simetría de traslación discreta).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

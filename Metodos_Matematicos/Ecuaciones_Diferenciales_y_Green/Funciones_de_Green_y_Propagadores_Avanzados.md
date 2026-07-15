@@ -43,3 +43,10 @@ $$
 Físicamente, $\tilde{D}_F(p)$ es la **amplitud de probabilidad** cuántica de que una partícula virtual con momento $p$ se propague a través del vacío entre dos vértices.
 
 Todo el Modelo Estándar, todas las secciones eficaces del LHC (Gran Colisionador de Hadrones) y la fuerza magnética misma se calculan ensamblando Diagramas de Feynman, que son simplemente convoluciones gigantescas de Funciones de Green (Propagadores).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

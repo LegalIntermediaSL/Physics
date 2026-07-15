@@ -37,3 +37,10 @@ Explora cada una de las siguientes subcarpetas:
 10. **MIT OCW Readings**: [Thermodynamics Notes](https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/pages/readings/) - Notas y apuntes formales del MIT.
 11. **Libro/PDF**: ["Termodinámica" - Yunus A. Çengel](https://www.mheducation.com/highered/product/thermodynamics-engineering-approach-cengel-boles/M9781259822674.html) (Excelente enfoque de ingeniería).
 12. **Libro/PDF**: ["Thermal Physics" - Charles Kittel y Herbert Kroemer](https://www.macmillanlearning.com/college/us/product/Thermal-Physics/p/0716710889) (El estándar moderno de física estadística).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Statistical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtj_3l8x1k-D1H_cMB-x162) - Colectivos microcanónicos y fluctuaciones cuánticas.
+- [MIT 8.044: Statistical Physics I (Thomas J. Greytak)](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Enfoque riguroso termodinámico (disponible en OCW/YouTube).

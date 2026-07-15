@@ -299,3 +299,10 @@ $$
 - [Nature Communications: Chaotic rotation of asymmetric rigid bodies](https://www.nature.com/ncomms/) - Estudio de vanguardia que detalla transiciones caóticas impredecibles en el espacio de fase rotacional.
 - [PRL: Geometric Phases in Rotational Dynamics](https://journals.aps.org/prl/) - Investiga la acumulación de fases de Berry en cuerpos sólidos sometidos a rotaciones cíclicas complejas.
 - [arXiv: Nonlinear Control of Spacecraft Attitude (Preprints)](https://arxiv.org/) - Artículos punteros en esquemas matemáticos para estabilizar la rotación caótica de naves espaciales y asteroides irregulares.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

@@ -28,3 +28,11 @@ La solución matemática dictaba la existencia de estados de energía negativa. 
 Si un electrón en este mar absorbe suficiente energía (un fotón gamma $> 1.022$ MeV), saltaría a un estado de energía positiva. Esto deja atrás un "agujero" en el mar de energía negativa. Ese agujero se comporta matemáticamente exactamente como una partícula de igual masa pero carga opuesta: el **positrón** (antimateria).
 
 En QFT moderna, abandonamos el mar de Dirac. Simplemente se postula que el operador de creación de una partícula de energía negativa se reinterpreta matemáticamente como un operador de aniquilación de una antipartícula de energía positiva (Regla de Feynman-Stueckelberg).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
+- [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
+- [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.

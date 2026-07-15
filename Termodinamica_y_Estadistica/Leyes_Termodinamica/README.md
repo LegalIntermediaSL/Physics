@@ -425,3 +425,10 @@ $$
 - [Fluctuation Theorem for Arbitrary Open Quantum Systems (Phys. Rev. Lett.)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.3168): Generaliza las leyes de la termodinámica al dominio microscópico y estocástico, conectando la irreversibilidad con fluctuaciones entrópicas.
 - [Quantum Thermodynamics: A Nonequilibrium Green's Function Approach (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.93.041002): Proporciona un marco unificado para entender la Primera y Segunda Ley en dispositivos nanoscópicos que operan en el régimen cuántico.
 - [Thermodynamics of Information (Nature Physics)](https://www.nature.com/articles/nphys3230): Establece el vínculo termodinámico fundamental entre la entropía y la teoría de la información, revelando cómo el procesamiento de datos tiene un costo energético físico.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Statistical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtj_3l8x1k-D1H_cMB-x162) - Colectivos microcanónicos y fluctuaciones cuánticas.
+- [MIT 8.044: Statistical Physics I (Thomas J. Greytak)](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Enfoque riguroso termodinámico (disponible en OCW/YouTube).

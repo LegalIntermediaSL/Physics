@@ -39,3 +39,10 @@ Explora cada una de las siguientes subcarpetas:
 11. **Hubble Heritage Project**: [Galería Hubble](https://heritage.stsci.edu/) - Archivo de las imágenes más importantes y de mayor resolución tomadas por el Telescopio Espacial Hubble.
 12. **APOD (Astronomy Picture of the Day)**: [APOD NASA](https://apod.nasa.gov/apod/astropix.html) - La mejor manera diaria de descubrir fenómenos astrofísicos y galácticos.
 13. **arXiv - Astrophysics (astro-ph)**: [Pre-prints](https://arxiv.org/archive/astro-ph) - Repositorio estándar de la investigación moderna de astrofísica y cosmología.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

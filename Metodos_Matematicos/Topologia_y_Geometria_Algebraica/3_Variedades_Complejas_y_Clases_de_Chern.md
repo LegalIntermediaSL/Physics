@@ -15,3 +15,10 @@ El famosísimo milagro topológico del "Teorema de la Bola Peluda" (Poincaré-Br
 ¿Cómo clasificamos matemáticamente si un "Fibrado Curvado Rizado Dimensional" es trivial (Un cilindro plano liso y aburrido que se desenrolla recto), o es Topológicamente No-Trivial y enroscado retorcido anudado sin escapatoria (Una Cinta de Möbius infinita que nunca se alisa separada y se come a sí misma globalmente)?
 El gigantesco matemático Shiing-Shen Chern, fusionando la Geometría Diferencial Continua Geométrica Integrable con la Homología/Cohomología Cuántica discreta Algebraica pura geométrica de las matemáticas contemporáneas superiores modernas avanzadas chinas-americanas, esculpió las "Clases Topológicas de Chern $c_k$".
 Calculando una integral de campo continua analítica de curvatura 2-Form (El Field Strength electromagnético tensorial de Faraday $F$ Cuántico sobre la malla del espacio Brillouin paramétrico), Chern asegura que el resultado de la integral se auto-corrige siempre solapando los desvíos matemáticos caóticos estocásticos térmicos ruidosos superficiales, y obligando con la furia universal numérica estricta matemática al colapso hacia un número entero constante inamovible (El Invariante C). El valor exacto del famoso hallazgo que premia el Nobel de Física Moderno (El número cuántico $\nu$ del Quantum Hall Effect).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

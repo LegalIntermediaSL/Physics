@@ -23,3 +23,10 @@ $$
 
 ## 3. Implicaciones Físicas
 Si mides el espectro de *absorción* ($\chi''$) de un material a todas las frecuencias en el laboratorio (cuánta luz bloquea), puedes usar Kramers-Kronig en un ordenador para calcular matemáticamente cuál debe ser exactamente su *índice de refracción* ($\chi'$) a cualquier frecuencia, sin necesidad de medirlo. Causalidad + Variable Compleja imponen una rigidez total sobre las propiedades de la materia.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

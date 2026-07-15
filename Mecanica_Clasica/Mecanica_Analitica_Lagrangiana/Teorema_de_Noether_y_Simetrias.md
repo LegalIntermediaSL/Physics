@@ -21,3 +21,10 @@ Si las leyes de la física no discriminan ninguna dirección (invariancia bajo r
 
 ### C. Homogeneidad del Tiempo $\implies$ Conservación de la Energía
 Si las leyes de la física hoy son idénticas a las leyes de la física ayer (invariancia bajo traslaciones temporales $t \to t + \delta t$), entonces el Lagrangiano no depende explícitamente del tiempo ($\frac{\partial L}{\partial t} = 0$). Y esto matemáticamente obliga a que exista una cantidad que denominamos **Energía Total ($H$)** que ni se crea ni se destruye.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

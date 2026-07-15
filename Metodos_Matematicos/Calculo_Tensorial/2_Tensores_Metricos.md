@@ -20,3 +20,10 @@ La métrica es invertible ($g^{\mu\nu}$). Su enorme poder matemático radica en 
 - **Bajar índice (Convertir Vector a Covector)**: $v_\mu = g_{\mu\nu} v^\nu$
 - **Subir índice (Convertir Covector a Vector)**: $v^\mu = g^{\mu\nu} v_\nu$
 En el Espacio-Tiempo plano estricto Relativista de Minkowski (Métrica diagonal $\eta = \text{diag}(-1, 1, 1, 1)$), bajar el índice espacial invierte algebraicamente brutalmente el signo puro (ej. $x^1 = x \implies x_1 = -x$), una propiedad crucial de la firma causal de luz espacial.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

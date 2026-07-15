@@ -23,3 +23,10 @@ En óptica geométrica, los rayos de luz siguen la trayectoria de menor tiempo (
 La ecuación de Hamilton-Jacobi es *idéntica* a la Ecuación de la Eikonal de la óptica. Esto permitió a Schrödinger (1926) adivinar su famosa ecuación de ondas para el electrón. De hecho, la ecuación de Schrödinger de la Cuántica **colapsa matemáticamente e irrefutablemente en la Ecuación de Hamilton-Jacobi clásica** cuando tomamos el límite macroscópico donde la constante de Planck tiende a cero ($\hbar \to 0$).
 
 La mecánica analítica es la membrana que separa la relatividad, la cuántica y la óptica bajo un mismo paraguas variacional.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

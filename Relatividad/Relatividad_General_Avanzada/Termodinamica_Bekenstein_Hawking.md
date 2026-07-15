@@ -27,3 +27,10 @@ El agujero "suda" partículas lentamente. Esta es la **Radiación de Hawking**.
 Al perder energía positiva continuamente por la radiación, el agujero pierde masa (Evaporación). Eventualmente (tras $10^{100}$ años), explotará liberando toda su energía. 
 Esto conlleva a la letal "Paradoja de la Pérdida de la Información": Si el agujero negro desaparece completamente en radiación térmica aleatoria (sin estructura), ¿dónde fue a parar la información de la estrella y las estrellas que se tragó? La física prohíbe que la información cuántica se destruya. 
 (Pista: Leonard Susskind demostró con AdS/CFT que la información nunca cae al interior real, queda "impresa" holográficamente en el horizonte térmico bidimensional).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - General Relativity (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtVjaP28HqYI0b213c41wKj) - Métrica, Curvatura y Agujeros Negros sin rodeos.
+- [MIT 8.962: General Relativity (Scott Hughes)](https://www.youtube.com/playlist?list=PLUl4u3cNGP629E-R9yOweV1M3zFf1o4R3) - Formulación tensorial pura de posgrado.

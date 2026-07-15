@@ -18,3 +18,10 @@ Sin embargo, GUTs basados en **$SO(10)$** que operan junto con la supersimetría
 ## 3. Unificación en el Grupo de Renormalización
 La evidencia matemática más fuerte a favor de las GUT proviene del Grupo de Renormalización. Las constantes de fuerza eléctrica (que se hace más fuerte con la energía) y fuerte (que decae con la energía, por la Libertad Asintótica) son funciones que varían logarítmicamente.
 Si se dibujan sus trayectorias en un gráfico de energía, bajo las correcciones cuánticas del Modelo Estándar casi chocan... pero si agregas Supersimetría (MSSM), **las tres líneas se interceptan perfectamente en un único punto matemático exacto a $10^{16} \text{ GeV}$**. El universo pide a gritos la Unificación.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Standard Model (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvcsqMC6qB9A-M1jEik5Z4S) - Incluye discusiones profundas sobre las lagunas y roturas de simetría (Higgs).
+- [CERN Lectures: BSM Physics](https://www.youtube.com/c/CERNlectures) - Seminarios avanzados directos desde los detectores del LHC.

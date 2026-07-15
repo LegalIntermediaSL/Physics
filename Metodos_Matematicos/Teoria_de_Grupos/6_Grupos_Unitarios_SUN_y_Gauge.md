@@ -19,3 +19,10 @@ Describe la Fuerza Nuclear Fuerte (QCD). La representación fundamental tiene 3 
 Los 8 generadores correspondientes (Matrices de Gell-Mann) son los 8 **Gluones**.
 
 Dado el rango de $SU(3)$, hay dos operadores de Cartan que conmutan simultáneamente ($T_3$ e $Y$). Esto significa que los gluones llevan color de forma bicomponente (ej. rojo-antiverde). Debido a la intensa no-conmutatividad (constantes de estructura muy altas $f_{abc}$), los gluones forman un campo de auto-interacción tan violento que causa el acoplamiento asintótico fuerte: el Confinamiento de los Quarks (que exploramos en los métodos de Lattice QCD).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

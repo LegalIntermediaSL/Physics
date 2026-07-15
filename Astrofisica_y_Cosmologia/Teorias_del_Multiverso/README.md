@@ -27,3 +27,10 @@ Este directorio ofrece un desglose formal y matemático de las cuatro vías fund
 3. [Interpretación de los Muchos Mundos (QM)](Interpretacion_Muchos_Mundos_QM.md): La mecánica cuántica sin colapso post-Everett. Matrices densidad, trazas parciales y la decoherencia ambiental (Zurek).
 4. [El Paisaje de la Teoría de Cuerdas](Paisaje_Teoria_Cuerdas.md): Variedades de Calabi-Yau, flujo de compactificación, estabilización KKLT y el mar de los $10^{500}$ vacíos físicos.
 5. [Bibliografía y Artículos Seminales](Bibliografia_y_Articulos.md): *Papers* (peer-reviewed) y literatura científica base.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

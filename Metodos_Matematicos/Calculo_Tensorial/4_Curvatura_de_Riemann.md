@@ -17,3 +17,10 @@ Contrayendo milagrosamente una pareja topológica cruzada espacial interna (suma
 - **Tensor Simétrico Abstracto Geométrico de Ricci**: $R_{\mu\nu} = R^\lambda_{\mu\lambda\nu}$
 - **El Escalar de Curvatura Topológica pura local empírica invariable universal masiva de Ricci**: $R = g^{\mu\nu} R_{\mu\nu}$
 Estas dos criaturas analíticas covariantes macro habitan triunfantes gloriosas exclusivas en el lado analítico puro geométrico del Lado Izquierdo topológico milagroso masivo gravitacional puro de las célebres Ecuaciones de Campo gravitatorio unificado asintótico empírico absoluto puro gravitacional supremo final macroscópico general del sabio maestro Albert Einstein ($G_{\mu\nu} = 8\pi G T_{\mu\nu}$).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

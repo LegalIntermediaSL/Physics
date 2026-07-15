@@ -29,3 +29,10 @@ El teorema de Cartan-Dynkin demuestra que solo existen las siguientes Álgebras 
 -   **5 Álgebras Excepcionales**:
     -   $G_2, F_4, E_6, E_7, E_8$.
     -   $E_8$ (con dimensión 248) es el rey de la matemática pura y la pieza central de la Teoría de Cuerdas Heterótica, el mejor candidato para una Teoría del Todo matemática.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

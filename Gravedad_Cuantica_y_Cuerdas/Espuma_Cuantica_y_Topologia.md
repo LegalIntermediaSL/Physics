@@ -20,3 +20,10 @@ Curiosamente, la ecuación carece del parámetro "tiempo" (Problema del Tiempo e
 Las teorías modernas de información cuántica gravitatoria (como las conjeturadas por Susskind y Maldacena) proponen un giro radical:
 El entrelazamiento cuántico ordinario entre dos partículas (conocido históricamente como la paradoja EPR) es matemáticamente equivalente y físicamente isomorfo a un agujero de gusano (Puente de Einstein-Rosen, ER) invisible y cuántico conectándolas.
 **La Conjetura ER=EPR** establece que la cercanía física o distancia euclídea entre dos puntos en nuestro universo 3D es, en última instancia, una ilusión generada por la cantidad brutal de entrelazamiento cuántico entre los qubits en la frontera de AdS/CFT. El espacio no es un escenario fijo, es un holograma entretejido por entrelazamiento termodinámico subyacente.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

@@ -40,3 +40,10 @@ El colapso epistemológico surge por inferencia bayesiana: Si la inmensa, abruma
 Si crees que no eres un cerebro flotando en el vacío (porque tus observaciones empíricas tienen sentido temporal y lógico continuo), entonces estás obligado a descartar cualquier teoría cosmológica (como ciertas versiones de Inflación Eterna o gravedades cuánticas) en las que la tasa de producción de Cerebros de Boltzmann exceda a la de observadores normales.
 
 > *"Si tu teoría cosmológica predice que casi todos los observadores son cerebros de Boltzmann, tu teoría está en graves problemas."* - Sean Carroll.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

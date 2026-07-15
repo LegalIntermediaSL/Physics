@@ -22,3 +22,10 @@ Por tanto, la Gravedad no se añade artificialmente a la teoría de cuerdas; *em
 La teoría de cuerdas original (bosónica) solo predecía bosones (portadores de fuerza) y carecía de fermiones (materia). Además, predecía una partícula inestable y destructiva que viajaba más rápido que la luz: el *taquión*.
 
 Para arreglar esto, se unió la teoría con la **Supersimetría (SUSY)**, una simetría matemática que dictamina que por cada bosón existe una contraparte fermiónica, y viceversa. Esta amalgama engendró la **Teoría de Supercuerdas**, eliminando la necesidad del taquión y creando el marco matemático de todo el modelo estándar.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

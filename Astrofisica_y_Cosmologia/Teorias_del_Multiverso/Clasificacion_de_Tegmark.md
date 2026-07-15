@@ -54,3 +54,10 @@ El MUH postula que **todas las estructuras matemáticas coherentes existen físi
 
 El Nivel IV cierra la jerarquía: resuelve el problema de John Archibald Wheeler de *"Por qué estas ecuaciones y no otras"*. Todas las ecuaciones lógicas posibles gobiernan universos tangibles en el Nivel IV. 
 * **Propiedades del Nivel IV:** Leyes de la física completamente distintas, matemáticamente inconmensurables. Un universo sin concepto de tiempo continuo, un autómata celular estocástico (Juego de la Vida), o un campo de tensores hiper-dimensionales, existen empíricamente en el MUH.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

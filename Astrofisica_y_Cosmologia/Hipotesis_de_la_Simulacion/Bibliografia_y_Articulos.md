@@ -18,3 +18,10 @@ Las fuentes primarias empleadas para formular las derivaciones matemáticas y te
 9. **Susskind, L. (1995).** *The world as a hologram*. Journal of Mathematical Physics, 36(11), 6377-6396. (Formalización inicial del Principio Holográfico desde termodinámica de cuerdas de Agujeros Negros).
 10. **Maldacena, J. M. (1999).** *The large N limit of superconformal field theories and supergravity*. International Journal of Theoretical Physics, 38(4), 1113-1133. (Posiblemente el paper más citado en las últimas décadas de física teórica. Demuestra la correspondencia rígida de dualidad $AdS/CFT$).
 11. **Fredkin, E. (2003).** *An Introduction to Digital Philosophy*. International Journal of Theoretical Physics, 42(2), 189-247. (Sobre autómatas celulares como substrato ontológico base de la Mecánica Analítica de Lagrange/Hamilton).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

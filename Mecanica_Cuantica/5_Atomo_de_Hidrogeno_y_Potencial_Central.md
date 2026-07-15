@@ -24,3 +24,11 @@ E_n = - \left( \frac{m_e e^4}{8 \epsilon_0^2 h^2} \right) \frac{1}{n^2} \approx 
 $$
 
 Espectacularmente, la energía de un nivel en el Hidrógeno depende *únicamente* del número principal $n$, pero existen múltiples orbitales (diferentes $l$ y $m$) para la misma energía. Para un $n$ dado, la degeneración total (ignorando el espín) es exactamente $n^2$. (Por ejemplo, el nivel $n=2$ tiene 4 orbitales de misma energía: un 2s y tres 2p).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

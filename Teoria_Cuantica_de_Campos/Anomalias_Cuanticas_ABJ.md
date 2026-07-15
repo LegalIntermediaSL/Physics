@@ -24,3 +24,11 @@ $$
 Lejos de ser un fallo molesto de las matemáticas, la Anomalía ABJ es una predicción gloriosa verificada en laboratorios.
 Sin la anomalía, el pión neutro (formado por un par quark-antiquark que actuaría como seudo-bosón de Goldstone de la simetría quiral) casi no podría desintegrarse electromagnéticamente.
 Gracias a la anomalía cuántica del triángulo, el pión neutro decae casi instantáneamente en dos fotones libres. La tasa teórica predicha por la anomalía coincide perfectamente con el experimento, confirmando que existen exactamente 3 colores en la Cromodinámica Cuántica.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
+- [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
+- [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.

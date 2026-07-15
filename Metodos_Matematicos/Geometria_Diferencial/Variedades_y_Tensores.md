@@ -35,3 +35,10 @@ T = T^{\mu_1 ... \mu_p}_{\nu_1 ... \nu_q} \frac{\partial}{\partial x^{\mu_1}} \o
 $$
 
 Las leyes de transformación tensorial garantizan que las ecuaciones físicas escritas con tensores sean verdaderas para cualquier observador, independientemente de su sistema de coordenadas (Covariancia General).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

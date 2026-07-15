@@ -27,3 +27,10 @@ $$
 ### Aplicación en Física (El polo $i\epsilon$)
 En Teoría Cuántica de Campos, las integrales sobre los momentos de las partículas $p$ atraviesan el eje real, tropezando con polos de divergencia (cuando la masa al cuadrado coincide con el momento al cuadrado $p^2 = m^2$).
 Desplazando artificialmente estos polos al plano complejo mediante una cantidad infinitesimal imaginaria $+i\epsilon$, podemos rodearlos (usando el Teorema de Cauchy) y obtener un resultado finito y causal, generando el Propagador de Feynman.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

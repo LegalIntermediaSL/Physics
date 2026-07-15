@@ -29,3 +29,10 @@ $$
 $$
 
 Este principio no es solo para masas y muelles. El Principio de Mínima Acción dicta las trayectorias de la luz en Relatividad General (geodésicas) y genera literalmente todas las interacciones de partículas en la Teoría Cuántica de Campos cuando insertamos un Lagrangiano electromagnético o nuclear.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

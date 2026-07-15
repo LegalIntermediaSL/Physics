@@ -27,3 +27,11 @@ $$
 
 - **QED (Electromagnetismo):** La función beta es positiva. A mayores energías (menores distancias, atravesando la nube de polarización), la carga eléctrica real del electrón *aumenta*.
 - **QCD (Fuerza Fuerte):** La función beta es *negativa*. A mayores energías (o quarks muy juntos), la interacción se vuelve increíblemente débil, alcanzando la **Libertad Asintótica** (Nobel 2004 para Gross, Politzer y Wilczek). 
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
+- [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
+- [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.

@@ -26,3 +26,9 @@ $$
 T_{ij} = \varepsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} E^2 \right) + \frac{1}{\mu_0} \left( B_i B_j - \frac{1}{2} \delta_{ij} B^2 \right)
 $$
 
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.02: Electricity and Magnetism (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiALIcyEP7uHTy1I) - Experimentos magistrales y derivaciones desde cero.
+- [Yale PHYS 201: Fundamentals of Physics II (Ramamurti Shankar)](https://www.youtube.com/playlist?list=PLD07B2225BBFA0681) - Énfasis matemático riguroso en electrostática y radiación.

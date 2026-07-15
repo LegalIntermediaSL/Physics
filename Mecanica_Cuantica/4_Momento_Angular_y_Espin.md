@@ -27,3 +27,11 @@ Donde $j$ puede ser entero o semientero ($0, 1/2, 1, 3/2, 2...$), y $m$ va desde
 ## 3. Armónicos Esféricos vs Matrices de Pauli
 - Para el **Momento Angular Orbital ($L$)**, $j$ se denomina $l$ y solo toma valores *enteros* ($0, 1, 2...$). Su representación espacial real produce funciones trigonométricas en la esfera: los **Armónicos Esféricos** $Y_l^m(\theta, \phi)$ (las formas de los orbitales atómicos s, p, d, f).
 - Para el **Espín del Electrón ($S$)**, $j$ toma el valor semientero $1/2$. Esto no se puede dibujar en el espacio tridimensional real. Requiere la representación matemática en espacios de Espinores bidimensionales, donde los operadores se escriben como las **Matrices de Pauli** ($\sigma_x, \sigma_y, \sigma_z$). Un giro de 360 grados en una partícula de espín $1/2$ no la devuelve a su estado original, invierte su signo cuántico (fase -1). Se necesitan 720 grados para volver a la normalidad topológica.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

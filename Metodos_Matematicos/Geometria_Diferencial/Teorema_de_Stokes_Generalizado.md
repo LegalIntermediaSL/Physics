@@ -19,3 +19,10 @@ Hemos visto que "toda forma exacta es cerrada" ($d\omega=0 \leftarrow \omega=d\a
 
 Si el espacio cuántico (o la esfera alrededor de un monopolo magnético) contiene una "anomalía topológica" (un agujero), entonces la integral de Stokes sobre caminos cerrados dependerá del "número de veces que el cable enrolle al agujero". 
 La **Cohomología de De Rham** $H_{dR}^p(\mathcal{M})$ cuantifica geométricamente cuántas formas cerradas "sobran" que no pueden provenir de exactas. El número (Dimensión de Betti) nos da el número de agujeros (defectos topológicos) inherentes en el vacío.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

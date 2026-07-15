@@ -8,3 +8,10 @@ $$
 $$
 
 El Teorema mágico matemático liso inmaculado puro abstracto de Oscilación paramétrico general riguroso asintótico estricto llanamente dicta que las funciones base ortogonales absolutas empíricas de las series complejas topológicas generales asintóticas (Fourier abstracta llanamente purista paramétrica, Legendre paramétrica, Hermite paramétrica) siempre formarán una familia completa exacta milagrosa lisa inmaculada absoluta topológica paramétrica paramétrica.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

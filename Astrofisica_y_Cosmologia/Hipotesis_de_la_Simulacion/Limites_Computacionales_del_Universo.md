@@ -40,3 +40,10 @@ $$
 Si bien esos números son astronómicos, son absoluta y estrictamente **finitos**. 
 Y lo que es más importante: un equipo simulador post-humano no necesita una máquina que soporte $\sim 10^{120}$ flops atómicos. 
 Simular todo un universo a nivel de Planck todo el tiempo es ineficaz. Una civilización que desee simular consciencias humanas solo requiere modelar los sistemas neuronales en altísima fidelidad y dejar el 99.9% de los macro-objetos cósmicos inanimados exteriores bajo potentes algoritmos de *Coarse-Graining* estadístico. Al hacerlo (y no renderizar átomos ocultos o estrellas lejanas a detalle sub-microscópico), una computadora macroscópica post-humana que funcione usando la energía estelar (Esfera de Dyson de la estrella real Base) podría, teóricamente, correr sin problemas cientos de miles de simulaciones planetarias terrícolas detalladas enteras.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

@@ -26,3 +26,11 @@ En un golpe asombroso de pura belleza teórica, la ecuación forzó al "electró
 La Ecuación de Dirac sanó la probabilidad, pero introdujo un problema más aterrador: predecía implacablemente infinitos niveles de Energía Negativa que descendían hasta $-\infty$. Un electrón normal caería radiactivamente hacia abajo eternamente, destruyendo el universo.
 Dirac salvó al universo ideando el "Mar de Dirac": Postuló que el vacío no está vacío, sino que los infinitos niveles negativos ya están ocupados por billones de electrones indetectables (protegidos por el Principio de Exclusión de Pauli).
 Si inyectamos energía violenta al vacío (un rayo gamma), arrancamos un electrón oscuro del nivel negativo y lo subimos a energía real positiva. Observaremos nacer "un electrón normal" y dejaremos atrás "un hueco vacío de carga positiva" en el Mar invisible. ¡Dirac acababa de usar las matemáticas puras para predecir la existencia del **Positrón (Antimateria)** años antes de que Carl Anderson lo descubriera en un telescopio de rayos cósmicos!
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

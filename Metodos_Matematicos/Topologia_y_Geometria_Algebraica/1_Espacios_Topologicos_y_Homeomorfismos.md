@@ -13,3 +13,10 @@ Si puedes deformar el espacio $X$ elásticamente sin hacer agujeros nuevos, sin 
 
 ## 3. Invariantes Topológicas y la Frontera
 Cuando estudiamos física, las propiedades continuas varían fácilmente con la temperatura, presiones o defectos. Los **Invariantes Topológicos** son números matemáticos enteros (como el número de agujeros) que no cambian bajo deformaciones suaves. El Invariante de Chern, por ejemplo, protege la conducción superficial de electrones en aislantes topológicos cuánticos, forzando a que la resistencia jamás pueda ser alterada por ninguna impureza de fábrica.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

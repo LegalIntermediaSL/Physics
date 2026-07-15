@@ -342,3 +342,10 @@ $$
 - [Observation of Gravitational Waves from a Binary Black Hole Merger (Phys. Rev. Lett.)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102): Reporta la primera detección directa de ondas gravitacionales, confirmando una de las mayores predicciones de la Relatividad General un siglo después.
 - [First M87 Event Horizon Telescope Results (ApJ Letters)](https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7): Presenta la primera imagen directa de la sombra de un agujero negro supermasivo, validando las soluciones geométricas en campos gravitatorios ultrafuertes.
 - [The Cosmological Constant and Dark Energy (Reviews of Modern Physics)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.559): Analiza de manera exhaustiva cómo la adición de la constante cosmológica a las ecuaciones de Einstein explica la expansión acelerada del universo.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - General Relativity (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtVjaP28HqYI0b213c41wKj) - Métrica, Curvatura y Agujeros Negros sin rodeos.
+- [MIT 8.962: General Relativity (Scott Hughes)](https://www.youtube.com/playlist?list=PLUl4u3cNGP629E-R9yOweV1M3zFf1o4R3) - Formulación tensorial pura de posgrado.

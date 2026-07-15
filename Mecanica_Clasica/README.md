@@ -49,3 +49,10 @@ Explora cada una de las siguientes subcarpetas. El repositorio abarca desde los 
 12. **Nature Physics Focus**: [Mecánica Clásica](https://www.nature.com/nphys/) - Artículos modernos aplicando mecánica a robótica y sistemas complejos.
 13. **Scientific American**: [The illusion of gravity](https://www.scientificamerican.com/) - Artículos divulgativos sobre los límites de la mecánica clásica.
 14. **American Journal of Physics**: [AJP Homepage](https://aapt.scitation.org/journal/ajp) - Artículos variados enfocados en problemas educativos y la pedagogía de la mecánica clásica en entornos universitarios.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

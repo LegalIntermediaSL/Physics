@@ -461,3 +461,10 @@ $$
 - [Lorentz Invariance Violation at the Planck Scale (arXiv)](https://arxiv.org/abs/gr-qc/9712019): Propone formas en que las mediciones de física de altas energías podrían revelar violaciones de la invariancia de Lorentz debido a la gravedad cuántica.
 - [Test of Time Dilation Using Stored Li+ Ions as Clocks at Relativistic Speed (Phys. Rev. Lett.)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.120405): Representa una de las pruebas experimentales empíricas más rigurosas de la dilatación del tiempo utilizando espectroscopía de iones de litio.
 - [Testing Lorentz Invariance with Neutrinos (Nature Physics)](https://www.nature.com/articles/nphys1026): Analiza de manera exhaustiva cómo los osciladores de neutrinos imponen límites muy estrictos a las desviaciones de las predicciones del espacio-tiempo de Minkowski.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - General Relativity (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtVjaP28HqYI0b213c41wKj) - Métrica, Curvatura y Agujeros Negros sin rodeos.
+- [MIT 8.962: General Relativity (Scott Hughes)](https://www.youtube.com/playlist?list=PLUl4u3cNGP629E-R9yOweV1M3zFf1o4R3) - Formulación tensorial pura de posgrado.

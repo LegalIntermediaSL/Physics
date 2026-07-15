@@ -22,3 +22,10 @@ $$
 
 **La moraleja monumental universal**: El número de soluciones exactas microscópicas nulas locales de las ecuaciones diferenciales complejas de la materia atómica (El Índice Analítico), no requiere ser resuelto brutalmente mediante ordenadores trituradores ciegos con iteraciones sin sentido; **está predeterminado, amarrado, escrito, forzado ineludiblemente y dictaminado milimétricamente en la eternidad universal por la Arquitectura Topológica de Curvatura Global del Espacio Exterior Macroscópico Masivo Universal en el que habita el fibrado.**
 La Teoría Analítica de Anomalías Cuánticas y la Estructura Topológica Global del Cosmos Vectorial de la Teoría M de Supercuerdas unifican gracias a este pilar axiomático del absoluto genio matemático matemático dimensional humano.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

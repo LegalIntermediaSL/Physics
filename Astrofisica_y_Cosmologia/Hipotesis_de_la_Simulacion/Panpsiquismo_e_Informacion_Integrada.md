@@ -24,3 +24,10 @@ Si la IIT o los argumentos de Penrose (Microtúbulos y el teorema de Incompletit
 Esto está resucitando modelos científicos de **Panpsiquismo**, que postulan que las partículas fundamentales (fermiones y bosones) no solo tienen propiedades como masa ($m$) y espín ($\hbar/2$), sino una minúscula propiedad proto-fenomenológica base, y que la consciencia compleja biológica emerge geométricamente de la masa de ellas.
 
 Si el universo es panpsiquista o sigue IIT, la emulación clásica pura del argumento de Bostrom es inútil: los simuladores tendrían que simular átomo cuántico por átomo cuántico a nivel sub-Planck de toda nuestra biología continua en hardwares inmensos, haciendo inviable crear billones de simulaciones por gasto entrópico, destrozando matemáticamente la Hipótesis de la Simulación.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

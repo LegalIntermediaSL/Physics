@@ -72,3 +72,10 @@ $$
 $$
 
 Donde $S_E$ es la acción Euclidiana del "bounce" (rebote) de la burbuja y $A$ es un factor pre-exponencial cuántico. Estas burbujas una vez nucleadas, sus paredes se expanden rozando la velocidad de la luz $c$. Si el volumen externo (falso vacío) se expande más rápido de lo que las burbujas nuclean y colisionan (una condición garantizada por el Slow-Roll), el Multiverso es una consecuencia ineludible y formal.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

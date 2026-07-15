@@ -24,3 +24,10 @@ Maldacena proveyó un "diccionario" de traducción matemática total. Si tienes 
 ## 3. ¿Vivimos en un Holograma?
 La Correspondencia de Maldacena demostró fehacientemente y de forma incontestable que el "espacio-tiempo", las 3 dimensiones en las que te mueves ahora mismo, y la gravedad que te ancla a tu silla, **no son entidades fundamentales del universo**.
 El tejido del espacio-tiempo emerge holográficamente como una ilusión térmica del entrelazamiento cuántico (Entanglement) puro de las partículas que viven en los límites del cosmos.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

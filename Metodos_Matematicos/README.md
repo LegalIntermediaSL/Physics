@@ -34,3 +34,10 @@ $$
 - [Perimeter Institute Recorded Lectures (PSI)](https://perimeterinstitute.ca) - Seminarios de simetrías, teoría de grupos y geometría diferencial.
 - [Arfken & Weber: Mathematical Methods for Physicists (Elsevier)](https://www.elsevier.com) - El texto canónico para todo estudiante de posgrado.
 - *Atiyah, M. F., & Singer, I. M. (1968). The index of elliptic operators on compact manifolds.* - Artículo fundacional que unió topología (índice analítico) y física cuántica (anomalías quirales).
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

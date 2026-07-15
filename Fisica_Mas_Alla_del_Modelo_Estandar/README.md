@@ -10,3 +10,10 @@ Aquí exploramos los rigurosos modelos matemáticos que intentan completar las p
 - 📄 **[Supersimetría (SUSY)](./Supersimetria_SUSY.md)**
 - 📄 **[Teorías de Gran Unificación (GUT)](./Teorias_de_Gran_Unificacion_GUT.md)**
 - 📄 **[Materia Oscura y Energía Oscura](./Materia_Oscura_y_Energia_Oscura.md)**
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Standard Model (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvcsqMC6qB9A-M1jEik5Z4S) - Incluye discusiones profundas sobre las lagunas y roturas de simetría (Higgs).
+- [CERN Lectures: BSM Physics](https://www.youtube.com/c/CERNlectures) - Seminarios avanzados directos desde los detectores del LHC.

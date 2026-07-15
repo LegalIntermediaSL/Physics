@@ -18,3 +18,11 @@ Esta **Fase de Berry ($\gamma_n$)** es inmune al tiempo. No depende de lo rápid
 ## 3. Monopolos Magnéticos de Dirac y Computación Holonómica
 Matemáticamente, la curvatura que genera la Fase de Berry en el espacio de parámetros se modela exactamente igual a un Campo Magnético clásico, como si un Monopolo Magnético de Dirac existiera escondido en el origen del espacio de Hamiltonianos, irradiando "Flujo Topológico".
 Hoy en día, dado que esta fase geométrica es inmune a las fluctuaciones de velocidad o pequeñas perturbaciones erráticas (ruido dinámico), las computadoras cuánticas topológicas buscan operar y calcular realizando "lazos adiabáticos" sobre los Qubits. Los errores dinámicos de tiempo desaparecen porque el Qubit computa puramente basándose en el área del lazo.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

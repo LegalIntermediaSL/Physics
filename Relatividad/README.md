@@ -42,3 +42,10 @@ Explora cada una de las siguientes subcarpetas para un desarrollo profundo:
 13. **Scientific American**: Artículos de divulgación profunda sobre agujeros negros y cosmología relativista.
 14. **Quanta Magazine**: [Black Holes & Relativity Archive](https://www.quantamagazine.org/physics/) - Excelentes reportajes sobre avances contemporáneos.
 15. **ArXiv (gr-qc)**: [General Relativity and Quantum Cosmology](https://arxiv.org/archive/gr-qc) - Repositorio de pre-impresiones para la investigación actual.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - General Relativity (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtVjaP28HqYI0b213c41wKj) - Métrica, Curvatura y Agujeros Negros sin rodeos.
+- [MIT 8.962: General Relativity (Scott Hughes)](https://www.youtube.com/playlist?list=PLUl4u3cNGP629E-R9yOweV1M3zFf1o4R3) - Formulación tensorial pura de posgrado.

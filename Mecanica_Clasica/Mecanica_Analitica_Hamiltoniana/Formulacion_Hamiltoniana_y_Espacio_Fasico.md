@@ -30,3 +30,10 @@ Ese escenario de $2N$ dimensiones (ejes para $q_1...q_N$ y ejes para $p_1...p_N$
 
 El Teorema de Liouville afirma que si agarras un enjambre de millones de condiciones iniciales (como un gas de partículas o incertidumbres en tus mediciones), formando un "volumen fluido" hiperdimensional en el Espacio Fásico, a medida que ese volumen fluye por las ecuaciones de Hamilton deformándose y retorciéndose de formas monstruosas por el Caos... **Su Hiper-Volumen total (la hiper-área) es estrictamente constante y jamás cambia.**
 La evolución del universo es un fluido incompresible en el espacio fásico.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

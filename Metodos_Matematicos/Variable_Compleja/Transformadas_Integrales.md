@@ -25,3 +25,10 @@ $$
 $$
 
 Es la herramienta reina para resolver **Problemas de Valores Iniciales** (Sistemas transitorios, circuitos RLC, o cinética química), ya que incorpora intrínsecamente las condiciones del sistema en $t=0$ en el espacio algebraico transformado.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

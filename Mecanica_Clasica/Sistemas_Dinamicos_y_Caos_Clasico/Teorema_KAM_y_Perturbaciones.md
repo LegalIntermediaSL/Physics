@@ -15,3 +15,10 @@ Demostraron matemáticamente que si la perturbación $\epsilon$ es lo suficiente
 El sistema sigue comportándose predeciblemente de forma casi-periódica. Solo los toros que tengan "resonancias raciónales graves" (frecuencias que son múltiplos fraccionarios perfectos exactos entre sí, lo que amplifica las sacudidas) explotan y se convierten en zonas difusas microscópicas de caos estocástico esparcido entre los toros estables supervivientes.
 
 El Teorema KAM es la justificación matemática absoluta de por qué la Tierra lleva dando vueltas al Sol establemente durante 4,500 millones de años sin haber salido disparada a pesar de los continuos tironeos gravitacionales de los demás planetas gigantes.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Classical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL47F408D36D615022) - El Lagrangiano, Hamiltoniano y el Principio de Mínima Acción desmitificados.
+- [MIT 8.01: Classical Mechanics (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e) - Física newtoniana icónica.

@@ -21,3 +21,11 @@ En cuántica, las predicciones físicas (Valores Esperados $\langle \hat{A} \ran
 - **La Imagen de Schrödinger**: Los estados $|\Psi(t)\rangle$ se mueven como manecillas de un reloj. Los operadores (como $\hat{x}$) son fijos e inmóviles.
 - **La Imagen de Heisenberg**: Los estados $|\Psi\rangle$ están congelados eternamente en el tiempo. Son los operadores (las reglas de medir) los que cambian dinámicamente según la Ecuación de Movimiento de Heisenberg: $\frac{d\hat{A}_H}{dt} = \frac{i}{\hbar}[\hat{H}, \hat{A}_H] + \frac{\partial \hat{A}_H}{\partial t}$. (Esto es idéntico a los corchetes de Poisson de la mecánica clásica de Hamilton).
 - **La Imagen de Interacción (Dirac)**: Un híbrido usado en Teoría Cuántica de Campos (QFT). Si $\hat{H} = \hat{H}_0 + \hat{V}$, los estados evolucionan debido al potencial perturbativo $\hat{V}$, mientras que los operadores evolucionan debido al Hamiltoniano libre $\hat{H}_0$.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

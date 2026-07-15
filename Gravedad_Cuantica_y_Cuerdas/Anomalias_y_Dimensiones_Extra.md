@@ -29,3 +29,10 @@ Pero, ¿dónde están esas 6 dimensiones espaciales extra?
 La respuesta es la **Compactificación** (Originalmente idea de Kaluza y Klein en 1921). Las 6 dimensiones adicionales están enrolladas (compactificadas) sobre sí mismas en escalas inmensamente microscópicas (escala de Planck), adquiriendo formas geométricas complejas conocidas como **Variedades de Calabi-Yau**.
 
 La topología exacta de esos nudos microscópicos de 6D determina cómo vibran las cuerdas en su interior, fijando con ello la masa del electrón, la fuerza electromagnética y todas las constantes físicas del universo macroscópico 4D.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
+- [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).

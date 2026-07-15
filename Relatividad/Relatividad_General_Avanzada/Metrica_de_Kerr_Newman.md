@@ -25,3 +25,10 @@ Dentro de la ergosfera es matemáticamente imposible quedarte quieto, incluso si
 Roger Penrose demostró que la Ergosfera permite hackear la energía del agujero negro.
 Si disparas un cohete al interior de la Ergosfera, lo divides en dos trozos y dejas que un trozo caiga al interior del horizonte en una trayectoria retrógrada (robando momento angular al agujero), la otra mitad será expulsada hacia afuera *con mucha más energía cinética de la que entró originalmente*.
 Civilizaciones super-avanzadas podrían usar los agujeros negros de Kerr como baterías cósmicas inagotables hasta que el agujero deje de rotar.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - General Relativity (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtVjaP28HqYI0b213c41wKj) - Métrica, Curvatura y Agujeros Negros sin rodeos.
+- [MIT 8.962: General Relativity (Scott Hughes)](https://www.youtube.com/playlist?list=PLUl4u3cNGP629E-R9yOweV1M3zFf1o4R3) - Formulación tensorial pura de posgrado.

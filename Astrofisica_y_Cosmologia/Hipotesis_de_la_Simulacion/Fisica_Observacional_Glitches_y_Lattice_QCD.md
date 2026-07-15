@@ -24,3 +24,10 @@ A medida que los protones viajan millones de años luz, colisionan con los foton
 Si el universo es una cuadrícula (Lattice), Davoudi y Beane calcularon que las interacciones de los rayos cósmicos cerca del corte GZK mostrarían una violación detectada. Dependiendo de dónde apunte nuestro radiotelescopio (orientación de la cuadrícula base de la simulación), el espectro de los rayos cósmicos de máxima energía exhibiría patrones angulares no isotrópicos.
 
 En resumen: **Los rayos cósmicos más potentes mostrarían una forma cuadrilátera de propagación, desvelando los ejes invisibles del motor gráfico del universo.** Actuales observatorios como el IceCube en la Antártida y el Auger en Argentina están compilando datos que, tarde o temprano, acotarán o revelarán estos "píxeles" fundamentales.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.

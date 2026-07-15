@@ -26,3 +26,10 @@ Miguel Alcubierre aplicó la misma técnica en 1994. Inventó la geometría de u
 Esto permite que la burbuja se "deslice" como una ola de surf por el espacio cósmico a cualquier velocidad arbitraria (incluso $10,000c$), sin que la nave en su interior viole el límite de velocidad local (porque la nave está estacionaria respecto al espacio dentro de la burbuja).
 
 Al igual que el agujero de gusano, la ecuación de Einstein dictamina un precio: se necesita un inmenso anillo de materia exótica (energía negativa) equivalente a la masa de Júpiter para estabilizar y propulsar la burbuja, convirtiéndolo por ahora en una mera, pero exacta, utopía matemática.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - General Relativity (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtVjaP28HqYI0b213c41wKj) - Métrica, Curvatura y Agujeros Negros sin rodeos.
+- [MIT 8.962: General Relativity (Scott Hughes)](https://www.youtube.com/playlist?list=PLUl4u3cNGP629E-R9yOweV1M3zFf1o4R3) - Formulación tensorial pura de posgrado.

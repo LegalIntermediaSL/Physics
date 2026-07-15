@@ -23,3 +23,10 @@ $$
 $$
 
 En Mecánica Cuántica analítica milagrosa paramétrica estricta lisa inmaculada pura: **Todo observable absoluto (Medición física milagrosa rigurosamente real matemática abstracta) DEBE rígidamente llanamente asintótica paramétrica milimétricamente estrictamente general ser un operador Hermítico analítico puro inmaculado**.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Carl Bender: Mathematical Physics (Washington University)](https://www.youtube.com/playlist?list=PL1B1123DDB9DD4668) - Brillantes clases de perturbaciones, asintóticos y WKB impartidas por un genio del análisis.
+- [ICTP: Mathematics for Physicists](https://www.youtube.com/user/ictp) - Herramientas analíticas puras desde Trieste.

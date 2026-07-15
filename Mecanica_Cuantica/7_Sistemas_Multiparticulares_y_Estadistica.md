@@ -17,3 +17,11 @@ Esta presión matemática (Presión de Degeneración) es la única razón por la
 
 ## 3. Determinantes de Slater
 Para construir una función de onda matemática válida para un átomo de $N$ electrones (que garantice antisimetría y cumpla el principio de Pauli), John Slater diseñó el **Determinante de Slater**. Al colocar los orbitales individuales en una matriz $N \times N$, el cálculo del determinante garantiza automáticamente que intercambiar dos partículas (intercambiar dos filas) invierte el signo algebraico, y que dos partículas en el mismo estado (dos columnas idénticas) generen un determinante cero, destruyendo el estado físicamente inaceptable.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
+- [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
+- [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.

@@ -396,3 +396,10 @@ $$
 - [Observation of Bose-Einstein Condensation in a Dilute Atomic Gas (Science)](https://www.science.org/doi/10.1126/science.269.5221.198): Relata la creación experimental pionera del primer condensado de Bose-Einstein, un estado cuántico macroscópico dictado puramente por la estadística bosónica.
 - [Many-Body Localization and Thermalization in Quantum Statistical Mechanics (Annu. Rev. Condens. Matter Phys.)](https://www.annualreviews.org/doi/10.1146/annurev-conmatphys-031214-014726): Discute el fenómeno por el cual ciertos sistemas cuánticos fuertemente interactuantes evitan la termalización ergódica predicha por la estadística estándar.
 - [Eigenstate Thermalization Hypothesis (Advances in Physics)](https://www.tandfonline.com/doi/abs/10.1080/00018732.2016.1198134): Fundamenta teóricamente por qué los sistemas cuánticos aislados pueden alcanzar un estado de equilibrio térmico, unificando la mecánica cuántica con el ensamble microcanónico.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [Stanford: Theoretical Minimum - Statistical Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAtj_3l8x1k-D1H_cMB-x162) - Colectivos microcanónicos y fluctuaciones cuánticas.
+- [MIT 8.044: Statistical Physics I (Thomas J. Greytak)](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) - Enfoque riguroso termodinámico (disponible en OCW/YouTube).

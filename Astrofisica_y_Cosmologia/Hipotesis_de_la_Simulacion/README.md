@@ -16,3 +16,10 @@ Este tratado consta de 4 extensos capítulos que entrelazan los últimos desarro
 2. [Física Digital y Mecánica Cuántica](Fisica_Digital_y_Mecanica_Cuantica.md): La **Correspondencia AdS/CFT**, el Principio Holográfico, la granularidad gravitacional cuántica y las similitudes radicales del colapso de ondas con algoritmos de "Occlusion Culling".
 3. [Límites Termodinámicos y Computacionales del Cosmos](Limites_Computacionales_del_Universo.md): Límite de Bremermann, Principio de Landauer, Límite de Margolus-Levitin y los cálculos masivos de Seth Lloyd sobre un universo que *calcula* exactamente $10^{120}$ operaciones booleanas lógicas.
 4. [Bibliografía y Artículos Seminales](Bibliografia_y_Articulos.md): *Papers* y ensayos (Wheeler, Bekenstein, Bostrom, Maldacena, Lloyd) de obligatoria lectura.
+
+## 📺 Clases Magistrales en YouTube
+
+Si deseas profundizar en estos conceptos con los mejores profesores del mundo, aquí tienes algunas clases magistrales gratuitas recomendadas:
+
+- [MIT 8.286: The Early Universe (Alan Guth)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61BjmEhhzEDqLq0B7k7Uon-) - Impartido por el propio creador de la Teoría Inflacionaria.
+- [Stanford: Cosmology (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvM2BvGzD9L9v_EwR04QzZl) - Métrica FLRW, Expansión Cósmica y Fondo de Microondas.
