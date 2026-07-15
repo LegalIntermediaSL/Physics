@@ -95,7 +95,7 @@ flowchart TD
     A -->|Ecuación de Poisson| C(Potencial Escalar V)
     B -->|Gradiente E = -\nabla V| C
     C -->|Integral de Camino V = -\int E \cdot dl| B
-    B -->|Integral de Superficie \epsilon_0/2 |E|^2| D{Energía Electrostática U}
+    B -->|"Integral de Superficie \epsilon_0/2 |E|^2"| D{Energía Electrostática U}
     C -->|Integral de Volumen 1/2 \int \rho V| D
     B -->|Expansión en el infinito| E[Desarrollo Multipolar]
 ```

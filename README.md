@@ -1,6 +1,9 @@
 # Repositorio de Física
 
-¡Bienvenido al repositorio de aprendizaje de Física! Este espacio está diseñado para recopilar, estructurar y facilitar el estudio de las diversas ramas de la física. Aquí encontrarás rutas de aprendizaje, temas clave, y enlaces a cursos y artículos recomendados de alta calidad.
+¡Bienvenidos al repositorio de Física Teórica más riguroso y profundo! 
+Aquí se condensa el conocimiento desde la mecánica newtoniana hasta la Teoría M, formulado estrictamente bajo el lenguaje de la matemática avanzada.
+
+> **Aviso Legal / Disclaimer**: El contenido de este repositorio se suministra "tal cual" (as is) y con fines estricta y puramente divulgativos, educativos e informativos, sin garantía ni compromiso legal de ningún tipo. Los autores no asumen ninguna responsabilidad por posibles errores, omisiones o el uso que se le dé a la información y simulaciones aquí contenidas.
 
 ## Estructura del Repositorio
 
