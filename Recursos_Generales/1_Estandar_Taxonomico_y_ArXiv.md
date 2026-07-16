@@ -17,7 +17,8 @@ Este sistema te permite localizar ecuaciones de forma cruzada. Si lees "Ver fór
 ### Índice Taxonómico Oficial (Siglas en Inglés)
 | Código | Acrónimo en Inglés | Traducción / Área | Etiqueta ArXiv | Descripción |
 | :--- | :--- | :--- | :--- | :--- |
-| **[AST]** | **AST**rophysics & Cosmology | Astrofísica y Cosmología | `astro-ph` | Agujeros negros, expansión cósmica, evolución estelar. |
+| **[AST]** | **AST**rophysics | Astrofísica | `astro-ph` | Evolución estelar, galaxias, agujeros negros, límite de Chandrasekhar. |
+| **[COS]** | **COS**mology | Cosmología | `gr-qc` / `astro-ph.CO` | Big Bang, Métrica FLRW, Energía Oscura, Inflación, Multiverso. |
 | **[AMO]** | **A**tomic, **M**olecular & **O**ptical | Física Atómica y Molecular | `physics.atom-ph` | Condensados BEC, espectroscopia, estructura fina. |
 | **[BSM]** | **B**eyond **S**tandard **M**odel | Física Más Allá del Modelo Estándar | `hep-ph` / `hep-th` | Supersimetría (SUSY), Materia Oscura, Axiones. |
 | **[CMA]** | **C**ondensed **MA**tter | Materia Condensada | `cond-mat` | Redes de Bravais, superconductividad, fermiones pesados. |
