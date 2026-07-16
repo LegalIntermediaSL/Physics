@@ -19,3 +19,13 @@ Si deseas profundizar en estos conceptos con los mejores profesores del mundo, a
 - [Harvard Physics 253a: Quantum Field Theory (Sidney Coleman)](https://www.youtube.com/playlist?list=PLhsb6tmzSpiwrZerOUkt_pUFKOGrwzsCW) - Las lecturas legendarias e históricas de Coleman. Obligatorias.
 - [David Tong: Lectures on Quantum Field Theory (Cambridge)](https://www.youtube.com/playlist?list=PLbBsZ8Y0xR422Dts1AILp5-Fm4m_Uo4w7) - Modernas, elegantes y clarísimas.
 - [Stanford: Advanced Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PLGjGECIym1354Fh8a8H1lJb6pLox56F-F) - Puente perfecto entre QM y Segunda Cuantización.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Cambridge DAMTP: Quantum Field Theory](http://www.damtp.cam.ac.uk/user/tong/qft.html) - David Tong. (Las notas de clase en vídeo más famosas de la década).
+  - [Harvard: Quantum Field Theory I](https://scholar.harvard.edu/schwartz) - Matthew Schwartz.
+- **Libros de Texto Canónicos:**
+  - *An Introduction to Quantum Field Theory* - Michael E. Peskin & Daniel V. Schroeder. (El estándar de oro para cálculos con diagramas de Feynman).
+  - *Quantum Field Theory in a Nutshell* - A. Zee. (Enfoque conceptual y fascinante).
+  - *Quantum Field Theory and the Standard Model* - Matthew D. Schwartz.

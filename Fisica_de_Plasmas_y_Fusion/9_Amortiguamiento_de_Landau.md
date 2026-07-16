@@ -17,3 +17,13 @@ Para un plasma térmico estable (Distribución Maxwell-Boltzmann), siempre hay m
 
 ## 3. Resolución Matemática en Variable Compleja
 Para probarlo rigurosamente, Landau tuvo que resolver la Ecuación de Vlasov utilizando transformadas de Fourier en el espacio y transformadas de Laplace en el tiempo. La integral sobre velocidades presentaba una singularidad insalvable en $v = \omega/k$. Landau aplicó Análisis Complejo de contornos (el Contorno de Landau) rodeando el polo analíticamente, demostrando matemáticamente la transferencia directa de información de fase a termalización sin violar la entropía o la reversibilidad de Vlasov.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 22.611J: Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/) - Prof. Ian Hutchinson.
+  - [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/) - Archivos de educación online.
+- **Libros de Texto Canónicos:**
+  - *Introduction to Plasma Physics and Controlled Fusion* - Francis F. Chen. (El texto introductorio más famoso).
+  - *The Physics of Plasmas* - T.J.M. Boyd & J.J. Sanderson.
+  - *Ideal Magnetohydrodynamics* - Jeffrey P. Freidberg.

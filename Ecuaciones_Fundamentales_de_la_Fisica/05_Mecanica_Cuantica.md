@@ -70,3 +70,12 @@ $$
 \Gamma_{i \to f} = \frac{2\pi}{\hbar} |\langle f | \hat{H}' | i \rangle|^2 \rho(E_f)
 $$
 
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.01 / 8.02 / 8.03 / 8.04](https://ocw.mit.edu/courses/physics/) - El ciclo completo de Walter Lewin y Allan Adams.
+  - [The Theoretical Minimum](https://theoreticalminimum.com/) - Leonard Susskind. Todo el marco teórico de la física moderna.
+- **Libros de Texto Canónicos:**
+  - *The Feynman Lectures on Physics* (Vol. I, II, III) - Richard Feynman. [Disponible online gratuitamente por Caltech](https://www.feynmanlectures.caltech.edu/).
+  - *University Physics* - Young & Freedman (Para bases rigurosas).

@@ -18,3 +18,14 @@ Es conocida como *Ecuación de Schrödinger No Lineal (NLSE)* en física matemá
 ## 3. Superfluidez y Vórtices Cuantizados
 El término no-lineal repulsivo confiere "rigidez" a la función de onda fluida. Si rotas ligeramente el recipiente del condensado, en vez de rotar de forma continua solidaria, el fluido rechaza el movimiento demostrando **Superfluidez** (viscosidad cero estricta).
 Si rotas el recipiente lo suficientemente rápido, aparecen agujeros y singularidades topológicas en la red: **Vórtices Cuantizados**. La circulación de la velocidad alrededor de estos vórtices no puede tomar valores arbitrarios en $R$, está hipercuantizada de forma estricta en pasos enteros de constante de Planck ($\kappa = \frac{nh}{m}$), idéntico a las líneas de flujo en un superconductor magnético de Tipo-II.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.421: Atomic and Optical Physics I](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/) - Prof. Wolfgang Ketterle (Premio Nobel por el condensado de Bose-Einstein).
+  - [Oxford University: Atomic and Laser Physics](https://podcasts.ox.ac.uk/series/atomic-and-laser-physics).
+- **Libros de Texto Canónicos:**
+  - *Atomic Physics* - Christopher J. Foot.
+  - *Physics of Atoms and Molecules* - B.H. Bransden & C.J. Joachain.
+- **Lecturas Fundamentales:**
+  - Artículos originales de Ketterle y Cornell sobre el enfriamiento láser y el BEC.

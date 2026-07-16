@@ -11,3 +11,13 @@ El átomo de Rubidio y el propio Fotón individual del vacío pierden sus identi
 
 ## 3. Modelo de Jaynes-Cummings
 La asombrosa topología matemática en la matriz de energía se resuelve por el Hamiltoniano estricto de Jaynes-Cummings, fusionando osciladores cuánticos puros de espín uniparticular. La frecuencia de la simbiosis oscilante acoplada fotón-átomo es proporcional a $\Omega_R \propto \sqrt{n+1}$. Es la base principal para diseñar arquitecturas exóticas, determinísticas y coherentes de hardware de **Computadoras Cuánticas de Trampa de Iones**.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.03: Physics III: Vibrations and Waves](https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/) - Walter Lewin.
+  - [Stanford: Lasers and Optics](https://online.stanford.edu/courses) - Recursos del departamento de Óptica de Stanford.
+- **Libros de Texto Canónicos:**
+  - *Optics* - Eugene Hecht. (El texto clásico de pregrado).
+  - *Principles of Optics* - Max Born & Emil Wolf. (El texto más profundo, clásico absoluto).
+  - *Quantum Optics* - Marlan O. Scully & M. Suhail Zubairy. (Para la frontera cuántica).

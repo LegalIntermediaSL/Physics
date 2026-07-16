@@ -21,3 +21,14 @@ $$
 $$
 
 El último término negativo de la izquierda no tiene análogo clásico. Es el **Operador de Intercambio (Exchange)** y baja la energía del átomo al mantener a electrones del mismo espín alejados por la pura geometría de los números complejos, estabilizando la tabla periódica moderna.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.421: Atomic and Optical Physics I](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/) - Prof. Wolfgang Ketterle (Premio Nobel por el condensado de Bose-Einstein).
+  - [Oxford University: Atomic and Laser Physics](https://podcasts.ox.ac.uk/series/atomic-and-laser-physics).
+- **Libros de Texto Canónicos:**
+  - *Atomic Physics* - Christopher J. Foot.
+  - *Physics of Atoms and Molecules* - B.H. Bransden & C.J. Joachain.
+- **Lecturas Fundamentales:**
+  - Artículos originales de Ketterle y Cornell sobre el enfriamiento láser y el BEC.

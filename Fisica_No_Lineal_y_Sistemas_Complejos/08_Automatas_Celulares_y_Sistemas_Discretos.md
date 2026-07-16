@@ -20,3 +20,13 @@ Clasificación cualitativa de Dinámica (Regla 30 y 110):
 - **Clase 2:** Convergencia a un límite periódico o estructuras localizadas.
 - **Clase 3 (Caos):** Comportamiento seudoaleatorio (Regla 30). Su atractor es estocástico.
 - **Clase 4 (Complejidad):** Transición del borde del caos. Generación de estructuras de vida prolongada análogas al Juego de la Vida (Regla 110, probada universal para computación algorítmica).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Santa Fe Institute (Complexity Explorer)](https://www.complexityexplorer.org/) - Cursos en Dinámica No Lineal, Caos y Sistemas Complejos.
+  - [MIT 2.050J: Nonlinear Dynamics and Chaos](https://ocw.mit.edu/courses/18-062j-mathematics-of-machine-learning-fall-2015/) - Prof. Steven Strogatz (Cornell Lectures, muy populares en YouTube).
+- **Libros de Texto Canónicos:**
+  - *Nonlinear Dynamics and Chaos* - Steven H. Strogatz. (La "Biblia" introductoria).
+  - *Classical Mechanics* (Sección de Caos) - John R. Taylor.
+  - *Fractal Geometry of Nature* - Benoit Mandelbrot.

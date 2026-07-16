@@ -16,3 +16,13 @@ q = \frac{r B_t}{R B_p} > 1
 $$
 
 Donde $R$ es el radio mayor del toroide, $r$ el menor, $B_t$ campo toroidal y $B_p$ poloidal inducido. Si $q < 1$, el plasma inevitablemente desarrolla modos topológicos de torsión anudada y colapsa (Disrupción).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 22.611J: Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/) - Prof. Ian Hutchinson.
+  - [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/) - Archivos de educación online.
+- **Libros de Texto Canónicos:**
+  - *Introduction to Plasma Physics and Controlled Fusion* - Francis F. Chen. (El texto introductorio más famoso).
+  - *The Physics of Plasmas* - T.J.M. Boyd & J.J. Sanderson.
+  - *Ideal Magnetohydrodynamics* - Jeffrey P. Freidberg.

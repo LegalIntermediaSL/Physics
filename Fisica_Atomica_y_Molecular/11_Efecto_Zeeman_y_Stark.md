@@ -27,3 +27,14 @@ Para campos inmensos, este delicado acoplamiento interno "Espín-Órbita" (la in
 
 ## 4. Efecto Stark (Campo Eléctrico)
 Similarmente, Johannes Stark descubrió la división espectral bajo campos Eléctricos intensos $\vec{E}$. Las órbitas de los electrones se distorsionan y se "estiran" asimétricamente polarizándose $\Delta E = - \vec{p}_{e} \cdot \vec{E}$. Afecta drásticamente las transiciones del Hidrógeno y es utilizado hoy para enfriamiento atómico cuántico.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.421: Atomic and Optical Physics I](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/) - Prof. Wolfgang Ketterle (Premio Nobel por el condensado de Bose-Einstein).
+  - [Oxford University: Atomic and Laser Physics](https://podcasts.ox.ac.uk/series/atomic-and-laser-physics).
+- **Libros de Texto Canónicos:**
+  - *Atomic Physics* - Christopher J. Foot.
+  - *Physics of Atoms and Molecules* - B.H. Bransden & C.J. Joachain.
+- **Lecturas Fundamentales:**
+  - Artículos originales de Ketterle y Cornell sobre el enfriamiento láser y el BEC.

@@ -32,3 +32,13 @@ Aplicando identidades vectoriales genéricas, la perturbación se divide mágica
 - **Ondas S (Secundarias / Cizalla)**: Asociadas al rotacional $\nabla \times \mathbf{u}$. Deformación de pura cizalla (cambio de forma). No pueden existir en líquidos ni gases porque $\mu=0$. Viajan más lento ($c_s = \sqrt{\mu/\rho}$).
 
 Este es el santo grial de la geofísica: las ondas S no cruzan el Núcleo Externo de la Tierra, demostrando indiscutiblemente que el núcleo externo es líquido puro fundido.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 2.006: Thermal-Fluids Engineering](https://ocw.mit.edu/courses/2-006-thermal-fluids-engineering-ii-spring-2004/).
+  - [National Committee for Fluid Mechanics Films (NCFMF)](https://web.mit.edu/hml/ncfmf.html) - Serie histórica de vídeos del MIT (obligatorio para visualizar fluidos).
+- **Libros de Texto Canónicos:**
+  - *Fluid Mechanics* - L.D. Landau & E.M. Lifshitz (Vol. 6 del Curso de Física Teórica).
+  - *An Introduction to Fluid Dynamics* - G.K. Batchelor.
+  - *Turbulence: The Legacy of A.N. Kolmogorov* - Uriel Frisch.

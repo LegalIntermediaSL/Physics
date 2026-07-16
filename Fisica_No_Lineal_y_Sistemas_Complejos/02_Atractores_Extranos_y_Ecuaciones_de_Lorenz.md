@@ -33,3 +33,13 @@ Los valores propios de $J$ dictan que el origen se desestabiliza cuando $\rho > 
 
 ## 3. El Atractor Extraño
 Cuando $\rho > 24.74$ (con $\sigma=10, \beta=8/3$), los puntos fijos se vuelven inestables (vía bifurcación de Hopf subcrítica). Las trayectorias son confinadas a un volumen acotado en el espacio de fases pero no cruzan ni convergen a un límite periódico; caen en un **Atractor Extraño** de geometría fractal con dimensión de Hausdorff fraccionaria $d \approx 2.06$.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Santa Fe Institute (Complexity Explorer)](https://www.complexityexplorer.org/) - Cursos en Dinámica No Lineal, Caos y Sistemas Complejos.
+  - [MIT 2.050J: Nonlinear Dynamics and Chaos](https://ocw.mit.edu/courses/18-062j-mathematics-of-machine-learning-fall-2015/) - Prof. Steven Strogatz (Cornell Lectures, muy populares en YouTube).
+- **Libros de Texto Canónicos:**
+  - *Nonlinear Dynamics and Chaos* - Steven H. Strogatz. (La "Biblia" introductoria).
+  - *Classical Mechanics* (Sección de Caos) - John R. Taylor.
+  - *Fractal Geometry of Nature* - Benoit Mandelbrot.

@@ -17,3 +17,14 @@ A un nivel de aumento matemático mil veces superior (orden $10^{-7}$ eV), las l
 Este desgarro sutil se debe a que el propio **Protón central** también posee un pequeño espín nuclear y dipolo magnético. Aunque minúsculo comparado al del electrón, interactúa mediante fuerza magnética dipolo-dipolo con el electrón orbital.
 
 La Estructura Hiperfina es la responsable de la famosa línea astronómica de emisión de Hidrógeno Neutro a 21 cm (1420 MHz) utilizada en radiotelescopios cósmicos para trazar los brazos espirales de las Galaxias enteras, y el principio cuántico que subyace al equipo de Imagen por Resonancia Magnética médica en los hospitales (RMN).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.421: Atomic and Optical Physics I](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/) - Prof. Wolfgang Ketterle (Premio Nobel por el condensado de Bose-Einstein).
+  - [Oxford University: Atomic and Laser Physics](https://podcasts.ox.ac.uk/series/atomic-and-laser-physics).
+- **Libros de Texto Canónicos:**
+  - *Atomic Physics* - Christopher J. Foot.
+  - *Physics of Atoms and Molecules* - B.H. Bransden & C.J. Joachain.
+- **Lecturas Fundamentales:**
+  - Artículos originales de Ketterle y Cornell sobre el enfriamiento láser y el BEC.

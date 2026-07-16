@@ -13,3 +13,12 @@ En lugar de forzar paridades complejas entre cables distantes (lo cual genera m�
 En un Código Superficial, dispones los qubits en una rejilla bidimensional (como un tablero de ajedrez gigante). Defines el "Cero Lógico" o el "Uno Lógico" no como un estado de un qubit, sino como una propiedad matemática global (una cuerda de entrelazamiento topológico) que atraviesa el chip de un extremo a otro.
 Si el ruido golpea algunos qubits y los revienta localmente, la información global permanece ilesa, igual que un nudo atado en un cable de acero no desaparece porque rompas algunos hilos superficiales.
 El Código Superficial es la arquitectura definitiva que está construyendo Google y las grandes farmacéuticas para la tolerancia a fallos.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.370: Quantum Computation](https://ocw.mit.edu/courses/8-370-quantum-computation-fall-2020/) - Prof. Peter Shor (Inventor del Algoritmo de Shor).
+  - [Qiskit Textbook (IBM)](https://qiskit.org/textbook/preface.html) - Curso interactivo gratuito de IBM Quantum.
+- **Libros de Texto Canónicos:**
+  - *Quantum Computation and Quantum Information* - Michael A. Nielsen & Isaac L. Chuang. (Conocido universalmente como "Mike & Ike", la Biblia absoluta del campo).
+  - *Quantum Computing since Democritus* - Scott Aaronson.

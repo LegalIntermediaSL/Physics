@@ -18,3 +18,14 @@ Si deseas profundizar en estos conceptos con los mejores profesores del mundo, a
 
 - [Stanford: String Theory and M-Theory (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAul6f91XgBv0W2c8B2O9Eic) - Introducción accesible a dimensiones extra y bosones vibrantes.
 - [Perimeter Institute: Quantum Gravity](https://www.youtube.com/user/PIOutreach) - Clases magistrales sobre gravedad cuántica de lazos (LQG) y holografía (AdS/CFT).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Stanford: String Theory and M-Theory](https://theoreticalminimum.com/courses/string-theory/2010/fall) - Leonard Susskind.
+  - [Perimeter Institute: String Theory (PIRSA)](https://pirsa.org/) - Cursos de posgrado.
+  - [Cambridge DAMTP: String Theory Lectures](http://www.damtp.cam.ac.uk/user/tong/string.html) - David Tong.
+- **Libros de Texto Canónicos:**
+  - *String Theory* (Vol 1 y 2) - Joseph Polchinski. (La Biblia moderna de Cuerdas).
+  - *A First Course in String Theory* - Barton Zwiebach. (Excelente para nivel grado).
+  - *Quantum Gravity* - Carlo Rovelli. (Para la perspectiva de Loop Quantum Gravity).

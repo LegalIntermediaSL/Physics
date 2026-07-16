@@ -39,3 +39,13 @@ $$
 \sin \mu = \frac{1}{M}
 $$
 
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 2.006: Thermal-Fluids Engineering](https://ocw.mit.edu/courses/2-006-thermal-fluids-engineering-ii-spring-2004/).
+  - [National Committee for Fluid Mechanics Films (NCFMF)](https://web.mit.edu/hml/ncfmf.html) - Serie histórica de vídeos del MIT (obligatorio para visualizar fluidos).
+- **Libros de Texto Canónicos:**
+  - *Fluid Mechanics* - L.D. Landau & E.M. Lifshitz (Vol. 6 del Curso de Física Teórica).
+  - *An Introduction to Fluid Dynamics* - G.K. Batchelor.
+  - *Turbulence: The Legacy of A.N. Kolmogorov* - Uriel Frisch.

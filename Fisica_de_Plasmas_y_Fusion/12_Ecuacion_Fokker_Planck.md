@@ -17,3 +17,13 @@ Físicamente, la evolución temporal de la temperatura o velocidad estocástica 
 - El Vector Fricción Dinámica $\vec{A}$ (el arrastre térmico que ralentiza un haz inyectado).
 - El Tensor de Difusión Velocimetral $D_{ij}$ (el ensanchamiento estocástico y esparcimiento).
 Esta ecuación permite calcular tiempos de confinamiento críticos ($\tau_E$) y potencias de calentamiento NBI (*Neutral Beam Injection*) en ITER.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 22.611J: Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/) - Prof. Ian Hutchinson.
+  - [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/) - Archivos de educación online.
+- **Libros de Texto Canónicos:**
+  - *Introduction to Plasma Physics and Controlled Fusion* - Francis F. Chen. (El texto introductorio más famoso).
+  - *The Physics of Plasmas* - T.J.M. Boyd & J.J. Sanderson.
+  - *Ideal Magnetohydrodynamics* - Jeffrey P. Freidberg.

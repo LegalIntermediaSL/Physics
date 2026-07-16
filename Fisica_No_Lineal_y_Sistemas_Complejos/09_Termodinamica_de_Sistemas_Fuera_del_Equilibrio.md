@@ -33,3 +33,13 @@ L_{ik} = L_{ki}
 $$
 
 Esto interconecta, de forma profunda, procesos diametralmente opuestos (ej., Efecto Peltier y Seebeck termoeléctricos).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Santa Fe Institute (Complexity Explorer)](https://www.complexityexplorer.org/) - Cursos en Dinámica No Lineal, Caos y Sistemas Complejos.
+  - [MIT 2.050J: Nonlinear Dynamics and Chaos](https://ocw.mit.edu/courses/18-062j-mathematics-of-machine-learning-fall-2015/) - Prof. Steven Strogatz (Cornell Lectures, muy populares en YouTube).
+- **Libros de Texto Canónicos:**
+  - *Nonlinear Dynamics and Chaos* - Steven H. Strogatz. (La "Biblia" introductoria).
+  - *Classical Mechanics* (Sección de Caos) - John R. Taylor.
+  - *Fractal Geometry of Nature* - Benoit Mandelbrot.

@@ -31,3 +31,12 @@ Inventado por Bennett et al., permite transferir un estado desconocido $|\psi\ra
 2. Dos bits clásicos de comunicación telefónica.
 
 Alice realiza una Medición de Bell conjunta entre su qubit y su mitad entrelazada. El colapso cuántico destruye el estado original $|\psi\rangle$ (cumpliendo a rajatabla el Teorema de No-Clonación) y proyecta instantáneamente la mitad de Bob en uno de 4 posibles estados disfrazados. Bob recibe la llamada telefónica de Alice con 2 bits (ej: "01"), aplica la compuerta de Pauli de corrección (ej: $\sigma_x$), y **recupera intacto el estado $|\psi\rangle$ original**. La información ha viajado sin cruzar el espacio físico entre ellos.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.370: Quantum Computation](https://ocw.mit.edu/courses/8-370-quantum-computation-fall-2020/) - Prof. Peter Shor (Inventor del Algoritmo de Shor).
+  - [Qiskit Textbook (IBM)](https://qiskit.org/textbook/preface.html) - Curso interactivo gratuito de IBM Quantum.
+- **Libros de Texto Canónicos:**
+  - *Quantum Computation and Quantum Information* - Michael A. Nielsen & Isaac L. Chuang. (Conocido universalmente como "Mike & Ike", la Biblia absoluta del campo).
+  - *Quantum Computing since Democritus* - Scott Aaronson.

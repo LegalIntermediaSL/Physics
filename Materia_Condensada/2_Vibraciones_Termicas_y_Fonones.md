@@ -19,3 +19,13 @@ $$
 C_V \propto T^3 \quad (\text{para } T \to 0)
 $$
 
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Oxford University: The Oxford Solid State Basics](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) - Prof. Steven H. Simon.
+  - [MIT 8.231: Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/).
+- **Libros de Texto Canónicos:**
+  - *Solid State Physics* - Neil W. Ashcroft & N. David Mermin. (El estándar de oro).
+  - *Introduction to Solid State Physics* - Charles Kittel.
+  - *Condensed Matter Field Theory* - Alexander Altland & Ben Simons. (Avanzado, integrando QFT).

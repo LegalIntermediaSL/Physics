@@ -25,3 +25,13 @@ Para visualizarlo en el potencial del sombrero mexicano:
 El Teorema de Goldstone solo aplica estrictamente para simetrías **globales**. Cuando la simetría que se rompe es una simetría **local (Gauge)**, ocurre magia cuántica: el bosón de gauge asociado (que originalmente no tiene masa, como un fotón) "se come" al bosón de Goldstone sin masa. 
 
 Al devorarlo, el bosón de gauge adquiere un grado de libertad longitudinal extra, lo que le permite **adquirir masa** (convirtiéndose en bosones $W^\pm$ y $Z^0$). El bosón de Goldstone desaparece del espectro físico. Esto es el Mecanismo de Brout-Englert-Higgs.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Cambridge DAMTP: Quantum Field Theory](http://www.damtp.cam.ac.uk/user/tong/qft.html) - David Tong. (Las notas de clase en vídeo más famosas de la década).
+  - [Harvard: Quantum Field Theory I](https://scholar.harvard.edu/schwartz) - Matthew Schwartz.
+- **Libros de Texto Canónicos:**
+  - *An Introduction to Quantum Field Theory* - Michael E. Peskin & Daniel V. Schroeder. (El estándar de oro para cálculos con diagramas de Feynman).
+  - *Quantum Field Theory in a Nutshell* - A. Zee. (Enfoque conceptual y fascinante).
+  - *Quantum Field Theory and the Standard Model* - Matthew D. Schwartz.

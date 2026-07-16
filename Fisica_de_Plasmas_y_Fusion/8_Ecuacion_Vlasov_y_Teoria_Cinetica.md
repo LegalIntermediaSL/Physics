@@ -16,3 +16,13 @@ Esta es una ecuación diferencial parcial no lineal brutal, porque los campos el
 
 ## 3. Importancia Analítica
 A pesar de su complejidad, Vlasov es la reina de la física de plasmas calientes. Es la única capaz de predecir efectos puramente cinéticos (donde la forma estadística de las velocidades importa), como ecos de plasma, amortiguamiento sin colisiones e inestabilidades de microescala donde los modelos fluidos de MHD fallan catastróficamente.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 22.611J: Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/) - Prof. Ian Hutchinson.
+  - [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/) - Archivos de educación online.
+- **Libros de Texto Canónicos:**
+  - *Introduction to Plasma Physics and Controlled Fusion* - Francis F. Chen. (El texto introductorio más famoso).
+  - *The Physics of Plasmas* - T.J.M. Boyd & J.J. Sanderson.
+  - *Ideal Magnetohydrodynamics* - Jeffrey P. Freidberg.

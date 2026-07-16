@@ -39,3 +39,14 @@ No existe área física menor a $\sim l_P^2$. Por debajo de la escala de Planck,
 
 ## 5. Espuma de Espín (Spin Foams)
 Si las redes de espín representan el espacio topológico 3D en un instante temporal dado, su evolución y dinámica crean "historiales". Al moverse en el tiempo y cambiar de forma, las líneas barren superficies y los nodos barren bordes, formando un complejo espaciotemporal 4D discreto conocido como la **Espuma de Espín (Spin Foam)**.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Stanford: String Theory and M-Theory](https://theoreticalminimum.com/courses/string-theory/2010/fall) - Leonard Susskind.
+  - [Perimeter Institute: String Theory (PIRSA)](https://pirsa.org/) - Cursos de posgrado.
+  - [Cambridge DAMTP: String Theory Lectures](http://www.damtp.cam.ac.uk/user/tong/string.html) - David Tong.
+- **Libros de Texto Canónicos:**
+  - *String Theory* (Vol 1 y 2) - Joseph Polchinski. (La Biblia moderna de Cuerdas).
+  - *A First Course in String Theory* - Barton Zwiebach. (Excelente para nivel grado).
+  - *Quantum Gravity* - Carlo Rovelli. (Para la perspectiva de Loop Quantum Gravity).

@@ -29,3 +29,12 @@ El Demonio se calienta al borrar su memoria, salvando eternamente la Termodinám
 Supón que el Universo entero (Alicia y Bob) está en un estado Puro colosal $|\Psi_{AB}\rangle$ de entropía cero absoluto ($S_{AB} = 0$).
 Si Alicia solo tiene acceso a su subsistema $A$, ignorando por completo la existencia de la galaxia $B$, debe realizar una traza parcial: $\rho_A = \text{Tr}_B (|\Psi_{AB}\rangle\langle\Psi_{AB}|)$.
 Incluso si el universo entero está frío y perfectamente puro, el subsistema local de Alicia, $\rho_A$, parecerá termodinámicamente caliente y mixto, con una alta Entropía de Von Neumann. **La aparente termodinámica caótica y la temperatura local que experimentamos a diario podrían ser simplemente el resultado del masivo entrelazamiento cuántico oculto con el resto del universo.**
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.370: Quantum Computation](https://ocw.mit.edu/courses/8-370-quantum-computation-fall-2020/) - Prof. Peter Shor (Inventor del Algoritmo de Shor).
+  - [Qiskit Textbook (IBM)](https://qiskit.org/textbook/preface.html) - Curso interactivo gratuito de IBM Quantum.
+- **Libros de Texto Canónicos:**
+  - *Quantum Computation and Quantum Information* - Michael A. Nielsen & Isaac L. Chuang. (Conocido universalmente como "Mike & Ike", la Biblia absoluta del campo).
+  - *Quantum Computing since Democritus* - Scott Aaronson.

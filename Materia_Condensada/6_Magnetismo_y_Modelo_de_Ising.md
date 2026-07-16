@@ -13,3 +13,13 @@ La atracción fuerte de nevera. Imán puro, salvaje y duro (Fe, Ni, Co). Al apag
 Modelamos matemáticamente un plano bidimensional de espines cuánticos de dos estados abstractos: (Arriba $+1$ o Abajo $-1$). Solo interaccionan vecinos adyacentes ($E = -J \sum s_i s_j$).
 En uno de los despliegues de genio matemático supremo de la historia de la física del siglo XX (1944), **Lars Onsager** resolvió y computó analíticamente la colosal función de partición termodinámica $Z$ hiperestricta y el calor térmico de esta parrilla de cuadritos bidimensional a nivel infinito.
 Demostró algebraicamente cómo, a baja temperatura, reina un bloque infinito dominado globalmente de espín $+1$ coherente roto, y que, al subir a la Temperatura Crítica ($T_C$ Curie), el modelo térmico sufre una inestabilidad brutal donde las perturbaciones caóticas de signo inverso asaltan en enjambres los dominios fractales, aniquilando abruptamente la magnetización espontánea global sin rastro, provocando de manera matemática innegable una colosal Transición de Fase Termodinámica Exacta de Segundo Orden.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Oxford University: The Oxford Solid State Basics](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) - Prof. Steven H. Simon.
+  - [MIT 8.231: Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/).
+- **Libros de Texto Canónicos:**
+  - *Solid State Physics* - Neil W. Ashcroft & N. David Mermin. (El estándar de oro).
+  - *Introduction to Solid State Physics* - Charles Kittel.
+  - *Condensed Matter Field Theory* - Alexander Altland & Ben Simons. (Avanzado, integrando QFT).

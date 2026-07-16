@@ -17,3 +17,13 @@ E(k) = C_K \varepsilon^{2/3} k^{-5/3}
 $$
 
 Esta elegante ley potencial fraccionaria ha sido confirmada universalmente: desde túneles de viento hipersónicos hasta las gigantescas mareas de plasma estelar y nubes moleculares galácticas.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 2.006: Thermal-Fluids Engineering](https://ocw.mit.edu/courses/2-006-thermal-fluids-engineering-ii-spring-2004/).
+  - [National Committee for Fluid Mechanics Films (NCFMF)](https://web.mit.edu/hml/ncfmf.html) - Serie histórica de vídeos del MIT (obligatorio para visualizar fluidos).
+- **Libros de Texto Canónicos:**
+  - *Fluid Mechanics* - L.D. Landau & E.M. Lifshitz (Vol. 6 del Curso de Física Teórica).
+  - *An Introduction to Fluid Dynamics* - G.K. Batchelor.
+  - *Turbulence: The Legacy of A.N. Kolmogorov* - Uriel Frisch.

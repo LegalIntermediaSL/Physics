@@ -34,3 +34,13 @@ h_1 + \frac{1}{2}u_1^2 = h_2 + \frac{1}{2}u_2^2
 $$
 
 La segunda ley de la termodinámica dicta que las Ondas de Choque son irreversibles; la entropía siempre salta hacia arriba ($\Delta S > 0$), y por ende, solo pueden existir choques compresivos (un flujo supersónico frenando a subsónico de golpe).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 2.006: Thermal-Fluids Engineering](https://ocw.mit.edu/courses/2-006-thermal-fluids-engineering-ii-spring-2004/).
+  - [National Committee for Fluid Mechanics Films (NCFMF)](https://web.mit.edu/hml/ncfmf.html) - Serie histórica de vídeos del MIT (obligatorio para visualizar fluidos).
+- **Libros de Texto Canónicos:**
+  - *Fluid Mechanics* - L.D. Landau & E.M. Lifshitz (Vol. 6 del Curso de Física Teórica).
+  - *An Introduction to Fluid Dynamics* - G.K. Batchelor.
+  - *Turbulence: The Legacy of A.N. Kolmogorov* - Uriel Frisch.

@@ -12,3 +12,12 @@ El núcleo del milagro computacional es la **Transformada de Fourier Cuántica (
 Imagina que buscas un nombre específico en una guía telefónica desordenada de $N$ páginas. Clásicamente debes leer, en promedio, $N/2$ páginas (tiempo lineal $\mathcal{O}(N)$).
 Lov Grover (1996) diseñó un algoritmo iterativo usando la reflexión sobre el estado promedio de Hilbert (Inversión sobre la Media). Al aplicar el Oráculo (que marca la solución con una fase $-1$) y el operador de Difusión de Grover repetidas veces, la amplitud de probabilidad de la respuesta correcta crece, mientras el resto decae.
 El estado cuántico converge en la solución correcta en exactamente $\mathcal{O}(\sqrt{N})$ pasos. Es una aceleración matemática cuadrática probada e imposible de batir.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.370: Quantum Computation](https://ocw.mit.edu/courses/8-370-quantum-computation-fall-2020/) - Prof. Peter Shor (Inventor del Algoritmo de Shor).
+  - [Qiskit Textbook (IBM)](https://qiskit.org/textbook/preface.html) - Curso interactivo gratuito de IBM Quantum.
+- **Libros de Texto Canónicos:**
+  - *Quantum Computation and Quantum Information* - Michael A. Nielsen & Isaac L. Chuang. (Conocido universalmente como "Mike & Ike", la Biblia absoluta del campo).
+  - *Quantum Computing since Democritus* - Scott Aaronson.

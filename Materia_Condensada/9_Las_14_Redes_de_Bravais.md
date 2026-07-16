@@ -73,3 +73,13 @@ $$
 - **Hexagonal Compacta (hcp):** APF = 0.74 (74%).
 
 La física de la Materia Condensada de metales e intermetálicos se reduce enteramente al estudio de los fermiones itinerantes moviéndose a lo largo del "Paisaje de Bloj" (Bloch) cuasi-periódico generado por la interacción coulombiana incrustada en estas 14 redes topológicas perfectas tridimensionales.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Oxford University: The Oxford Solid State Basics](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) - Prof. Steven H. Simon.
+  - [MIT 8.231: Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/).
+- **Libros de Texto Canónicos:**
+  - *Solid State Physics* - Neil W. Ashcroft & N. David Mermin. (El estándar de oro).
+  - *Introduction to Solid State Physics* - Charles Kittel.
+  - *Condensed Matter Field Theory* - Alexander Altland & Ben Simons. (Avanzado, integrando QFT).

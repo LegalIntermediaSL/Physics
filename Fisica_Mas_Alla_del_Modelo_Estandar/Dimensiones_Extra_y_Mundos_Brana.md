@@ -32,3 +32,13 @@ Si deseas profundizar en estos conceptos con los mejores profesores del mundo, a
 
 - [Stanford: Standard Model (Leonard Susskind)](https://www.youtube.com/playlist?list=PLpGHT1n4-mAvcsqMC6qB9A-M1jEik5Z4S) - Incluye discusiones profundas sobre las lagunas y roturas de simetría (Higgs).
 - [CERN Lectures: BSM Physics](https://www.youtube.com/c/CERNlectures) - Seminarios avanzados directos desde los detectores del LHC.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Perimeter Institute Recorded Seminars (PIRSA)](https://pirsa.org/) - Búsquedas de Materia Oscura, Axiones y SUSY.
+  - [CERN Document Server (Lectures)](https://cds.cern.ch/) - Cursos de verano para graduados sobre Nueva Física y el LHC.
+- **Libros de Texto Canónicos:**
+  - *Supersymmetry and String Theory: Beyond the Standard Model* - Michael Dine.
+  - *Particle Dark Matter* - Gianfranco Bertone.
+  - *Weak Scale Supersymmetry* - Howard Baer & Xerxes Tata.

@@ -15,3 +15,13 @@ Se precisa romper un enorme Gap energético $\Delta(T)$ interbanda para poder fr
 
 ## 3. El Efecto Meissner-Ochsenfeld (La Expulsión Magnética)
 El condensado es un coloso rígido. Por las ecuaciones fenomenológicas macroscópicas de London, el fotón magnético dentro del condensado se dota de masa, bloqueando y repeliendo asintóticamente (vía longitud de penetración paramagnética $\lambda$) la entrada y penetración violenta a todo flujo electromagnético exterior de inducción externa. El levitar diamagnético es intrínsecamente rotundo y el sello de todo Superconductor.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Oxford University: The Oxford Solid State Basics](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) - Prof. Steven H. Simon.
+  - [MIT 8.231: Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/).
+- **Libros de Texto Canónicos:**
+  - *Solid State Physics* - Neil W. Ashcroft & N. David Mermin. (El estándar de oro).
+  - *Introduction to Solid State Physics* - Charles Kittel.
+  - *Condensed Matter Field Theory* - Alexander Altland & Ben Simons. (Avanzado, integrando QFT).

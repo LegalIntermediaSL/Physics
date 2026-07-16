@@ -35,3 +35,13 @@ Si deseas profundizar en estos conceptos con los mejores profesores del mundo, a
 - [MIT 8.04: Quantum Physics I (Barton Zwiebach)](https://www.youtube.com/playlist?list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) - Excelente tratamiento riguroso de la mecánica ondulatoria y espinores.
 - [Stanford: Theoretical Minimum - Quantum Mechanics (Leonard Susskind)](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) - El estándar de oro para entender el entrelazamiento y los espacios de Hilbert de forma intuitiva.
 - [Perimeter Institute: Quantum Mechanics](https://www.youtube.com/user/PIOutreach) - Clases de nivel máster para investigadores.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Stanford: Quantum Mechanics](https://theoreticalminimum.com/courses/quantum-mechanics/2012/winter) - Leonard Susskind.
+  - [MIT 8.04: Quantum Physics I](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/) - Allan Adams (Una de las mejores introducciones visuales y matemáticas del mundo).
+- **Libros de Texto Canónicos:**
+  - *Principles of Quantum Mechanics* - R. Shankar.
+  - *Modern Quantum Mechanics* - J.J. Sakurai. (Estándar de posgrado).
+  - *Quantum Mechanics* - L.D. Landau & E.M. Lifshitz (Vol. 3).

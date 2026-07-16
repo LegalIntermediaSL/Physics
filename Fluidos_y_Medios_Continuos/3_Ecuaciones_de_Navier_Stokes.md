@@ -30,3 +30,13 @@ Término a término:
 Junto con la condición incompresible ($\nabla \cdot \mathbf{u} = 0$), estas ecuaciones modelan desde el flujo sanguíneo en el corazón hasta la Gran Mancha Roja de Júpiter.
 Sin embargo, su no-linealidad matemática extrema las hace analíticamente irresolubles (excepto en casos simétricos triviales como Poiseuille).
 El Clay Mathematics Institute ofrece un millón de dólares al que demuestre que, dadas unas condiciones iniciales suaves, siempre existe una solución suave, continua y globalmente definida para Navier-Stokes en 3D (Demostración de Existencia y Suavidad). Hasta hoy, no sabemos matemáticamente si la ecuación desarrolla singularidades de "velocidad infinita" o "cortes topológicos" a tiempos finitos.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 2.006: Thermal-Fluids Engineering](https://ocw.mit.edu/courses/2-006-thermal-fluids-engineering-ii-spring-2004/).
+  - [National Committee for Fluid Mechanics Films (NCFMF)](https://web.mit.edu/hml/ncfmf.html) - Serie histórica de vídeos del MIT (obligatorio para visualizar fluidos).
+- **Libros de Texto Canónicos:**
+  - *Fluid Mechanics* - L.D. Landau & E.M. Lifshitz (Vol. 6 del Curso de Física Teórica).
+  - *An Introduction to Fluid Dynamics* - G.K. Batchelor.
+  - *Turbulence: The Legacy of A.N. Kolmogorov* - Uriel Frisch.

@@ -27,3 +27,13 @@ Físicamente, dos fotones rojos infrarrojos chocarán cuánticamente dentro del 
 ## 4. Mezcla de Cuatro Ondas y Conjugación de Fase ($\chi^{(3)}$)
 A nivel cúbico $\chi^{(3)}$, todos los materiales isotrópicos (incluso gases o fibra de vidrio) revelan el Efecto Kerr Óptico: el Índice de Refracción del vidrio ($n$) se vuelve dependiente de la intensidad de la luz que lo cruza ($n = n_0 + n_2 I$). 
 Un láser hiperintenso se curvará a sí mismo enfocándose y colapsando catastróficamente (Autoenfoque). También permite cruzar láseres generando espejos mágicos temporales ("Espejo Conjugado en Fase") donde la luz reflejada retrocede exactamente y revierte cualquier distorsión por aberraciones.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.03: Physics III: Vibrations and Waves](https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/) - Walter Lewin.
+  - [Stanford: Lasers and Optics](https://online.stanford.edu/courses) - Recursos del departamento de Óptica de Stanford.
+- **Libros de Texto Canónicos:**
+  - *Optics* - Eugene Hecht. (El texto clásico de pregrado).
+  - *Principles of Optics* - Max Born & Emil Wolf. (El texto más profundo, clásico absoluto).
+  - *Quantum Optics* - Marlan O. Scully & M. Suhail Zubairy. (Para la frontera cuántica).

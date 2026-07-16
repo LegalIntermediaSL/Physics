@@ -27,3 +27,12 @@ $$
 
 La mecánica cuántica predice teóricamente una violación brutal de este límite, alcanzando un valor de **$2\sqrt{2} \approx 2.828$** (El Límite de Tsirelson).
 Los experimentos de Alain Aspect (Premio Nobel 2022) demostraron que el universo viola $S \leq 2$. **El universo es inherentemente No-Local y No-Realista a nivel fundamental**.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.370: Quantum Computation](https://ocw.mit.edu/courses/8-370-quantum-computation-fall-2020/) - Prof. Peter Shor (Inventor del Algoritmo de Shor).
+  - [Qiskit Textbook (IBM)](https://qiskit.org/textbook/preface.html) - Curso interactivo gratuito de IBM Quantum.
+- **Libros de Texto Canónicos:**
+  - *Quantum Computation and Quantum Information* - Michael A. Nielsen & Isaac L. Chuang. (Conocido universalmente como "Mike & Ike", la Biblia absoluta del campo).
+  - *Quantum Computing since Democritus* - Scott Aaronson.

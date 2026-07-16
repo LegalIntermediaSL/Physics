@@ -30,3 +30,13 @@ Esta estructura no trivial del vacío gobernada por instantones resuelve el "Pro
 
 ## 5. Aplicaciones Geométricas
 Aparte de la física de partículas, los instantones revolucionaron las matemáticas puras. Simon Donaldson los utilizó en los años 80 para probar que en la dimensión 4 existen infinitas "variedades exóticas" diferenciables que no equivalen al espacio de $\mathbb{R}^4$ euclidiano normal.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Cambridge DAMTP: Quantum Field Theory](http://www.damtp.cam.ac.uk/user/tong/qft.html) - David Tong. (Las notas de clase en vídeo más famosas de la década).
+  - [Harvard: Quantum Field Theory I](https://scholar.harvard.edu/schwartz) - Matthew Schwartz.
+- **Libros de Texto Canónicos:**
+  - *An Introduction to Quantum Field Theory* - Michael E. Peskin & Daniel V. Schroeder. (El estándar de oro para cálculos con diagramas de Feynman).
+  - *Quantum Field Theory in a Nutshell* - A. Zee. (Enfoque conceptual y fascinante).
+  - *Quantum Field Theory and the Standard Model* - Matthew D. Schwartz.

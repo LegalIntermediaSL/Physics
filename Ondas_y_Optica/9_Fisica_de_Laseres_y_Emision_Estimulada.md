@@ -14,3 +14,13 @@ Esta anormalidad termodinámica contra natura ($N_2 > N_1$) se llama **Inversió
 ## 3. Cavidad Óptica Resonante
 Un amplificador bombeado aterra aleatoriamente fotones. Para "domesticar" la emisión y crear un rayo láser fino como una aguja, alojamos la mezcla atómica de Helio/Neón entre dos espejos paralelos hiper-pulidos Fabry-Pérot. 
 Solo los escasos fotones que nacen perpendiculares y exactamente longitudinales viajarán de espejo a espejo, cruzando millones de veces el gas invertido, clonándose exponencialmente a intensidades astronómicas, estableciendo resonancia constructiva estricta de modos coherentes. Un espejo será semitransparente al 99%, permitiendo sangrar una finísima e hipnótica aguja lumínica.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.03: Physics III: Vibrations and Waves](https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/) - Walter Lewin.
+  - [Stanford: Lasers and Optics](https://online.stanford.edu/courses) - Recursos del departamento de Óptica de Stanford.
+- **Libros de Texto Canónicos:**
+  - *Optics* - Eugene Hecht. (El texto clásico de pregrado).
+  - *Principles of Optics* - Max Born & Emil Wolf. (El texto más profundo, clásico absoluto).
+  - *Quantum Optics* - Marlan O. Scully & M. Suhail Zubairy. (Para la frontera cuántica).

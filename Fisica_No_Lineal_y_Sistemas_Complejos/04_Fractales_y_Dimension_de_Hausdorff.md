@@ -28,3 +28,13 @@ z_{n+1} = z_n^2 + c
 $$
 
 El conjunto de Mandelbrot $\mathcal{M}$ es el conjunto de parámetros $c$ para los cuales la sucesión $z_n$ (iniciando en $z_0=0$) está acotada. El límite del conjunto es un fractal hiper-complejo. Para un $c$ fijo, el conjunto de puntos iniciales $z_0$ estables forma el **Conjunto de Julia**, $J_c$.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Santa Fe Institute (Complexity Explorer)](https://www.complexityexplorer.org/) - Cursos en Dinámica No Lineal, Caos y Sistemas Complejos.
+  - [MIT 2.050J: Nonlinear Dynamics and Chaos](https://ocw.mit.edu/courses/18-062j-mathematics-of-machine-learning-fall-2015/) - Prof. Steven Strogatz (Cornell Lectures, muy populares en YouTube).
+- **Libros de Texto Canónicos:**
+  - *Nonlinear Dynamics and Chaos* - Steven H. Strogatz. (La "Biblia" introductoria).
+  - *Classical Mechanics* (Sección de Caos) - John R. Taylor.
+  - *Fractal Geometry of Nature* - Benoit Mandelbrot.

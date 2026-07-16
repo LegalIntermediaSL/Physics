@@ -45,3 +45,13 @@ Si deseas profundizar en estos conceptos con los mejores profesores del mundo, a
 
 - [MIT 8.02: Electricity and Magnetism (Walter Lewin)](https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiALIcyEP7uHTy1I) - Experimentos magistrales y derivaciones desde cero.
 - [Yale PHYS 201: Fundamentals of Physics II (Ramamurti Shankar)](https://www.youtube.com/playlist?list=PLD07B2225BBFA0681) - Énfasis matemático riguroso en electrostática y radiación.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.02: Physics II: Electricity and Magnetism](https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/) - Walter Lewin.
+  - [Stanford: Special Relativity and Electrodynamics](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring) - Leonard Susskind.
+- **Libros de Texto Canónicos:**
+  - *Classical Electrodynamics* - John David Jackson. (El texto definitivo a nivel posgrado).
+  - *Introduction to Electrodynamics* - David J. Griffiths. (El texto estándar a nivel pregrado).
+  - *The Feynman Lectures on Physics (Vol. II)*.

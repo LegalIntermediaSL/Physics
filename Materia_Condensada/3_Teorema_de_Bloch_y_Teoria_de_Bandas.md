@@ -19,3 +19,13 @@ Para que se transporte corriente macroscópica se requieren estados vacíos a di
 1. **Metales (Conductores)**: El mar de Fermi corta abruptamente a media altura la última banda. Hay trillones de estados libres vacíos adyacentes justo por encima del electrón superior. Responde fluidamente a los campos $\vec{E}$.
 2. **Aislantes**: La última banda de valencia está abarrotada al $100\%$ hasta el tope (Principio de Pauli). Por encima hay un Band-Gap gigante ($\approx 5 \text{ eV}$). El electrón no tiene adonde saltar; la conducción está muerta, el flujo térmico está asfixiado.
 3. **Semiconductores**: El modelo térmico de Silicio. La estructura de bandas es la misma que la de un aislante, pero el Band-Gap es enano ($\approx 1 \text{ eV}$). A temperatura ambiente, unos pocos electrones pueden ser arrojados térmicamente hacia la Banda de Conducción, permitiendo una ingeniería de control eléctrico asombrosa.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Oxford University: The Oxford Solid State Basics](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) - Prof. Steven H. Simon.
+  - [MIT 8.231: Physics of Solids I](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/).
+- **Libros de Texto Canónicos:**
+  - *Solid State Physics* - Neil W. Ashcroft & N. David Mermin. (El estándar de oro).
+  - *Introduction to Solid State Physics* - Charles Kittel.
+  - *Condensed Matter Field Theory* - Alexander Altland & Ben Simons. (Avanzado, integrando QFT).

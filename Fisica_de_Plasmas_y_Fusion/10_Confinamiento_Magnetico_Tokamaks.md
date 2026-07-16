@@ -17,3 +17,13 @@ En el Tokamak, esto se logra transformando el plasma mismo en la bobina secundar
 La alternativa es el Stellarator (Ej: Wendelstein 7-X en Alemania). Produce la torsión helicoidal de forma completamente pasiva usando bobinas externas con formas retorcidas 3D caóticas y matemáticamente hiper-optimizadas. No induce corriente en el plasma.
 **Ventaja:** Pueden operar en estado estacionario continuo por meses de forma estable.
 **Desventaja:** Su extrema complejidad geométrica era imposible de diseñar y construir antes del advenimiento de los supercomputadores masivos modernos.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 22.611J: Introduction to Plasma Physics I](https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/) - Prof. Ian Hutchinson.
+  - [Princeton Plasma Physics Laboratory (PPPL) Seminars](https://www.pppl.gov/) - Archivos de educación online.
+- **Libros de Texto Canónicos:**
+  - *Introduction to Plasma Physics and Controlled Fusion* - Francis F. Chen. (El texto introductorio más famoso).
+  - *The Physics of Plasmas* - T.J.M. Boyd & J.J. Sanderson.
+  - *Ideal Magnetohydrodynamics* - Jeffrey P. Freidberg.

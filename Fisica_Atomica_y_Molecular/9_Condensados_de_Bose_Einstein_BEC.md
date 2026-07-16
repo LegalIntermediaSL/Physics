@@ -13,3 +13,14 @@ Dejan de existir como entidades separadas y se convierten en un "Súper-Átomo" 
 ## 3. Enfriamiento Láser (Trampa Magneto-Óptica)
 Para lograr temperaturas nanokelvin y crear el primer BEC en 1995 (Nobel de 2001 para Cornell y Wieman), no basta el helio líquido. Se bombardean los átomos con 6 haces láseres ajustados por debajo de su frecuencia de resonancia (Efecto Doppler rojo). 
 Cuando un átomo se mueve contra el rayo láser, ve la luz "corrida al azul" (más energética) hasta igualar su resonancia interna, absorbiendo fotones en contra de su movimiento. Esto ralentiza su momento en todas direcciones cinéticas simulando un jarabe óptico (*Optical Molasses*).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.421: Atomic and Optical Physics I](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/) - Prof. Wolfgang Ketterle (Premio Nobel por el condensado de Bose-Einstein).
+  - [Oxford University: Atomic and Laser Physics](https://podcasts.ox.ac.uk/series/atomic-and-laser-physics).
+- **Libros de Texto Canónicos:**
+  - *Atomic Physics* - Christopher J. Foot.
+  - *Physics of Atoms and Molecules* - B.H. Bransden & C.J. Joachain.
+- **Lecturas Fundamentales:**
+  - Artículos originales de Ketterle y Cornell sobre el enfriamiento láser y el BEC.

@@ -23,3 +23,13 @@ El primer término a la derecha representa la **Convección** (el fluido arrastr
 El Número de Reynolds Magnético ($Rm = \frac{vL}{\eta}$) dictamina qué término domina. En plasmas astrofísicos (estrellas, galaxias), las escalas $L$ son tan enormes que $Rm \to \infty$.
 
 Bajo estas condiciones de conductividad perfecta ($\eta \to 0$), aplica el **Teorema de Alfvén**: el flujo magnético a través de un circuito de fluido que se mueve con la velocidad $\vec{v}$ es constante. Las líneas de campo magnético están "congeladas" en el plasma. Si el plasma se retuerce por turbulencia convectiva estelar, las líneas de campo se retuercen con él, amplificando el campo magnético (Efecto Dinamo).
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 2.006: Thermal-Fluids Engineering](https://ocw.mit.edu/courses/2-006-thermal-fluids-engineering-ii-spring-2004/).
+  - [National Committee for Fluid Mechanics Films (NCFMF)](https://web.mit.edu/hml/ncfmf.html) - Serie histórica de vídeos del MIT (obligatorio para visualizar fluidos).
+- **Libros de Texto Canónicos:**
+  - *Fluid Mechanics* - L.D. Landau & E.M. Lifshitz (Vol. 6 del Curso de Física Teórica).
+  - *An Introduction to Fluid Dynamics* - G.K. Batchelor.
+  - *Turbulence: The Legacy of A.N. Kolmogorov* - Uriel Frisch.

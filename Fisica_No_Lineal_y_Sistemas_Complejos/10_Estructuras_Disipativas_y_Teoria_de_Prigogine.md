@@ -19,3 +19,13 @@ El atractor estacionario bifurca hacia soluciones fractales de patrones de cebra
 
 ## 4. Producción Mínima de Entropía
 En el régimen estacionario cercano al equilibrio termodinámico, Prigogine probó matemáticamente que los sistemas se auto-sintonizan hacia el estado exacto donde la producción local de entropía $\sigma$ se minimiza, priorizando la estructura y el ahorro calórico. Lejos del equilibrio, sin embargo, el régimen termodinámico se fragmenta dando origen a la biología y la vida.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [Santa Fe Institute (Complexity Explorer)](https://www.complexityexplorer.org/) - Cursos en Dinámica No Lineal, Caos y Sistemas Complejos.
+  - [MIT 2.050J: Nonlinear Dynamics and Chaos](https://ocw.mit.edu/courses/18-062j-mathematics-of-machine-learning-fall-2015/) - Prof. Steven Strogatz (Cornell Lectures, muy populares en YouTube).
+- **Libros de Texto Canónicos:**
+  - *Nonlinear Dynamics and Chaos* - Steven H. Strogatz. (La "Biblia" introductoria).
+  - *Classical Mechanics* (Sección de Caos) - John R. Taylor.
+  - *Fractal Geometry of Nature* - Benoit Mandelbrot.

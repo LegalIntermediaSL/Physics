@@ -28,3 +28,12 @@ $$
 - Si $\text{Tr}(\rho^2) = 1$, el estado es **Absolutamente Puro**.
 - Si $\text{Tr}(\rho^2) < 1$, el estado es **Mixto**.
 Para un sistema de dimensión $d$, el estado máxima y caóticamente mixto (como ruido blanco cuántico puro) es proporcional a la matriz identidad $\rho = \frac{1}{d} I$, cuya pureza cae a su mínimo teórico $\frac{1}{d}$.
+
+---
+## 📚 Referencias, Enlaces y Cursos Recomendados
+- **Cursos Universitarios:**
+  - [MIT 8.370: Quantum Computation](https://ocw.mit.edu/courses/8-370-quantum-computation-fall-2020/) - Prof. Peter Shor (Inventor del Algoritmo de Shor).
+  - [Qiskit Textbook (IBM)](https://qiskit.org/textbook/preface.html) - Curso interactivo gratuito de IBM Quantum.
+- **Libros de Texto Canónicos:**
+  - *Quantum Computation and Quantum Information* - Michael A. Nielsen & Isaac L. Chuang. (Conocido universalmente como "Mike & Ike", la Biblia absoluta del campo).
+  - *Quantum Computing since Democritus* - Scott Aaronson.
