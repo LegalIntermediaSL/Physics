@@ -38,11 +38,27 @@ Este sistema te permite localizar ecuaciones de forma cruzada. Si lees "Ver fór
 | **[REL]** | **REL**ativity | Relatividad | `gr-qc` | Tensor de Einstein, métrica de Schwarzschild, agujeros de gusano. |
 | **[THD]** | **TH**ermo**D**ynamics | Termodinámica y Estadística | `cond-mat.stat-mech` | Entropía, colectivos de Gibbs, transiciones de fase. |
 
-## 3. Ejemplo de Uso Práctico
+## 3. Sub-Categorías Oficiales de arXiv (Implementadas en Subcarpetas)
+Para reflejar la extrema especialización de la física moderna, las macro-áreas se dividen internamente en subcarpetas que coinciden con las sub-etiquetas oficiales de arXiv. Algunos ejemplos notables implementados en el repositorio son:
+
+*   `astro-ph` (Astrofísica)
+    *   `astro-ph.GA`: Astrofísica de Galaxias
+    *   `astro-ph.CO`: Cosmología y Astrofísica Extragaláctica
+    *   `astro-ph.SR`: Física Solar y Estelar
+*   `cond-mat` (Materia Condensada)
+    *   `cond-mat.mes-hall`: Física Mesoscópica y Efecto Hall
+    *   `cond-mat.stat-mech`: Mecánica Estadística
+    *   `cond-mat.str-el`: Electrones Fuertemente Correlacionados
+*   `hep` (Física de Altas Energías)
+    *   `hep-th`: Teoría (Gravedad Cuántica, Cuerdas)
+    *   `hep-ph`: Fenomenología (Materia Oscura, SUSY)
+    *   `hep-lat`: Lattice QCD
+
+## 4. Ejemplo de Uso Práctico
 Supongamos que estás desarrollando un simulador de agujeros negros. Necesitas consultar el comportamiento del giro (*spin*) del agujero negro.
 1. Reconoces que los agujeros negros giratorios (Kerr) son terreno de la Relatividad General (**Relativity**).
-2. Buscas la etiqueta **[REL]**.
+2. Buscas la etiqueta **[REL]** y navegas a la carpeta `Relatividad_(REL)`.
 3. Encuentras el artículo `REL-04_Relatividad_Kerr_Ray_Tracing.md`.
-4. Sabrás inmediatamente que el cuaderno Jupyter correspondiente se llamará `REL-04_Relatividad_Kerr_Ray_Tracing.ipynb`.
+4. Sabrás inmediatamente que el cuaderno Jupyter correspondiente se llamará `REL-04_Relatividad_Kerr_Ray_Tracing.ipynb` y estará en `Simulaciones_Jupyter/Relatividad_(REL)`.
 
 Este puente taxonómico no solo mantiene el repositorio impecable, sino que te entrena visualmente para leer *papers* internacionales y reconocer la jerga oficial.
