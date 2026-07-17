@@ -24,9 +24,9 @@ El repositorio está organizado orgánicamente replicando la estructura de **arX
 - 💎 **[Fisica_de_Materia_Condensada_(CMA)](./Fisica_de_Materia_Condensada_(CMA))**: Cristales de Tiempo (Floquet), Superconductividad y Grafeno. *(Contiene 9 tratados)*
 - ☀️ **[Fisica_de_Plasmas_y_Fusion_(PLA)](./Fisica_de_Plasmas_y_Fusion_(PLA))**: Confinamiento Magnético, MHD y Reactores Tokamak. *(Contiene 14 tratados)*
 - 🌬️ **[Fluidos_y_Medios_Continuos_(FLD)](./Fluidos_y_Medios_Continuos_(FLD))**: Navier-Stokes, Lattice Boltzmann y Dinámica de Fluidos. *(Contiene 24 tratados)*
-- 🧶 **[Gravedad_Cuantica_y_Cuerdas_(QG)](./Gravedad_Cuantica_y_Cuerdas_(QG))**: Teoría M, Variedades de Calabi-Yau y Gravedad de Lazos. *(Contiene 34 tratados)*
+- 🧶 **[Gravedad_Cuantica_y_Cuerdas_(QG)](./Gravedad_Cuantica_y_Cuerdas_(QG))**: Teoría M, Variedades de Calabi-Yau y Gravedad de Lazos. *(Contiene 35 tratados)*
 - 🧠 **[Informacion_Cuantica_(QIC)](./Informacion_Cuantica_(QIC))**: Qubits, Topología Cuántica (Anyones) y Algoritmos. *(Contiene 25 tratados)*
-- 🧠 **[Informacion_y_Computacion_Cuantica_(QIC)](./Informacion_y_Computacion_Cuantica_(QIC))**: Qubits, Topología Cuántica (Anyones) y Algoritmos. *(Contiene 6 tratados)*
+- 🧠 **[Informacion_y_Computacion_Cuantica_(QIC)](./Informacion_y_Computacion_Cuantica_(QIC))**: Qubits, Topología Cuántica (Anyones) y Algoritmos. *(Contiene 7 tratados)*
 - 💎 **[Materia_Condensada_(CMA)](./Materia_Condensada_(CMA))**: Cristales de Tiempo (Floquet), Superconductividad y Grafeno. *(Contiene 23 tratados)*
 - 🍎 **[Mecanica_Clasica_(CLM)](./Mecanica_Clasica_(CLM))**: Cinemática, Dinámica de Newton, Lagrangianos y Hamiltonianos. *(Contiene 22 tratados)*
 - 📁 **[Mecanica_Clasica_y_Fluidos_(CLF)](./Mecanica_Clasica_y_Fluidos_(CLF))**: Tratados y derivaciones analíticas. *(Contiene 3 tratados)*
@@ -35,7 +35,7 @@ El repositorio está organizado orgánicamente replicando la estructura de **arX
 - 🌊 **[Ondas_y_Optica_(OPT)](./Ondas_y_Optica_(OPT))**: Oscilaciones, Óptica de Transformación y Metamateriales. *(Contiene 12 tratados)*
 - 📚 **[Recursos_Generales](./Recursos_Generales)**: Bibliografía, herramientas computacionales y manuales. *(Contiene 2 tratados)*
 - 🚀 **[Relatividad_(REL)](./Relatividad_(REL))**: Métrica de Schwarzschild, Agujeros Negros y Relatividad General. *(Contiene 27 tratados)*
-- 🚀 **[Relatividad_y_Gravitacion_(REL)](./Relatividad_y_Gravitacion_(REL))**: Métrica de Schwarzschild, Agujeros Negros y Relatividad General. *(Contiene 3 tratados)*
+- 🚀 **[Relatividad_y_Gravitacion_(REL)](./Relatividad_y_Gravitacion_(REL))**: Métrica de Schwarzschild, Agujeros Negros y Relatividad General. *(Contiene 4 tratados)*
 - 🧮 **[Teoria_Cuantica_de_Campos_(QFT)](./Teoria_Cuantica_de_Campos_(QFT))**: Mecanismo de Higgs, QCD en Lattice y Espacio de Fock. *(Contiene 32 tratados)*
 - 🔥 **[Termodinamica_y_Estadistica_(THD)](./Termodinamica_y_Estadistica_(THD))**: Máquinas térmicas, Mecánica Estadística y Entropía. *(Contiene 21 tratados)*
 
