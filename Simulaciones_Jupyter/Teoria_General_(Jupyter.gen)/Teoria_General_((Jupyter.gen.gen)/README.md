@@ -1,1 +1,319 @@
-# 📁 Explorador: Teoria_General_((Jupyter.gen.gen)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 💻 Simulaciones Computacionales (Jupyter)\n- 🪐 **[01 Atractor de Lorenz y Efecto Mariposa](./01_Atractor_de_Lorenz_y_Efecto_Mariposa.ipynb)**\n- 🪐 **[01 Geodesicas Metrica Schwarzschild](./01_Geodesicas_Metrica_Schwarzschild.ipynb)**\n- 🪐 **[02 Geodesicas Agujero Negro Kerr Rotatorio](./02_Geodesicas_Agujero_Negro_Kerr_Rotatorio.ipynb)**\n- 🪐 **[02 Mapeo Logistico Diagrama Feigenbaum](./02_Mapeo_Logistico_Diagrama_Feigenbaum.ipynb)**\n- 🪐 **[03 Lente Gravitacional y Deflexion Luz](./03_Lente_Gravitacional_y_Deflexion_Luz.ipynb)**\n- 🪐 **[03 Pendulo Doble Integrador Simplectico](./03_Pendulo_Doble_Integrador_Simplectico.ipynb)**\n- 🪐 **[04 Precesion Perihelio de Mercurio](./04_Precesion_Perihelio_de_Mercurio.ipynb)**\n- 🪐 **[04 Soliton KdV Metodo Espectral](./04_Soliton_KdV_Metodo_Espectral.ipynb)**\n- 🪐 **[05 Diagrama de Penrose Carter](./05_Diagrama_de_Penrose_Carter.ipynb)**\n- 🪐 **[05 Modelo Kuramoto Sincronizacion](./05_Modelo_Kuramoto_Sincronizacion.ipynb)**\n- 🪐 **[06 Atractor de Rossler y Caos Topologico](./06_Atractor_de_Rossler_y_Caos_Topologico.ipynb)**\n- 🪐 **[06 Colapso Gravitacional Oppenheimer Snyder](./06_Colapso_Gravitacional_Oppenheimer_Snyder.ipynb)**\n- 🪐 **[07 Automata Celular Juego de la Vida](./07_Automata_Celular_Juego_de_la_Vida.ipynb)**\n- 🪐 **[07 Ondas Gravitacionales Cuadrupolares](./07_Ondas_Gravitacionales_Cuadrupolares.ipynb)**\n- 🪐 **[08 Regla 110 y Regla 30 Wolfram](./08_Regla_110_y_Regla_30_Wolfram.ipynb)**\n- 🪐 **[08 Sombra de Agujero Negro Raytracing](./08_Sombra_de_Agujero_Negro_Raytracing.ipynb)**\n- 🪐 **[09 Dilatacion Temporal GPS Satelites](./09_Dilatacion_Temporal_GPS_Satelites.ipynb)**\n- 🪐 **[09 Fractales Conjunto de Mandelbrot](./09_Fractales_Conjunto_de_Mandelbrot.ipynb)**\n- 🪐 **[10 Conjuntos de Julia y Dinamica Compleja](./10_Conjuntos_de_Julia_y_Dinamica_Compleja.ipynb)**\n- 🪐 **[10 Efecto Lense Thirring Frame Dragging](./10_Efecto_Lense_Thirring_Frame_Dragging.ipynb)**\n- 🪐 **[11 Esfera de Fotones y Orbita Inestable](./11_Esfera_de_Fotones_y_Orbita_Inestable.ipynb)**\n- 🪐 **[11 Reaccion Difusion Brusselator Turing](./11_Reaccion_Difusion_Brusselator_Turing.ipynb)**\n- 🪐 **[12 Metrica de Alcubierre Motor Warp](./12_Metrica_de_Alcubierre_Motor_Warp.ipynb)**\n- 🪐 **[12 Modelo Predador Presa Lotka Volterra](./12_Modelo_Predador_Presa_Lotka_Volterra.ipynb)**\n- 🪐 **[13 Oscilador de Duffing No Lineal](./13_Oscilador_de_Duffing_No_Lineal.ipynb)**\n- 🪐 **[13 Radiacion Larmor vs Sincrotron](./13_Radiacion_Larmor_vs_Sincrotron.ipynb)**\n- 🪐 **[14 Bifurcacion de Hopf Supercritica](./14_Bifurcacion_de_Hopf_Supercritica.ipynb)**\n- 🪐 **[14 Friccion Abraham Lorentz Dirac](./14_Friccion_Abraham_Lorentz_Dirac.ipynb)**\n- 🪐 **[15 Ruido Termico y Movimiento Browniano Fokker Planck](./15_Ruido_Termico_y_Movimiento_Browniano_Fokker_Planck.ipynb)**\n- 🪐 **[15 Transformaciones Lorentz 4D Boost](./15_Transformaciones_Lorentz_4D_Boost.ipynb)**\n- 🪐 **[16 Fractales DLA Agregacion Limitada Difusion](./16_Fractales_DLA_Agregacion_Limitada_Difusion.ipynb)**\n- 🪐 **[17 Automata Gas Reticular HPP](./17_Automata_Gas_Reticular_HPP.ipynb)**\n- 🪐 **[18 Ecuacion Burger y Ondas de Choque](./18_Ecuacion_Burger_y_Ondas_de_Choque.ipynb)**\n- 🪐 **[19 Sincronizacion Luciernagas Pulsos](./19_Sincronizacion_Luciernagas_Pulsos.ipynb)**\n- 🪐 **[20 Exponente de Lyapunov Maximo Calculo](./20_Exponente_de_Lyapunov_Maximo_Calculo.ipynb)**\n- 🪐 **[AMO-01 Condensado Bose Einstein Densidad](./AMO-01_Condensado_Bose_Einstein_Densidad.ipynb)**\n- 🪐 **[AMO-02 Ecuacion Gross Pitaevskii Soliton](./AMO-02_Ecuacion_Gross_Pitaevskii_Soliton.ipynb)**\n- 🪐 **[AMO-03 Determinante Slater Hartree Fock](./AMO-03_Determinante_Slater_Hartree_Fock.ipynb)**\n- 🪐 **[AMO-04 Efecto Zeeman Division Espectral](./AMO-04_Efecto_Zeeman_Division_Espectral.ipynb)**\n- 🪐 **[AMO-05 Enfriamiento Laser Doppler](./AMO-05_Enfriamiento_Laser_Doppler.ipynb)**\n- 🪐 **[AMO-06 Atomos Frios y Optica Cuantica Simulacion](./AMO-06_Atomos_Frios_y_Optica_Cuantica_Simulacion.ipynb)**\n- 🪐 **[AMO-07 Fisica Molecular Simulacion](./AMO-07_Fisica_Molecular_Simulacion.ipynb)**\n- 🪐 **[AMO-08 Fisica Atomica Lennard Jones](./AMO-08_Fisica_Atomica_Lennard_Jones.ipynb)**\n- 🪐 **[AMO-09 Fisica Atomica Oscilaciones Rabi](./AMO-09_Fisica_Atomica_Oscilaciones_Rabi.ipynb)**\n- 🪐 **[AMO-10 Espectroscopia y Luz Simulacion](./AMO-10_Espectroscopia_y_Luz_Simulacion.ipynb)**\n- 🪐 **[AMO-11 Interaccion Luz Materia Simulacion](./AMO-11_Interaccion_Luz_Materia_Simulacion.ipynb)**\n- 🪐 **[AMO-12 Estructura Atomica Simulacion](./AMO-12_Estructura_Atomica_Simulacion.ipynb)**\n- 🪐 **[AMO-13 Fisica Atomica BEC](./AMO-13_Fisica_Atomica_BEC.ipynb)**\n- 🪐 **[AMO-14 Estructura Atomica y Espectros Simulacion](./AMO-14_Estructura_Atomica_y_Espectros_Simulacion.ipynb)**\n- 🪐 **[AST-01 Acrecion Bondi Hoyle](./AST-01_Acrecion_Bondi_Hoyle.ipynb)**\n- 🪐 **[AST-02 Agujeros Negros Primordiales](./AST-02_Agujeros_Negros_Primordiales.ipynb)**\n- 🪐 **[AST-03 Astrofisica Materia Oscura](./AST-03_Astrofisica_Materia_Oscura.ipynb)**\n- 🪐 **[AST-04 Astrofisica SPH Colapso](./AST-04_Astrofisica_SPH_Colapso.ipynb)**\n- 🪐 **[AST-05 Colision Galactica N Cuerpos](./AST-05_Colision_Galactica_N_Cuerpos.ipynb)**\n- 🪐 **[AST-06 Colision Post Newtoniana](./AST-06_Colision_Post_Newtoniana.ipynb)**\n- 🪐 **[AST-07 Curvas Rotacion Galactica](./AST-07_Curvas_Rotacion_Galactica.ipynb)**\n- 🪐 **[AST-08 Diagrama Hertzsprung Russell](./AST-08_Diagrama_Hertzsprung_Russell.ipynb)**\n- 🪐 **[AST-09 Diagramas Penrose Carter](./AST-09_Diagramas_Penrose_Carter.ipynb)**\n- 🪐 **[AST-10 Dispersion Velocidades Sersic](./AST-10_Dispersion_Velocidades_Sersic.ipynb)**\n- 🪐 **[AST-11 Espectro Potencia No Lineal](./AST-11_Espectro_Potencia_No_Lineal.ipynb)**\n- 🪐 **[AST-12 Evolucion Metalicidad G Dwarf](./AST-12_Evolucion_Metalicidad_G_Dwarf.ipynb)**\n- 🪐 **[AST-13 Fisica Estelar Simulacion](./AST-13_Fisica_Estelar_Simulacion.ipynb)**\n- 🪐 **[AST-14 Fondo Estocastico Gravitacional](./AST-14_Fondo_Estocastico_Gravitacional.ipynb)**\n- 🪐 **[AST-15 Funcion Masa Inicial IMF](./AST-15_Funcion_Masa_Inicial_IMF.ipynb)**\n- 🪐 **[AST-16 Galaxias Simulacion](./AST-16_Galaxias_Simulacion.ipynb)**\n- 🪐 **[AST-17 Geodesicas Metrica Kerr](./AST-17_Geodesicas_Metrica_Kerr.ipynb)**\n- 🪐 **[AST-18 Halo Mass Function Press Schechter](./AST-18_Halo_Mass_Function_Press_Schechter.ipynb)**\n- 🪐 **[AST-19 Lentes Gravitacionales Fuertes](./AST-19_Lentes_Gravitacionales_Fuertes.ipynb)**\n- 🪐 **[AST-20 Limite Chandrasekhar](./AST-20_Limite_Chandrasekhar.ipynb)**\n- 🪐 **[AST-21 Metrica Colapso LTB](./AST-21_Metrica_Colapso_LTB.ipynb)**\n- 🪐 **[AST-22 Ondas Gravitacionales Inspiral](./AST-22_Ondas_Gravitacionales_Inspiral.ipynb)**\n- 🪐 **[AST-23 Radiacion Sincrotron Jets](./AST-23_Radiacion_Sincrotron_Jets.ipynb)**\n- 🪐 **[AST-24 Termodinamica Agujero Negro](./AST-24_Termodinamica_Agujero_Negro.ipynb)**\n- 🪐 **[AST-25 Tolman Oppenheimer Volkoff](./AST-25_Tolman_Oppenheimer_Volkoff.ipynb)**\n- 🪐 **[Algoritmo Shor QFT](./Algoritmo_Shor_QFT.ipynb)**\n- 🪐 **[Armonicos Esfericos 3D](./Armonicos_Esfericos_3D.ipynb)**\n- 🪐 **[Busqueda de Grover](./Busqueda_de_Grover.ipynb)**\n- 🪐 **[CFD Adveccion Difusion](./CFD_Adveccion_Difusion.ipynb)**\n- 🪐 **[CLM-01 Momento y Colisiones Simulacion](./CLM-01_Momento_y_Colisiones_Simulacion.ipynb)**\n- 🪐 **[CLM-02 Trabajo y Energia Simulacion](./CLM-02_Trabajo_y_Energia_Simulacion.ipynb)**\n- 🪐 **[CLM-03 Pendulo Doble Caotico](./CLM-03_Pendulo_Doble_Caotico.ipynb)**\n- 🪐 **[CLM-04 Mecanica Clasica Caos Lorenz](./CLM-04_Mecanica_Clasica_Caos_Lorenz.ipynb)**\n- 🪐 **[CLM-05 Gravitacion Simulacion](./CLM-05_Gravitacion_Simulacion.ipynb)**\n- 🪐 **[CLM-06 Dinamica Simulacion](./CLM-06_Dinamica_Simulacion.ipynb)**\n- 🪐 **[CLM-07 Mecanica Clasica N Cuerpos](./CLM-07_Mecanica_Clasica_N_Cuerpos.ipynb)**\n- 🪐 **[CLM-08 Dinamica Rotacional Simulacion](./CLM-08_Dinamica_Rotacional_Simulacion.ipynb)**\n- 🪐 **[CLM-09 Precesion Giroscopo](./CLM-09_Precesion_Giroscopo.ipynb)**\n- 🪐 **[CLM-10 Cinematica Simulacion](./CLM-10_Cinematica_Simulacion.ipynb)**\n- 🪐 **[CLM-11 Atractor de Lorenz](./CLM-11_Atractor_de_Lorenz.ipynb)**\n- 🪐 **[CLM-12 Mecanica Clasica Pendulo Doble](./CLM-12_Mecanica_Clasica_Pendulo_Doble.ipynb)**\n- 🪐 **[CMA-01 Estructura Cristalina y Redes Simulacion](./CMA-01_Estructura_Cristalina_y_Redes_Simulacion.ipynb)**\n- 🪐 **[CMA-02 Materia Condensada Ginzburg Landau](./CMA-02_Materia_Condensada_Ginzburg_Landau.ipynb)**\n- 🪐 **[CMA-03 Semiconductores Simulacion](./CMA-03_Semiconductores_Simulacion.ipynb)**\n- 🪐 **[CMA-04 Cristalografia y Redes Simulacion](./CMA-04_Cristalografia_y_Redes_Simulacion.ipynb)**\n- 🪐 **[CMA-05 Propiedades Electronicas y Bandas Simulacion](./CMA-05_Propiedades_Electronicas_y_Bandas_Simulacion.ipynb)**\n- 🪐 **[CMA-06 Materia Condensada Graphene](./CMA-06_Materia_Condensada_Graphene.ipynb)**\n- 🪐 **[CMA-07 Redes Bravais 3D](./CMA-07_Redes_Bravais_3D.ipynb)**\n- 🪐 **[CMA-08 Materia Condensada Topological](./CMA-08_Materia_Condensada_Topological.ipynb)**\n- 🪐 **[CMA-09 Superconductividad y Magnetismo Simulacion](./CMA-09_Superconductividad_y_Magnetismo_Simulacion.ipynb)**\n- 🪐 **[CMA-10 Superconductividad Simulacion](./CMA-10_Superconductividad_Simulacion.ipynb)**\n- 🪐 **[CMA-11 Superconductividad Efecto Meissner](./CMA-11_Superconductividad_Efecto_Meissner.ipynb)**\n- 🪐 **[CMA-12 Modelo Kronig Penney](./CMA-12_Modelo_Kronig_Penney.ipynb)**\n- 🪐 **[CMA-13 Magnetismo en Materia Simulacion](./CMA-13_Magnetismo_en_Materia_Simulacion.ipynb)**\n- 🪐 **[CMA-14 Electrones en Solidos Simulacion](./CMA-14_Electrones_en_Solidos_Simulacion.ipynb)**\n- 🪐 **[COS-01 Abundancias BBN Cociente Barion Foton](./COS-01_Abundancias_BBN_Cociente_Barion_Foton.ipynb)**\n- 🪐 **[COS-02 Astrofisica CMB Spectrum](./COS-02_Astrofisica_CMB_Spectrum.ipynb)**\n- 🪐 **[COS-03 Cosmologia Big Bang Simulacion](./COS-03_Cosmologia_Big_Bang_Simulacion.ipynb)**\n- 🪐 **[COS-04 Decaimiento Vacio Falso](./COS-04_Decaimiento_Vacio_Falso.ipynb)**\n- 🪐 **[COS-05 Efecto Doppler Cosmologico](./COS-05_Efecto_Doppler_Cosmologico.ipynb)**\n- 🪐 **[COS-06 Efecto Sunyaev Zeldovich](./COS-06_Efecto_Sunyaev_Zeldovich.ipynb)**\n- 🪐 **[COS-07 Espectro Potencia CMB](./COS-07_Espectro_Potencia_CMB.ipynb)**\n- 🪐 **[COS-08 Expansion Acelerada Ecuaciones Friedmann](./COS-08_Expansion_Acelerada_Ecuaciones_Friedmann.ipynb)**\n- 🪐 **[COS-09 Formacion Estructuras Zeldovich](./COS-09_Formacion_Estructuras_Zeldovich.ipynb)**\n- 🪐 **[COS-10 Automata Celular Emergencia Vida](./COS-10_Automata_Celular_Emergencia_Vida.ipynb)**\n- 🪐 **[COS-11 Limite Resolucion Pixeles Planck](./COS-11_Limite_Resolucion_Pixeles_Planck.ipynb)**\n- 🪐 **[COS-12 Optimizacion Renderizado Cuantico](./COS-12_Optimizacion_Renderizado_Cuantico.ipynb)**\n- 🪐 **[COS-13 Inflacion Campo Lento](./COS-13_Inflacion_Campo_Lento.ipynb)**\n- 🪐 **[COS-14 Nucleosintesis Primordial BBN](./COS-14_Nucleosintesis_Primordial_BBN.ipynb)**\n- 🪐 **[COS-15 Oscilaciones Acusticas Bariones BAO](./COS-15_Oscilaciones_Acusticas_Bariones_BAO.ipynb)**\n- 🪐 **[COS-16 Quintaesencia Energia Oscura](./COS-16_Quintaesencia_Energia_Oscura.ipynb)**\n- 🪐 **[COS-17 Reionizacion Cosmica 21cm](./COS-17_Reionizacion_Cosmica_21cm.ipynb)**\n- 🪐 **[COS-18 Paisaje Vacios Teoria Cuerdas](./COS-18_Paisaje_Vacios_Teoria_Cuerdas.ipynb)**\n- 🪐 **[COS-19 Ramificacion Arbol Muchos Mundos](./COS-19_Ramificacion_Arbol_Muchos_Mundos.ipynb)**\n- 🪐 **[COS-20 Simulacion Inflacion Eterna](./COS-20_Simulacion_Inflacion_Eterna.ipynb)**\n- 🪐 **[Colision D Branas](./Colision_D_Branas.ipynb)**\n- 🪐 **[ELM-01 Ecuaciones Maxwell Simulacion](./ELM-01_Ecuaciones_Maxwell_Simulacion.ipynb)**\n- 🪐 **[ELM-02 Circuitos y Corriente Simulacion](./ELM-02_Circuitos_y_Corriente_Simulacion.ipynb)**\n- 🪐 **[ELM-03 Magnetismo Simulacion](./ELM-03_Magnetismo_Simulacion.ipynb)**\n- 🪐 **[ELM-04 Radiacion Carga Acelerada](./ELM-04_Radiacion_Carga_Acelerada.ipynb)**\n- 🪐 **[ELM-05 Efecto Hall Clasico](./ELM-05_Efecto_Hall_Clasico.ipynb)**\n- 🪐 **[ELM-06 Guias de Onda TETM](./ELM-06_Guias_de_Onda_TETM.ipynb)**\n- 🪐 **[ELM-07 Electromagnetismo FDTD](./ELM-07_Electromagnetismo_FDTD.ipynb)**\n- 🪐 **[ELM-08 Electromagnetismo Plasmones](./ELM-08_Electromagnetismo_Plasmones.ipynb)**\n- 🪐 **[ELM-09 Electromagnetismo Sincrotron](./ELM-09_Electromagnetismo_Sincrotron.ipynb)**\n- 🪐 **[ELM-10 Electrostatica Simulacion](./ELM-10_Electrostatica_Simulacion.ipynb)**\n- 🪐 **[Evaporacion Agujeros Negros](./Evaporacion_Agujeros_Negros.ipynb)**\n- 🪐 **[Evolucion Cosmica FLRW](./Evolucion_Cosmica_FLRW.ipynb)**\n- 🪐 **[FLD-01 Lattice Boltzmann Flujo Cilindro 2D](./FLD-01_Lattice_Boltzmann_Flujo_Cilindro_2D.ipynb)**\n- 🪐 **[FLD-02 Simulador Magnetohidrodinamico MHD](./FLD-02_Simulador_Magnetohidrodinamico_MHD.ipynb)**\n- 🪐 **[FLD-03 Cascada Turbulenta Espectro Kolmogorov](./FLD-03_Cascada_Turbulenta_Espectro_Kolmogorov.ipynb)**\n- 🪐 **[FLD-04 Choque Supersonico Rankine Hugoniot](./FLD-04_Choque_Supersonico_Rankine_Hugoniot.ipynb)**\n- 🪐 **[FLD-05 Flujo Irrotacional Potencial Superposicion](./FLD-05_Flujo_Irrotacional_Potencial_Superposicion.ipynb)**\n- 🪐 **[FLD-06 Inestabilidad Kelvin Helmholtz](./FLD-06_Inestabilidad_Kelvin_Helmholtz.ipynb)**\n- 🪐 **[FLD-07 Dinamica de Fluidos Simulacion](./FLD-07_Dinamica_de_Fluidos_Simulacion.ipynb)**\n- 🪐 **[FLD-08 Flujo Poiseuille](./FLD-08_Flujo_Poiseuille.ipynb)**\n- 🪐 **[FLD-09 Fluidos Turbulencia Kolmogorov](./FLD-09_Fluidos_Turbulencia_Kolmogorov.ipynb)**\n- 🪐 **[FLD-10 Hidrostatica Simulacion](./FLD-10_Hidrostatica_Simulacion.ipynb)**\n- 🪐 **[FLD-11 Fluidos Shallow Water](./FLD-11_Fluidos_Shallow_Water.ipynb)**\n- 🪐 **[FLD-12 Fluidos Navier Stokes](./FLD-12_Fluidos_Navier_Stokes.ipynb)**\n- 🪐 **[FLD-13 Elasticidad de Materiales Simulacion](./FLD-13_Elasticidad_de_Materiales_Simulacion.ipynb)**\n- 🪐 **[FLD-14 Vortices Navier Stokes 2D](./FLD-14_Vortices_Navier_Stokes_2D.ipynb)**\n- 🪐 **[FLD-15 Hidrostatica y Principio Pascal Simulacion](./FLD-15_Hidrostatica_y_Principio_Pascal_Simulacion.ipynb)**\n- 🪐 **[FLD-16 Viscosidad y Turbulencia Simulacion](./FLD-16_Viscosidad_y_Turbulencia_Simulacion.ipynb)**\n- 🪐 **[FLD-17 Viscosidad y Capas Limite Simulacion](./FLD-17_Viscosidad_y_Capas_Limite_Simulacion.ipynb)**\n- 🪐 **[FLD-18 Dinamica de Fluidos y Bernoulli Simulacion](./FLD-18_Dinamica_de_Fluidos_y_Bernoulli_Simulacion.ipynb)**\n- 🪐 **[FLD-19 Elasticidad y Medios Continuos Simulacion](./FLD-19_Elasticidad_y_Medios_Continuos_Simulacion.ipynb)**\n- 🪐 **[Flujo de Ricci Superficies](./Flujo_de_Ricci_Superficies.ipynb)**\n- 🪐 **[Formas Diferenciales Cartan](./Formas_Diferenciales_Cartan.ipynb)**\n- 🪐 **[Generadores Algebra Lie](./Generadores_Algebra_Lie.ipynb)**\n- 🪐 **[Geometria Anti de Sitter](./Geometria_Anti_de_Sitter.ipynb)**\n- 🪐 **[HEP-01 Nuclear Cinematica Mandelstam](./HEP-01_Nuclear_Cinematica_Mandelstam.ipynb)**\n- 🪐 **[HEP-02 Nuclear Decaimiento Markov](./HEP-02_Nuclear_Decaimiento_Markov.ipynb)**\n- 🪐 **[HEP-03 Fision y Fusion Simulacion](./HEP-03_Fision_y_Fusion_Simulacion.ipynb)**\n- 🪐 **[HEP-04 Nuclear Lattice QCD](./HEP-04_Nuclear_Lattice_QCD.ipynb)**\n- 🪐 **[HEP-05 Radioactividad y Decaimientos Simulacion](./HEP-05_Radioactividad_y_Decaimientos_Simulacion.ipynb)**\n- 🪐 **[HEP-06 Estructura Nuclear y Radiactividad Simulacion](./HEP-06_Estructura_Nuclear_y_Radiactividad_Simulacion.ipynb)**\n- 🪐 **[HEP-07 Detectores y Aceleradores Simulacion](./HEP-07_Detectores_y_Aceleradores_Simulacion.ipynb)**\n- 🪐 **[HEP-08 Cinematica Colisiones Relativistas](./HEP-08_Cinematica_Colisiones_Relativistas.ipynb)**\n- 🪐 **[HEP-09 El Modelo Estandar de Particulas Simulacion](./HEP-09_El_Modelo_Estandar_de_Particulas_Simulacion.ipynb)**\n- 🪐 **[HEP-10 Confinamiento Quarks Potencial Cornell](./HEP-10_Confinamiento_Quarks_Potencial_Cornell.ipynb)**\n- 🪐 **[HEP-11 Cadenas Decaimiento Radiactivo](./HEP-11_Cadenas_Decaimiento_Radiactivo.ipynb)**\n- 🪐 **[HEP-12 Estructura Nuclear Simulacion](./HEP-12_Estructura_Nuclear_Simulacion.ipynb)**\n- 🪐 **[HEP-13 Modelo Estandar Simulacion](./HEP-13_Modelo_Estandar_Simulacion.ipynb)**\n- 🪐 **[Inflacion y Slow Roll](./Inflacion_y_Slow_Roll.ipynb)**\n- 🪐 **[Lattice Campo Gauge U1](./Lattice_Campo_Gauge_U1.ipynb)**\n- 🪐 **[Lattice QCD Enfriamiento](./Lattice_QCD_Enfriamiento.ipynb)**\n- 🪐 **[Mapeo Conforme Flujo Fluidos](./Mapeo_Conforme_Flujo_Fluidos.ipynb)**\n- 🪐 **[Modelo de Ising 2D MonteCarlo](./Modelo_de_Ising_2D_MonteCarlo.ipynb)**\n- 🪐 **[N Cuerpos Gravedad](./N_Cuerpos_Gravedad.ipynb)**\n- 🪐 **[OPT-01 Generacion Segundos Armonicos SHG](./OPT-01_Generacion_Segundos_Armonicos_SHG.ipynb)**\n- 🪐 **[OPT-02 Solitones Opticos Kerr](./OPT-02_Solitones_Opticos_Kerr.ipynb)**\n- 🪐 **[OPT-03 Ecuaciones Rate Laser 3Niveles](./OPT-03_Ecuaciones_Rate_Laser_3Niveles.ipynb)**\n- 🪐 **[OPT-04 Estados Squeezed Incertidumbre Cuantica](./OPT-04_Estados_Squeezed_Incertidumbre_Cuantica.ipynb)**\n- 🪐 **[OPT-05 Oscilaciones Rabi Cavidad CQED](./OPT-05_Oscilaciones_Rabi_Cavidad_CQED.ipynb)**\n- 🪐 **[OPT-06 Oscilaciones y Ondas Mecanicas Simulacion](./OPT-06_Oscilaciones_y_Ondas_Mecanicas_Simulacion.ipynb)**\n- 🪐 **[OPT-07 Oscilaciones y Ondas Simulacion](./OPT-07_Oscilaciones_y_Ondas_Simulacion.ipynb)**\n- 🪐 **[OPT-08 Ondas Difraccion Fresnel](./OPT-08_Ondas_Difraccion_Fresnel.ipynb)**\n- 🪐 **[OPT-09 Optica Geometrica Simulacion](./OPT-09_Optica_Geometrica_Simulacion.ipynb)**\n- 🪐 **[OPT-10 Polarizacion Parametros Stokes](./OPT-10_Polarizacion_Parametros_Stokes.ipynb)**\n- 🪐 **[OPT-11 Acustica Simulacion](./OPT-11_Acustica_Simulacion.ipynb)**\n- 🪐 **[OPT-12 Ondas Optica Fourier](./OPT-12_Ondas_Optica_Fourier.ipynb)**\n- 🪐 **[OPT-13 Ondas Solitones](./OPT-13_Ondas_Solitones.ipynb)**\n- 🪐 **[OPT-14 Interferometro Michelson](./OPT-14_Interferometro_Michelson.ipynb)**\n- 🪐 **[OPT-15 Acustica y Sonido Simulacion](./OPT-15_Acustica_y_Sonido_Simulacion.ipynb)**\n- 🪐 **[OPT-16 Optica Fisica Simulacion](./OPT-16_Optica_Fisica_Simulacion.ipynb)**\n- 🪐 **[OPT-17 Interferencia Fraunhofer](./OPT-17_Interferencia_Fraunhofer.ipynb)**\n- 🪐 **[PLA-01 Simulador Vlasov Poisson 1D](./PLA-01_Simulador_Vlasov_Poisson_1D.ipynb)**\n- 🪐 **[PLA-02 Amortiguamiento Landau Lineal](./PLA-02_Amortiguamiento_Landau_Lineal.ipynb)**\n- 🪐 **[PLA-03 Confinamiento Magnetico Tokamak 3D](./PLA-03_Confinamiento_Magnetico_Tokamak_3D.ipynb)**\n- 🪐 **[PLA-04 Ecuacion Fokker Planck Termalizacion](./PLA-04_Ecuacion_Fokker_Planck_Termalizacion.ipynb)**\n- 🪐 **[PLA-05 Inestabilidad MHD Kink Tokamak](./PLA-05_Inestabilidad_MHD_Kink_Tokamak.ipynb)**\n- 🪐 **[PLA-06 Plasmas Rayleigh Taylor](./PLA-06_Plasmas_Rayleigh_Taylor.ipynb)**\n- 🪐 **[PLA-07 Conceptos Basicos de Plasma Simulacion](./PLA-07_Conceptos_Basicos_de_Plasma_Simulacion.ipynb)**\n- 🪐 **[PLA-08 Plasmas Alfven Waves](./PLA-08_Plasmas_Alfven_Waves.ipynb)**\n- 🪐 **[PLA-09 Confinamiento y Fusion Simulacion](./PLA-09_Confinamiento_y_Fusion_Simulacion.ipynb)**\n- 🪐 **[PLA-10 Fusion Nuclear y Confinamiento Simulacion](./PLA-10_Fusion_Nuclear_y_Confinamiento_Simulacion.ipynb)**\n- 🪐 **[PLA-11 Plasmas Tokamak Orbits](./PLA-11_Plasmas_Tokamak_Orbits.ipynb)**\n- 🪐 **[PLA-12 Ondas Alfven](./PLA-12_Ondas_Alfven.ipynb)**\n- 🪐 **[PLA-13 Fundamentos de Plasmas Simulacion](./PLA-13_Fundamentos_de_Plasmas_Simulacion.ipynb)**\n- 🪐 **[PLA-14 Confinamiento Tokamak](./PLA-14_Confinamiento_Tokamak.ipynb)**\n- 🪐 **[PLA-15 Plasmas Espaciales Simulacion](./PLA-15_Plasmas_Espaciales_Simulacion.ipynb)**\n- 🪐 **[PLA-16 Frecuencia Plasma Langmuir](./PLA-16_Frecuencia_Plasma_Langmuir.ipynb)**\n- 🪐 **[PLA-17 Magnetohidrodinamica Simulacion](./PLA-17_Magnetohidrodinamica_Simulacion.ipynb)**\n- 🪐 **[Perfil Materia Oscura NFW](./Perfil_Materia_Oscura_NFW.ipynb)**\n- 🪐 **[Propagador Funcion Green 1D](./Propagador_Funcion_Green_1D.ipynb)**\n- 🪐 **[QFT-01 Rotacion Espinorial Matrices Pauli Dirac](./QFT-01_Rotacion_Espinorial_Matrices_Pauli_Dirac.ipynb)**\n- 🪐 **[QFT-02 Simulacion Casimir Vacio](./QFT-02_Simulacion_Casimir_Vacio.ipynb)**\n- 🪐 **[QFT-03 Campo Escalar Termico Masa Efectiva](./QFT-03_Campo_Escalar_Termico_Masa_Efectiva.ipynb)**\n- 🪐 **[QFT-04 Espacio Fock Operadores Algebra](./QFT-04_Espacio_Fock_Operadores_Algebra.ipynb)**\n- 🪐 **[QFT-05 Simulacion Propagador Feynman 2D](./QFT-05_Simulacion_Propagador_Feynman_2D.ipynb)**\n- 🪐 **[QFT-06 QED Seccion Eficaz Compton](./QFT-06_QED_Seccion_Eficaz_Compton.ipynb)**\n- 🪐 **[QFT-07 QFT Decaimiento Boson Z](./QFT-07_QFT_Decaimiento_Boson_Z.ipynb)**\n- 🪐 **[QFT-08 QED Momento Anomalo Electron](./QFT-08_QED_Momento_Anomalo_Electron.ipynb)**\n- 🪐 **[QFT-09 QFT Renormalizacion Dimensional](./QFT-09_QFT_Renormalizacion_Dimensional.ipynb)**\n- 🪐 **[QFT-10 Simulacion Mecanismo Higgs Ruptura Espontanea](./QFT-10_Simulacion_Mecanismo_Higgs_Ruptura_Espontanea.ipynb)**\n- 🪐 **[QFT-11 QFT Oscilador Armonico Red](./QFT-11_QFT_Oscilador_Armonico_Red.ipynb)**\n- 🪐 **[QFT-12 QFT Anomalia Quiral ABJ](./QFT-12_QFT_Anomalia_Quiral_ABJ.ipynb)**\n- 🪐 **[QFT-13 Simulacion Dispersion Rutherford QED](./QFT-13_Simulacion_Dispersion_Rutherford_QED.ipynb)**\n- 🪐 **[QFT-14 Simulacion Lattice QCD Fluctuaciones](./QFT-14_Simulacion_Lattice_QCD_Fluctuaciones.ipynb)**\n- 🪐 **[QFT-15 Matriz Maki Nakagawa Sakata](./QFT-15_Matriz_Maki_Nakagawa_Sakata.ipynb)**\n- 🪐 **[QFT-16 QFT Efecto Casimir Dinamico](./QFT-16_QFT_Efecto_Casimir_Dinamico.ipynb)**\n- 🪐 **[QFT-17 Electrodinamica Efecto Unruh](./QFT-17_Electrodinamica_Efecto_Unruh.ipynb)**\n- 🪐 **[QFT-18 QFT Efecto Schwinger Creacion Pares](./QFT-18_QFT_Efecto_Schwinger_Creacion_Pares.ipynb)**\n- 🪐 **[QFT-19 QCD Potencial Cornell Confinamiento](./QFT-19_QCD_Potencial_Cornell_Confinamiento.ipynb)**\n- 🪐 **[QFT-20 Simulacion Flujo Grupo Renormalizacion](./QFT-20_Simulacion_Flujo_Grupo_Renormalizacion.ipynb)**\n- 🪐 **[QFT-21 QED Polarizacion Vacio Uehling](./QFT-21_QED_Polarizacion_Vacio_Uehling.ipynb)**\n- 🪐 **[QFT-22 QCD Asymptotic Freedom Coupling](./QFT-22_QCD_Asymptotic_Freedom_Coupling.ipynb)**\n- 🪐 **[QFT-23 QFT Potencial Efectivo Coleman Weinberg](./QFT-23_QFT_Potencial_Efectivo_Coleman_Weinberg.ipynb)**\n- 🪐 **[QFT-24 QCD Gell Mann Okubo Mass Formula](./QFT-24_QCD_Gell_Mann_Okubo_Mass_Formula.ipynb)**\n- 🪐 **[QFT-25 QED Bremsstrahlung Infrarrojo](./QFT-25_QED_Bremsstrahlung_Infrarrojo.ipynb)**\n- 🪐 **[QG-01 Simulacion Tension Cuerda Escala Planck](./QG-01_Simulacion_Tension_Cuerda_Escala_Planck.ipynb)**\n- 🪐 **[QG-02 Simulacion Red Espin LQG](./QG-02_Simulacion_Red_Espin_LQG.ipynb)**\n- 🪐 **[QG-03 Simulacion D Branas Dinamica](./QG-03_Simulacion_D_Branas_Dinamica.ipynb)**\n- 🪐 **[QG-04 Simulacion Proyeccion Calabi Yau 2D](./QG-04_Simulacion_Proyeccion_Calabi_Yau_2D.ipynb)**\n- 🪐 **[QG-05 Simulacion Entropia Agujero Negro Strominger Vafa](./QG-05_Simulacion_Entropia_Agujero_Negro_Strominger_Vafa.ipynb)**\n- 🪐 **[QG-06 Simulacion Modos Vibracion Cuerda Cerrada](./QG-06_Simulacion_Modos_Vibracion_Cuerda_Cerrada.ipynb)**\n- 🪐 **[QG-07 Evolucion Espuma Espin](./QG-07_Evolucion_Espuma_Espin.ipynb)**\n- 🪐 **[QG-08 Espectro Operador Area](./QG-08_Espectro_Operador_Area.ipynb)**\n- 🪐 **[QG-09 Solucion Numerica Wheeler DeWitt](./QG-09_Solucion_Numerica_Wheeler_DeWitt.ipynb)**\n- 🪐 **[QIC-01 Teletransportacion Cuantica](./QIC-01_Teletransportacion_Cuantica.ipynb)**\n- 🪐 **[QIC-02 Correccion de Errores y Hardware Simulacion](./QIC-02_Correccion_de_Errores_y_Hardware_Simulacion.ipynb)**\n- 🪐 **[QIC-02 Simulacion Transformada Fourier Cuantica](./QIC-02_Simulacion_Transformada_Fourier_Cuantica.ipynb)**\n- 🪐 **[QIC-03 Emulador Algoritmo Shor](./QIC-03_Emulador_Algoritmo_Shor.ipynb)**\n- 🪐 **[QIC-03 Info Cuantica MPS](./QIC-03_Info_Cuantica_MPS.ipynb)**\n- 🪐 **[QIC-04 Emulador Algoritmo Grover](./QIC-04_Emulador_Algoritmo_Grover.ipynb)**\n- 🪐 **[QIC-04 Qubits y Circuitos Simulacion](./QIC-04_Qubits_y_Circuitos_Simulacion.ipynb)**\n- 🪐 **[QIC-05 Desigualdades Bell Entrelazamiento](./QIC-05_Desigualdades_Bell_Entrelazamiento.ipynb)**\n- 🪐 **[QIC-05 Simulacion VQE Molecula H2](./QIC-05_Simulacion_VQE_Molecula_H2.ipynb)**\n- 🪐 **[QIC-06 Algoritmo Grover Busqueda](./QIC-06_Algoritmo_Grover_Busqueda.ipynb)**\n- 🪐 **[QIC-07 Algoritmos y Simulacion Simulacion](./QIC-07_Algoritmos_y_Simulacion_Simulacion.ipynb)**\n- 🪐 **[QIC-08 Info Cuantica Simulador](./QIC-08_Info_Cuantica_Simulador.ipynb)**\n- 🪐 **[QIC-09 Correccion de Errores Simulacion](./QIC-09_Correccion_de_Errores_Simulacion.ipynb)**\n- 🪐 **[QIC-10 Info Cuantica Teletransportacion](./QIC-10_Info_Cuantica_Teletransportacion.ipynb)**\n- 🪐 **[QIC-11 Entrelazamiento y Medicion Simulacion](./QIC-11_Entrelazamiento_y_Medicion_Simulacion.ipynb)**\n- 🪐 **[QIC-12 Algoritmos Cuanticos Simulacion](./QIC-12_Algoritmos_Cuanticos_Simulacion.ipynb)**\n- 🪐 **[QIC-13 Qubits y Entrelazamiento Simulacion](./QIC-13_Qubits_y_Entrelazamiento_Simulacion.ipynb)**\n- 🪐 **[QM-01 Experimento Stern Gerlach](./QM-01_Experimento_Stern_Gerlach.ipynb)**\n- 🪐 **[QM-02 Ecuacion Schrodinger Simulacion](./QM-02_Ecuacion_Schrodinger_Simulacion.ipynb)**\n- 🪐 **[QM-03 Espacio Hilbert y Operadores Simulacion](./QM-03_Espacio_Hilbert_y_Operadores_Simulacion.ipynb)**\n- 🪐 **[QM-04 Mecanica Cuantica Heisenberg](./QM-04_Mecanica_Cuantica_Heisenberg.ipynb)**\n- 🪐 **[QM-05 Estructura Fina Atomo Hidrogeno](./QM-05_Estructura_Fina_Atomo_Hidrogeno.ipynb)**\n- 🪐 **[QM-06 Oscilaciones Rabi Sistema Dos Niveles](./QM-06_Oscilaciones_Rabi_Sistema_Dos_Niveles.ipynb)**\n- 🪐 **[QM-07 Oscilador Armonico Polinomios Hermite](./QM-07_Oscilador_Armonico_Polinomios_Hermite.ipynb)**\n- 🪐 **[QM-08 Sistemas Unidimensionales Simulacion](./QM-08_Sistemas_Unidimensionales_Simulacion.ipynb)**\n- 🪐 **[QM-09 Fundamentos y Dualidad Simulacion](./QM-09_Fundamentos_y_Dualidad_Simulacion.ipynb)**\n- 🪐 **[QM-10 Decaimiento Alfa Factor Gamow](./QM-10_Decaimiento_Alfa_Factor_Gamow.ipynb)**\n- 🪐 **[QM-11 Mecanica Cuantica Jaynes Cummings](./QM-11_Mecanica_Cuantica_Jaynes_Cummings.ipynb)**\n- 🪐 **[QM-12 Entrelazamiento Evolucion EPR](./QM-12_Entrelazamiento_Evolucion_EPR.ipynb)**\n- 🪐 **[QM-13 Mecanica Cuantica Split Operator](./QM-13_Mecanica_Cuantica_Split_Operator.ipynb)**\n- 🪐 **[QM-14 Efecto Tunel Paquete Ondas](./QM-14_Efecto_Tunel_Paquete_Ondas.ipynb)**\n- 🪐 **[QM-15 Efecto Aharonov Bohm](./QM-15_Efecto_Aharonov_Bohm.ipynb)**\n- 🪐 **[REL-01 Relatividad FLRW Expansion](./REL-01_Relatividad_FLRW_Expansion.ipynb)**\n- 🪐 **[REL-02 Relatividad General Simulacion](./REL-02_Relatividad_General_Simulacion.ipynb)**\n- 🪐 **[REL-03 Diagramas Minkowski](./REL-03_Diagramas_Minkowski.ipynb)**\n- 🪐 **[REL-04 Relatividad Kerr Ray Tracing](./REL-04_Relatividad_Kerr_Ray_Tracing.ipynb)**\n- 🪐 **[REL-05 Lentes Gravitacionales](./REL-05_Lentes_Gravitacionales.ipynb)**\n- 🪐 **[REL-06 Relatividad Especial Simulacion](./REL-06_Relatividad_Especial_Simulacion.ipynb)**\n- 🪐 **[REL-07 Relatividad Ondas Gravitacionales](./REL-07_Relatividad_Ondas_Gravitacionales.ipynb)**\n- 🪐 **[REL-08 Coordenadas Kruskal Szekeres](./REL-08_Coordenadas_Kruskal_Szekeres.ipynb)**\n- 🪐 **[Rotaciones SU2 Espin](./Rotaciones_SU2_Espin.ipynb)**\n- 🪐 **[Schrodinger Paquete Ondas](./Schrodinger_Paquete_Ondas.ipynb)**\n- 🪐 **[Simetria Gauge U1](./Simetria_Gauge_U1.ipynb)**\n- 🪐 **[Simulacion Metrica Schwarzschild](./Simulacion_Metrica_Schwarzschild.ipynb)**\n- 🪐 **[Singularidad Polo Complejo](./Singularidad_Polo_Complejo.ipynb)**\n- 🪐 **[Solitones Sine Gordon](./Solitones_Sine_Gordon.ipynb)**\n- 🪐 **[Solucion Ecuacion Onda](./Solucion_Ecuacion_Onda.ipynb)**\n- 🪐 **[THD-01 Termodinamica Lattice Boltzmann](./THD-01_Termodinamica_Lattice_Boltzmann.ipynb)**\n- 🪐 **[THD-02 Leyes Termodinamica Simulacion](./THD-02_Leyes_Termodinamica_Simulacion.ipynb)**\n- 🪐 **[THD-03 Mecanica Estadistica Simulacion](./THD-03_Mecanica_Estadistica_Simulacion.ipynb)**\n- 🪐 **[THD-04 Movimiento Browniano Wiener](./THD-04_Movimiento_Browniano_Wiener.ipynb)**\n- 🪐 **[THD-05 Ciclo Carnot Entropia](./THD-05_Ciclo_Carnot_Entropia.ipynb)**\n- 🪐 **[THD-06 Termodinamica MBL](./THD-06_Termodinamica_MBL.ipynb)**\n- 🪐 **[THD-07 Teoria Cinetica Simulacion](./THD-07_Teoria_Cinetica_Simulacion.ipynb)**\n- 🪐 **[THD-08 Modelo Ising Transicion Fase](./THD-08_Modelo_Ising_Transicion_Fase.ipynb)**\n- 🪐 **[Teletransporte Cuantico](./Teletransporte_Cuantico.ipynb)**\n- 🪐 **[Tensor Curvatura Riemann](./Tensor_Curvatura_Riemann.ipynb)**\n- 🪐 **[Teorema Residuos Integracion](./Teorema_Residuos_Integracion.ipynb)**\n- 🪐 **[Transporte Paralelo Esfera](./Transporte_Paralelo_Esfera.ipynb)**\n- 🪐 **[Trazado Rayos Agujero Negro](./Trazado_Rayos_Agujero_Negro.ipynb)**\n- 🪐 **[Variedad Topologica Toro](./Variedad_Topologica_Toro.ipynb)**\n\n
+# 📁 Explorador: Teoria_General_((Jupyter.gen.gen)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[README 2](./README 2.md)**
+
+## 💻 Simulaciones Computacionales (Jupyter)
+- 🪐 **[01 Atractor de Lorenz y Efecto Mariposa](./01_Atractor_de_Lorenz_y_Efecto_Mariposa.ipynb)**
+- 🪐 **[01 Geodesicas Metrica Schwarzschild](./01_Geodesicas_Metrica_Schwarzschild.ipynb)**
+- 🪐 **[02 Geodesicas Agujero Negro Kerr Rotatorio](./02_Geodesicas_Agujero_Negro_Kerr_Rotatorio.ipynb)**
+- 🪐 **[02 Mapeo Logistico Diagrama Feigenbaum](./02_Mapeo_Logistico_Diagrama_Feigenbaum.ipynb)**
+- 🪐 **[03 Lente Gravitacional y Deflexion Luz](./03_Lente_Gravitacional_y_Deflexion_Luz.ipynb)**
+- 🪐 **[03 Pendulo Doble Integrador Simplectico](./03_Pendulo_Doble_Integrador_Simplectico.ipynb)**
+- 🪐 **[04 Precesion Perihelio de Mercurio](./04_Precesion_Perihelio_de_Mercurio.ipynb)**
+- 🪐 **[04 Soliton KdV Metodo Espectral](./04_Soliton_KdV_Metodo_Espectral.ipynb)**
+- 🪐 **[05 Diagrama de Penrose Carter](./05_Diagrama_de_Penrose_Carter.ipynb)**
+- 🪐 **[05 Modelo Kuramoto Sincronizacion](./05_Modelo_Kuramoto_Sincronizacion.ipynb)**
+- 🪐 **[06 Atractor de Rossler y Caos Topologico](./06_Atractor_de_Rossler_y_Caos_Topologico.ipynb)**
+- 🪐 **[06 Colapso Gravitacional Oppenheimer Snyder](./06_Colapso_Gravitacional_Oppenheimer_Snyder.ipynb)**
+- 🪐 **[07 Automata Celular Juego de la Vida](./07_Automata_Celular_Juego_de_la_Vida.ipynb)**
+- 🪐 **[07 Ondas Gravitacionales Cuadrupolares](./07_Ondas_Gravitacionales_Cuadrupolares.ipynb)**
+- 🪐 **[08 Regla 110 y Regla 30 Wolfram](./08_Regla_110_y_Regla_30_Wolfram.ipynb)**
+- 🪐 **[08 Sombra de Agujero Negro Raytracing](./08_Sombra_de_Agujero_Negro_Raytracing.ipynb)**
+- 🪐 **[09 Dilatacion Temporal GPS Satelites](./09_Dilatacion_Temporal_GPS_Satelites.ipynb)**
+- 🪐 **[09 Fractales Conjunto de Mandelbrot](./09_Fractales_Conjunto_de_Mandelbrot.ipynb)**
+- 🪐 **[10 Conjuntos de Julia y Dinamica Compleja](./10_Conjuntos_de_Julia_y_Dinamica_Compleja.ipynb)**
+- 🪐 **[10 Efecto Lense Thirring Frame Dragging](./10_Efecto_Lense_Thirring_Frame_Dragging.ipynb)**
+- 🪐 **[11 Esfera de Fotones y Orbita Inestable](./11_Esfera_de_Fotones_y_Orbita_Inestable.ipynb)**
+- 🪐 **[11 Reaccion Difusion Brusselator Turing](./11_Reaccion_Difusion_Brusselator_Turing.ipynb)**
+- 🪐 **[12 Metrica de Alcubierre Motor Warp](./12_Metrica_de_Alcubierre_Motor_Warp.ipynb)**
+- 🪐 **[12 Modelo Predador Presa Lotka Volterra](./12_Modelo_Predador_Presa_Lotka_Volterra.ipynb)**
+- 🪐 **[13 Oscilador de Duffing No Lineal](./13_Oscilador_de_Duffing_No_Lineal.ipynb)**
+- 🪐 **[13 Radiacion Larmor vs Sincrotron](./13_Radiacion_Larmor_vs_Sincrotron.ipynb)**
+- 🪐 **[14 Bifurcacion de Hopf Supercritica](./14_Bifurcacion_de_Hopf_Supercritica.ipynb)**
+- 🪐 **[14 Friccion Abraham Lorentz Dirac](./14_Friccion_Abraham_Lorentz_Dirac.ipynb)**
+- 🪐 **[15 Ruido Termico y Movimiento Browniano Fokker Planck](./15_Ruido_Termico_y_Movimiento_Browniano_Fokker_Planck.ipynb)**
+- 🪐 **[15 Transformaciones Lorentz 4D Boost](./15_Transformaciones_Lorentz_4D_Boost.ipynb)**
+- 🪐 **[16 Fractales DLA Agregacion Limitada Difusion](./16_Fractales_DLA_Agregacion_Limitada_Difusion.ipynb)**
+- 🪐 **[17 Automata Gas Reticular HPP](./17_Automata_Gas_Reticular_HPP.ipynb)**
+- 🪐 **[18 Ecuacion Burger y Ondas de Choque](./18_Ecuacion_Burger_y_Ondas_de_Choque.ipynb)**
+- 🪐 **[19 Sincronizacion Luciernagas Pulsos](./19_Sincronizacion_Luciernagas_Pulsos.ipynb)**
+- 🪐 **[20 Exponente de Lyapunov Maximo Calculo](./20_Exponente_de_Lyapunov_Maximo_Calculo.ipynb)**
+- 🪐 **[AMO-01 Condensado Bose Einstein Densidad](./AMO-01_Condensado_Bose_Einstein_Densidad.ipynb)**
+- 🪐 **[AMO-02 Ecuacion Gross Pitaevskii Soliton](./AMO-02_Ecuacion_Gross_Pitaevskii_Soliton.ipynb)**
+- 🪐 **[AMO-03 Determinante Slater Hartree Fock](./AMO-03_Determinante_Slater_Hartree_Fock.ipynb)**
+- 🪐 **[AMO-04 Efecto Zeeman Division Espectral](./AMO-04_Efecto_Zeeman_Division_Espectral.ipynb)**
+- 🪐 **[AMO-05 Enfriamiento Laser Doppler](./AMO-05_Enfriamiento_Laser_Doppler.ipynb)**
+- 🪐 **[AMO-06 Atomos Frios y Optica Cuantica Simulacion](./AMO-06_Atomos_Frios_y_Optica_Cuantica_Simulacion.ipynb)**
+- 🪐 **[AMO-07 Fisica Molecular Simulacion](./AMO-07_Fisica_Molecular_Simulacion.ipynb)**
+- 🪐 **[AMO-08 Fisica Atomica Lennard Jones](./AMO-08_Fisica_Atomica_Lennard_Jones.ipynb)**
+- 🪐 **[AMO-09 Fisica Atomica Oscilaciones Rabi](./AMO-09_Fisica_Atomica_Oscilaciones_Rabi.ipynb)**
+- 🪐 **[AMO-10 Espectroscopia y Luz Simulacion](./AMO-10_Espectroscopia_y_Luz_Simulacion.ipynb)**
+- 🪐 **[AMO-11 Interaccion Luz Materia Simulacion](./AMO-11_Interaccion_Luz_Materia_Simulacion.ipynb)**
+- 🪐 **[AMO-12 Estructura Atomica Simulacion](./AMO-12_Estructura_Atomica_Simulacion.ipynb)**
+- 🪐 **[AMO-13 Fisica Atomica BEC](./AMO-13_Fisica_Atomica_BEC.ipynb)**
+- 🪐 **[AMO-14 Estructura Atomica y Espectros Simulacion](./AMO-14_Estructura_Atomica_y_Espectros_Simulacion.ipynb)**
+- 🪐 **[AST-01 Acrecion Bondi Hoyle](./AST-01_Acrecion_Bondi_Hoyle.ipynb)**
+- 🪐 **[AST-02 Agujeros Negros Primordiales](./AST-02_Agujeros_Negros_Primordiales.ipynb)**
+- 🪐 **[AST-03 Astrofisica Materia Oscura](./AST-03_Astrofisica_Materia_Oscura.ipynb)**
+- 🪐 **[AST-04 Astrofisica SPH Colapso](./AST-04_Astrofisica_SPH_Colapso.ipynb)**
+- 🪐 **[AST-05 Colision Galactica N Cuerpos](./AST-05_Colision_Galactica_N_Cuerpos.ipynb)**
+- 🪐 **[AST-06 Colision Post Newtoniana](./AST-06_Colision_Post_Newtoniana.ipynb)**
+- 🪐 **[AST-07 Curvas Rotacion Galactica](./AST-07_Curvas_Rotacion_Galactica.ipynb)**
+- 🪐 **[AST-08 Diagrama Hertzsprung Russell](./AST-08_Diagrama_Hertzsprung_Russell.ipynb)**
+- 🪐 **[AST-09 Diagramas Penrose Carter](./AST-09_Diagramas_Penrose_Carter.ipynb)**
+- 🪐 **[AST-10 Dispersion Velocidades Sersic](./AST-10_Dispersion_Velocidades_Sersic.ipynb)**
+- 🪐 **[AST-11 Espectro Potencia No Lineal](./AST-11_Espectro_Potencia_No_Lineal.ipynb)**
+- 🪐 **[AST-12 Evolucion Metalicidad G Dwarf](./AST-12_Evolucion_Metalicidad_G_Dwarf.ipynb)**
+- 🪐 **[AST-13 Fisica Estelar Simulacion](./AST-13_Fisica_Estelar_Simulacion.ipynb)**
+- 🪐 **[AST-14 Fondo Estocastico Gravitacional](./AST-14_Fondo_Estocastico_Gravitacional.ipynb)**
+- 🪐 **[AST-15 Funcion Masa Inicial IMF](./AST-15_Funcion_Masa_Inicial_IMF.ipynb)**
+- 🪐 **[AST-16 Galaxias Simulacion](./AST-16_Galaxias_Simulacion.ipynb)**
+- 🪐 **[AST-17 Geodesicas Metrica Kerr](./AST-17_Geodesicas_Metrica_Kerr.ipynb)**
+- 🪐 **[AST-18 Halo Mass Function Press Schechter](./AST-18_Halo_Mass_Function_Press_Schechter.ipynb)**
+- 🪐 **[AST-19 Lentes Gravitacionales Fuertes](./AST-19_Lentes_Gravitacionales_Fuertes.ipynb)**
+- 🪐 **[AST-20 Limite Chandrasekhar](./AST-20_Limite_Chandrasekhar.ipynb)**
+- 🪐 **[AST-21 Metrica Colapso LTB](./AST-21_Metrica_Colapso_LTB.ipynb)**
+- 🪐 **[AST-22 Ondas Gravitacionales Inspiral](./AST-22_Ondas_Gravitacionales_Inspiral.ipynb)**
+- 🪐 **[AST-23 Radiacion Sincrotron Jets](./AST-23_Radiacion_Sincrotron_Jets.ipynb)**
+- 🪐 **[AST-24 Termodinamica Agujero Negro](./AST-24_Termodinamica_Agujero_Negro.ipynb)**
+- 🪐 **[AST-25 Tolman Oppenheimer Volkoff](./AST-25_Tolman_Oppenheimer_Volkoff.ipynb)**
+- 🪐 **[Algoritmo Shor QFT](./Algoritmo_Shor_QFT.ipynb)**
+- 🪐 **[Armonicos Esfericos 3D](./Armonicos_Esfericos_3D.ipynb)**
+- 🪐 **[Busqueda de Grover](./Busqueda_de_Grover.ipynb)**
+- 🪐 **[CFD Adveccion Difusion](./CFD_Adveccion_Difusion.ipynb)**
+- 🪐 **[CLM-01 Momento y Colisiones Simulacion](./CLM-01_Momento_y_Colisiones_Simulacion.ipynb)**
+- 🪐 **[CLM-02 Trabajo y Energia Simulacion](./CLM-02_Trabajo_y_Energia_Simulacion.ipynb)**
+- 🪐 **[CLM-03 Pendulo Doble Caotico](./CLM-03_Pendulo_Doble_Caotico.ipynb)**
+- 🪐 **[CLM-04 Mecanica Clasica Caos Lorenz](./CLM-04_Mecanica_Clasica_Caos_Lorenz.ipynb)**
+- 🪐 **[CLM-05 Gravitacion Simulacion](./CLM-05_Gravitacion_Simulacion.ipynb)**
+- 🪐 **[CLM-06 Dinamica Simulacion](./CLM-06_Dinamica_Simulacion.ipynb)**
+- 🪐 **[CLM-07 Mecanica Clasica N Cuerpos](./CLM-07_Mecanica_Clasica_N_Cuerpos.ipynb)**
+- 🪐 **[CLM-08 Dinamica Rotacional Simulacion](./CLM-08_Dinamica_Rotacional_Simulacion.ipynb)**
+- 🪐 **[CLM-09 Precesion Giroscopo](./CLM-09_Precesion_Giroscopo.ipynb)**
+- 🪐 **[CLM-10 Cinematica Simulacion](./CLM-10_Cinematica_Simulacion.ipynb)**
+- 🪐 **[CLM-11 Atractor de Lorenz](./CLM-11_Atractor_de_Lorenz.ipynb)**
+- 🪐 **[CLM-12 Mecanica Clasica Pendulo Doble](./CLM-12_Mecanica_Clasica_Pendulo_Doble.ipynb)**
+- 🪐 **[CMA-01 Estructura Cristalina y Redes Simulacion](./CMA-01_Estructura_Cristalina_y_Redes_Simulacion.ipynb)**
+- 🪐 **[CMA-02 Materia Condensada Ginzburg Landau](./CMA-02_Materia_Condensada_Ginzburg_Landau.ipynb)**
+- 🪐 **[CMA-03 Semiconductores Simulacion](./CMA-03_Semiconductores_Simulacion.ipynb)**
+- 🪐 **[CMA-04 Cristalografia y Redes Simulacion](./CMA-04_Cristalografia_y_Redes_Simulacion.ipynb)**
+- 🪐 **[CMA-05 Propiedades Electronicas y Bandas Simulacion](./CMA-05_Propiedades_Electronicas_y_Bandas_Simulacion.ipynb)**
+- 🪐 **[CMA-06 Materia Condensada Graphene](./CMA-06_Materia_Condensada_Graphene.ipynb)**
+- 🪐 **[CMA-07 Redes Bravais 3D](./CMA-07_Redes_Bravais_3D.ipynb)**
+- 🪐 **[CMA-08 Materia Condensada Topological](./CMA-08_Materia_Condensada_Topological.ipynb)**
+- 🪐 **[CMA-09 Superconductividad y Magnetismo Simulacion](./CMA-09_Superconductividad_y_Magnetismo_Simulacion.ipynb)**
+- 🪐 **[CMA-10 Superconductividad Simulacion](./CMA-10_Superconductividad_Simulacion.ipynb)**
+- 🪐 **[CMA-11 Superconductividad Efecto Meissner](./CMA-11_Superconductividad_Efecto_Meissner.ipynb)**
+- 🪐 **[CMA-12 Modelo Kronig Penney](./CMA-12_Modelo_Kronig_Penney.ipynb)**
+- 🪐 **[CMA-13 Magnetismo en Materia Simulacion](./CMA-13_Magnetismo_en_Materia_Simulacion.ipynb)**
+- 🪐 **[CMA-14 Electrones en Solidos Simulacion](./CMA-14_Electrones_en_Solidos_Simulacion.ipynb)**
+- 🪐 **[COS-01 Abundancias BBN Cociente Barion Foton](./COS-01_Abundancias_BBN_Cociente_Barion_Foton.ipynb)**
+- 🪐 **[COS-02 Astrofisica CMB Spectrum](./COS-02_Astrofisica_CMB_Spectrum.ipynb)**
+- 🪐 **[COS-03 Cosmologia Big Bang Simulacion](./COS-03_Cosmologia_Big_Bang_Simulacion.ipynb)**
+- 🪐 **[COS-04 Decaimiento Vacio Falso](./COS-04_Decaimiento_Vacio_Falso.ipynb)**
+- 🪐 **[COS-05 Efecto Doppler Cosmologico](./COS-05_Efecto_Doppler_Cosmologico.ipynb)**
+- 🪐 **[COS-06 Efecto Sunyaev Zeldovich](./COS-06_Efecto_Sunyaev_Zeldovich.ipynb)**
+- 🪐 **[COS-07 Espectro Potencia CMB](./COS-07_Espectro_Potencia_CMB.ipynb)**
+- 🪐 **[COS-08 Expansion Acelerada Ecuaciones Friedmann](./COS-08_Expansion_Acelerada_Ecuaciones_Friedmann.ipynb)**
+- 🪐 **[COS-09 Formacion Estructuras Zeldovich](./COS-09_Formacion_Estructuras_Zeldovich.ipynb)**
+- 🪐 **[COS-10 Automata Celular Emergencia Vida](./COS-10_Automata_Celular_Emergencia_Vida.ipynb)**
+- 🪐 **[COS-11 Limite Resolucion Pixeles Planck](./COS-11_Limite_Resolucion_Pixeles_Planck.ipynb)**
+- 🪐 **[COS-12 Optimizacion Renderizado Cuantico](./COS-12_Optimizacion_Renderizado_Cuantico.ipynb)**
+- 🪐 **[COS-13 Inflacion Campo Lento](./COS-13_Inflacion_Campo_Lento.ipynb)**
+- 🪐 **[COS-14 Nucleosintesis Primordial BBN](./COS-14_Nucleosintesis_Primordial_BBN.ipynb)**
+- 🪐 **[COS-15 Oscilaciones Acusticas Bariones BAO](./COS-15_Oscilaciones_Acusticas_Bariones_BAO.ipynb)**
+- 🪐 **[COS-16 Quintaesencia Energia Oscura](./COS-16_Quintaesencia_Energia_Oscura.ipynb)**
+- 🪐 **[COS-17 Reionizacion Cosmica 21cm](./COS-17_Reionizacion_Cosmica_21cm.ipynb)**
+- 🪐 **[COS-18 Paisaje Vacios Teoria Cuerdas](./COS-18_Paisaje_Vacios_Teoria_Cuerdas.ipynb)**
+- 🪐 **[COS-19 Ramificacion Arbol Muchos Mundos](./COS-19_Ramificacion_Arbol_Muchos_Mundos.ipynb)**
+- 🪐 **[COS-20 Simulacion Inflacion Eterna](./COS-20_Simulacion_Inflacion_Eterna.ipynb)**
+- 🪐 **[Colision D Branas](./Colision_D_Branas.ipynb)**
+- 🪐 **[ELM-01 Ecuaciones Maxwell Simulacion](./ELM-01_Ecuaciones_Maxwell_Simulacion.ipynb)**
+- 🪐 **[ELM-02 Circuitos y Corriente Simulacion](./ELM-02_Circuitos_y_Corriente_Simulacion.ipynb)**
+- 🪐 **[ELM-03 Magnetismo Simulacion](./ELM-03_Magnetismo_Simulacion.ipynb)**
+- 🪐 **[ELM-04 Radiacion Carga Acelerada](./ELM-04_Radiacion_Carga_Acelerada.ipynb)**
+- 🪐 **[ELM-05 Efecto Hall Clasico](./ELM-05_Efecto_Hall_Clasico.ipynb)**
+- 🪐 **[ELM-06 Guias de Onda TETM](./ELM-06_Guias_de_Onda_TETM.ipynb)**
+- 🪐 **[ELM-07 Electromagnetismo FDTD](./ELM-07_Electromagnetismo_FDTD.ipynb)**
+- 🪐 **[ELM-08 Electromagnetismo Plasmones](./ELM-08_Electromagnetismo_Plasmones.ipynb)**
+- 🪐 **[ELM-09 Electromagnetismo Sincrotron](./ELM-09_Electromagnetismo_Sincrotron.ipynb)**
+- 🪐 **[ELM-10 Electrostatica Simulacion](./ELM-10_Electrostatica_Simulacion.ipynb)**
+- 🪐 **[Evaporacion Agujeros Negros](./Evaporacion_Agujeros_Negros.ipynb)**
+- 🪐 **[Evolucion Cosmica FLRW](./Evolucion_Cosmica_FLRW.ipynb)**
+- 🪐 **[FLD-01 Lattice Boltzmann Flujo Cilindro 2D](./FLD-01_Lattice_Boltzmann_Flujo_Cilindro_2D.ipynb)**
+- 🪐 **[FLD-02 Simulador Magnetohidrodinamico MHD](./FLD-02_Simulador_Magnetohidrodinamico_MHD.ipynb)**
+- 🪐 **[FLD-03 Cascada Turbulenta Espectro Kolmogorov](./FLD-03_Cascada_Turbulenta_Espectro_Kolmogorov.ipynb)**
+- 🪐 **[FLD-04 Choque Supersonico Rankine Hugoniot](./FLD-04_Choque_Supersonico_Rankine_Hugoniot.ipynb)**
+- 🪐 **[FLD-05 Flujo Irrotacional Potencial Superposicion](./FLD-05_Flujo_Irrotacional_Potencial_Superposicion.ipynb)**
+- 🪐 **[FLD-06 Inestabilidad Kelvin Helmholtz](./FLD-06_Inestabilidad_Kelvin_Helmholtz.ipynb)**
+- 🪐 **[FLD-07 Dinamica de Fluidos Simulacion](./FLD-07_Dinamica_de_Fluidos_Simulacion.ipynb)**
+- 🪐 **[FLD-08 Flujo Poiseuille](./FLD-08_Flujo_Poiseuille.ipynb)**
+- 🪐 **[FLD-09 Fluidos Turbulencia Kolmogorov](./FLD-09_Fluidos_Turbulencia_Kolmogorov.ipynb)**
+- 🪐 **[FLD-10 Hidrostatica Simulacion](./FLD-10_Hidrostatica_Simulacion.ipynb)**
+- 🪐 **[FLD-11 Fluidos Shallow Water](./FLD-11_Fluidos_Shallow_Water.ipynb)**
+- 🪐 **[FLD-12 Fluidos Navier Stokes](./FLD-12_Fluidos_Navier_Stokes.ipynb)**
+- 🪐 **[FLD-13 Elasticidad de Materiales Simulacion](./FLD-13_Elasticidad_de_Materiales_Simulacion.ipynb)**
+- 🪐 **[FLD-14 Vortices Navier Stokes 2D](./FLD-14_Vortices_Navier_Stokes_2D.ipynb)**
+- 🪐 **[FLD-15 Hidrostatica y Principio Pascal Simulacion](./FLD-15_Hidrostatica_y_Principio_Pascal_Simulacion.ipynb)**
+- 🪐 **[FLD-16 Viscosidad y Turbulencia Simulacion](./FLD-16_Viscosidad_y_Turbulencia_Simulacion.ipynb)**
+- 🪐 **[FLD-17 Viscosidad y Capas Limite Simulacion](./FLD-17_Viscosidad_y_Capas_Limite_Simulacion.ipynb)**
+- 🪐 **[FLD-18 Dinamica de Fluidos y Bernoulli Simulacion](./FLD-18_Dinamica_de_Fluidos_y_Bernoulli_Simulacion.ipynb)**
+- 🪐 **[FLD-19 Elasticidad y Medios Continuos Simulacion](./FLD-19_Elasticidad_y_Medios_Continuos_Simulacion.ipynb)**
+- 🪐 **[Flujo de Ricci Superficies](./Flujo_de_Ricci_Superficies.ipynb)**
+- 🪐 **[Formas Diferenciales Cartan](./Formas_Diferenciales_Cartan.ipynb)**
+- 🪐 **[Generadores Algebra Lie](./Generadores_Algebra_Lie.ipynb)**
+- 🪐 **[Geometria Anti de Sitter](./Geometria_Anti_de_Sitter.ipynb)**
+- 🪐 **[HEP-01 Nuclear Cinematica Mandelstam](./HEP-01_Nuclear_Cinematica_Mandelstam.ipynb)**
+- 🪐 **[HEP-02 Nuclear Decaimiento Markov](./HEP-02_Nuclear_Decaimiento_Markov.ipynb)**
+- 🪐 **[HEP-03 Fision y Fusion Simulacion](./HEP-03_Fision_y_Fusion_Simulacion.ipynb)**
+- 🪐 **[HEP-04 Nuclear Lattice QCD](./HEP-04_Nuclear_Lattice_QCD.ipynb)**
+- 🪐 **[HEP-05 Radioactividad y Decaimientos Simulacion](./HEP-05_Radioactividad_y_Decaimientos_Simulacion.ipynb)**
+- 🪐 **[HEP-06 Estructura Nuclear y Radiactividad Simulacion](./HEP-06_Estructura_Nuclear_y_Radiactividad_Simulacion.ipynb)**
+- 🪐 **[HEP-07 Detectores y Aceleradores Simulacion](./HEP-07_Detectores_y_Aceleradores_Simulacion.ipynb)**
+- 🪐 **[HEP-08 Cinematica Colisiones Relativistas](./HEP-08_Cinematica_Colisiones_Relativistas.ipynb)**
+- 🪐 **[HEP-09 El Modelo Estandar de Particulas Simulacion](./HEP-09_El_Modelo_Estandar_de_Particulas_Simulacion.ipynb)**
+- 🪐 **[HEP-10 Confinamiento Quarks Potencial Cornell](./HEP-10_Confinamiento_Quarks_Potencial_Cornell.ipynb)**
+- 🪐 **[HEP-11 Cadenas Decaimiento Radiactivo](./HEP-11_Cadenas_Decaimiento_Radiactivo.ipynb)**
+- 🪐 **[HEP-12 Estructura Nuclear Simulacion](./HEP-12_Estructura_Nuclear_Simulacion.ipynb)**
+- 🪐 **[HEP-13 Modelo Estandar Simulacion](./HEP-13_Modelo_Estandar_Simulacion.ipynb)**
+- 🪐 **[Inflacion y Slow Roll](./Inflacion_y_Slow_Roll.ipynb)**
+- 🪐 **[Lattice Campo Gauge U1](./Lattice_Campo_Gauge_U1.ipynb)**
+- 🪐 **[Lattice QCD Enfriamiento](./Lattice_QCD_Enfriamiento.ipynb)**
+- 🪐 **[Mapeo Conforme Flujo Fluidos](./Mapeo_Conforme_Flujo_Fluidos.ipynb)**
+- 🪐 **[Modelo de Ising 2D MonteCarlo](./Modelo_de_Ising_2D_MonteCarlo.ipynb)**
+- 🪐 **[N Cuerpos Gravedad](./N_Cuerpos_Gravedad.ipynb)**
+- 🪐 **[OPT-01 Generacion Segundos Armonicos SHG](./OPT-01_Generacion_Segundos_Armonicos_SHG.ipynb)**
+- 🪐 **[OPT-02 Solitones Opticos Kerr](./OPT-02_Solitones_Opticos_Kerr.ipynb)**
+- 🪐 **[OPT-03 Ecuaciones Rate Laser 3Niveles](./OPT-03_Ecuaciones_Rate_Laser_3Niveles.ipynb)**
+- 🪐 **[OPT-04 Estados Squeezed Incertidumbre Cuantica](./OPT-04_Estados_Squeezed_Incertidumbre_Cuantica.ipynb)**
+- 🪐 **[OPT-05 Oscilaciones Rabi Cavidad CQED](./OPT-05_Oscilaciones_Rabi_Cavidad_CQED.ipynb)**
+- 🪐 **[OPT-06 Oscilaciones y Ondas Mecanicas Simulacion](./OPT-06_Oscilaciones_y_Ondas_Mecanicas_Simulacion.ipynb)**
+- 🪐 **[OPT-07 Oscilaciones y Ondas Simulacion](./OPT-07_Oscilaciones_y_Ondas_Simulacion.ipynb)**
+- 🪐 **[OPT-08 Ondas Difraccion Fresnel](./OPT-08_Ondas_Difraccion_Fresnel.ipynb)**
+- 🪐 **[OPT-09 Optica Geometrica Simulacion](./OPT-09_Optica_Geometrica_Simulacion.ipynb)**
+- 🪐 **[OPT-10 Polarizacion Parametros Stokes](./OPT-10_Polarizacion_Parametros_Stokes.ipynb)**
+- 🪐 **[OPT-11 Acustica Simulacion](./OPT-11_Acustica_Simulacion.ipynb)**
+- 🪐 **[OPT-12 Ondas Optica Fourier](./OPT-12_Ondas_Optica_Fourier.ipynb)**
+- 🪐 **[OPT-13 Ondas Solitones](./OPT-13_Ondas_Solitones.ipynb)**
+- 🪐 **[OPT-14 Interferometro Michelson](./OPT-14_Interferometro_Michelson.ipynb)**
+- 🪐 **[OPT-15 Acustica y Sonido Simulacion](./OPT-15_Acustica_y_Sonido_Simulacion.ipynb)**
+- 🪐 **[OPT-16 Optica Fisica Simulacion](./OPT-16_Optica_Fisica_Simulacion.ipynb)**
+- 🪐 **[OPT-17 Interferencia Fraunhofer](./OPT-17_Interferencia_Fraunhofer.ipynb)**
+- 🪐 **[PLA-01 Simulador Vlasov Poisson 1D](./PLA-01_Simulador_Vlasov_Poisson_1D.ipynb)**
+- 🪐 **[PLA-02 Amortiguamiento Landau Lineal](./PLA-02_Amortiguamiento_Landau_Lineal.ipynb)**
+- 🪐 **[PLA-03 Confinamiento Magnetico Tokamak 3D](./PLA-03_Confinamiento_Magnetico_Tokamak_3D.ipynb)**
+- 🪐 **[PLA-04 Ecuacion Fokker Planck Termalizacion](./PLA-04_Ecuacion_Fokker_Planck_Termalizacion.ipynb)**
+- 🪐 **[PLA-05 Inestabilidad MHD Kink Tokamak](./PLA-05_Inestabilidad_MHD_Kink_Tokamak.ipynb)**
+- 🪐 **[PLA-06 Plasmas Rayleigh Taylor](./PLA-06_Plasmas_Rayleigh_Taylor.ipynb)**
+- 🪐 **[PLA-07 Conceptos Basicos de Plasma Simulacion](./PLA-07_Conceptos_Basicos_de_Plasma_Simulacion.ipynb)**
+- 🪐 **[PLA-08 Plasmas Alfven Waves](./PLA-08_Plasmas_Alfven_Waves.ipynb)**
+- 🪐 **[PLA-09 Confinamiento y Fusion Simulacion](./PLA-09_Confinamiento_y_Fusion_Simulacion.ipynb)**
+- 🪐 **[PLA-10 Fusion Nuclear y Confinamiento Simulacion](./PLA-10_Fusion_Nuclear_y_Confinamiento_Simulacion.ipynb)**
+- 🪐 **[PLA-11 Plasmas Tokamak Orbits](./PLA-11_Plasmas_Tokamak_Orbits.ipynb)**
+- 🪐 **[PLA-12 Ondas Alfven](./PLA-12_Ondas_Alfven.ipynb)**
+- 🪐 **[PLA-13 Fundamentos de Plasmas Simulacion](./PLA-13_Fundamentos_de_Plasmas_Simulacion.ipynb)**
+- 🪐 **[PLA-14 Confinamiento Tokamak](./PLA-14_Confinamiento_Tokamak.ipynb)**
+- 🪐 **[PLA-15 Plasmas Espaciales Simulacion](./PLA-15_Plasmas_Espaciales_Simulacion.ipynb)**
+- 🪐 **[PLA-16 Frecuencia Plasma Langmuir](./PLA-16_Frecuencia_Plasma_Langmuir.ipynb)**
+- 🪐 **[PLA-17 Magnetohidrodinamica Simulacion](./PLA-17_Magnetohidrodinamica_Simulacion.ipynb)**
+- 🪐 **[Perfil Materia Oscura NFW](./Perfil_Materia_Oscura_NFW.ipynb)**
+- 🪐 **[Propagador Funcion Green 1D](./Propagador_Funcion_Green_1D.ipynb)**
+- 🪐 **[QFT-01 Rotacion Espinorial Matrices Pauli Dirac](./QFT-01_Rotacion_Espinorial_Matrices_Pauli_Dirac.ipynb)**
+- 🪐 **[QFT-02 Simulacion Casimir Vacio](./QFT-02_Simulacion_Casimir_Vacio.ipynb)**
+- 🪐 **[QFT-03 Campo Escalar Termico Masa Efectiva](./QFT-03_Campo_Escalar_Termico_Masa_Efectiva.ipynb)**
+- 🪐 **[QFT-04 Espacio Fock Operadores Algebra](./QFT-04_Espacio_Fock_Operadores_Algebra.ipynb)**
+- 🪐 **[QFT-05 Simulacion Propagador Feynman 2D](./QFT-05_Simulacion_Propagador_Feynman_2D.ipynb)**
+- 🪐 **[QFT-06 QED Seccion Eficaz Compton](./QFT-06_QED_Seccion_Eficaz_Compton.ipynb)**
+- 🪐 **[QFT-07 QFT Decaimiento Boson Z](./QFT-07_QFT_Decaimiento_Boson_Z.ipynb)**
+- 🪐 **[QFT-08 QED Momento Anomalo Electron](./QFT-08_QED_Momento_Anomalo_Electron.ipynb)**
+- 🪐 **[QFT-09 QFT Renormalizacion Dimensional](./QFT-09_QFT_Renormalizacion_Dimensional.ipynb)**
+- 🪐 **[QFT-10 Simulacion Mecanismo Higgs Ruptura Espontanea](./QFT-10_Simulacion_Mecanismo_Higgs_Ruptura_Espontanea.ipynb)**
+- 🪐 **[QFT-11 QFT Oscilador Armonico Red](./QFT-11_QFT_Oscilador_Armonico_Red.ipynb)**
+- 🪐 **[QFT-12 QFT Anomalia Quiral ABJ](./QFT-12_QFT_Anomalia_Quiral_ABJ.ipynb)**
+- 🪐 **[QFT-13 Simulacion Dispersion Rutherford QED](./QFT-13_Simulacion_Dispersion_Rutherford_QED.ipynb)**
+- 🪐 **[QFT-14 Simulacion Lattice QCD Fluctuaciones](./QFT-14_Simulacion_Lattice_QCD_Fluctuaciones.ipynb)**
+- 🪐 **[QFT-15 Matriz Maki Nakagawa Sakata](./QFT-15_Matriz_Maki_Nakagawa_Sakata.ipynb)**
+- 🪐 **[QFT-16 QFT Efecto Casimir Dinamico](./QFT-16_QFT_Efecto_Casimir_Dinamico.ipynb)**
+- 🪐 **[QFT-17 Electrodinamica Efecto Unruh](./QFT-17_Electrodinamica_Efecto_Unruh.ipynb)**
+- 🪐 **[QFT-18 QFT Efecto Schwinger Creacion Pares](./QFT-18_QFT_Efecto_Schwinger_Creacion_Pares.ipynb)**
+- 🪐 **[QFT-19 QCD Potencial Cornell Confinamiento](./QFT-19_QCD_Potencial_Cornell_Confinamiento.ipynb)**
+- 🪐 **[QFT-20 Simulacion Flujo Grupo Renormalizacion](./QFT-20_Simulacion_Flujo_Grupo_Renormalizacion.ipynb)**
+- 🪐 **[QFT-21 QED Polarizacion Vacio Uehling](./QFT-21_QED_Polarizacion_Vacio_Uehling.ipynb)**
+- 🪐 **[QFT-22 QCD Asymptotic Freedom Coupling](./QFT-22_QCD_Asymptotic_Freedom_Coupling.ipynb)**
+- 🪐 **[QFT-23 QFT Potencial Efectivo Coleman Weinberg](./QFT-23_QFT_Potencial_Efectivo_Coleman_Weinberg.ipynb)**
+- 🪐 **[QFT-24 QCD Gell Mann Okubo Mass Formula](./QFT-24_QCD_Gell_Mann_Okubo_Mass_Formula.ipynb)**
+- 🪐 **[QFT-25 QED Bremsstrahlung Infrarrojo](./QFT-25_QED_Bremsstrahlung_Infrarrojo.ipynb)**
+- 🪐 **[QG-01 Simulacion Tension Cuerda Escala Planck](./QG-01_Simulacion_Tension_Cuerda_Escala_Planck.ipynb)**
+- 🪐 **[QG-02 Simulacion Red Espin LQG](./QG-02_Simulacion_Red_Espin_LQG.ipynb)**
+- 🪐 **[QG-03 Simulacion D Branas Dinamica](./QG-03_Simulacion_D_Branas_Dinamica.ipynb)**
+- 🪐 **[QG-04 Simulacion Proyeccion Calabi Yau 2D](./QG-04_Simulacion_Proyeccion_Calabi_Yau_2D.ipynb)**
+- 🪐 **[QG-05 Simulacion Entropia Agujero Negro Strominger Vafa](./QG-05_Simulacion_Entropia_Agujero_Negro_Strominger_Vafa.ipynb)**
+- 🪐 **[QG-06 Simulacion Modos Vibracion Cuerda Cerrada](./QG-06_Simulacion_Modos_Vibracion_Cuerda_Cerrada.ipynb)**
+- 🪐 **[QG-07 Evolucion Espuma Espin](./QG-07_Evolucion_Espuma_Espin.ipynb)**
+- 🪐 **[QG-08 Espectro Operador Area](./QG-08_Espectro_Operador_Area.ipynb)**
+- 🪐 **[QG-09 Solucion Numerica Wheeler DeWitt](./QG-09_Solucion_Numerica_Wheeler_DeWitt.ipynb)**
+- 🪐 **[QIC-01 Teletransportacion Cuantica](./QIC-01_Teletransportacion_Cuantica.ipynb)**
+- 🪐 **[QIC-02 Correccion de Errores y Hardware Simulacion](./QIC-02_Correccion_de_Errores_y_Hardware_Simulacion.ipynb)**
+- 🪐 **[QIC-02 Simulacion Transformada Fourier Cuantica](./QIC-02_Simulacion_Transformada_Fourier_Cuantica.ipynb)**
+- 🪐 **[QIC-03 Emulador Algoritmo Shor](./QIC-03_Emulador_Algoritmo_Shor.ipynb)**
+- 🪐 **[QIC-03 Info Cuantica MPS](./QIC-03_Info_Cuantica_MPS.ipynb)**
+- 🪐 **[QIC-04 Emulador Algoritmo Grover](./QIC-04_Emulador_Algoritmo_Grover.ipynb)**
+- 🪐 **[QIC-04 Qubits y Circuitos Simulacion](./QIC-04_Qubits_y_Circuitos_Simulacion.ipynb)**
+- 🪐 **[QIC-05 Desigualdades Bell Entrelazamiento](./QIC-05_Desigualdades_Bell_Entrelazamiento.ipynb)**
+- 🪐 **[QIC-05 Simulacion VQE Molecula H2](./QIC-05_Simulacion_VQE_Molecula_H2.ipynb)**
+- 🪐 **[QIC-06 Algoritmo Grover Busqueda](./QIC-06_Algoritmo_Grover_Busqueda.ipynb)**
+- 🪐 **[QIC-07 Algoritmos y Simulacion Simulacion](./QIC-07_Algoritmos_y_Simulacion_Simulacion.ipynb)**
+- 🪐 **[QIC-08 Info Cuantica Simulador](./QIC-08_Info_Cuantica_Simulador.ipynb)**
+- 🪐 **[QIC-09 Correccion de Errores Simulacion](./QIC-09_Correccion_de_Errores_Simulacion.ipynb)**
+- 🪐 **[QIC-10 Info Cuantica Teletransportacion](./QIC-10_Info_Cuantica_Teletransportacion.ipynb)**
+- 🪐 **[QIC-11 Entrelazamiento y Medicion Simulacion](./QIC-11_Entrelazamiento_y_Medicion_Simulacion.ipynb)**
+- 🪐 **[QIC-12 Algoritmos Cuanticos Simulacion](./QIC-12_Algoritmos_Cuanticos_Simulacion.ipynb)**
+- 🪐 **[QIC-13 Qubits y Entrelazamiento Simulacion](./QIC-13_Qubits_y_Entrelazamiento_Simulacion.ipynb)**
+- 🪐 **[QM-01 Experimento Stern Gerlach](./QM-01_Experimento_Stern_Gerlach.ipynb)**
+- 🪐 **[QM-02 Ecuacion Schrodinger Simulacion](./QM-02_Ecuacion_Schrodinger_Simulacion.ipynb)**
+- 🪐 **[QM-03 Espacio Hilbert y Operadores Simulacion](./QM-03_Espacio_Hilbert_y_Operadores_Simulacion.ipynb)**
+- 🪐 **[QM-04 Mecanica Cuantica Heisenberg](./QM-04_Mecanica_Cuantica_Heisenberg.ipynb)**
+- 🪐 **[QM-05 Estructura Fina Atomo Hidrogeno](./QM-05_Estructura_Fina_Atomo_Hidrogeno.ipynb)**
+- 🪐 **[QM-06 Oscilaciones Rabi Sistema Dos Niveles](./QM-06_Oscilaciones_Rabi_Sistema_Dos_Niveles.ipynb)**
+- 🪐 **[QM-07 Oscilador Armonico Polinomios Hermite](./QM-07_Oscilador_Armonico_Polinomios_Hermite.ipynb)**
+- 🪐 **[QM-08 Sistemas Unidimensionales Simulacion](./QM-08_Sistemas_Unidimensionales_Simulacion.ipynb)**
+- 🪐 **[QM-09 Fundamentos y Dualidad Simulacion](./QM-09_Fundamentos_y_Dualidad_Simulacion.ipynb)**
+- 🪐 **[QM-10 Decaimiento Alfa Factor Gamow](./QM-10_Decaimiento_Alfa_Factor_Gamow.ipynb)**
+- 🪐 **[QM-11 Mecanica Cuantica Jaynes Cummings](./QM-11_Mecanica_Cuantica_Jaynes_Cummings.ipynb)**
+- 🪐 **[QM-12 Entrelazamiento Evolucion EPR](./QM-12_Entrelazamiento_Evolucion_EPR.ipynb)**
+- 🪐 **[QM-13 Mecanica Cuantica Split Operator](./QM-13_Mecanica_Cuantica_Split_Operator.ipynb)**
+- 🪐 **[QM-14 Efecto Tunel Paquete Ondas](./QM-14_Efecto_Tunel_Paquete_Ondas.ipynb)**
+- 🪐 **[QM-15 Efecto Aharonov Bohm](./QM-15_Efecto_Aharonov_Bohm.ipynb)**
+- 🪐 **[REL-01 Relatividad FLRW Expansion](./REL-01_Relatividad_FLRW_Expansion.ipynb)**
+- 🪐 **[REL-02 Relatividad General Simulacion](./REL-02_Relatividad_General_Simulacion.ipynb)**
+- 🪐 **[REL-03 Diagramas Minkowski](./REL-03_Diagramas_Minkowski.ipynb)**
+- 🪐 **[REL-04 Relatividad Kerr Ray Tracing](./REL-04_Relatividad_Kerr_Ray_Tracing.ipynb)**
+- 🪐 **[REL-05 Lentes Gravitacionales](./REL-05_Lentes_Gravitacionales.ipynb)**
+- 🪐 **[REL-06 Relatividad Especial Simulacion](./REL-06_Relatividad_Especial_Simulacion.ipynb)**
+- 🪐 **[REL-07 Relatividad Ondas Gravitacionales](./REL-07_Relatividad_Ondas_Gravitacionales.ipynb)**
+- 🪐 **[REL-08 Coordenadas Kruskal Szekeres](./REL-08_Coordenadas_Kruskal_Szekeres.ipynb)**
+- 🪐 **[Rotaciones SU2 Espin](./Rotaciones_SU2_Espin.ipynb)**
+- 🪐 **[Schrodinger Paquete Ondas](./Schrodinger_Paquete_Ondas.ipynb)**
+- 🪐 **[Simetria Gauge U1](./Simetria_Gauge_U1.ipynb)**
+- 🪐 **[Simulacion Metrica Schwarzschild](./Simulacion_Metrica_Schwarzschild.ipynb)**
+- 🪐 **[Singularidad Polo Complejo](./Singularidad_Polo_Complejo.ipynb)**
+- 🪐 **[Solitones Sine Gordon](./Solitones_Sine_Gordon.ipynb)**
+- 🪐 **[Solucion Ecuacion Onda](./Solucion_Ecuacion_Onda.ipynb)**
+- 🪐 **[THD-01 Termodinamica Lattice Boltzmann](./THD-01_Termodinamica_Lattice_Boltzmann.ipynb)**
+- 🪐 **[THD-02 Leyes Termodinamica Simulacion](./THD-02_Leyes_Termodinamica_Simulacion.ipynb)**
+- 🪐 **[THD-03 Mecanica Estadistica Simulacion](./THD-03_Mecanica_Estadistica_Simulacion.ipynb)**
+- 🪐 **[THD-04 Movimiento Browniano Wiener](./THD-04_Movimiento_Browniano_Wiener.ipynb)**
+- 🪐 **[THD-05 Ciclo Carnot Entropia](./THD-05_Ciclo_Carnot_Entropia.ipynb)**
+- 🪐 **[THD-06 Termodinamica MBL](./THD-06_Termodinamica_MBL.ipynb)**
+- 🪐 **[THD-07 Teoria Cinetica Simulacion](./THD-07_Teoria_Cinetica_Simulacion.ipynb)**
+- 🪐 **[THD-08 Modelo Ising Transicion Fase](./THD-08_Modelo_Ising_Transicion_Fase.ipynb)**
+- 🪐 **[Teletransporte Cuantico](./Teletransporte_Cuantico.ipynb)**
+- 🪐 **[Tensor Curvatura Riemann](./Tensor_Curvatura_Riemann.ipynb)**
+- 🪐 **[Teorema Residuos Integracion](./Teorema_Residuos_Integracion.ipynb)**
+- 🪐 **[Transporte Paralelo Esfera](./Transporte_Paralelo_Esfera.ipynb)**
+- 🪐 **[Trazado Rayos Agujero Negro](./Trazado_Rayos_Agujero_Negro.ipynb)**
+- 🪐 **[Variedad Topologica Toro](./Variedad_Topologica_Toro.ipynb)**
+

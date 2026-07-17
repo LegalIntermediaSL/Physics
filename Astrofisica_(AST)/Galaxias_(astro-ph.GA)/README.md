@@ -1,1 +1,8 @@
-# 📁 Explorador: Galaxias_(astro-ph.GA)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[AST-04 Curvas de Rotacion y Materia Oscura](./AST-04_Curvas_de_Rotacion_y_Materia_Oscura.md)**\n- 📄 **[AST-05 Dinamica Galactica y Ecuacion de Jeans](./AST-05_Dinamica_Galactica_y_Ecuacion_de_Jeans.md)**\n\n
+# 📁 Explorador: Galaxias_(astro-ph.GA)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[AST-04 Curvas de Rotacion y Materia Oscura](./AST-04_Curvas_de_Rotacion_y_Materia_Oscura.md)**
+- 📄 **[AST-05 Dinamica Galactica y Ecuacion de Jeans](./AST-05_Dinamica_Galactica_y_Ecuacion_de_Jeans.md)**
+

@@ -1,1 +1,9 @@
-# 📁 Explorador: Sistemas_Dinamicos_y_Caos_Clasico\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[Caos y Exponentes Lyapunov](./Caos_y_Exponentes_Lyapunov.md)**\n- 📄 **[Teorema KAM y Perturbaciones](./Teorema_KAM_y_Perturbaciones.md)**\n\n
+# 📁 Explorador: Sistemas_Dinamicos_y_Caos_Clasico
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[Caos y Exponentes Lyapunov](./Caos_y_Exponentes_Lyapunov.md)**
+- 📄 **[README 2](./README 2.md)**
+- 📄 **[Teorema KAM y Perturbaciones](./Teorema_KAM_y_Perturbaciones.md)**
+

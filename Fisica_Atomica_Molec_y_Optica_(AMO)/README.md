@@ -1,1 +1,7 @@
-# 📁 Explorador: Fisica_Atomica_Molec_y_Optica_(AMO)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Optica_Cuantica_(quant-ph)](./Optica_Cuantica_(quant-ph))**\n\n
+# 📁 Explorador: Fisica_Atomica_Molec_y_Optica_(AMO)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📂 Subramas y Categorías
+- 📁 **[Optica_Cuantica_(quant-ph)](./Optica_Cuantica_(quant-ph))**
+

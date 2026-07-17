@@ -1,1 +1,11 @@
-# 📁 Explorador: Metodos_Asintoticos_y_Perturbaciones\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[1 Desarrollos Asintoticos y Fase Estacionaria](./1_Desarrollos_Asintoticos_y_Fase_Estacionaria.md)**\n- 📄 **[2 Aproximacion WKB](./2_Aproximacion_WKB.md)**\n- 📄 **[Aproximacion WKB y Puntos de Retorno](./Aproximacion_WKB_y_Puntos_de_Retorno.md)**\n- 📄 **[Teoria de Perturbaciones Matematica](./Teoria_de_Perturbaciones_Matematica.md)**\n\n
+# 📁 Explorador: Metodos_Asintoticos_y_Perturbaciones
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[1 Desarrollos Asintoticos y Fase Estacionaria](./1_Desarrollos_Asintoticos_y_Fase_Estacionaria.md)**
+- 📄 **[2 Aproximacion WKB](./2_Aproximacion_WKB.md)**
+- 📄 **[Aproximacion WKB y Puntos de Retorno](./Aproximacion_WKB_y_Puntos_de_Retorno.md)**
+- 📄 **[README 2](./README 2.md)**
+- 📄 **[Teoria de Perturbaciones Matematica](./Teoria_de_Perturbaciones_Matematica.md)**
+

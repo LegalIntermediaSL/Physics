@@ -1,1 +1,7 @@
-# 📁 Explorador: Superconductividad_(cond-mat.supr-con)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[CMA-05 Superconductividad y Teoria BCS](./CMA-05_Superconductividad_y_Teoria_BCS.md)**\n\n
+# 📁 Explorador: Superconductividad_(cond-mat.supr-con)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[CMA-05 Superconductividad y Teoria BCS](./CMA-05_Superconductividad_y_Teoria_BCS.md)**
+

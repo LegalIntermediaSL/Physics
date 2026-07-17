@@ -1,1 +1,13 @@
-# 📁 Explorador: Teoria_de_Cuerdas_(hep-th)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[QG-01 Teoria de Cuerdas Bosonica y Supercuerdas](./QG-01_Teoria_de_Cuerdas_Bosonica_y_Supercuerdas.md)**\n- 📄 **[QG-03 Teoria M y Membranas 11D](./QG-03_Teoria_M_y_Membranas_11D.md)**\n- 📄 **[QG-07 D-Branas y Fronteras de Dirichlet](./QG-07_D-Branas_y_Fronteras_de_Dirichlet.md)**\n- 📄 **[QG-08 Dualidad AdS-CFT y Principio Holografico](./QG-08_Dualidad_AdS-CFT_y_Principio_Holografico.md)**\n- 📄 **[QG-14 Correspondencia AdS CFT Maldacena](./QG-14_Correspondencia_AdS_CFT_Maldacena.md)**\n- 📄 **[QG-15 D Branas y Teoria M 11D](./QG-15_D_Branas_y_Teoria_M_11D.md)**\n- 📄 **[QG-18 Supercuerdas Compactificacion y Dualidad T](./QG-18_Supercuerdas_Compactificacion_y_Dualidad_T.md)**\n\n
+# 📁 Explorador: Teoria_de_Cuerdas_(hep-th)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[QG-01 Teoria de Cuerdas Bosonica y Supercuerdas](./QG-01_Teoria_de_Cuerdas_Bosonica_y_Supercuerdas.md)**
+- 📄 **[QG-03 Teoria M y Membranas 11D](./QG-03_Teoria_M_y_Membranas_11D.md)**
+- 📄 **[QG-07 D-Branas y Fronteras de Dirichlet](./QG-07_D-Branas_y_Fronteras_de_Dirichlet.md)**
+- 📄 **[QG-08 Dualidad AdS-CFT y Principio Holografico](./QG-08_Dualidad_AdS-CFT_y_Principio_Holografico.md)**
+- 📄 **[QG-14 Correspondencia AdS CFT Maldacena](./QG-14_Correspondencia_AdS_CFT_Maldacena.md)**
+- 📄 **[QG-15 D Branas y Teoria M 11D](./QG-15_D_Branas_y_Teoria_M_11D.md)**
+- 📄 **[QG-18 Supercuerdas Compactificacion y Dualidad T](./QG-18_Supercuerdas_Compactificacion_y_Dualidad_T.md)**
+

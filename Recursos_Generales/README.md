@@ -1,1 +1,13 @@
-# 📁 Explorador: Recursos_Generales\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Fisica_Computacional](./Fisica_Computacional)**\n- 📁 **[Laboratorio_y_Medicion](./Laboratorio_y_Medicion)**\n- 📁 **[Matematicas_para_Fisica](./Matematicas_para_Fisica)**\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[2 Guia Oficial de ArXiv](./2_Guia_Oficial_de_ArXiv.md)**\n\n
+# 📁 Explorador: Recursos_Generales
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📂 Subramas y Categorías
+- 📁 **[Fisica_Computacional](./Fisica_Computacional)**
+- 📁 **[Laboratorio_y_Medicion](./Laboratorio_y_Medicion)**
+- 📁 **[Matematicas_para_Fisica](./Matematicas_para_Fisica)**
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[2 Guia Oficial de ArXiv](./2_Guia_Oficial_de_ArXiv.md)**
+- 📄 **[README 2](./README 2.md)**
+

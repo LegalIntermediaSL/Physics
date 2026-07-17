@@ -1,1 +1,7 @@
-# 📁 Explorador: Dinamica_de_Fluidos_(physics.flu-dyn)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[CLF-08 Ondas de Choque Burgers y Sonoluminiscencia](./CLF-08_Ondas_de_Choque_Burgers_y_Sonoluminiscencia.md)**\n\n
+# 📁 Explorador: Dinamica_de_Fluidos_(physics.flu-dyn)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[CLF-08 Ondas de Choque Burgers y Sonoluminiscencia](./CLF-08_Ondas_de_Choque_Burgers_y_Sonoluminiscencia.md)**
+

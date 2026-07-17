@@ -1,1 +1,9 @@
-# 📁 Explorador: Geometria_Diferencial\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 💻 Simulaciones Computacionales (Jupyter)\n- 🪐 **[Flujo de Ricci Superficies](./Flujo_de_Ricci_Superficies.ipynb)**\n- 🪐 **[Formas Diferenciales Cartan](./Formas_Diferenciales_Cartan.ipynb)**\n- 🪐 **[Variedad Topologica Toro](./Variedad_Topologica_Toro.ipynb)**\n\n
+# 📁 Explorador: Geometria_Diferencial
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 💻 Simulaciones Computacionales (Jupyter)
+- 🪐 **[Flujo de Ricci Superficies](./Flujo_de_Ricci_Superficies.ipynb)**
+- 🪐 **[Formas Diferenciales Cartan](./Formas_Diferenciales_Cartan.ipynb)**
+- 🪐 **[Variedad Topologica Toro](./Variedad_Topologica_Toro.ipynb)**
+

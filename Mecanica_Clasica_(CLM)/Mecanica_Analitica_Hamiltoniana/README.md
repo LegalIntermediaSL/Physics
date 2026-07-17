@@ -1,1 +1,10 @@
-# 📁 Explorador: Mecanica_Analitica_Hamiltoniana\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[Corchetes de Poisson y Transformaciones Canonicas](./Corchetes_de_Poisson_y_Transformaciones_Canonicas.md)**\n- 📄 **[Ecuacion de Hamilton Jacobi](./Ecuacion_de_Hamilton_Jacobi.md)**\n- 📄 **[Formulacion Hamiltoniana y Espacio Fasico](./Formulacion_Hamiltoniana_y_Espacio_Fasico.md)**\n\n
+# 📁 Explorador: Mecanica_Analitica_Hamiltoniana
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[Corchetes de Poisson y Transformaciones Canonicas](./Corchetes_de_Poisson_y_Transformaciones_Canonicas.md)**
+- 📄 **[Ecuacion de Hamilton Jacobi](./Ecuacion_de_Hamilton_Jacobi.md)**
+- 📄 **[Formulacion Hamiltoniana y Espacio Fasico](./Formulacion_Hamiltoniana_y_Espacio_Fasico.md)**
+- 📄 **[README 2](./README 2.md)**
+

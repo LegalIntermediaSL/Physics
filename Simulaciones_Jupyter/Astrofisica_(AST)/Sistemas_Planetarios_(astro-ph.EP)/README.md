@@ -1,1 +1,7 @@
-# 📁 Explorador: Sistemas_Planetarios_(astro-ph.EP)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 💻 Simulaciones Computacionales (Jupyter)\n- 🪐 **[AST-02 Simulacion Transito Exoplanetario](./AST-02_Simulacion_Transito_Exoplanetario.ipynb)**\n\n
+# 📁 Explorador: Sistemas_Planetarios_(astro-ph.EP)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 💻 Simulaciones Computacionales (Jupyter)
+- 🪐 **[AST-02 Simulacion Transito Exoplanetario](./AST-02_Simulacion_Transito_Exoplanetario.ipynb)**
+

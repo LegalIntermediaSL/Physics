@@ -1,1 +1,14 @@
-# 📁 Explorador: Fisica_Nuclear_y_de_Particulas_(HEP)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Detectores_y_Aceleradores](./Detectores_y_Aceleradores)**\n- 📁 **[El_Modelo_Estandar_de_Particulas](./El_Modelo_Estandar_de_Particulas)**\n- 📁 **[Estructura_Nuclear](./Estructura_Nuclear)**\n- 📁 **[Estructura_Nuclear_y_Radiactividad](./Estructura_Nuclear_y_Radiactividad)**\n- 📁 **[Fision_y_Fusion](./Fision_y_Fusion)**\n- 📁 **[Modelo_Estandar](./Modelo_Estandar)**\n- 📁 **[Radioactividad_y_Decaimientos](./Radioactividad_y_Decaimientos)**\n- 📁 **[Teoria_General_((HEP.gen)](./Teoria_General_((HEP.gen))**\n\n
+# 📁 Explorador: Fisica_Nuclear_y_de_Particulas_(HEP)
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📂 Subramas y Categorías
+- 📁 **[Detectores_y_Aceleradores](./Detectores_y_Aceleradores)**
+- 📁 **[El_Modelo_Estandar_de_Particulas](./El_Modelo_Estandar_de_Particulas)**
+- 📁 **[Estructura_Nuclear](./Estructura_Nuclear)**
+- 📁 **[Estructura_Nuclear_y_Radiactividad](./Estructura_Nuclear_y_Radiactividad)**
+- 📁 **[Fision_y_Fusion](./Fision_y_Fusion)**
+- 📁 **[Modelo_Estandar](./Modelo_Estandar)**
+- 📁 **[Radioactividad_y_Decaimientos](./Radioactividad_y_Decaimientos)**
+- 📁 **[Teoria_General_((HEP.gen)](./Teoria_General_((HEP.gen))**
+

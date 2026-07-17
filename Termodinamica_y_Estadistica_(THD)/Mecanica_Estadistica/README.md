@@ -1,1 +1,9 @@
-# 📁 Explorador: Mecanica_Estadistica\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[Colectivos Microcanonico Canonico y Gran Canonico](./Colectivos_Microcanonico_Canonico_y_Gran_Canonico.md)**\n- 📄 **[Estadistica Cuantica Bose Einstein y Fermi Dirac](./Estadistica_Cuantica_Bose_Einstein_y_Fermi_Dirac.md)**\n\n
+# 📁 Explorador: Mecanica_Estadistica
+
+Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
+
+## 📜 Tratados Teóricos (Markdown)
+- 📄 **[Colectivos Microcanonico Canonico y Gran Canonico](./Colectivos_Microcanonico_Canonico_y_Gran_Canonico.md)**
+- 📄 **[Estadistica Cuantica Bose Einstein y Fermi Dirac](./Estadistica_Cuantica_Bose_Einstein_y_Fermi_Dirac.md)**
+- 📄 **[README 2](./README 2.md)**
+
