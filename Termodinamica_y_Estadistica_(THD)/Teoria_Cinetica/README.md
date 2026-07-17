@@ -4,6 +4,5 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 
 ## 📜 Tratados Teóricos (Markdown)
 - 📄 **[Ecuacion de Transporte de Boltzmann](./Ecuacion_de_Transporte_de_Boltzmann.md)**
-- 📄 **[README 2](./README 2.md)**
 - 📄 **[Teorema H y Flecha del Tiempo](./Teorema_H_y_Flecha_del_Tiempo.md)**
 

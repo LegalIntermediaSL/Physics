@@ -9,5 +9,4 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 - 📄 **[4 Clasificacion de Cartan Dynkin](./4_Clasificacion_de_Cartan_Dynkin.md)**
 - 📄 **[5 Grupos Lorentz y Poincare](./5_Grupos_Lorentz_y_Poincare.md)**
 - 📄 **[6 Grupos Unitarios SUN y Gauge](./6_Grupos_Unitarios_SUN_y_Gauge.md)**
-- 📄 **[README 2](./README 2.md)**
 

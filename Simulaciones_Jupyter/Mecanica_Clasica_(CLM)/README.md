@@ -2,6 +2,9 @@
 
 Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
 
+## 📂 Subramas y Categorías
+- 📁 **[Mecanica_Analitica_Hamiltoniana](./Mecanica_Analitica_Hamiltoniana)**
+
 ## 💻 Simulaciones Computacionales (Jupyter)
 - 🪐 **[CLM-01 Momento y Colisiones Simulacion](./CLM-01_Momento_y_Colisiones_Simulacion.ipynb)**
 - 🪐 **[CLM-02 Trabajo y Energia Simulacion](./CLM-02_Trabajo_y_Energia_Simulacion.ipynb)**

@@ -8,5 +8,4 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 - 📄 **[AMO-03 Ecuacion Gross Pitaevskii](./AMO-03_Ecuacion_Gross_Pitaevskii.md)**
 - 📄 **[AMO-04 Efecto Zeeman y Stark](./AMO-04_Efecto_Zeeman_y_Stark.md)**
 - 📄 **[AMO-05 Estructura Fina e Hiperfina](./AMO-05_Estructura_Fina_e_Hiperfina.md)**
-- 📄 **[README 2](./README 2.md)**
 

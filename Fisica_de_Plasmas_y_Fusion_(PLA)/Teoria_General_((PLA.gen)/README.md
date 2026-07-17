@@ -8,5 +8,4 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 - 📄 **[PLA-03 Confinamiento Magnetico Tokamaks](./PLA-03_Confinamiento_Magnetico_Tokamaks.md)**
 - 📄 **[PLA-04 Inestabilidades Kruskal Shafranov](./PLA-04_Inestabilidades_Kruskal_Shafranov.md)**
 - 📄 **[PLA-05 Ecuacion Fokker Planck](./PLA-05_Ecuacion_Fokker_Planck.md)**
-- 📄 **[README 2](./README 2.md)**
 

@@ -2,9 +2,6 @@
 
 Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
 
-## 📜 Tratados Teóricos (Markdown)
-- 📄 **[README 2](./README 2.md)**
-
 ## 💻 Simulaciones Computacionales (Jupyter)
 - 🪐 **[01 Atractor de Lorenz y Efecto Mariposa](./01_Atractor_de_Lorenz_y_Efecto_Mariposa.ipynb)**
 - 🪐 **[01 Geodesicas Metrica Schwarzschild](./01_Geodesicas_Metrica_Schwarzschild.ipynb)**

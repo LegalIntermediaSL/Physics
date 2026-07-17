@@ -9,5 +9,4 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 
 ## 📜 Tratados Teóricos (Markdown)
 - 📄 **[2 Guia Oficial de ArXiv](./2_Guia_Oficial_de_ArXiv.md)**
-- 📄 **[README 2](./README 2.md)**
 

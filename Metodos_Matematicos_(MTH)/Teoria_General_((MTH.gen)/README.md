@@ -37,7 +37,6 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 - 📄 **[Funciones de Green y Propagadores Avanzados](./Funciones_de_Green_y_Propagadores_Avanzados.md)**
 - 📄 **[Meticas y Conexiones](./Meticas_y_Conexiones.md)**
 - 📄 **[Operadores Hermiticos y Espectrales](./Operadores_Hermiticos_y_Espectrales.md)**
-- 📄 **[README 2](./README 2.md)**
 - 📄 **[Teorema de Cauchy y Residuos](./Teorema_de_Cauchy_y_Residuos.md)**
 - 📄 **[Teorema de Stokes Generalizado](./Teorema_de_Stokes_Generalizado.md)**
 - 📄 **[Teoria de Perturbaciones Matematica](./Teoria_de_Perturbaciones_Matematica.md)**

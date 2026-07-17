@@ -3,5 +3,6 @@
 Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:
 
 ## 💻 Simulaciones Computacionales (Jupyter)
+- 🪐 **[NLD-07 Simulacion Atractor Lorenz y Caos](./NLD-07_Simulacion_Atractor_Lorenz_y_Caos.ipynb)**
 - 🪐 **[NLD-07 Simulacion Caos Atractor Lorenz](./NLD-07_Simulacion_Caos_Atractor_Lorenz.ipynb)**
 

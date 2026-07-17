@@ -35,6 +35,3 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 - 📁 **[Teoria_General_(Jupyter.gen)](./Teoria_General_(Jupyter.gen))**
 - 📁 **[Termodinamica_y_Estadistica_(THD)](./Termodinamica_y_Estadistica_(THD))**
 
-## 📜 Tratados Teóricos (Markdown)
-- 📄 **[README 2](./README 2.md)**
-

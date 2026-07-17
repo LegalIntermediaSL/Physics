@@ -8,5 +8,4 @@ Bienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para 
 - 📄 **[3 Teoria de Distribuciones y Delta Dirac](./3_Teoria_de_Distribuciones_y_Delta_Dirac.md)**
 - 📄 **[Espacios de Hilbert y Notacion Dirac](./Espacios_de_Hilbert_y_Notacion_Dirac.md)**
 - 📄 **[Operadores Hermiticos y Espectrales](./Operadores_Hermiticos_y_Espectrales.md)**
-- 📄 **[README 2](./README 2.md)**
 
