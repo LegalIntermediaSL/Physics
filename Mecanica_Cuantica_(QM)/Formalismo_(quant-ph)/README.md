@@ -1,0 +1,1 @@
+# 📁 Explorador: Formalismo_(quant-ph)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[QM-06 Mecanica Cuantica Supersimetrica SUSY](./QM-06_Mecanica_Cuantica_Supersimetrica_SUSY.md)**\n\n

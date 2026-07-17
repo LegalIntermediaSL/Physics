@@ -1,0 +1,1 @@
+# 📁 Explorador: Fisica_No_Lineal_y_Sistemas_Complejos_(NLD)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Fisica_Biologica_(q-bio)](./Fisica_Biologica_(q-bio))**\n- 📁 **[Sistemas_Dinamicos_(nlin.CD)](./Sistemas_Dinamicos_(nlin.CD))**\n\n

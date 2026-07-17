@@ -1,0 +1,1 @@
+# 📁 Explorador: Mecanica_Estadistica_(cond-mat.stat-mech)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 💻 Simulaciones Computacionales (Jupyter)\n- 🪐 **[THD-09 Simulacion Trinquete Browniano](./THD-09_Simulacion_Trinquete_Browniano.ipynb)**\n\n

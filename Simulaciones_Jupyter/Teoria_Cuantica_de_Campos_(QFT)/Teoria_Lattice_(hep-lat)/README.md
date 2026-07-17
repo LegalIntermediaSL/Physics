@@ -1,0 +1,1 @@
+# 📁 Explorador: Teoria_Lattice_(hep-lat)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 💻 Simulaciones Computacionales (Jupyter)\n- 🪐 **[QFT-10 Simulacion Monte Carlo Lattice](./QFT-10_Simulacion_Monte_Carlo_Lattice.ipynb)**\n\n

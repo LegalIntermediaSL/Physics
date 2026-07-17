@@ -1,0 +1,1 @@
+# 📁 Explorador: Astrofisica_Estelar_(astro-ph.SR)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 💻 Simulaciones Computacionales (Jupyter)\n- 🪐 **[AST-06 Simulacion Estructura Estelar Lane Emden](./AST-06_Simulacion_Estructura_Estelar_Lane_Emden.ipynb)**\n\n

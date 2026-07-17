@@ -1,0 +1,1 @@
+# 📁 Explorador: Electromagnetismo_y_Plasmas_(EM)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Fisica_de_Plasmas_(physics.plasm-ph)](./Fisica_de_Plasmas_(physics.plasm-ph))**\n\n

@@ -1,0 +1,1 @@
+# 📁 Explorador: Biologia_Cuantica_(physics.bio-ph)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[BIO-01 Efecto Tunel ADN y Fotosintesis Cuantica](./BIO-01_Efecto_Tunel_ADN_y_Fotosintesis_Cuantica.md)**\n\n

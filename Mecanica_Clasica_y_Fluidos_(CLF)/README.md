@@ -1,0 +1,1 @@
+# 📁 Explorador: Mecanica_Clasica_y_Fluidos_(CLF)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Dinamica_de_Fluidos_(physics.flu-dyn)](./Dinamica_de_Fluidos_(physics.flu-dyn))**\n\n

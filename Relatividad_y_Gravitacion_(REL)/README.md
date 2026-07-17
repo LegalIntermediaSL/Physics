@@ -1,0 +1,1 @@
+# 📁 Explorador: Relatividad_y_Gravitacion_(REL)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Relatividad_General_(gr-qc)](./Relatividad_General_(gr-qc))**\n\n

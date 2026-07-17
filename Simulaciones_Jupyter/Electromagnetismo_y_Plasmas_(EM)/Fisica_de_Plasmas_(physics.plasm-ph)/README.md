@@ -1,0 +1,1 @@
+# 📁 Explorador: Fisica_de_Plasmas_(physics.plasm-ph)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 💻 Simulaciones Computacionales (Jupyter)\n- 🪐 **[PLA-05 Simulacion Gyromotion Tokamak](./PLA-05_Simulacion_Gyromotion_Tokamak.ipynb)**\n\n

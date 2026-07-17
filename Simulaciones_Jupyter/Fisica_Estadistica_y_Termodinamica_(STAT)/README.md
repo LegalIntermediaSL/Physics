@@ -1,0 +1,1 @@
+# 📁 Explorador: Fisica_Estadistica_y_Termodinamica_(STAT)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Mecanica_Estadistica_(cond-mat.stat-mech)](./Mecanica_Estadistica_(cond-mat.stat-mech))**\n\n

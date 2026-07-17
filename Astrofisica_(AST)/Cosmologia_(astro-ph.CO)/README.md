@@ -1,0 +1,1 @@
+# 📁 Explorador: Cosmologia_(astro-ph.CO)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[AST-03 Inflacion Cosmica y Espectro CMB](./AST-03_Inflacion_Cosmica_y_Espectro_CMB.md)**\n\n

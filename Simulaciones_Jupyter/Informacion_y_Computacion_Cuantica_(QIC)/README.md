@@ -1,0 +1,1 @@
+# 📁 Explorador: Informacion_y_Computacion_Cuantica_(QIC)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📂 Subramas y Categorías\n- 📁 **[Computacion_Cuantica_(quant-ph)](./Computacion_Cuantica_(quant-ph))**\n\n

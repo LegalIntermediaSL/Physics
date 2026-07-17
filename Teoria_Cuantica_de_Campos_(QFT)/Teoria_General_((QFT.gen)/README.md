@@ -1,0 +1,1 @@
+# 📁 Explorador: Teoria_General_((QFT.gen)\n\nBienvenido a esta sección del repositorio. Utiliza los siguientes enlaces para navegar por el contenido matemático y computacional:\n\n## 📜 Tratados Teóricos (Markdown)\n- 📄 **[QFT-12 Espinores y Espines Fraccionarios](./QFT-12_Espinores_y_Espines_Fraccionarios.md)**\n\n
