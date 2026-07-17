@@ -22,7 +22,7 @@ El repositorio está organizado orgánicamente replicando la estructura de **arX
 - 🌪️ **[Fisica_No_Lineal_y_Sistemas_Complejos_(NLD)](./Fisica_No_Lineal_y_Sistemas_Complejos_(NLD))**: Atractores Extraños, Teoría del Caos y Fractales. *(Contiene 23 tratados)*
 - ☢️ **[Fisica_Nuclear_y_de_Particulas_(HEP)](./Fisica_Nuclear_y_de_Particulas_(HEP))**: Aceleradores, Decaimiento y Fuerzas Fundamentales. *(Contiene 10 tratados)*
 - 💎 **[Fisica_de_Materia_Condensada_(CMA)](./Fisica_de_Materia_Condensada_(CMA))**: Cristales de Tiempo (Floquet), Superconductividad y Grafeno. *(Contiene 5 tratados)*
-- ☀️ **[Fisica_de_Plasmas_y_Fusion_(PLA)](./Fisica_de_Plasmas_y_Fusion_(PLA))**: Confinamiento Magnético, MHD y Reactores Tokamak. *(Contiene 19 tratados)*
+- ☀️ **[Fisica_de_Plasmas_y_Fusion_(PLA)](./Fisica_de_Plasmas_y_Fusion_(PLA))**: Confinamiento Magnético, MHD y Reactores Tokamak. *(Contiene 20 tratados)*
 - 🌬️ **[Fluidos_y_Medios_Continuos_(FLD)](./Fluidos_y_Medios_Continuos_(FLD))**: Navier-Stokes, Lattice Boltzmann y Dinámica de Fluidos. *(Contiene 24 tratados)*
 - 🧶 **[Gravedad_Cuantica_y_Cuerdas_(QG)](./Gravedad_Cuantica_y_Cuerdas_(QG))**: Teoría M, Variedades de Calabi-Yau y Gravedad de Lazos. *(Contiene 31 tratados)*
 - 🧠 **[Informacion_Cuantica_(QIC)](./Informacion_Cuantica_(QIC))**: Qubits, Topología Cuántica (Anyones) y Algoritmos. *(Contiene 24 tratados)*
@@ -30,8 +30,8 @@ El repositorio está organizado orgánicamente replicando la estructura de **arX
 - 💎 **[Materia_Condensada_(CMA)](./Materia_Condensada_(CMA))**: Cristales de Tiempo (Floquet), Superconductividad y Grafeno. *(Contiene 20 tratados)*
 - 🍎 **[Mecanica_Clasica_(CLM)](./Mecanica_Clasica_(CLM))**: Cinemática, Dinámica de Newton, Lagrangianos y Hamiltonianos. *(Contiene 28 tratados)*
 - 📁 **[Mecanica_Clasica_y_Fluidos_(CLF)](./Mecanica_Clasica_y_Fluidos_(CLF))**: Tratados y derivaciones analíticas. *(Contiene 1 tratados)*
-- ⚛️ **[Mecanica_Cuantica_(QM)](./Mecanica_Cuantica_(QM))**: Ecuación de Schrödinger, Entrelazamiento y Espinores. *(Contiene 22 tratados)*
-- 📐 **[Metodos_Matematicos_(MTH)](./Metodos_Matematicos_(MTH))**: Topología, Geometría Diferencial, Tensores y Cálculo Fraccionario. *(Contiene 97 tratados)*
+- ⚛️ **[Mecanica_Cuantica_(QM)](./Mecanica_Cuantica_(QM))**: Ecuación de Schrödinger, Entrelazamiento y Espinores. *(Contiene 23 tratados)*
+- 📐 **[Metodos_Matematicos_(MTH)](./Metodos_Matematicos_(MTH))**: Topología, Geometría Diferencial, Tensores y Cálculo Fraccionario. *(Contiene 98 tratados)*
 - 🌊 **[Ondas_y_Optica_(OPT)](./Ondas_y_Optica_(OPT))**: Oscilaciones, Óptica de Transformación y Metamateriales. *(Contiene 18 tratados)*
 - 📚 **[Recursos_Generales](./Recursos_Generales)**: Bibliografía, herramientas computacionales y manuales. *(Contiene 5 tratados)*
 - 🚀 **[Relatividad_(REL)](./Relatividad_(REL))**: Métrica de Schwarzschild, Agujeros Negros y Relatividad General. *(Contiene 26 tratados)*
