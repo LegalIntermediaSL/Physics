@@ -17,7 +17,7 @@ El repositorio está organizado orgánicamente replicando la estructura de **arX
 - 🔬 **[Fisica_Atomica_Molec_y_Optica_(AMO)](./Fisica_Atomica_Molec_y_Optica_(AMO))**: Estructura atómica, Interacción Luz-Materia y Espectroscopía. *(Contiene 3 tratados)*
 - 🔬 **[Fisica_Atomica_y_Molecular_(AMO)](./Fisica_Atomica_y_Molecular_(AMO))**: Estructura atómica, Interacción Luz-Materia y Espectroscopía. *(Contiene 12 tratados)*
 - 🧬 **[Fisica_Biologica_(BIO)](./Fisica_Biologica_(BIO))**: Biología Cuántica, Efecto Túnel en ADN y Magnetorrecepción. *(Contiene 3 tratados)*
-- 🔥 **[Fisica_Estadistica_y_Termodinamica_(STAT)](./Fisica_Estadistica_y_Termodinamica_(STAT))**: Máquinas térmicas, Mecánica Estadística y Entropía. *(Contiene 3 tratados)*
+- 🔥 **[Fisica_Estadistica_y_Termodinamica_(STAT)](./Fisica_Estadistica_y_Termodinamica_(STAT))**: Máquinas térmicas, mecánica estadística, entropía y procesos estocásticos. *(Contiene 4 tratados)*
 - 🌌 **[Fisica_Mas_Alla_del_Modelo_Estandar_(BSM)](./Fisica_Mas_Alla_del_Modelo_Estandar_(BSM))**: Supersimetría (SUSY), Teorías GUT y Fenomenología BSM. *(Contiene 14 tratados)*
 - 🌪️ **[Fisica_No_Lineal_y_Sistemas_Complejos_(NLD)](./Fisica_No_Lineal_y_Sistemas_Complejos_(NLD))**: Atractores Extraños, Teoría del Caos y Fractales. *(Contiene 28 tratados)*
 - ☢️ **[Fisica_Nuclear_y_de_Particulas_(HEP)](./Fisica_Nuclear_y_de_Particulas_(HEP))**: Aceleradores, Decaimiento y Fuerzas Fundamentales. *(Contiene 1 tratados)*
